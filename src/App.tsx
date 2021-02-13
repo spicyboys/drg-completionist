@@ -57,6 +57,8 @@ export default function App() {
             </Tabs>
           }
         />
+      </Col>
+      <Col span={18} offset={3}>
         <Switch>
           {TABS.map((tab) => (
             <Route exact path={`/${tab.key}`} key={tab.key}>
