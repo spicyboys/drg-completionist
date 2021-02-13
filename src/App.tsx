@@ -1,76 +1,32 @@
-import { Layout, Menu, Breadcrumb } from "antd";
-import {
-  UserOutlined,
-  LaptopOutlined,
-  NotificationOutlined,
-} from "@ant-design/icons";
+import { Row, Col, PageHeader, Tabs } from "antd";
 import "antd/dist/antd.dark.css";
+import { useHistory, useLocation } from "react-router-dom";
 
-const { SubMenu, Item: MenuItem } = Menu;
-const { Header, Content, Sider } = Layout;
-const { Item: BreadcrumbItem } = Breadcrumb;
+const { TabPane } = Tabs;
 
 export default function App() {
+  const history = useHistory();
+  const location = useLocation();
   return (
-    <Layout>
-      <Header className="header">
-        <div className="logo" />
-        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
-          <MenuItem key="1">nav 1</MenuItem>
-          <MenuItem key="2">nav 2</MenuItem>
-          <MenuItem key="3">nav 3</MenuItem>
-        </Menu>
-      </Header>
-      <Layout>
-        <Sider width={200} className="site-layout-background">
-          <Menu
-            mode="inline"
-            defaultSelectedKeys={["1"]}
-            defaultOpenKeys={["sub1"]}
-            style={{ height: "100%", borderRight: 0 }}
-          >
-            <SubMenu key="sub1" icon={<UserOutlined />} title="subnav 1">
-              <MenuItem key="1">option1</MenuItem>
-              <MenuItem key="2">option2</MenuItem>
-              <MenuItem key="3">option3</MenuItem>
-              <MenuItem key="4">option4</MenuItem>
-            </SubMenu>
-            <SubMenu key="sub2" icon={<LaptopOutlined />} title="subnav 2">
-              <MenuItem key="5">option5</MenuItem>
-              <MenuItem key="6">option6</MenuItem>
-              <MenuItem key="7">option7</MenuItem>
-              <MenuItem key="8">option8</MenuItem>
-            </SubMenu>
-            <SubMenu
-              key="sub3"
-              icon={<NotificationOutlined />}
-              title="subnav 3"
+    <Row gutter={[16, 16]}>
+      <Col span={18} offset={3} push={3}>
+        <PageHeader
+          title="DRG Completionist"
+          subTitle="Rock and Stone!"
+          footer={
+            <Tabs
+              activeKey={location.pathname.substring(1) || "overclocks"}
+              onChange={history.push}
             >
-              <MenuItem key="9">option9</MenuItem>
-              <MenuItem key="10">option10</MenuItem>
-              <MenuItem key="11">option11</MenuItem>
-              <MenuItem key="12">option12</MenuItem>
-            </SubMenu>
-          </Menu>
-        </Sider>
-        <Layout style={{ padding: "0 24px 24px" }}>
-          <Breadcrumb style={{ margin: "16px 0" }}>
-            <BreadcrumbItem>Home</BreadcrumbItem>
-            <BreadcrumbItem>List</BreadcrumbItem>
-            <BreadcrumbItem>App</BreadcrumbItem>
-          </Breadcrumb>
-          <Content
-            className="site-layout-background"
-            style={{
-              padding: 24,
-              margin: 0,
-              minHeight: 280,
-            }}
-          >
-            Content
-          </Content>
-        </Layout>
-      </Layout>
-    </Layout>
+              <TabPane tab="Overclocks" key="overclocks" />
+              <TabPane tab="Weapon frameworks" key="frameworks" />
+              <TabPane tab="Weapon skins" key="skins" />
+              <TabPane tab="Miner Accessories" key="accessories" />
+              <TabPane tab="Pickax Components" key="pickax" />
+            </Tabs>
+          }
+        />
+      </Col>
+    </Row>
   );
 }
