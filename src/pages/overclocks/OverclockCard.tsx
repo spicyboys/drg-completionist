@@ -1,11 +1,13 @@
 import OverclockIcon from "./OverclockIcon";
 import { Overclock } from "./OverclockData";
-import { ClassColors } from "utils/classColors";
 import { Card, Col, Popover } from "antd";
 import OverclockCardPopover from "./OverclockCardPopover";
+import Miner from "types/miner";
+import MinerColor from "utils/minerColor";
 
 export default function OverclockCard(props: {
   overclock: Overclock;
+  miner: Miner;
   isAcquired: boolean;
   onClick: () => void;
 }) {
@@ -22,7 +24,7 @@ export default function OverclockCard(props: {
             props.isAcquired
               ? {
                   color: "black",
-                  backgroundColor: ClassColors[props.overclock.class],
+                  backgroundColor: MinerColor[props.miner],
                   fontWeight: "bold",
                   transition: "all .2s",
                 }
