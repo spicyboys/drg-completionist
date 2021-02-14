@@ -1,3 +1,4 @@
+import frames from "./frames";
 import icons from "./icons";
 
 type Driller = {
@@ -32,7 +33,7 @@ type Price = {
 
 export type Overclock<T extends (Driller | Engineer | Gunner | Scout)> = {
   name: string;
-  type: "Clean" | "Balanced" | "Unstable";
+  type: keyof typeof frames;
   icon: keyof typeof icons;
   price: Price,
   effects?: string[];
@@ -53,7 +54,7 @@ export const overclocks: Overclocks = {
       class: "Driller",
       icon: "area",
       weapon: "Flamethrower",
-      type: "Clean",
+      type: "clean",
       price: {
         credits: 7500,
         bismor: 125,
