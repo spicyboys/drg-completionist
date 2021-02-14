@@ -1,7 +1,10 @@
-import { Card, Row, Col, Image, Space } from "antd";
+import { Card, Row, Col, Image, Progress } from "antd";
 import { Overclock } from "./data";
 import OverclockIcon from "./OverclockIcon";
 import { CheckOutlined } from "@ant-design/icons";
+import { useState } from "react";
+
+const { Meta } = Card;
 
 export default function MinerOverclocks(props: {
   title: string;
@@ -9,14 +12,27 @@ export default function MinerOverclocks(props: {
   overclocks: Overclock[];
   style?: React.CSSProperties;
 }) {
+  const [acquiredOverclocks, setAcquiredOverclocks] = useState<Array<string>>(
+    []
+  );
+
   return (
     <Card
       type="inner"
       title={
-        <Space>
-          <Image src={props.img} preview={false} height={64} width={64} />
-          <h2>{props.title}</h2>
-        </Space>
+        <Meta
+          title={props.title}
+          avatar={
+            <Image src={props.img} preview={false} height={64} width={64} />
+          }
+          description={
+            <Progress
+              percent={Math.round(
+                (acquiredOverclocks.length / props.overclocks.length) * 100
+              )}
+            />
+          }
+        />
       }
       style={props.style}
     >
@@ -27,8 +43,24 @@ export default function MinerOverclocks(props: {
               hoverable
               title={overclock.name}
               cover={<OverclockIcon overclock={overclock} />}
-              style={{ height: 400 }}
-              extra={<CheckOutlined style={{ color: "#52c41a" }} />}
+              style={{ height: 400, overflow: "hidden" }}
+              extra={
+                acquiredOverclocks.includes(overclock.name) ? (
+                  <CheckOutlined style={{ color: "#52c41a" }} />
+                ) : null
+              }
+              onClick={() => {
+                if (acquiredOverclocks.includes(overclock.name)) {
+                  setAcquiredOverclocks(
+                    acquiredOverclocks.filter((v) => v !== overclock.name)
+                  );
+                } else {
+                  setAcquiredOverclocks([
+                    ...acquiredOverclocks,
+                    overclock.name,
+                  ]);
+                }
+              }}
             >
               {overclock.description}
             </Card>
