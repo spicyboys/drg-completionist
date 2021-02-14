@@ -1,23 +1,24 @@
-import MinerOverclocks from "./MinerOverclocks";
-import { Collapse } from "antd";
-import RightOutlined from "@ant-design/icons/RightOutlined";
+import useStore from "data/useStore";
+import MinerPageLayout from "pages/MinerPageLayout";
+import { useCallback } from "react";
 import Miner from "types/miner";
+import { overclocks } from "./OverclockData";
+import MinerOverclocks from "./MinerOverclocks";
 
 export default function Overclocks() {
+  const [acquiredOverclocks] = useStore("overclocks");
+  const getProgress = useCallback(
+    (miner: Miner) => {
+      return (
+        acquiredOverclocks[miner].length /
+        Object.values(overclocks[miner]).flat().length
+      );
+    },
+    [acquiredOverclocks]
+  );
   return (
-    <Collapse
-      expandIconPosition="right"
-      expandIcon={(p) => (
-        <RightOutlined
-          style={{ marginTop: 16 }}
-          rotate={p.isActive ? 90 : undefined}
-        />
-      )}
-    >
-      <MinerOverclocks miner={Miner.Driller} />
-      <MinerOverclocks miner={Miner.Engineer} />
-      <MinerOverclocks miner={Miner.Gunner} />
-      <MinerOverclocks miner={Miner.Scout} />
-    </Collapse>
+    <MinerPageLayout getProgress={getProgress}>
+      {(miner) => <MinerOverclocks miner={miner} />}
+    </MinerPageLayout>
   );
 }
