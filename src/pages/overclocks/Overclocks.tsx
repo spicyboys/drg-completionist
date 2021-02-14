@@ -1,4 +1,3 @@
-import { Card } from "antd";
 import { overclocks } from "./data";
 import MinerOverclocks from "./MinerOverclocks";
 import DrillerAvatar from "assets/portraits/Driller_portrait.png";
@@ -8,7 +7,7 @@ import ScoutAvatar from "assets/portraits/Scout_portrait.png";
 
 export default function Overclocks() {
   return (
-    <Card>
+    <div style={{ margin: 10 }}>
       <MinerOverclocks
         title="Driller"
         img={DrillerAvatar}
@@ -32,6 +31,6 @@ export default function Overclocks() {
         overclocks={overclocks.scout}
         style={{ marginTop: 16 }}
       />
-    </Card>
+    </div>
   );
 }
