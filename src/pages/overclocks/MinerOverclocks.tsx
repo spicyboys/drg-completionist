@@ -18,16 +18,13 @@ export default function MinerOverclocks(
   } & Omit<CollapsePanelProps, "key" | "header">
 ) {
   const { miner, ...panelProps } = props;
-  const [state, dispatch] = useStore();
+  const [acquiredMinerOverclocks, dispatch] = useStore("overclocks", miner);
   const minerOverclocks = overclocks[miner];
 
   const progressBar = useMemo(() => {
     const overclockNames = Object.values(minerOverclocks)
       .flat()
       .map((overclock) => overclock.name);
-    const acquiredMinerOverclocks = state.overclocks[
-      miner
-    ].filter((overclock) => overclockNames.includes(overclock));
     return (
       <Progress
         percent={Math.round(
@@ -39,7 +36,7 @@ export default function MinerOverclocks(
         }}
       />
     );
-  }, [miner, minerOverclocks, state.overclocks]);
+  }, [miner, minerOverclocks, acquiredMinerOverclocks]);
 
   return (
     <Panel
@@ -70,7 +67,7 @@ export default function MinerOverclocks(
                 key={overclock.name}
                 overclock={overclock}
                 miner={miner}
-                isAcquired={state.overclocks[miner].includes(overclock.name)}
+                isAcquired={acquiredMinerOverclocks.includes(overclock.name)}
                 onClick={() =>
                   dispatch({
                     type: "TOGGLE_OVERCLOCK",
