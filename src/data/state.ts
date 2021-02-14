@@ -4,7 +4,7 @@ import { MinerWeapon } from "utils/minerWeapons";
 
 export type State = {
   overclocks: Record<Miner, string[]>;
-  frameworks: { [M in Miner]: { [W in MinerWeapon<M>[number]]: Framework[] } };
+  frameworks: { [M in Miner]: { [W in MinerWeapon<M>]: Framework[] } };
 };
 
 export const INITIAL_STATE: State = {
