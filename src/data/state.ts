@@ -1,10 +1,10 @@
 import { Framework } from "pages/frameworks/FrameworkData";
 import Miner from "types/miner";
-import MinerWeapon from "types/minerWeapons";
+import { MinerWeapon } from "utils/minerWeapons";
 
 export type State = {
   overclocks: Record<Miner, string[]>;
-  frameworks: { [M in Miner]: { [W in MinerWeapon[M]]: Framework[] } };
+  frameworks: { [M in Miner]: { [W in MinerWeapon<M>[number]]: Framework[] } };
 };
 
 export const INITIAL_STATE: State = {

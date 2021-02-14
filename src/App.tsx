@@ -1,7 +1,8 @@
 import { Row, Col, PageHeader, Tabs, Layout, Button } from "antd";
 import "antd/dist/antd.dark.css";
 import { useHistory, useLocation, Switch, Route } from "react-router-dom";
-import Overclocks from "pages/overclocks/Overclocks";
+import OverclocksPage from "pages/overclocks/OverclocksPage";
+import FrameworksPage from "pages/frameworks/FrameworksPage";
 import SettingsOutlined from "@ant-design/icons/SettingOutlined";
 
 const { Content } = Layout;
@@ -20,12 +21,12 @@ const TABS: Array<{ title: string; key: TabName; content: JSX.Element }> = [
   {
     title: "Overclocks",
     key: "overclocks",
-    content: <Overclocks />,
+    content: <OverclocksPage />,
   },
   {
     title: "Weapon Frameworks",
     key: "frameworks",
-    content: <></>,
+    content: <FrameworksPage />,
   },
   {
     title: "Weapon Skins",
