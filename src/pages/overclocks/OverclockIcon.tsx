@@ -1,6 +1,6 @@
 import { Overclock } from "./data";
-import icons from "./icons";
-import frames from "./frames";
+import icons from "assets/overclocks/icons";
+import frames from "assets/overclocks/frames";
 import { useEffect, useState } from "react";
 
 export default function OverclockIcon(props: { overclock: Overclock }) {
