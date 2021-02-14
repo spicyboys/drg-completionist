@@ -1,4 +1,4 @@
-import { overclocks } from "./data";
+import { overclocks } from "./OverclockData";
 import MinerOverclocks from "./MinerOverclocks";
 import DrillerAvatar from "assets/portraits/Driller_portrait.png";
 import EngineerAvatar from "assets/portraits/Engineer_portrait.png";

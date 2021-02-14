@@ -1,5 +1,5 @@
 import { Card, Row, Image, Progress, Divider } from "antd";
-import { Overclock } from "./data";
+import { Overclock } from "./OverclockData";
 import OverclockCard from "./OverclockCard";
 import { useMemo, useState } from "react";
 

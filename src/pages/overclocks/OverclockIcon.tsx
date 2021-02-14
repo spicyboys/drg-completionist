@@ -1,4 +1,4 @@
-import { Overclock } from "./data";
+import { Overclock } from "./OverclockData";
 import icons from "assets/overclocks/icons";
 import frames from "assets/overclocks/frames";
 import { useEffect, useState } from "react";

@@ -1,5 +1,5 @@
 import OverclockIcon from "./OverclockIcon";
-import { Overclock } from "./data";
+import { Overclock } from "./OverclockData";
 import { Card, Col } from "antd";
 
 enum ClassColors {
