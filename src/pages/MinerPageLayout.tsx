@@ -19,7 +19,7 @@ export default function MinerPageLayout(props: {
     >
       {[Miner.Driller, Miner.Engineer, Miner.Gunner, Miner.Scout].map(
         (miner) => (
-          <MinerCard miner={miner} getProgress={props.getProgress}>
+          <MinerCard key={miner} miner={miner} getProgress={props.getProgress}>
             {props.children}
           </MinerCard>
         )
