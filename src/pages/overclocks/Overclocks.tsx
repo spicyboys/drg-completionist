@@ -1,12 +1,7 @@
-import { overclocks } from "./OverclockData";
-import { ClassColors } from "utils/classColors";
 import MinerOverclocks from "./MinerOverclocks";
-import DrillerAvatar from "assets/portraits/Driller_portrait.png";
-import EngineerAvatar from "assets/portraits/Engineer_portrait.png";
-import GunnerAvatar from "assets/portraits/Gunner_portrait.png";
-import ScoutAvatar from "assets/portraits/Scout_portrait.png";
 import { Collapse } from "antd";
 import RightOutlined from "@ant-design/icons/RightOutlined";
+import Miner from "types/miner";
 
 export default function Overclocks() {
   return (
@@ -19,30 +14,10 @@ export default function Overclocks() {
         />
       )}
     >
-      <MinerOverclocks
-        title="Driller"
-        img={DrillerAvatar}
-        classColor={ClassColors.Driller}
-        overclocks={overclocks.driller}
-      />
-      <MinerOverclocks
-        title="Engineer"
-        img={EngineerAvatar}
-        overclocks={overclocks.engineer}
-        classColor={ClassColors.Engineer}
-      />
-      <MinerOverclocks
-        title="Gunner"
-        img={GunnerAvatar}
-        overclocks={overclocks.gunner}
-        classColor={ClassColors.Gunner}
-      />
-      <MinerOverclocks
-        title="Scout"
-        img={ScoutAvatar}
-        overclocks={overclocks.scout}
-        classColor={ClassColors.Scout}
-      />
+      <MinerOverclocks miner={Miner.Driller} />
+      <MinerOverclocks miner={Miner.Engineer} />
+      <MinerOverclocks miner={Miner.Gunner} />
+      <MinerOverclocks miner={Miner.Scout} />
     </Collapse>
   );
 }

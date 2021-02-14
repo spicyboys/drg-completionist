@@ -1,36 +1,45 @@
 import { Card, Row, Image, Progress, Divider } from "antd";
-import { Overclock } from "./OverclockData";
 import OverclockCard from "./OverclockCard";
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { Collapse, CollapsePanelProps } from "antd";
 import React from "react";
+import useStore from "data/useStore";
+import Miner from "types/miner";
+import { overclocks } from "./OverclockData";
+import MinerColor from "utils/minerColor";
+import MinerAvatar from "utils/minerAvatar";
 
 const { Panel } = Collapse;
 const { Meta } = Card;
 
 export default function MinerOverclocks(
   props: {
-    title: string;
-    img: string;
-    overclocks: Overclock[];
-    classColor: string;
+    miner: Miner;
   } & Omit<CollapsePanelProps, "key" | "header">
 ) {
-  const { title, img, overclocks, classColor, ...panelProps } = props;
-  const [acquiredOverclocks, setAcquiredOverclocks] = useState<Array<string>>(
-    []
-  );
+  const { miner, ...panelProps } = props;
+  const [state, dispatch] = useStore();
+  const minerOverclocks = overclocks[miner];
 
-  const groupedOverclocked = useMemo(() => {
-    const g: { [k: string]: Overclock[] } = {};
-    for (const overclock of overclocks) {
-      if (g[overclock.weapon] === undefined) {
-        g[overclock.weapon] = [];
-      }
-      g[overclock.weapon].push(overclock);
-    }
-    return g;
-  }, [overclocks]);
+  const progressBar = useMemo(() => {
+    const overclockNames = Object.values(minerOverclocks)
+      .flat()
+      .map((overclock) => overclock.name);
+    const acquiredMinerOverclocks = state.overclocks[
+      miner
+    ].filter((overclock) => overclockNames.includes(overclock));
+    return (
+      <Progress
+        percent={Math.round(
+          (acquiredMinerOverclocks.length / overclockNames.length) * 100
+        )}
+        strokeColor={{
+          "0%": MinerColor[miner],
+          "100%": "#87d068",
+        }}
+      />
+    );
+  }, [miner, minerOverclocks, state.overclocks]);
 
   return (
     <Panel
@@ -38,24 +47,21 @@ export default function MinerOverclocks(
       style={{ marginTop: 16 }}
       header={
         <Meta
-          title={title}
-          avatar={<Image src={img} preview={false} height={64} width={64} />}
-          description={
-            <Progress
-              percent={Math.round(
-                (acquiredOverclocks.length / overclocks.length) * 100
-              )}
-              strokeColor={{
-                "0%": classColor,
-                "100%": "#87d068",
-              }}
+          title={miner}
+          avatar={
+            <Image
+              src={MinerAvatar[miner]}
+              preview={false}
+              height={64}
+              width={64}
             />
           }
+          description={progressBar}
         />
       }
-      key={title}
+      key={miner}
     >
-      {Object.entries(groupedOverclocked).map(([weapon, overclocks]) => (
+      {Object.entries(minerOverclocks).map(([weapon, overclocks]) => (
         <React.Fragment key={weapon}>
           <Divider orientation="left">{weapon}</Divider>
           <Row gutter={[16, 16]}>
@@ -63,19 +69,17 @@ export default function MinerOverclocks(
               <OverclockCard
                 key={overclock.name}
                 overclock={overclock}
-                isAcquired={acquiredOverclocks.includes(overclock.name)}
-                onClick={() => {
-                  if (acquiredOverclocks.includes(overclock.name)) {
-                    setAcquiredOverclocks(
-                      acquiredOverclocks.filter((v) => v !== overclock.name)
-                    );
-                  } else {
-                    setAcquiredOverclocks([
-                      ...acquiredOverclocks,
-                      overclock.name,
-                    ]);
-                  }
-                }}
+                miner={miner}
+                isAcquired={state.overclocks[miner].includes(overclock.name)}
+                onClick={() =>
+                  dispatch({
+                    type: "TOGGLE_OVERCLOCK",
+                    payload: {
+                      miner,
+                      overclock: overclock.name,
+                    },
+                  })
+                }
               />
             ))}
           </Row>
