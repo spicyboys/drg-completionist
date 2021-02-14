@@ -6,7 +6,7 @@ import Overclocks from "pages/overclocks/Overclocks";
 const { Content } = Layout;
 const { TabPane } = Tabs;
 
-type TabName = "overclocks" | "frameworks" | "skins" | "accessories" | "pickax";
+type TabName = "overclocks" | "frameworks" | "skins" | "accessories" | "pickaxe";
 
 const DEFAULT_TAB: TabName = "overclocks";
 
@@ -17,12 +17,12 @@ const TABS: Array<{ title: string; key: TabName; content: JSX.Element }> = [
     content: <Overclocks />,
   },
   {
-    title: "Weapon frameworks",
+    title: "Weapon Frameworks",
     key: "frameworks",
     content: <></>,
   },
   {
-    title: "Weapon skins",
+    title: "Weapon Skins",
     key: "skins",
     content: <></>,
   },
@@ -32,8 +32,8 @@ const TABS: Array<{ title: string; key: TabName; content: JSX.Element }> = [
     content: <></>,
   },
   {
-    title: "Pickax Components",
-    key: "pickax",
+    title: "Pickaxe Components",
+    key: "pickaxe",
     content: <></>,
   },
 ];
