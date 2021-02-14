@@ -24,6 +24,7 @@ export default function OverclockCard(props: {
             ? {
               color: "black",
               backgroundColor: ClassColors[props.overclock.class],
+              fontWeight: "bold",
               transition: "all .2s",
             }
             : {
