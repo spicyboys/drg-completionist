@@ -5,6 +5,7 @@ import React from "react";
 import Miner from "types/miner";
 import MinerColor from "utils/minerColor";
 import MinerAvatar from "utils/minerAvatar";
+import rockAndStone from "assets/rockAndStone.png";
 
 const { Panel } = Collapse;
 const { Meta } = Card;
@@ -25,6 +26,7 @@ export default function MinerCard(
           "0%": MinerColor[miner],
           "100%": "#87d068",
         }}
+        format={percent => (percent === 100 ? (<Image src={rockAndStone}></Image>) : `${percent}%`)}
       />
     );
   }, [getProgress, miner]);
