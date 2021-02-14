@@ -6,7 +6,12 @@ import Overclocks from "pages/overclocks/Overclocks";
 const { Content } = Layout;
 const { TabPane } = Tabs;
 
-type TabName = "overclocks" | "frameworks" | "skins" | "accessories" | "pickaxe";
+type TabName =
+  | "overclocks"
+  | "frameworks"
+  | "skins"
+  | "accessories"
+  | "pickaxe";
 
 const DEFAULT_TAB: TabName = "overclocks";
 
