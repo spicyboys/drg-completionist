@@ -1,7 +1,6 @@
 import { Card, Row, Col, Image, Progress } from "antd";
 import { Overclock } from "./data";
 import OverclockIcon from "./OverclockIcon";
-import { CheckOutlined } from "@ant-design/icons";
 import { useState } from "react";
 
 const { Meta } = Card;
@@ -37,35 +36,44 @@ export default function MinerOverclocks(props: {
       style={props.style}
     >
       <Row gutter={[16, 16]}>
-        {props.overclocks.map((overclock) => (
-          <Col span={4} key={overclock.name}>
-            <Card
-              hoverable
-              title={overclock.name}
-              cover={<OverclockIcon overclock={overclock} />}
-              style={{ height: 400, overflow: "hidden" }}
-              extra={
-                acquiredOverclocks.includes(overclock.name) ? (
-                  <CheckOutlined style={{ color: "#52c41a" }} />
-                ) : null
-              }
-              onClick={() => {
-                if (acquiredOverclocks.includes(overclock.name)) {
-                  setAcquiredOverclocks(
-                    acquiredOverclocks.filter((v) => v !== overclock.name)
-                  );
-                } else {
-                  setAcquiredOverclocks([
-                    ...acquiredOverclocks,
-                    overclock.name,
-                  ]);
+        {props.overclocks.map((overclock) => {
+          const overclockAcquired = acquiredOverclocks.includes(overclock.name);
+          return (
+            <Col span={4} key={overclock.name}>
+              <Card
+                hoverable
+                title={overclock.name}
+                cover={<OverclockIcon overclock={overclock} />}
+                style={{ height: 400, overflow: "hidden" }}
+                headStyle={
+                  overclockAcquired
+                    ? {
+                        color: "black",
+                        backgroundColor: "rgb(244 193 61)",
+                        transition: "all .2s",
+                      }
+                    : {
+                        transition: "all .2s",
+                      }
                 }
-              }}
-            >
-              {overclock.description}
-            </Card>
-          </Col>
-        ))}
+                onClick={() => {
+                  if (overclockAcquired) {
+                    setAcquiredOverclocks(
+                      acquiredOverclocks.filter((v) => v !== overclock.name)
+                    );
+                  } else {
+                    setAcquiredOverclocks([
+                      ...acquiredOverclocks,
+                      overclock.name,
+                    ]);
+                  }
+                }}
+              >
+                {overclock.description}
+              </Card>
+            </Col>
+          );
+        })}
       </Row>
     </Card>
   );
