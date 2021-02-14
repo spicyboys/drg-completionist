@@ -1,13 +1,7 @@
 import OverclockIcon from "./OverclockIcon";
 import { Overclock } from "./OverclockData";
+import { ClassColors } from "utils/classColors";
 import { Card, Col } from "antd";
-
-enum ClassColors {
-  "Driller" = "#f7fe00",
-  "Engineer" = "#ed1d0a",
-  "Gunner" = "#3d7029",
-  "Scout" = "#4351ff",
-};
 
 export default function OverclockCard(props: {
   overclock: Overclock;
