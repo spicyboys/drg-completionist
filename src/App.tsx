@@ -1,7 +1,8 @@
-import { Row, Col, PageHeader, Tabs, Layout } from "antd";
+import { Row, Col, PageHeader, Tabs, Layout, Button } from "antd";
 import "antd/dist/antd.dark.css";
 import { useHistory, useLocation, Switch, Route } from "react-router-dom";
 import Overclocks from "pages/overclocks/Overclocks";
+import SettingsOutlined from "@ant-design/icons/SettingOutlined";
 
 const { Content } = Layout;
 const { TabPane } = Tabs;
@@ -43,9 +44,29 @@ const TABS: Array<{ title: string; key: TabName; content: JSX.Element }> = [
   },
 ];
 
-export default function App() {
+function AppTabs() {
   const history = useHistory();
   const location = useLocation();
+  return (
+    <Tabs
+      activeKey={location.pathname.substring(1) || DEFAULT_TAB}
+      onChange={history.push}
+      tabBarExtraContent={{
+        right: (
+          <Button type="text" icon={<SettingsOutlined />} size="large">
+            Settings
+          </Button>
+        ),
+      }}
+    >
+      {TABS.map((tab) => (
+        <TabPane tab={tab.title} key={tab.key} />
+      ))}
+    </Tabs>
+  );
+}
+
+export default function App() {
   return (
     <Layout>
       <Content>
@@ -54,16 +75,7 @@ export default function App() {
             <PageHeader
               title="DRG Completionist"
               subTitle="Rock and Stone!"
-              footer={
-                <Tabs
-                  activeKey={location.pathname.substring(1) || DEFAULT_TAB}
-                  onChange={history.push}
-                >
-                  {TABS.map((tab) => (
-                    <TabPane tab={tab.title} key={tab.key} />
-                  ))}
-                </Tabs>
-              }
+              footer={<AppTabs />}
             />
           </Col>
           <Col span={18} offset={3}>
