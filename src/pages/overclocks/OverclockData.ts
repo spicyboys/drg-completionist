@@ -1,7 +1,7 @@
 import frames from "assets/overclocks/frames";
 import icons from "assets/overclocks/icons";
 import Miner from "types/miner";
-import MinerWeapon from "types/minerWeapons";
+import { MinerWeapon } from "utils/minerWeapons";
 
 type Price = {
   credits: number;
@@ -28,7 +28,7 @@ export type Overclock = {
 };
 
 type Overclocks = {
-  [K in Miner]: Record<MinerWeapon[K], Overclock[]>;
+  [K in Miner]: Record<MinerWeapon<K>, Overclock[]>;
 };
 
 export const overclocks: Overclocks = {
