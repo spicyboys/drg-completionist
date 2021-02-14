@@ -64,7 +64,16 @@ export default function App() {
           <Col span={18} offset={3}>
             <Switch>
               {TABS.map((tab) => (
-                <Route exact path={`/${tab.key}`} key={tab.key}>
+                <Route
+                  exact
+                  path={
+                    [
+                      `/${tab.key}`,
+                      tab.key === DEFAULT_TAB ? "/" : undefined,
+                    ].filter((x) => x !== undefined) as string[]
+                  }
+                  key={tab.key}
+                >
                   {tab.content}
                 </Route>
               ))}
