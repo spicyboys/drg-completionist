@@ -3,22 +3,22 @@ import icons from "assets/overclocks/icons";
 
 type Driller = {
   class: "Driller";
-  weapon: "Flamethrower" | "Cryo Cannon" | "Pistol" | "EPC";
+  weapon: "CRISPR Flamethrower" | "Cryo Cannon" | "Subata 120" | "Experimental Plasma Charger";
 };
 
 type Engineer = {
   class: "Engineer";
-  weapon: "Shotgun" | "SMG" | "Grenade Launcher" | "Breach Cutter";
+  weapon: '"Warthog" Auto 210' | '"Stubby" Voltaic SMG' | "Deepcore 40mm PGL" | "Breach Cutter";
 };
 
 type Gunner = {
   class: "Gunner";
-  weapon: "Minigun" | "Autocannon" | "Revolver" | "Burst Rifle";
+  weapon: '"Lead Storm" Powered Minigun' | '"Thunderhead" Heavy Autocannon' | '"Bulldog" Heavy Revolver' | "BRT7 Burst Fire Gun";
 };
 
 type Scout = {
   class: "Scout";
-  weapon: "Assault Rifle" | "M1000" | "Boomstick" | "Zhukovs";
+  weapon: "Deepcore GK2" | "M1000 Classic" | "Jury-Rigged Boomstick" | "Zhukov NUK17";
 };
 
 type Price = {
@@ -58,7 +58,7 @@ export const overclocks: Overclocks = {
       name: "Lighter Tanks",
       class: "Driller",
       icon: "ammo",
-      weapon: "Flamethrower",
+      weapon: "CRISPR Flamethrower",
       type: "clean",
       price: {
         credits: 7500,
@@ -76,7 +76,7 @@ export const overclocks: Overclocks = {
       name: "Sticky Additive",
       class: "Driller",
       icon: "durationHourglass",
-      weapon: "Flamethrower",
+      weapon: "CRISPR Flamethrower",
       type: "clean",
       price: {
         credits: 8250,
@@ -95,7 +95,7 @@ export const overclocks: Overclocks = {
       name: "Compact Feed Valves",
       class: "Driller",
       icon: "clipSize",
-      weapon: "Flamethrower",
+      weapon: "CRISPR Flamethrower",
       type: "balanced",
       price: {
         credits: 7350,
@@ -114,7 +114,7 @@ export const overclocks: Overclocks = {
       name: "Fuel Stream Diffuser",
       class: "Driller",
       icon: "distance",
-      weapon: "Flamethrower",
+      weapon: "CRISPR Flamethrower",
       type: "balanced",
       price: {
         credits: 7100,
@@ -133,7 +133,7 @@ export const overclocks: Overclocks = {
       name: "Face Melter",
       class: "Driller",
       icon: "damage",
-      weapon: "Flamethrower",
+      weapon: "CRISPR Flamethrower",
       type: "unstable",
       price: {
         credits: 7000,
@@ -152,7 +152,7 @@ export const overclocks: Overclocks = {
       name: "Sticky Fuel",
       class: "Driller",
       icon: "durationHourglass",
-      weapon: "Flamethrower",
+      weapon: "CRISPR Flamethrower",
       type: "unstable",
       price: {
         credits: 8800,
@@ -288,7 +288,7 @@ export const overclocks: Overclocks = {
       name: "Chain Hit",
       class: "Driller",
       icon: "ricochet",
-      weapon: "Pistol",
+      weapon: "Subata 120",
       type: "clean",
       price: {
         credits: 7600,
@@ -307,7 +307,7 @@ export const overclocks: Overclocks = {
       name: "Homebrew Powder",
       class: "Driller",
       icon: "chance",
-      weapon: "Pistol",
+      weapon: "Subata 120",
       type: "clean",
       price: {
         credits: 7150,
@@ -325,7 +325,7 @@ export const overclocks: Overclocks = {
       name: "Oversized Magazine",
       class: "Driller",
       icon: "clipSize",
-      weapon: "Pistol",
+      weapon: "Subata 120",
       type: "balanced",
       price: {
         credits: 9000,
@@ -344,7 +344,7 @@ export const overclocks: Overclocks = {
       name: "Automatic Fire",
       class: "Driller",
       icon: "fireRate",
-      weapon: "Pistol",
+      weapon: "Subata 120",
       type: "unstable",
       price: {
         credits: 7400,
@@ -362,7 +362,7 @@ export const overclocks: Overclocks = {
       name: "Explosive Reload",
       class: "Driller",
       icon: "specialMagazine",
-      weapon: "Pistol",
+      weapon: "Subata 120",
       type: "unstable",
       price: {
         credits: 8100,
@@ -381,7 +381,7 @@ export const overclocks: Overclocks = {
       name: "Tranquilizer Rounds",
       class: "Driller",
       icon: "stun",
-      weapon: "Pistol",
+      weapon: "Subata 120",
       type: "unstable",
       price: {
         credits: 7150,
@@ -400,7 +400,7 @@ export const overclocks: Overclocks = {
       name: "Energy Rerouting",
       class: "Driller",
       icon: "chargeUp",
-      weapon: "EPC",
+      weapon: "Experimental Plasma Charger",
       type: "clean",
       price: {
         credits: 7300,
@@ -419,7 +419,7 @@ export const overclocks: Overclocks = {
       name: "Magnetic Cooling Unit",
       class: "Driller",
       icon: "cooldown",
-      weapon: "EPC",
+      weapon: "Experimental Plasma Charger",
       type: "clean",
       price: {
         credits: 8900,
@@ -438,7 +438,7 @@ export const overclocks: Overclocks = {
       name: "Heat Pipe",
       class: "Driller",
       icon: "fuel",
-      weapon: "EPC",
+      weapon: "Experimental Plasma Charger",
       type: "balanced",
       price: {
         credits: 7450,
@@ -457,7 +457,7 @@ export const overclocks: Overclocks = {
       name: "Heavy Hitter",
       class: "Driller",
       icon: "damage",
-      weapon: "EPC",
+      weapon: "Experimental Plasma Charger",
       type: "balanced",
       price: {
         credits: 8100,
@@ -476,7 +476,7 @@ export const overclocks: Overclocks = {
       name: "Overcharger",
       class: "Driller",
       icon: "damage",
-      weapon: "EPC",
+      weapon: "Experimental Plasma Charger",
       type: "unstable",
       price: {
         credits: 7050,
@@ -495,7 +495,7 @@ export const overclocks: Overclocks = {
       name: "Persistent Plasma",
       class: "Driller",
       icon: "durationHourglass",
-      weapon: "EPC",
+      weapon: "Experimental Plasma Charger",
       type: "unstable",
       price: {
         credits: 8150,
@@ -516,7 +516,7 @@ export const overclocks: Overclocks = {
       name: 'Stunner',
       class: 'Engineer',
       icon: 'stun',
-      weapon: 'Shotgun',
+      weapon: '"Warthog" Auto 210',
       type: 'clean',
       price: {
         credits: 7350,
@@ -534,7 +534,7 @@ export const overclocks: Overclocks = {
       name: 'Light-Weight Magazines',
       class: 'Engineer',
       icon: 'ammo',
-      weapon: 'Shotgun',
+      weapon: '"Warthog" Auto 210',
       type: 'clean',
       price: {
         credits: 7250,
@@ -552,7 +552,7 @@ export const overclocks: Overclocks = {
       name: 'Magnetic Pellet Alignment',
       class: 'Engineer',
       icon: 'aim',
-      weapon: 'Shotgun',
+      weapon: '"Warthog" Auto 210',
       type: 'balanced',
       price: {
         credits: 7900,
@@ -570,7 +570,7 @@ export const overclocks: Overclocks = {
       name: 'Cycle Overload',
       class: 'Engineer',
       icon: 'fireRate',
-      weapon: 'Shotgun',
+      weapon: '"Warthog" Auto 210',
       type: 'unstable',
       price: {
         credits: 8050,
@@ -588,7 +588,7 @@ export const overclocks: Overclocks = {
       name: 'Mini Shells',
       class: 'Engineer',
       icon: 'smallBullets',
-      weapon: 'Shotgun',
+      weapon: '"Warthog" Auto 210',
       type: 'unstable',
       price: {
         credits: 7700,
@@ -606,7 +606,7 @@ export const overclocks: Overclocks = {
       name: 'Super-Slim Rounds',
       class: 'Engineer',
       icon: 'clipSize',
-      weapon: 'SMG',
+      weapon: '"Stubby" Voltaic SMG',
       type: 'clean',
       price: {
         credits: 8550,
@@ -624,7 +624,7 @@ export const overclocks: Overclocks = {
       name: 'Well-Oiled Machine',
       class: 'Engineer',
       icon: 'fireRate',
-      weapon: 'SMG',
+      weapon: '"Stubby" Voltaic SMG',
       type: 'clean',
       price: {
         credits: 8400,
@@ -642,7 +642,7 @@ export const overclocks: Overclocks = {
       name: 'EM Refire Booster',
       class: 'Engineer',
       icon: 'fireRate',
-      weapon: 'SMG',
+      weapon: '"Stubby" Voltaic SMG',
       type: 'balanced',
       price: {
         credits: 8300,
@@ -660,7 +660,7 @@ export const overclocks: Overclocks = {
       name: 'Light-Weight Rounds',
       class: 'Engineer',
       icon: 'ammo',
-      weapon: 'SMG',
+      weapon: '"Stubby" Voltaic SMG',
       type: 'balanced',
       price: {
         credits: 8700,
@@ -678,7 +678,7 @@ export const overclocks: Overclocks = {
       name: 'Turret Arc',
       class: 'Engineer',
       icon: 'electricity',
-      weapon: 'SMG',
+      weapon: '"Stubby" Voltaic SMG',
       type: 'unstable',
       price: {
         credits: 8350,
@@ -696,7 +696,7 @@ export const overclocks: Overclocks = {
       name: 'Turret EM Discharge',
       class: 'Engineer',
       icon: 'areaDamage',
-      weapon: 'SMG',
+      weapon: '"Stubby" Voltaic SMG',
       type: 'unstable',
       price: {
         credits: 8450,
@@ -714,7 +714,7 @@ export const overclocks: Overclocks = {
       name: 'Clean Sweep',
       class: 'Engineer',
       icon: 'area',
-      weapon: 'Grenade Launcher',
+      weapon: 'Deepcore 40mm PGL',
       type: 'clean',
       price: {
         credits: 8100,
@@ -732,7 +732,7 @@ export const overclocks: Overclocks = {
       name: 'Pack Rat',
       class: 'Engineer',
       icon: 'ammo',
-      weapon: 'Grenade Launcher',
+      weapon: 'Deepcore 40mm PGL',
       type: 'clean',
       price: {
         credits: 7950,
@@ -750,7 +750,7 @@ export const overclocks: Overclocks = {
       name: 'Compact Rounds',
       class: 'Engineer',
       icon: 'ammo',
-      weapon: 'Grenade Launcher',
+      weapon: 'Deepcore 40mm PGL',
       type: 'balanced',
       price: {
         credits: 7900,
@@ -768,7 +768,7 @@ export const overclocks: Overclocks = {
       name: 'RJ250 Compound',
       class: 'Engineer',
       icon: 'explosionJump',
-      weapon: 'Grenade Launcher',
+      weapon: 'Deepcore 40mm PGL',
       type: 'balanced',
       price: {
         credits: 8800,
@@ -786,7 +786,7 @@ export const overclocks: Overclocks = {
       name: 'Fat Boy',
       class: 'Engineer',
       icon: 'areaDamage',
-      weapon: 'Grenade Launcher',
+      weapon: 'Deepcore 40mm PGL',
       type: 'unstable',
       price: {
         credits: 8300,
@@ -804,7 +804,7 @@ export const overclocks: Overclocks = {
       name: 'Hyper Propellant',
       class: 'Engineer',
       icon: 'projectileSpeed',
-      weapon: 'Grenade Launcher',
+      weapon: 'Deepcore 40mm PGL',
       type: 'unstable',
       price: {
         credits: 8950,
@@ -950,7 +950,7 @@ export const overclocks: Overclocks = {
       name: 'A Little More Oomph!',
       class: 'Gunner',
       icon: 'damage',
-      weapon: 'Minigun',
+      weapon: '"Lead Storm" Powered Minigun',
       type: 'clean',
       price: {
         credits: 8700,
@@ -968,7 +968,7 @@ export const overclocks: Overclocks = {
       name: 'Thinned Drum Walls',
       class: 'Gunner',
       icon: 'cooldown',
-      weapon: 'Minigun',
+      weapon: '"Lead Storm" Powered Minigun',
       type: 'clean',
       price: {
         credits: 7650,
@@ -986,7 +986,7 @@ export const overclocks: Overclocks = {
       name: 'Burning Hell',
       class: 'Gunner',
       icon: 'heat',
-      weapon: 'Minigun',
+      weapon: '"Lead Storm" Powered Minigun',
       type: 'balanced',
       price: {
         credits: 8700,
@@ -1004,7 +1004,7 @@ export const overclocks: Overclocks = {
       name: 'Compact Feed Mechanism',
       class: 'Gunner',
       icon: 'ammo',
-      weapon: 'Minigun',
+      weapon: '"Lead Storm" Powered Minigun',
       type: 'balanced',
       price: {
         credits: 7450,
@@ -1022,7 +1022,7 @@ export const overclocks: Overclocks = {
       name: 'Exhaust Vectoring',
       class: 'Gunner',
       icon: 'damage',
-      weapon: 'Minigun',
+      weapon: '"Lead Storm" Powered Minigun',
       type: 'balanced',
       price: {
         credits: 7400,
@@ -1040,7 +1040,7 @@ export const overclocks: Overclocks = {
       name: 'Bullet Hell',
       class: 'Gunner',
       icon: 'ricochet',
-      weapon: 'Minigun',
+      weapon: '"Lead Storm" Powered Minigun',
       type: 'unstable',
       price: {
         credits: 7600,
@@ -1058,7 +1058,7 @@ export const overclocks: Overclocks = {
       name: 'Lead Storm',
       class: 'Gunner',
       icon: 'damage',
-      weapon: 'Minigun',
+      weapon: '"Lead Storm" Powered Minigun',
       type: 'unstable',
       price: {
         credits: 8800,
@@ -1076,7 +1076,7 @@ export const overclocks: Overclocks = {
       name: 'Composite Drums',
       class: 'Gunner',
       icon: 'ammo',
-      weapon: 'Autocannon',
+      weapon: '"Thunderhead" Heavy Autocannon',
       type: 'clean',
       price: {
         credits: 7850,
@@ -1094,7 +1094,7 @@ export const overclocks: Overclocks = {
       name: 'Splintering Shells',
       class: 'Gunner',
       icon: 'area',
-      weapon: 'Autocannon',
+      weapon: '"Thunderhead" Heavy Autocannon',
       type: 'clean',
       price: {
         credits: 7300,
@@ -1112,7 +1112,7 @@ export const overclocks: Overclocks = {
       name: 'Carpet Bomber',
       class: 'Gunner',
       icon: 'areaDamage',
-      weapon: 'Autocannon',
+      weapon: '"Thunderhead" Heavy Autocannon',
       type: 'balanced',
       price: {
         credits: 7350,
@@ -1130,7 +1130,7 @@ export const overclocks: Overclocks = {
       name: 'Combat Mobility',
       class: 'Gunner',
       icon: 'movementSpeed',
-      weapon: 'Autocannon',
+      weapon: '"Thunderhead" Heavy Autocannon',
       type: 'balanced',
       price: {
         credits: 7650,
@@ -1148,7 +1148,7 @@ export const overclocks: Overclocks = {
       name: 'Big Bertha',
       class: 'Gunner',
       icon: 'damage',
-      weapon: 'Autocannon',
+      weapon: '"Thunderhead" Heavy Autocannon',
       type: 'unstable',
       price: {
         credits: 8400,
@@ -1166,7 +1166,7 @@ export const overclocks: Overclocks = {
       name: 'Neurotoxin Payload',
       class: 'Gunner',
       icon: 'neuro',
-      weapon: 'Autocannon',
+      weapon: '"Thunderhead" Heavy Autocannon',
       type: 'unstable',
       price: {
         credits: 8100,
@@ -1184,7 +1184,7 @@ export const overclocks: Overclocks = {
       name: 'Homebrew Powder',
       class: 'Gunner',
       icon: 'chance',
-      weapon: 'Revolver',
+      weapon: '"Bulldog" Heavy Revolver',
       type: 'clean',
       price: {
         credits: 7350,
@@ -1202,7 +1202,7 @@ export const overclocks: Overclocks = {
       name: 'Chain Hit',
       class: 'Gunner',
       icon: 'ricochet',
-      weapon: 'Revolver',
+      weapon: '"Bulldog" Heavy Revolver',
       type: 'clean',
       price: {
         credits: 7300,
@@ -1220,7 +1220,7 @@ export const overclocks: Overclocks = {
       name: 'Volatile Bullets',
       class: 'Gunner',
       icon: 'heat',
-      weapon: 'Revolver',
+      weapon: '"Bulldog" Heavy Revolver',
       type: 'balanced',
       price: {
         credits: 7350,
@@ -1238,7 +1238,7 @@ export const overclocks: Overclocks = {
       name: 'Six Shooter',
       class: 'Gunner',
       icon: 'clipSize',
-      weapon: 'Revolver',
+      weapon: '"Bulldog" Heavy Revolver',
       type: 'balanced',
       price: {
         credits: 7750,
@@ -1256,7 +1256,7 @@ export const overclocks: Overclocks = {
       name: 'Elephant Rounds',
       class: 'Gunner',
       icon: 'damage',
-      weapon: 'Revolver',
+      weapon: '"Bulldog" Heavy Revolver',
       type: 'unstable',
       price: {
         credits: 7300,
@@ -1274,7 +1274,7 @@ export const overclocks: Overclocks = {
       name: 'Magic Bullets',
       class: 'Gunner',
       icon: 'ricochet',
-      weapon: 'Revolver',
+      weapon: '"Bulldog" Heavy Revolver',
       type: 'unstable',
       price: {
         credits: 8750,
@@ -1292,7 +1292,7 @@ export const overclocks: Overclocks = {
       name: 'Composite Casings',
       class: 'Gunner',
       icon: 'fireRate',
-      weapon: 'Burst Rifle',
+      weapon: 'BRT7 Burst Fire Gun',
       type: 'clean',
       price: {
         credits: 7950,
@@ -1310,7 +1310,7 @@ export const overclocks: Overclocks = {
       name: 'Full Chamber Seal',
       class: 'Gunner',
       icon: 'damage',
-      weapon: 'Burst Rifle',
+      weapon: 'BRT7 Burst Fire Gun',
       type: 'clean',
       price: {
         credits: 7850,
@@ -1328,7 +1328,7 @@ export const overclocks: Overclocks = {
       name: 'Compact Mags',
       class: 'Gunner',
       icon: 'ammo',
-      weapon: 'Burst Rifle',
+      weapon: 'BRT7 Burst Fire Gun',
       type: 'balanced',
       price: {
         credits: 7350,
@@ -1346,7 +1346,7 @@ export const overclocks: Overclocks = {
       name: 'Experimental Rounds',
       class: 'Gunner',
       icon: 'damage',
-      weapon: 'Burst Rifle',
+      weapon: 'BRT7 Burst Fire Gun',
       type: 'balanced',
       price: {
         credits: 8550,
@@ -1364,7 +1364,7 @@ export const overclocks: Overclocks = {
       name: 'Electro Minelets',
       class: 'Gunner',
       icon: 'electricity',
-      weapon: 'Burst Rifle',
+      weapon: 'BRT7 Burst Fire Gun',
       type: 'unstable',
       price: {
         credits: 7450,
@@ -1382,7 +1382,7 @@ export const overclocks: Overclocks = {
       name: 'Micro Flechettes',
       class: 'Gunner',
       icon: 'smallBullets',
-      weapon: 'Burst Rifle',
+      weapon: 'BRT7 Burst Fire Gun',
       type: 'unstable',
       price: {
         credits: 7650,
@@ -1400,7 +1400,7 @@ export const overclocks: Overclocks = {
       name: 'Lead Spray',
       class: 'Gunner',
       icon: 'special',
-      weapon: 'Burst Rifle',
+      weapon: 'BRT7 Burst Fire Gun',
       type: 'unstable',
       price: {
         credits: 8050,
@@ -1420,7 +1420,7 @@ export const overclocks: Overclocks = {
       name: 'Compact Ammo',
       class: 'Scout',
       icon: 'clipSize',
-      weapon: 'Assault Rifle',
+      weapon: 'Deepcore GK2',
       type: 'clean',
       price: {
         credits: 7250,
@@ -1438,7 +1438,7 @@ export const overclocks: Overclocks = {
       name: 'Gas Rerouting',
       class: 'Scout',
       icon: 'fireRate',
-      weapon: 'Assault Rifle',
+      weapon: 'Deepcore GK2',
       type: 'clean',
       price: {
         credits: 7800,
@@ -1456,7 +1456,7 @@ export const overclocks: Overclocks = {
       name: 'Homebrew Powder',
       class: 'Scout',
       icon: 'chance',
-      weapon: 'Assault Rifle',
+      weapon: 'Deepcore GK2',
       type: 'clean',
       price: {
         credits: 8100,
@@ -1474,7 +1474,7 @@ export const overclocks: Overclocks = {
       name: 'Overclocked Firing Mechanism',
       class: 'Scout',
       icon: 'fireRate',
-      weapon: 'Assault Rifle',
+      weapon: 'Deepcore GK2',
       type: 'balanced',
       price: {
         credits: 7950,
@@ -1492,7 +1492,7 @@ export const overclocks: Overclocks = {
       name: 'Bullets of Mercy',
       class: 'Scout',
       icon: 'damage',
-      weapon: 'Assault Rifle',
+      weapon: 'Deepcore GK2',
       type: 'balanced',
       price: {
         credits: 8100,
@@ -1510,7 +1510,7 @@ export const overclocks: Overclocks = {
       name: 'AI Stability Engine',
       class: 'Scout',
       icon: 'aim',
-      weapon: 'Assault Rifle',
+      weapon: 'Deepcore GK2',
       type: 'unstable',
       price: {
         credits: 8250,
@@ -1528,7 +1528,7 @@ export const overclocks: Overclocks = {
       name: 'Electrifying Reload',
       class: 'Scout',
       icon: 'specialMagazine',
-      weapon: 'Assault Rifle',
+      weapon: 'Deepcore GK2',
       type: 'unstable',
       price: {
         credits: 7750,
@@ -1546,7 +1546,7 @@ export const overclocks: Overclocks = {
       name: 'Hoverclock',
       class: 'Scout',
       icon: 'slowdown',
-      weapon: 'M1000',
+      weapon: 'M1000 Classic',
       type: 'clean',
       price: {
         credits: 7350,
@@ -1564,7 +1564,7 @@ export const overclocks: Overclocks = {
       name: 'Minimal Clips',
       class: 'Scout',
       icon: 'ammo',
-      weapon: 'M1000',
+      weapon: 'M1000 Classic',
       type: 'clean',
       price: {
         credits: 8200,
@@ -1582,7 +1582,7 @@ export const overclocks: Overclocks = {
       name: 'Active Stability System',
       class: 'Scout',
       icon: 'movementSpeed',
-      weapon: 'M1000',
+      weapon: 'M1000 Classic',
       type: 'balanced',
       price: {
         credits: 8150,
@@ -1600,7 +1600,7 @@ export const overclocks: Overclocks = {
       name: 'Hipster',
       class: 'Scout',
       icon: 'aim',
-      weapon: 'M1000',
+      weapon: 'M1000 Classic',
       type: 'balanced',
       price: {
         credits: 8900,
@@ -1618,7 +1618,7 @@ export const overclocks: Overclocks = {
       name: 'Electrocuting Focus Shots',
       class: 'Scout',
       icon: 'electricity',
-      weapon: 'M1000',
+      weapon: 'M1000 Classic',
       type: 'unstable',
       price: {
         credits: 8850,
@@ -1636,7 +1636,7 @@ export const overclocks: Overclocks = {
       name: 'Supercooling Chamber',
       class: 'Scout',
       icon: 'damage',
-      weapon: 'M1000',
+      weapon: 'M1000 Classic',
       type: 'unstable',
       price: {
         credits: 8500,
@@ -1654,7 +1654,7 @@ export const overclocks: Overclocks = {
       name: 'Compact Shells',
       class: 'Scout',
       icon: 'ammo',
-      weapon: 'Boomstick',
+      weapon: 'Jury-Rigged Boomstick',
       type: 'clean',
       price: {
         credits: 8550,
@@ -1672,7 +1672,7 @@ export const overclocks: Overclocks = {
       name: 'Double Barrel',
       class: 'Scout',
       icon: 'fireRate',
-      weapon: 'Boomstick',
+      weapon: 'Jury-Rigged Boomstick',
       type: 'clean',
       price: {
         credits: 7950,
@@ -1690,7 +1690,7 @@ export const overclocks: Overclocks = {
       name: 'Special Powder',
       class: 'Scout',
       icon: 'shotgunJump',
-      weapon: 'Boomstick',
+      weapon: 'Jury-Rigged Boomstick',
       type: 'clean',
       price: {
         credits: 7050,
@@ -1708,7 +1708,7 @@ export const overclocks: Overclocks = {
       name: 'Stuffed Shells',
       class: 'Scout',
       icon: 'shotgunPellet',
-      weapon: 'Boomstick',
+      weapon: 'Jury-Rigged Boomstick',
       type: 'clean',
       price: {
         credits: 7850,
@@ -1726,7 +1726,7 @@ export const overclocks: Overclocks = {
       name: 'Shaped Shells',
       class: 'Scout',
       icon: 'aim',
-      weapon: 'Boomstick',
+      weapon: 'Jury-Rigged Boomstick',
       type: 'balanced',
       price: {
         credits: 7700,
@@ -1744,7 +1744,7 @@ export const overclocks: Overclocks = {
       name: 'Jumbo Shells',
       class: 'Scout',
       icon: 'damage',
-      weapon: 'Boomstick',
+      weapon: 'Jury-Rigged Boomstick',
       type: 'unstable',
       price: {
         credits: 8800,
@@ -1762,7 +1762,7 @@ export const overclocks: Overclocks = {
       name: 'Minimal Magazines',
       class: 'Scout',
       icon: 'reloadSpeed',
-      weapon: 'Zhukovs',
+      weapon: 'Zhukov NUK17',
       type: 'clean',
       price: {
         credits: 8450,
@@ -1780,7 +1780,7 @@ export const overclocks: Overclocks = {
       name: 'Custom Casings',
       class: 'Scout',
       icon: 'clipSize',
-      weapon: 'Zhukovs',
+      weapon: 'Zhukov NUK17',
       type: 'balanced',
       price: {
         credits: 7700,
@@ -1798,7 +1798,7 @@ export const overclocks: Overclocks = {
       name: 'Cryo Minelets',
       class: 'Scout',
       icon: 'cold',
-      weapon: 'Zhukovs',
+      weapon: 'Zhukov NUK17',
       type: 'unstable',
       price: {
         credits: 7300,
@@ -1816,7 +1816,7 @@ export const overclocks: Overclocks = {
       name: 'Embedded Detonators',
       class: 'Scout',
       icon: 'specialMagazine',
-      weapon: 'Zhukovs',
+      weapon: 'Zhukov NUK17',
       type: 'unstable',
       price: {
         credits: 7550,
@@ -1834,7 +1834,7 @@ export const overclocks: Overclocks = {
       name: 'Gas Recycling',
       class: 'Scout',
       icon: 'damage',
-      weapon: 'Zhukovs',
+      weapon: 'Zhukov NUK17',
       type: 'unstable',
       price: {
         credits: 7800,
