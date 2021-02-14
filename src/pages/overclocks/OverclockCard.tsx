@@ -2,6 +2,13 @@ import OverclockIcon from "./OverclockIcon";
 import { Overclock } from "./data";
 import { Card, Col } from "antd";
 
+enum ClassColors {
+  "Driller" = "#f7fe00",
+  "Engineer" = "#ed1d0a",
+  "Gunner" = "#3d7029",
+  "Scout" = "#4351ff",
+};
+
 export default function OverclockCard(props: {
   overclock: Overclock;
   isAcquired: boolean;
@@ -15,13 +22,13 @@ export default function OverclockCard(props: {
         headStyle={
           props.isAcquired
             ? {
-                color: "black",
-                backgroundColor: "rgb(244 193 61)",
-                transition: "all .2s",
-              }
+              color: "black",
+              backgroundColor: ClassColors[props.overclock.class],
+              transition: "all .2s",
+            }
             : {
-                transition: "all .2s",
-              }
+              transition: "all .2s",
+            }
         }
         onClick={props.onClick}
       >
