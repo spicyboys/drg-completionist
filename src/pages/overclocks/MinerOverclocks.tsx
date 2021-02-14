@@ -4,6 +4,7 @@ import React from "react";
 import useStore from "data/useStore";
 import Miner from "types/miner";
 import { overclocks } from "./OverclockData";
+import { MinerWeapon } from 'utils/minerWeapons';
 
 export default function MinerOverclocks(props: { miner: Miner }) {
   const { miner } = props;
@@ -21,6 +22,7 @@ export default function MinerOverclocks(props: { miner: Miner }) {
                 key={overclock.name}
                 overclock={overclock}
                 miner={miner}
+                weapon={weapon as MinerWeapon<Miner>}
                 isAcquired={acquiredMinerOverclocks.includes(overclock.name)}
                 onClick={() =>
                   dispatch({
