@@ -26,7 +26,7 @@ export default function MinerCard(
           "0%": MinerColor[miner],
           "100%": "#87d068",
         }}
-        format={percent => (percent === 100 ? (<Image src={rockAndStone} preview={false} height={20}></Image>) : `${percent}%`)}
+        format={percent => (percent === 100 ? (<Image src={rockAndStone} preview={false} height={20} />) : `${percent}%`)}
       />
     );
   }, [getProgress, miner]);
