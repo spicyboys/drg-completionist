@@ -9,6 +9,7 @@ export default function MinerOverclocks(props: {
   title: string;
   img: string;
   overclocks: Overclock[];
+  classColor: string;
   style?: React.CSSProperties;
 }) {
   const [acquiredOverclocks, setAcquiredOverclocks] = useState<Array<string>>(
@@ -40,6 +41,10 @@ export default function MinerOverclocks(props: {
               percent={Math.round(
                 (acquiredOverclocks.length / props.overclocks.length) * 100
               )}
+              strokeColor={{
+                '0%': props.classColor,
+                '100%': '#87d068',
+              }}
             />
           }
         />
