@@ -1,5 +1,5 @@
-import frames from "./frames";
-import icons from "./icons";
+import frames from "assets/overclocks/frames";
+import icons from "assets/overclocks/icons";
 
 type Driller = {
   class: "Driller";
