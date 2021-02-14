@@ -39,12 +39,10 @@ export default function MinerOverclocks(props: {
         {props.overclocks.map((overclock) => {
           const overclockAcquired = acquiredOverclocks.includes(overclock.name);
           return (
-            <Col span={4} key={overclock.name}>
+            <Col span={3} key={overclock.name}>
               <Card
                 hoverable
                 title={overclock.name}
-                cover={<OverclockIcon overclock={overclock} />}
-                style={{ height: 400, overflow: "hidden" }}
                 headStyle={
                   overclockAcquired
                     ? {
@@ -69,7 +67,7 @@ export default function MinerOverclocks(props: {
                   }
                 }}
               >
-                {overclock.description}
+                <OverclockIcon overclock={overclock} />
               </Card>
             </Col>
           );

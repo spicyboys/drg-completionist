@@ -29,7 +29,6 @@ export default function OverclockIcon(props: { overclock: Overclock }) {
         height: 100,
         width: 100,
         margin: "auto",
-        marginTop: 16,
       }}
     >
       <div
