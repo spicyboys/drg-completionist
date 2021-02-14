@@ -10,7 +10,7 @@ import Actions from "./actions";
 type ExtractObj<S extends object, K> = K extends keyof S ? S[K] : never;
 
 /**
- * Types the path for the provided object is a valid keypath
+ * Types the keypath for the provided object is valid
  */
 type Path<S extends object, T extends readonly unknown[]> = T extends readonly [
   infer T0,
@@ -52,12 +52,14 @@ type Tail<U> = U extends [any, any, ...any[]]
  * or "never" if the traversal is invalid
  */
 type TraversePath<
-  State extends object,
+  S extends object,
   T extends readonly unknown[]
-> = Head<T> extends keyof State
+> = Head<T> extends never
+  ? S
+  : Head<T> extends keyof S
   ? {
-      0: State[Head<T>];
-      1: TraversePath<State[Head<T>], Tail<T>>;
+      0: S[Head<T>];
+      1: TraversePath<S[Head<T>], Tail<T>>;
     }[Tail<T> extends never ? 0 : 1]
   : never;
 
@@ -69,10 +71,7 @@ export default function useStore<
   T extends readonly [keyof State, ...unknown[]]
 >(
   ...path: T extends Path<State, T> ? T : never
-): [
-  Head<T> extends never ? State : TraversePath<State, T>,
-  React.Dispatch<Actions>
-] {
+): [TraversePath<State, T>, React.Dispatch<Actions>] {
   const [state, dispatch] = useContext(Context);
   const stateFragment = useMemo(() => {
     let fragment = state;
