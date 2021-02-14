@@ -54,27 +54,27 @@ type Overclocks = {
 
 export const overclocks: Overclocks = {
   driller: [
-    {
-      name: '',
-      class: 'Driller',
-      icon: '',
-      weapon: '',
-      type: '',
-      price: {
-        credits: ,
-        bismor: ,
-        croppa: ,
-        enorPearl: ,
-        jadiz: ,
-        magnite: ,
-        umanite: ,
-      },
-      effects: {
-        buffs: [],
-        nerfs: []
-      },
-      description: '',
-    },
+    // {
+    //   name: '',
+    //   class: 'Driller',
+    //   icon: '',
+    //   weapon: 'EPC',
+    //   type: '',
+    //   price: {
+    //     credits: ,
+    //     bismor: ,
+    //     croppa: ,
+    //     enorPearl: ,
+    //     jadiz: ,
+    //     magnite: ,
+    //     umanite: ,
+    //   },
+    //   effects: {
+    //     buffs: [],
+    //     nerfs: []
+    //   },
+    //   description: '',
+    // },
     {
       name: 'Lighter Tanks',
       class: 'Driller',
@@ -235,7 +235,7 @@ export const overclocks: Overclocks = {
         buffs: ['x2.7 Pressure Gain Rate', '+10% Flow Rate'],
         nerfs: ['x2.25 Pressure Drop Rate']
       },
-      description: 'A low volume high pressure chamber paired with a high power pump increase the flow rate and repressurization speed but lower the max duration of sustained flow.',
+      description: 'A low-volume, high-pressure chamber paired with a high-power pump increase the flow rate and repressurization speed, but lower the max duration of sustained flow.',
     },
     {
       name: 'Ice Spear',
@@ -244,63 +244,269 @@ export const overclocks: Overclocks = {
       weapon: 'Cryo Cannon',
       type: 'balanced',
       price: {
-        credits: ,
-        bismor: ,
-        croppa: ,
-        enorPearl: ,
-        jadiz: ,
-        magnite: ,
-        umanite: ,
+        credits: 8950,
+        enorPearl: 60,
+        jadiz: 130,
+        umanite: 110,
       },
       effects: {
-        buffs: [],
-        nerfs: []
+        buffs: ['+ Ice Spear'],
+        nerfs: ['+1s Repressurization Delay']
       },
-      description: '',
+      description: 'Pressing the reload button dumps all the fluid in the chamber directly into the turbine, flash-freezing it and launching an ice projectile. Side effects include an increased recharge delay and, of course, the large amount of fuel used.',
     },
     {
-      name: '',
+      name: 'Ice Storm',
       class: 'Driller',
-      icon: '',
+      icon: 'damage',
       weapon: 'Cryo Cannon',
-      type: '',
+      type: 'unstable',
       price: {
-        credits: ,
-        bismor: ,
-        croppa: ,
-        enorPearl: ,
-        jadiz: ,
-        magnite: ,
-        umanite: ,
+        credits: 7200,
+        enorPearl: 130,
+        magnite: 105,
+        umanite: 75,
       },
       effects: {
-        buffs: [],
-        nerfs: []
+        buffs: ['x2.0 Damage'],
+        nerfs: ['-3 Freezing Power', '-50 Tank Capacity', 'x1.5 Pressure Drop Rate']
       },
-      description: '',
+      description: 'A change in the fuel mixture along with some heavy cooler unit tweaks means that you\'ll be doing less freezing and more killing with razor - sharp ice shards. However, the capacity of the pressure chamber suffers.',
     },
     {
-      name: '',
+      name: 'Snowball',
       class: 'Driller',
-      icon: '',
+      icon: 'area',
       weapon: 'Cryo Cannon',
-      type: '',
+      type: 'unstable',
       price: {
-        credits: ,
-        bismor: ,
-        croppa: ,
-        enorPearl: ,
-        jadiz: ,
-        magnite: ,
-        umanite: ,
+        credits: 8400,
+        jadiz: 90,
+        magnite: 70,
+        umanite: 130,
       },
       effects: {
-        buffs: [],
+        buffs: ['+ Snowball'],
+        nerfs: ['-100 Tank Capacity', '+1 Repressurization Delay']
+      },
+      description: 'Pressing the reload button shoots all the cryofuel in the chamber at once as an AoE cryo-projectile. Besides the very large amount of fuel consumed, the operation overloads the whole system resulting in a much longer delay before regaining pressure and the modifications restrict the total amount of fuel you can carry.',
+    },
+    {
+      name: 'Chain Hit',
+      class: 'Driller',
+      icon: 'ricochet',
+      weapon: 'Pistol',
+      type: 'clean',
+      price: {
+        credits: 7600,
+        bismor: 65,
+        croppa: 120,
+        jadiz: 100,
+      },
+      effects: {
+        buffs: ['+50% Weakpoint Chain Hit Chance'],
         nerfs: []
       },
-      description: '',
+      description: 'Any shot that hits a weakspot has a chance to ricochet into a nearby enemy.',
     },
-
+    {
+      name: 'Homebrew Powder',
+      class: 'Driller',
+      icon: 'chance',
+      weapon: 'Pistol',
+      type: 'clean',
+      price: {
+        credits: 7150,
+        bismor: 135,
+        croppa: 100,
+        magnite: 70,
+      },
+      effects: {
+        buffs: ['+Randomized Damage (between x0.8 and x1.4 damage)'],
+        nerfs: []
+      },
+      description: 'More damage on average, but it\'s a bit inconsistent.',
+    },
+    {
+      name: 'Oversized Magazine',
+      class: 'Driller',
+      icon: 'clipSize',
+      weapon: 'Pistol',
+      type: 'balanced',
+      price: {
+        credits: 9000,
+        croppa: 70,
+        jadiz: 110,
+        umanite: 130,
+      },
+      effects: {
+        buffs: ['+10 Magazine Size'],
+        nerfs: ['+0.5s Reload Time']
+      },
+      description: 'Custom magazine that can fit a lot more ammo, but it\'s a bit unwieldy and takes longer to reload. ',
+    },
+    {
+      name: 'Automatic Fire',
+      class: 'Driller',
+      icon: 'fireRate',
+      weapon: 'Pistol',
+      type: 'unstable',
+      price: {
+        credits: 7400,
+        bismor: 95,
+        croppa: 65,
+        enorPearl: 120,
+      },
+      effects: {
+        buffs: ['+ Automatic Fire', '+2 Rate of Fire'],
+        nerfs: ['+100% Base Spread', '+250% Recoil']
+      },
+      description: 'Fully automatic action, but watch out for the recoil.',
+    },
+    {
+      name: 'Explosive Reload',
+      class: 'Driller',
+      icon: 'specialMagazine',
+      weapon: 'Pistol',
+      type: 'unstable',
+      price: {
+        credits: 8100,
+        enorPearl: 95,
+        magnite: 65,
+        umanite: 125,
+      },
+      effects: {
+        buffs: ['+ Explosive Reload'],
+        nerfs: ['x0.5 Max Ammo', 'x0.5 Magazine Size']
+      },
+      description: 'Micro-explosives that explode inside hit targets when you reload. However these fancy bullets come at the cost of total ammo and magazine capacity.',
+    },
+    {
+      name: 'Tranquilizer Rounds',
+      class: 'Driller',
+      icon: 'stun',
+      weapon: 'Pistol',
+      type: 'unstable',
+      price: {
+        credits: 7150,
+        croppa: 95,
+        jadiz: 135,
+        umanite: 75,
+      },
+      effects: {
+        buffs: ['+50% Stun Chance'],
+        nerfs: ['-4 Magazine Size', '-4 Rate of Fire']
+      },
+      description: 'Part-bullet, part-syringe: these rounds are very effective at stunning most enemies.',
+    },
+    {
+      name: 'Energy Rerouting',
+      class: 'Driller',
+      icon: 'chargeUp',
+      weapon: 'EPC',
+      type: 'clean',
+      price: {
+        credits: 7300,
+        bismor: 130,
+        jadiz: 100,
+        umanite: 65,
+      },
+      effects: {
+        buffs: ['+16 Battery Capacity', 'x1.5 Charge Speed'],
+        nerfs: []
+      },
+      description: 'A masterwork of engineering that improves charge speed and energy efficiency without affecting overall performance!',
+    },
+    {
+      name: 'Magnetic Cooling Unit',
+      class: 'Driller',
+      icon: 'cooldown',
+      weapon: 'EPC',
+      type: 'clean',
+      price: {
+        credits: 8900,
+        croppa: 95,
+        jadiz: 80,
+        umanite: 125,
+      },
+      effects: {
+        buffs: ['+25% Cooling Rate', 'x0.7 Heat Buildup When Charged'],
+        nerfs: []
+      },
+      description: 'A high-tech solution to cleanly improve the cooling rate. The result is an increased number of shots that can be fired before overheating, a faster recovery from an overheat, and an extended duration that a full charge can be maintained.',
+    },
+    {
+      name: 'Heat Pipe',
+      class: 'Driller',
+      icon: 'fuel',
+      weapon: 'EPC',
+      type: 'balanced',
+      price: {
+        credits: 7450,
+        bismor: 60,
+        jadiz: 95,
+        umanite: 125,
+      },
+      effects: {
+        buffs: ['-2 Charged Shot Ammo Use', 'x1.3 Charge Speed'],
+        nerfs: ['x1.5 Normal Shot Heat Generation']
+      },
+      description: 'By channeling exhaust heat back into the charge chamber, a shot can be charged faster while using less energy. This does, however, make the weapon less efficient at dissipating heat from normal shots.',
+    },
+    {
+      name: 'Heavy Hitter',
+      class: 'Driller',
+      icon: 'damage',
+      weapon: 'EPC',
+      type: 'balanced',
+      price: {
+        credits: 8100,
+        bismor: 140,
+        magnite: 60,
+        umanite: 105,
+      },
+      effects: {
+        buffs: ['x1.6 Damage'],
+        nerfs: ['-32 Battery Capacity', 'x1.5 Normal Shot Heat Generation']
+      },
+      description: 'Some extensive tweaking to how the shots are prepared can increase the pure damage of the weapon, but at the cost of more heat per shot and a reduced battery size.',
+    },
+    {
+      name: 'Overcharger',
+      class: 'Driller',
+      icon: 'damage',
+      weapon: 'EPC',
+      type: 'unstable',
+      price: {
+        credits: 7050,
+        bismor: 120,
+        croppa: 95,
+        enorPearl: 60,
+      },
+      effects: {
+        buffs: ['x1.5 Charged Damage', 'x1.5 Charged Area Damage'],
+        nerfs: ['x1.5 Charged Shot Ammo Use', '-25% Cooling Rate']
+      },
+      description: 'Pushing the EPC to the limit will give you a significant increase in charge shot damage and a boost in the size of the explosion, but at the cost of thermal efficiency and energy consumption.',
+    },
+    {
+      name: 'Persistent Plasma',
+      class: 'Driller',
+      icon: 'durationHourglass',
+      weapon: 'EPC',
+      type: 'unstable',
+      price: {
+        credits: 8150,
+        croppa: 75,
+        jadiz: 130,
+        magnite: 95,
+      },
+      effects: {
+        buffs: ['+ Persistent Plasma'],
+        nerfs: ['-20 Charged Damage', '-20 Area Damage']
+      },
+      description: 'By changing how the plasma is layered within the charged projectile, a slow and persistent discharge can be achieved upon impact. However, this does reduce the instant damage done.',
+    }
   ],
   engineer: [],
   gunner: [],
