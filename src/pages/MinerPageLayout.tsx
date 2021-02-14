@@ -17,18 +17,13 @@ export default function MinerPageLayout(props: {
         />
       )}
     >
-      <MinerCard miner={Miner.Driller} getProgress={props.getProgress}>
-        {props.children}
-      </MinerCard>
-      <MinerCard miner={Miner.Engineer} getProgress={props.getProgress}>
-        {props.children}
-      </MinerCard>
-      <MinerCard miner={Miner.Gunner} getProgress={props.getProgress}>
-        {props.children}
-      </MinerCard>
-      <MinerCard miner={Miner.Scout} getProgress={props.getProgress}>
-        {props.children}
-      </MinerCard>
+      {[Miner.Driller, Miner.Engineer, Miner.Gunner, Miner.Scout].map(
+        (miner) => (
+          <MinerCard key={miner} miner={miner} getProgress={props.getProgress}>
+            {props.children}
+          </MinerCard>
+        )
+      )}
     </Collapse>
   );
 }
