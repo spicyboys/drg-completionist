@@ -1,63 +1,17 @@
-import { Card, Row, Image, Progress, Divider } from "antd";
+import { Row, Divider } from "antd";
 import OverclockCard from "./OverclockCard";
-import { useMemo } from "react";
-import { Collapse, CollapsePanelProps } from "antd";
 import React from "react";
 import useStore from "data/useStore";
 import Miner from "types/miner";
 import { overclocks } from "./OverclockData";
-import MinerColor from "utils/minerColor";
-import MinerAvatar from "utils/minerAvatar";
 
-const { Panel } = Collapse;
-const { Meta } = Card;
-
-export default function MinerOverclocks(
-  props: {
-    miner: Miner;
-  } & Omit<CollapsePanelProps, "key" | "header">
-) {
-  const { miner, ...panelProps } = props;
+export default function MinerOverclocks(props: { miner: Miner }) {
+  const { miner } = props;
   const [acquiredMinerOverclocks, dispatch] = useStore("overclocks", miner);
   const minerOverclocks = overclocks[miner];
 
-  const progressBar = useMemo(() => {
-    const overclockNames = Object.values(minerOverclocks)
-      .flat()
-      .map((overclock) => overclock.name);
-    return (
-      <Progress
-        percent={Math.round(
-          (acquiredMinerOverclocks.length / overclockNames.length) * 100
-        )}
-        strokeColor={{
-          "0%": MinerColor[miner],
-          "100%": "#87d068",
-        }}
-      />
-    );
-  }, [miner, minerOverclocks, acquiredMinerOverclocks]);
-
   return (
-    <Panel
-      {...panelProps}
-      style={{ marginTop: 16 }}
-      header={
-        <Meta
-          title={miner}
-          avatar={
-            <Image
-              src={MinerAvatar[miner]}
-              preview={false}
-              height={64}
-              width={64}
-            />
-          }
-          description={progressBar}
-        />
-      }
-      key={miner}
-    >
+    <>
       {Object.entries(minerOverclocks).map(([weapon, overclocks]) => (
         <React.Fragment key={weapon}>
           <Divider orientation="left">{weapon}</Divider>
@@ -82,6 +36,6 @@ export default function MinerOverclocks(
           </Row>
         </React.Fragment>
       ))}
-    </Panel>
+    </>
   );
 }
