@@ -10,7 +10,7 @@ export default function OverclockCardPopover(props: { overclock: Overclock }) {
       <OverclockIcon overclock={props.overclock} />
       <Divider dashed />
       {props.overclock.effects.buffs.map((buff) => (
-        <Row justify={"center"}>
+        <Row justify={"center"} key={buff}>
           <Col>
             <Text strong type={"success"}>
               {buff}
@@ -19,7 +19,7 @@ export default function OverclockCardPopover(props: { overclock: Overclock }) {
         </Row>
       ))}
       {props.overclock.effects.nerfs.map((nerf) => (
-        <Row justify={"center"}>
+        <Row justify={"center"} key={nerf}>
           <Col>
             <Text strong type={"danger"}>
               {nerf}
