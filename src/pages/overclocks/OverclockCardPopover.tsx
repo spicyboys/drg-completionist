@@ -1,16 +1,23 @@
 import OverclockIcon from "./OverclockIcon";
 import { Overclock } from "./OverclockData";
-import { Col, Divider, Row, Typography } from "antd";
+import { Card, Col, Divider, Image, Row, Typography } from "antd";
+import { MinerWeapon, MinerWeaponImages } from "utils/minerWeapons";
+import Miner from "types/miner";
 
 const { Paragraph, Text } = Typography;
 
-export default function OverclockCardPopover(props: { overclock: Overclock }) {
+export default function OverclockCardPopover(props: { overclock: Overclock, weapon: MinerWeapon<Miner> }) {
   return (
-    <div style={{ width: 300 }}>
+    <Card
+      title={props.overclock.name}
+      bordered={false}
+      headStyle={{ fontWeight: "bold" }}
+      style={{ width: 300 }}
+    >
       <OverclockIcon overclock={props.overclock} />
       <Divider dashed />
       {props.overclock.effects.buffs.map((buff) => (
-        <Row justify={"center"} key={buff}>
+        <Row key={buff} justify={"center"}>
           <Col>
             <Text strong type={"success"}>
               {buff}
@@ -19,7 +26,7 @@ export default function OverclockCardPopover(props: { overclock: Overclock }) {
         </Row>
       ))}
       {props.overclock.effects.nerfs.map((nerf) => (
-        <Row justify={"center"} key={nerf}>
+        <Row key={nerf} justify={"center"}>
           <Col>
             <Text strong type={"danger"}>
               {nerf}
@@ -29,6 +36,14 @@ export default function OverclockCardPopover(props: { overclock: Overclock }) {
       ))}
       <Divider dashed />
       <Paragraph>{props.overclock.description}</Paragraph>
-    </div>
+      <Divider dashed />
+      <Row justify={"center"}>
+        <Image
+          src={MinerWeaponImages[props.weapon]}
+          preview={false}
+          style={{ height: 150 }}
+        />
+      </Row>
+    </Card>
   );
 }
