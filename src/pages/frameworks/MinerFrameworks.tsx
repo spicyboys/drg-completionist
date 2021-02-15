@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 import { Row, Divider } from "antd";
 import React from "react";
 import Miner from "types/miner";
@@ -30,10 +28,12 @@ export default function MinerFrameworks<T extends Miner>(props: { miner: T }) {
               <FrameworkCard
                 miner={miner}
                 framework={framework}
+                // @ts-ignore
                 isAcquired={acquiredMinerFrameworks[weapon].includes(framework)}
                 onClick={() =>
                   dispatch({
                     type: "TOGGLE_FRAMEWORK",
+                    // @ts-ignore
                     payload: {
                       miner,
                       weapon,

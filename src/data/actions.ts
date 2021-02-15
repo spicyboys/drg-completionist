@@ -13,10 +13,8 @@ type Actions =
   | {
       type: "TOGGLE_FRAMEWORK";
       payload: {
-        miner: Miner;
-        weapon: MinerWeapon<Miner>;
         framework: Framework;
-      };
+      } & { [T in Miner]: { miner: T; weapon: MinerWeapon<T> } }[Miner];
     };
 
 export default Actions;
