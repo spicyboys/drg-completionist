@@ -10,6 +10,13 @@ export enum Miner {
   Scout = "Scout",
 }
 
+export const AllMiners = [
+  Miner.Driller,
+  Miner.Engineer,
+  Miner.Gunner,
+  Miner.Scout,
+] as const;
+
 export const MinerAvatar: Record<Miner, string> = {
   [Miner.Driller]: DrillerAvatar,
   [Miner.Engineer]: EngineerAvatar,

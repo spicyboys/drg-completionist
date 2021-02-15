@@ -1,7 +1,7 @@
 import MinerCard from "./MinerCard";
 import { Collapse } from "antd";
 import RightOutlined from "@ant-design/icons/RightOutlined";
-import { Miner } from "utils/miner";
+import { AllMiners, Miner } from "utils/miner";
 
 export default function MinerPageLayout(props: {
   children: (miner: Miner) => React.ReactNode;
@@ -10,6 +10,7 @@ export default function MinerPageLayout(props: {
   return (
     <Collapse
       expandIconPosition="right"
+      defaultActiveKey={[...AllMiners]}
       expandIcon={(p) => (
         <RightOutlined
           style={{ marginTop: 16 }}
@@ -17,13 +18,11 @@ export default function MinerPageLayout(props: {
         />
       )}
     >
-      {[Miner.Driller, Miner.Engineer, Miner.Gunner, Miner.Scout].map(
-        (miner) => (
-          <MinerCard key={miner} miner={miner} getProgress={props.getProgress}>
-            {props.children}
-          </MinerCard>
-        )
-      )}
+      {AllMiners.map((miner) => (
+        <MinerCard key={miner} miner={miner} getProgress={props.getProgress}>
+          {props.children}
+        </MinerCard>
+      ))}
     </Collapse>
   );
 }
