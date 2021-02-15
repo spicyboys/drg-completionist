@@ -3,6 +3,7 @@ import { Context } from "./Store";
 import { State } from "./state";
 import Actions from "./actions";
 
+export default function useStore(): [State, React.Dispatch<Actions>];
 export default function useStore<K1 extends keyof State>(
   key1: K1
 ): [State[K1], React.Dispatch<Actions>];

@@ -15,6 +15,9 @@ type Actions =
       payload: {
         framework: Framework;
       } & { [T in Miner]: { miner: T; weapon: MinerWeapon<T> } }[Miner];
+    }
+  | {
+      type: "RESET";
     };
 
 export default Actions;
