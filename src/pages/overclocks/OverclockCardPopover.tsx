@@ -1,7 +1,7 @@
 import OverclockIcon from "./OverclockIcon";
 import { Overclock } from "./OverclockData";
 import { Card, Col, Divider, Image, Row, Typography } from "antd";
-import { MinerWeapon, MinerWeaponImages } from "utils/minerWeapons";
+import { MinerWeapon, MinerWeaponOutlines } from "utils/minerWeapons";
 import Miner from "types/miner";
 
 const { Paragraph, Text } = Typography;
@@ -39,9 +39,9 @@ export default function OverclockCardPopover(props: { overclock: Overclock, weap
       <Divider dashed />
       <Row justify={"center"}>
         <Image
-          src={MinerWeaponImages[props.weapon]}
+          src={MinerWeaponOutlines[props.weapon]}
           preview={false}
-          style={{ height: 150 }}
+          style={{ height: 'auto', width: 250 }}
         />
       </Row>
     </Card>
