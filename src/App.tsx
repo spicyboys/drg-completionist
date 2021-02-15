@@ -32,27 +32,30 @@ export const TABS: Array<{
     key: "frameworks",
     content: <FrameworksPage />,
   },
-  {
-    title: "Weapon Skins",
-    key: "skins",
-    content: <></>,
-  },
-  {
-    title: "Miner Accessories",
-    key: "accessories",
-    content: <></>,
-  },
-  {
-    title: "Pickaxe Components",
-    key: "pickaxe",
-    content: <></>,
-  },
+  // https://github.com/BobertForever/drg-completionist/issues/1
+  // {
+  //   title: "Weapon Skins",
+  //   key: "skins",
+  //   content: <></>,
+  // },
+  // https://github.com/BobertForever/drg-completionist/issues/2
+  // {
+  //   title: "Miner Accessories",
+  //   key: "accessories",
+  //   content: <></>,
+  // },
+  // https://github.com/BobertForever/drg-completionist/issues/3
+  // {
+  //   title: "Pickaxe Components",
+  //   key: "pickaxe",
+  //   content: <></>,
+  // },
 ];
 
 export default function App() {
   return (
     <Layout>
-      <BackTop style={{ bottom: 100 }} />
+      <BackTop style={{ bottom: 150 }} />
       <Content style={{ marginBottom: 100 }}>
         <Row>
           <Col span={18} offset={3}>
