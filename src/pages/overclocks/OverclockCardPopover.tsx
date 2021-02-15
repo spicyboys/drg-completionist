@@ -32,7 +32,7 @@ export default function OverclockCardPopover(props: {
           </Row>
         }
       />
-      <Divider style={{ margin: "12px 0" }} />
+      <Divider style={{ marginTop: "12px", marginBottom: "24px" }} />
       <OverclockIcon overclock={props.overclock} />
       <Divider dashed />
       {props.overclock.effects.buffs.map((buff) => (
