@@ -1,5 +1,5 @@
 import Actions from "./actions";
-import { State } from "./state";
+import { INITIAL_STATE, State } from "./state";
 
 export default function reducer(state: State, action: Actions): State {
   switch (action.type) {
@@ -35,6 +35,9 @@ export default function reducer(state: State, action: Actions): State {
           },
         },
       };
+    }
+    case "RESET": {
+      return INITIAL_STATE;
     }
     default:
       return state;
