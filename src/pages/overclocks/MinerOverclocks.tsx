@@ -1,10 +1,10 @@
-import { Row, Divider } from "antd";
+import { Row, Divider, Image, Tooltip } from "antd";
 import OverclockCard from "./OverclockCard";
 import React from "react";
 import useStore from "data/useStore";
 import Miner from "types/miner";
 import { overclocks } from "./OverclockData";
-import { MinerWeapon } from 'utils/minerWeapons';
+import { MinerWeapon, MinerWeaponOutlines } from 'utils/minerWeapons';
 
 export default function MinerOverclocks(props: { miner: Miner }) {
   const { miner } = props;
@@ -15,7 +15,16 @@ export default function MinerOverclocks(props: { miner: Miner }) {
     <>
       {Object.entries(minerOverclocks).map(([weapon, overclocks]) => (
         <React.Fragment key={weapon}>
-          <Divider orientation="left">{weapon}</Divider>
+          <Divider orientation="center">
+            <Tooltip title={weapon} placement={"right"}>
+              <Image
+                src={MinerWeaponOutlines[weapon as MinerWeapon<Miner>]}
+                height={75}
+                preview={false}
+                alt={weapon}
+              />
+            </Tooltip>
+          </Divider>
           <Row gutter={[16, 16]}>
             {overclocks.map((overclock) => (
               <OverclockCard
