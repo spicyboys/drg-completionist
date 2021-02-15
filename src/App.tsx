@@ -5,7 +5,7 @@ import OverclocksPage from "pages/overclocks/OverclocksPage";
 import FrameworksPage from "pages/frameworks/FrameworksPage";
 import SettingsOutlined from "@ant-design/icons/SettingOutlined";
 
-const { Content } = Layout;
+const { Content, Footer } = Layout;
 const { TabPane } = Tabs;
 
 type TabName =
@@ -99,6 +99,7 @@ export default function App() {
           </Col>
         </Row>
       </Content>
+      <Footer style={{ textAlign: "center" }}>Made with &#x2665; in ATX</Footer>
     </Layout>
   );
 }
