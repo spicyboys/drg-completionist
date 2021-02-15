@@ -3,20 +3,20 @@ const weapons = <M extends { [k: string]: Promise<typeof import("*.png")> }>(
 ) => things;
 
 export default weapons({
-  flamethrower: import("./driller/FlameThrower.png"),
-  cryoCannon: import("./driller/CryoCannon.png"),
-  subata: import("./driller/Subata120.png"),
-  epc: import("./driller/ExperimentalPlasmaCharger.png"),
-  warthogShotgun: import("./engineer/WarthogShotgun.png"),
-  stubbySMG: import("./engineer/StubbyVoltaicSMG.png"),
-  grenadeLauncher: import("./engineer/DeepcoreGrenadeLauncher.png"),
-  breachCutter: import("./engineer/BreachCutter.png"),
-  minigun: import("./gunner/LeadStormMinigun.png"),
-  autocannon: import("./gunner/ThunderheadAutoCannon.png"),
-  revolver: import("./gunner/BulldogRevolver.png"),
-  burstFireGun: import("./gunner/BurstFireGun.png"),
-  assaultRifle: import("./scout/DeepcoreAssaultRifle.png"),
-  m1000: import("./scout/M1000SniperRifle.png"),
-  boomstick: import("./scout/SawedOffShotgun.png"),
-  zhukovs: import("./scout/ZhukovMachinePistols.png")
+  flamethrower: import("./driller/images/FlameThrower.png"),
+  cryoCannon: import("./driller/images/CryoCannon.png"),
+  subata: import("./driller/images/Subata120.png"),
+  epc: import("./driller/images/ExperimentalPlasmaCharger.png"),
+  warthogShotgun: import("./engineer/images/WarthogShotgun.png"),
+  stubbySMG: import("./engineer/images/StubbyVoltaicSMG.png"),
+  grenadeLauncher: import("./engineer/images/DeepcoreGrenadeLauncher.png"),
+  breachCutter: import("./engineer/images/BreachCutter.png"),
+  minigun: import("./gunner/images/LeadStormMinigun.png"),
+  autocannon: import("./gunner/images/ThunderheadAutoCannon.png"),
+  revolver: import("./gunner/images/BulldogRevolver.png"),
+  burstFireGun: import("./gunner/images/BurstFireGun.png"),
+  assaultRifle: import("./scout/images/DeepcoreAssaultRifle.png"),
+  m1000: import("./scout/images/M1000SniperRifle.png"),
+  boomstick: import("./scout/images/SawedOffShotgun.png"),
+  zhukovs: import("./scout/images/ZhukovMachinePistols.png")
 });

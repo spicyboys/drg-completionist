@@ -1,22 +1,39 @@
 import Miner from "types/miner";
 // import weapons from "assets/weapons";
 
-import flamethrower from "assets/weapons/driller/FlameThrower.png";
-import cryoCannon from "assets/weapons/driller/CryoCannon.png";
-import subata from "assets/weapons/driller/Subata120.png";
-import epc from "assets/weapons/driller/ExperimentalPlasmaCharger.png";
-import warthogShotgun from "assets/weapons/engineer/WarthogShotgun.png";
-import stubbySMG from "assets/weapons/engineer/StubbyVoltaicSMG.png";
-import grenadeLauncher from "assets/weapons/engineer/DeepcoreGrenadeLauncher.png";
-import breachCutter from "assets/weapons/engineer/BreachCutter.png";
-import minigun from "assets/weapons/gunner/LeadStormMinigun.png";
-import autocannon from "assets/weapons/gunner/ThunderheadAutoCannon.png";
-import revolver from "assets/weapons/gunner/BulldogRevolver.png";
-import burstFireGun from "assets/weapons/gunner/BurstFireGun.png";
-import assaultRifle from "assets/weapons/scout/DeepcoreAssaultRifle.png";
-import m1000 from "assets/weapons/scout/M1000SniperRifle.png";
-import boomstick from "assets/weapons/scout/SawedOffShotgun.png";
-import zhukovs from "assets/weapons/scout/ZhukovMachinePistols.png";
+import flamethrower from "assets/weapons/driller/images/FlameThrower.png";
+import cryoCannon from "assets/weapons/driller/images/CryoCannon.png";
+import subata from "assets/weapons/driller/images/Subata120.png";
+import epc from "assets/weapons/driller/images/ExperimentalPlasmaCharger.png";
+import warthogShotgun from "assets/weapons/engineer/images/WarthogShotgun.png";
+import stubbySMG from "assets/weapons/engineer/images/StubbyVoltaicSMG.png";
+import grenadeLauncher from "assets/weapons/engineer/images/DeepcoreGrenadeLauncher.png";
+import breachCutter from "assets/weapons/engineer/images/BreachCutter.png";
+import minigun from "assets/weapons/gunner/images/LeadStormMinigun.png";
+import autocannon from "assets/weapons/gunner/images/ThunderheadAutoCannon.png";
+import revolver from "assets/weapons/gunner/images/BulldogRevolver.png";
+import burstFireGun from "assets/weapons/gunner/images/BurstFireGun.png";
+import assaultRifle from "assets/weapons/scout/images/DeepcoreAssaultRifle.png";
+import m1000 from "assets/weapons/scout/images/M1000SniperRifle.png";
+import boomstick from "assets/weapons/scout/images/SawedOffShotgun.png";
+import zhukovs from "assets/weapons/scout/images/ZhukovMachinePistols.png";
+
+import flamethrowerOutline from "assets/weapons/driller/outlines/Flamethrower.png";
+import cryoCannonOutline from "assets/weapons/driller/outlines/CryoCannon.png";
+import subataOutline from "assets/weapons/driller/outlines/Subata.png";
+import epcOutline from "assets/weapons/driller/outlines/epc.png";
+import warthogShotgunOutline from "assets/weapons/engineer/outlines/Shotgun.png";
+import stubbySMGOutline from "assets/weapons/engineer/outlines/StubbySMG.png";
+import grenadeLauncherOutline from "assets/weapons/engineer/outlines/GrenadeLauncher.png";
+import breachCutterOutline from "assets/weapons/engineer/outlines/BreachCutter.png";
+import minigunOutline from "assets/weapons/gunner/outlines/Minigun.png";
+import autocannonOutline from "assets/weapons/gunner/outlines/Autocannon.png";
+import revolverOutline from "assets/weapons/gunner/outlines/Revolver.png";
+import burstFireGunOutline from "assets/weapons/gunner/outlines/BurstFireGun.png";
+import assaultRifleOutline from "assets/weapons/scout/outlines/AssaultRifle.png";
+import m1000Outline from "assets/weapons/scout/outlines/M1000.png";
+import boomstickOutline from "assets/weapons/scout/outlines/Boomstick.png";
+import zhukovsOutline from "assets/weapons/scout/outlines/Zhukov.png";
 
 export const MinerWeapons = {
   [Miner.Driller]: [
@@ -64,6 +81,25 @@ export const MinerWeaponImages: Record<MinerWeapon<Miner>, string> = {
   "M1000 Classic": m1000,
   "Jury-Rigged Boomstick": boomstick,
   "Zhukov NUK17": zhukovs,
+};
+
+export const MinerWeaponOutlines: Record<MinerWeapon<Miner>, string> = {
+  "CRISPR Flamethrower": flamethrowerOutline,
+  "Cryo Cannon": cryoCannonOutline,
+  "Subata 120": subataOutline,
+  "Experimental Plasma Charger": epcOutline,
+  '"Warthog" Auto 210': warthogShotgunOutline,
+  '"Stubby" Voltaic SMG': stubbySMGOutline,
+  "Deepcore 40mm PGL": grenadeLauncherOutline,
+  "Breach Cutter": breachCutterOutline,
+  '"Lead Storm" Powered Minigun': minigunOutline,
+  '"Thunderhead" Heavy Autocannon': autocannonOutline,
+  '"Bulldog" Heavy Revolver': revolverOutline,
+  "BRT7 Burst Fire Gun": burstFireGunOutline,
+  "Deepcore GK2": assaultRifleOutline,
+  "M1000 Classic": m1000Outline,
+  "Jury-Rigged Boomstick": boomstickOutline,
+  "Zhukov NUK17": zhukovsOutline,
 };
 
 // export const MinerWeaponImages: Record<MinerWeapon<Miner>, Promise<typeof import("*.png")>> = {
