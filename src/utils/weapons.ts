@@ -1,5 +1,4 @@
-import Miner from "types/miner";
-// import weapons from "assets/weapons";
+import { Miner } from "utils/miner";
 
 import flamethrower from "assets/weapons/driller/images/FlameThrower.png";
 import cryoCannon from "assets/weapons/driller/images/CryoCannon.png";

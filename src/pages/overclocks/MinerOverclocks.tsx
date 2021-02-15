@@ -2,9 +2,9 @@ import { Row } from "antd";
 import OverclockCard from "./OverclockCard";
 import React from "react";
 import useStore from "data/useStore";
-import Miner from "types/miner";
+import { Miner } from "utils/miner";
 import { overclocks } from "./OverclockData";
-import { MinerWeapon } from "utils/minerWeapons";
+import { MinerWeapon } from "utils/weapons";
 import WeaponDivider from "components/WeaponDivider";
 
 export default function MinerOverclocks(props: { miner: Miner }) {
