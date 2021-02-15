@@ -3,7 +3,7 @@ import icons from "assets/overclocks/icons";
 import { Miner } from "utils/miner";
 import { MinerWeapon } from "utils/weapons";
 
-type Price = {
+export type Price = {
   credits: number;
   bismor?: number;
   croppa?: number;
