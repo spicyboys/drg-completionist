@@ -44,22 +44,25 @@ export default function PageFooter() {
     () => TABS.find((t) => t.key === currentTab)?.title,
     [currentTab]
   );
-  if (currentTabPercentage === null || currentTabPercentage === 0) {
-    return null;
-  }
   return (
     <Footer
       style={{
         position: "fixed",
         width: "100%",
-        bottom: 0,
+        bottom:
+          currentTabPercentage === null || currentTabPercentage === 0
+            ? -100
+            : 0,
         backgroundColor: "#141414",
         borderTop: "1px solid #434343",
+        transition: "all .4s",
       }}
     >
       <div>
         {currentTabDisplayName} Progress
-        <Progress percent={currentTabPercentage} />
+        <Progress
+          percent={currentTabPercentage === null ? 0 : currentTabPercentage}
+        />
       </div>
     </Footer>
   );
