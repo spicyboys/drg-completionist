@@ -1,6 +1,8 @@
 import { Layout, Progress } from "antd";
 import { DEFAULT_TAB, TabName, TABS } from "App";
+import { MinerWeapons } from "utils/weapons";
 import useStore from "data/useStore";
+import { Frameworks } from "pages/frameworks/FrameworkData";
 import { overclocks } from "pages/overclocks/OverclockData";
 import { useMemo } from "react";
 import { useLocation } from "react-router-dom";
@@ -24,6 +26,14 @@ export default function PageFooter() {
             100
         );
       case "frameworks":
+        return Math.round(
+          (Object.values(store.frameworks)
+            .flatMap((f) => Object.values(f))
+            .reduce((p, c) => p + c.length, 0) /
+            (Frameworks.length *
+              Object.values(MinerWeapons).reduce((p, c) => p + c.length, 0))) *
+            100
+        );
       case "skins":
       case "accessories":
       case "pickaxe":
