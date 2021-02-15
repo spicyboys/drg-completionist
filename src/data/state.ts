@@ -3,8 +3,8 @@ import Miner from "types/miner";
 import { MinerWeapon } from "utils/minerWeapons";
 
 export type State = {
-  overclocks: Record<Miner, string[]>;
-  frameworks: { [M in Miner]: { [W in MinerWeapon<M>]: Framework[] } };
+  overclocks: Record<Miner, readonly string[]>;
+  frameworks: { [M in Miner]: { [W in MinerWeapon<M>]: readonly Framework[] } };
 };
 
 export const INITIAL_STATE: State = {
@@ -40,4 +40,4 @@ export const INITIAL_STATE: State = {
       "Zhukov NUK17": [],
     },
   },
-};
+} as const;

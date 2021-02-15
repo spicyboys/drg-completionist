@@ -2,6 +2,7 @@ import useStore from "data/useStore";
 import MinerPageLayout from "pages/MinerPageLayout";
 import { useCallback } from "react";
 import Miner from "types/miner";
+import { MinerWeapons } from "utils/minerWeapons";
 import { Frameworks } from "./FrameworkData";
 import MinerFrameworks from "./MinerFrameworks";
 
@@ -10,8 +11,11 @@ export default function FrameworksPage() {
   const getProgress = useCallback(
     (miner: Miner) => {
       return (
-        Object.values(acquiredFrameworks[miner]).flat().length /
-        Frameworks.length
+        Object.values(acquiredFrameworks[miner]).reduce(
+          (p, c) => p + c.length,
+          0
+        ) /
+        (Frameworks.length * MinerWeapons[miner].length)
       );
     },
     [acquiredFrameworks]
