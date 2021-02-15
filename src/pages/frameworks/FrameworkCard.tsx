@@ -10,7 +10,7 @@ export default function FrameworkCard<T extends Miner>(props: {
   onClick: () => void;
 }) {
   return (
-    <Col xxl={4} xl={6} lg={8} md={12} sm={24} key={props.framework}>
+    <Col xxl={4} xl={6} lg={8} md={12} xs={24} key={props.framework}>
       <Card
         hoverable
         title={props.framework}

@@ -22,7 +22,7 @@ export default function OverclockCard(props: {
         />
       )}
     >
-      <Col xxl={4} xl={6} lg={8} md={12} sm={24} key={props.overclock.name}>
+      <Col xxl={4} xl={6} lg={8} md={12} xs={24} key={props.overclock.name}>
         <Card
           hoverable
           title={props.overclock.name}
