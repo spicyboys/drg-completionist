@@ -10,7 +10,11 @@ export default function MinerPageLayout(props: {
   return (
     <Collapse
       expandIconPosition="right"
-      defaultActiveKey={[...AllMiners]}
+      defaultActiveKey={[
+        ...AllMiners.filter(
+          (m) => Math.round(props.getProgress(m) * 100) !== 100
+        ),
+      ]}
       expandIcon={(p) => (
         <RightOutlined
           style={{ marginTop: 16 }}
