@@ -4,10 +4,11 @@ import { Switch, Route } from "react-router-dom";
 import OverclocksPage from "pages/overclocks/OverclocksPage";
 import FrameworksPage from "pages/frameworks/FrameworksPage";
 import Tabs from "components/Tabs";
+import PageFooter from "components/PageFooter";
 
-const { Content, Footer } = Layout;
+const { Content } = Layout;
 
-type TabName =
+export type TabName =
   | "overclocks"
   | "frameworks"
   | "skins"
@@ -51,8 +52,8 @@ export const TABS: Array<{
 export default function App() {
   return (
     <Layout>
-      <BackTop />
-      <Content>
+      <BackTop style={{ bottom: 100 }} />
+      <Content style={{ marginBottom: 100 }}>
         <Row>
           <Col span={18} offset={3}>
             <PageHeader
@@ -81,6 +82,7 @@ export default function App() {
           </Col>
         </Row>
       </Content>
+      <PageFooter />
     </Layout>
   );
 }
