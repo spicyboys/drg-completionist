@@ -44,7 +44,7 @@ export default function PageFooter() {
     () => TABS.find((t) => t.key === currentTab)?.title,
     [currentTab]
   );
-  if (currentTabPercentage === null) {
+  if (currentTabPercentage === null || currentTabPercentage === 0) {
     return null;
   }
   return (
