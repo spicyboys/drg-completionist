@@ -81,7 +81,6 @@ export default function App() {
           </Col>
         </Row>
       </Content>
-      <Footer style={{ textAlign: "center" }}>Made with &#x2665; in ATX</Footer>
     </Layout>
   );
 }
