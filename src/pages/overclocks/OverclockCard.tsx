@@ -14,7 +14,10 @@ export default function OverclockCard(props: {
   onClick: () => void;
 }) {
   return (
-    <Popover content={() => <OverclockCardPopover weapon={props.weapon} overclock={props.overclock} />}>
+    <Popover
+      placement="bottom"
+      content={() => <OverclockCardPopover weapon={props.weapon} overclock={props.overclock} />}
+    >
       <Col span={3} key={props.overclock.name}>
         <Card
           hoverable
