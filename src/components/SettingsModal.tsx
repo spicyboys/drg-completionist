@@ -67,6 +67,8 @@ export default function SettingsModal(props: {
           />
         </a>
       </div>
+      <Divider />
+      <div style={{ textAlign: "center" }}>Made with &#x2665; in ATX</div>
     </Modal>
   );
 }
