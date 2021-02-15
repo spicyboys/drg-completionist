@@ -1,10 +1,11 @@
-import { Row, Divider } from "antd";
+import { Row } from "antd";
 import React from "react";
 import Miner from "types/miner";
 import { Frameworks } from "./FrameworkData";
 import { MinerWeapons, MinerWeapon } from "utils/minerWeapons";
 import useStore from "data/useStore";
 import FrameworkCard from "./FrameworkCard";
+import WeaponDivider from "components/WeaponDivider";
 
 /**
  * This whole file is a trainwreck for Typescript. Technically, everything in
@@ -22,7 +23,7 @@ export default function MinerFrameworks<T extends Miner>(props: { miner: T }) {
     <>
       {(MinerWeapons[miner] as readonly MinerWeapon<T>[]).map((weapon) => (
         <React.Fragment key={weapon}>
-          <Divider orientation="left">{weapon}</Divider>
+          <WeaponDivider weapon={weapon} />
           <Row gutter={[16, 16]}>
             {Frameworks.map((framework) => (
               <FrameworkCard
