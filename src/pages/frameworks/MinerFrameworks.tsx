@@ -27,6 +27,7 @@ export default function MinerFrameworks<T extends Miner>(props: { miner: T }) {
           <Row gutter={[16, 16]}>
             {Frameworks.map((framework) => (
               <FrameworkCard
+                key={framework}
                 miner={miner}
                 framework={framework}
                 // @ts-ignore
