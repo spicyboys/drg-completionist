@@ -1,6 +1,7 @@
 import { Col, Card } from "antd";
 import { Miner, MinerColor } from "utils/miner";
-import { Framework, FrameworkIcon } from "./FrameworkData";
+import { Framework } from "./FrameworkData";
+import FrameworkIcon from "./FrameworkIcon";
 
 export default function FrameworkCard<T extends Miner>(props: {
   miner: T;
@@ -28,30 +29,7 @@ export default function FrameworkCard<T extends Miner>(props: {
         }
         onClick={props.onClick}
       >
-        <div
-          style={{
-            position: "relative",
-            height: 100,
-            width: 100,
-            margin: "auto",
-          }}
-        >
-          <div
-            style={{
-              position: "absolute",
-              transform: "translate(-50%,-50%)",
-              top: "50%",
-              left: "50%",
-            }}
-          >
-            <img
-              width="100"
-              height="100"
-              src={FrameworkIcon[props.framework]}
-              alt={props.framework}
-            />
-          </div>
-        </div>
+        <FrameworkIcon framework={props.framework} />
       </Card>
     </Col>
   );
