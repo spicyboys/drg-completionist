@@ -1,8 +1,8 @@
 import { Row } from "antd";
 import React from "react";
-import Miner from "types/miner";
+import { Miner } from "utils/miner";
 import { Frameworks } from "./FrameworkData";
-import { MinerWeapons, MinerWeapon } from "utils/minerWeapons";
+import { MinerWeapons, MinerWeapon } from "utils/weapons";
 import useStore from "data/useStore";
 import FrameworkCard from "./FrameworkCard";
 import WeaponDivider from "components/WeaponDivider";

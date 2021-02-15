@@ -1,7 +1,7 @@
 import frames from "assets/overclocks/frames";
 import icons from "assets/overclocks/icons";
-import Miner from "types/miner";
-import { MinerWeapon } from "utils/minerWeapons";
+import { Miner } from "utils/miner";
+import { MinerWeapon } from "utils/weapons";
 
 type Price = {
   credits: number;

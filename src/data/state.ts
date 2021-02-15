@@ -1,6 +1,6 @@
 import { Framework } from "pages/frameworks/FrameworkData";
-import Miner from "types/miner";
-import { MinerWeapon } from "utils/minerWeapons";
+import { Miner } from "utils/miner";
+import { MinerWeapon } from "utils/weapons";
 
 export type State = {
   overclocks: Record<Miner, readonly string[]>;

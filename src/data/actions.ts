@@ -1,6 +1,6 @@
-import Miner from "types/miner";
+import { Miner } from "utils/miner";
 import { Framework } from "pages/frameworks/FrameworkData";
-import { MinerWeapon } from "utils/minerWeapons";
+import { MinerWeapon } from "utils/weapons";
 
 type Actions =
   | {
