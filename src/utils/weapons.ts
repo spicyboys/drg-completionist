@@ -100,22 +100,3 @@ export const MinerWeaponOutlines: Record<MinerWeapon<Miner>, string> = {
   "Jury-Rigged Boomstick": boomstickOutline,
   "Zhukov NUK17": zhukovsOutline,
 };
-
-// export const MinerWeaponImages: Record<MinerWeapon<Miner>, Promise<typeof import("*.png")>> = {
-//   "CRISPR Flamethrower": weapons.flamethrower,
-//   "Cryo Cannon": weapons.cryoCannon,
-//   "Subata 120": weapons.subata,
-//   "Experimental Plasma Charger": weapons.epc,
-//   '"Warthog" Auto 210': weapons.warthogShotgun,
-//   '"Stubby" Voltaic SMG': weapons.stubbySMG,
-//   "Deepcore 40mm PGL": weapons.grenadeLauncher,
-//   "Breach Cutter": weapons.breachCutter,
-//   '"Lead Storm" Powered Minigun': weapons.minigun,
-//   '"Thunderhead" Heavy Autocannon': weapons.autocannon,
-//   '"Bulldog" Heavy Revolver': weapons.revolver,
-//   "BRT7 Burst Fire Gun": weapons.burstFireGun,
-//   "Deepcore GK2": weapons.assaultRifle,
-//   "M1000 Classic": weapons.m1000,
-//   "Jury-Rigged Boomstick": weapons.boomstick,
-//   "Zhukov NUK17": weapons.zhukovs,
-// };
