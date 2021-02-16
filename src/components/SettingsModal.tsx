@@ -26,17 +26,20 @@ export default function SettingsModal(props: {
           </Row>
           <Row justify={"center"}>
             <Button
-              type="primary"
+              type={"primary"}
               danger
-              onClick={() => dispatch({ type: "RESET" })}
               size={"large"}
               icon={
                 <img
                   src={satchelCharge}
                   alt={"Reset Progress"}
-                  style={{ height: 25, marginRight: 10 }}
+                  style={{ height: 25, marginRight: 10, marginTop: -2 }}
                 />
               }
+              onClick={() => {
+                dispatch({ type: "RESET" });
+                props.hide()
+              }}
             >
               Reset
             </Button>
@@ -46,10 +49,9 @@ export default function SettingsModal(props: {
               <Avatar
                 size={64}
                 src={MissionControlPortrait}
+                alt={"Warning from Mission Control"}
               />
-              <Text strong>
-                "Careful, miner! Management's saying this can't be undone."
-            </Text>
+              <Text strong>"Careful, miner! Management's saying this can't be undone."</Text>
             </Space>
           </Row>
         </Space>
