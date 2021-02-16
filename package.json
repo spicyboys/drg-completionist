@@ -17,7 +17,7 @@
     "react-github-btn": "^1.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
-    "typescript": "^4.1.2",
+    "typescript": "^4.1.5",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -44,5 +44,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/parser": "^4.15.1",
+    "eslint": "^7.20.0"
   }
 }
