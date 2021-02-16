@@ -18,7 +18,9 @@ export default function SettingsModal(props: {
     >
       <Title level={4}>Clear all progress?</Title>
       <Space direction={"vertical"}>
-        <Text strong type="danger">Warning! This cannot be undone.</Text>
+        <Text strong type="danger">
+          Warning! This cannot be undone.
+        </Text>
         <Button
           type="primary"
           danger
@@ -62,17 +64,8 @@ export default function SettingsModal(props: {
       <div style={{ textAlign: "center" }}>
         <a href="https://www.buymeacoffee.com/robort">
           <img
-            src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=robort&button_colour=5F7FFF&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00"
+            src="https://img.buymeacoffee.com/button-api/?text=Buy me a Glyphid Slammer&emoji=&slug=robort&button_colour=5F7FFF&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00"
             alt="Buy me a coffee"
-          />
-        </a>
-      </div>
-      <Divider dashed />
-      <div style={{ textAlign: "center" }}>
-        <a href="https://www.buymeacoffee.com/fleckeri">
-          <img
-            src="https://img.buymeacoffee.com/button-api/?text=Buy me a Gryphid Slammer&emoji=🍺&slug=fleckeri&button_colour=FFDD00&font_colour=000000&font_family=Arial&outline_colour=000000&coffee_colour=ffffff"
-            alt="Coffee is for pointy-eared leaf-lovers"
           />
         </a>
       </div>
