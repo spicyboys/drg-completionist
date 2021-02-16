@@ -19,5 +19,5 @@ export default function Store({ children }: { children: React.ReactNode }) {
 
 export const Context = createContext<[State, React.Dispatch<Actions>]>([
   INITIAL_STATE,
-  () => { },
+  () => {},
 ]);
