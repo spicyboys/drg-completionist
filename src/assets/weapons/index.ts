@@ -5,4 +5,3 @@
 
 export * as images from "./images";
 export * as outlines from "./outlines";
-

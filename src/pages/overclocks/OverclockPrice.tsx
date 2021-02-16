@@ -11,7 +11,10 @@ export default function OverclockPrice(props: { overclock: Overclock }) {
       {Object.entries(price).map(([currencyType, value]) => (
         <Col key={currencyType}>
           <Space>
-            <Tooltip placement={"top"} title={CurrencyNames[currencyType as Currency]}>
+            <Tooltip
+              placement={"top"}
+              title={CurrencyNames[currencyType as Currency]}
+            >
               <img
                 src={CurrencyIcons[currencyType as Currency]}
                 alt={CurrencyNames[currencyType as Currency]}

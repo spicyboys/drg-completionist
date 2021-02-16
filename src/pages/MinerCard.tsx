@@ -28,8 +28,8 @@ export default function MinerCard(
           percent === 100 ? (
             <Image src={RockAndStone} preview={false} height={20} />
           ) : (
-              `${percent}%`
-            )
+            `${percent}%`
+          )
         }
       />
     );

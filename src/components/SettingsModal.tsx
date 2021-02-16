@@ -38,7 +38,7 @@ export default function SettingsModal(props: {
               }
               onClick={() => {
                 dispatch({ type: "RESET" });
-                props.hide()
+                props.hide();
               }}
             >
               Reset
@@ -51,7 +51,9 @@ export default function SettingsModal(props: {
                 src={MissionControlPortrait}
                 alt={"Warning from Mission Control"}
               />
-              <Text strong>"Careful, miner! Management's saying this can't be undone."</Text>
+              <Text strong>
+                {'"Careful, miner! Management\'s saying this can\'t be undone."'}
+              </Text>
             </Space>
           </Row>
         </Space>
@@ -66,7 +68,7 @@ export default function SettingsModal(props: {
             aria-label="Star BobertForever/drg-completionist on GitHub"
           >
             Star
-        </GitHubButton>
+          </GitHubButton>
           <GitHubButton
             href="https://github.com/BobertForever/drg-completionist/fork"
             data-color-scheme="no-preference: light; light: light; dark: light;"
@@ -76,7 +78,7 @@ export default function SettingsModal(props: {
             aria-label="Fork BobertForever/drg-completionist on GitHub"
           >
             Fork
-        </GitHubButton>
+          </GitHubButton>
           <GitHubButton
             href="https://github.com/BobertForever/drg-completionist/issues"
             data-color-scheme="no-preference: light; light: light; dark: light;"
@@ -86,7 +88,7 @@ export default function SettingsModal(props: {
             aria-label="Issue BobertForever/drg-completionist on GitHub"
           >
             Issue
-        </GitHubButton>
+          </GitHubButton>
         </Space>
       </Row>
       <Divider dashed />
@@ -102,7 +104,8 @@ export default function SettingsModal(props: {
       <Row justify={"center"}>
         <Col span={17} style={{ textAlign: "center" }}>
           <Text type={"secondary"}>
-            This website is not affiliated with Ghost Ship Games. (But we really admire their work.)
+            This website is not affiliated with Ghost Ship Games. (But we really
+            admire their work.)
           </Text>
         </Col>
       </Row>

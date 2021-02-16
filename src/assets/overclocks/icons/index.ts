@@ -36,4 +36,3 @@ export { default as Special } from "./special.png";
 export { default as SpecialMagazine } from "./specialMagazine.png";
 export { default as SpinningLinecutter } from "./spinningLinecutter.png";
 export { default as Stun } from "./stun.png";
-

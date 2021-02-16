@@ -1,10 +1,19 @@
 import OverclockIcon from "./OverclockIcon";
 import { Overclock } from "./OverclockData";
-import { Card, Col, Divider, Image, Row, Space, Tooltip, Typography } from "antd";
+import {
+  Card,
+  Col,
+  Divider,
+  Image,
+  Row,
+  Space,
+  Tooltip,
+  Typography,
+} from "antd";
 import { WeaponOutlines } from "utils/weapons";
 import { Miner } from "utils/miner";
 import { MinerWeapon } from "utils/weapons";
-import { Buff as BuffIcon, Nerf as NerfIcon } from "assets/overclocks/arrows"
+import { Buff as BuffIcon, Nerf as NerfIcon } from "assets/overclocks/arrows";
 import Meta from "antd/lib/card/Meta";
 import OverclockPrice from "./OverclockPrice";
 

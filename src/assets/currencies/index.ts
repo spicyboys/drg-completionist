@@ -10,4 +10,3 @@ export { default as EnorPearl } from "./EnorPearl.png";
 export { default as Jadiz } from "./Jadiz.png";
 export { default as Magnite } from "./Magnite.png";
 export { default as Umanite } from "./Umanite.png";
-

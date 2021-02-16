@@ -27,12 +27,12 @@ export default function reducer(state: State, action: Actions): State {
             // @ts-ignore
             [weapon]: state.frameworks[miner][weapon].includes(framework)
               ? // @ts-ignore
-              state.frameworks[miner][weapon].filter(
-                // @ts-ignore
-                (v) => v !== framework
-              )
+                state.frameworks[miner][weapon].filter(
+                  // @ts-ignore
+                  (v) => v !== framework
+                )
               : // @ts-ignore
-              [...state.frameworks[miner][weapon], framework],
+                [...state.frameworks[miner][weapon], framework],
           },
         },
       };

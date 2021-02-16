@@ -21,15 +21,15 @@ export default function OverclockCard(props: {
         headStyle={
           props.isAcquired
             ? {
-              color: "black",
-              backgroundColor: MinerColor[props.miner],
-              fontWeight: "bold",
-              transition: "all .2s",
-            }
+                color: "black",
+                backgroundColor: MinerColor[props.miner],
+                fontWeight: "bold",
+                transition: "all .2s",
+              }
             : {
-              fontWeight: "bold",
-              transition: "all .2s",
-            }
+                fontWeight: "bold",
+                transition: "all .2s",
+              }
         }
         onClick={props.onClick}
       >

@@ -26,5 +26,5 @@ export const CurrencyNames: Record<Currency, string> = {
   enorPearl: "Enor Pearls",
   jadiz: "Jadiz",
   magnite: "Magnite",
-  umanite: "Umanite"
-}
+  umanite: "Umanite",
+};
