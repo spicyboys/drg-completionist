@@ -1,6 +1,6 @@
-import { Framework } from "pages/frameworks/FrameworkData";
-import { Miner } from "utils/miner";
-import { MinerWeapon } from "utils/weapons";
+import { Framework } from 'pages/frameworks/FrameworkData';
+import { Miner } from 'utils/miner';
+import { MinerWeapon } from 'utils/weapons';
 
 export type State = {
   overclocks: Record<Miner, readonly string[]>;
@@ -16,28 +16,28 @@ export const INITIAL_STATE: State = {
   },
   frameworks: {
     [Miner.Driller]: {
-      "CRISPR Flamethrower": [],
-      "Cryo Cannon": [],
-      "Subata 120": [],
-      "Experimental Plasma Charger": [],
+      'CRISPR Flamethrower': [],
+      'Cryo Cannon': [],
+      'Subata 120': [],
+      'Experimental Plasma Charger': [],
     },
     [Miner.Engineer]: {
       '"Warthog" Auto 210': [],
       '"Stubby" Voltaic SMG': [],
-      "Deepcore 40mm PGL": [],
-      "Breach Cutter": [],
+      'Deepcore 40mm PGL': [],
+      'Breach Cutter': [],
     },
     [Miner.Gunner]: {
       '"Lead Storm" Powered Minigun': [],
       '"Thunderhead" Heavy Autocannon': [],
       '"Bulldog" Heavy Revolver': [],
-      "BRT7 Burst Fire Gun": [],
+      'BRT7 Burst Fire Gun': [],
     },
     [Miner.Scout]: {
-      "Deepcore GK2": [],
-      "M1000 Classic": [],
-      "Jury-Rigged Boomstick": [],
-      "Zhukov NUK17": [],
+      'Deepcore GK2': [],
+      'M1000 Classic': [],
+      'Jury-Rigged Boomstick': [],
+      'Zhukov NUK17': [],
     },
   },
 } as const;

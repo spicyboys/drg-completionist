@@ -1,9 +1,9 @@
-import { useHistory, useLocation } from "react-router-dom";
-import SettingsModal from "./SettingsModal";
-import { useState } from "react";
-import { Tabs, Button } from "antd";
-import { TABS, DEFAULT_TAB } from "App";
-import SettingsOutlined from "@ant-design/icons/SettingOutlined";
+import { useHistory, useLocation } from 'react-router-dom';
+import SettingsModal from './SettingsModal';
+import { useState } from 'react';
+import { Button, Tabs } from 'antd';
+import { DEFAULT_TAB, TABS } from 'App';
+import SettingsOutlined from '@ant-design/icons/SettingOutlined';
 
 const { TabPane } = Tabs;
 

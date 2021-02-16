@@ -1,21 +1,21 @@
-import { Framework, FrameworkIcon as FrameworkIconMap } from "./FrameworkData";
+import { Framework, FrameworkIcon as FrameworkIconMap } from './FrameworkData';
 
 export default function FrameworkIcon(props: { framework: Framework }) {
   return (
     <div
       style={{
-        position: "relative",
+        position: 'relative',
         height: 100,
         width: 100,
-        margin: "auto",
+        margin: 'auto',
       }}
     >
       <div
         style={{
-          position: "absolute",
-          transform: "translate(-50%,-50%)",
-          top: "50%",
-          left: "50%",
+          position: 'absolute',
+          transform: 'translate(-50%,-50%)',
+          top: '50%',
+          left: '50%',
         }}
       >
         <img

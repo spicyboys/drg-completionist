@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { Row } from "antd";
-import React from "react";
-import { Miner } from "utils/miner";
-import { Frameworks } from "./FrameworkData";
-import { MinerWeapons, MinerWeapon } from "utils/weapons";
-import useStore from "data/useStore";
-import FrameworkCard from "./FrameworkCard";
-import WeaponDivider from "components/WeaponDivider";
+import { Row } from 'antd';
+import React from 'react';
+import { Miner } from 'utils/miner';
+import { Frameworks } from './FrameworkData';
+import { MinerWeapon, MinerWeapons } from 'utils/weapons';
+import useStore from 'data/useStore';
+import FrameworkCard from './FrameworkCard';
+import WeaponDivider from 'components/WeaponDivider';
 
 /**
  * This whole file is a trainwreck for Typescript. Technically, everything in
@@ -18,7 +18,7 @@ import WeaponDivider from "components/WeaponDivider";
  */
 export default function MinerFrameworks<T extends Miner>(props: { miner: T }) {
   const { miner } = props;
-  const [acquiredMinerFrameworks, dispatch] = useStore("frameworks", miner);
+  const [acquiredMinerFrameworks, dispatch] = useStore('frameworks', miner);
 
   return (
     <>
@@ -35,7 +35,7 @@ export default function MinerFrameworks<T extends Miner>(props: { miner: T }) {
                 isAcquired={acquiredMinerFrameworks[weapon].includes(framework)}
                 onClick={() =>
                   dispatch({
-                    type: "TOGGLE_FRAMEWORK",
+                    type: 'TOGGLE_FRAMEWORK',
                     // @ts-ignore
                     payload: {
                       miner,

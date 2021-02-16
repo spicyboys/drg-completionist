@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import Actions from "./actions";
-import { INITIAL_STATE, State } from "./state";
+import Actions from './actions';
+import { INITIAL_STATE, State } from './state';
 
 export default function reducer(state: State, action: Actions): State {
   switch (action.type) {
-    case "TOGGLE_OVERCLOCK": {
+    case 'TOGGLE_OVERCLOCK': {
       const { miner, overclock } = action.payload;
       return {
         ...state,
@@ -16,7 +16,7 @@ export default function reducer(state: State, action: Actions): State {
         },
       };
     }
-    case "TOGGLE_FRAMEWORK": {
+    case 'TOGGLE_FRAMEWORK': {
       const { miner, weapon, framework } = action.payload;
       return {
         ...state,
@@ -37,7 +37,7 @@ export default function reducer(state: State, action: Actions): State {
         },
       };
     }
-    case "RESET": {
+    case 'RESET': {
       return INITIAL_STATE;
     }
     default:

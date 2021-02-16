@@ -1,9 +1,9 @@
-import { Card, Image, Progress } from "antd";
-import { useMemo } from "react";
-import { Collapse, CollapsePanelProps } from "antd";
-import React from "react";
-import { Miner, MinerColor, MinerAvatar } from "utils/miner";
-import { RockAndStone } from "assets/other";
+import { Card, Image, Progress } from 'antd';
+import { useMemo } from 'react';
+import { Collapse, CollapsePanelProps } from 'antd';
+import React from 'react';
+import { Miner, MinerAvatar, MinerColor } from 'utils/miner';
+import { RockAndStone } from 'assets/other';
 
 const { Panel } = Collapse;
 const { Meta } = Card;
@@ -13,7 +13,7 @@ export default function MinerCard(
     children: (miner: Miner) => React.ReactNode;
     miner: Miner;
     getProgress: (miner: Miner) => number;
-  } & Omit<CollapsePanelProps, "key" | "header">
+  } & Omit<CollapsePanelProps, 'key' | 'header'>
 ) {
   const { children, miner, getProgress, ...panelProps } = props;
   const progressBar = useMemo(() => {
@@ -21,8 +21,8 @@ export default function MinerCard(
       <Progress
         percent={Math.round(getProgress(miner) * 100)}
         strokeColor={{
-          "0%": MinerColor[miner],
-          "100%": "#87d068",
+          '0%': MinerColor[miner],
+          '100%': '#87d068',
         }}
         format={(percent) =>
           percent === 100 ? (
