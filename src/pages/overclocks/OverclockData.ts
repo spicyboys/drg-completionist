@@ -1717,7 +1717,7 @@ export const overclocks: Overclocks = {
           umanite: 95,
         },
         effects: {
-          buffs: ["+Cryo Minelets (10 Cold Damage per Mine"],
+          buffs: ["+Cryo Minelets (10 Cold Damage per Mine)"],
           nerfs: ["-1 Damage", "-10 Combined Clip Size"],
         },
         description:
