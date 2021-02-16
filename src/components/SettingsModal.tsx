@@ -2,6 +2,8 @@ import { Modal, Button, Typography, Space, Divider, Row } from "antd";
 import useStore from "data/useStore";
 import GitHubButton from "react-github-btn";
 import satchelCharge from "assets/satchelCharge.png";
+import { MissionControlPortrait } from "assets/portraits";
+import Avatar from "antd/lib/avatar/avatar";
 
 const { Title, Text } = Typography;
 
@@ -39,10 +41,16 @@ export default function SettingsModal(props: {
               Reset
             </Button>
           </Row>
-          <Row justify={"center"}>
-            <Text strong type="danger">
-              (Careful, miner! Management's saying this can't be undone.)
+          <Row justify={"center"} align={"middle"}>
+            <Space>
+              <Avatar
+                size={64}
+                src={MissionControlPortrait}
+              />
+              <Text strong>
+                "Careful, miner! Management's saying this can't be undone."
             </Text>
+            </Space>
           </Row>
         </Space>
       </Row>
