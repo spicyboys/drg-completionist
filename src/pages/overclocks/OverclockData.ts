@@ -266,7 +266,7 @@ export const overclocks: Overclocks = {
           magnite: 70,
         },
         effects: {
-          buffs: ["+Randomized Damage (from x0.8 to x1.4 Damage)"],
+          buffs: ["+Randomized Damage (from x0.8 to x1.4)"],
           nerfs: [],
         },
         description: "More damage on average, but it's a bit inconsistent.",
@@ -1112,7 +1112,7 @@ export const overclocks: Overclocks = {
           magnite: 70,
         },
         effects: {
-          buffs: ["+Randomized Damage (from x0.8 to x1.4 Damage)"],
+          buffs: ["+Randomized Damage (from x0.8 to x1.4)"],
           nerfs: [],
         },
         description: "More damage on average, but it's a bit inconsistent.",
@@ -1383,7 +1383,7 @@ export const overclocks: Overclocks = {
           umanite: 65,
         },
         effects: {
-          buffs: ["+Randomized Damage (from x0.8 to x1.4 Damage"],
+          buffs: ["+Randomized Damage (from x0.8 to x1.4)"],
           nerfs: [],
         },
         description: "More damage on average, but it's a bit inconsistent.",
@@ -1415,7 +1415,7 @@ export const overclocks: Overclocks = {
           magnite: 125,
         },
         effects: {
-          buffs: ["+33% Bonus Damage to Status-Afflicted Targets"],
+          buffs: ["+33% Damage to Status-Afflicted Targets"],
           nerfs: ["-5 Magazine Size"],
         },
         description:
