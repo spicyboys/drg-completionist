@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useContext, useMemo } from "react";
 import { Context } from "./Store";
 import { State } from "./state";
