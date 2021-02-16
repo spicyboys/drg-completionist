@@ -1,13 +1,13 @@
-import { useCallback } from "react";
-import useStore from "data/useStore";
-import MinerPageLayout from "pages/MinerPageLayout";
-import { Miner } from "utils/miner";
-import { MinerWeapons, MinerWeapon } from "utils/weapons";
-import { Frameworks } from "./FrameworkData";
-import MinerFrameworks from "./MinerFrameworks";
+import { useCallback } from 'react';
+import useStore from 'data/useStore';
+import MinerPageLayout from 'pages/MinerPageLayout';
+import { Miner } from 'utils/miner';
+import { MinerWeapons, MinerWeapon } from 'utils/weapons';
+import { Frameworks } from './FrameworkData';
+import MinerFrameworks from './MinerFrameworks';
 
 export default function FrameworksPage() {
-  const [acquiredFrameworks] = useStore("frameworks");
+  const [acquiredFrameworks] = useStore('frameworks');
   const getProgress = useCallback(
     (miner: Miner) => {
       const weapons = (MinerWeapons[miner] as unknown) as MinerWeapon<Miner>;

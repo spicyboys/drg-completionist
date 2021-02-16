@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo } from 'react';
 import {
   createSimpleSchema,
   custom,
@@ -6,10 +6,10 @@ import {
   serialize,
   deserialize,
   PropSchema,
-} from "serializr";
-import { INITIAL_STATE, State } from "./state";
+} from 'serializr';
+import { INITIAL_STATE, State } from './state';
 
-const STORAGE_KEY = "data";
+const STORAGE_KEY = 'data';
 
 /**
  * Sets are serialized as an array, and deserialized back from the array

@@ -1,13 +1,13 @@
-import * as currencies from "assets/currencies";
+import * as currencies from 'assets/currencies';
 
 export type Currency =
-  | "credits"
-  | "bismor"
-  | "croppa"
-  | "enorPearl"
-  | "jadiz"
-  | "magnite"
-  | "umanite";
+  | 'credits'
+  | 'bismor'
+  | 'croppa'
+  | 'enorPearl'
+  | 'jadiz'
+  | 'magnite'
+  | 'umanite';
 
 export const CurrencyIcons: Record<Currency, string> = {
   credits: currencies.Credit,
@@ -20,11 +20,11 @@ export const CurrencyIcons: Record<Currency, string> = {
 };
 
 export const CurrencyNames: Record<Currency, string> = {
-  credits: "Credits",
-  bismor: "Bismor",
-  croppa: "Croppa",
-  enorPearl: "Enor Pearls",
-  jadiz: "Jadiz",
-  magnite: "Magnite",
-  umanite: "Umanite"
-}
+  credits: 'Credits',
+  bismor: 'Bismor',
+  croppa: 'Croppa',
+  enorPearl: 'Enor Pearls',
+  jadiz: 'Jadiz',
+  magnite: 'Magnite',
+  umanite: 'Umanite',
+};

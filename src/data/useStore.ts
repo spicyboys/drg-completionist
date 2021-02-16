@@ -1,9 +1,9 @@
 /* eslint-disable import/export */
 
-import { useContext, useMemo } from "react";
-import { Context } from "./Store";
-import Actions from "./actions";
-import { State } from "./state";
+import { useContext, useMemo } from 'react';
+import { Context } from './Store';
+import Actions from './actions';
+import { State } from './state';
 
 export default function useStore(): [State, React.Dispatch<Actions>];
 export default function useStore<T extends keyof State>(

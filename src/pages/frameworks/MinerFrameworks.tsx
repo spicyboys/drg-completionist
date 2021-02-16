@@ -1,16 +1,16 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { Row } from "antd";
-import React from "react";
-import WeaponDivider from "components/WeaponDivider";
-import useStore from "data/useStore";
-import { Miner } from "utils/miner";
-import { MinerWeapons, MinerWeapon } from "utils/weapons";
-import FrameworkCard from "./FrameworkCard";
-import { Frameworks } from "./FrameworkData";
+import { Row } from 'antd';
+import React from 'react';
+import WeaponDivider from 'components/WeaponDivider';
+import useStore from 'data/useStore';
+import { Miner } from 'utils/miner';
+import { MinerWeapons, MinerWeapon } from 'utils/weapons';
+import FrameworkCard from './FrameworkCard';
+import { Frameworks } from './FrameworkData';
 
 export default function MinerFrameworks<T extends Miner>(props: { miner: T }) {
   const { miner } = props;
-  const [acquiredFrameworks, dispatch] = useStore("frameworks");
+  const [acquiredFrameworks, dispatch] = useStore('frameworks');
 
   return (
     <>
@@ -28,7 +28,7 @@ export default function MinerFrameworks<T extends Miner>(props: { miner: T }) {
                 }
                 onClick={() =>
                   dispatch({
-                    type: "TOGGLE_FRAMEWORK",
+                    type: 'TOGGLE_FRAMEWORK',
                     payload: {
                       weapon,
                       framework,

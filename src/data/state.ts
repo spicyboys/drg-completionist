@@ -1,6 +1,6 @@
-import { Framework } from "pages/frameworks/FrameworkData";
-import { Miner } from "utils/miner";
-import { MinerWeapon } from "utils/weapons";
+import { Framework } from 'pages/frameworks/FrameworkData';
+import { Miner } from 'utils/miner';
+import { MinerWeapon } from 'utils/weapons';
 
 export type State = Readonly<{
   overclocks: ReadonlyMap<MinerWeapon<Miner>, ReadonlySet<string>>;

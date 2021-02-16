@@ -1,11 +1,11 @@
-import { updateKey } from "utils/map";
-import { removeFromSet, addToSet } from "utils/set";
-import Actions from "./actions";
-import { INITIAL_STATE, State } from "./state";
+import { updateKey } from 'utils/map';
+import { removeFromSet, addToSet } from 'utils/set';
+import Actions from './actions';
+import { INITIAL_STATE, State } from './state';
 
 export default function reducer(state: State, action: Actions): State {
   switch (action.type) {
-    case "TOGGLE_OVERCLOCK": {
+    case 'TOGGLE_OVERCLOCK': {
       const { weapon, overclock } = action.payload;
       const weaponOverclocks = state.overclocks.get(weapon) ?? new Set();
       return {
@@ -19,7 +19,7 @@ export default function reducer(state: State, action: Actions): State {
         ),
       };
     }
-    case "TOGGLE_FRAMEWORK": {
+    case 'TOGGLE_FRAMEWORK': {
       const { weapon, framework } = action.payload;
       const weaponFrameworks = state.frameworks.get(weapon) ?? new Set();
       return {
@@ -33,7 +33,7 @@ export default function reducer(state: State, action: Actions): State {
         ),
       };
     }
-    case "RESET": {
+    case 'RESET': {
       return INITIAL_STATE;
     }
     default:

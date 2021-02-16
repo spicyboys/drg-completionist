@@ -1,15 +1,15 @@
-import { Row } from "antd";
-import React from "react";
-import WeaponDivider from "components/WeaponDivider";
-import useStore from "data/useStore";
-import { Miner } from "utils/miner";
-import { MinerWeapon } from "utils/weapons";
-import OverclockCard from "./OverclockCard";
-import { overclocks } from "./OverclockData";
+import { Row } from 'antd';
+import React from 'react';
+import WeaponDivider from 'components/WeaponDivider';
+import useStore from 'data/useStore';
+import { Miner } from 'utils/miner';
+import { MinerWeapon } from 'utils/weapons';
+import OverclockCard from './OverclockCard';
+import { overclocks } from './OverclockData';
 
 export default function MinerOverclocks(props: { miner: Miner }) {
   const { miner } = props;
-  const [acquiredOverclocks, dispatch] = useStore("overclocks");
+  const [acquiredOverclocks, dispatch] = useStore('overclocks');
   const minerOverclocks = overclocks[miner];
 
   return (
@@ -31,7 +31,7 @@ export default function MinerOverclocks(props: { miner: Miner }) {
                 }
                 onClick={() =>
                   dispatch({
-                    type: "TOGGLE_OVERCLOCK",
+                    type: 'TOGGLE_OVERCLOCK',
                     payload: {
                       weapon: weapon as MinerWeapon<Miner>,
                       overclock: overclock.name,

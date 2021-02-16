@@ -1,11 +1,11 @@
-import { Layout, Progress } from "antd";
-import { useMemo } from "react";
-import { useLocation } from "react-router-dom";
-import { DEFAULT_TAB, TabName, TABS } from "App";
-import useStore from "data/useStore";
-import { Frameworks } from "pages/frameworks/FrameworkData";
-import { overclocks } from "pages/overclocks/OverclockData";
-import { MinerWeapons } from "utils/weapons";
+import { Layout, Progress } from 'antd';
+import { useMemo } from 'react';
+import { useLocation } from 'react-router-dom';
+import { DEFAULT_TAB, TabName, TABS } from 'App';
+import useStore from 'data/useStore';
+import { Frameworks } from 'pages/frameworks/FrameworkData';
+import { overclocks } from 'pages/overclocks/OverclockData';
+import { MinerWeapons } from 'utils/weapons';
 const { Footer } = Layout;
 
 export default function PageFooter() {
@@ -17,7 +17,7 @@ export default function PageFooter() {
   );
   const currentTabPercentage = useMemo(() => {
     switch (currentTab) {
-      case "overclocks":
+      case 'overclocks':
         return Math.round(
           (Array.from(store.overclocks.values()).reduce(
             (p, c) => p + c.size,
@@ -28,7 +28,7 @@ export default function PageFooter() {
               .flat().length) *
             100
         );
-      case "frameworks":
+      case 'frameworks':
         return Math.round(
           (Array.from(store.frameworks.values()).reduce(
             (p, c) => p + c.size,
@@ -38,9 +38,9 @@ export default function PageFooter() {
               Object.values(MinerWeapons).reduce((p, c) => p + c.length, 0))) *
             100
         );
-      case "skins":
-      case "accessories":
-      case "pickaxe":
+      case 'skins':
+      case 'accessories':
+      case 'pickaxe':
         return null;
     }
   }, [currentTab, store]);
@@ -51,15 +51,15 @@ export default function PageFooter() {
   return (
     <Footer
       style={{
-        position: "fixed",
-        width: "100%",
+        position: 'fixed',
+        width: '100%',
         bottom:
           currentTabPercentage === null || currentTabPercentage === 0
             ? -100
             : 0,
-        backgroundColor: "#141414",
-        borderTop: "1px solid #434343",
-        transition: "all .4s",
+        backgroundColor: '#141414',
+        borderTop: '1px solid #434343',
+        transition: 'all .4s',
       }}
     >
       <div>

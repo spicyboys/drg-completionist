@@ -1,11 +1,20 @@
-import { Card, Col, Divider, Image, Row, Space, Tooltip, Typography } from "antd";
-import Meta from "antd/lib/card/Meta";
-import { Buff as BuffIcon, Nerf as NerfIcon } from "assets/overclocks/arrows"
-import { Miner } from "utils/miner";
-import { WeaponOutlines , MinerWeapon } from "utils/weapons";
-import { Overclock } from "./OverclockData";
-import OverclockIcon from "./OverclockIcon";
-import OverclockPrice from "./OverclockPrice";
+import {
+  Card,
+  Col,
+  Divider,
+  Image,
+  Row,
+  Space,
+  Tooltip,
+  Typography,
+} from 'antd';
+import Meta from 'antd/lib/card/Meta';
+import { Buff as BuffIcon, Nerf as NerfIcon } from 'assets/overclocks/arrows';
+import { Miner } from 'utils/miner';
+import { WeaponOutlines, MinerWeapon } from 'utils/weapons';
+import { Overclock } from './OverclockData';
+import OverclockIcon from './OverclockIcon';
+import OverclockPrice from './OverclockPrice';
 
 const { Paragraph, Text, Title } = Typography;
 
@@ -18,35 +27,35 @@ export default function OverclockCardPopover(props: {
       <Meta
         style={{}}
         description={
-          <Row align={"middle"} justify={"space-around"}>
+          <Row align={'middle'} justify={'space-around'}>
             <Col span={16}>
               <Title level={4}>{props.overclock.name}</Title>
             </Col>
             <Col span={8}>
-              <Tooltip placement={"bottomRight"} title={props.weapon}>
+              <Tooltip placement={'bottomRight'} title={props.weapon}>
                 <Image
                   src={WeaponOutlines[props.weapon]}
                   preview={false}
-                  style={{ height: 50, width: "auto" }}
+                  style={{ height: 50, width: 'auto' }}
                 />
               </Tooltip>
             </Col>
           </Row>
         }
       />
-      <Divider style={{ marginTop: "12px", marginBottom: "24px" }} />
+      <Divider style={{ marginTop: '12px', marginBottom: '24px' }} />
       <OverclockIcon overclock={props.overclock} />
       <Divider dashed />
       {props.overclock.effects.buffs.map((buff) => (
-        <Row key={buff} justify={"center"}>
+        <Row key={buff} justify={'center'}>
           <Col>
             <Space>
               <img
                 src={BuffIcon}
-                alt={"Buff"}
-                style={{ height: 10, width: "auto" }}
+                alt={'Buff'}
+                style={{ height: 10, width: 'auto' }}
               />
-              <Text strong type={"success"}>
+              <Text strong type={'success'}>
                 {buff}
               </Text>
             </Space>
@@ -54,15 +63,15 @@ export default function OverclockCardPopover(props: {
         </Row>
       ))}
       {props.overclock.effects.nerfs.map((nerf) => (
-        <Row key={nerf} justify={"center"}>
+        <Row key={nerf} justify={'center'}>
           <Col>
             <Space>
               <img
                 src={NerfIcon}
-                alt={"Nerf"}
-                style={{ height: 10, width: "auto" }}
+                alt={'Nerf'}
+                style={{ height: 10, width: 'auto' }}
               />
-              <Text strong type={"danger"}>
+              <Text strong type={'danger'}>
                 {nerf}
               </Text>
             </Space>

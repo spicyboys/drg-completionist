@@ -1,10 +1,10 @@
-import InfoCircleOutlined from "@ant-design/icons/InfoCircleOutlined";
-import { Card, Col, Popover } from "antd";
-import { Miner, MinerColor } from "utils/miner";
-import { MinerWeapon } from "utils/weapons";
-import OverclockCardPopover from "./OverclockCardPopover";
-import { Overclock } from "./OverclockData";
-import OverclockIcon from "./OverclockIcon";
+import InfoCircleOutlined from '@ant-design/icons/InfoCircleOutlined';
+import { Card, Col, Popover } from 'antd';
+import { Miner, MinerColor } from 'utils/miner';
+import { MinerWeapon } from 'utils/weapons';
+import OverclockCardPopover from './OverclockCardPopover';
+import { Overclock } from './OverclockData';
+import OverclockIcon from './OverclockIcon';
 
 export default function OverclockCard(props: {
   overclock: Overclock;
@@ -21,15 +21,15 @@ export default function OverclockCard(props: {
         headStyle={
           props.isAcquired
             ? {
-              color: "black",
-              backgroundColor: MinerColor[props.miner],
-              fontWeight: "bold",
-              transition: "all .2s",
-            }
+                color: 'black',
+                backgroundColor: MinerColor[props.miner],
+                fontWeight: 'bold',
+                transition: 'all .2s',
+              }
             : {
-              fontWeight: "bold",
-              transition: "all .2s",
-            }
+                fontWeight: 'bold',
+                transition: 'all .2s',
+              }
         }
         onClick={props.onClick}
       >
@@ -44,8 +44,8 @@ export default function OverclockCard(props: {
         >
           <InfoCircleOutlined
             style={{
-              color: "white",
-              float: "right",
+              color: 'white',
+              float: 'right',
               marginTop: -14,
             }}
           />
