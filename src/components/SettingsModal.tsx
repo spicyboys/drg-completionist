@@ -1,4 +1,4 @@
-import { Modal, Button, Typography, Space, Divider, Row } from "antd";
+import { Modal, Button, Typography, Space, Divider, Row, Col } from "antd";
 import useStore from "data/useStore";
 import GitHubButton from "react-github-btn";
 import { SatchelCharge } from "assets/other";
@@ -99,7 +99,17 @@ export default function SettingsModal(props: {
         </a>
       </div>
       <Divider dashed />
-      <div style={{ textAlign: "center" }}>Made with &#x2665; in ATX</div>
+      <Row justify={"center"}>
+        <Col span={17} style={{ textAlign: "center" }}>
+          <Text type={"secondary"}>
+            This website is not affiliated with Ghost Ship Games. (But we really admire their work.)
+          </Text>
+        </Col>
+      </Row>
+      <Divider dashed />
+      <Row justify={"center"}>
+        <Text>Made with &#x2665; in ATX</Text>
+      </Row>
     </Modal>
   );
 }
