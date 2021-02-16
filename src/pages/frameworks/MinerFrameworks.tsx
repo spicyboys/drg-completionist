@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Row } from "antd";
 import React from "react";
 import { Miner } from "utils/miner";
