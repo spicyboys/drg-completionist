@@ -25,7 +25,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "yarn eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint": "yarn eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "yarn prettier --write .",
+    "clean": "yarn lint && yarn format",
     "update-codegen": "scripts/generate_asset_wrappers.sh"
   },
   "eslintConfig": {
