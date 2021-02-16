@@ -3,7 +3,7 @@ import "antd/dist/antd.dark.css";
 import { Switch, Route } from "react-router-dom";
 import OverclocksPage from "pages/overclocks/OverclocksPage";
 import FrameworksPage from "pages/frameworks/FrameworksPage";
-import Tabs from "components/Tabs";
+import PageTabs from "components/PageTabs";
 import PageFooter from "components/PageFooter";
 
 const { Content } = Layout;
@@ -62,7 +62,7 @@ export default function App() {
             <PageHeader
               title="DRG Completionist"
               subTitle="Rock and Stone!"
-              footer={<Tabs />}
+              footer={<PageTabs />}
             />
           </Col>
           <Col xs={22} lg={18}>

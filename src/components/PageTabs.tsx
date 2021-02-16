@@ -7,7 +7,7 @@ import SettingsOutlined from "@ant-design/icons/SettingOutlined";
 
 const { TabPane } = Tabs;
 
-export default function AppTabs() {
+export default function PageTabs() {
   const history = useHistory();
   const location = useLocation();
   const [settingsVisible, setSettingsVisible] = useState(false);
