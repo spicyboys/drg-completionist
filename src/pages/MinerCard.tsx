@@ -3,7 +3,7 @@ import { useMemo } from "react";
 import { Collapse, CollapsePanelProps } from "antd";
 import React from "react";
 import { Miner, MinerColor, MinerAvatar } from "utils/miner";
-import rockAndStone from "assets/rockAndStone.png";
+import { RockAndStone } from "assets/other";
 
 const { Panel } = Collapse;
 const { Meta } = Card;
@@ -26,10 +26,10 @@ export default function MinerCard(
         }}
         format={(percent) =>
           percent === 100 ? (
-            <Image src={rockAndStone} preview={false} height={20} />
+            <Image src={RockAndStone} preview={false} height={20} />
           ) : (
-            `${percent}%`
-          )
+              `${percent}%`
+            )
         }
       />
     );
