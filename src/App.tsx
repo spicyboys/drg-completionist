@@ -57,15 +57,15 @@ export default function App() {
     <Layout>
       <BackTop style={{ bottom: 150 }} />
       <Content style={{ marginBottom: 100 }}>
-        <Row>
-          <Col span={18} offset={3}>
+        <Row justify="center">
+          <Col xs={22} lg={18}>
             <PageHeader
               title="DRG Completionist"
               subTitle="Rock and Stone!"
               footer={<Tabs />}
             />
           </Col>
-          <Col span={18} offset={3}>
+          <Col xs={22} lg={18}>
             <Switch>
               {TABS.map((tab) => (
                 <Route
