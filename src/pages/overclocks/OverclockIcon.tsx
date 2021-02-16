@@ -1,6 +1,6 @@
-import { Overclock } from "./OverclockData";
-import * as icons from "assets/overclocks/icons";
 import * as frames from "assets/overclocks/frames";
+import * as icons from "assets/overclocks/icons";
+import { Overclock } from "./OverclockData";
 
 export default function OverclockIcon(props: { overclock: Overclock }) {
   const { type: frameName, icon: iconName } = props.overclock;

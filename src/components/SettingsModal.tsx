@@ -1,9 +1,9 @@
 import { Modal, Button, Typography, Space, Divider, Row, Col } from "antd";
-import useStore from "data/useStore";
+import Avatar from "antd/lib/avatar/avatar";
 import GitHubButton from "react-github-btn";
 import { SatchelCharge } from "assets/other";
 import { MissionControlPortrait } from "assets/portraits";
-import Avatar from "antd/lib/avatar/avatar";
+import useStore from "data/useStore";
 
 const { Title, Text } = Typography;
 
@@ -51,7 +51,9 @@ export default function SettingsModal(props: {
                 src={MissionControlPortrait}
                 alt={"Warning from Mission Control"}
               />
-              <Text strong>"Careful, miner! Management's saying this can't be undone."</Text>
+              <Text strong>
+                {'"Careful, miner! Management\'s saying this can\'t be undone."'}
+              </Text>
             </Space>
           </Row>
         </Space>

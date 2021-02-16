@@ -1,11 +1,11 @@
 import { Row, Col, PageHeader, Layout, BackTop } from "antd";
 import "antd/dist/antd.dark.css";
 import { Switch, Route } from "react-router-dom";
-import OverclocksPage from "pages/overclocks/OverclocksPage";
-import FrameworksPage from "pages/frameworks/FrameworksPage";
-import PageTabs from "components/PageTabs";
-import PageFooter from "components/PageFooter";
 import { Assignment } from "assets/other"
+import PageFooter from "components/PageFooter";
+import PageTabs from "components/PageTabs";
+import FrameworksPage from "pages/frameworks/FrameworksPage";
+import OverclocksPage from "pages/overclocks/OverclocksPage";
 
 const { Content } = Layout;
 

@@ -1,11 +1,11 @@
 import { Layout, Progress } from "antd";
+import { useMemo } from "react";
+import { useLocation } from "react-router-dom";
 import { DEFAULT_TAB, TabName, TABS } from "App";
-import { MinerWeapons } from "utils/weapons";
 import useStore from "data/useStore";
 import { Frameworks } from "pages/frameworks/FrameworkData";
 import { overclocks } from "pages/overclocks/OverclockData";
-import { useMemo } from "react";
-import { useLocation } from "react-router-dom";
+import { MinerWeapons } from "utils/weapons";
 const { Footer } = Layout;
 
 export default function PageFooter() {

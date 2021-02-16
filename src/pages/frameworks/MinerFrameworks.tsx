@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Row } from "antd";
 import React from "react";
-import { Miner } from "utils/miner";
-import { Frameworks } from "./FrameworkData";
-import { MinerWeapons, MinerWeapon } from "utils/weapons";
-import useStore from "data/useStore";
-import FrameworkCard from "./FrameworkCard";
 import WeaponDivider from "components/WeaponDivider";
+import useStore from "data/useStore";
+import { Miner } from "utils/miner";
+import { MinerWeapons, MinerWeapon } from "utils/weapons";
+import FrameworkCard from "./FrameworkCard";
+import { Frameworks } from "./FrameworkData";
 
 export default function MinerFrameworks<T extends Miner>(props: { miner: T }) {
   const { miner } = props;

@@ -1,5 +1,4 @@
 import { useState, useMemo } from "react";
-import { INITIAL_STATE, State } from "./state";
 import {
   createSimpleSchema,
   custom,
@@ -8,6 +7,7 @@ import {
   deserialize,
   PropSchema,
 } from "serializr";
+import { INITIAL_STATE, State } from "./state";
 
 const STORAGE_KEY = "data";
 

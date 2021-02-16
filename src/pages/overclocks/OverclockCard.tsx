@@ -1,10 +1,10 @@
-import OverclockIcon from "./OverclockIcon";
-import { Overclock } from "./OverclockData";
+import InfoCircleOutlined from "@ant-design/icons/InfoCircleOutlined";
 import { Card, Col, Popover } from "antd";
-import OverclockCardPopover from "./OverclockCardPopover";
 import { Miner, MinerColor } from "utils/miner";
 import { MinerWeapon } from "utils/weapons";
-import InfoCircleOutlined from "@ant-design/icons/InfoCircleOutlined";
+import OverclockCardPopover from "./OverclockCardPopover";
+import { Overclock } from "./OverclockData";
+import OverclockIcon from "./OverclockIcon";
 
 export default function OverclockCard(props: {
   overclock: Overclock;

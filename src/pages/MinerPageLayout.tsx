@@ -1,7 +1,7 @@
-import MinerCard from "./MinerCard";
-import { Collapse } from "antd";
 import RightOutlined from "@ant-design/icons/RightOutlined";
+import { Collapse } from "antd";
 import { AllMiners, Miner } from "utils/miner";
+import MinerCard from "./MinerCard";
 
 export default function MinerPageLayout(props: {
   children: (miner: Miner) => React.ReactNode;
