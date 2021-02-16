@@ -28,7 +28,6 @@ function generate_index {
   done
 
   for directory in "${directories[@]}"; do
-    echo $directory;
     imports+=( "export * as $directory from \"./$directory\";" )
   done
 

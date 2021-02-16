@@ -1,17 +1,11 @@
 import * as frames from "assets/overclocks/frames";
 import * as icons from "assets/overclocks/icons";
+import { Currency } from "utils/currency";
 import { Miner } from "utils/miner";
 import { MinerWeapon } from "utils/weapons";
 
-export type Price = {
-  credits: number;
-  bismor?: number;
-  croppa?: number;
-  enorPearl?: number;
-  jadiz?: number;
-  magnite?: number;
-  umanite?: number;
-};
+// All currencies are optional except credits
+type Price = Partial<Record<Currency, number>> & { credits: number };
 
 type Effects = {
   buffs: string[];
