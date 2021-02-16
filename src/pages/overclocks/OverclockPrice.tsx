@@ -1,8 +1,18 @@
 import { Overclock } from "./OverclockData";
 import currencies from "assets/currencies";
 import { useEffect, useState } from "react";
-import { Col, Row, Space } from "antd";
+import { Col, Row, Space, Tooltip } from "antd";
 import Text from "antd/lib/typography/Text";
+
+enum CurrencyNames {
+  credits = "Credits",
+  bismor = "Bismor",
+  croppa = "Croppa",
+  enorPearl = "Enor Pearls",
+  jadiz = "Jadiz",
+  magnite = "Magnite",
+  umanite = "Umanite"
+}
 
 type PriceIcons = {
   credits: string;
@@ -54,11 +64,13 @@ export default function OverclockPrice(props: { overclock: Overclock }) {
       {Object.entries(price).map(([currencyType, value]) =>
         <Col key={currencyType}>
           <Space>
-            <img
-              src={icons[currencyType as keyof typeof icons]}
-              alt={currencyType}
-              style={{ height: 20, width: "auto" }}
-            />
+            <Tooltip placement={"top"} title={CurrencyNames[currencyType as keyof typeof CurrencyNames]}>
+              <img
+                src={icons[currencyType as keyof typeof icons]}
+                alt={CurrencyNames[currencyType as keyof typeof CurrencyNames]}
+                style={{ height: 20, width: "auto" }}
+              />
+            </Tooltip>
             <Text strong>{value}</Text>
           </Space>
         </Col>
