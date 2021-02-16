@@ -23,6 +23,7 @@
     "@typescript-eslint"
   ],
   "rules": {
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "sort-imports": "warn"
   }
 }
