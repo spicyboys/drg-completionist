@@ -266,7 +266,7 @@ export const overclocks: Overclocks = {
           magnite: 70,
         },
         effects: {
-          buffs: ["+Randomized Damage (between x0.8 and x1.4 Damage)"],
+          buffs: ["+Randomized Damage (from x0.8 to x1.4 Damage)"],
           nerfs: [],
         },
         description: "More damage on average, but it's a bit inconsistent.",
@@ -459,7 +459,7 @@ export const overclocks: Overclocks = {
         effects: {
           buffs: [
             "+Stun Chance Occurs on All Body Parts",
-            "+Bonus Damage vs. Stunned (+30% Kinetic Damage)",
+            "+30% Bonus Kinetic Damage vs. Stunned",
           ],
           nerfs: [],
         },
@@ -717,7 +717,7 @@ export const overclocks: Overclocks = {
           magnite: 105,
         },
         effects: {
-          buffs: ["x4 Area Damage", "+1m Radius"],
+          buffs: ["x4.0 Area Damage", "+1m Radius"],
           nerfs: ["x0.3 Max Ammo", "x0.7 Projectile Velocity"],
         },
         description:
@@ -965,7 +965,7 @@ export const overclocks: Overclocks = {
         },
         effects: {
           buffs: ["+50% Ricochet Chance on Bullets"],
-          nerfs: ["-3 Damage", "x6 Base Spread"],
+          nerfs: ["-3 Damage", "x6.0 Base Spread"],
         },
         description:
           "Special bullets that ricochet off all surfaces and even enemies, going on to hit nearby targets. However, they deal less damage and are less accurate overall.",
@@ -1112,7 +1112,7 @@ export const overclocks: Overclocks = {
           magnite: 70,
         },
         effects: {
-          buffs: ["+Randomized Damage (between x0.8 and x1.4 Damage)"],
+          buffs: ["+Randomized Damage (from x0.8 to x1.4 Damage)"],
           nerfs: [],
         },
         description: "More damage on average, but it's a bit inconsistent.",
@@ -1179,7 +1179,7 @@ export const overclocks: Overclocks = {
           umanite: 65,
         },
         effects: {
-          buffs: ["x2 Damage", "x0.5 Base Spread"],
+          buffs: ["x2.0 Damage", "x0.5 Base Spread"],
           nerfs: [
             "-13 Max Ammo",
             "-1 Magazine Size",
@@ -1307,7 +1307,7 @@ export const overclocks: Overclocks = {
         },
         effects: {
           buffs: [
-            "x2 Max Ammo",
+            "x2.0 Max Ammo",
             "+30 Magazine Size",
             "x0.5 Recoil",
             "0.5 Spread per Shot",
@@ -1383,7 +1383,7 @@ export const overclocks: Overclocks = {
           umanite: 65,
         },
         effects: {
-          buffs: ["+Randomized Damage (between x0.8 and x1.4 Damage"],
+          buffs: ["+Randomized Damage (from x0.8 to x1.4 Damage"],
           nerfs: [],
         },
         description: "More damage on average, but it's a bit inconsistent.",
