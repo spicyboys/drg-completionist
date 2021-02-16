@@ -1,9 +1,10 @@
 import OverclockIcon from "./OverclockIcon";
 import { Overclock } from "./OverclockData";
-import { Card, Col, Divider, Image, Row, Tooltip, Typography } from "antd";
+import { Card, Col, Divider, Image, Row, Space, Tooltip, Typography } from "antd";
 import { WeaponOutlines } from "utils/weapons";
 import { Miner } from "utils/miner";
 import { MinerWeapon } from "utils/weapons";
+import { Buff as BuffIcon, Nerf as NerfIcon } from "assets/overclocks/arrows"
 import Meta from "antd/lib/card/Meta";
 import OverclockPrice from "./OverclockPrice";
 
@@ -40,18 +41,32 @@ export default function OverclockCardPopover(props: {
       {props.overclock.effects.buffs.map((buff) => (
         <Row key={buff} justify={"center"}>
           <Col>
-            <Text strong type={"success"}>
-              {buff}
-            </Text>
+            <Space>
+              <img
+                src={BuffIcon}
+                alt={"Buff"}
+                style={{ height: 10, width: "auto" }}
+              />
+              <Text strong type={"success"}>
+                {buff}
+              </Text>
+            </Space>
           </Col>
         </Row>
       ))}
       {props.overclock.effects.nerfs.map((nerf) => (
         <Row key={nerf} justify={"center"}>
           <Col>
-            <Text strong type={"danger"}>
-              {nerf}
-            </Text>
+            <Space>
+              <img
+                src={NerfIcon}
+                alt={"Nerf"}
+                style={{ height: 10, width: "auto" }}
+              />
+              <Text strong type={"danger"}>
+                {nerf}
+              </Text>
+            </Space>
           </Col>
         </Row>
       ))}
