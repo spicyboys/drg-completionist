@@ -1,8 +1,8 @@
 import SettingsOutlined from '@ant-design/icons/SettingOutlined';
 import { Button, Tabs } from 'antd';
-import { DEFAULT_TAB, TABS } from 'App';
 import { useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
+import { DEFAULT_TAB, TABS } from 'App';
 import SettingsModal from './SettingsModal';
 
 const { TabPane } = Tabs;

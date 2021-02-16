@@ -1,7 +1,7 @@
 import { Row } from 'antd';
+import React from 'react';
 import WeaponDivider from 'components/WeaponDivider';
 import useStore from 'data/useStore';
-import React from 'react';
 import { Miner } from 'utils/miner';
 import { MinerWeapon } from 'utils/weapons';
 import OverclockCard from './OverclockCard';

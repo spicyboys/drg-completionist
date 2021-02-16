@@ -1,6 +1,6 @@
 import { Card, Image, Progress, Collapse, CollapsePanelProps } from 'antd';
-import { RockAndStone } from 'assets/other';
 import React, { useMemo } from 'react';
+import { RockAndStone } from 'assets/other';
 import { Miner, MinerAvatar, MinerColor } from 'utils/miner';
 
 const { Panel } = Collapse;
