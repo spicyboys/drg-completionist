@@ -1,20 +1,21 @@
-import { Miner } from "utils/miner";
 import { Framework } from "pages/frameworks/FrameworkData";
+import { Miner } from "utils/miner";
 import { MinerWeapon } from "utils/weapons";
 
 type Actions =
   | {
       type: "TOGGLE_OVERCLOCK";
       payload: {
-        miner: Miner;
+        weapon: MinerWeapon<Miner>;
         overclock: string;
       };
     }
   | {
       type: "TOGGLE_FRAMEWORK";
       payload: {
+        weapon: MinerWeapon<Miner>;
         framework: Framework;
-      } & { [T in Miner]: { miner: T; weapon: MinerWeapon<T> } }[Miner];
+      };
     }
   | {
       type: "RESET";

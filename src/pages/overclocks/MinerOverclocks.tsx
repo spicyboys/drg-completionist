@@ -9,7 +9,7 @@ import WeaponDivider from "components/WeaponDivider";
 
 export default function MinerOverclocks(props: { miner: Miner }) {
   const { miner } = props;
-  const [acquiredMinerOverclocks, dispatch] = useStore("overclocks", miner);
+  const [acquiredOverclocks, dispatch] = useStore("overclocks");
   const minerOverclocks = overclocks[miner];
 
   return (
@@ -24,12 +24,16 @@ export default function MinerOverclocks(props: { miner: Miner }) {
                 overclock={overclock}
                 miner={miner}
                 weapon={weapon as MinerWeapon<Miner>}
-                isAcquired={acquiredMinerOverclocks.includes(overclock.name)}
+                isAcquired={
+                  acquiredOverclocks
+                    .get(weapon as MinerWeapon<Miner>)
+                    ?.has(overclock.name) ?? false
+                }
                 onClick={() =>
                   dispatch({
                     type: "TOGGLE_OVERCLOCK",
                     payload: {
-                      miner,
+                      weapon: weapon as MinerWeapon<Miner>,
                       overclock: overclock.name,
                     },
                   })

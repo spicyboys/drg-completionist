@@ -7,17 +7,9 @@ import useStore from "data/useStore";
 import FrameworkCard from "./FrameworkCard";
 import WeaponDivider from "components/WeaponDivider";
 
-/**
- * This whole file is a trainwreck for Typescript. Technically, everything in
- * here should be well typed, but the path traversal for objects with enum
- * keys doesn't work. And because of that, well, nothing else types correctly.
- *
- * I spent all afternoon trying to fix it. Instead, you're going to have to
- * deal with this ts-nochecked'd dogshit
- */
 export default function MinerFrameworks<T extends Miner>(props: { miner: T }) {
   const { miner } = props;
-  const [acquiredMinerFrameworks, dispatch] = useStore("frameworks", miner);
+  const [acquiredFrameworks, dispatch] = useStore("frameworks");
 
   return (
     <>
@@ -30,14 +22,13 @@ export default function MinerFrameworks<T extends Miner>(props: { miner: T }) {
                 key={framework}
                 miner={miner}
                 framework={framework}
-                // @ts-ignore
-                isAcquired={acquiredMinerFrameworks[weapon].includes(framework)}
+                isAcquired={
+                  acquiredFrameworks.get(weapon)?.has(framework) ?? false
+                }
                 onClick={() =>
                   dispatch({
                     type: "TOGGLE_FRAMEWORK",
-                    // @ts-ignore
                     payload: {
-                      miner,
                       weapon,
                       framework,
                     },

@@ -19,7 +19,10 @@ export default function PageFooter() {
     switch (currentTab) {
       case "overclocks":
         return Math.round(
-          (Object.values(store.overclocks).flat().length /
+          (Array.from(store.overclocks.values()).reduce(
+            (p, c) => p + c.size,
+            0
+          ) /
             Object.values(overclocks)
               .flatMap((w) => Object.values(w))
               .flat().length) *
@@ -27,9 +30,10 @@ export default function PageFooter() {
         );
       case "frameworks":
         return Math.round(
-          (Object.values(store.frameworks)
-            .flatMap((f) => Object.values(f))
-            .reduce((p, c) => p + c.length, 0) /
+          (Array.from(store.frameworks.values()).reduce(
+            (p, c) => p + c.size,
+            0
+          ) /
             (Frameworks.length *
               Object.values(MinerWeapons).reduce((p, c) => p + c.length, 0))) *
             100
