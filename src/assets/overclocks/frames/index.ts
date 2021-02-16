@@ -1,9 +1,9 @@
-const frames = <M extends { [k: string]: Promise<typeof import("*.png")> }>(
-  things: M
-) => things;
+/**
+ * This file is generated
+ * To update it, run `yarn run update-codegen`
+ */
 
-export default frames({
-  clean: import("./clean.png"),
-  balanced: import("./balanced.png"),
-  unstable: import("./unstable.png"),
-});
+export { default as Balanced } from "./balanced.png";
+export { default as Clean } from "./clean.png";
+export { default as Unstable } from "./unstable.png";
+
