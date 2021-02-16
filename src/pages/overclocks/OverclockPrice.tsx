@@ -1,6 +1,6 @@
 import { Overclock } from "./OverclockData";
-import { CurrencyIcons } from "utils/currency";
-import { Col, Row } from "antd";
+import { Currency, CurrencyIcons, CurrencyNames } from "utils/currency";
+import { Col, Row, Space, Tooltip } from "antd";
 import Text from "antd/lib/typography/Text";
 
 export default function OverclockPrice(props: { overclock: Overclock }) {
@@ -10,12 +10,16 @@ export default function OverclockPrice(props: { overclock: Overclock }) {
     <Row align={"middle"} justify={"space-around"}>
       {Object.entries(price).map(([currencyType, value]) => (
         <Col key={currencyType}>
-          <img
-            src={CurrencyIcons[currencyType as keyof typeof CurrencyIcons]}
-            alt={currencyType}
-            style={{ height: 20, width: "auto" }}
-          />
-          <Text strong>{value}</Text>
+          <Space>
+            <Tooltip placement={"top"} title={CurrencyNames[currencyType as Currency]}>
+              <img
+                src={CurrencyIcons[currencyType as Currency]}
+                alt={CurrencyNames[currencyType as Currency]}
+                style={{ height: 20, width: "auto" }}
+              />
+            </Tooltip>
+            <Text strong>{value}</Text>
+          </Space>
         </Col>
       ))}
     </Row>
