@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import React, { createContext, useEffect, useReducer } from "react";
 import reducer from "./reducer";
 import Actions from "./actions";
@@ -18,5 +19,5 @@ export default function Store({ children }: { children: React.ReactNode }) {
 
 export const Context = createContext<[State, React.Dispatch<Actions>]>([
   INITIAL_STATE,
-  (r) => {},
+  (r) => { },
 ]);
