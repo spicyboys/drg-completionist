@@ -15,15 +15,15 @@ export default function OverclockCardPopover(props: {
   weapon: MinerWeapon<Miner>;
 }) {
   return (
-    <Card bordered={false} style={{ width: 400 }}>
+    <Card bordered={false} style={{ width: 340 }}>
       <Meta
         style={{}}
         description={
           <Row align={"middle"} justify={"space-around"}>
-            <Col span={18}>
+            <Col span={16}>
               <Title level={4}>{props.overclock.name}</Title>
             </Col>
-            <Col span={6}>
+            <Col span={8}>
               <Tooltip placement={"bottomRight"} title={props.weapon}>
                 <Image
                   src={WeaponOutlines[props.weapon]}
