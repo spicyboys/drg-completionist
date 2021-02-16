@@ -1,40 +1,36 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
+import { updateKey } from "utils/map";
+import { removeFromSet, addToSet } from "utils/set";
 import Actions from "./actions";
 import { INITIAL_STATE, State } from "./state";
 
 export default function reducer(state: State, action: Actions): State {
   switch (action.type) {
     case "TOGGLE_OVERCLOCK": {
-      const { miner, overclock } = action.payload;
+      const { weapon, overclock } = action.payload;
+      const weaponOverclocks = state.overclocks.get(weapon) ?? new Set();
       return {
         ...state,
-        overclocks: {
-          ...state.overclocks,
-          [miner]: state.overclocks[miner].includes(overclock)
-            ? state.overclocks[miner].filter((v) => v !== overclock)
-            : [...state.overclocks[miner], overclock],
-        },
+        overclocks: updateKey(
+          state.overclocks,
+          weapon,
+          weaponOverclocks.has(overclock)
+            ? removeFromSet(weaponOverclocks, overclock)
+            : addToSet(weaponOverclocks, overclock)
+        ),
       };
     }
     case "TOGGLE_FRAMEWORK": {
-      const { miner, weapon, framework } = action.payload;
+      const { weapon, framework } = action.payload;
+      const weaponFrameworks = state.frameworks.get(weapon) ?? new Set();
       return {
         ...state,
-        frameworks: {
-          ...state.frameworks,
-          [miner]: {
-            ...state.frameworks[miner],
-            // @ts-ignore
-            [weapon]: state.frameworks[miner][weapon].includes(framework)
-              ? // @ts-ignore
-              state.frameworks[miner][weapon].filter(
-                // @ts-ignore
-                (v) => v !== framework
-              )
-              : // @ts-ignore
-              [...state.frameworks[miner][weapon], framework],
-          },
-        },
+        frameworks: updateKey(
+          state.frameworks,
+          weapon,
+          weaponFrameworks.has(framework)
+            ? removeFromSet(weaponFrameworks, framework)
+            : addToSet(weaponFrameworks, framework)
+        ),
       };
     }
     case "RESET": {
