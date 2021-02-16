@@ -3,7 +3,7 @@ const currencies = <M extends { [k: string]: Promise<typeof import("*.png")> }>(
 ) => things;
 
 export default currencies({
-  credit: import("./Credit.png"),
+  credits: import("./Credit.png"),
   bismor: import("./Bismor.png"),
   croppa: import("./Croppa.png"),
   enorPearl: import("./EnorPearl.png"),
