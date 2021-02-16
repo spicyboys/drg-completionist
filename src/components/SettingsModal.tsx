@@ -1,7 +1,7 @@
 import { Modal, Button, Typography, Space, Divider, Row } from "antd";
 import useStore from "data/useStore";
 import GitHubButton from "react-github-btn";
-import satchelCharge from "assets/satchelCharge.png";
+import { SatchelCharge } from "assets/other";
 import { MissionControlPortrait } from "assets/portraits";
 import Avatar from "antd/lib/avatar/avatar";
 
@@ -31,7 +31,7 @@ export default function SettingsModal(props: {
               size={"large"}
               icon={
                 <img
-                  src={satchelCharge}
+                  src={SatchelCharge}
                   alt={"Reset Progress"}
                   style={{ height: 25, marginRight: 10, marginTop: -2 }}
                 />
