@@ -18,39 +18,38 @@ export default function OverclockCard(props: {
       <Card
         hoverable
         title={props.overclock.name}
-        extra={
-          <Popover
-            content={() => (
-              <OverclockCardPopover
-                weapon={props.weapon}
-                overclock={props.overclock}
-              />
-            )}
-          >
-            <InfoCircleOutlined
-              style={{
-                color: props.isAcquired ? "black" : "white",
-                transition: "all .2s",
-              }}
-            />
-          </Popover>
-        }
         headStyle={
           props.isAcquired
             ? {
-                color: "black",
-                backgroundColor: MinerColor[props.miner],
-                fontWeight: "bold",
-                transition: "all .2s",
-              }
+              color: "black",
+              backgroundColor: MinerColor[props.miner],
+              fontWeight: "bold",
+              transition: "all .2s",
+            }
             : {
-                fontWeight: "bold",
-                transition: "all .2s",
-              }
+              fontWeight: "bold",
+              transition: "all .2s",
+            }
         }
         onClick={props.onClick}
       >
         <OverclockIcon overclock={props.overclock} />
+        <Popover
+          content={() => (
+            <OverclockCardPopover
+              weapon={props.weapon}
+              overclock={props.overclock}
+            />
+          )}
+        >
+          <InfoCircleOutlined
+            style={{
+              color: "white",
+              float: "right",
+              marginTop: -14,
+            }}
+          />
+        </Popover>
       </Card>
     </Col>
   );
