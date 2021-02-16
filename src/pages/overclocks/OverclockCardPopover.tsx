@@ -34,6 +34,7 @@ export default function OverclockCardPopover(props: {
             <Col span={8}>
               <Tooltip placement={'bottomRight'} title={props.weapon}>
                 <Image
+                  alt={props.weapon}
                   src={WeaponOutlines[props.weapon]}
                   preview={false}
                   style={{ height: 50, width: 'auto' }}
