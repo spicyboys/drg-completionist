@@ -24,47 +24,51 @@ export const TABS: Array<{
   key: TabName;
   content: JSX.Element;
 }> = [
-  {
-    title: 'Overclocks',
-    key: 'overclocks',
-    content: <OverclocksPage />,
-  },
-  {
-    title: 'Weapon Frameworks',
-    key: 'frameworks',
-    content: <FrameworksPage />,
-  },
-  // https://github.com/BobertForever/drg-completionist/issues/1
-  // {
-  //   title: "Weapon Skins",
-  //   key: "skins",
-  //   content: <></>,
-  // },
-  // https://github.com/BobertForever/drg-completionist/issues/2
-  // {
-  //   title: "Miner Accessories",
-  //   key: "accessories",
-  //   content: <></>,
-  // },
-  // https://github.com/BobertForever/drg-completionist/issues/3
-  // {
-  //   title: "Pickaxe Components",
-  //   key: "pickaxe",
-  //   content: <></>,
-  // },
-];
+    {
+      title: 'Overclocks',
+      key: 'overclocks',
+      content: <OverclocksPage />,
+    },
+    {
+      title: 'Weapon Frameworks',
+      key: 'frameworks',
+      content: <FrameworksPage />,
+    },
+    // https://github.com/BobertForever/drg-completionist/issues/1
+    // {
+    //   title: "Weapon Skins",
+    //   key: "skins",
+    //   content: <></>,
+    // },
+    // https://github.com/BobertForever/drg-completionist/issues/2
+    // {
+    //   title: "Miner Accessories",
+    //   key: "accessories",
+    //   content: <></>,
+    // },
+    // https://github.com/BobertForever/drg-completionist/issues/3
+    // {
+    //   title: "Pickaxe Components",
+    //   key: "pickaxe",
+    //   content: <></>,
+    // },
+  ];
 
 export default function App() {
   return (
-    <Layout>
+    <Layout style={{ background: '#1a1a1a' }}>
       <BackTop style={{ bottom: 150 }} />
       <Content style={{ marginBottom: 100 }}>
         <Row justify="center">
           <Col xs={22} lg={18}>
             <PageHeader
-              avatar={{ size: 'large', src: Assignment }}
+              avatar={{ size: 'large', src: Assignment, alt: 'Assignment Icon' }}
               title="DRG Completionist"
-              subTitle="Leave No Rock or Stone Unturned!"
+              subTitle={
+                <span style={{ color: '#ffffff99' }}>
+                  {'Leave No Rock and Stone Unturned!'}
+                </span>
+              }
               footer={<PageTabs />}
             />
           </Col>
