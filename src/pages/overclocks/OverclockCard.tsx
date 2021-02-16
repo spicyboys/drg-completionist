@@ -20,7 +20,6 @@ export default function OverclockCard(props: {
         title={props.overclock.name}
         extra={
           <Popover
-            // placement="bottom"
             content={() => (
               <OverclockCardPopover
                 weapon={props.weapon}
