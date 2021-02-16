@@ -98,7 +98,7 @@ export default function SettingsModal(props: {
         <a href="https://www.buymeacoffee.com/robort">
           <img
             src="https://img.buymeacoffee.com/button-api/?text=Buy me a Glyphid Slammer&emoji=🍺&slug=robort&button_colour=FFDD00&font_colour=111111&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00"
-            alt="Buy me a coffee"
+            alt="Buy me a Glyphid Slammer, because coffee is for pointy-eared leaf-lovers."
           />
         </a>
       </div>

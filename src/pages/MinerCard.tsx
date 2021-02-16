@@ -23,11 +23,15 @@ export default function MinerCard(
           '100%': '#87d068',
         }}
         format={(percent) =>
-          percent === 100 ? (
-            <Image src={RockAndStone} preview={false} height={20} />
-          ) : (
+          (percent === 100) ?
+            <Image
+              src={RockAndStone}
+              preview={false}
+              height={20}
+              alt={'100% Complete'} />
+            :
             `${percent}%`
-          )
+
         }
       />
     );
@@ -46,6 +50,7 @@ export default function MinerCard(
               preview={false}
               height={64}
               width={64}
+              alt={miner}
             />
           }
           description={progressBar}
