@@ -18,3 +18,13 @@ export const CurrencyIcons: Record<Currency, string> = {
   magnite: currencies.Magnite,
   umanite: currencies.Umanite,
 };
+
+export const CurrencyNames: Record<Currency, string> = {
+  credits: "Credits",
+  bismor: "Bismor",
+  croppa: "Croppa",
+  enorPearl: "Enor Pearls",
+  jadiz: "Jadiz",
+  magnite: "Magnite",
+  umanite: "Umanite"
+}
