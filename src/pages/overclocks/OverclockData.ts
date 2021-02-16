@@ -1,17 +1,11 @@
-import frames from "assets/overclocks/frames";
-import icons from "assets/overclocks/icons";
+import * as frames from "assets/overclocks/frames";
+import * as icons from "assets/overclocks/icons";
+import { Currency } from "utils/currency";
 import { Miner } from "utils/miner";
 import { MinerWeapon } from "utils/weapons";
 
-export type Price = {
-  credits: number;
-  bismor?: number;
-  croppa?: number;
-  enorPearl?: number;
-  jadiz?: number;
-  magnite?: number;
-  umanite?: number;
-};
+// All currencies are optional except credits
+type Price = Partial<Record<Currency, number>> & { credits: number };
 
 type Effects = {
   buffs: string[];
@@ -36,8 +30,8 @@ export const overclocks: Overclocks = {
     "CRISPR Flamethrower": [
       {
         name: "Lighter Tanks",
-        icon: "ammo",
-        type: "clean",
+        icon: "Ammo",
+        type: "Clean",
         price: {
           credits: 7500,
           bismor: 125,
@@ -52,8 +46,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Sticky Additive",
-        icon: "durationHourglass",
-        type: "clean",
+        icon: "DurationHourglass",
+        type: "Clean",
         price: {
           credits: 8250,
           bismor: 80,
@@ -69,8 +63,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Compact Feed Valves",
-        icon: "clipSize",
-        type: "balanced",
+        icon: "ClipSize",
+        type: "Balanced",
         price: {
           credits: 7350,
           bismor: 70,
@@ -86,8 +80,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Fuel Stream Diffuser",
-        icon: "distance",
-        type: "balanced",
+        icon: "Distance",
+        type: "Balanced",
         price: {
           credits: 7100,
           bismor: 100,
@@ -103,8 +97,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Face Melter",
-        icon: "damage",
-        type: "unstable",
+        icon: "Damage",
+        type: "Unstable",
         price: {
           credits: 7000,
           croppa: 130,
@@ -120,8 +114,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Sticky Fuel",
-        icon: "durationHourglass",
-        type: "unstable",
+        icon: "DurationHourglass",
+        type: "Unstable",
         price: {
           credits: 8800,
           enorPearl: 110,
@@ -139,8 +133,8 @@ export const overclocks: Overclocks = {
     "Cryo Cannon": [
       {
         name: "Improved Thermal Efficiency",
-        icon: "clipSize",
-        type: "clean",
+        icon: "ClipSize",
+        type: "Clean",
         price: {
           credits: 8350,
           croppa: 125,
@@ -156,8 +150,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Perfectly Tuned Cooler",
-        icon: "cold",
-        type: "clean",
+        icon: "Cold",
+        type: "Clean",
         price: {
           credits: 8750,
           bismor: 110,
@@ -172,8 +166,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Flow Rate Expansion",
-        icon: "duration",
-        type: "balanced",
+        icon: "Duration",
+        type: "Balanced",
         price: {
           credits: 8900,
           enorPearl: 70,
@@ -189,8 +183,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Ice Spear",
-        icon: "projectileSpeed",
-        type: "balanced",
+        icon: "ProjectileSpeed",
+        type: "Balanced",
         price: {
           credits: 8950,
           enorPearl: 60,
@@ -206,8 +200,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Ice Storm",
-        icon: "damage",
-        type: "unstable",
+        icon: "Damage",
+        type: "Unstable",
         price: {
           credits: 7200,
           enorPearl: 130,
@@ -227,8 +221,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Snowball",
-        icon: "area",
-        type: "unstable",
+        icon: "Area",
+        type: "Unstable",
         price: {
           credits: 8400,
           jadiz: 90,
@@ -246,8 +240,8 @@ export const overclocks: Overclocks = {
     "Subata 120": [
       {
         name: "Chain Hit",
-        icon: "ricochet",
-        type: "clean",
+        icon: "Ricochet",
+        type: "Clean",
         price: {
           credits: 7600,
           bismor: 65,
@@ -263,8 +257,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Homebrew Powder",
-        icon: "chance",
-        type: "clean",
+        icon: "Chance",
+        type: "Clean",
         price: {
           credits: 7150,
           bismor: 135,
@@ -279,8 +273,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Oversized Magazine",
-        icon: "clipSize",
-        type: "balanced",
+        icon: "ClipSize",
+        type: "Balanced",
         price: {
           credits: 9000,
           croppa: 70,
@@ -296,8 +290,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Automatic Fire",
-        icon: "fireRate",
-        type: "unstable",
+        icon: "FireRate",
+        type: "Unstable",
         price: {
           credits: 7400,
           bismor: 95,
@@ -312,8 +306,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Explosive Reload",
-        icon: "specialMagazine",
-        type: "unstable",
+        icon: "SpecialMagazine",
+        type: "Unstable",
         price: {
           credits: 8100,
           enorPearl: 95,
@@ -329,8 +323,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Tranquilizer Rounds",
-        icon: "stun",
-        type: "unstable",
+        icon: "Stun",
+        type: "Unstable",
         price: {
           credits: 7150,
           croppa: 95,
@@ -348,8 +342,8 @@ export const overclocks: Overclocks = {
     "Experimental Plasma Charger": [
       {
         name: "Energy Rerouting",
-        icon: "chargeUp",
-        type: "clean",
+        icon: "ChargeUp",
+        type: "Clean",
         price: {
           credits: 7300,
           bismor: 130,
@@ -365,8 +359,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Magnetic Cooling Unit",
-        icon: "cooldown",
-        type: "clean",
+        icon: "Cooldown",
+        type: "Clean",
         price: {
           credits: 8900,
           croppa: 95,
@@ -382,8 +376,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Heat Pipe",
-        icon: "fuel",
-        type: "balanced",
+        icon: "Fuel",
+        type: "Balanced",
         price: {
           credits: 7450,
           bismor: 60,
@@ -399,8 +393,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Heavy Hitter",
-        icon: "damage",
-        type: "balanced",
+        icon: "Damage",
+        type: "Balanced",
         price: {
           credits: 8100,
           bismor: 140,
@@ -416,8 +410,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Overcharger",
-        icon: "damage",
-        type: "unstable",
+        icon: "Damage",
+        type: "Unstable",
         price: {
           credits: 7050,
           bismor: 120,
@@ -433,8 +427,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Persistent Plasma",
-        icon: "durationHourglass",
-        type: "unstable",
+        icon: "DurationHourglass",
+        type: "Unstable",
         price: {
           credits: 8150,
           croppa: 75,
@@ -454,8 +448,8 @@ export const overclocks: Overclocks = {
     '"Warthog" Auto 210': [
       {
         name: "Stunner",
-        icon: "stun",
-        type: "clean",
+        icon: "Stun",
+        type: "Clean",
         price: {
           credits: 7350,
           bismor: 100,
@@ -474,8 +468,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Light-Weight Magazines",
-        icon: "ammo",
-        type: "clean",
+        icon: "Ammo",
+        type: "Clean",
         price: {
           credits: 7250,
           croppa: 125,
@@ -491,8 +485,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Magnetic Pellet Alignment",
-        icon: "aim",
-        type: "balanced",
+        icon: "Aim",
+        type: "Balanced",
         price: {
           credits: 7900,
           enorPearl: 120,
@@ -508,8 +502,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Cycle Overload",
-        icon: "fireRate",
-        type: "unstable",
+        icon: "FireRate",
+        type: "Unstable",
         price: {
           credits: 8050,
           bismor: 125,
@@ -525,8 +519,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Mini Shells",
-        icon: "smallBullets",
-        type: "unstable",
+        icon: "SmallBullets",
+        type: "Unstable",
         price: {
           credits: 7700,
           croppa: 125,
@@ -544,8 +538,8 @@ export const overclocks: Overclocks = {
     '"Stubby" Voltaic SMG': [
       {
         name: "Super-Slim Rounds",
-        icon: "clipSize",
-        type: "clean",
+        icon: "ClipSize",
+        type: "Clean",
         price: {
           credits: 8550,
           bismor: 90,
@@ -561,8 +555,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Well-Oiled Machine",
-        icon: "fireRate",
-        type: "clean",
+        icon: "FireRate",
+        type: "Clean",
         price: {
           credits: 8400,
           croppa: 65,
@@ -577,8 +571,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "EM Refire Booster",
-        icon: "fireRate",
-        type: "balanced",
+        icon: "FireRate",
+        type: "Balanced",
         price: {
           credits: 8300,
           bismor: 60,
@@ -594,8 +588,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Light-Weight Rounds",
-        icon: "ammo",
-        type: "balanced",
+        icon: "Ammo",
+        type: "Balanced",
         price: {
           credits: 8700,
           bismor: 90,
@@ -611,8 +605,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Turret Arc",
-        icon: "electricity",
-        type: "unstable",
+        icon: "Electricity",
+        type: "Unstable",
         price: {
           credits: 8350,
           bismor: 100,
@@ -628,8 +622,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Turret EM Discharge",
-        icon: "areaDamage",
-        type: "unstable",
+        icon: "AreaDamage",
+        type: "Unstable",
         price: {
           credits: 8450,
           bismor: 80,
@@ -647,8 +641,8 @@ export const overclocks: Overclocks = {
     "Deepcore 40mm PGL": [
       {
         name: "Clean Sweep",
-        icon: "area",
-        type: "clean",
+        icon: "Area",
+        type: "Clean",
         price: {
           credits: 8100,
           bismor: 105,
@@ -664,8 +658,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Pack Rat",
-        icon: "ammo",
-        type: "clean",
+        icon: "Ammo",
+        type: "Clean",
         price: {
           credits: 7950,
           bismor: 80,
@@ -680,8 +674,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Compact Rounds",
-        icon: "ammo",
-        type: "balanced",
+        icon: "Ammo",
+        type: "Balanced",
         price: {
           credits: 7900,
           bismor: 120,
@@ -697,8 +691,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "RJ250 Compound",
-        icon: "explosionJump",
-        type: "balanced",
+        icon: "ExplosionJump",
+        type: "Balanced",
         price: {
           credits: 8800,
           bismor: 65,
@@ -714,8 +708,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Fat Boy",
-        icon: "areaDamage",
-        type: "unstable",
+        icon: "AreaDamage",
+        type: "Unstable",
         price: {
           credits: 8300,
           bismor: 120,
@@ -731,8 +725,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Hyper Propellant",
-        icon: "projectileSpeed",
-        type: "unstable",
+        icon: "ProjectileSpeed",
+        type: "Unstable",
         price: {
           credits: 8950,
           croppa: 90,
@@ -751,8 +745,8 @@ export const overclocks: Overclocks = {
     "Breach Cutter": [
       {
         name: "Light-Weight Cases",
-        icon: "ammo",
-        type: "clean",
+        icon: "Ammo",
+        type: "Clean",
         price: {
           credits: 8700,
           bismor: 130,
@@ -767,8 +761,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Roll Control",
-        icon: "spinningLinecutter",
-        type: "clean",
+        icon: "SpinningLinecutter",
+        type: "Clean",
         price: {
           credits: 8150,
           croppa: 95,
@@ -784,8 +778,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Stronger Plasma Current",
-        icon: "damage",
-        type: "clean",
+        icon: "Damage",
+        type: "Clean",
         price: {
           credits: 8650,
           croppa: 100,
@@ -801,8 +795,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Return to Sender",
-        icon: "forthAndBackLinecutter",
-        type: "balanced",
+        icon: "ForthAndBackLinecutter",
+        type: "Balanced",
         price: {
           credits: 7950,
           bismor: 140,
@@ -818,8 +812,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "High Voltage Crossover",
-        icon: "electricity",
-        type: "balanced",
+        icon: "Electricity",
+        type: "Balanced",
         price: {
           credits: 8250,
           bismor: 120,
@@ -835,8 +829,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Spinning Death",
-        icon: "special",
-        type: "unstable",
+        icon: "Special",
+        type: "Unstable",
         price: {
           credits: 7300,
           bismor: 75,
@@ -856,8 +850,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Inferno",
-        icon: "heat",
-        type: "unstable",
+        icon: "Heat",
+        type: "Unstable",
         price: {
           credits: 7550,
           croppa: 70,
@@ -877,8 +871,8 @@ export const overclocks: Overclocks = {
     '"Lead Storm" Powered Minigun': [
       {
         name: "A Little More Oomph!",
-        icon: "damage",
-        type: "clean",
+        icon: "Damage",
+        type: "Clean",
         price: {
           credits: 8700,
           bismor: 120,
@@ -894,8 +888,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Thinned Drum Walls",
-        icon: "cooldown",
-        type: "clean",
+        icon: "Cooldown",
+        type: "Clean",
         price: {
           credits: 7650,
           croppa: 75,
@@ -911,8 +905,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Burning Hell",
-        icon: "heat",
-        type: "balanced",
+        icon: "Heat",
+        type: "Balanced",
         price: {
           credits: 8700,
           croppa: 110,
@@ -928,8 +922,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Compact Feed Mechanism",
-        icon: "ammo",
-        type: "balanced",
+        icon: "Ammo",
+        type: "Balanced",
         price: {
           credits: 7450,
           bismor: 70,
@@ -945,8 +939,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Exhaust Vectoring",
-        icon: "damage",
-        type: "balanced",
+        icon: "Damage",
+        type: "Balanced",
         price: {
           credits: 7400,
           bismor: 140,
@@ -961,8 +955,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Bullet Hell",
-        icon: "ricochet",
-        type: "unstable",
+        icon: "Ricochet",
+        type: "Unstable",
         price: {
           credits: 7600,
           enorPearl: 105,
@@ -978,8 +972,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Lead Storm",
-        icon: "damage",
-        type: "unstable",
+        icon: "Damage",
+        type: "Unstable",
         price: {
           credits: 8800,
           enorPearl: 130,
@@ -997,8 +991,8 @@ export const overclocks: Overclocks = {
     '"Thunderhead" Heavy Autocannon': [
       {
         name: "Composite Drums",
-        icon: "ammo",
-        type: "clean",
+        icon: "Ammo",
+        type: "Clean",
         price: {
           credits: 7850,
           croppa: 135,
@@ -1014,8 +1008,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Splintering Shells",
-        icon: "area",
-        type: "clean",
+        icon: "Area",
+        type: "Clean",
         price: {
           credits: 7300,
           croppa: 95,
@@ -1031,8 +1025,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Carpet Bomber",
-        icon: "areaDamage",
-        type: "balanced",
+        icon: "AreaDamage",
+        type: "Balanced",
         price: {
           credits: 7350,
           croppa: 120,
@@ -1048,8 +1042,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Combat Mobility",
-        icon: "movementSpeed",
-        type: "balanced",
+        icon: "MovementSpeed",
+        type: "Balanced",
         price: {
           credits: 7650,
           croppa: 70,
@@ -1069,8 +1063,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Big Bertha",
-        icon: "damage",
-        type: "unstable",
+        icon: "Damage",
+        type: "Unstable",
         price: {
           credits: 8400,
           bismor: 125,
@@ -1090,8 +1084,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Neurotoxin Payload",
-        icon: "neuro",
-        type: "unstable",
+        icon: "Neuro",
+        type: "Unstable",
         price: {
           credits: 8100,
           croppa: 100,
@@ -1109,8 +1103,8 @@ export const overclocks: Overclocks = {
     '"Bulldog" Heavy Revolver': [
       {
         name: "Homebrew Powder",
-        icon: "chance",
-        type: "clean",
+        icon: "Chance",
+        type: "Clean",
         price: {
           credits: 7350,
           croppa: 135,
@@ -1125,8 +1119,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Chain Hit",
-        icon: "ricochet",
-        type: "clean",
+        icon: "Ricochet",
+        type: "Clean",
         price: {
           credits: 7300,
           enorPearl: 80,
@@ -1142,8 +1136,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Volatile Bullets",
-        icon: "heat",
-        type: "balanced",
+        icon: "Heat",
+        type: "Balanced",
         price: {
           credits: 7350,
           croppa: 130,
@@ -1159,8 +1153,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Six Shooter",
-        icon: "clipSize",
-        type: "balanced",
+        icon: "ClipSize",
+        type: "Balanced",
         price: {
           credits: 7750,
           bismor: 120,
@@ -1176,8 +1170,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Elephant Rounds",
-        icon: "damage",
-        type: "unstable",
+        icon: "Damage",
+        type: "Unstable",
         price: {
           credits: 7300,
           enorPearl: 140,
@@ -1199,8 +1193,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Magic Bullets",
-        icon: "ricochet",
-        type: "unstable",
+        icon: "Ricochet",
+        type: "Unstable",
         price: {
           credits: 8750,
           croppa: 105,
@@ -1218,8 +1212,8 @@ export const overclocks: Overclocks = {
     "BRT7 Burst Fire Gun": [
       {
         name: "Composite Casings",
-        icon: "fireRate",
-        type: "clean",
+        icon: "FireRate",
+        type: "Clean",
         price: {
           credits: 7950,
           croppa: 140,
@@ -1235,8 +1229,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Full Chamber Seal",
-        icon: "damage",
-        type: "clean",
+        icon: "Damage",
+        type: "Clean",
         price: {
           credits: 7850,
           bismor: 120,
@@ -1252,8 +1246,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Compact Mags",
-        icon: "ammo",
-        type: "balanced",
+        icon: "Ammo",
+        type: "Balanced",
         price: {
           credits: 7350,
           jadiz: 75,
@@ -1269,8 +1263,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Experimental Rounds",
-        icon: "damage",
-        type: "balanced",
+        icon: "Damage",
+        type: "Balanced",
         price: {
           credits: 8550,
           enorPearl: 100,
@@ -1286,8 +1280,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Electro Minelets",
-        icon: "electricity",
-        type: "unstable",
+        icon: "Electricity",
+        type: "Unstable",
         price: {
           credits: 7450,
           enorPearl: 80,
@@ -1303,8 +1297,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Micro Flechettes",
-        icon: "smallBullets",
-        type: "unstable",
+        icon: "SmallBullets",
+        type: "Unstable",
         price: {
           credits: 7650,
           bismor: 80,
@@ -1325,8 +1319,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Lead Spray",
-        icon: "special",
-        type: "unstable",
+        icon: "Special",
+        type: "Unstable",
         price: {
           credits: 8050,
           bismor: 125,
@@ -1346,8 +1340,8 @@ export const overclocks: Overclocks = {
     "Deepcore GK2": [
       {
         name: "Compact Ammo",
-        icon: "clipSize",
-        type: "clean",
+        icon: "ClipSize",
+        type: "Clean",
         price: {
           credits: 7250,
           bismor: 125,
@@ -1363,8 +1357,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Gas Rerouting",
-        icon: "fireRate",
-        type: "clean",
+        icon: "FireRate",
+        type: "Clean",
         price: {
           credits: 7800,
           croppa: 60,
@@ -1380,8 +1374,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Homebrew Powder",
-        icon: "chance",
-        type: "clean",
+        icon: "Chance",
+        type: "Clean",
         price: {
           credits: 8100,
           bismor: 95,
@@ -1396,8 +1390,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Overclocked Firing Mechanism",
-        icon: "fireRate",
-        type: "balanced",
+        icon: "FireRate",
+        type: "Balanced",
         price: {
           credits: 7950,
           bismor: 95,
@@ -1412,8 +1406,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Bullets of Mercy",
-        icon: "damage",
-        type: "balanced",
+        icon: "Damage",
+        type: "Balanced",
         price: {
           credits: 8100,
           bismor: 90,
@@ -1429,8 +1423,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "AI Stability Engine",
-        icon: "aim",
-        type: "unstable",
+        icon: "Aim",
+        type: "Unstable",
         price: {
           credits: 8250,
           croppa: 60,
@@ -1450,8 +1444,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Electrifying Reload",
-        icon: "specialMagazine",
-        type: "unstable",
+        icon: "SpecialMagazine",
+        type: "Unstable",
         price: {
           credits: 7750,
           bismor: 105,
@@ -1469,8 +1463,8 @@ export const overclocks: Overclocks = {
     "M1000 Classic": [
       {
         name: "Hoverclock",
-        icon: "slowdown",
-        type: "clean",
+        icon: "Slowdown",
+        type: "Clean",
         price: {
           credits: 7350,
           bismor: 105,
@@ -1486,8 +1480,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Minimal Clips",
-        icon: "ammo",
-        type: "clean",
+        icon: "Ammo",
+        type: "Clean",
         price: {
           credits: 8200,
           enorPearl: 95,
@@ -1503,8 +1497,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Active Stability System",
-        icon: "movementSpeed",
-        type: "balanced",
+        icon: "MovementSpeed",
+        type: "Balanced",
         price: {
           credits: 8150,
           bismor: 90,
@@ -1520,8 +1514,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Hipster",
-        icon: "aim",
-        type: "balanced",
+        icon: "Aim",
+        type: "Balanced",
         price: {
           credits: 8900,
           croppa: 125,
@@ -1537,8 +1531,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Electrocuting Focus Shots",
-        icon: "electricity",
-        type: "unstable",
+        icon: "Electricity",
+        type: "Unstable",
         price: {
           credits: 8850,
           bismor: 120,
@@ -1554,8 +1548,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Supercooling Chamber",
-        icon: "damage",
-        type: "unstable",
+        icon: "Damage",
+        type: "Unstable",
         price: {
           credits: 8500,
           enorPearl: 90,
@@ -1577,8 +1571,8 @@ export const overclocks: Overclocks = {
     "Jury-Rigged Boomstick": [
       {
         name: "Compact Shells",
-        icon: "ammo",
-        type: "clean",
+        icon: "Ammo",
+        type: "Clean",
         price: {
           credits: 8550,
           jadiz: 100,
@@ -1594,8 +1588,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Double Barrel",
-        icon: "fireRate",
-        type: "clean",
+        icon: "FireRate",
+        type: "Clean",
         price: {
           credits: 7950,
           croppa: 100,
@@ -1610,8 +1604,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Special Powder",
-        icon: "shotgunJump",
-        type: "clean",
+        icon: "ShotgunJump",
+        type: "Clean",
         price: {
           credits: 7050,
           bismor: 95,
@@ -1627,8 +1621,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Stuffed Shells",
-        icon: "shotgunPellet",
-        type: "clean",
+        icon: "ShotgunPellet",
+        type: "Clean",
         price: {
           credits: 7850,
           bismor: 100,
@@ -1644,8 +1638,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Shaped Shells",
-        icon: "aim",
-        type: "balanced",
+        icon: "Aim",
+        type: "Balanced",
         price: {
           credits: 7700,
           bismor: 95,
@@ -1661,8 +1655,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Jumbo Shells",
-        icon: "damage",
-        type: "unstable",
+        icon: "Damage",
+        type: "Unstable",
         price: {
           credits: 8800,
           bismor: 65,
@@ -1680,8 +1674,8 @@ export const overclocks: Overclocks = {
     "Zhukov NUK17": [
       {
         name: "Minimal Magazines",
-        icon: "reloadSpeed",
-        type: "clean",
+        icon: "ReloadSpeed",
+        type: "Clean",
         price: {
           credits: 8450,
           bismor: 130,
@@ -1697,8 +1691,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Custom Casings",
-        icon: "clipSize",
-        type: "balanced",
+        icon: "ClipSize",
+        type: "Balanced",
         price: {
           credits: 7700,
           bismor: 95,
@@ -1714,8 +1708,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Cryo Minelets",
-        icon: "cold",
-        type: "unstable",
+        icon: "Cold",
+        type: "Unstable",
         price: {
           credits: 7300,
           croppa: 65,
@@ -1731,8 +1725,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Embedded Detonators",
-        icon: "specialMagazine",
-        type: "unstable",
+        icon: "SpecialMagazine",
+        type: "Unstable",
         price: {
           credits: 7550,
           jadiz: 135,
@@ -1748,8 +1742,8 @@ export const overclocks: Overclocks = {
       },
       {
         name: "Gas Recycling",
-        icon: "damage",
-        type: "unstable",
+        icon: "Damage",
+        type: "Unstable",
         price: {
           credits: 7800,
           enorPearl: 70,
