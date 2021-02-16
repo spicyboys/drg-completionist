@@ -63,7 +63,11 @@ export default function App() {
             <PageHeader
               avatar={{ size: 'large', src: Assignment, alt: 'Assignment Icon' }}
               title="DRG Completionist"
-              subTitle="Leave No Rock or Stone Unturned!"
+              subTitle={
+                <span style={{ color: '#ffffff99' }}>
+                  {'Leave No Rock and Stone Unturned!'}
+                </span>
+              }
               footer={<PageTabs />}
             />
           </Col>
