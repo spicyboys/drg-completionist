@@ -25,6 +25,7 @@
   "rules": {
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
+    "import/namespace": [2, { "allowComputed": true }],
     "import/order": [
       "error",
       {
