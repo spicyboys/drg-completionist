@@ -1,0 +1,20 @@
+import * as currencies from "assets/currencies";
+
+export type Currency =
+  | "credits"
+  | "bismor"
+  | "croppa"
+  | "enorPearl"
+  | "jadiz"
+  | "magnite"
+  | "umanite";
+
+export const CurrencyIcons: Record<Currency, string> = {
+  credits: currencies.Credit,
+  bismor: currencies.Bismor,
+  croppa: currencies.Croppa,
+  enorPearl: currencies.EnorPearl,
+  jadiz: currencies.Jadiz,
+  magnite: currencies.Magnite,
+  umanite: currencies.Umanite,
+};
