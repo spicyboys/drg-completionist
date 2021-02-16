@@ -3,6 +3,6 @@
  * To update it, run `yarn run update-codegen`
  */
 
-export * as images from "./images";
-export * as outlines from "./outlines";
+export * as frames from "./frames";
+export * as icons from "./icons";
 
