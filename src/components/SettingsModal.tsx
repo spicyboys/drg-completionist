@@ -1,9 +1,9 @@
 import { Button, Col, Divider, Modal, Row, Space, Typography } from 'antd';
-import useStore from 'data/useStore';
-import GitHubButton from 'react-github-btn';
+import Avatar from 'antd/lib/avatar/avatar';
 import { SatchelCharge } from 'assets/other';
 import { MissionControlPortrait } from 'assets/portraits';
-import Avatar from 'antd/lib/avatar/avatar';
+import useStore from 'data/useStore';
+import GitHubButton from 'react-github-btn';
 
 const { Title, Text } = Typography;
 

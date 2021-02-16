@@ -36,10 +36,10 @@
           ["index", "sibling", "parent", "object"]
         ],
         "pathGroupsExcludedImportTypes": ["builtin"],
-        "newlines-between": "always-and-inside-groups",
+        "newlines-between": "never",
         "alphabetize": {
           "order": "asc",
-          "caseInsensitive": true
+          "caseInsensitive": false
         }
       }
     ]

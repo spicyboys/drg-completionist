@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Row } from 'antd';
+import WeaponDivider from 'components/WeaponDivider';
+import useStore from 'data/useStore';
 import React from 'react';
 import { Miner } from 'utils/miner';
-import { Frameworks } from './FrameworkData';
 import { MinerWeapon, MinerWeapons } from 'utils/weapons';
-import useStore from 'data/useStore';
 import FrameworkCard from './FrameworkCard';
-import WeaponDivider from 'components/WeaponDivider';
+import { Frameworks } from './FrameworkData';
 
 /**
  * This whole file is a trainwreck for Typescript. Technically, everything in

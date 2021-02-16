@@ -1,9 +1,7 @@
-import { Card, Image, Progress } from 'antd';
-import { useMemo } from 'react';
-import { Collapse, CollapsePanelProps } from 'antd';
-import React from 'react';
-import { Miner, MinerAvatar, MinerColor } from 'utils/miner';
+import { Card, Image, Progress, Collapse, CollapsePanelProps } from 'antd';
 import { RockAndStone } from 'assets/other';
+import React, { useMemo } from 'react';
+import { Miner, MinerAvatar, MinerColor } from 'utils/miner';
 
 const { Panel } = Collapse;
 const { Meta } = Card;
