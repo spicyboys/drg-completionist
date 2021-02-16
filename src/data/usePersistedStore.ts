@@ -52,8 +52,6 @@ export default function usePersistedStore(): [State, (value: State) => void] {
     }
   });
 
-  console.log(storedValue);
-
   const setValue = (value: State) => {
     try {
       setStoredValue(value);
