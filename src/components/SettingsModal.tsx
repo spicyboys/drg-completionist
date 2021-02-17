@@ -1,9 +1,10 @@
 import { Modal, Typography, Divider, Row, Col } from 'antd';
-const { Text } = Typography;
 import AnalyzeSaveFile from './AnalyzeSaveFile';
 import BuyMeACoffee from './BuyMeACoffee';
 import GitHubButtons from './GitHubButtons';
 import ResetProgress from './ResetProgress';
+
+const { Text } = Typography;
 
 export default function SettingsModal(props: {
   isVisible: boolean;
@@ -12,6 +13,7 @@ export default function SettingsModal(props: {
   return (
     <Modal
       title="Settings"
+      width={600}
       visible={props.isVisible}
       onCancel={props.hide}
       footer={null}
