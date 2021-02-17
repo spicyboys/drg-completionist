@@ -3,7 +3,7 @@ import { Tabs, Button } from 'antd';
 import { useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { TABS, DEFAULT_TAB } from 'App';
-import SettingsModal from './SettingsModal';
+import SettingsModal from './settingsModal/SettingsModal';
 
 const { TabPane } = Tabs;
 

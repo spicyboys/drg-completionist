@@ -51,17 +51,12 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
                   'Tired of all that clicking around just to input your current progress? Upload your save file and let Bosco do all the hard work for you!'
                 }
               </Text>
-              <Text strong>
+              <Text>
                 {'The file is located in your Steam folder by default:'}
               </Text>
               <Text code>
                 {
-                  'C:\\Program Files (x86)\\Steam\\steamapps\\common\\Deep Rock Galactic\\FSD\\Saved\\SaveGames\\{random_numbers}_Player.sav'
-                }
-              </Text>
-              <Text type={'secondary'}>
-                {
-                  'Note: Your save file is analyzed locally in-browser to keep it safe from pointy-eared leaf-lovers.'
+                  'C:\\Program Files (x86)\\Steam\\steamapps\\common\\Deep Rock Galactic\\FSD\\Saved\\SaveGames\\<steam_ID>_Player.sav'
                 }
               </Text>
             </Space>
@@ -89,11 +84,21 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
                 Analyzing...
               </Button>
             ) : (
-              <Button type={'primary'} size={'large'} icon={<UploadOutlined />}>
-                Select Save File
-              </Button>
-            )}
+                <Button type={'primary'} size={'large'} icon={<UploadOutlined />}>
+                  Select Save File
+                </Button>
+              )}
           </Upload>
+        </Row>
+        <Row>
+          <Col span={18} offset={3}>
+            <Text type={'secondary'}>
+              <Text strong>{'Note: '}</Text>
+              {
+                'The save file is analyzed locally in your browser to keep it safe from pointy-eared leaf-lovers.'
+              }
+            </Text>
+          </Col>
         </Row>
       </Space>
     </Row>
