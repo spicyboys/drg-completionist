@@ -1,8 +1,10 @@
 import LoadingOutlined from '@ant-design/icons/LoadingOutlined';
 import UploadOutlined from '@ant-design/icons/UploadOutlined';
+import { useWorker } from '@koale/useworker';
 import { Button, Typography, Space, Row, Upload, Col } from 'antd';
 import { useCallback, useState } from 'react';
 import useStore from 'data/useStore';
+import { guids } from 'utils/guids';
 import { Miner } from 'utils/miner';
 import parseSaveFile from 'utils/parseSaveFile';
 import { MinerWeapon } from 'utils/weapons';
@@ -12,6 +14,8 @@ const { Title, Text } = Typography;
 export default function AnalyzeSaveFile(props: { hide: () => void }) {
   const [loading, setLoading] = useState(false);
   const [, dispatch] = useStore();
+
+  const [fileParser] = useWorker(parseSaveFile);
 
   const setOverclocks = useCallback(
     (saveFileOverclocks: { weapon: string; name: string }[]) => {
@@ -68,8 +72,9 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
             fileList={[]}
             beforeUpload={(f) => {
               setLoading(true);
-              parseSaveFile(f)
-                .then((res) => {
+              fileParser(f, guids)
+                .then(async (workerResult) => {
+                  const res = await workerResult;
                   setOverclocks(res.overclocks);
                 })
                 .finally(() => {
@@ -84,10 +89,10 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
                 Analyzing...
               </Button>
             ) : (
-                <Button type={'primary'} size={'large'} icon={<UploadOutlined />}>
-                  Select Save File
-                </Button>
-              )}
+              <Button type={'primary'} size={'large'} icon={<UploadOutlined />}>
+                Select Save File
+              </Button>
+            )}
           </Upload>
         </Row>
         <Row>

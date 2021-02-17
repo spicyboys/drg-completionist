@@ -1,17 +1,17 @@
 import { RcFile } from 'antd/lib/upload';
-import { guids } from './guids';
-
-function stringToHex(str: string): string {
-  let hex = '';
-  for (let i = 0; i < str.length; i++) {
-    hex += str.charCodeAt(i).toString(16).padStart(2, '0');
-  }
-  return hex;
-}
 
 export default function parseSaveFile(
-  file: RcFile
+  file: RcFile,
+  overclockGuids: { [s: string]: { weapon: string; name: string } }
 ): Promise<{ overclocks: { weapon: string; name: string }[] }> {
+  const stringToHex = (str: string): string => {
+    let hex = '';
+    for (let i = 0; i < str.length; i++) {
+      hex += str.charCodeAt(i).toString(16).padStart(2, '0');
+    }
+    return hex;
+  };
+
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.onload = async (e) => {
@@ -32,7 +32,7 @@ export default function parseSaveFile(
         const guid = stringToHex(
           text.slice(start + offset + i * 16, start + offset + i * 16 + 16)
         ).toUpperCase();
-        const overclock = guids[guid];
+        const overclock = overclockGuids[guid];
         if (overclock !== undefined) {
           overclocks.push(overclock);
         } else {
@@ -45,5 +45,3 @@ export default function parseSaveFile(
     reader.readAsBinaryString(file);
   });
 }
-
-export const f = 'asd';
