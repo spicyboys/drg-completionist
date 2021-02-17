@@ -4,8 +4,8 @@ import GitHubButton from 'react-github-btn';
 import { SatchelCharge } from 'assets/other';
 import { MissionControlPortrait } from 'assets/portraits';
 import useStore from 'data/useStore';
-
 const { Title, Text } = Typography;
+import AnalyzeSaveFile from './AnalyzeSaveFile';
 
 export default function SettingsModal(props: {
   isVisible: boolean;
@@ -19,6 +19,8 @@ export default function SettingsModal(props: {
       onCancel={props.hide}
       footer={null}
     >
+      <AnalyzeSaveFile />
+      <Divider dashed />
       <Row justify={'center'}>
         <Space size={'middle'} direction={'vertical'}>
           <Row justify={'center'}>

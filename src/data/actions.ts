@@ -11,6 +11,12 @@ type Actions =
       };
     }
   | {
+      type: 'SET_OVERCLOCKS';
+      payload: {
+        overclocks: ReadonlyMap<MinerWeapon<Miner>, ReadonlySet<string>>;
+      };
+    }
+  | {
       type: 'TOGGLE_FRAMEWORK';
       payload: {
         weapon: MinerWeapon<Miner>;
