@@ -16,7 +16,7 @@ export default function SettingsModal(props: {
       onCancel={props.hide}
       footer={null}
     >
-      <AnalyzeSaveFile />
+      <AnalyzeSaveFile hide={props.hide} />
       <Divider dashed />
       <ResetProgress hide={props.hide} />
       <Divider dashed />

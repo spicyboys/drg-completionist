@@ -7,9 +7,9 @@ import { Miner } from 'utils/miner';
 import parseSaveFile from 'utils/parseSaveFile';
 import { MinerWeapon } from 'utils/weapons';
 
-const { Title } = Typography;
+const { Title, Text } = Typography;
 
-export default function AnalyzeSaveFile() {
+export default function AnalyzeSaveFile(props: { hide: () => void }) {
   const [loading, setLoading] = useState(false);
   const [, dispatch] = useStore();
 
@@ -53,7 +53,10 @@ export default function AnalyzeSaveFile() {
                 .then((res) => {
                   setOverclocks(res.overclocks);
                 })
-                .finally(() => setLoading(false));
+                .finally(() => {
+                  setLoading(false);
+                  props.hide();
+                });
               return false;
             }}
           >
