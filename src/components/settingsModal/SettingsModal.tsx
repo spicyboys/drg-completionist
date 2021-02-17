@@ -26,16 +26,16 @@ export default function SettingsModal(props: {
       <Divider dashed />
       <BuyMeACoffee />
       <Divider dashed />
-      <Row justify={'center'}>
+      <Row justify="center">
         <Col span={17} style={{ textAlign: 'center' }}>
-          <Text type={'secondary'}>
+          <Text type="secondary">
             This website is not affiliated with Ghost Ship Games. (But we really
             admire their work.)
           </Text>
         </Col>
       </Row>
       <Divider dashed />
-      <Row justify={'center'}>
+      <Row justify="center">
         <Text>Made with &#x2665; in ATX</Text>
       </Row>
     </Modal>

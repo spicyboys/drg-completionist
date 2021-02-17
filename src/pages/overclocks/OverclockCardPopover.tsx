@@ -27,12 +27,12 @@ export default function OverclockCardPopover(props: {
       <Meta
         style={{}}
         description={
-          <Row align={'middle'} justify={'space-around'}>
+          <Row align="middle" justify="space-around">
             <Col span={16}>
               <Title level={4}>{props.overclock.name}</Title>
             </Col>
             <Col span={8}>
-              <Tooltip placement={'bottomRight'} title={props.weapon}>
+              <Tooltip placement="bottomRight" title={props.weapon}>
                 <Image
                   src={WeaponOutlines[props.weapon]}
                   preview={false}
@@ -48,15 +48,15 @@ export default function OverclockCardPopover(props: {
       <OverclockIcon overclock={props.overclock} />
       <Divider dashed />
       {props.overclock.effects.buffs.map((buff) => (
-        <Row key={buff} justify={'center'}>
+        <Row key={buff} justify="center">
           <Col>
             <Space>
               <img
                 src={BuffIcon}
-                alt={'Buff'}
+                alt="Buff"
                 style={{ height: 10, width: 'auto' }}
               />
-              <Text strong type={'success'}>
+              <Text strong type="success">
                 {buff}
               </Text>
             </Space>
@@ -64,15 +64,15 @@ export default function OverclockCardPopover(props: {
         </Row>
       ))}
       {props.overclock.effects.nerfs.map((nerf) => (
-        <Row key={nerf} justify={'center'}>
+        <Row key={nerf} justify="center">
           <Col>
             <Space>
               <img
                 src={NerfIcon}
-                alt={'Nerf'}
+                alt="Nerf"
                 style={{ height: 10, width: 'auto' }}
               />
-              <Text strong type={'danger'}>
+              <Text strong type="danger">
                 {nerf}
               </Text>
             </Space>

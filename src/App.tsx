@@ -69,7 +69,7 @@ export default function App() {
               title="DRG Completionist"
               subTitle={
                 <span style={{ color: '#ffffff99' }}>
-                  {'Leave No Rock and Stone Unturned!'}
+                  Leave No Rock and Stone Unturned!
                 </span>
               }
               footer={<PageTabs />}

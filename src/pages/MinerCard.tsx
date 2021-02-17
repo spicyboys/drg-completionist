@@ -11,7 +11,7 @@ export default function MinerCard(
     children: (miner: Miner) => React.ReactNode;
     miner: Miner;
     getProgress: (miner: Miner) => number;
-  } & Omit<CollapsePanelProps, 'key' | 'header'>
+  } & Omit<CollapsePanelProps, 'key' | 'header'>,
 ) {
   const { children, miner, getProgress, ...panelProps } = props;
   const progressBar = useMemo(() => {
@@ -28,7 +28,7 @@ export default function MinerCard(
               src={RockAndStone}
               preview={false}
               height={20}
-              alt={'100% Complete'}
+              alt="100% Complete"
             />
           ) : (
             `${percent}%`
