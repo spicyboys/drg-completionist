@@ -19,7 +19,7 @@ export default function Overclocks() {
         Object.values(overclocks[miner]).flat().length
       );
     },
-    [acquiredOverclocks]
+    [acquiredOverclocks],
   );
   return (
     <MinerPageLayout getProgress={getProgress}>

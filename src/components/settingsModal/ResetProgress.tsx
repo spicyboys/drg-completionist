@@ -8,18 +8,18 @@ const { Title, Text } = Typography;
 export default function ResetProgress(props: { hide: () => void }) {
   const [, dispatch] = useStore();
   return (
-    <Row justify={'center'}>
-      <Space size={'middle'} direction={'vertical'}>
-        <Row justify={'center'}>
+    <Row justify="center">
+      <Space size="middle" direction="vertical">
+        <Row justify="center">
           <Title level={5}>Clear all progress?</Title>
         </Row>
-        <Row justify={'center'} align={'middle'}>
+        <Row justify="center" align="middle">
           <Col span={16}>
             <Space>
               <Avatar
                 size={64}
                 src={MissionControlPortrait}
-                alt={'Warning from Mission Control'}
+                alt="Warning from Mission Control"
               />
               <Text>
                 {
@@ -29,15 +29,15 @@ export default function ResetProgress(props: { hide: () => void }) {
             </Space>
           </Col>
         </Row>
-        <Row justify={'center'}>
+        <Row justify="center">
           <Button
-            type={'primary'}
+            type="primary"
             danger
-            size={'large'}
+            size="large"
             icon={
               <img
                 src={SatchelCharge}
-                alt={'Reset Progress'}
+                alt="Reset Progress"
                 style={{ height: 25, marginRight: 10, marginTop: -2 }}
               />
             }

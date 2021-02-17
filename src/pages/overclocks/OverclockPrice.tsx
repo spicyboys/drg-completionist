@@ -7,12 +7,12 @@ export default function OverclockPrice(props: { overclock: Overclock }) {
   const { price } = props.overclock;
 
   return (
-    <Row align={'middle'} justify={'space-around'}>
+    <Row align="middle" justify="space-around">
       {Object.entries(price).map(([currencyType, value]) => (
         <Col key={currencyType}>
           <Space>
             <Tooltip
-              placement={'top'}
+              placement="top"
               title={CurrencyNames[currencyType as Currency]}
             >
               <img

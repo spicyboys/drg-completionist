@@ -12,7 +12,7 @@ export default function MinerPageLayout(props: {
       expandIconPosition="right"
       defaultActiveKey={[
         ...AllMiners.filter(
-          (m) => Math.round(props.getProgress(m) * 100) !== 100
+          (m) => Math.round(props.getProgress(m) * 100) !== 100,
         ),
       ]}
       expandIcon={(p) => (

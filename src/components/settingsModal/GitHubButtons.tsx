@@ -3,7 +3,7 @@ import GitHubButton from 'react-github-btn';
 
 export default function GitHubButtons() {
   return (
-    <Row justify={'center'}>
+    <Row justify="center">
       <Space>
         <GitHubButton
           href="https://github.com/BobertForever/drg-completionist"
