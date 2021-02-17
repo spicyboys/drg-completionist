@@ -1,7 +1,7 @@
-import { Modal, Typography, Space, Divider, Row, Col } from 'antd';
-import GitHubButton from 'react-github-btn';
+import { Modal, Typography, Divider, Row, Col } from 'antd';
 const { Text } = Typography;
 import AnalyzeSaveFile from './AnalyzeSaveFile';
+import GitHubButtons from './GitHubButtons';
 import ResetProgress from './ResetProgress';
 
 export default function SettingsModal(props: {
@@ -19,38 +19,7 @@ export default function SettingsModal(props: {
       <Divider dashed />
       <ResetProgress hide={props.hide} />
       <Divider dashed />
-      <Row justify={'center'}>
-        <Space>
-          <GitHubButton
-            href="https://github.com/BobertForever/drg-completionist"
-            data-size="large"
-            data-show-count="true"
-            aria-label="Star BobertForever/drg-completionist on GitHub"
-          >
-            Star
-          </GitHubButton>
-          <GitHubButton
-            href="https://github.com/BobertForever/drg-completionist/fork"
-            data-color-scheme="no-preference: light; light: light; dark: light;"
-            data-icon="octicon-repo-forked"
-            data-size="large"
-            data-show-count="true"
-            aria-label="Fork BobertForever/drg-completionist on GitHub"
-          >
-            Fork
-          </GitHubButton>
-          <GitHubButton
-            href="https://github.com/BobertForever/drg-completionist/issues"
-            data-color-scheme="no-preference: light; light: light; dark: light;"
-            data-icon="octicon-issue-opened"
-            data-size="large"
-            data-show-count="true"
-            aria-label="Issue BobertForever/drg-completionist on GitHub"
-          >
-            Issue
-          </GitHubButton>
-        </Space>
-      </Row>
+      <GitHubButtons />
       <Divider dashed />
       <div style={{ textAlign: 'center' }}>
         <a href="https://www.buymeacoffee.com/robort">
