@@ -27,24 +27,28 @@
   </head>
   <body style="background-color: #1a1a1a">
     <noscript>
-
         <blockquote style="position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
                     color: whitesmoke;
                     font-family: monospace;
-                    font-size: 1.5em;">
+                    font-size: 1.5em;
+                    display: block;
+                    margin-block-start: 1em;
+                    margin-block-end: 1em;
+                    margin-inline-start: 40px;
+                    margin-inline-end: 40px;">
           "New orders from Management:</br></br> Enable JavaScript to get this app up and running again -- or die trying. Get to it, roughnecks!"
         </blockquote>
-        <img style="height: 10em;
+        <img  src="%PUBLIC_URL%/Mission_control_portrait.png"
+              alt="Management wants you to enable JavaScript"
+              style="height: 10em;
                     width: auto;
                     position: absolute;
                     top: 53%;
                     left: 22%;
-                    transform: translate(-50%, -50%);"
-              src="%PUBLIC_URL%/Mission_control_portrait.png" />
-
+                    transform: translate(-50%, -50%);"/>
     </noscript>
     <div id="root"></div>
   </body>
