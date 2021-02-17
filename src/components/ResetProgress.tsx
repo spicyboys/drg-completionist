@@ -1,4 +1,4 @@
-import { Button, Typography, Space, Row } from 'antd';
+import { Button, Typography, Space, Row, Col } from 'antd';
 import Avatar from 'antd/lib/avatar/avatar';
 import { SatchelCharge } from 'assets/other';
 import { MissionControlPortrait } from 'assets/portraits';
@@ -11,7 +11,23 @@ export default function ResetProgress(props: { hide: () => void }) {
     <Row justify={'center'}>
       <Space size={'middle'} direction={'vertical'}>
         <Row justify={'center'}>
-          <Title level={4}>Clear all progress?</Title>
+          <Title level={5}>Clear all progress?</Title>
+        </Row>
+        <Row justify={'center'} align={'middle'}>
+          <Col span={16}>
+            <Space>
+              <Avatar
+                size={64}
+                src={MissionControlPortrait}
+                alt={'Warning from Mission Control'}
+              />
+              <Text>
+                {
+                  '"Careful, miner! Management\'s saying this can\'t be undone."'
+                }
+              </Text>
+            </Space>
+          </Col>
         </Row>
         <Row justify={'center'}>
           <Button
@@ -32,18 +48,6 @@ export default function ResetProgress(props: { hide: () => void }) {
           >
             Reset
           </Button>
-        </Row>
-        <Row justify={'center'} align={'middle'}>
-          <Space>
-            <Avatar
-              size={64}
-              src={MissionControlPortrait}
-              alt={'Warning from Mission Control'}
-            />
-            <Text strong>
-              {'"Careful, miner! Management\'s saying this can\'t be undone."'}
-            </Text>
-          </Space>
         </Row>
       </Space>
     </Row>
