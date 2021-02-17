@@ -1,9 +1,9 @@
 export const guids: { [s: string]: { weapon: string; name: string } } = {
-  AF945B93A7B9D64CA6DD00683627BC80: {
+  'AF945B93A7B9D64CA6DD00683627BC80': {
     weapon: 'Deepcore GK2',
     name: 'Compact Ammo',
   },
-  FF94B9E7834D774292DACCCA3EA023B9: {
+  'FF94B9E7834D774292DACCCA3EA023B9': {
     weapon: 'Deepcore GK2',
     name: 'Electrifying Reload',
   },
@@ -15,11 +15,11 @@ export const guids: { [s: string]: { weapon: string; name: string } } = {
     weapon: 'Deepcore GK2',
     name: 'Homebrew Powder',
   },
-  C3060324CE482C4AB6DC44ED498CBA39: {
+  'C3060324CE482C4AB6DC44ED498CBA39': {
     weapon: 'Deepcore GK2',
     name: 'Overclocked Firing Mechanism',
   },
-  F6E2E547F2EB674DBDA591F47DE6D017: {
+  'F6E2E547F2EB674DBDA591F47DE6D017': {
     weapon: 'Deepcore GK2',
     name: 'Gas Rerouting',
   },
@@ -47,11 +47,11 @@ export const guids: { [s: string]: { weapon: string; name: string } } = {
     weapon: "'Thunderhead' Heavy Autocannon",
     name: 'Neurotoxin Payload',
   },
-  CB83FD6C13C63F4982DC87B9796311C8: {
+  'CB83FD6C13C63F4982DC87B9796311C8': {
     weapon: "'Thunderhead' Heavy Autocannon",
     name: 'Splintering Shells',
   },
-  D006E3EEE0540242A2B0BCA8ABCDB387: {
+  'D006E3EEE0540242A2B0BCA8ABCDB387': {
     weapon: 'M1000 Classic',
     name: 'Minimal Clips',
   },
@@ -59,7 +59,7 @@ export const guids: { [s: string]: { weapon: string; name: string } } = {
     weapon: 'M1000 Classic',
     name: 'Supercooling Chamber',
   },
-  AAC9B6E4458458478E50DB87324097EB: {
+  'AAC9B6E4458458478E50DB87324097EB': {
     weapon: 'M1000 Classic',
     name: 'Electrocuting Focus Shots',
   },
@@ -71,7 +71,7 @@ export const guids: { [s: string]: { weapon: string; name: string } } = {
     weapon: 'M1000 Classic',
     name: 'Hoverclock',
   },
-  D1544B3528938A48964E8D9A6309D1DA: {
+  'D1544B3528938A48964E8D9A6309D1DA': {
     weapon: 'M1000 Classic',
     name: 'Active Stability System',
   },
@@ -99,11 +99,11 @@ export const guids: { [s: string]: { weapon: string; name: string } } = {
     weapon: 'BRT7 Burst Fire Gun',
     name: 'Micro Flechettes',
   },
-  F1AE55CF592E7746A0001D61584BDF2A: {
+  'F1AE55CF592E7746A0001D61584BDF2A': {
     weapon: 'BRT7 Burst Fire Gun',
     name: 'Lead Spray',
   },
-  A0E018C45FE679418FD3730E6E9B631D: {
+  'A0E018C45FE679418FD3730E6E9B631D': {
     weapon: 'Experimental Plasma Charger',
     name: 'Heat Pipe',
   },
@@ -115,7 +115,7 @@ export const guids: { [s: string]: { weapon: string; name: string } } = {
     weapon: 'Experimental Plasma Charger',
     name: 'Energy Rerouting',
   },
-  F1E6CC307C11DE4586B88B419E530ABF: {
+  'F1E6CC307C11DE4586B88B419E530ABF': {
     weapon: 'Experimental Plasma Charger',
     name: 'Magnetic Cooling Unit',
   },
@@ -127,7 +127,7 @@ export const guids: { [s: string]: { weapon: string; name: string } } = {
     weapon: 'Experimental Plasma Charger',
     name: 'Persistent Plasma',
   },
-  CD4EEC38C029724E8317CCDC22D06057: {
+  'CD4EEC38C029724E8317CCDC22D06057': {
     weapon: "'Warthog' Auto 210",
     name: 'Light-Weight Magazines',
   },
@@ -147,7 +147,7 @@ export const guids: { [s: string]: { weapon: string; name: string } } = {
     weapon: "'Warthog' Auto 210",
     name: 'Magnetic Pellet Alignment',
   },
-  CE660C4DD9980043A802A17A4569C0AC: {
+  'CE660C4DD9980043A802A17A4569C0AC': {
     weapon: 'Cryo Cannon',
     name: 'Improved Thermal Efficiency',
   },
@@ -163,11 +163,14 @@ export const guids: { [s: string]: { weapon: string; name: string } } = {
     weapon: 'Cryo Cannon',
     name: 'Ice Storm',
   },
-  D518CB371A32A0449B345E4F58D34C91: {
+  'D518CB371A32A0449B345E4F58D34C91': {
     weapon: 'Cryo Cannon',
     name: 'Ice Spear',
   },
-  C1F16F970C9C1047AF836BF6CBFEBCAD: { weapon: 'Cryo Cannon', name: 'Snowball' },
+  'C1F16F970C9C1047AF836BF6CBFEBCAD': {
+    weapon: 'Cryo Cannon',
+    name: 'Snowball'
+  },
   '43CD8D27EAEAAA4A8E6DC43E0438A10C': {
     weapon: 'Zhukov NUK17',
     name: 'Cryo Minelets',
@@ -180,7 +183,7 @@ export const guids: { [s: string]: { weapon: string; name: string } } = {
     weapon: 'Zhukov NUK17',
     name: 'Gas Recycling',
   },
-  FAF35071BA63B2429855FBC8A09BFFD0: {
+  'FAF35071BA63B2429855FBC8A09BFFD0': {
     weapon: 'Zhukov NUK17',
     name: 'Embedded Detonators',
   },
@@ -196,7 +199,7 @@ export const guids: { [s: string]: { weapon: string; name: string } } = {
     weapon: 'CRSPR Flamethrower',
     name: 'Face Melter',
   },
-  C5057A9608CF5E4BA4AAB32AD613BA3E: {
+  'C5057A9608CF5E4BA4AAB32AD613BA3E': {
     weapon: 'CRSPR Flamethrower',
     name: 'Lighter Tanks',
   },
@@ -204,7 +207,7 @@ export const guids: { [s: string]: { weapon: string; name: string } } = {
     weapon: 'CRSPR Flamethrower',
     name: 'Fuel Stream Diffuser',
   },
-  F28C3EE38A960D48965E9F69F56B3F19: {
+  'F28C3EE38A960D48965E9F69F56B3F19': {
     weapon: 'CRSPR Flamethrower',
     name: 'Sticky Fuel',
   },
@@ -224,11 +227,11 @@ export const guids: { [s: string]: { weapon: string; name: string } } = {
     weapon: "'Lead Storm' Powered Minigun",
     name: 'Lead Storm',
   },
-  FBB1014758606A41888E378F69E3CD61: {
+  'FBB1014758606A41888E378F69E3CD61': {
     weapon: "'Lead Storm' Powered Minigun",
     name: 'Exhaust Vectoring',
   },
-  B55D6170EEA5D743AC4B28293C0C4673: {
+  'B55D6170EEA5D743AC4B28293C0C4673': {
     weapon: "'Lead Storm' Powered Minigun",
     name: 'A Little More Oomph!',
   },
@@ -236,15 +239,15 @@ export const guids: { [s: string]: { weapon: string; name: string } } = {
     weapon: "'Lead Storm' Powered Minigun",
     name: 'Burning Hell',
   },
-  ED4036806A69E848BC72DDE3CDEAC456: {
+  'ED4036806A69E848BC72DDE3CDEAC456': {
     weapon: "'Lead Storm' Powered Minigun",
     name: 'Bullet Hell',
   },
-  A97694E1A9B7484EB66E14DBF830DB6B: {
+  'A97694E1A9B7484EB66E14DBF830DB6B': {
     weapon: 'Deepcore 40mm PGL',
     name: 'Pack Rat',
   },
-  EE5713FA91A0E245A1C0BFCE15212074: {
+  'EE5713FA91A0E245A1C0BFCE15212074': {
     weapon: 'Deepcore 40mm PGL',
     name: 'Compact Rounds',
   },
@@ -252,15 +255,15 @@ export const guids: { [s: string]: { weapon: string; name: string } } = {
     weapon: 'Deepcore 40mm PGL',
     name: 'Fat Boy',
   },
-  B912059A3F86E44BA2985450D136CCB5: {
+  'B912059A3F86E44BA2985450D136CCB5': {
     weapon: 'Deepcore 40mm PGL',
     name: 'Clean Sweep',
   },
-  DB7EC788B46FCE4C9800A25010A0E8EA: {
+  'DB7EC788B46FCE4C9800A25010A0E8EA': {
     weapon: 'Deepcore 40mm PGL',
     name: 'RJ250 Compound',
   },
-  BC4CD684621BF6449607373A534A574F: {
+  'BC4CD684621BF6449607373A534A574F': {
     weapon: 'Deepcore 40mm PGL',
     name: 'Hyper Propellant',
   },
@@ -292,8 +295,11 @@ export const guids: { [s: string]: { weapon: string; name: string } } = {
     weapon: 'Breach Cutter',
     name: 'Spinning Death',
   },
-  A4AB7C627AF7FE4FA235E3AAC398ED1F: { weapon: 'Subata 120', name: 'Chain Hit' },
-  F13E20C4E74976438E85C237AE071830: {
+  'A4AB7C627AF7FE4FA235E3AAC398ED1F': {
+    weapon: 'Subata 120',
+    name: 'Chain Hit'
+  },
+  'F13E20C4E74976438E85C237AE071830': {
     weapon: 'Subata 120',
     name: 'Oversized Magazine',
   },
@@ -305,7 +311,7 @@ export const guids: { [s: string]: { weapon: string; name: string } } = {
     weapon: 'Subata 120',
     name: 'Automatic Fire',
   },
-  D57B542FBC793542B6BB5617C1A67229: {
+  'D57B542FBC793542B6BB5617C1A67229': {
     weapon: 'Subata 120',
     name: 'Homebrew Powder',
   },
@@ -313,11 +319,11 @@ export const guids: { [s: string]: { weapon: string; name: string } } = {
     weapon: 'Subata 120',
     name: 'Tranquilizer Rounds',
   },
-  A937DC3938DEE8418CD0641CCE19B46A: {
+  'A937DC3938DEE8418CD0641CCE19B46A': {
     weapon: "'Bulldog' Heavy Revolver",
     name: 'Six Shooter',
   },
-  D53F94FBC05E0448B57BC9DF6846267B: {
+  'D53F94FBC05E0448B57BC9DF6846267B': {
     weapon: "'Bulldog' Heavy Revolver",
     name: 'Elephant Rounds',
   },
@@ -325,19 +331,19 @@ export const guids: { [s: string]: { weapon: string; name: string } } = {
     weapon: "'Bulldog' Heavy Revolver",
     name: 'Chain Hit',
   },
-  DB02B4E77D43BF44A4749982C0879B77: {
+  'DB02B4E77D43BF44A4749982C0879B77': {
     weapon: "'Bulldog' Heavy Revolver",
     name: 'Magic Bullets',
   },
-  CD6993F938E27C49AC69293BF942A8F0: {
+  'CD6993F938E27C49AC69293BF942A8F0': {
     weapon: "'Bulldog' Heavy Revolver",
     name: 'Homebrew Powder',
   },
-  D1306CBC8421B248A4B95B332DF3E056: {
+  'D1306CBC8421B248A4B95B332DF3E056': {
     weapon: "'Bulldog' Heavy Revolver",
     name: 'Volatile Bullets',
   },
-  EF0CAC2AEF57BD41A72155B4DA395D47: {
+  'EF0CAC2AEF57BD41A72155B4DA395D47': {
     weapon: 'Jury-Rigged Boomstick',
     name: 'Shaped Shells',
   },
@@ -353,11 +359,11 @@ export const guids: { [s: string]: { weapon: string; name: string } } = {
     weapon: 'Jury-Rigged Boomstick',
     name: 'Double Barrel',
   },
-  FA40EE4A1F8CB04FBFAF916469E4B167: {
+  'FA40EE4A1F8CB04FBFAF916469E4B167': {
     weapon: 'Jury-Rigged Boomstick',
     name: 'Compact Shells',
   },
-  E6DAF7D6065004439EF966D6FDBD69A6: {
+  'E6DAF7D6065004439EF966D6FDBD69A6': {
     weapon: 'Jury-Rigged Boomstick',
     name: 'Special Powder',
   },
@@ -365,7 +371,7 @@ export const guids: { [s: string]: { weapon: string; name: string } } = {
     weapon: "'Stubby' Volatic SMG",
     name: 'Light-Weight Rounds',
   },
-  CE9490445B036B49B89DB2BC8D18FD12: {
+  'CE9490445B036B49B89DB2BC8D18FD12': {
     weapon: "'Stubby' Volatic SMG",
     name: 'Well Oiled Machine',
   },
