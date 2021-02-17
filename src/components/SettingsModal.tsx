@@ -1,17 +1,13 @@
-import { Modal, Button, Typography, Space, Divider, Row, Col } from 'antd';
-import Avatar from 'antd/lib/avatar/avatar';
+import { Modal, Typography, Space, Divider, Row, Col } from 'antd';
 import GitHubButton from 'react-github-btn';
-import { SatchelCharge } from 'assets/other';
-import { MissionControlPortrait } from 'assets/portraits';
-import useStore from 'data/useStore';
-const { Title, Text } = Typography;
+const { Text } = Typography;
 import AnalyzeSaveFile from './AnalyzeSaveFile';
+import ResetProgress from './ResetProgress';
 
 export default function SettingsModal(props: {
   isVisible: boolean;
   hide: () => void;
 }) {
-  const [, dispatch] = useStore();
   return (
     <Modal
       title="Settings"
@@ -21,47 +17,7 @@ export default function SettingsModal(props: {
     >
       <AnalyzeSaveFile />
       <Divider dashed />
-      <Row justify={'center'}>
-        <Space size={'middle'} direction={'vertical'}>
-          <Row justify={'center'}>
-            <Title level={4}>Clear all progress?</Title>
-          </Row>
-          <Row justify={'center'}>
-            <Button
-              type={'primary'}
-              danger
-              size={'large'}
-              icon={
-                <img
-                  src={SatchelCharge}
-                  alt={'Reset Progress'}
-                  style={{ height: 25, marginRight: 10, marginTop: -2 }}
-                />
-              }
-              onClick={() => {
-                dispatch({ type: 'RESET' });
-                props.hide();
-              }}
-            >
-              Reset
-            </Button>
-          </Row>
-          <Row justify={'center'} align={'middle'}>
-            <Space>
-              <Avatar
-                size={64}
-                src={MissionControlPortrait}
-                alt={'Warning from Mission Control'}
-              />
-              <Text strong>
-                {
-                  '"Careful, miner! Management\'s saying this can\'t be undone."'
-                }
-              </Text>
-            </Space>
-          </Row>
-        </Space>
-      </Row>
+      <ResetProgress hide={props.hide} />
       <Divider dashed />
       <Row justify={'center'}>
         <Space>
