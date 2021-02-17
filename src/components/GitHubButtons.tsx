@@ -12,7 +12,7 @@ export default function GitHubButtons() {
           aria-label="Star BobertForever/drg-completionist on GitHub"
         >
           Star
-          </GitHubButton>
+        </GitHubButton>
         <GitHubButton
           href="https://github.com/BobertForever/drg-completionist/fork"
           data-color-scheme="no-preference: light; light: light; dark: light;"
@@ -22,7 +22,7 @@ export default function GitHubButtons() {
           aria-label="Fork BobertForever/drg-completionist on GitHub"
         >
           Fork
-          </GitHubButton>
+        </GitHubButton>
         <GitHubButton
           href="https://github.com/BobertForever/drg-completionist/issues"
           data-color-scheme="no-preference: light; light: light; dark: light;"
@@ -32,7 +32,7 @@ export default function GitHubButtons() {
           aria-label="Issue BobertForever/drg-completionist on GitHub"
         >
           Issue
-          </GitHubButton>
+        </GitHubButton>
       </Space>
     </Row>
   );
