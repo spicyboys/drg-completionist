@@ -23,40 +23,40 @@ export const TABS: Array<{
   key: TabName;
   content: JSX.Element;
 }> = [
-  {
-    title: 'Overclocks',
-    key: 'overclocks',
-    content: <OverclocksPage />,
-  },
-  {
-    title: 'Weapon Frameworks',
-    key: 'frameworks',
-    content: <FrameworksPage />,
-  },
-  // https://github.com/BobertForever/drg-completionist/issues/1
-  // {
-  //   title: "Weapon Skins",
-  //   key: "skins",
-  //   content: <></>,
-  // },
-  // https://github.com/BobertForever/drg-completionist/issues/2
-  // {
-  //   title: "Miner Accessories",
-  //   key: "accessories",
-  //   content: <></>,
-  // },
-  // https://github.com/BobertForever/drg-completionist/issues/3
-  // {
-  //   title: "Pickaxe Components",
-  //   key: "pickaxe",
-  //   content: <></>,
-  // },
-];
+    {
+      title: 'Overclocks',
+      key: 'overclocks',
+      content: <OverclocksPage />,
+    },
+    {
+      title: 'Weapon Frameworks',
+      key: 'frameworks',
+      content: <FrameworksPage />,
+    },
+    // https://github.com/BobertForever/drg-completionist/issues/1
+    // {
+    //   title: "Weapon Skins",
+    //   key: "skins",
+    //   content: <></>,
+    // },
+    // https://github.com/BobertForever/drg-completionist/issues/2
+    // {
+    //   title: "Miner Accessories",
+    //   key: "accessories",
+    //   content: <></>,
+    // },
+    // https://github.com/BobertForever/drg-completionist/issues/3
+    // {
+    //   title: "Pickaxe Components",
+    //   key: "pickaxe",
+    //   content: <></>,
+    // },
+  ];
 
 export default function App() {
   return (
     <Layout>
-      <BackTop style={{ bottom: 150 }} />
+      <BackTop style={{ bottom: 110 }} />
       <Content style={{ marginBottom: 100 }}>
         <Row justify="center">
           <Col xs={22} lg={18}>
