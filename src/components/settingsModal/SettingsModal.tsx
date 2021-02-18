@@ -27,10 +27,10 @@ export default function SettingsModal(props: {
       <BuyMeACoffee />
       <Divider dashed />
       <Row justify="center">
-        <Col span={17} style={{ textAlign: 'center' }}>
+        <Col span={18} style={{ textAlign: 'center' }}>
           <Text type="secondary">
-            This website is not affiliated with Ghost Ship Games. (But we really
-            admire their work.)
+            This website is not affiliated with Ghost Ship Games in any way.<br />
+            (But we really admire their work.)
           </Text>
         </Col>
       </Row>

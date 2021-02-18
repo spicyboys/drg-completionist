@@ -11,7 +11,7 @@ export default function ResetProgress(props: { hide: () => void }) {
     <Row justify="center">
       <Space size="middle" direction="vertical">
         <Row justify="center">
-          <Title level={5}>Clear all progress?</Title>
+          <Title level={5}>Reset all progress?</Title>
         </Row>
         <Row justify="center" align="middle">
           <Col span={16}>
@@ -19,7 +19,7 @@ export default function ResetProgress(props: { hide: () => void }) {
               <Avatar
                 size={64}
                 src={MissionControlPortrait}
-                alt="Warning from Mission Control"
+                alt="Reset Warning from Mission Control"
               />
               <Text>
                 {
