@@ -1,5 +1,4 @@
 import { Modal, Typography, Divider, Row, Col } from 'antd';
-import AnalyzeSaveFile from './AnalyzeSaveFile';
 import BuyMeACoffee from './BuyMeACoffee';
 import GitHubButtons from './GitHubButtons';
 import ResetProgress from './ResetProgress';
@@ -18,8 +17,6 @@ export default function SettingsModal(props: {
       onCancel={props.hide}
       footer={null}
     >
-      <AnalyzeSaveFile hide={props.hide} />
-      <Divider dashed />
       <ResetProgress hide={props.hide} />
       <Divider dashed />
       <GitHubButtons />
@@ -29,7 +26,8 @@ export default function SettingsModal(props: {
       <Row justify="center">
         <Col span={18} style={{ textAlign: 'center' }}>
           <Text type="secondary">
-            This website is not affiliated with Ghost Ship Games in any way.<br />
+            This website is not affiliated with Ghost Ship Games in any way.
+            <br />
             (But we really admire their work.)
           </Text>
         </Col>

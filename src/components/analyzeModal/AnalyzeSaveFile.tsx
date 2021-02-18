@@ -1,7 +1,6 @@
-import LoadingOutlined from '@ant-design/icons/LoadingOutlined';
-import UploadOutlined from '@ant-design/icons/UploadOutlined';
+import { LoadingOutlined, UploadOutlined } from '@ant-design/icons';
 import { useWorker } from '@koale/useworker';
-import { Button, Typography, Space, Row, Upload, Col } from 'antd';
+import { Button, Typography, Space, Row, Upload, Col, Divider } from 'antd';
 import { useCallback, useState } from 'react';
 import useStore from 'data/useStore';
 import { guids } from 'utils/guids';
@@ -9,7 +8,7 @@ import { Miner } from 'utils/miner';
 import parseSaveFile from 'utils/parseSaveFile';
 import { MinerWeapon } from 'utils/weapons';
 
-const { Title, Text } = Typography;
+const { Text } = Typography;
 
 export default function AnalyzeSaveFile(props: { hide: () => void }) {
   const [loading, setLoading] = useState(false);
@@ -44,9 +43,6 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
   return (
     <Row justify="center">
       <Space size="middle" direction="vertical">
-        <Row justify="center">
-          <Title level={5}>Analyze Save File</Title>
-        </Row>
         <Row justify="start">
           <Col span={18} offset={3}>
             <Space direction="vertical">
@@ -87,19 +83,28 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
                 Analyzing...
               </Button>
             ) : (
-              <Button type="primary" size="large" icon={<UploadOutlined />}>
-                Select Save File
-              </Button>
-            )}
+                <Button type="primary" size="large" icon={<UploadOutlined />}>
+                  Select Save File
+                </Button>
+              )}
           </Upload>
         </Row>
+        <Divider dashed style={{ margin: '12px 0' }} />
         <Row>
           <Col span={18} offset={3}>
-            <Text type="secondary">
-              <Text strong>{'Note: '}</Text>
-              The save file is analyzed locally in your browser to keep it safe
-              from pointy-eared leaf-lovers.
-            </Text>
+            <Space size="small" direction="vertical">
+              <Text type="secondary">
+                <Text strong>{'Note: '}</Text>
+                Bosco locally analyzes your save file in your browser to keep it
+                safe from pointy-eared leaf-lovers.
+              </Text>
+              <Text type="secondary">
+                <Text strong>{'Note: '}</Text>
+                This feature is still experimental, and Bosco may not find all
+                your progress just yet. R&amp;D is working on an
+                update to fix this.
+              </Text>
+            </Space>
           </Col>
         </Row>
       </Space>
