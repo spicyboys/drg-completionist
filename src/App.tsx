@@ -55,7 +55,7 @@ export const TABS: Array<{
 
 export default function App() {
   return (
-    <Layout>
+    <Layout style={{ backgroundColor: '#1a1a1a' }}>
       <BackTop style={{ bottom: 110 }} />
       <Content style={{ marginBottom: 100 }}>
         <Row justify="center">
