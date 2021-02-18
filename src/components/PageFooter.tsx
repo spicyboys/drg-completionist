@@ -13,7 +13,7 @@ export default function PageFooter() {
   const location = useLocation();
   const currentTab = useMemo(
     () => (location.pathname.substring(1) || DEFAULT_TAB) as TabName,
-    [location.pathname],
+    [location.pathname]
   );
   const currentTabPercentage = useMemo(() => {
     switch (currentTab) {
@@ -21,22 +21,22 @@ export default function PageFooter() {
         return Math.round(
           (Array.from(store.overclocks.values()).reduce(
             (p, c) => p + c.size,
-            0,
+            0
           ) /
             Object.values(overclocks)
               .flatMap((w) => Object.values(w))
               .flat().length) *
-            100,
+            100
         );
       case 'frameworks':
         return Math.round(
           (Array.from(store.frameworks.values()).reduce(
             (p, c) => p + c.size,
-            0,
+            0
           ) /
             (Frameworks.length *
               Object.values(MinerWeapons).reduce((p, c) => p + c.length, 0))) *
-            100,
+            100
         );
       case 'skins':
       case 'accessories':
@@ -46,7 +46,7 @@ export default function PageFooter() {
   }, [currentTab, store]);
   const currentTabDisplayName = useMemo(
     () => TABS.find((t) => t.key === currentTab)?.title,
-    [currentTab],
+    [currentTab]
   );
   return (
     <Footer

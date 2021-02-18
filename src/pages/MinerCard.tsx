@@ -1,4 +1,11 @@
-import { Card, Image, Progress, Collapse, CollapsePanelProps, Tooltip } from 'antd';
+import {
+  Card,
+  Image,
+  Progress,
+  Collapse,
+  CollapsePanelProps,
+  Tooltip,
+} from 'antd';
 import React, { useMemo } from 'react';
 import { RockAndStone } from 'assets/other';
 import { Miner, MinerColor, MinerAvatar } from 'utils/miner';
@@ -11,7 +18,7 @@ export default function MinerCard(
     children: (miner: Miner) => React.ReactNode;
     miner: Miner;
     getProgress: (miner: Miner) => number;
-  } & Omit<CollapsePanelProps, 'key' | 'header'>,
+  } & Omit<CollapsePanelProps, 'key' | 'header'>
 ) {
   const { children, miner, getProgress, ...panelProps } = props;
   const progressBar = useMemo(() => {
@@ -33,8 +40,8 @@ export default function MinerCard(
               />
             </Tooltip>
           ) : (
-              `${percent}%`
-            )
+            `${percent}%`
+          )
         }
       />
     );

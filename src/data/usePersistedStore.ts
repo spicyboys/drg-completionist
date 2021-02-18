@@ -17,7 +17,7 @@ const STORAGE_KEY = 'data';
 function set(): PropSchema {
   return custom(
     (v) => Array.from(v),
-    (v) => new Set(v),
+    (v) => new Set(v)
   );
 }
 
@@ -57,7 +57,7 @@ export default function usePersistedStore(): [State, (value: State) => void] {
       setStoredValue(value);
       window.localStorage.setItem(
         STORAGE_KEY,
-        JSON.stringify(serialize(schema, value)),
+        JSON.stringify(serialize(schema, value))
       );
     } catch (error) {
       console.log(error);

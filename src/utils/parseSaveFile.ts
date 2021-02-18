@@ -2,7 +2,7 @@ import { RcFile } from 'antd/lib/upload';
 
 export default function parseSaveFile(
   file: RcFile,
-  overclockGuids: { [s: string]: { weapon: string; name: string } },
+  overclockGuids: { [s: string]: { weapon: string; name: string } }
 ): Promise<{ overclocks: { weapon: string; name: string }[] }> {
   const stringToHex = (str: string): string => {
     let hex = '';
@@ -23,14 +23,14 @@ export default function parseSaveFile(
 
       const start = text.indexOf('ForgedSchematics');
       const overclockCount = parseInt(
-        text[start + 63].charCodeAt(0).toString(16),
+        text[start + 63].charCodeAt(0).toString(16)
       );
 
       const offset = 141;
       const overclocks = [];
       for (let i = 0; i < overclockCount; i++) {
         const guid = stringToHex(
-          text.slice(start + offset + i * 16, start + offset + i * 16 + 16),
+          text.slice(start + offset + i * 16, start + offset + i * 16 + 16)
         ).toUpperCase();
         const overclock = overclockGuids[guid];
         if (overclock !== undefined) {

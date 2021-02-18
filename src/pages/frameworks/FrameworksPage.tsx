@@ -19,7 +19,7 @@ export default function FrameworksPage() {
         (Frameworks.length * weapons.length)
       );
     },
-    [acquiredFrameworks],
+    [acquiredFrameworks]
   );
   return (
     <MinerPageLayout getProgress={getProgress}>

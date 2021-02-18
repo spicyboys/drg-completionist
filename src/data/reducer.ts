@@ -15,7 +15,7 @@ export default function reducer(state: State, action: Actions): State {
           weapon,
           weaponOverclocks.has(overclock)
             ? removeFromSet(weaponOverclocks, overclock)
-            : addToSet(weaponOverclocks, overclock),
+            : addToSet(weaponOverclocks, overclock)
         ),
       };
     }
@@ -36,7 +36,7 @@ export default function reducer(state: State, action: Actions): State {
           weapon,
           weaponFrameworks.has(framework)
             ? removeFromSet(weaponFrameworks, framework)
-            : addToSet(weaponFrameworks, framework),
+            : addToSet(weaponFrameworks, framework)
         ),
       };
     }

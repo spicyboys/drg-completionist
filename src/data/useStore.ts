@@ -15,7 +15,7 @@ export default function useStore<T extends keyof State>(
  * the store
  */
 export default function useStore<T extends keyof State>(
-  key?: T,
+  key?: T
 ): [T extends undefined ? State : State[T], React.Dispatch<Actions>] {
   const [state, dispatch] = useContext(Context);
   const stateFragment = useMemo(() => {
