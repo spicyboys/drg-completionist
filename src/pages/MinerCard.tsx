@@ -1,4 +1,4 @@
-import { Card, Image, Progress, Collapse, CollapsePanelProps } from 'antd';
+import { Card, Image, Progress, Collapse, CollapsePanelProps, Tooltip } from 'antd';
 import React, { useMemo } from 'react';
 import { RockAndStone } from 'assets/other';
 import { Miner, MinerColor, MinerAvatar } from 'utils/miner';
@@ -24,15 +24,17 @@ export default function MinerCard(
         }}
         format={(percent) =>
           percent === 100 ? (
-            <Image
-              src={RockAndStone}
-              preview={false}
-              height={20}
-              alt="100% Complete"
-            />
+            <Tooltip title="Mission complete! Well done, miner.">
+              <Image
+                src={RockAndStone}
+                preview={false}
+                style={{ height: 20, width: 'auto ' }}
+                alt="100% Complete"
+              />
+            </Tooltip>
           ) : (
-            `${percent}%`
-          )
+              `${percent}%`
+            )
         }
       />
     );
