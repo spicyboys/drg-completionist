@@ -3,7 +3,7 @@ import { Miner } from 'utils/miner';
 
 export const MinerWeapons = {
   [Miner.Driller]: [
-    'CRISPR Flamethrower',
+    'CRSPR Flamethrower',
     'Cryo Cannon',
     'Subata 120',
     'Experimental Plasma Charger',
@@ -31,7 +31,7 @@ export const MinerWeapons = {
 export type MinerWeapon<T extends Miner> = typeof MinerWeapons[T][number];
 
 export const WeaponOutlines: Record<MinerWeapon<Miner>, string> = {
-  'CRISPR Flamethrower': outlines.driller.Flamethrower,
+  'CRSPR Flamethrower': outlines.driller.Flamethrower,
   'Cryo Cannon': outlines.driller.CryoCannon,
   'Subata 120': outlines.driller.Subata,
   'Experimental Plasma Charger': outlines.driller.Epc,

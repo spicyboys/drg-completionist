@@ -27,7 +27,7 @@ type Overclocks = {
 
 export const overclocks: Overclocks = {
   [Miner.Driller]: {
-    'CRISPR Flamethrower': [
+    'CRSPR Flamethrower': [
       {
         name: 'Lighter Tanks',
         icon: 'Ammo',
