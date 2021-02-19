@@ -1,4 +1,4 @@
-import { Col, BackTop, Layout, PageHeader, Row } from 'antd';
+import { Col, BackTop, Layout, PageHeader, Row, Typography } from 'antd';
 import 'antd/dist/antd.dark.css';
 import { Route, Switch } from 'react-router-dom';
 import { Assignment } from 'assets/other';
@@ -8,6 +8,7 @@ import FrameworksPage from 'pages/frameworks/FrameworksPage';
 import OverclocksPage from 'pages/overclocks/OverclocksPage';
 
 const { Content } = Layout;
+const { Title } = Typography;
 
 export type TabName =
   | 'overclocks'
@@ -66,12 +67,14 @@ export default function App() {
                 src: Assignment,
                 alt: 'Assignment Icon',
               }}
-              title="DRG Completionist"
-              subTitle={
-                <span style={{ color: '#ffffff99' }}>
-                  Leave No Rock and Stone Unturned!
-                </span>
+              extra={
+                <Col xs={0} sm={24} style={{ marginTop: 12 }}>
+                  <Title level={5} type="secondary">
+                    Leave No Rock or Stone Unturned!
+                  </Title>
+                </Col>
               }
+              title="DRG Completionist"
               footer={<PageTabs />}
             />
           </Col>
