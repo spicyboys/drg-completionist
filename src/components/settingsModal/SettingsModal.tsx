@@ -21,7 +21,9 @@ export default function SettingsModal(props: {
       <Divider dashed />
       <Row justify="center">
         <Col span={18} style={{ textAlign: 'center' }}>
-          <Text code>Up-to-date as of Deep Rock Galactic version 1.33.49660.0</Text>
+          <Text code>
+            Up-to-date as of Deep Rock Galactic version 1.33.49660.0
+          </Text>
         </Col>
       </Row>
       <Divider dashed />
