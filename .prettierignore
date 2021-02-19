@@ -9,6 +9,7 @@ coverage
 # production
 /build
 /dist
+/drg-save-parser/pkg
 
 # misc
 .DS_Store
