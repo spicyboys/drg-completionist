@@ -1,4 +1,4 @@
-import { Button, Typography, Space, Row, Col } from 'antd';
+import { Button, Col, Row, Space, Typography } from 'antd';
 import Avatar from 'antd/lib/avatar/avatar';
 import { SatchelCharge } from 'assets/other';
 import { MissionControlPortrait } from 'assets/portraits';

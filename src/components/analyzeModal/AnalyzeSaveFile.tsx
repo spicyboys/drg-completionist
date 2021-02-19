@@ -1,6 +1,6 @@
 import { LoadingOutlined, UploadOutlined } from '@ant-design/icons';
 import { useWorker } from '@koale/useworker';
-import { Button, Typography, Space, Row, Upload, Col, Divider } from 'antd';
+import { Button, Col, Divider, Row, Space, Typography, Upload } from 'antd';
 import { useCallback, useState } from 'react';
 import useStore from 'data/useStore';
 import { guids } from 'utils/guids';
@@ -83,10 +83,10 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
                 Analyzing...
               </Button>
             ) : (
-                <Button type="primary" size="large" icon={<UploadOutlined />}>
-                  Select Save File
-                </Button>
-              )}
+              <Button type="primary" size="large" icon={<UploadOutlined />}>
+                Select Save File
+              </Button>
+            )}
           </Upload>
         </Row>
         <Divider dashed style={{ margin: '12px 0' }} />
@@ -101,8 +101,8 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
               <Text type="secondary">
                 <Text strong>{'Note: '}</Text>
                 This feature is still experimental, and Bosco may not find all
-                your progress just yet. R&amp;D is working on an
-                update to fix this.
+                your progress just yet. R&amp;D is working on an update to fix
+                this.
               </Text>
             </Space>
           </Col>

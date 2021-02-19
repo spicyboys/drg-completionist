@@ -4,7 +4,7 @@ import React from 'react';
 import WeaponDivider from 'components/WeaponDivider';
 import useStore from 'data/useStore';
 import { Miner } from 'utils/miner';
-import { MinerWeapons, MinerWeapon } from 'utils/weapons';
+import { MinerWeapon, MinerWeapons } from 'utils/weapons';
 import FrameworkCard from './FrameworkCard';
 import { Frameworks } from './FrameworkData';
 

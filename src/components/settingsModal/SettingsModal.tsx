@@ -1,4 +1,4 @@
-import { Modal, Typography, Divider, Row, Col } from 'antd';
+import { Col, Divider, Modal, Row, Typography } from 'antd';
 import BuyMeACoffee from './BuyMeACoffee';
 import GitHubButtons from './GitHubButtons';
 import ResetProgress from './ResetProgress';

@@ -1,11 +1,11 @@
-import { useState, useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import {
+  PropSchema,
   createSimpleSchema,
   custom,
-  map as serializrMap,
-  serialize,
   deserialize,
-  PropSchema,
+  serialize,
+  map as serializrMap,
 } from 'serializr';
 import { INITIAL_STATE, State } from './state';
 

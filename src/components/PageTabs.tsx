@@ -1,8 +1,8 @@
-import { SettingOutlined, RobotOutlined } from '@ant-design/icons/';
-import { Tabs, Button } from 'antd';
+import { RobotOutlined, SettingOutlined } from '@ant-design/icons/';
+import { Button, Tabs } from 'antd';
 import { useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
-import { TABS, DEFAULT_TAB } from 'App';
+import { DEFAULT_TAB, TABS } from 'App';
 import AnalyzeModal from './analyzeModal/AnalyzeModal';
 import SettingsModal from './settingsModal/SettingsModal';
 

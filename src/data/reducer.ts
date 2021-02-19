@@ -1,5 +1,5 @@
 import { updateKey } from 'utils/map';
-import { removeFromSet, addToSet } from 'utils/set';
+import { addToSet, removeFromSet } from 'utils/set';
 import Actions from './actions';
 import { INITIAL_STATE, State } from './state';
 

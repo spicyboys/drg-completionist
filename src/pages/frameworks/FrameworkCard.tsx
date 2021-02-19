@@ -1,4 +1,4 @@
-import { Col, Card } from 'antd';
+import { Card, Col } from 'antd';
 import { Miner, MinerColor } from 'utils/miner';
 import { Framework } from './FrameworkData';
 import FrameworkIcon from './FrameworkIcon';

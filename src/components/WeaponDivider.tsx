@@ -1,6 +1,6 @@
 import { Divider, Image, Tooltip } from 'antd';
 import { Miner } from 'utils/miner';
-import { WeaponOutlines, MinerWeapon } from 'utils/weapons';
+import { MinerWeapon, WeaponOutlines } from 'utils/weapons';
 
 export default function WeaponDivider(props: { weapon: MinerWeapon<Miner> }) {
   return (

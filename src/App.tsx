@@ -1,6 +1,6 @@
-import { Row, Col, PageHeader, Layout, BackTop } from 'antd';
+import { Col, BackTop, Layout, PageHeader, Row } from 'antd';
 import 'antd/dist/antd.dark.css';
-import { Switch, Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { Assignment } from 'assets/other';
 import PageFooter from 'components/PageFooter';
 import PageTabs from 'components/PageTabs';
@@ -23,35 +23,35 @@ export const TABS: Array<{
   key: TabName;
   content: JSX.Element;
 }> = [
-    {
-      title: 'Overclocks',
-      key: 'overclocks',
-      content: <OverclocksPage />,
-    },
-    {
-      title: 'Weapon Frameworks',
-      key: 'frameworks',
-      content: <FrameworksPage />,
-    },
-    // https://github.com/BobertForever/drg-completionist/issues/1
-    // {
-    //   title: "Weapon Skins",
-    //   key: "skins",
-    //   content: <></>,
-    // },
-    // https://github.com/BobertForever/drg-completionist/issues/2
-    // {
-    //   title: "Miner Accessories",
-    //   key: "accessories",
-    //   content: <></>,
-    // },
-    // https://github.com/BobertForever/drg-completionist/issues/3
-    // {
-    //   title: "Pickaxe Components",
-    //   key: "pickaxe",
-    //   content: <></>,
-    // },
-  ];
+  {
+    title: 'Overclocks',
+    key: 'overclocks',
+    content: <OverclocksPage />,
+  },
+  {
+    title: 'Weapon Frameworks',
+    key: 'frameworks',
+    content: <FrameworksPage />,
+  },
+  // https://github.com/BobertForever/drg-completionist/issues/1
+  // {
+  //   title: "Weapon Skins",
+  //   key: "skins",
+  //   content: <></>,
+  // },
+  // https://github.com/BobertForever/drg-completionist/issues/2
+  // {
+  //   title: "Miner Accessories",
+  //   key: "accessories",
+  //   content: <></>,
+  // },
+  // https://github.com/BobertForever/drg-completionist/issues/3
+  // {
+  //   title: "Pickaxe Components",
+  //   key: "pickaxe",
+  //   content: <></>,
+  // },
+];
 
 export default function App() {
   return (

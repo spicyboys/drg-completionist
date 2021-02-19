@@ -1,4 +1,4 @@
-import { Space, Row } from 'antd';
+import { Row, Space } from 'antd';
 import GitHubButton from 'react-github-btn';
 
 export default function GitHubButtons() {

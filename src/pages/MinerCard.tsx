@@ -1,14 +1,14 @@
 import {
   Card,
-  Image,
-  Progress,
   Collapse,
   CollapsePanelProps,
+  Image,
+  Progress,
   Tooltip,
 } from 'antd';
 import React, { useMemo } from 'react';
 import { RockAndStone } from 'assets/other';
-import { Miner, MinerColor, MinerAvatar } from 'utils/miner';
+import { Miner, MinerAvatar, MinerColor } from 'utils/miner';
 
 const { Panel } = Collapse;
 const { Meta } = Card;
