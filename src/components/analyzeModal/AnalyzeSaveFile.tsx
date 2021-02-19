@@ -40,8 +40,7 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
             <Space direction="vertical">
               <Text>
                 Tired of all that clicking around just to input your current
-                progress? Upload your save file and let Bosco do all the hard
-                work for you!
+                progress? Upload your save file and let Bosco find your overclocks for you!
               </Text>
               <Text>The file is located in your Steam folder by default:</Text>
               <Text code>
@@ -66,28 +65,20 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
                 Analyzing...
               </Button>
             ) : (
-              <Button type="primary" size="large" icon={<UploadOutlined />}>
-                Select Save File
-              </Button>
-            )}
+                <Button type="primary" size="large" icon={<UploadOutlined />}>
+                  Select Save File
+                </Button>
+              )}
           </Upload>
         </Row>
         <Divider dashed style={{ margin: '12px 0' }} />
         <Row>
           <Col span={18} offset={3}>
-            <Space size="small" direction="vertical">
-              <Text type="secondary">
-                <Text strong>{'Note: '}</Text>
+            <Text type="secondary">
+              <Text strong>{'Note: '}</Text>
                 Bosco locally analyzes your save file in your browser to keep it
                 safe from pointy-eared leaf-lovers.
-              </Text>
-              <Text type="secondary">
-                <Text strong>{'Note: '}</Text>
-                This feature is still experimental, and Bosco may not find all
-                your progress just yet. R&amp;D is working on an update to fix
-                this.
-              </Text>
-            </Space>
+            </Text>
           </Col>
         </Row>
       </Space>
