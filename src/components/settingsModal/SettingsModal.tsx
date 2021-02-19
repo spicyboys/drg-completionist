@@ -19,17 +19,15 @@ export default function SettingsModal(props: {
     >
       <ResetProgress hide={props.hide} />
       <Divider dashed />
-      <GitHubButtons />
+      <Row justify="center">
+        <Col span={18} style={{ textAlign: 'center' }}>
+          <Text code>Up-to-date as of Deep Rock Galactic version 1.33.49660.0</Text>
+        </Col>
+      </Row>
       <Divider dashed />
       <BuyMeACoffee />
       <Divider dashed />
-      <Row justify="center">
-        <Col span={18} style={{ textAlign: 'center' }}>
-          <Text strong>Last updated for DRG version</Text>
-          <Text code>1.33.49660.0</Text>
-          <Text strong>on Feb. 19, 2021.</Text>
-        </Col>
-      </Row>
+      <GitHubButtons />
       <Divider dashed />
       <Row justify="center">
         <Col span={18} style={{ textAlign: 'center' }}>
