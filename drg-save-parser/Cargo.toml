@@ -1,0 +1,25 @@
+[package]
+authors = ["Robert Lynch <robertlynch2012@gmail.com>"]
+edition = "2018"
+name = "drg-save-parser"
+version = "0.1.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+hex = "0.4.2"
+js-sys = "0.3"
+serde = {version = "1.0", features = ["derive"]}
+serde_json = "1.0"
+structure = "0.1"
+wasm-bindgen = "0.2"
+
+[dependencies.web-sys]
+features = [
+  "File",
+  "FileReader",
+  "ProgressEvent",
+  "EventTarget",
+]
+version = "0.3.22"

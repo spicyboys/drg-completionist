@@ -1,11 +1,9 @@
 import { LoadingOutlined, UploadOutlined } from '@ant-design/icons';
-import { useWorker } from '@koale/useworker';
 import { Button, Col, Divider, Row, Space, Typography, Upload } from 'antd';
+import { RcFile } from 'antd/lib/upload';
 import { useCallback, useState } from 'react';
 import useStore from 'data/useStore';
-import { guids } from 'utils/guids';
 import { Miner } from 'utils/miner';
-import parseSaveFile from 'utils/parseSaveFile';
 import { MinerWeapon } from 'utils/weapons';
 
 const { Text } = Typography;
@@ -14,19 +12,11 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
   const [loading, setLoading] = useState(false);
   const [, dispatch] = useStore();
 
-  const [fileParser] = useWorker(parseSaveFile);
-
-  const setOverclocks = useCallback(
-    (saveFileOverclocks: { weapon: string; name: string }[]) => {
-      let overclocks = new Map<string, Set<string>>();
-      saveFileOverclocks.forEach((oc) => {
-        let weaponOverclocks = overclocks.get(oc.weapon);
-        if (weaponOverclocks === undefined) {
-          weaponOverclocks = new Set();
-        }
-        weaponOverclocks.add(oc.name);
-        overclocks = overclocks.set(oc.weapon, weaponOverclocks);
-      });
+  const parseSaveFile = useCallback(async (f: RcFile) => {
+    setLoading(true);
+    try {
+      const parser = await import('drg-save-parser');
+      const { overclocks } = await parser.parse_save_file(f);
       dispatch({
         type: 'SET_OVERCLOCKS',
         payload: {
@@ -36,9 +26,11 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
           >,
         },
       });
-    },
-    []
-  );
+      props.hide();
+    } finally {
+      setLoading(false);
+    }
+  }, []);
 
   return (
     <Row justify="center">
@@ -65,16 +57,7 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
             accept=".sav"
             fileList={[]}
             beforeUpload={(f) => {
-              setLoading(true);
-              fileParser(f, guids)
-                .then(async (workerResult) => {
-                  const res = await workerResult;
-                  setOverclocks(res.overclocks);
-                })
-                .finally(() => {
-                  setLoading(false);
-                  props.hide();
-                });
+              parseSaveFile(f);
               return false;
             }}
           >
