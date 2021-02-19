@@ -24,11 +24,11 @@ function generate_index {
     local name=${image%".png"}
     name=$(echo $name | sed -E 's/_(.)/\U\1/g')
     name=${name^}
-    imports+=( "export { default as $name } from \"./$image\";" )
+    imports+=( "export { default as $name } from './$image';" )
   done
 
   for directory in "${directories[@]}"; do
-    imports+=( "export * as $directory from \"./$directory\";" )
+    imports+=( "export * as $directory from './$directory';" )
   done
 
   local import_string=""
