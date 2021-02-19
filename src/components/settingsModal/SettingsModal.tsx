@@ -25,6 +25,14 @@ export default function SettingsModal(props: {
       <Divider dashed />
       <Row justify="center">
         <Col span={18} style={{ textAlign: 'center' }}>
+          <Text strong>Last updated for DRG version</Text>
+          <Text code>1.33.49660.0</Text>
+          <Text strong>on Feb. 19, 2021.</Text>
+        </Col>
+      </Row>
+      <Divider dashed />
+      <Row justify="center">
+        <Col span={18} style={{ textAlign: 'center' }}>
           <Text type="secondary">
             This website is not affiliated with Ghost Ship Games in any way.
             <br />
