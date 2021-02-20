@@ -1,9 +1,12 @@
+use callback_future::CallbackFuture;
+use fragile::Fragile;
 use js_sys::JsString;
 use serde::Deserialize;
 use std::collections::{HashMap, HashSet};
 use std::str;
 use wasm_bindgen::prelude::*;
 use wasm_bindgen::JsCast;
+use wasm_bindgen_futures::future_to_promise;
 use web_sys::{File, FileReader, ProgressEvent};
 
 #[macro_use]
@@ -90,26 +93,32 @@ fn get_file_overclocks(file: &String) -> Result<HashMap<String, HashSet<String>>
     Ok(acquired_overclocks)
 }
 
-#[wasm_bindgen]
-pub fn parse_save_file(file: &File) -> ParseSaveFileResult {
-    let promise = js_sys::Promise::new(&mut |resolve: js_sys::Function, _| {
-        let reader = FileReader::new().unwrap();
-        let onloadend_cb = Closure::wrap(Box::new(move |e: ProgressEvent| {
-            let file_data = get_file_data(e).expect("Failed to get save data from file");
-            resolve
-                .call1(
-                    &resolve,
-                    &JsValue::from(SaveFileData {
-                        overclocks: get_file_overclocks(&file_data).unwrap(),
-                    }),
-                )
-                .unwrap();
-        }) as Box<dyn FnMut(ProgressEvent)>);
-        reader.set_onloadend(JsCast::dyn_ref(onloadend_cb.as_ref()));
-        reader
-            .read_as_binary_string(&file)
-            .expect("blob not readable");
-        onloadend_cb.forget();
+#[wasm_bindgen(typescript_type = "Promise<SaveFileData>")]
+pub fn parse_save_file(file: File) -> ParseSaveFileResult {
+    let promise = future_to_promise(async {
+        let file = Fragile::new(file);
+        let file_data: Result<String, &str> = CallbackFuture::new(move |complete| {
+            let reader = FileReader::new().unwrap();
+            let onloadend_cb = Closure::once(Box::new(|e: ProgressEvent| {
+                complete(match get_file_data(e) {
+                    Some(d) => Ok(d),
+                    None => Err("Failed to get data from file"),
+                });
+            }));
+            reader.set_onloadend(JsCast::dyn_ref(onloadend_cb.as_ref()));
+            reader
+                .read_as_binary_string(&file.get())
+                .expect("blob not readable");
+            onloadend_cb.forget();
+        })
+        .await;
+        match file_data {
+            Ok(d) => Ok(JsValue::from(SaveFileData {
+                overclocks: get_file_overclocks(&d).unwrap(),
+            })),
+            Err(e) => Err(JsValue::from(e)),
+        }
     });
+
     JsValue::from(promise).unchecked_into::<ParseSaveFileResult>()
 }

@@ -43,6 +43,8 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
           },
         });
         props.hide();
+      } catch (e) {
+        console.error(e);
       } finally {
         setLoading(false);
       }
