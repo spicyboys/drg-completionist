@@ -25,8 +25,7 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
   const [loading, setLoading] = useState(false);
   const [, dispatch] = useStore();
 
-  const isXsWidth = useBreakpoint()['xs'];
-  const isSmWidth = useBreakpoint()['sm'];
+  const isLgWidth = useBreakpoint()['lg'];
 
   const parseSaveFile = useCallback(
     async (f: RcFile) => {
@@ -95,7 +94,7 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
               </Button>
             )}
           </Upload>
-          {hasClickedButton && (isXsWidth || isSmWidth) ? (
+          {hasClickedButton && !isLgWidth ? (
             <Col span={20} style={{ marginTop: 24 }}>
               <Space>
                 <Avatar
@@ -112,13 +111,13 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
             </Col>
           ) : null}
         </Row>
-        <Divider dashed style={{ margin: '12px 0' }} />
+        <Divider dashed style={{ margin: 0 }} />
         <Row>
           <Col span={18} offset={3}>
             <Text type="secondary">
               <Text strong>{'Note: '}</Text>
-              Bosco only analyzes your save file in your browser locally to keep
-              it safe from pointy-eared leaf-lovers.
+              Bosco analyzes your save file in your browser locally to keep it
+              safe from pointy-eared leaf-lovers.
             </Text>
           </Col>
         </Row>

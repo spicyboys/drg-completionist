@@ -16,7 +16,15 @@ export default function OverclockCard(props: {
   onClick: () => void;
 }) {
   return (
-    <Col xxl={4} xl={6} lg={8} md={12} xs={24} key={props.overclock.name}>
+    <Col
+      key={props.overclock.name}
+      xs={24}
+      sm={12}
+      md={12}
+      lg={8}
+      xl={6}
+      xxl={4}
+    >
       <Card
         hoverable
         title={props.overclock.name}
@@ -38,7 +46,7 @@ export default function OverclockCard(props: {
       >
         <OverclockIcon overclock={props.overclock} />
         <Popover
-          trigger={useBreakpoint()['xs'] ? 'click' : 'hover'}
+          trigger={useBreakpoint()['lg'] ? 'hover' : 'click'}
           content={() => (
             <OverclockCardPopover
               weapon={props.weapon}

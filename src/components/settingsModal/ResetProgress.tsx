@@ -14,7 +14,7 @@ export default function ResetProgress(props: { hide: () => void }) {
           <Title level={5}>Reset all progress?</Title>
         </Row>
         <Row justify="center" align="middle">
-          <Col span={16}>
+          <Col sm={20} md={16}>
             <Space>
               <Avatar
                 size={64}

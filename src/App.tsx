@@ -62,6 +62,7 @@ export default function App() {
         <Row justify="center">
           <Col xs={22} lg={18}>
             <PageHeader
+              title="DRG Completionist"
               avatar={{
                 size: 'large',
                 src: Assignment,
@@ -78,7 +79,6 @@ export default function App() {
                   </Title>
                 </Col>
               }
-              title="DRG Completionist"
               footer={<PageTabs />}
             />
           </Col>
