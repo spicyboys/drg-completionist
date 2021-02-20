@@ -1,0 +1,15 @@
+{
+  "name": "save-parser",
+  "collaborators": [
+    "Robert Lynch <robertlynch2012@gmail.com>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "save_parser_bg.wasm",
+    "save_parser.js",
+    "save_parser.d.ts"
+  ],
+  "module": "save_parser.js",
+  "types": "save_parser.d.ts",
+  "sideEffects": false
+}
