@@ -25,25 +25,31 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
   const [loading, setLoading] = useState(false);
   const [, dispatch] = useStore();
 
-  const parseSaveFile = useCallback(async (f: RcFile) => {
-    setLoading(true);
-    try {
-      const parser = await import('save-parser');
-      const { overclocks } = await parser.parse_save_file(f);
-      dispatch({
-        type: 'SET_OVERCLOCKS',
-        payload: {
-          overclocks: overclocks as ReadonlyMap<
-            MinerWeapon<Miner>,
-            ReadonlySet<string>
-          >,
-        },
-      });
-      props.hide();
-    } finally {
-      setLoading(false);
-    }
-  }, []);
+  const isXsWidth = useBreakpoint()['xs'];
+  const isSmWidth = useBreakpoint()['sm'];
+
+  const parseSaveFile = useCallback(
+    async (f: RcFile) => {
+      setLoading(true);
+      try {
+        const parser = await import('save-parser');
+        const { overclocks } = await parser.parse_save_file(f);
+        dispatch({
+          type: 'SET_OVERCLOCKS',
+          payload: {
+            overclocks: overclocks as ReadonlyMap<
+              MinerWeapon<Miner>,
+              ReadonlySet<string>
+            >,
+          },
+        });
+        props.hide();
+      } finally {
+        setLoading(false);
+      }
+    },
+    [dispatch, props]
+  );
 
   return (
     <Row justify="center">
@@ -89,7 +95,7 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
               </Button>
             )}
           </Upload>
-          {useBreakpoint()['xs'] && hasClickedButton ? (
+          {hasClickedButton && (isXsWidth || isSmWidth) ? (
             <Col span={20} style={{ marginTop: 24 }}>
               <Space>
                 <Avatar
