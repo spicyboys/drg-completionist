@@ -554,7 +554,7 @@ export const overclocks: Overclocks = {
           'Same power but in a smaller package, giving slightly better accuracy and letting you fit a few more rounds in each magazine.',
       },
       {
-        name: 'Well-Oiled Machine',
+        name: 'Well Oiled Machine',
         icon: 'FireRate',
         type: 'Clean',
         price: {
