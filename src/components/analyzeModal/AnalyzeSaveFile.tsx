@@ -89,8 +89,7 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
               </Button>
             )}
           </Upload>
-          {(useBreakpoint()['xs'] || useBreakpoint()['sm']) &&
-          hasClickedButton ? (
+          {useBreakpoint()['xs'] && hasClickedButton ? (
             <Col span={20} style={{ marginTop: 24 }}>
               <Space>
                 <Avatar
