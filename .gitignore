@@ -22,5 +22,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# drg-save-parser
-/drg-save-parser/target
+# save-parser
+/save-parser/target

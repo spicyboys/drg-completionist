@@ -13,7 +13,7 @@
     "@types/react-dom": "^17.0.0",
     "@types/react-router-dom": "^5.1.7",
     "antd": "^4.12.3",
-    "drg-save-parser": "link:drg-save-parser/pkg",
+    "save-parser": "link:save-parser/pkg",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-github-btn": "^1.2.0",
@@ -32,7 +32,7 @@
     "format": "yarn prettier --write .",
     "clean": "yarn lint && yarn format",
     "update-codegen": "scripts/generate_asset_wrappers.sh",
-    "update-save-parser": "wasm-pack build drg-save-parser && yarn upgrade drg-save-parser"
+    "update-save-parser": "wasm-pack build save-parser"
   },
   "eslintConfig": {
     "extends": [

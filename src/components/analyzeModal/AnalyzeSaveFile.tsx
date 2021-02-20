@@ -28,7 +28,7 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
   const parseSaveFile = useCallback(async (f: RcFile) => {
     setLoading(true);
     try {
-      const parser = await import('drg-save-parser');
+      const parser = await import('save-parser');
       const { overclocks } = await parser.parse_save_file(f);
       dispatch({
         type: 'SET_OVERCLOCKS',

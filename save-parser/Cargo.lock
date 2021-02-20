@@ -19,19 +19,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
-name = "drg-save-parser"
-version = "0.1.0"
-dependencies = [
- "hex",
- "js-sys",
- "serde",
- "serde_json",
- "structure",
- "wasm-bindgen",
- "web-sys",
-]
-
-[[package]]
 name = "hex"
 version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -111,6 +98,19 @@ name = "ryu"
 version = "1.0.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "71d301d4193d031abdd79ff7e3dd721168a9572ef3fe51a1517aba235bd8f86e"
+
+[[package]]
+name = "save-parser"
+version = "0.1.0"
+dependencies = [
+ "hex",
+ "js-sys",
+ "serde",
+ "serde_json",
+ "structure",
+ "wasm-bindgen",
+ "web-sys",
+]
 
 [[package]]
 name = "serde"
