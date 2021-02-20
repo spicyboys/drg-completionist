@@ -31,7 +31,7 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
     async (f: RcFile) => {
       setLoading(true);
       try {
-        const parser = await import('save-parser');
+        const parser = await import('utils/save-parser');
         const { overclocks } = await parser.parse_save_file(f);
         dispatch({
           type: 'SET_OVERCLOCKS',

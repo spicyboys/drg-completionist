@@ -32,7 +32,7 @@
     "format": "yarn prettier --write .",
     "clean": "yarn lint && yarn format",
     "update-codegen": "scripts/generate_asset_wrappers.sh",
-    "update-save-parser": "wasm-pack build save-parser"
+    "update-save-parser": "wasm-pack build save-parser --release --out-dir ../src/utils/save-parser --out-name index"
   },
   "eslintConfig": {
     "extends": [

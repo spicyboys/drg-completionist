@@ -1,4 +1,4 @@
-import * as wasm from './save_parser_bg.wasm';
+import * as wasm from './index_bg.wasm';
 
 const heap = new Array(32).fill(undefined);
 
