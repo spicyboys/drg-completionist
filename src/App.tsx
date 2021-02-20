@@ -10,12 +10,7 @@ import OverclocksPage from 'pages/overclocks/OverclocksPage';
 const { Content } = Layout;
 const { Title } = Typography;
 
-export type TabName =
-  | 'overclocks'
-  | 'frameworks'
-  | 'skins'
-  | 'accessories'
-  | 'pickaxe';
+export type TabName = 'overclocks' | 'frameworks';
 
 export const DEFAULT_TAB: TabName = 'overclocks';
 

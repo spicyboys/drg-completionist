@@ -38,10 +38,6 @@ export default function PageFooter() {
               Object.values(MinerWeapons).reduce((p, c) => p + c.length, 0))) *
             100
         );
-      case 'skins':
-      case 'accessories':
-      case 'pickaxe':
-        return null;
     }
   }, [currentTab, store]);
   const currentTabDisplayName = useMemo(
