@@ -3,7 +3,9 @@ orbs:
   node: circleci/node@3.0.0
 jobs:
   test:
-    executor: node/default
+    executor:
+      name: node/default
+      tag: '10.23'
     steps:
       - checkout
       - node/install-packages:
