@@ -15,7 +15,7 @@ module.exports = {
       webpackConfig.module.rules.unshift({
         test: wasmExtensionRegExp,
         type: 'webassembly/experimental',
-      })
+      });
 
       return webpackConfig;
     },

@@ -9,7 +9,10 @@ coverage
 # production
 /build
 /dist
-/drg-save-parser/pkg
+/save-parser/pkg
+
+#config
+.circleci/config.yml
 
 # misc
 .DS_Store
