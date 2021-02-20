@@ -1,12 +1,15 @@
-import { Layout, Progress } from 'antd';
+import { Layout } from 'antd';
 import { useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
 import { DEFAULT_TAB, TABS, TabName } from 'App';
 import useStore from 'data/useStore';
 import { Frameworks } from 'pages/frameworks/FrameworkData';
 import { overclocks } from 'pages/overclocks/OverclockData';
+import { MinerColor } from 'utils/miner';
 import { MinerWeapons } from 'utils/weapons';
 const { Footer } = Layout;
+
+const FOOTER_HEIGHT = 50;
 
 export default function PageFooter() {
   const [store] = useStore();
@@ -44,6 +47,15 @@ export default function PageFooter() {
     () => TABS.find((t) => t.key === currentTab)?.title,
     [currentTab]
   );
+  const backgroundColor = useMemo(
+    () =>
+      `linear-gradient(to right, ${Object.values(MinerColor)
+        .map(
+          (color, index, arr) => `${color} ${index * (100 / (arr.length - 1))}%`
+        )
+        .join(', ')})`,
+    []
+  );
   return (
     <Footer
       style={{
@@ -51,18 +63,42 @@ export default function PageFooter() {
         width: '100%',
         bottom:
           currentTabPercentage === null || currentTabPercentage === 0
-            ? -100
+            ? -FOOTER_HEIGHT
             : 0,
         backgroundColor: '#141414',
         borderTop: '1px solid #434343',
         transition: 'all .4s',
+        padding: 0,
       }}
     >
-      <div>
-        {currentTabDisplayName} Progress
-        <Progress
-          percent={currentTabPercentage === null ? 0 : currentTabPercentage}
-        />
+      <div
+        style={{
+          backgroundImage: backgroundColor,
+          width: '100%',
+          height: FOOTER_HEIGHT,
+        }}
+      >
+        <div
+          style={{
+            position: 'absolute',
+            height: FOOTER_HEIGHT,
+            width: '100%',
+            textAlign: 'center',
+            lineHeight: `${FOOTER_HEIGHT}px`,
+            fontWeight: 'bold',
+          }}
+        >
+          {currentTabDisplayName} Progress: {currentTabPercentage}%
+        </div>
+        <div
+          style={{
+            backgroundColor: '#141414',
+            width: `${100 - currentTabPercentage}%`,
+            height: '100%',
+            float: 'right',
+            transition: 'all 0.3s',
+          }}
+        ></div>
       </div>
     </Footer>
   );
