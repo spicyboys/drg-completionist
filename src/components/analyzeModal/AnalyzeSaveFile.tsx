@@ -99,7 +99,7 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
                 />
                 <Text>
                   &quot;Management sees your intrepid attempts to access your
-                  save file from your mobile device and solutes your
+                  save file from your mobile device and salutes your
                   efforts.&quot;
                 </Text>
               </Space>
@@ -111,8 +111,8 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
           <Col span={18} offset={3}>
             <Text type="secondary">
               <Text strong>{'Note: '}</Text>
-              Bosco locally analyzes your save file in your browser to keep it
-              safe from pointy-eared leaf-lovers.
+              Bosco only analyzes your save file in your browser locally to keep
+              it safe from pointy-eared leaf-lovers.
             </Text>
           </Col>
         </Row>

@@ -16,7 +16,6 @@ export default function SettingsModal(props: {
       visible={props.isVisible}
       onCancel={props.hide}
       footer={null}
-      destroyOnClose
     >
       <ResetProgress hide={props.hide} />
       <Divider dashed />
