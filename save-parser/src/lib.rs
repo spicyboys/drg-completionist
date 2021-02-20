@@ -113,9 +113,10 @@ pub fn parse_save_file(file: File) -> ParseSaveFileResult {
         })
         .await;
         match file_data {
-            Ok(d) => Ok(JsValue::from(SaveFileData {
-                overclocks: get_file_overclocks(&d).unwrap(),
-            })),
+            Ok(d) => match get_file_overclocks(&d) {
+                Ok(o) => Ok(JsValue::from(SaveFileData { overclocks: o })),
+                Err(e) => Err(JsValue::from(e)),
+            },
             Err(e) => Err(JsValue::from(e)),
         }
     });
