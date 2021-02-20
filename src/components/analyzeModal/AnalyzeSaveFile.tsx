@@ -1,14 +1,17 @@
 import { LoadingOutlined, UploadOutlined } from '@ant-design/icons';
-import { Button, Col, Divider, Row, Space, Typography, Upload } from 'antd';
+import { Avatar, Button, Col, Divider, Grid, Row, Space, Typography, Upload } from 'antd';
 import { RcFile } from 'antd/lib/upload';
 import { useCallback, useState } from 'react';
+import { MissionControlPortrait } from 'assets/portraits';
 import useStore from 'data/useStore';
 import { Miner } from 'utils/miner';
 import { MinerWeapon } from 'utils/weapons';
 
+const { useBreakpoint } = Grid;
 const { Text } = Typography;
 
 export default function AnalyzeSaveFile(props: { hide: () => void }) {
+  const [hasClickedButton, setHasClickedButton] = useState(false);
   const [loading, setLoading] = useState(false);
   const [, dispatch] = useStore();
 
@@ -66,11 +69,25 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
                 Analyzing...
               </Button>
             ) : (
-              <Button type="primary" size="large" icon={<UploadOutlined />}>
-                Select Save File
-              </Button>
-            )}
+                <Button type="primary" size="large" icon={<UploadOutlined />} onClick={() => setHasClickedButton(true)}>
+                  Select Save File
+                </Button>
+              )}
           </Upload>
+          {useBreakpoint()['xs'] && hasClickedButton ?
+            <Col span={20} style={{ marginTop: 24 }}>
+              <Space>
+                <Avatar
+                  size={64}
+                  src={MissionControlPortrait}
+                  alt="Mission Control"
+                />
+                <Text>
+                  &quot;Management sees your intrepid attempts to access your save file from your mobile device and solutes your efforts.&quot;
+                </Text>
+              </Space>
+            </Col>
+            : null}
         </Row>
         <Divider dashed style={{ margin: '12px 0' }} />
         <Row>
