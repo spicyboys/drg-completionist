@@ -19,11 +19,12 @@ import OverclockPrice from './OverclockPrice';
 const { Paragraph, Text, Title } = Typography;
 
 export default function OverclockCardPopover(props: {
+  onClick: () => void;
   overclock: Overclock;
   weapon: MinerWeapon<Miner>;
 }) {
   return (
-    <Card bordered={false} style={{ width: 340 }}>
+    <Card bordered={false} style={{ width: 340 }} onClick={props.onClick}>
       <Meta
         style={{}}
         description={
