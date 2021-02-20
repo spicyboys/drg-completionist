@@ -93,7 +93,7 @@ fn get_file_overclocks(file: &String) -> Result<HashMap<String, HashSet<String>>
     Ok(acquired_overclocks)
 }
 
-#[wasm_bindgen(typescript_type = "Promise<SaveFileData>")]
+#[wasm_bindgen]
 pub fn parse_save_file(file: File) -> ParseSaveFileResult {
     let promise = future_to_promise(async {
         let file = Fragile::new(file);
