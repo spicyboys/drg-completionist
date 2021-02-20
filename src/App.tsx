@@ -69,7 +69,11 @@ export default function App() {
               }}
               extra={
                 <Col xs={0} sm={24} style={{ marginTop: 12 }}>
-                  <Title level={5} type="secondary">
+                  <Title
+                    level={5}
+                    type="secondary"
+                    style={{ color: '#ffffffa6' }}
+                  >
                     Leave No Rock or Stone Unturned!
                   </Title>
                 </Col>
