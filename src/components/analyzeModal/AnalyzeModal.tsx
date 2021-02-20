@@ -12,6 +12,7 @@ export default function AnalyzeModal(props: {
       visible={props.isVisible}
       onCancel={props.hide}
       footer={null}
+      destroyOnClose
     >
       <AnalyzeSaveFile hide={props.hide} />
     </Modal>
