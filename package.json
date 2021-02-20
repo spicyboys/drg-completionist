@@ -26,7 +26,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "craco test",
+    "test": "react-scripts test",
     "eject": "craco eject",
     "lint": "yarn eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "format": "yarn prettier --write .",
