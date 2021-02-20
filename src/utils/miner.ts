@@ -25,8 +25,15 @@ export const MinerAvatar: Record<Miner, string> = {
 };
 
 export const MinerColor: Record<Miner, string> = {
-  [Miner.Driller]: '#f7fe00',
-  [Miner.Engineer]: '#ed1d0a',
-  [Miner.Gunner]: '#3d7029',
-  [Miner.Scout]: '#4351ff',
+  [Miner.Driller]: '#D19724',
+  [Miner.Engineer]: '#892F30',
+  [Miner.Gunner]: '#446043',
+  [Miner.Scout]: '#106193',
+};
+
+export const MinerColorContrastText: Record<Miner, string> = {
+  [Miner.Driller]: '#161616',
+  [Miner.Engineer]: '#ECECEC',
+  [Miner.Gunner]: '#FFFFFFE6',
+  [Miner.Scout]: '#FFFFFFF2',
 };
