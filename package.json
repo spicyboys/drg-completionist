@@ -18,7 +18,6 @@
     "react-github-btn": "^1.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
-    "save-parser": "link:save-parser/pkg",
     "serializr": "^2.0.5",
     "typescript": "^4.1.5",
     "web-vitals": "^1.0.1"
