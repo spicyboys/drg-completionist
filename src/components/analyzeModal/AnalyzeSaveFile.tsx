@@ -44,6 +44,10 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
         });
         props.hide();
       } catch (e) {
+        gtag('event', 'exception', {
+          description: e,
+          fatal: false,
+        });
         console.error(e);
       } finally {
         setLoading(false);
@@ -77,6 +81,7 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
             accept=".sav"
             fileList={[]}
             beforeUpload={(f) => {
+              gtag('event', 'analyze_save');
               parseSaveFile(f);
               return false;
             }}
