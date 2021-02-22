@@ -12,6 +12,14 @@ import './PageFooter.css';
 const { Footer } = Layout;
 const FOOTER_HEIGHT = 50;
 
+const backgroundColor = `linear-gradient(to right, ${Object.values(MinerColor)
+  .map((color, index, arr) => `${color} ${index * (100 / (arr.length - 1))}%`)
+  .join(', ')})`;
+
+const animationColor = `linear-gradient(270deg, ${Object.values(MinerColor)
+  .map((color) => `${color}`)
+  .join(', ')}`;
+
 export default function PageFooter() {
   const [store] = useStore();
   const location = useLocation();
@@ -49,24 +57,6 @@ export default function PageFooter() {
   const currentTabDisplayName = useMemo(
     () => TABS.find((t) => t.key === currentTab)?.title,
     [currentTab]
-  );
-
-  const backgroundColor = useMemo(
-    () =>
-      `linear-gradient(to right, ${Object.values(MinerColor)
-        .map(
-          (color, index, arr) => `${color} ${index * (100 / (arr.length - 1))}%`
-        )
-        .join(', ')})`,
-    []
-  );
-
-  const animationColor = useMemo(
-    () =>
-      `linear-gradient(270deg, ${Object.values(MinerColor)
-        .map((color) => `${color}`)
-        .join(', ')}`,
-    []
   );
 
   return (

@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import {
   PropSchema,
   createSimpleSchema,
@@ -34,14 +34,12 @@ function map(valueSerializer: PropSchema) {
   });
 }
 
-export default function usePersistedStore(): [State, (value: State) => void] {
-  const schema = useMemo(() => {
-    return createSimpleSchema<State>({
-      overclocks: map(set()),
-      frameworks: map(set()),
-    });
-  }, []);
+const schema = createSimpleSchema<State>({
+  overclocks: map(set()),
+  frameworks: map(set()),
+});
 
+export default function usePersistedStore(): [State, (value: State) => void] {
   const [storedValue, setStoredValue] = useState(() => {
     try {
       const item = window.localStorage.getItem(STORAGE_KEY);
