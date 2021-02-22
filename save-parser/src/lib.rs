@@ -129,7 +129,70 @@ fn validate_save_file_header(reader: &mut Cursor<Vec<u8>>) -> Result<(), std::io
 }
 
 #[derive(Debug)]
-struct IntProperty(i32);
+enum Properties {
+    Int(i32),
+    Bool(bool),
+    Struct {
+        r#type: String,
+        name: String,
+        property: Box<Properties>,
+    },
+    Array(Vec<Box<Properties>>),
+}
+
+impl Properties {
+    fn new(property_type: &str, reader: &mut Cursor<Vec<u8>>) -> Result<Self, String> {
+        console_log!("{}", property_type);
+        match property_type {
+            "IntProperty" => {
+                reader.read_exact(&mut [0u8; 1]).unwrap();
+                Ok(Properties::Int(reader.read_i32::<LittleEndian>().unwrap()))
+            }
+            "BoolProperty" => {
+                let i = reader.read_i16::<LittleEndian>().unwrap();
+                Ok(Properties::Bool(if i == 0 { false } else { true }))
+            }
+            "StructProperty" => {
+                let struct_type = reader.read_string().unwrap();
+                // 16-byte empty GUID + 1-byte termination
+                reader.read_exact(&mut [0u8; 17]).unwrap();
+                let name = reader.read_string().unwrap();
+                let struct_property_type = reader.read_string().unwrap();
+                let struct_property = match Properties::new(struct_property_type.as_str(), reader) {
+                    Ok(p) => p,
+                    Err(e) => return Err(e),
+                };
+                console_log!("{}, {}", name, property_type);
+                Ok(Properties::Struct {
+                    r#type: struct_type,
+                    name,
+                    property: Box::new(struct_property),
+                })
+            }
+            "ArrayProperty" => {
+                let array_property_type = match reader.read_string() {
+                    Ok(p) => p,
+                    Err(e) => return Err(e.to_string()),
+                };
+                console_log!("{}", array_property_type);
+                // 1-byte termination
+                reader.read_exact(&mut [0u8; 1]).unwrap();
+                let num_properties = reader.read_i32::<LittleEndian>().unwrap();
+                let mut properties = Vec::new();
+                console_log!("{}", num_properties);
+                for _ in 0..num_properties {
+                    let property = match Properties::new(array_property_type.as_str(), reader) {
+                        Ok(p) => p,
+                        Err(e) => return Err(e),
+                    };
+                    properties.push(Box::new(property));
+                }
+                Ok(Properties::Array(properties))
+            }
+            _ => return Err(format!("Unknown data type {}", property_type)),
+        }
+    }
+}
 
 fn get_file_overclocks(file_bytes: &Vec<u8>) -> Result<HashMap<String, HashSet<String>>, String> {
     let mut cursor = Cursor::new(file_bytes.to_vec());
@@ -143,19 +206,11 @@ fn get_file_overclocks(file_bytes: &Vec<u8>) -> Result<HashMap<String, HashSet<S
     loop {
         let name = cursor.read_string().unwrap();
         let data_type = cursor.read_string().unwrap();
-        let length = cursor.read_i64::<LittleEndian>().unwrap();
+        let _length = cursor.read_i64::<LittleEndian>().unwrap();
 
-        let property = match data_type.as_str() {
-            "IntProperty" => {
-                cursor.read_exact(&mut [0u8; 1]).unwrap();
-                IntProperty(cursor.read_i32::<LittleEndian>().unwrap())
-            }
-            _ => return Err(format!("Unknown data type {}", data_type)),
-        };
+        let property = Properties::new(data_type.as_str(), &mut cursor);
         console_log!("{} of type {} is {:?}", name, data_type, property);
-        // break;
     }
-    Err("womp".to_string())
 }
 
 #[wasm_bindgen]
