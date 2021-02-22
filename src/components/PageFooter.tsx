@@ -7,8 +7,9 @@ import { Frameworks } from 'pages/frameworks/FrameworkData';
 import { overclocks } from 'pages/overclocks/OverclockData';
 import { MinerColor } from 'utils/miner';
 import { MinerWeapons } from 'utils/weapons';
-const { Footer } = Layout;
+import './PageFooter.css';
 
+const { Footer } = Layout;
 const FOOTER_HEIGHT = 50;
 
 export default function PageFooter() {
@@ -18,6 +19,7 @@ export default function PageFooter() {
     () => (location.pathname.substring(1) || DEFAULT_TAB) as TabName,
     [location.pathname]
   );
+
   const currentTabPercentage = useMemo(() => {
     switch (currentTab) {
       case 'overclocks':
@@ -43,10 +45,12 @@ export default function PageFooter() {
         );
     }
   }, [currentTab, store]);
+
   const currentTabDisplayName = useMemo(
     () => TABS.find((t) => t.key === currentTab)?.title,
     [currentTab]
   );
+
   const backgroundColor = useMemo(
     () =>
       `linear-gradient(to right, ${Object.values(MinerColor)
@@ -56,6 +60,15 @@ export default function PageFooter() {
         .join(', ')})`,
     []
   );
+
+  const animationColor = useMemo(
+    () =>
+      `linear-gradient(270deg, ${Object.values(MinerColor)
+        .map((color) => `${color}`)
+        .join(', ')}`,
+    []
+  );
+
   return (
     <Footer
       style={{
@@ -72,8 +85,14 @@ export default function PageFooter() {
       }}
     >
       <div
+        className={
+          currentTabPercentage === 100 ? 'completeAnimation' : undefined
+        }
         style={{
-          backgroundImage: backgroundColor,
+          background:
+            currentTabPercentage === 100 ? animationColor : backgroundColor,
+          backgroundSize:
+            currentTabPercentage === 100 ? '800% 800%' : 'initial',
           width: '100%',
           height: FOOTER_HEIGHT,
         }}
@@ -83,9 +102,11 @@ export default function PageFooter() {
             position: 'absolute',
             height: FOOTER_HEIGHT,
             width: '100%',
+            color: '#FFFFFFCC',
+            fontWeight: 'bold',
+            textShadow: '2px 2px 5px black',
             textAlign: 'center',
             lineHeight: `${FOOTER_HEIGHT}px`,
-            fontWeight: 'bold',
           }}
         >
           {currentTabDisplayName} Progress: {currentTabPercentage}%
