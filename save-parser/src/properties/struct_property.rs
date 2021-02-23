@@ -28,14 +28,16 @@ impl StructProperty {
         name: "guid".to_string(),
         property: Box::new(GuidProperty::new(reader)?),
       }),
-      _ => StructProperty::parse_property_array(reader, struct_type),
+      _ => Ok(StructProperty {
+        name: struct_type.to_string(),
+        property: Box::new(Property::Array(StructProperty::parse_property_array(
+          reader,
+        )?)),
+      }),
     }
   }
 
-  fn parse_property_array(
-    reader: &mut Cursor<Vec<u8>>,
-    struct_type: &str,
-  ) -> Result<StructProperty, ParseError> {
+  pub fn parse_property_array(reader: &mut Cursor<Vec<u8>>) -> Result<ArrayProperty, ParseError> {
     let mut properties = Vec::new();
     loop {
       if char::from_u32(peek(reader)?).is_none() {
@@ -53,9 +55,6 @@ impl StructProperty {
         property: Box::new(property),
       })));
     }
-    Ok(StructProperty {
-      name: struct_type.to_string(),
-      property: Box::new(Property::Array(ArrayProperty(properties))),
-    })
+    Ok(ArrayProperty(properties))
   }
 }

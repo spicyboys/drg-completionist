@@ -23,6 +23,13 @@ impl ArrayProperty {
     let num_properties = reader.read_i32::<LittleEndian>()?;
     let properties = match propert_type.as_str() {
       "StructProperty" => ArrayProperty::parse_struct_property_list(reader, num_properties)?,
+      "ObjectProperty" => {
+        let mut properties: Vec<Box<Property>> = Vec::new();
+        for _ in 0..num_properties {
+          properties.push(Box::new(Property::new("ObjectProperty", reader)?))
+        }
+        properties
+      }
       _ => {
         return Err(ParseError::new(format!(
           "Unhandled array data type {}",
