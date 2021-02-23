@@ -11,3 +11,4 @@ export function _dyn_core__ops__function__FnMut__A____Output___R_as_wasm_bindgen
 export function _dyn_core__ops__function__FnMut__A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h142d3949725abe34(a: number, b: number, c: number): void;
 export function __wbindgen_exn_store(a: number): void;
 export function wasm_bindgen__convert__closures__invoke2_mut__h03bda9a44096ac43(a: number, b: number, c: number, d: number): void;
+export function __wbindgen_free(a: number, b: number): void;

@@ -1,7 +1,7 @@
 use callback_future::CallbackFuture;
 use fragile::Fragile;
 use js_sys::Uint8Array;
-use serde::Deserialize;
+// use serde::Deserialize;
 use std::collections::{HashMap, HashSet};
 use std::str;
 use wasm_bindgen::prelude::*;
@@ -19,8 +19,9 @@ extern "C" {
     fn log(s: &str);
 }
 
+#[macro_export]
 macro_rules! console_log {
-  ($($t:tt)*) => (log(&format_args!($($t)*).to_string()))
+  ($($t:tt)*) => (crate::log(&format_args!($($t)*).to_string()))
 }
 
 #[wasm_bindgen]
@@ -50,16 +51,20 @@ fn get_file_data(e: ProgressEvent) -> Option<Vec<u8>> {
     Some(Uint8Array::new(&reader_result).to_vec())
 }
 
-#[derive(Deserialize)]
-struct OverclockData {
-    name: String,
-    weapon: String,
-}
+// #[derive(Deserialize)]
+// struct OverclockData {
+//     name: String,
+//     weapon: String,
+// }
 
+mod properties;
 mod utils;
 use byteorder::{LittleEndian, ReadBytesExt};
+use properties::Property;
+use std::char;
 use std::io::{Cursor, Read};
-use utils::{read_guid::*, read_string::*};
+use utils::{error::ParseError, peek::peek, read_guid::*, read_string::*};
+extern crate console_error_panic_hook;
 
 #[derive(Debug)]
 struct EngineVersion {
@@ -120,78 +125,12 @@ impl SaveFileMetadata {
     }
 }
 
-fn validate_save_file_header(reader: &mut Cursor<Vec<u8>>) -> Result<(), std::io::Error> {
+fn validate_save_file_header(reader: &mut Cursor<Vec<u8>>) -> Result<(), ParseError> {
     let header = b"GVAS";
     let mut header_bytes = vec![0u8; header.len()];
     reader.read_exact(&mut header_bytes)?;
     assert_eq!(header_bytes, header, "Unexpected header");
     Ok(())
-}
-
-#[derive(Debug)]
-enum Properties {
-    Int(i32),
-    Bool(bool),
-    Struct {
-        r#type: String,
-        name: String,
-        property: Box<Properties>,
-    },
-    Array(Vec<Box<Properties>>),
-}
-
-impl Properties {
-    fn new(property_type: &str, reader: &mut Cursor<Vec<u8>>) -> Result<Self, String> {
-        console_log!("{}", property_type);
-        match property_type {
-            "IntProperty" => {
-                reader.read_exact(&mut [0u8; 1]).unwrap();
-                Ok(Properties::Int(reader.read_i32::<LittleEndian>().unwrap()))
-            }
-            "BoolProperty" => {
-                let i = reader.read_i16::<LittleEndian>().unwrap();
-                Ok(Properties::Bool(if i == 0 { false } else { true }))
-            }
-            "StructProperty" => {
-                let struct_type = reader.read_string().unwrap();
-                // 16-byte empty GUID + 1-byte termination
-                reader.read_exact(&mut [0u8; 17]).unwrap();
-                let name = reader.read_string().unwrap();
-                let struct_property_type = reader.read_string().unwrap();
-                let struct_property = match Properties::new(struct_property_type.as_str(), reader) {
-                    Ok(p) => p,
-                    Err(e) => return Err(e),
-                };
-                console_log!("{}, {}", name, property_type);
-                Ok(Properties::Struct {
-                    r#type: struct_type,
-                    name,
-                    property: Box::new(struct_property),
-                })
-            }
-            "ArrayProperty" => {
-                let array_property_type = match reader.read_string() {
-                    Ok(p) => p,
-                    Err(e) => return Err(e.to_string()),
-                };
-                console_log!("{}", array_property_type);
-                // 1-byte termination
-                reader.read_exact(&mut [0u8; 1]).unwrap();
-                let num_properties = reader.read_i32::<LittleEndian>().unwrap();
-                let mut properties = Vec::new();
-                console_log!("{}", num_properties);
-                for _ in 0..num_properties {
-                    let property = match Properties::new(array_property_type.as_str(), reader) {
-                        Ok(p) => p,
-                        Err(e) => return Err(e),
-                    };
-                    properties.push(Box::new(property));
-                }
-                Ok(Properties::Array(properties))
-            }
-            _ => return Err(format!("Unknown data type {}", property_type)),
-        }
-    }
 }
 
 fn get_file_overclocks(file_bytes: &Vec<u8>) -> Result<HashMap<String, HashSet<String>>, String> {
@@ -203,18 +142,25 @@ fn get_file_overclocks(file_bytes: &Vec<u8>) -> Result<HashMap<String, HashSet<S
     let metadata = SaveFileMetadata::new(&mut cursor);
     console_log!("{:?}", metadata);
 
+    let mut properties = HashMap::new();
     loop {
+        if char::from_u32(peek(&mut cursor).unwrap()).is_none() {
+            break;
+        }
         let name = cursor.read_string().unwrap();
         let data_type = cursor.read_string().unwrap();
         let _length = cursor.read_i64::<LittleEndian>().unwrap();
-
-        let property = Properties::new(data_type.as_str(), &mut cursor);
-        console_log!("{} of type {} is {:?}", name, data_type, property);
+        let property = Property::new(data_type.as_str(), &mut cursor);
+        console_log!("{}: {:?}", name, property);
+        properties.insert(name, property);
     }
+    console_log!("{:?}", properties);
+    Err("I'm too lazy to update the return type of this function".to_string())
 }
 
 #[wasm_bindgen]
 pub fn parse_save_file(file: File) -> ParseSaveFileResult {
+    console_error_panic_hook::set_once();
     let promise = future_to_promise(async {
         let file = Fragile::new(file);
         let file_data: Result<Vec<u8>, &str> = CallbackFuture::new(move |complete| {
