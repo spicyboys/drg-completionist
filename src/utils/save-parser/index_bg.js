@@ -435,12 +435,12 @@ export const __wbindgen_memory = function() {
 };
 
 export const __wbindgen_closure_wrapper145 = function(arg0, arg1, arg2) {
-    var ret = makeMutClosure(arg0, arg1, 83, __wbg_adapter_16);
+    var ret = makeMutClosure(arg0, arg1, 85, __wbg_adapter_16);
     return addHeapObject(ret);
 };
 
 export const __wbindgen_closure_wrapper244 = function(arg0, arg1, arg2) {
-    var ret = makeMutClosure(arg0, arg1, 105, __wbg_adapter_19);
+    var ret = makeMutClosure(arg0, arg1, 104, __wbg_adapter_19);
     return addHeapObject(ret);
 };
 

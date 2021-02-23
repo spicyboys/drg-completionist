@@ -1,5 +1,6 @@
 mod array_property;
 mod bool_property;
+mod enum_property;
 mod float_property;
 mod guid_property;
 mod int_property;
@@ -12,6 +13,7 @@ use std::io::Cursor;
 
 use array_property::ArrayProperty;
 use bool_property::BoolProperty;
+use enum_property::EnumProperty;
 use float_property::FloatProperty;
 use guid_property::GuidProperty;
 use int_property::IntProperty;
@@ -29,6 +31,7 @@ pub enum Property {
   Float(FloatProperty),
   Set(SetProperty),
   String(StringProperty),
+  Enum(EnumProperty),
 }
 
 impl Property {
@@ -41,6 +44,7 @@ impl Property {
       "FloatProperty" => FloatProperty::new(reader),
       "SetProperty" => SetProperty::new(reader),
       "StrProperty" => StringProperty::new(reader),
+      "EnumProperty" => EnumProperty::new(reader),
       _ => {
         return Err(ParseError::new(format!(
           "Unhandled property data type {}",
