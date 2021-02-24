@@ -22,7 +22,6 @@ export const getAcquiredOverclocksFromSaveFile = ({
   ).forEach(([weapon, overclocks]) => {
     for (const overclock of overclocks) {
       if (forgedSchematics.some((f) => overclock.id === f)) {
-        console.log(overclock);
         let acquiredWeaponOverclocks = acquiredOverclocks.get(
           weapon as MinerWeapon<Miner>
         );
