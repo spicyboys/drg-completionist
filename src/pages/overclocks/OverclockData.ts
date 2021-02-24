@@ -14,6 +14,7 @@ type Effects = {
 
 export type Overclock = {
   name: string;
+  id: string;
   type: keyof typeof frames;
   icon: keyof typeof icons;
   price: Price;
@@ -30,6 +31,7 @@ export const overclocks: Overclocks = {
     'CRSPR Flamethrower': [
       {
         name: 'Lighter Tanks',
+        id: 'C5057A9608CF5E4BA4AAB32AD613BA3E',
         icon: 'Ammo',
         type: 'Clean',
         price: {
@@ -46,6 +48,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Sticky Additive',
+        id: '415F1D83A77E7A448DBF60383103FD6C',
         icon: 'DurationHourglass',
         type: 'Clean',
         price: {
@@ -63,6 +66,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Compact Feed Valves',
+        id: '71588D43A7589A4ABE61A8DE2EB449BF',
         icon: 'ClipSize',
         type: 'Balanced',
         price: {
@@ -80,6 +84,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Fuel Stream Diffuser',
+        id: '19E85D1C3585B349B151779CBD7303D9',
         icon: 'Distance',
         type: 'Balanced',
         price: {
@@ -97,6 +102,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Face Melter',
+        id: '6431A8DDEAA6894B90C57BAC7552A5FF',
         icon: 'Damage',
         type: 'Unstable',
         price: {
@@ -114,6 +120,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Sticky Fuel',
+        id: 'F28C3EE38A960D48965E9F69F56B3F19',
         icon: 'DurationHourglass',
         type: 'Unstable',
         price: {
@@ -133,6 +140,7 @@ export const overclocks: Overclocks = {
     'Cryo Cannon': [
       {
         name: 'Improved Thermal Efficiency',
+        id: 'CE660C4DD9980043A802A17A4569C0AC',
         icon: 'ClipSize',
         type: 'Clean',
         price: {
@@ -150,6 +158,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Perfectly Tuned Cooler',
+        id: '6ADB23B3C8ED884086A88B8107C93CBE',
         icon: 'Cold',
         type: 'Clean',
         price: {
@@ -166,6 +175,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Flow Rate Expansion',
+        id: '88F8EAB206EC7B46A31C8F034B44931A',
         icon: 'Duration',
         type: 'Balanced',
         price: {
@@ -183,6 +193,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Ice Spear',
+        id: 'D518CB371A32A0449B345E4F58D34C91',
         icon: 'ProjectileSpeed',
         type: 'Balanced',
         price: {
@@ -200,6 +211,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Ice Storm',
+        id: '7B11755997B6564E97B1032A828EB90F',
         icon: 'Damage',
         type: 'Unstable',
         price: {
@@ -221,6 +233,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Snowball',
+        id: 'C1F16F970C9C1047AF836BF6CBFEBCAD',
         icon: 'Area',
         type: 'Unstable',
         price: {
@@ -240,6 +253,7 @@ export const overclocks: Overclocks = {
     'Subata 120': [
       {
         name: 'Chain Hit',
+        id: 'A4AB7C627AF7FE4FA235E3AAC398ED1F',
         icon: 'Ricochet',
         type: 'Clean',
         price: {
@@ -257,6 +271,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Homebrew Powder',
+        id: 'D57B542FBC793542B6BB5617C1A67229',
         icon: 'Chance',
         type: 'Clean',
         price: {
@@ -273,6 +288,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Oversized Magazine',
+        id: 'F13E20C4E74976438E85C237AE071830',
         icon: 'ClipSize',
         type: 'Balanced',
         price: {
@@ -290,6 +306,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Automatic Fire',
+        id: '28A8E817E50A7346963E418BA08DFE18',
         icon: 'FireRate',
         type: 'Unstable',
         price: {
@@ -306,6 +323,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Explosive Reload',
+        id: '2949A3BE68EA2A4197D532AF80549101',
         icon: 'SpecialMagazine',
         type: 'Unstable',
         price: {
@@ -323,6 +341,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Tranquilizer Rounds',
+        id: '587488BA77B28D4DA177400D995737A7',
         icon: 'Stun',
         type: 'Unstable',
         price: {
@@ -342,6 +361,7 @@ export const overclocks: Overclocks = {
     'Experimental Plasma Charger': [
       {
         name: 'Energy Rerouting',
+        id: '97822071D586CE45ACD6489782B700FA',
         icon: 'ChargeUp',
         type: 'Clean',
         price: {
@@ -359,6 +379,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Magnetic Cooling Unit',
+        id: 'F1E6CC307C11DE4586B88B419E530ABF',
         icon: 'Cooldown',
         type: 'Clean',
         price: {
@@ -376,6 +397,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Heat Pipe',
+        id: 'A0E018C45FE679418FD3730E6E9B631D',
         icon: 'Fuel',
         type: 'Balanced',
         price: {
@@ -393,6 +415,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Heavy Hitter',
+        id: '39E43E13CC0DAE4691DD51A11383E9E1',
         icon: 'Damage',
         type: 'Balanced',
         price: {
@@ -410,6 +433,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Overcharger',
+        id: '55BB52A0ECFA7C43B37BBBE640114196',
         icon: 'Damage',
         type: 'Unstable',
         price: {
@@ -427,6 +451,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Persistent Plasma',
+        id: '165CD93E660B8147BCA2F86CDE5CF8F7',
         icon: 'DurationHourglass',
         type: 'Unstable',
         price: {
@@ -448,6 +473,7 @@ export const overclocks: Overclocks = {
     '"Warthog" Auto 210': [
       {
         name: 'Stunner',
+        id: '338DD238332A2E4EA5490208AAD7F502',
         icon: 'Stun',
         type: 'Clean',
         price: {
@@ -468,6 +494,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Light-Weight Magazines',
+        id: 'CD4EEC38C029724E8317CCDC22D06057',
         icon: 'Ammo',
         type: 'Clean',
         price: {
@@ -485,6 +512,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Magnetic Pellet Alignment',
+        id: '07E9279956BF9C418EEA313E2DC59F8D',
         icon: 'Aim',
         type: 'Balanced',
         price: {
@@ -502,6 +530,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Cycle Overload',
+        id: '70122BA2FBDABF4895DC09C90294E685',
         icon: 'FireRate',
         type: 'Unstable',
         price: {
@@ -519,6 +548,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Mini Shells',
+        id: '62D4C94C1367E8419691B677837DA4FB',
         icon: 'SmallBullets',
         type: 'Unstable',
         price: {
@@ -538,6 +568,7 @@ export const overclocks: Overclocks = {
     '"Stubby" Voltaic SMG': [
       {
         name: 'Super-Slim Rounds',
+        id: '13CF1C4A6992924A9AFF5CEAF05B7106',
         icon: 'ClipSize',
         type: 'Clean',
         price: {
@@ -555,6 +586,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Well Oiled Machine',
+        id: 'CE9490445B036B49B89DB2BC8D18FD12',
         icon: 'FireRate',
         type: 'Clean',
         price: {
@@ -571,6 +603,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'EM Refire Booster',
+        id: '81B842310E01B847BF99774DBC3DC0DD',
         icon: 'FireRate',
         type: 'Balanced',
         price: {
@@ -588,6 +621,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Light-Weight Rounds',
+        id: '05B157A075E0734BB471EF8DAE692865',
         icon: 'Ammo',
         type: 'Balanced',
         price: {
@@ -605,6 +639,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Turret Arc',
+        id: '3C42DBEA3021EE44AF6D944A91314D75',
         icon: 'Electricity',
         type: 'Unstable',
         price: {
@@ -622,6 +657,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Turret EM Discharge',
+        id: '0C1BAA64B03CB94EBB77B7B55E7C6C87',
         icon: 'AreaDamage',
         type: 'Unstable',
         price: {
@@ -641,6 +677,7 @@ export const overclocks: Overclocks = {
     'Deepcore 40mm PGL': [
       {
         name: 'Clean Sweep',
+        id: 'B912059A3F86E44BA2985450D136CCB5',
         icon: 'Area',
         type: 'Clean',
         price: {
@@ -658,6 +695,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Pack Rat',
+        id: 'A97694E1A9B7484EB66E14DBF830DB6B',
         icon: 'Ammo',
         type: 'Clean',
         price: {
@@ -674,6 +712,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Compact Rounds',
+        id: 'EE5713FA91A0E245A1C0BFCE15212074',
         icon: 'Ammo',
         type: 'Balanced',
         price: {
@@ -691,6 +730,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'RJ250 Compound',
+        id: 'DB7EC788B46FCE4C9800A25010A0E8EA',
         icon: 'ExplosionJump',
         type: 'Balanced',
         price: {
@@ -708,6 +748,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Fat Boy',
+        id: '87D2434388D3FC45884E351DCBE70F7C',
         icon: 'AreaDamage',
         type: 'Unstable',
         price: {
@@ -725,6 +766,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Hyper Propellant',
+        id: 'BC4CD684621BF6449607373A534A574F',
         icon: 'ProjectileSpeed',
         type: 'Unstable',
         price: {
@@ -745,6 +787,7 @@ export const overclocks: Overclocks = {
     'Breach Cutter': [
       {
         name: 'Light-Weight Cases',
+        id: '96940C7CDCEFA84084DD4D60D2E81B2D',
         icon: 'Ammo',
         type: 'Clean',
         price: {
@@ -761,6 +804,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Roll Control',
+        id: '05DB2FA3B969E04F8644F5BE6C204020',
         icon: 'SpinningLinecutter',
         type: 'Clean',
         price: {
@@ -778,6 +822,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Stronger Plasma Current',
+        id: '3D7C9C85F6D3A549A2D6EDB09918314B',
         icon: 'Damage',
         type: 'Clean',
         price: {
@@ -795,6 +840,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Return to Sender',
+        id: '744251ED25D4484AA38DFBDBF43BC5B9',
         icon: 'ForthAndBackLinecutter',
         type: 'Balanced',
         price: {
@@ -812,6 +858,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'High Voltage Crossover',
+        id: '7FA184CB9D21874D82BF9DDAFC7C91D7',
         icon: 'Electricity',
         type: 'Balanced',
         price: {
@@ -829,6 +876,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Spinning Death',
+        id: '340AFBC6C306044281013181E0026E1B',
         icon: 'Special',
         type: 'Unstable',
         price: {
@@ -850,6 +898,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Inferno',
+        id: '8ED912F8267B844482EEDA86604451A5',
         icon: 'Heat',
         type: 'Unstable',
         price: {
@@ -871,6 +920,7 @@ export const overclocks: Overclocks = {
     '"Lead Storm" Powered Minigun': [
       {
         name: 'A Little More Oomph!',
+        id: 'B55D6170EEA5D743AC4B28293C0C4673',
         icon: 'Damage',
         type: 'Clean',
         price: {
@@ -888,6 +938,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Thinned Drum Walls',
+        id: '01D4653903832F498C50F7719D58E89B',
         icon: 'Cooldown',
         type: 'Clean',
         price: {
@@ -905,6 +956,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Burning Hell',
+        id: '63156673F2174F449F598F8729AC0C65',
         icon: 'Heat',
         type: 'Balanced',
         price: {
@@ -922,6 +974,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Compact Feed Mechanism',
+        id: '2E9FBFB43B7B554FB3728780F1334824',
         icon: 'Ammo',
         type: 'Balanced',
         price: {
@@ -939,6 +992,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Exhaust Vectoring',
+        id: 'FBB1014758606A41888E378F69E3CD61',
         icon: 'Damage',
         type: 'Balanced',
         price: {
@@ -955,6 +1009,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Bullet Hell',
+        id: 'ED4036806A69E848BC72DDE3CDEAC456',
         icon: 'Ricochet',
         type: 'Unstable',
         price: {
@@ -972,6 +1027,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Lead Storm',
+        id: '7CD10E2C55583041B577141C854BEE62',
         icon: 'Damage',
         type: 'Unstable',
         price: {
@@ -991,6 +1047,7 @@ export const overclocks: Overclocks = {
     '"Thunderhead" Heavy Autocannon': [
       {
         name: 'Composite Drums',
+        id: '01E23067CBB9A6428AE4394C99F1D2BB',
         icon: 'Ammo',
         type: 'Clean',
         price: {
@@ -1008,6 +1065,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Splintering Shells',
+        id: 'CB83FD6C13C63F4982DC87B9796311C8',
         icon: 'Area',
         type: 'Clean',
         price: {
@@ -1025,6 +1083,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Carpet Bomber',
+        id: '8C0142A687637A4EA4CC8A7F84B9610A',
         icon: 'AreaDamage',
         type: 'Balanced',
         price: {
@@ -1042,6 +1101,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Combat Mobility',
+        id: '3DD5E8141C483E43AA3E0708CE75D663',
         icon: 'MovementSpeed',
         type: 'Balanced',
         price: {
@@ -1063,6 +1123,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Big Bertha',
+        id: '86AA0DD13FD37E43B2FBF176EE5DE815',
         icon: 'Damage',
         type: 'Unstable',
         price: {
@@ -1084,6 +1145,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Neurotoxin Payload',
+        id: '32654E9478165E4DA3F0DBD33B180341',
         icon: 'Neuro',
         type: 'Unstable',
         price: {
@@ -1103,6 +1165,7 @@ export const overclocks: Overclocks = {
     '"Bulldog" Heavy Revolver': [
       {
         name: 'Homebrew Powder',
+        id: 'CD6993F938E27C49AC69293BF942A8F0',
         icon: 'Chance',
         type: 'Clean',
         price: {
@@ -1119,6 +1182,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Chain Hit',
+        id: '5885A33B15AE844591A66B65A2E5494E',
         icon: 'Ricochet',
         type: 'Clean',
         price: {
@@ -1136,6 +1200,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Volatile Bullets',
+        id: 'D1306CBC8421B248A4B95B332DF3E056',
         icon: 'Heat',
         type: 'Balanced',
         price: {
@@ -1153,6 +1218,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Six Shooter',
+        id: 'A937DC3938DEE8418CD0641CCE19B46A',
         icon: 'ClipSize',
         type: 'Balanced',
         price: {
@@ -1170,6 +1236,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Elephant Rounds',
+        id: 'D53F94FBC05E0448B57BC9DF6846267B',
         icon: 'Damage',
         type: 'Unstable',
         price: {
@@ -1193,6 +1260,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Magic Bullets',
+        id: 'DB02B4E77D43BF44A4749982C0879B77',
         icon: 'Ricochet',
         type: 'Unstable',
         price: {
@@ -1212,6 +1280,7 @@ export const overclocks: Overclocks = {
     'BRT7 Burst Fire Gun': [
       {
         name: 'Composite Casings',
+        id: '6F26A8B49F967C4D999F734645EAE2C4',
         icon: 'FireRate',
         type: 'Clean',
         price: {
@@ -1229,6 +1298,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Full Chamber Seal',
+        id: '414916957AD3D0409B5FE3692A46DD19',
         icon: 'Damage',
         type: 'Clean',
         price: {
@@ -1246,6 +1316,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Compact Mags',
+        id: '2FF3D4C92D59304592009FA2E39BFFC6',
         icon: 'Ammo',
         type: 'Balanced',
         price: {
@@ -1263,6 +1334,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Experimental Rounds',
+        id: '88ABD40A78329942884C00D7F22DAC90',
         icon: 'Damage',
         type: 'Balanced',
         price: {
@@ -1280,6 +1352,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Electro Minelets',
+        id: '4A4F93FE1AC31E41B897C1F1B264A672',
         icon: 'Electricity',
         type: 'Unstable',
         price: {
@@ -1297,6 +1370,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Micro Flechettes',
+        id: '8F1C6A1A23A6DF4CBCA5510C4A19F221',
         icon: 'SmallBullets',
         type: 'Unstable',
         price: {
@@ -1319,6 +1393,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Lead Spray',
+        id: 'F1AE55CF592E7746A0001D61584BDF2A',
         icon: 'Special',
         type: 'Unstable',
         price: {
@@ -1340,6 +1415,7 @@ export const overclocks: Overclocks = {
     'Deepcore GK2': [
       {
         name: 'Compact Ammo',
+        id: 'AF945B93A7B9D64CA6DD00683627BC80',
         icon: 'ClipSize',
         type: 'Clean',
         price: {
@@ -1357,6 +1433,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Gas Rerouting',
+        id: 'F6E2E547F2EB674DBDA591F47DE6D017',
         icon: 'FireRate',
         type: 'Clean',
         price: {
@@ -1374,6 +1451,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Homebrew Powder',
+        id: '4CDF41F3A0F8E4499D1BAC6168347799',
         icon: 'Chance',
         type: 'Clean',
         price: {
@@ -1390,6 +1468,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Overclocked Firing Mechanism',
+        id: 'C3060324CE482C4AB6DC44ED498CBA39',
         icon: 'FireRate',
         type: 'Balanced',
         price: {
@@ -1406,6 +1485,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Bullets of Mercy',
+        id: '7306221F1264B04B8C025DB4DE9D1667',
         icon: 'Damage',
         type: 'Balanced',
         price: {
@@ -1423,6 +1503,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'AI Stability Engine',
+        id: '11F123E174103140957957506BD576D7',
         icon: 'Aim',
         type: 'Unstable',
         price: {
@@ -1444,6 +1525,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Electrifying Reload',
+        id: 'FF94B9E7834D774292DACCCA3EA023B9',
         icon: 'SpecialMagazine',
         type: 'Unstable',
         price: {
@@ -1463,6 +1545,7 @@ export const overclocks: Overclocks = {
     'M1000 Classic': [
       {
         name: 'Hoverclock',
+        id: '8A0122E44E42104BAAAD6B4534A9DE8F',
         icon: 'Slowdown',
         type: 'Clean',
         price: {
@@ -1480,6 +1563,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Minimal Clips',
+        id: 'D006E3EEE0540242A2B0BCA8ABCDB387',
         icon: 'Ammo',
         type: 'Clean',
         price: {
@@ -1497,6 +1581,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Active Stability System',
+        id: 'D1544B3528938A48964E8D9A6309D1DA',
         icon: 'MovementSpeed',
         type: 'Balanced',
         price: {
@@ -1514,6 +1599,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Hipster',
+        id: '2A12358F750B704996C37D467ECF1D36',
         icon: 'Aim',
         type: 'Balanced',
         price: {
@@ -1531,6 +1617,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Electrocuting Focus Shots',
+        id: 'AAC9B6E4458458478E50DB87324097EB',
         icon: 'Electricity',
         type: 'Unstable',
         price: {
@@ -1548,6 +1635,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Supercooling Chamber',
+        id: '1073CEEBECBC014E8370E259040EB71C',
         icon: 'Damage',
         type: 'Unstable',
         price: {
@@ -1571,6 +1659,7 @@ export const overclocks: Overclocks = {
     'Jury-Rigged Boomstick': [
       {
         name: 'Compact Shells',
+        id: 'FA40EE4A1F8CB04FBFAF916469E4B167',
         icon: 'Ammo',
         type: 'Clean',
         price: {
@@ -1588,6 +1677,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Double Barrel',
+        id: '5F090BB3EFC96F4297F1BFC3F152C663',
         icon: 'FireRate',
         type: 'Clean',
         price: {
@@ -1604,6 +1694,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Special Powder',
+        id: 'E6DAF7D6065004439EF966D6FDBD69A6',
         icon: 'ShotgunJump',
         type: 'Clean',
         price: {
@@ -1621,6 +1712,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Stuffed Shells',
+        id: '3F68CB7C2FAB2843B1446D133BD92C1D',
         icon: 'ShotgunPellet',
         type: 'Clean',
         price: {
@@ -1638,6 +1730,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Shaped Shells',
+        id: 'EF0CAC2AEF57BD41A72155B4DA395D47',
         icon: 'Aim',
         type: 'Balanced',
         price: {
@@ -1655,6 +1748,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Jumbo Shells',
+        id: '0B1A2EC60168C54E9E47CA764C3B70BD',
         icon: 'Damage',
         type: 'Unstable',
         price: {
@@ -1674,6 +1768,7 @@ export const overclocks: Overclocks = {
     'Zhukov NUK17': [
       {
         name: 'Minimal Magazines',
+        id: '98A0452B235402459CFF5CC3B34CCC69',
         icon: 'ReloadSpeed',
         type: 'Clean',
         price: {
@@ -1691,6 +1786,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Custom Casings',
+        id: '24A286C31F45EA469A20102AF4D741D3',
         icon: 'ClipSize',
         type: 'Balanced',
         price: {
@@ -1708,6 +1804,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Cryo Minelets',
+        id: '43CD8D27EAEAAA4A8E6DC43E0438A10C',
         icon: 'Cold',
         type: 'Unstable',
         price: {
@@ -1725,6 +1822,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Embedded Detonators',
+        id: 'FAF35071BA63B2429855FBC8A09BFFD0',
         icon: 'SpecialMagazine',
         type: 'Unstable',
         price: {
@@ -1742,6 +1840,7 @@ export const overclocks: Overclocks = {
       },
       {
         name: 'Gas Recycling',
+        id: '828B2BBC50EC424385EFD00EA6854597',
         icon: 'Damage',
         type: 'Unstable',
         price: {
