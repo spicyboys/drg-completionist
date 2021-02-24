@@ -44,8 +44,6 @@ export type SaveFile = {
 extern "C" {
   #[wasm_bindgen(typescript_type = "Promise<SaveFile>")]
   pub type ParseSaveFileResult;
-  #[wasm_bindgen(typescript_type = "ReadonlyMap<string, ReadonlySet<string>>")]
-  pub type SaveFileOverclocks;
   #[wasm_bindgen(js_namespace = console)]
   fn log(s: &str);
 }
