@@ -249,14 +249,14 @@ export const __wbindgen_string_new = function(arg0, arg1) {
     return addHeapObject(ret);
 };
 
-export const __wbindgen_is_function = function(arg0) {
-    var ret = typeof(getObject(arg0)) === 'function';
-    return ret;
-};
-
 export const __wbindgen_json_parse = function(arg0, arg1) {
     var ret = JSON.parse(getStringFromWasm0(arg0, arg1));
     return addHeapObject(ret);
+};
+
+export const __wbindgen_is_function = function(arg0) {
+    var ret = typeof(getObject(arg0)) === 'function';
+    return ret;
 };
 
 export const __wbg_instanceof_FileReader_660e027955714a3d = function(arg0) {
@@ -388,13 +388,13 @@ export const __wbindgen_memory = function() {
     return addHeapObject(ret);
 };
 
-export const __wbindgen_closure_wrapper50 = function(arg0, arg1, arg2) {
-    var ret = makeMutClosure(arg0, arg1, 13, __wbg_adapter_18);
+export const __wbindgen_closure_wrapper60 = function(arg0, arg1, arg2) {
+    var ret = makeMutClosure(arg0, arg1, 21, __wbg_adapter_18);
     return addHeapObject(ret);
 };
 
-export const __wbindgen_closure_wrapper248 = function(arg0, arg1, arg2) {
-    var ret = makeMutClosure(arg0, arg1, 99, __wbg_adapter_21);
+export const __wbindgen_closure_wrapper250 = function(arg0, arg1, arg2) {
+    var ret = makeMutClosure(arg0, arg1, 100, __wbg_adapter_21);
     return addHeapObject(ret);
 };
 

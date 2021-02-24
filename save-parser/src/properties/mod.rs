@@ -31,6 +31,7 @@ use struct_property::StructProperty;
 trait PropertyTrait {}
 
 #[enum_dispatch(PropertyTrait)]
+#[serde(untagged)]
 #[derive(Debug, Serialize)]
 pub enum Property {
   StructProperty,

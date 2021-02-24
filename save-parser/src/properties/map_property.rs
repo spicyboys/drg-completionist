@@ -1,6 +1,5 @@
 use crate::properties::{IntProperty, Property, StructProperty};
 use crate::utils::{error::ParseError, read_guid::*, read_string::*};
-use crate::Guid;
 use byteorder::{LittleEndian, ReadBytesExt};
 use serde::Serialize;
 use std::collections::HashMap;
@@ -30,7 +29,7 @@ impl MapProperty {
         }
       };
       let value = match value_type.as_str() {
-        "StructProperty" => Property::from(StructProperty::parse_property_array(reader)?),
+        "StructProperty" => StructProperty::parse_property_array(reader)?,
         "IntProperty" => IntProperty::new(reader)?,
         _ => {
           return Err(ParseError::new(format!(
