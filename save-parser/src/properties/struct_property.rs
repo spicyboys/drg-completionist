@@ -5,7 +5,6 @@ use serde::{ser::SerializeMap, Serialize, Serializer};
 use std::char;
 use std::collections::HashMap;
 use std::io::{Cursor, Read};
-use wasm_bindgen::UnwrapThrowExt;
 
 #[derive(Debug)]
 pub struct StructProperty {
