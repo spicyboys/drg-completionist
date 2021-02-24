@@ -51,9 +51,6 @@ impl ArrayProperty {
     let mut properties: Vec<Box<Property>> = Vec::new();
     match property_type.as_str() {
       "StructProperty" => {
-        // Similar to the StructProprety type initization, but for whatever
-        // reason we only get one header and then the contiguous array of data
-        // in memory
         let struct_inner_property_type = reader.read_string()?;
         reader.read_exact(&mut [0u8; 17])?;
 

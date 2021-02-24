@@ -1,16 +1,48 @@
+mod properties;
+mod utils;
+
+use byteorder::{LittleEndian, ReadBytesExt};
 use callback_future::CallbackFuture;
 use fragile::Fragile;
 use js_sys::Uint8Array;
-use std::collections::HashMap;
-use std::str;
-use wasm_bindgen::prelude::*;
-use wasm_bindgen::JsCast;
+use properties::Property;
+use std::{
+  char,
+  collections::HashMap,
+  io::{Cursor, Read},
+  str,
+};
+use utils::{
+  error::ParseError, guid::Guid, peek::peek, read_guid::ReadGuid, read_string::ReadString,
+};
+use wasm_bindgen::{prelude::*, JsCast};
 use wasm_bindgen_futures::future_to_promise;
 use web_sys::{File, FileReader, ProgressEvent};
+extern crate console_error_panic_hook;
+
+#[wasm_bindgen(typescript_custom_section)]
+const TS_APPEND_CONTENT: &'static str = r#"
+/**
+ * Technically, we're returning the whole save file, but that feels like a 
+ * nightmare to write out here so I'm not doing to do it. If you need another
+ * type in the future, console.log the return from the parser, figure out the
+ * type, and add it here later.
+ *
+ * Or complain to future Robert, this is past Robert's fault anyways.
+ */
+export type SaveFile = {
+  "SchematicSave": {
+    "SchematicSave": {
+      "ForgedSchematics": string[],
+      "OwnedSchematics": string[],
+    },
+  },
+}; 
+"#;
 
 #[wasm_bindgen]
 extern "C" {
-  #[wasm_bindgen(typescript_type = "Promise<any>")]
+  #[wasm_bindgen(typescript_type = "Promise<SaveFile>")]
   pub type ParseSaveFileResult;
   #[wasm_bindgen(typescript_type = "ReadonlyMap<string, ReadonlySet<string>>")]
   pub type SaveFileOverclocks;
@@ -28,15 +60,6 @@ fn get_file_data(e: ProgressEvent) -> Option<Vec<u8>> {
   let reader_result = JsCast::dyn_ref::<FileReader>(&target)?.result().unwrap();
   Some(Uint8Array::new(&reader_result).to_vec())
 }
-
-mod properties;
-mod utils;
-use byteorder::{LittleEndian, ReadBytesExt};
-use properties::Property;
-use std::char;
-use std::io::{Cursor, Read};
-use utils::{error::ParseError, peek::peek, read_guid::*, read_string::*};
-extern crate console_error_panic_hook;
 
 #[derive(Debug)]
 struct EngineVersion {
@@ -125,7 +148,6 @@ fn get_save_file_data(file_bytes: &Vec<u8>) -> Result<HashMap<String, Property>,
     properties.insert(name, property);
   }
 
-  //console_log!("{:?}", properties);
   Ok(properties)
 }
 

@@ -31,7 +31,7 @@ impl StructProperty {
     StructProperty::parse_property(reader, struct_type.as_str())
   }
 
-  pub fn parse_property(
+  fn parse_property(
     reader: &mut Cursor<Vec<u8>>,
     struct_type: &str,
   ) -> Result<Property, ParseError> {

@@ -211,7 +211,7 @@ function __wbg_adapter_21(arg0, arg1, arg2) {
 
 /**
 * @param {File} file
-* @returns {Promise<any>}
+* @returns {Promise<SaveFile>}
 */
 export function parse_save_file(file) {
     var ret = wasm.parse_save_file(addHeapObject(file));
