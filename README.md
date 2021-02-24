@@ -1,5 +1,9 @@
 # DRG Completionist
 
+[![GitHub stars](https://img.shields.io/github/stars/BobertForever/drg-completionist)](https://github.com/BobertForever/drg-completionist/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/BobertForever/drg-completionist)](https://github.com/BobertForever/drg-completionist/issues)
+[![GitHub license](https://img.shields.io/github/license/BobertForever/drg-completionist)](https://github.com/BobertForever/drg-completionist)
+
 This project is a responsive and open-source completion tracker app for [Deep Rock Galactic](https://www.deeprockgalactic.com/) that is currently in development. It helps you both to keep track your forged weapon overclocks and to quickly look up weapon overclock information to help you decide which ones to go for next. The web app is fully responsive and works well on deskops, mobile touchscreen devices, and everything in between.
 
 While progress can be input manually, _DRG Completionist_ also includes an optional [WASM](https://en.wikipedia.org/wiki/WebAssembly)-based save parsing tool that locally analyzes your PC's Deep Rock Galactic save file (_sorry console users_) and automatically inputs your currently forged overclocks. While the parser only tracks weapon overclocks right now, we intend to expand this tool to cover the remaining unlockables if there's demand for it.
