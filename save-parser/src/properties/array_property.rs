@@ -13,7 +13,7 @@ impl ArrayProperty {
     reader.read_exact(&mut [0u8; 1])?;
 
     let properties = ArrayProperty::parse_property_list(reader, array_property_type)?;
-    Ok(Property::Array(ArrayProperty(properties)))
+    Ok(Property::from(ArrayProperty(properties)))
   }
 
   fn parse_property_list(
@@ -58,10 +58,10 @@ impl ArrayProperty {
         reader.read_exact(&mut [0u8; 17])?;
 
         for _ in 0..num_properties {
-          properties.push(Box::new(Property::Struct(StructProperty::parse_property(
+          properties.push(Box::new(StructProperty::parse_property(
             reader,
             struct_inner_property_type.as_str(),
-          )?)));
+          )?));
         }
       }
       _ => {

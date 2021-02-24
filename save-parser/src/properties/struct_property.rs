@@ -15,25 +15,21 @@ impl StructProperty {
     let struct_type = reader.read_string()?;
     // 16-byte empty GUID + 1-byte termination
     reader.read_exact(&mut [0u8; 17])?;
-    let struct_property = StructProperty::parse_property(reader, struct_type.as_str())?;
-    Ok(Property::Struct(struct_property))
+    StructProperty::parse_property(reader, struct_type.as_str())
   }
 
   pub fn parse_property(
     reader: &mut Cursor<Vec<u8>>,
     struct_type: &str,
-  ) -> Result<StructProperty, ParseError> {
+  ) -> Result<Property, ParseError> {
     match struct_type {
-      "Guid" => Ok(StructProperty {
-        name: "guid".to_string(),
-        property: Box::new(GuidProperty::new(reader)?),
-      }),
-      _ => Ok(StructProperty {
+      "Guid" => Ok(GuidProperty::new(reader)?),
+      _ => Ok(Property::from(StructProperty {
         name: struct_type.to_string(),
-        property: Box::new(Property::Array(StructProperty::parse_property_array(
+        property: Box::new(Property::from(StructProperty::parse_property_array(
           reader,
         )?)),
-      }),
+      })),
     }
   }
 
@@ -50,7 +46,7 @@ impl StructProperty {
       let inner_property_type = reader.read_string()?;
       let _inner_length = reader.read_i64::<LittleEndian>()?;
       let property = Property::new(inner_property_type.as_str(), reader)?;
-      properties.push(Box::new(Property::Struct(StructProperty {
+      properties.push(Box::new(Property::from(StructProperty {
         name: inner_property_name,
         property: Box::new(property),
       })));

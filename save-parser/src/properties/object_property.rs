@@ -14,6 +14,6 @@ impl ObjectProperty {
     // TAKE ME HOMEEEEEEEEEEEEE
     // COUNTRY ROADSSSSSSSS
     reader.read_exact(&mut [0u8; 6])?;
-    Ok(Property::Object(ObjectProperty(addr)))
+    Ok(Property::from(ObjectProperty(addr)))
   }
 }

@@ -11,6 +11,7 @@ mod string_property;
 mod struct_property;
 
 use crate::utils::error::ParseError;
+use enum_dispatch::enum_dispatch;
 use std::io::Cursor;
 
 use array_property::ArrayProperty;
@@ -25,19 +26,23 @@ use set_property::SetProperty;
 use string_property::StringProperty;
 use struct_property::StructProperty;
 
+#[enum_dispatch]
+trait PropertyTrait {}
+
+#[enum_dispatch(PropertyTrait)]
 #[derive(Debug)]
 pub enum Property {
-  Struct(StructProperty),
-  Int(IntProperty),
-  Bool(BoolProperty),
-  Array(ArrayProperty),
-  Guid(GuidProperty),
-  Float(FloatProperty),
-  Set(SetProperty),
-  String(StringProperty),
-  Enum(EnumProperty),
-  Map(MapProperty),
-  Object(ObjectProperty),
+  StructProperty,
+  IntProperty,
+  BoolProperty,
+  ArrayProperty,
+  GuidProperty,
+  FloatProperty,
+  SetProperty,
+  StringProperty,
+  EnumProperty,
+  MapProperty,
+  ObjectProperty,
 }
 
 impl Property {

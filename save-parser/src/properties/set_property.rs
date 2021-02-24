@@ -26,6 +26,6 @@ impl SetProperty {
       }
     }
 
-    Ok(Property::Set(SetProperty(items)))
+    Ok(Property::from(SetProperty(items)))
   }
 }

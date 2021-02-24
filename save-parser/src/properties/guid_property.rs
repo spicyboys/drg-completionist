@@ -8,6 +8,6 @@ pub struct GuidProperty(Guid);
 
 impl GuidProperty {
   pub fn new(reader: &mut Cursor<Vec<u8>>) -> Result<Property, ParseError> {
-    Ok(Property::Guid(GuidProperty(reader.read_guid()?)))
+    Ok(Property::from(GuidProperty(reader.read_guid()?)))
   }
 }

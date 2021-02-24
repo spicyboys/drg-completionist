@@ -9,7 +9,7 @@ pub struct FloatProperty(f32);
 impl FloatProperty {
   pub fn new(reader: &mut Cursor<Vec<u8>>) -> Result<Property, ParseError> {
     reader.read_exact(&mut [0u8; 1])?;
-    Ok(Property::Float(FloatProperty(
+    Ok(Property::from(FloatProperty(
       reader.read_f32::<LittleEndian>()?,
     )))
   }

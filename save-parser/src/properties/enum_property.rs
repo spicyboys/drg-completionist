@@ -13,6 +13,6 @@ impl EnumProperty {
     let name = reader.read_string()?;
     reader.read_exact(&mut [0u8; 1])?;
     let value = reader.read_string()?;
-    Ok(Property::Enum(EnumProperty { name, value }))
+    Ok(Property::from(EnumProperty { name, value }))
   }
 }

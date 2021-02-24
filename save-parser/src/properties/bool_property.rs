@@ -9,7 +9,7 @@ pub struct BoolProperty(bool);
 impl BoolProperty {
   pub fn new(reader: &mut Cursor<Vec<u8>>) -> Result<Property, ParseError> {
     let i = reader.read_i16::<LittleEndian>()?;
-    Ok(Property::Bool(BoolProperty(if i == 0 {
+    Ok(Property::from(BoolProperty(if i == 0 {
       false
     } else {
       true

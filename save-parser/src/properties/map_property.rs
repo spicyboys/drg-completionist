@@ -34,7 +34,7 @@ impl MapProperty {
         }
       };
       let value = match value_type.as_str() {
-        "StructProperty" => Property::Array(StructProperty::parse_property_array(reader)?),
+        "StructProperty" => Property::from(StructProperty::parse_property_array(reader)?),
         "IntProperty" => IntProperty::new(reader)?,
         _ => {
           return Err(ParseError::new(format!(
@@ -46,6 +46,6 @@ impl MapProperty {
       properties.insert(key, Box::new(value));
     }
 
-    Ok(Property::Map(MapProperty(properties)))
+    Ok(Property::from(MapProperty(properties)))
   }
 }
