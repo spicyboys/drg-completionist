@@ -14,8 +14,7 @@ import { RcFile } from 'antd/lib/upload';
 import { useCallback, useState } from 'react';
 import { MissionControlPortrait } from 'assets/portraits';
 import useStore from 'data/useStore';
-import { Miner } from 'utils/miner';
-import { MinerWeapon } from 'utils/weapons';
+import { getAcquiredOverclocksFromSaveFile } from './getAcquiredOverclocksFromSaveFile';
 
 const { useBreakpoint } = Grid;
 const { Text } = Typography;
@@ -32,17 +31,14 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
       setLoading(true);
       try {
         const parser = await import('utils/save-parser');
-        const save_data = await parser.parse_save_file(f);
-        console.log(save_data);
-        // dispatch({
-        //   type: 'SET_OVERCLOCKS',
-        //   payload: {
-        //     overclocks: overclocks as ReadonlyMap<
-        //       MinerWeapon<Miner>,
-        //       ReadonlySet<string>
-        //     >,
-        //   },
-        // });
+        const saveFile = await parser.parse_save_file(f);
+
+        dispatch({
+          type: 'SET_OVERCLOCKS',
+          payload: {
+            overclocks: getAcquiredOverclocksFromSaveFile(saveFile),
+          },
+        });
         props.hide();
       } catch (e) {
         console.error(e);
