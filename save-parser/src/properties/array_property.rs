@@ -1,4 +1,4 @@
-use crate::properties::{Property, StructProperty};
+use crate::properties::{GuidProperty, Property, StructProperty};
 use crate::utils::{error::ParseError, read_string::*};
 use byteorder::{LittleEndian, ReadBytesExt};
 use serde::Serialize;
@@ -58,10 +58,11 @@ impl ArrayProperty {
         reader.read_exact(&mut [0u8; 17])?;
 
         for _ in 0..num_properties {
-          properties.push(Box::new(StructProperty::parse_property(
-            reader,
-            struct_inner_property_type.as_str(),
-          )?));
+          let property = match struct_inner_property_type.as_str() {
+            "Guid" => GuidProperty::new(reader)?,
+            _ => StructProperty::parse_property_array(reader)?,
+          };
+          properties.push(Box::new(property));
         }
       }
       _ => {

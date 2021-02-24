@@ -1,9 +1,11 @@
-use crate::properties::{ArrayProperty, GuidProperty, Property};
+use crate::properties::{GuidProperty, MapProperty, Property};
 use crate::utils::{error::ParseError, peek::peek, read_string::*};
 use byteorder::{LittleEndian, ReadBytesExt};
 use serde::{ser::SerializeMap, Serialize, Serializer};
 use std::char;
+use std::collections::HashMap;
 use std::io::{Cursor, Read};
+use wasm_bindgen::UnwrapThrowExt;
 
 #[derive(Debug)]
 pub struct StructProperty {
@@ -44,7 +46,7 @@ impl StructProperty {
   }
 
   pub fn parse_property_array(reader: &mut Cursor<Vec<u8>>) -> Result<Property, ParseError> {
-    let mut properties = Vec::new();
+    let mut properties = HashMap::new();
     loop {
       if char::from_u32(peek(reader)?).is_none() {
         break;
@@ -56,19 +58,17 @@ impl StructProperty {
       let inner_property_type = reader.read_string()?;
       let _inner_length = reader.read_i64::<LittleEndian>()?;
       let property = Property::new(inner_property_type.as_str(), reader)?;
-      properties.push(Property::from(StructProperty {
-        name: inner_property_name,
-        property: Box::new(property),
-      }));
+      properties.insert(inner_property_name, property);
     }
     if properties.len() == 1 {
-      Ok(properties.remove(0))
+      let (_key, property) = properties.drain().next().unwrap();
+      Ok(property)
     } else {
-      let mut boxed_properties = Vec::new();
-      for property in properties {
-        boxed_properties.push(Box::new(property));
+      let mut boxed_properties = HashMap::new();
+      for (name, property) in properties {
+        boxed_properties.insert(name, Box::new(property));
       }
-      Ok(Property::from(ArrayProperty(boxed_properties)))
+      Ok(Property::from(MapProperty(boxed_properties)))
     }
   }
 }
