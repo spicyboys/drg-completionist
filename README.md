@@ -1,6 +1,33 @@
 # DRG Completionist
 
-This is a simple web-based tracker for Deep Rock Galactic collectables and
-unlocks.
+This project is a responsive and open-source completion tracker app for [Deep Rock Galactic](https://www.deeprockgalactic.com/) that is currently in development. It helps you both to keep track your forged weapon overclocks and to quickly look up weapon overclock information to help you decide which ones to go for next. The web app is fully responsive and works well on deskops, mobile touchscreen devices, and everything in between.
 
-It's all serverless and uses local storage for persistence.
+While progress can be input manually, _DRG Completionist_ also includes an optional [WASM](https://en.wikipedia.org/wiki/WebAssembly)-based save parsing tool that locally analyzes your PC's Deep Rock Galactic save file (_sorry console users_) and automatically inputs your currently forged overclocks. While the parser only tracks weapon overclocks right now, we intend to expand this tool to cover the remaining unlockables if there's demand for it.
+
+The Steam save file is located here by default on Windows, but may vary based on your install location:
+
+`C:\Program Files (x86)\Steam\steamapps\common\Deep Rock Galactic\FSD\Saved\SaveGames\{steam_ID}_Player.sav`
+
+## Potential Upcoming Features
+
+- Add weapon paintjobs
+- Add armor accessories
+- Add armor paintjobs
+- Add pickaxe parts and paintjobs
+- Distinguish between forged, acquired-but-unforged, and unacquired overclocks
+
+## Privacy
+
+_DRG Completionist_ respects your privacy. The app is entirely serverless and uses the browser's local storage to keep track of your progress. No personally identifying information is ever collected.
+
+If you choose to upload your save file, the file never leaves your computer. The save file parser is compiled from [Rust](<https://en.wikipedia.org/wiki/Rust_(programming_language)>) into [WASM](https://en.wikipedia.org/wiki/WebAssembly) so it can run completely within your browser. As always, you are welcome to inspect the source code.
+
+The only tracking we do are a few anonymous Google Analytics tags that allow us to see how (or even if) this app is used. These tags are blocked by default if you use one almost any of the widely-available privacy-oriented browser settings and extensions out there, which probably isn't a bad idea nowadays anyway.
+
+## Disclaimer
+
+Neither this app nor its developers are associated with Deep Rock Galactic or Ghost Ship Games in any way whatsoever. _(But we really admire what they do.)_
+
+---
+
+###### README Last Updated: Feb 24. 2021
