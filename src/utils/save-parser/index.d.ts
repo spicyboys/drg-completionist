@@ -2,15 +2,6 @@
 /* eslint-disable */
 /**
 * @param {File} file
-* @returns {Promise<SaveFileData>}
+* @returns {Promise<any>}
 */
-export function parse_save_file(file: File): Promise<SaveFileData>;
-/**
-*/
-export class SaveFileData {
-  free(): void;
-/**
-* @returns {ReadonlyMap<string, ReadonlySet<string>>}
-*/
-  readonly overclocks: ReadonlyMap<string, ReadonlySet<string>>;
-}
+export function parse_save_file(file: File): Promise<any>;

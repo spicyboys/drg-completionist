@@ -1,8 +1,9 @@
 use crate::properties::Property;
 use crate::utils::{error::ParseError, read_string::*};
+use serde::Serialize;
 use std::io::{Cursor, Read};
 
-#[derive(Debug)]
+#[derive(Debug, Serialize)]
 pub struct EnumProperty {
   name: String,
   value: String,

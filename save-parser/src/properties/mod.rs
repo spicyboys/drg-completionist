@@ -12,6 +12,7 @@ mod struct_property;
 
 use crate::utils::error::ParseError;
 use enum_dispatch::enum_dispatch;
+use serde::Serialize;
 use std::io::Cursor;
 
 use array_property::ArrayProperty;
@@ -30,7 +31,7 @@ use struct_property::StructProperty;
 trait PropertyTrait {}
 
 #[enum_dispatch(PropertyTrait)]
-#[derive(Debug)]
+#[derive(Debug, Serialize)]
 pub enum Property {
   StructProperty,
   IntProperty,

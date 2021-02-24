@@ -1,10 +1,11 @@
 use crate::properties::{ArrayProperty, GuidProperty, Property};
 use crate::utils::{error::ParseError, peek::peek, read_string::*};
 use byteorder::{LittleEndian, ReadBytesExt};
+use serde::Serialize;
 use std::char;
 use std::io::{Cursor, Read};
 
-#[derive(Debug)]
+#[derive(Debug, Serialize)]
 pub struct StructProperty {
   pub name: String,
   pub property: Box<Property>,

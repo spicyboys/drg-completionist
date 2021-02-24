@@ -1,8 +1,7 @@
 use callback_future::CallbackFuture;
 use fragile::Fragile;
 use js_sys::Uint8Array;
-// use serde::Deserialize;
-use std::collections::{HashMap, HashSet};
+use std::collections::HashMap;
 use std::str;
 use wasm_bindgen::prelude::*;
 use wasm_bindgen::JsCast;
@@ -11,7 +10,7 @@ use web_sys::{File, FileReader, ProgressEvent};
 
 #[wasm_bindgen]
 extern "C" {
-  #[wasm_bindgen(typescript_type = "Promise<SaveFileData>")]
+  #[wasm_bindgen(typescript_type = "Promise<any>")]
   pub type ParseSaveFileResult;
   #[wasm_bindgen(typescript_type = "ReadonlyMap<string, ReadonlySet<string>>")]
   pub type SaveFileOverclocks;
@@ -24,38 +23,11 @@ macro_rules! console_log {
   ($($t:tt)*) => (crate::log(&format_args!($($t)*).to_string()))
 }
 
-#[wasm_bindgen]
-pub struct SaveFileData {
-  overclocks: HashMap<String, HashSet<String>>,
-}
-
-#[wasm_bindgen]
-impl SaveFileData {
-  #[wasm_bindgen(getter)]
-  pub fn overclocks(&self) -> SaveFileOverclocks {
-    let m = js_sys::Map::new();
-    for (weapon, weapon_overclocks) in &self.overclocks {
-      let s = js_sys::Set::new(&JsValue::undefined());
-      for overclock in weapon_overclocks {
-        s.add(&JsValue::from(overclock));
-      }
-      m.set(&JsValue::from(weapon), &s);
-    }
-    JsValue::from(m).unchecked_into::<SaveFileOverclocks>()
-  }
-}
-
 fn get_file_data(e: ProgressEvent) -> Option<Vec<u8>> {
   let target = e.target()?;
   let reader_result = JsCast::dyn_ref::<FileReader>(&target)?.result().unwrap();
   Some(Uint8Array::new(&reader_result).to_vec())
 }
-
-// #[derive(Deserialize)]
-// struct OverclockData {
-//     name: String,
-//     weapon: String,
-// }
 
 mod properties;
 mod utils;
@@ -133,38 +105,28 @@ fn validate_save_file_header(reader: &mut Cursor<Vec<u8>>) -> Result<(), ParseEr
   Ok(())
 }
 
-fn get_file_overclocks(file_bytes: &Vec<u8>) -> Result<HashMap<String, HashSet<String>>, String> {
+fn get_save_file_data(file_bytes: &Vec<u8>) -> Result<HashMap<String, Property>, ParseError> {
   let mut cursor = Cursor::new(file_bytes.to_vec());
   match validate_save_file_header(&mut cursor) {
-    Err(_) => return Err("Invalid save file".to_string()),
+    Err(_) => return Err(ParseError::new("Invalid save file".to_string())),
     _ => (),
   };
-  let metadata = SaveFileMetadata::new(&mut cursor);
-  console_log!("{:?}", metadata);
+  let _metadata = SaveFileMetadata::new(&mut cursor);
 
   let mut properties = HashMap::new();
   loop {
-    if char::from_u32(peek(&mut cursor).unwrap()).is_none() {
+    if char::from_u32(peek(&mut cursor)?).is_none() {
       break;
     }
-    let name = cursor.read_string().unwrap();
-    let data_type = cursor.read_string().unwrap();
-    let _length = cursor.read_i64::<LittleEndian>().unwrap();
-    let property = Property::new(data_type.as_str(), &mut cursor);
+    let name = cursor.read_string()?;
+    let data_type = cursor.read_string()?;
+    let _length = cursor.read_i64::<LittleEndian>()?;
+    let property = Property::new(data_type.as_str(), &mut cursor)?;
     properties.insert(name, property);
   }
 
-  let stats_save = match properties
-    .get("MissionStatsSave")
-    .unwrap()
-    .as_ref()
-    .unwrap()
-  {
-    Property::StructProperty(s) => s,
-    _ => return Err("Unexpected item in bagging area".to_string()),
-  };
-  console_log!("{:?}", stats_save);
-  Err("I'm too lazy to update the return type of this function".to_string())
+  console_log!("{:?}", properties);
+  Ok(properties)
 }
 
 #[wasm_bindgen]
@@ -172,7 +134,7 @@ pub fn parse_save_file(file: File) -> ParseSaveFileResult {
   console_error_panic_hook::set_once();
   let promise = future_to_promise(async {
     let file = Fragile::new(file);
-    let file_data: Result<Vec<u8>, &str> = CallbackFuture::new(move |complete| {
+    let file_bytes: Result<Vec<u8>, &str> = CallbackFuture::new(move |complete| {
       let reader = FileReader::new().unwrap();
       let onloadend_cb = Closure::once(Box::new(|e: ProgressEvent| {
         complete(match get_file_data(e) {
@@ -187,10 +149,10 @@ pub fn parse_save_file(file: File) -> ParseSaveFileResult {
       onloadend_cb.forget();
     })
     .await;
-    match file_data {
-      Ok(d) => match get_file_overclocks(&d) {
-        Ok(o) => Ok(JsValue::from(SaveFileData { overclocks: o })),
-        Err(e) => Err(JsValue::from(e)),
+    match file_bytes {
+      Ok(d) => match get_save_file_data(&d) {
+        Ok(s) => Ok(JsValue::from_serde(&s).unwrap()),
+        Err(e) => Err(JsValue::from(e.to_string())),
       },
       Err(e) => Err(JsValue::from(e)),
     }

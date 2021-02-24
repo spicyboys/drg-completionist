@@ -1,9 +1,10 @@
 use crate::properties::Property;
 use crate::utils::error::ParseError;
 use byteorder::{LittleEndian, ReadBytesExt};
+use serde::Serialize;
 use std::io::{Cursor, Read};
 
-#[derive(Debug)]
+#[derive(Debug, Serialize)]
 pub struct FloatProperty(f32);
 
 impl FloatProperty {

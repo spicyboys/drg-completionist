@@ -1,9 +1,10 @@
 use crate::properties::{GuidProperty, Property};
 use crate::utils::{error::ParseError, read_string::*};
 use byteorder::{LittleEndian, ReadBytesExt};
+use serde::Serialize;
 use std::io::{Cursor, Read};
 
-#[derive(Debug)]
+#[derive(Debug, Serialize)]
 pub struct SetProperty(pub Vec<Box<Property>>);
 
 impl SetProperty {

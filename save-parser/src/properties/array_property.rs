@@ -1,10 +1,10 @@
-use crate::properties::Property;
-use crate::properties::StructProperty;
+use crate::properties::{Property, StructProperty};
 use crate::utils::{error::ParseError, read_string::*};
 use byteorder::{LittleEndian, ReadBytesExt};
+use serde::Serialize;
 use std::io::{Cursor, Read};
 
-#[derive(Debug)]
+#[derive(Debug, Serialize)]
 pub struct ArrayProperty(pub Vec<Box<Property>>);
 
 impl ArrayProperty {

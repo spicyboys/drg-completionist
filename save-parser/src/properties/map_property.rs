@@ -2,16 +2,12 @@ use crate::properties::{IntProperty, Property, StructProperty};
 use crate::utils::{error::ParseError, read_guid::*, read_string::*};
 use crate::Guid;
 use byteorder::{LittleEndian, ReadBytesExt};
+use serde::Serialize;
 use std::collections::HashMap;
 use std::io::{Cursor, Read};
 
-#[derive(Debug, Hash, Eq, PartialEq)]
-enum KeyType {
-  Guid(Guid),
-}
-
-#[derive(Debug)]
-pub struct MapProperty(HashMap<KeyType, Box<Property>>);
+#[derive(Debug, Serialize)]
+pub struct MapProperty(pub HashMap<String, Box<Property>>);
 
 impl MapProperty {
   pub fn new(reader: &mut Cursor<Vec<u8>>) -> Result<Property, ParseError> {
@@ -25,7 +21,7 @@ impl MapProperty {
     let mut properties = HashMap::new();
     for _ in 0..num_properties {
       let key = match key_type.as_str() {
-        "StructProperty" => KeyType::Guid(reader.read_guid()?),
+        "StructProperty" => reader.read_guid()?.to_string(),
         _ => {
           return Err(ParseError::new(format!(
             "Unhandled map key type {}",

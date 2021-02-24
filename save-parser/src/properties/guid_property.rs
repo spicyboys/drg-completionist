@@ -1,9 +1,9 @@
 use crate::properties::Property;
-use crate::utils::error::ParseError;
-use crate::utils::read_guid::*;
+use crate::utils::{error::ParseError, read_guid::*};
+use serde::Serialize;
 use std::io::Cursor;
 
-#[derive(Debug)]
+#[derive(Debug, Serialize)]
 pub struct GuidProperty(Guid);
 
 impl GuidProperty {
