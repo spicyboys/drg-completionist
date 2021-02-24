@@ -125,7 +125,7 @@ fn get_save_file_data(file_bytes: &Vec<u8>) -> Result<HashMap<String, Property>,
     properties.insert(name, property);
   }
 
-  console_log!("{:?}", properties);
+  //console_log!("{:?}", properties);
   Ok(properties)
 }
 

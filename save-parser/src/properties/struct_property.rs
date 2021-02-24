@@ -51,7 +51,7 @@ impl StructProperty {
       }
       let inner_property_name = reader.read_string()?;
       if inner_property_name == "None" {
-        continue;
+        break;
       }
       let inner_property_type = reader.read_string()?;
       let _inner_length = reader.read_i64::<LittleEndian>()?;

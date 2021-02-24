@@ -34,16 +34,15 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
         const parser = await import('utils/save-parser');
         const save_data = await parser.parse_save_file(f);
         console.log(save_data);
-        return;
-        dispatch({
-          type: 'SET_OVERCLOCKS',
-          payload: {
-            overclocks: overclocks as ReadonlyMap<
-              MinerWeapon<Miner>,
-              ReadonlySet<string>
-            >,
-          },
-        });
+        // dispatch({
+        //   type: 'SET_OVERCLOCKS',
+        //   payload: {
+        //     overclocks: overclocks as ReadonlyMap<
+        //       MinerWeapon<Miner>,
+        //       ReadonlySet<string>
+        //     >,
+        //   },
+        // });
         props.hide();
       } catch (e) {
         console.error(e);
