@@ -1,7 +1,7 @@
 {
-  "name": "Deep Rock Galactic Completionist",
+  "name": "DRG Completionist: Automatic Progress Tracker for Deep Rock Galactic",
   "short_name": "DRG Completionist",
-  "description": "A free open-source app that assists hard-working dwarves like yourselves in keeping track of all those overclocks and frameworks cluttering up the Space Rig. The app is simple and straightforward: just click on a card to count it toward your overall progress, or just hover over the info icon for more information. Got to head out for your weekly deep dive? Your browser will remember your progress even if you refresh or close the tab. The UI is responsive and will adapt to work on your desktop, laptop, smartphone, and nearly everything in between. With this app by your side, you can see just how close you are to becoming Deep Rock Galactic's most valuable employee!",
+  "description": "A free open-source app that assists hard-working dwarves like yourselves in keeping track of all those overclocks and frameworks cluttering up the Space Rig. With this app by your side, you can see just how close you are to becoming Deep Rock Galactic's most valuable employee!",
   "icons": [
     {
       "src": "favicon.ico",
