@@ -26,7 +26,14 @@
   "start_url": ".",
   "homepage_url": "https://drg-completionist.com/",
   "default_locale": "en",
-  "theme_color": "#1a1a1a",
+  "theme_color": "#b37721",
   "background_color": "#1a1a1a",
-  "display": "standalone"
+  "display": "standalone",
+  "screenshots": [
+    {
+      "src": "/summary_large_image.png",
+      "type": "image/png",
+      "sizes": "1200x628"
+    }
+  ]
 }
