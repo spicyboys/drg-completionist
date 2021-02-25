@@ -1,4 +1,4 @@
-use crate::properties::{GuidProperty, MapProperty, Property};
+use crate::properties::{GuidProperty, MapProperty, Property, StringProperty};
 use crate::utils::{error::ParseError, peek::peek, read_string::*};
 use byteorder::{LittleEndian, ReadBytesExt};
 use serde::{ser::SerializeMap, Serialize, Serializer};
@@ -37,6 +37,10 @@ impl StructProperty {
   ) -> Result<Property, ParseError> {
     match struct_type {
       "Guid" => Ok(GuidProperty::new(reader)?),
+      "DateTime" => {
+        let timestamp = reader.read_i64::<LittleEndian>()?;
+        Ok(Property::from(StringProperty(timestamp.to_string())))
+      }
       _ => Ok(Property::from(StructProperty {
         name: struct_type.to_string(),
         property: Box::new(StructProperty::parse_property_array(reader)?),

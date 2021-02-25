@@ -132,7 +132,7 @@ fn get_save_file_data(file_bytes: &Vec<u8>) -> Result<HashMap<String, Property>,
     Err(_) => return Err(ParseError::new("Invalid save file".to_string())),
     _ => (),
   };
-  let _metadata = SaveFileMetadata::new(&mut cursor);
+  let _metadata = SaveFileMetadata::new(&mut cursor)?;
 
   let mut properties = HashMap::new();
   loop {
