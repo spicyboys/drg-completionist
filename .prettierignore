@@ -3,14 +3,16 @@
 /.pnp
 .pnp.js
 
+# save-parser
+/save-parser
+/src/utils/save-parser
+
 # testing
 coverage
 
 # production
 /build
 /dist
-/save-parser/pkg
-/src/utils/save-parser
 
 #config
 .circleci/config.yml
