@@ -1,12 +1,11 @@
 import InfoCircleOutlined from '@ant-design/icons/InfoCircleOutlined';
-import { Card, Col, Grid, Popover } from 'antd';
+import { Card, Col, Popover } from 'antd';
+import { isMobile } from 'react-device-detect';
 import { Miner, MinerColor, MinerColorContrastText } from 'utils/miner';
 import { MinerWeapon } from 'utils/weapons';
 import OverclockCardPopover from './OverclockCardPopover';
 import { Overclock } from './OverclockData';
 import OverclockIcon from './OverclockIcon';
-
-const { useBreakpoint } = Grid;
 
 export default function OverclockCard(props: {
   overclock: Overclock;
@@ -46,7 +45,7 @@ export default function OverclockCard(props: {
       >
         <OverclockIcon overclock={props.overclock} />
         <Popover
-          trigger={useBreakpoint()['lg'] ? 'hover' : 'click'}
+          trigger={isMobile ? 'hover' : 'click'}
           content={() => (
             <OverclockCardPopover
               weapon={props.weapon}

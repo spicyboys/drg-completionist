@@ -4,7 +4,6 @@ import {
   Button,
   Col,
   Divider,
-  Grid,
   Row,
   Space,
   Typography,
@@ -12,11 +11,11 @@ import {
 } from 'antd';
 import { RcFile } from 'antd/lib/upload';
 import { useCallback, useState } from 'react';
+import { isMobile } from 'react-device-detect';
 import { MissionControlPortrait } from 'assets/portraits';
 import useStore from 'data/useStore';
 import { getAcquiredOverclocksFromSaveFile } from './getAcquiredOverclocksFromSaveFile';
 
-const { useBreakpoint } = Grid;
 const { Text } = Typography;
 
 export default function AnalyzeSaveFile(props: { hide: () => void }) {
@@ -24,14 +23,13 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
   const [loading, setLoading] = useState(false);
   const [, dispatch] = useStore();
 
-  const isLgWidth = useBreakpoint()['lg'];
-
   const parseSaveFile = useCallback(
     async (f: RcFile) => {
       setLoading(true);
       try {
         const parser = await import('utils/save-parser');
         const saveFile = await parser.parse_save_file(f);
+        console.log(saveFile);
 
         dispatch({
           type: 'SET_OVERCLOCKS',
@@ -98,7 +96,7 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
               </Button>
             )}
           </Upload>
-          {hasClickedButton && !isLgWidth ? (
+          {hasClickedButton && isMobile ? (
             <Col span={20} style={{ marginTop: 24 }}>
               <Space>
                 <Avatar
