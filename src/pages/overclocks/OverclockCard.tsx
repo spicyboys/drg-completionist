@@ -58,7 +58,8 @@ export default function OverclockCard(props: {
             style={{
               color: 'white',
               float: 'right',
-              marginTop: -14,
+              fontSize: isMobile ? '2em' : 'inherit',
+              marginTop: isMobile ? '-1em' : -14,
             }}
             onClick={props.onClick}
           />
