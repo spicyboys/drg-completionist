@@ -19,13 +19,6 @@ export default function reducer(state: State, action: Actions): State {
         ),
       };
     }
-    case 'SET_OVERCLOCKS': {
-      const { overclocks } = action.payload;
-      return {
-        ...state,
-        overclocks,
-      };
-    }
     case 'TOGGLE_FRAMEWORK': {
       const { weapon, framework } = action.payload;
       const weaponFrameworks = state.frameworks.get(weapon) ?? new Set();
@@ -38,6 +31,14 @@ export default function reducer(state: State, action: Actions): State {
             ? removeFromSet(weaponFrameworks, framework)
             : addToSet(weaponFrameworks, framework)
         ),
+      };
+    }
+    case 'LOAD_SAVE': {
+      const { overclocks, frameworks } = action.payload;
+      return {
+        ...state,
+        overclocks,
+        frameworks,
       };
     }
     case 'RESET': {

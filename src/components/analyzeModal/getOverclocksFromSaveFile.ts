@@ -8,7 +8,7 @@ import { MinerWeapon } from 'utils/weapons';
  * need to translate that into the weapon / overclock name pair we use to track
  * progress
  */
-export const getAcquiredOverclocksFromSaveFile = ({
+export const getOverclocksFromSaveFile = ({
   SchematicSave: {
     SchematicSave: { ForgedSchematics: forgedSchematics },
   },

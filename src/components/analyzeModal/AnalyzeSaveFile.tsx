@@ -14,7 +14,8 @@ import { useCallback, useState } from 'react';
 import { isMobile } from 'react-device-detect';
 import { MissionControlPortrait } from 'assets/portraits';
 import useStore from 'data/useStore';
-import { getAcquiredOverclocksFromSaveFile } from './getAcquiredOverclocksFromSaveFile';
+import { getFrameworksFromSaveFile } from './getFrameworksFromSaveFile';
+import { getOverclocksFromSaveFile } from './getOverclocksFromSaveFile';
 
 const { Text } = Typography;
 
@@ -30,9 +31,10 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
         const parser = await import('utils/save-parser');
         const saveFile = await parser.parse_save_file(f);
         dispatch({
-          type: 'SET_OVERCLOCKS',
+          type: 'LOAD_SAVE',
           payload: {
-            overclocks: getAcquiredOverclocksFromSaveFile(saveFile),
+            overclocks: getOverclocksFromSaveFile(saveFile),
+            frameworks: getFrameworksFromSaveFile(saveFile),
           },
         });
         props.hide();
