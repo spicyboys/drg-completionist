@@ -1,4 +1,4 @@
-import { Framework, FrameworkIcon as FrameworkIconMap } from './FrameworkData';
+import { Framework, FrameworkIcon as FrameworkIconMap } from 'data/frameworks';
 
 export default function FrameworkIcon(props: { framework: Framework }) {
   return (

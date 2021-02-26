@@ -1,4 +1,4 @@
-import { overclocks, Overclock } from 'pages/overclocks/OverclockData';
+import { Overclocks, Overclock } from 'data/overclocks';
 import { Miner } from 'utils/miner';
 import { SaveFile } from 'utils/save-parser';
 import { MinerWeapon } from 'utils/weapons';
@@ -15,7 +15,7 @@ export const getOverclocksFromSaveFile = ({
 }: SaveFile): Map<MinerWeapon<Miner>, Set<string>> => {
   const acquiredOverclocks: Map<MinerWeapon<Miner>, Set<string>> = new Map();
   Object.entries(
-    Object.values(overclocks).reduce(
+    Object.values(Overclocks).reduce(
       (p, c) => Object.assign(p, c),
       {}
     ) as Record<MinerWeapon<Miner>, Overclock[]>

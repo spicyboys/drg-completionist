@@ -1,12 +1,12 @@
 import { useCallback } from 'react';
+import { Overclocks } from 'data/overclocks';
 import MinerPageLayout from 'pages/MinerPageLayout';
 import useStore from 'store/useStore';
 import { Miner } from 'utils/miner';
 import { MinerWeapon, MinerWeapons } from 'utils/weapons';
 import MinerOverclocks from './MinerOverclocks';
-import { overclocks } from './OverclockData';
 
-export default function Overclocks() {
+export default function OverclocksPage() {
   const [acquiredOverclocks] = useStore('overclocks');
   const getProgress = useCallback(
     (miner: Miner) => {
@@ -16,7 +16,7 @@ export default function Overclocks() {
         .map(([, overclocks]) => overclocks);
       return (
         minerOverclocks.reduce((p, c) => p + c.size, 0) /
-        Object.values(overclocks[miner]).flat().length
+        Object.values(Overclocks[miner]).flat().length
       );
     },
     [acquiredOverclocks]

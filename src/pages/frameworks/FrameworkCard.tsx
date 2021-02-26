@@ -1,6 +1,6 @@
 import { Card, Col } from 'antd';
+import { Framework } from 'data/frameworks';
 import { Miner, MinerColor, MinerColorContrastText } from 'utils/miner';
-import { Framework } from './FrameworkData';
 import FrameworkIcon from './FrameworkIcon';
 
 export default function FrameworkCard<T extends Miner>(props: {

@@ -1,16 +1,16 @@
 import { Row } from 'antd';
 import React from 'react';
 import WeaponDivider from 'components/WeaponDivider';
+import { Overclocks } from 'data/overclocks';
 import useStore from 'store/useStore';
 import { Miner } from 'utils/miner';
 import { MinerWeapon } from 'utils/weapons';
 import OverclockCard from './OverclockCard';
-import { overclocks } from './OverclockData';
 
 export default function MinerOverclocks(props: { miner: Miner }) {
   const { miner } = props;
   const [acquiredOverclocks, dispatch] = useStore('overclocks');
-  const minerOverclocks = overclocks[miner];
+  const minerOverclocks = Overclocks[miner];
 
   return (
     <>

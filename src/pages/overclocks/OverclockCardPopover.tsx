@@ -12,7 +12,7 @@ import Meta from 'antd/lib/card/Meta';
 import { Buff as BuffIcon, Nerf as NerfIcon } from 'assets/overclocks/arrows';
 import { Miner } from 'utils/miner';
 import { MinerWeapon, WeaponOutlines } from 'utils/weapons';
-import { Overclock } from './OverclockData';
+import { Overclock } from '../../data/overclocks';
 import OverclockIcon from './OverclockIcon';
 import OverclockPrice from './OverclockPrice';
 

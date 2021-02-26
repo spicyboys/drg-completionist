@@ -2,11 +2,11 @@
 import { Row } from 'antd';
 import React from 'react';
 import WeaponDivider from 'components/WeaponDivider';
+import { Frameworks } from 'data/frameworks';
 import useStore from 'store/useStore';
 import { Miner } from 'utils/miner';
 import { MinerWeapon, MinerWeapons } from 'utils/weapons';
 import FrameworkCard from './FrameworkCard';
-import { Frameworks } from './FrameworkData';
 
 export default function MinerFrameworks<T extends Miner>(props: { miner: T }) {
   const { miner } = props;

@@ -1,4 +1,4 @@
-import { Framework, FrameworkIDs } from 'pages/frameworks/FrameworkData';
+import { Framework, FrameworkIDs } from 'data/frameworks';
 import { Miner } from 'utils/miner';
 import { flipObject } from 'utils/object';
 import { SaveFile } from 'utils/save-parser';

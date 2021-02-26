@@ -2,8 +2,8 @@ import { Layout } from 'antd';
 import { useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
 import { DEFAULT_TAB, TABS, TabName } from 'App';
-import { Frameworks } from 'pages/frameworks/FrameworkData';
-import { overclocks } from 'pages/overclocks/OverclockData';
+import { Frameworks } from 'data/frameworks';
+import { Overclocks } from 'data/overclocks';
 import useStore from 'store/useStore';
 import { MinerColor } from 'utils/miner';
 import { MinerWeapons } from 'utils/weapons';
@@ -36,7 +36,7 @@ export default function PageFooter() {
             (p, c) => p + c.size,
             0
           ) /
-            Object.values(overclocks)
+            Object.values(Overclocks)
               .flatMap((w) => Object.values(w))
               .flat().length) *
             100

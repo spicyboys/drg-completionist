@@ -26,7 +26,7 @@ type Overclocks = {
   [K in Miner]: Record<MinerWeapon<K>, Overclock[]>;
 };
 
-export const overclocks: Overclocks = {
+export const Overclocks: Overclocks = {
   [Miner.Driller]: {
     'CRSPR Flamethrower': [
       {
