@@ -11,9 +11,16 @@ export const getFrameworksFromSaveFile = ({
   const weaponIDs = flipObject(WeaponIDs);
   Object.entries(unlockedItemSkins).forEach(([weaponID, frameworkIDs]) => {
     const weapon = weaponIDs[weaponID];
-    const frameworks = frameworkIDs.map(
-      (frameworkID) => flipObject(FrameworkIDs[weapon])[frameworkID]
-    );
+    if (weapon === undefined) {
+      return;
+    }
+    const frameworks = frameworkIDs
+      .map(
+        (frameworkID) =>
+          flipObject(FrameworkIDs[weapon])[frameworkID] as Framework | undefined
+      )
+      .filter((f) => f !== undefined) as Framework[];
+    console.log(frameworks);
     acquiredFrameworks.set(weapon, new Set(frameworks));
   });
   return acquiredFrameworks;
