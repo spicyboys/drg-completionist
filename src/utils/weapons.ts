@@ -48,3 +48,7 @@ export const WeaponOutlines: Record<MinerWeapon<Miner>, string> = {
   'Jury-Rigged Boomstick': outlines.scout.Boomstick,
   'Zhukov NUK17': outlines.scout.Zhukov,
 };
+
+export const WeaponIDs: Record<MinerWeapon<Miner>, string> = {
+  'Deepcore GK2': '1AF31165BCB11C48A5A3D1A6BA5A3540',
+};

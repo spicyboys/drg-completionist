@@ -21,6 +21,7 @@ export type SaveFile = {
       "OwnedSchematics": string[],
     },
   },
+  "UnlockedItemSkins": { [s: string] : [string] },
 }; 
 
 
