@@ -26,6 +26,7 @@ export const FrameworkIDs: Record<
   MinerWeapon<Miner>,
   Record<Framework, string>
 > = {
+  // Driller
   'CRSPR Flamethrower': {
     'Custom Engineered': '',
     'Fourth Relic': '',
@@ -95,11 +96,11 @@ export const FrameworkIDs: Record<
 
   // Gunner
   '"Lead Storm" Powered Minigun': {
-    'Custom Engineered': '',
-    'Fourth Relic': '',
-    'Glyphid Trophy Hunter': '',
-    Mechanized: '',
-    Neonband: '',
+    'Custom Engineered': '8BF49946B47A524DA518320260C1058D',
+    'Fourth Relic': 'E4E21C728EC3F14B9BD5DD09922BE71A',
+    'Glyphid Trophy Hunter': 'D2CC36806F502F44B48B793CA29BEB36',
+    Mechanized: '88D7EA8C04A0134D92B0F8011EFD162E',
+    Neonband: 'DFB7BC3D2B11834A9AF6BFF79A0A9563',
     'Scale Brigade': '',
   },
   '"Thunderhead" Heavy Autocannon': {
@@ -111,19 +112,19 @@ export const FrameworkIDs: Record<
     'Scale Brigade': '',
   },
   '"Bulldog" Heavy Revolver': {
-    'Custom Engineered': '',
-    'Fourth Relic': '',
-    'Glyphid Trophy Hunter': '',
-    Mechanized: '',
-    Neonband: '',
+    'Custom Engineered': '81AC1795976B4247BAFC9DB6AEC37E49',
+    'Fourth Relic': '0A3DA1FAEE768B46A1A6B327EBF92ACF',
+    'Glyphid Trophy Hunter': '126E84C51BD1274F94EC81DEFD071EDD',
+    Mechanized: '920BDAB74E41504E9EEF8F444AAF63F7',
+    Neonband: 'CDD14084B8900F4C96EB01358B0631A6',
     'Scale Brigade': '',
   },
   'BRT7 Burst Fire Gun': {
-    'Custom Engineered': '',
-    'Fourth Relic': '',
-    'Glyphid Trophy Hunter': '',
-    Mechanized: '',
-    Neonband: '',
+    'Custom Engineered': '35221568F37CBB4CB94FBB70C7693747',
+    'Fourth Relic': '2E7700EBABE37E478FD88320E87ED5C5',
+    'Glyphid Trophy Hunter': '0645D3A3FE33244294981110B9B1A4F5',
+    Mechanized: '22936C02624E6D4EABD66848C8E09865',
+    Neonband: '507DFD1792BC6A48840FA5A6C8230C17',
     'Scale Brigade': '',
   },
 
