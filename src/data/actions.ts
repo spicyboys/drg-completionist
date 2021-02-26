@@ -11,9 +11,10 @@ type Actions =
       };
     }
   | {
-      type: 'SET_OVERCLOCKS';
+      type: 'LOAD_SAVE';
       payload: {
         overclocks: ReadonlyMap<MinerWeapon<Miner>, ReadonlySet<string>>;
+        frameworks: ReadonlyMap<MinerWeapon<Miner>, ReadonlySet<Framework>>;
       };
     }
   | {
