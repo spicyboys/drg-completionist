@@ -42,6 +42,8 @@ function generate_index {
 
 $import_string
 EOF
+
+  truncate -s -1 "$1/index.ts"
 }
 
 for file in $SRC_DIR/assets/*; do
