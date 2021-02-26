@@ -1,5 +1,7 @@
-use crate::properties::{IntProperty, Property, StructProperty};
-use crate::utils::{error::ParseError, read_guid::*, read_string::*};
+use crate::{
+  properties::{FloatProperty, IntProperty, Property, StructProperty},
+  utils::{error::ParseError, read_guid::ReadGuid, read_string::ReadString},
+};
 use byteorder::{LittleEndian, ReadBytesExt};
 use serde::Serialize;
 use std::collections::HashMap;
@@ -30,7 +32,8 @@ impl MapProperty {
       };
       let value = match value_type.as_str() {
         "StructProperty" => StructProperty::parse_property_array(reader)?,
-        "IntProperty" => IntProperty::new(reader)?,
+        "IntProperty" => Property::from(IntProperty(reader.read_i32::<LittleEndian>()?)),
+        "FloatProperty" => Property::from(FloatProperty(reader.read_f32::<LittleEndian>()?)),
         _ => {
           return Err(ParseError::new(format!(
             "Unhandled map value type {}",

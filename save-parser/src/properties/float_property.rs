@@ -5,7 +5,7 @@ use serde::Serialize;
 use std::io::{Cursor, Read};
 
 #[derive(Debug, Serialize)]
-pub struct FloatProperty(f32);
+pub struct FloatProperty(pub f32);
 
 impl FloatProperty {
   pub fn new(reader: &mut Cursor<Vec<u8>>) -> Result<Property, ParseError> {

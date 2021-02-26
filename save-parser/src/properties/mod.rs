@@ -50,7 +50,7 @@ pub enum Property {
 impl Property {
   pub fn new(property_type: &str, reader: &mut Cursor<Vec<u8>>) -> Result<Self, ParseError> {
     match property_type {
-      "IntProperty" => IntProperty::new(reader),
+      "IntProperty" | "UInt32Property" => IntProperty::new(reader),
       "BoolProperty" => BoolProperty::new(reader),
       "StructProperty" => StructProperty::new(reader),
       "ArrayProperty" => ArrayProperty::new(reader),

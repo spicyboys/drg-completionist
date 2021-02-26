@@ -140,6 +140,9 @@ fn get_save_file_data(file_bytes: &Vec<u8>) -> Result<HashMap<String, Property>,
       break;
     }
     let name = cursor.read_string()?;
+    if name == "None" {
+      break;
+    }
     let data_type = cursor.read_string()?;
     let _length = cursor.read_i64::<LittleEndian>()?;
     let property = Property::new(data_type.as_str(), &mut cursor)?;

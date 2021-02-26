@@ -5,7 +5,7 @@ use serde::Serialize;
 use std::io::{Cursor, Read};
 
 #[derive(Debug, Serialize)]
-pub struct IntProperty(i32);
+pub struct IntProperty(pub i32);
 
 impl IntProperty {
   pub fn new(reader: &mut Cursor<Vec<u8>>) -> Result<Property, ParseError> {
