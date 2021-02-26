@@ -33,12 +33,12 @@ export default function OverclockCard(props: {
                 backgroundColor: MinerColor[props.miner],
                 color: MinerColorContrastText[props.miner],
                 fontWeight: 'bold',
-                transition: 'all 0.4s',
+                transition: 'all 0.3s',
               }
             : {
                 color: '#cccccc',
                 fontWeight: 'bold',
-                transition: 'all 0.4s',
+                transition: 'all 0.3s',
               }
         }
         onClick={props.onClick}
