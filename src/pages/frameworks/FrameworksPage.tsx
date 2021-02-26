@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
-import useStore from 'data/useStore';
 import MinerPageLayout from 'pages/MinerPageLayout';
+import useStore from 'store/useStore';
 import { Miner } from 'utils/miner';
 import { MinerWeapon, MinerWeapons } from 'utils/weapons';
 import { Frameworks } from './FrameworkData';

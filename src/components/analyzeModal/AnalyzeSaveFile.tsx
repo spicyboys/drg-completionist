@@ -13,7 +13,7 @@ import { RcFile } from 'antd/lib/upload';
 import { useCallback, useState } from 'react';
 import { isMobile } from 'react-device-detect';
 import { MissionControlPortrait } from 'assets/portraits';
-import useStore from 'data/useStore';
+import useStore from 'store/useStore';
 import { getFrameworksFromSaveFile } from './getFrameworksFromSaveFile';
 import { getOverclocksFromSaveFile } from './getOverclocksFromSaveFile';
 
