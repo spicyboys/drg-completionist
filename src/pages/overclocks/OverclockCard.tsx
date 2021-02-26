@@ -45,7 +45,7 @@ export default function OverclockCard(props: {
       >
         <OverclockIcon overclock={props.overclock} />
         <Popover
-          trigger={isMobile ? 'hover' : 'click'}
+          trigger={isMobile ? 'click' : 'hover'}
           content={() => (
             <OverclockCardPopover
               weapon={props.weapon}
