@@ -281,7 +281,7 @@ export const overclocks: Overclocks = {
           magnite: 70,
         },
         effects: {
-          buffs: ['+Randomized Damage (between x0.8 and x1.4 Damage)'],
+          buffs: ['+Randomized Damage (from x0.8 to x1.4)'],
           nerfs: [],
         },
         description: "More damage on average, but it's a bit inconsistent.",
@@ -485,7 +485,7 @@ export const overclocks: Overclocks = {
         effects: {
           buffs: [
             '+Stun Chance Occurs on All Body Parts',
-            '+Bonus Damage vs. Stunned (+30% Kinetic Damage)',
+            '+30% Kinetic Damage vs. Stunned',
           ],
           nerfs: [],
         },
@@ -1175,7 +1175,7 @@ export const overclocks: Overclocks = {
           magnite: 70,
         },
         effects: {
-          buffs: ['+Randomized Damage (between x0.8 and x1.4 Damage)'],
+          buffs: ['+Randomized Damage (from x0.8 to x1.4)'],
           nerfs: [],
         },
         description: "More damage on average, but it's a bit inconsistent.",
@@ -1246,7 +1246,7 @@ export const overclocks: Overclocks = {
           umanite: 65,
         },
         effects: {
-          buffs: ['x2 Damage', 'x0.5 Base Spread'],
+          buffs: ['x2.0 Damage', 'x0.5 Base Spread'],
           nerfs: [
             '-13 Max Ammo',
             '-1 Magazine Size',
@@ -1381,7 +1381,7 @@ export const overclocks: Overclocks = {
         },
         effects: {
           buffs: [
-            'x2 Max Ammo',
+            'x2.0 Max Ammo',
             '+30 Magazine Size',
             'x0.5 Recoil',
             '0.5 Spread per Shot',
@@ -1461,7 +1461,7 @@ export const overclocks: Overclocks = {
           umanite: 65,
         },
         effects: {
-          buffs: ['+Randomized Damage (between x0.8 and x1.4 Damage'],
+          buffs: ['+Randomized Damage (from x0.8 to x1.4)'],
           nerfs: [],
         },
         description: "More damage on average, but it's a bit inconsistent.",
@@ -1495,7 +1495,7 @@ export const overclocks: Overclocks = {
           magnite: 125,
         },
         effects: {
-          buffs: ['+33% Bonus Damage to Status-Afflicted Targets'],
+          buffs: ['+33% Damage to Status-Afflicted Targets'],
           nerfs: ['-5 Magazine Size'],
         },
         description:
@@ -1814,7 +1814,7 @@ export const overclocks: Overclocks = {
           umanite: 95,
         },
         effects: {
-          buffs: ['+Cryo Minelets (10 Cold Damage per Mine'],
+          buffs: ['+Cryo Minelets (10 Cold Damage Each)'],
           nerfs: ['-1 Damage', '-10 Combined Clip Size'],
         },
         description:
