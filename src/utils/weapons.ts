@@ -31,18 +31,25 @@ export const MinerWeapons = {
 export type MinerWeapon<T extends Miner> = typeof MinerWeapons[T][number];
 
 export const WeaponOutlines: Record<MinerWeapon<Miner>, string> = {
+  // Driller
   'CRSPR Flamethrower': outlines.driller.Flamethrower,
   'Cryo Cannon': outlines.driller.CryoCannon,
   'Subata 120': outlines.driller.Subata,
   'Experimental Plasma Charger': outlines.driller.Epc,
+
+  // Engineer
   '"Warthog" Auto 210': outlines.engineer.Shotgun,
   '"Stubby" Voltaic SMG': outlines.engineer.StubbySMG,
   'Deepcore 40mm PGL': outlines.engineer.GrenadeLauncher,
   'Breach Cutter': outlines.engineer.BreachCutter,
+
+  // Gunner
   '"Lead Storm" Powered Minigun': outlines.gunner.Minigun,
   '"Thunderhead" Heavy Autocannon': outlines.gunner.Autocannon,
   '"Bulldog" Heavy Revolver': outlines.gunner.Revolver,
   'BRT7 Burst Fire Gun': outlines.gunner.BurstFireGun,
+
+  // Scout
   'Deepcore GK2': outlines.scout.AssaultRifle,
   'M1000 Classic': outlines.scout.M1000,
   'Jury-Rigged Boomstick': outlines.scout.Boomstick,
@@ -50,21 +57,25 @@ export const WeaponOutlines: Record<MinerWeapon<Miner>, string> = {
 };
 
 export const WeaponIDs: Record<MinerWeapon<Miner>, string> = {
+  // Driller
   'CRSPR Flamethrower': '91FB7410E53FB64EBAC7558E2C415E58',
   'Cryo Cannon': '82082AAB25319F43B43A8458F5228E8C',
   'Subata 120': '9D772549A4B54045A1377F38795655C1',
   'Experimental Plasma Charger': '4E96F432D0182343A62E81D821A1480F',
 
+  // Engineer
   '"Warthog" Auto 210': 'B66739F359A40443B70D9BACF8AA2D39',
   '"Stubby" Voltaic SMG': 'DDB5DA9086CD4442AF6006DE2A4390A9',
   'Deepcore 40mm PGL': '501A4F4CCC24CB42B0287F2AF9AE120D',
   'Breach Cutter': '28D22472C409224EAFFACAC8B1377287',
 
+  // Gunner
   '"Lead Storm" Powered Minigun': 'DF573B09420B2E408BCE3AB9D36542F8',
   '"Thunderhead" Heavy Autocannon': '763A96F020192646A61D41F498BE4285',
   '"Bulldog" Heavy Revolver': 'D8A5F7F6BD131D45ACBD2CFE7E5416CC',
   'BRT7 Burst Fire Gun': 'B95EDEC1BDDB1C478E5DC57322105134',
 
+  // Scout
   'Deepcore GK2': '1AF31165BCB11C48A5A3D1A6BA5A3540',
   'M1000 Classic': '79E91BF15AC1694BA7987C696959C0D1',
   'Jury-Rigged Boomstick': '895756CB9017B0419D74C47AC45A16A5',
