@@ -3,7 +3,7 @@
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/BobertForever/drg-completionist?color=darkred)](https://github.com/BobertForever/drg-completionist/releases)
 [![GitHub stars](https://img.shields.io/github/stars/BobertForever/drg-completionist)](https://github.com/BobertForever/drg-completionist/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/BobertForever/drg-completionist)](https://github.com/BobertForever/drg-completionist/issues)
-[![GitHub license](https://img.shields.io/github/license/BobertForever/drg-completionist)](https://github.com/BobertForever/drg-completionist)
+[![GitHub license](https://img.shields.io/github/license/BobertForever/drg-completionist)](https://github.com/BobertForever/drg-completionist/blob/main/LICENSE)
 
 This project is an open-source completion tracker web app for [Deep Rock Galactic](https://www.deeprockgalactic.com/) that's currently in development. It allows you both to keep track your forged weapon overclocks and to quickly look up weapon overclock information to help you decide which ones to go for next. The web app is fully responsive and works well on deskops, mobile touch-screen devices, and everything in between.
 
