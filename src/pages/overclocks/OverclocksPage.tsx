@@ -7,11 +7,11 @@ import { MinerWeapon, MinerWeapons } from 'utils/weapons';
 import MinerOverclocks from './MinerOverclocks';
 
 export default function OverclocksPage() {
-  const [acquiredOverclocks] = useStore('overclocks');
+  const [forgedOverclocks] = useStore('forgedOverclocks');
   const getProgress = useCallback(
     (miner: Miner) => {
       const weapons = (MinerWeapons[miner] as unknown) as MinerWeapon<Miner>;
-      const minerOverclocks = Array.from(acquiredOverclocks.entries())
+      const minerOverclocks = Array.from(forgedOverclocks.entries())
         .filter(([weapon]) => weapons.includes(weapon))
         .map(([, overclocks]) => overclocks);
       return (
@@ -19,7 +19,7 @@ export default function OverclocksPage() {
         Object.values(Overclocks[miner]).flat().length
       );
     },
-    [acquiredOverclocks]
+    [forgedOverclocks]
   );
   return (
     <MinerPageLayout getProgress={getProgress}>

@@ -33,7 +33,8 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
         dispatch({
           type: 'LOAD_SAVE',
           payload: {
-            overclocks: getOverclocksFromSaveFile(saveFile),
+            acquiredOverclocks: getOverclocksFromSaveFile(saveFile),
+            forgedOverclocks: getOverclocksFromSaveFile(saveFile),
             frameworks: getFrameworksFromSaveFile(saveFile),
           },
         });

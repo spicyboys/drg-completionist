@@ -12,6 +12,7 @@ export default function OverclockCard(props: {
   miner: Miner;
   weapon: MinerWeapon<Miner>;
   isAcquired: boolean;
+  isForged: boolean;
   onClick: () => void;
 }) {
   return (
@@ -28,7 +29,7 @@ export default function OverclockCard(props: {
         hoverable
         title={props.overclock.name}
         headStyle={
-          props.isAcquired
+          props.isForged
             ? {
                 backgroundColor: MinerColor[props.miner],
                 color: MinerColorContrastText[props.miner],
@@ -40,6 +41,14 @@ export default function OverclockCard(props: {
                 fontWeight: 'bold',
                 transition: 'all 0.3s',
               }
+        }
+        style={
+          props.isAcquired && !props.isForged
+            ? {
+                outline: `3px solid ${MinerColor[props.miner]}`,
+                transition: 'all 0.1s',
+              }
+            : undefined
         }
         onClick={props.onClick}
       >

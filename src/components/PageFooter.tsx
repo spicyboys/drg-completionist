@@ -32,7 +32,7 @@ export default function PageFooter() {
     switch (currentTab) {
       case 'overclocks':
         return Math.round(
-          (Array.from(store.overclocks.values()).reduce(
+          (Array.from(store.forgedOverclocks.values()).reduce(
             (p, c) => p + c.size,
             0
           ) /
