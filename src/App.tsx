@@ -1,11 +1,19 @@
-import { Col, BackTop, Layout, PageHeader, Row, Typography } from 'antd';
+import {
+  Col,
+  BackTop,
+  Layout,
+  PageHeader,
+  Row,
+  Typography,
+  Spin,
+  Card,
+} from 'antd';
 import 'antd/dist/antd.dark.css';
+import React, { lazy } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Assignment } from 'assets/other';
 import PageFooter from 'components/PageFooter';
 import PageTabs from 'components/PageTabs';
-import FrameworksPage from 'pages/frameworks/FrameworksPage';
-import OverclocksPage from 'pages/overclocks/OverclocksPage';
 
 const { Content } = Layout;
 const { Title } = Typography;
@@ -17,17 +25,17 @@ export const DEFAULT_TAB: TabName = 'overclocks';
 export const TABS: Array<{
   title: string;
   key: TabName;
-  content: JSX.Element;
+  content: React.ComponentType;
 }> = [
   {
     title: 'Overclocks',
     key: 'overclocks',
-    content: <OverclocksPage />,
+    content: lazy(() => import('pages/overclocks/OverclocksPage')),
   },
   {
     title: 'Weapon Frameworks',
     key: 'frameworks',
-    content: <FrameworksPage />,
+    content: lazy(() => import('pages/frameworks/FrameworksPage')),
   },
   // https://github.com/BobertForever/drg-completionist/issues/1
   // {
@@ -90,7 +98,21 @@ export default function App() {
                   }
                   key={tab.key}
                 >
-                  {tab.content}
+                  <React.Suspense
+                    fallback={
+                      <div
+                        style={{
+                          lineHeight: '50vh',
+                          width: '100%',
+                          textAlign: 'center',
+                        }}
+                      >
+                        <Spin />
+                      </div>
+                    }
+                  >
+                    <tab.content />
+                  </React.Suspense>
                 </Route>
               ))}
             </Switch>
