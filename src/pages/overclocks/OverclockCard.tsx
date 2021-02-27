@@ -63,6 +63,7 @@ export default function OverclockCard(props: {
               onClick={props.onClick}
             />
           )}
+          destroyTooltipOnHide
         >
           <InfoCircleOutlined
             style={{
@@ -77,6 +78,7 @@ export default function OverclockCard(props: {
         <Tooltip
           title={!props.isForged && props.isAcquired ? 'Unforged' : undefined}
           trigger={isMobile ? 'click' : 'hover'}
+          destroyTooltipOnHide
         >
           <img
             src={ForgeHammer}
