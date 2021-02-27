@@ -1,5 +1,6 @@
-import { Layout } from 'antd';
+import { Layout, Tooltip } from 'antd';
 import { useMemo } from 'react';
+import { isMobile } from 'react-device-detect';
 import { useLocation } from 'react-router-dom';
 import { DEFAULT_TAB, TABS, TabName } from 'App';
 import { Frameworks } from 'data/frameworks';
@@ -54,6 +55,30 @@ export default function PageFooter() {
     }
   }, [currentTab, store]);
 
+  const currentUnforgedPercentage = useMemo(() => {
+    return Math.round(
+      (Array.from(store.unforgedOverclocks.values()).reduce(
+        (p, c) => p + c.size,
+        0
+      ) /
+        Object.values(Overclocks)
+          .flatMap((w) => Object.values(w))
+          .flat().length) *
+        100
+    );
+  }, [store.unforgedOverclocks]);
+
+  const isFooterHidden = useMemo(() => {
+    switch (currentTab) {
+      case 'overclocks':
+        return currentTabPercentage === 0 && currentUnforgedPercentage === 0;
+      case 'frameworks':
+        return currentTabPercentage === 0;
+      default:
+        return true;
+    }
+  }, [currentTab, currentTabPercentage, currentUnforgedPercentage]);
+
   const currentTabDisplayName = useMemo(
     () => TABS.find((t) => t.key === currentTab)?.title,
     [currentTab]
@@ -62,16 +87,13 @@ export default function PageFooter() {
   return (
     <Footer
       style={{
-        position: 'fixed',
-        width: '100%',
-        bottom:
-          currentTabPercentage === null || currentTabPercentage === 0
-            ? -FOOTER_HEIGHT
-            : 0,
         backgroundColor: '#141414',
         borderTop: '1px solid #434343',
-        transition: 'all .4s',
+        bottom: isFooterHidden ? -FOOTER_HEIGHT : 0,
         padding: 0,
+        position: 'fixed',
+        transition: 'all .4s',
+        width: '100%',
       }}
     >
       <div
@@ -83,33 +105,73 @@ export default function PageFooter() {
             currentTabPercentage === 100 ? animationColor : backgroundColor,
           backgroundSize:
             currentTabPercentage === 100 ? '800% 800%' : 'initial',
-          width: '100%',
           height: FOOTER_HEIGHT,
+          width: '100%',
+          zIndex: 4,
         }}
       >
+        {/* Unforged Section */}
         <div
           style={{
+            background: `
+              repeating-linear-gradient(
+                -55deg,
+                #333333,
+                #333333 10px,
+                #444444 10px,
+                #444444 20px
+              )`,
+            float: 'right',
+            height: '100%',
             position: 'absolute',
-            height: FOOTER_HEIGHT,
-            width: '100%',
-            color: '#FFFFFFCC',
-            fontWeight: 'bold',
-            textShadow: '2px 2px 5px black',
-            textAlign: 'center',
-            lineHeight: `${FOOTER_HEIGHT}px`,
+            right: 0,
+            transition: 'all 0.3s',
+            width: `${100 - currentTabPercentage}%`,
+            zIndex: 1,
           }}
-        >
-          {currentTabDisplayName} Progress: {currentTabPercentage}%
-        </div>
+        ></div>
+        {/* Unfilled Section */}
         <div
           style={{
             backgroundColor: '#141414',
-            width: `${100 - currentTabPercentage}%`,
             height: '100%',
-            float: 'right',
+            position: 'absolute',
+            right: 0,
             transition: 'all 0.3s',
+            width:
+              currentTab === 'overclocks'
+                ? `${100 - currentTabPercentage - currentUnforgedPercentage}%`
+                : `${100 - currentTabPercentage}%`,
+            zIndex: 2,
           }}
         ></div>
+        {/* Completed Section */}
+        <div
+          style={{
+            color: '#FFFFFFCC',
+            fontWeight: 'bold',
+            height: FOOTER_HEIGHT,
+            lineHeight: `${FOOTER_HEIGHT}px`,
+            position: 'absolute',
+            textAlign: 'center',
+            textShadow: '2px 2px 5px black',
+            width: '100%',
+            zIndex: 3,
+          }}
+        >
+          <Tooltip
+            title={
+              currentTab === 'overclocks'
+                ? `Forged + Unforged: ${
+                    currentTabPercentage + currentUnforgedPercentage
+                  }%`
+                : undefined
+            }
+            trigger={isMobile ? 'click' : 'hover'}
+          >
+            {currentTabDisplayName} Progress: {currentTabPercentage}%
+          </Tooltip>
+        </div>
       </div>
     </Footer>
   );
