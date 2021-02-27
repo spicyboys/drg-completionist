@@ -1,10 +1,17 @@
-import { Framework } from 'pages/frameworks/FrameworkData';
+import { Framework } from 'data/frameworks';
 import { Miner } from 'utils/miner';
 import { MinerWeapon } from 'utils/weapons';
 
 type Actions =
   | {
-      type: 'TOGGLE_OVERCLOCK';
+      type: 'TOGGLE_OVERCLOCK_ACQUIRED';
+      payload: {
+        weapon: MinerWeapon<Miner>;
+        overclock: string;
+      };
+    }
+  | {
+      type: 'TOGGLE_OVERCLOCK_FORGED';
       payload: {
         weapon: MinerWeapon<Miner>;
         overclock: string;
@@ -13,6 +20,10 @@ type Actions =
   | {
       type: 'LOAD_SAVE';
       payload: {
+        unforgedOverclocks: ReadonlyMap<
+          MinerWeapon<Miner>,
+          ReadonlySet<string>
+        >;
         overclocks: ReadonlyMap<MinerWeapon<Miner>, ReadonlySet<string>>;
         frameworks: ReadonlyMap<MinerWeapon<Miner>, ReadonlySet<Framework>>;
       };

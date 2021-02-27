@@ -1,4 +1,4 @@
-import { Framework, FrameworkIDs } from 'pages/frameworks/FrameworkData';
+import { Framework, FrameworkIDs } from 'data/frameworks';
 import { Miner } from 'utils/miner';
 import { flipObject } from 'utils/object';
 import { SaveFile } from 'utils/save-parser';
@@ -20,7 +20,6 @@ export const getFrameworksFromSaveFile = ({
           flipObject(FrameworkIDs[weapon])[frameworkID] as Framework | undefined
       )
       .filter((f) => f !== undefined) as Framework[];
-    console.log(frameworks);
     acquiredFrameworks.set(weapon, new Set(frameworks));
   });
   return acquiredFrameworks;

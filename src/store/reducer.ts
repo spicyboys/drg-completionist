@@ -5,7 +5,22 @@ import { INITIAL_STATE, State } from './state';
 
 export default function reducer(state: State, action: Actions): State {
   switch (action.type) {
-    case 'TOGGLE_OVERCLOCK': {
+    case 'TOGGLE_OVERCLOCK_ACQUIRED': {
+      const { weapon, overclock } = action.payload;
+      const unforgedOverclocks =
+        state.unforgedOverclocks.get(weapon) ?? new Set();
+      return {
+        ...state,
+        unforgedOverclocks: updateKey(
+          state.unforgedOverclocks,
+          weapon,
+          unforgedOverclocks.has(overclock)
+            ? removeFromSet(unforgedOverclocks, overclock)
+            : addToSet(unforgedOverclocks, overclock)
+        ),
+      };
+    }
+    case 'TOGGLE_OVERCLOCK_FORGED': {
       const { weapon, overclock } = action.payload;
       const weaponOverclocks = state.overclocks.get(weapon) ?? new Set();
       return {
@@ -34,9 +49,10 @@ export default function reducer(state: State, action: Actions): State {
       };
     }
     case 'LOAD_SAVE': {
-      const { overclocks, frameworks } = action.payload;
+      const { unforgedOverclocks, overclocks, frameworks } = action.payload;
       return {
         ...state,
+        unforgedOverclocks,
         overclocks,
         frameworks,
       };

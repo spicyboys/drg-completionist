@@ -1,7 +1,7 @@
 import { Col, Row, Space, Tooltip } from 'antd';
 import Text from 'antd/lib/typography/Text';
+import { Overclock } from 'data/overclocks';
 import { Currency, CurrencyIcons, CurrencyNames } from 'utils/currency';
-import { Overclock } from './OverclockData';
 
 export default function OverclockPrice(props: { overclock: Overclock }) {
   const { price } = props.overclock;
