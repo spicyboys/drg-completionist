@@ -31,7 +31,6 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
       try {
         const parser = await import('utils/save-parser');
         const saveFile = await parser.parse_save_file(f);
-        console.log(saveFile);
         dispatch({
           type: 'LOAD_SAVE',
           payload: {
