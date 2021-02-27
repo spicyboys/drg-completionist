@@ -6,19 +6,18 @@
 
 This project is an open-source completion tracker web app for [Deep Rock Galactic](https://www.deeprockgalactic.com/) that's currently in development. It allows you both to keep track your forged weapon overclocks and to quickly look up weapon overclock information to help you decide which ones to go for next. The web app is fully responsive and works well on deskops, mobile touch-screen devices, and everything in between.
 
-While progress can be input by clicking the old-fashioned way, _DRG Completionist_ also includes an optional [WASM](https://en.wikipedia.org/wiki/WebAssembly)-based save parsing tool that locally analyzes your PC's Deep Rock Galactic save file (_sorry console users_) and automatically inputs your currently progress so you don't have to. Although the parser only tracks your **forged** weapon overclocks right now, we intend to expand this tool to cover the remaining unlockables if there's demand for it.
+While progress can be input by clicking the old-fashioned way, _DRG Completionist_ also includes an optional [WASM](https://en.wikipedia.org/wiki/WebAssembly)-based save parsing tool that locally analyzes your PC's Deep Rock Galactic save file (_sorry console users_) and automatically inputs your currently progress so you don't have to.
 
 The Steam save file is located here by default on Windows, but may vary based on your install location:
 
 `C:\Program Files (x86)\Steam\steamapps\common\Deep Rock Galactic\FSD\Saved\SaveGames\{steam_ID}_Player.sav`
 
-## Potential Upcoming Features
+## Upcoming Features
 
 - Add weapon paintjobs
 - Add armor accessories
 - Add armor paintjobs
 - Add pickaxe parts and paintjobs
-- Distinguish between forged, acquired-but-unforged, and unacquired overclocks
 
 ## Privacy
 
@@ -26,7 +25,7 @@ _DRG Completionist_ respects your privacy. The app is entirely serverless and us
 
 If you choose to upload your save file, neither the file nor its contents ever leaves your computer. The save file parser is compiled from [Rust](<https://en.wikipedia.org/wiki/Rust_(programming_language)>) into [WASM](https://en.wikipedia.org/wiki/WebAssembly) specifically so it can run completely within your browser. As always, you are welcome to [inspect the source code](https://github.com/BobertForever/drg-completionist/tree/main/save-parser) to see what it's doing.
 
-The only tracking we do are a few fully anonymous Google Analytics tags that allow us to see how (or even if) this app is used. These tags are blocked by default if you use nearly any of the privacy-oriented browser settings and extensions that are widely available today.
+The only tracking we have are a few fully anonymized Google Analytics tags that allow us to see how (or if) this app is used. These `gtags` are blocked by default if you use any of the privacy-oriented browser settings and extensions that are widely available today.
 
 ## Special Thanks
 
@@ -40,4 +39,4 @@ Neither this app nor its developers are associated with Deep Rock Galactic or Gh
 
 ---
 
-###### README Last Updated: Feb 24. 2021
+###### README Last Updated: Feb 27. 2021
