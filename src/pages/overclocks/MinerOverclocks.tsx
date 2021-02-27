@@ -9,8 +9,10 @@ import OverclockCard from './OverclockCard';
 
 export default function MinerOverclocks(props: { miner: Miner }) {
   const { miner } = props;
-  const [acquiredOverclocks, dispatchAcquired] = useStore('unforgedOverclocks');
-  const [forgedOverclocks, dispatchForged] = useStore('overclocks');
+  const [
+    { overclocks: forgedOverclocks, unforgedOverclocks: acquiredOverclocks },
+    dispatch,
+  ] = useStore();
   const minerOverclocks = Overclocks[miner];
 
   const isAcquired = (weapon: MinerWeapon<Miner>, overclock: Overclock) => {
@@ -29,7 +31,7 @@ export default function MinerOverclocks(props: { miner: Miner }) {
   };
 
   const toggleAcquired = (weapon: MinerWeapon<Miner>, overclock: Overclock) =>
-    dispatchAcquired({
+    dispatch({
       type: 'TOGGLE_OVERCLOCK_ACQUIRED', // Placeholder value copied from ToggleForged()
       payload: {
         weapon: weapon as MinerWeapon<Miner>,
@@ -38,7 +40,7 @@ export default function MinerOverclocks(props: { miner: Miner }) {
     });
 
   const toggleForged = (weapon: MinerWeapon<Miner>, overclock: Overclock) =>
-    dispatchForged({
+    dispatch({
       type: 'TOGGLE_OVERCLOCK_FORGED',
       payload: {
         weapon: weapon as MinerWeapon<Miner>,
