@@ -9,6 +9,7 @@ export default function WeaponDivider(props: { weapon: MinerWeapon<Miner> }) {
         <Image
           src={WeaponOutlines[props.weapon]}
           height={75}
+          style={{ width: 'auto' }}
           preview={false}
           alt={props.weapon}
         />
