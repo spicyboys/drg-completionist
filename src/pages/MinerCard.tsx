@@ -6,7 +6,7 @@ import {
   Progress,
   Tooltip,
 } from 'antd';
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { RockAndStone } from 'assets/other';
 import { Miner, MinerAvatar, MinerColor } from 'utils/miner';
 

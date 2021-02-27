@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 
-import React, { createContext, useEffect, useReducer } from 'react';
+import { createContext, useEffect, useReducer } from 'react';
 import Actions from './actions';
 import reducer from './reducer';
 import { INITIAL_STATE, State } from './state';
