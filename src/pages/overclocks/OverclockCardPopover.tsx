@@ -9,6 +9,7 @@ import {
   Typography,
 } from 'antd';
 import Meta from 'antd/lib/card/Meta';
+import { memo } from 'react';
 import { Buff as BuffIcon, Nerf as NerfIcon } from 'assets/overclocks/arrows';
 import { Miner } from 'utils/miner';
 import { MinerWeapon, WeaponOutlines } from 'utils/weapons';
@@ -18,13 +19,12 @@ import OverclockPrice from './OverclockPrice';
 
 const { Paragraph, Text, Title } = Typography;
 
-export default function OverclockCardPopover(props: {
-  onClick: () => void;
+export default memo(function OverclockCardPopover(props: {
   overclock: Overclock;
   weapon: MinerWeapon<Miner>;
 }) {
   return (
-    <Card bordered={false} style={{ width: 340 }} onClick={props.onClick}>
+    <Card bordered={false} style={{ width: 340 }}>
       <Meta
         style={{}}
         description={
@@ -86,4 +86,4 @@ export default function OverclockCardPopover(props: {
       <OverclockPrice overclock={props.overclock} />
     </Card>
   );
-}
+});

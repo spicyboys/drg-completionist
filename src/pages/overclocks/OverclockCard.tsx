@@ -60,7 +60,6 @@ export default function OverclockCard(props: {
             <OverclockCardPopover
               weapon={props.weapon}
               overclock={props.overclock}
-              onClick={props.onClick}
             />
           )}
           destroyTooltipOnHide
