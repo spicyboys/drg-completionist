@@ -37,3 +37,34 @@ export const getOverclocksFromSaveFile = ({
   });
   return acquiredOverclocks;
 };
+
+export const getUnforgedOverclocksFromSaveFile = ({
+  SchematicSave: {
+    SchematicSave: { OwnedSchematics: unforgedSchematics },
+  },
+}: SaveFile): Map<MinerWeapon<Miner>, Set<string>> => {
+  const unforgedOverclocks: Map<MinerWeapon<Miner>, Set<string>> = new Map();
+  Object.entries(
+    Object.values(Overclocks).reduce(
+      (p, c) => Object.assign(p, c),
+      {}
+    ) as Record<MinerWeapon<Miner>, Overclock[]>
+  ).forEach(([weapon, overclocks]) => {
+    for (const overclock of overclocks) {
+      if (unforgedSchematics.some((f) => overclock.id === f)) {
+        let unforgedWeaponOverclocks = unforgedOverclocks.get(
+          weapon as MinerWeapon<Miner>
+        );
+        if (unforgedWeaponOverclocks === undefined) {
+          unforgedWeaponOverclocks = new Set();
+        }
+        unforgedWeaponOverclocks.add(overclock.name);
+        unforgedOverclocks.set(
+          weapon as MinerWeapon<Miner>,
+          unforgedWeaponOverclocks
+        );
+      }
+    }
+  });
+  return unforgedOverclocks;
+};

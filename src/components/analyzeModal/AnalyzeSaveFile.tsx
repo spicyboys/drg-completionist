@@ -15,8 +15,10 @@ import { isMobile } from 'react-device-detect';
 import { MissionControlPortrait } from 'assets/portraits';
 import useStore from 'store/useStore';
 import { getFrameworksFromSaveFile } from './getFrameworksFromSaveFile';
-import { getOverclocksFromSaveFile } from './getOverclocksFromSaveFile';
-import { getUnforgedOverclocksFromSaveFile } from './getUnforgedOverclocksFromSaveFile';
+import {
+  getOverclocksFromSaveFile,
+  getUnforgedOverclocksFromSaveFile,
+} from './getOverclocksFromSaveFile';
 
 const { Text } = Typography;
 
