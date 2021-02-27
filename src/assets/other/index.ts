@@ -5,6 +5,7 @@
 
 export { default as AccessoryIcon } from './accessoryIcon.png';
 export { default as Assignment } from './assignment.png';
+export { default as Forged } from './forged.png';
 export { default as ForgeMastery } from './forgeMastery.png';
 export { default as LostPack } from './lostPack.png';
 export { default as PerkStar } from './perkStar.png';
