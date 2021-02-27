@@ -53,20 +53,16 @@ export default function MinerOverclocks(props: { miner: Miner }) {
           },
         });
 
-      // Set from unacquired to acquired-but-unforged
+      // Set unacquired to unforged (but still acquired)
       if (!isAcquired(weapon, overclock) && !isForged(weapon, overclock)) {
         toggleAcquired(weapon, overclock);
       }
-      // Set from acquired-but-unforged to forged
-      else if (isAcquired(weapon, overclock) && !isForged(weapon, overclock)) {
-        toggleForged(weapon, overclock);
-      }
-      // Set from forged back to unacquired
-      else if (isForged(weapon, overclock)) {
+      // Set unforged to forged
+      else if (isAcquired(weapon, overclock)) {
         toggleAcquired(weapon, overclock);
         toggleForged(weapon, overclock);
       }
-      // Set from unintentional isForged && !isAcquired edge case to unacquired
+      // Set forged back to unacquired
       else {
         toggleForged(weapon, overclock);
       }
