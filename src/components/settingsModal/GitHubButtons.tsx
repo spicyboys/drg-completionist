@@ -6,33 +6,31 @@ export default function GitHubButtons() {
     <Row justify="center">
       <Space>
         <GitHubButton
-          href="https://github.com/BobertForever/drg-completionist"
-          data-size="large"
-          data-show-count="true"
           aria-label="Star BobertForever/drg-completionist on GitHub"
-        >
-          Star
-        </GitHubButton>
+          data-icon="octicon-star"
+          data-show-count="true"
+          data-size="large"
+          data-text="Star"
+          href="https://github.com/BobertForever/drg-completionist/"
+        />
         <GitHubButton
-          href="https://github.com/BobertForever/drg-completionist/fork"
+          aria-label="Fork BobertForever/drg-completionist on GitHub"
           data-color-scheme="no-preference: light; light: light; dark: light;"
           data-icon="octicon-repo-forked"
-          data-size="large"
           data-show-count="true"
-          aria-label="Fork BobertForever/drg-completionist on GitHub"
-        >
-          Fork
-        </GitHubButton>
+          data-size="large"
+          data-text="Fork"
+          href="https://github.com/BobertForever/drg-completionist/fork"
+        />
         <GitHubButton
-          href="https://github.com/BobertForever/drg-completionist/issues"
+          aria-label="Issue BobertForever/drg-completionist on GitHub"
           data-color-scheme="no-preference: light; light: light; dark: light;"
           data-icon="octicon-issue-opened"
-          data-size="large"
           data-show-count="true"
-          aria-label="Issue BobertForever/drg-completionist on GitHub"
-        >
-          Issue
-        </GitHubButton>
+          data-size="large"
+          data-text="Issues"
+          href="https://github.com/BobertForever/drg-completionist/issues"
+        />
       </Space>
     </Row>
   );
