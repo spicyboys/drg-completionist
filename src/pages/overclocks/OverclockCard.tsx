@@ -47,7 +47,7 @@ export default function OverclockCard(props: {
           props.isAcquired && !props.isForged
             ? {
                 outline: `3px solid ${MinerColor[props.miner]}`,
-                transition: 'all 0.1s',
+                transition: 'all 0.3s ease-in',
               }
             : undefined
         }
@@ -74,15 +74,15 @@ export default function OverclockCard(props: {
             onClick={props.onClick}
           />
         </Popover>
-        <Tooltip title="Forged!" trigger={isMobile ? 'click' : 'hover'}>
+        <Tooltip title="Unforged" trigger={isMobile ? 'click' : 'hover'}>
           <img
             src={ForgedIcon}
             style={{
               float: 'left',
               height: 25,
               marginTop: -25,
-              opacity: props.isForged ? 1 : 0,
-              transition: 'all 0.3s',
+              opacity: !props.isForged && props.isAcquired ? 1 : 0,
+              transition: 'all 0.3s ease-in',
             }}
             onClick={props.onClick}
           />
