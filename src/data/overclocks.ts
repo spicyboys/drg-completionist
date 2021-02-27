@@ -1290,8 +1290,8 @@ export const Overclocks: Overclocks = {
           magnite: 100,
         },
         effects: {
-          buffs: ['+36 Max Ammo'],
-          nerfs: ['+1 Rate of Fire'],
+          buffs: ['+36 Max Ammo', '+1 Rate of Fire'],
+          nerfs: [],
         },
         description:
           "Lighter rounds that permit a shorter delay between bursts, and you can carry a few more of them as well. What's not to like?",
