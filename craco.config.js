@@ -1,4 +1,7 @@
 module.exports = {
+  babel: {
+    plugins: [["import", { "libraryName": "antd", style: true }]],
+  },
   webpack: {
     configure: (webpackConfig) => {
       const wasmExtensionRegExp = /\.wasm$/;
