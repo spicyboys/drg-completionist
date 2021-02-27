@@ -16,25 +16,18 @@ export default function MinerOverclocks(props: { miner: Miner }) {
   const minerOverclocks = Overclocks[miner];
 
   const isAcquired = (weapon: MinerWeapon<Miner>, overclock: Overclock) => {
-    return (
-      acquiredOverclocks
-        .get(weapon as MinerWeapon<Miner>)
-        ?.has(overclock.name) ?? false
-    );
+    return acquiredOverclocks.get(weapon)?.has(overclock.name) ?? false;
   };
 
   const isForged = (weapon: MinerWeapon<Miner>, overclock: Overclock) => {
-    return (
-      forgedOverclocks.get(weapon as MinerWeapon<Miner>)?.has(overclock.name) ??
-      false
-    );
+    return forgedOverclocks.get(weapon)?.has(overclock.name) ?? false;
   };
 
   const toggleAcquired = (weapon: MinerWeapon<Miner>, overclock: Overclock) =>
     dispatch({
       type: 'TOGGLE_OVERCLOCK_ACQUIRED', // Placeholder value copied from ToggleForged()
       payload: {
-        weapon: weapon as MinerWeapon<Miner>,
+        weapon: weapon,
         overclock: overclock.name,
       },
     });
@@ -43,7 +36,7 @@ export default function MinerOverclocks(props: { miner: Miner }) {
     dispatch({
       type: 'TOGGLE_OVERCLOCK_FORGED',
       payload: {
-        weapon: weapon as MinerWeapon<Miner>,
+        weapon: weapon,
         overclock: overclock.name,
       },
     });
