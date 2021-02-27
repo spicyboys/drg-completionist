@@ -20,7 +20,6 @@ export const getFrameworksFromSaveFile = ({
           flipObject(FrameworkIDs[weapon])[frameworkID] as Framework | undefined
       )
       .filter((f) => f !== undefined) as Framework[];
-    console.log(frameworks);
     acquiredFrameworks.set(weapon, new Set(frameworks));
   });
   return acquiredFrameworks;
