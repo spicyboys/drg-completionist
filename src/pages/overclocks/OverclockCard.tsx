@@ -68,8 +68,8 @@ export default function OverclockCard(props: {
             style={{
               color: 'white',
               float: 'right',
-              fontSize: isMobile ? '2em' : 'inherit',
-              marginTop: isMobile ? '-1em' : -14,
+              fontSize: isMobile ? 30 : 14,
+              marginTop: isMobile ? -30 : -14,
             }}
             onClick={props.onClick}
           />
@@ -82,8 +82,8 @@ export default function OverclockCard(props: {
             src={ForgeHammer}
             style={{
               float: 'left',
-              height: 25,
-              marginTop: -25,
+              height: isMobile ? 30 : 20,
+              marginTop: isMobile ? -30 : -20,
               opacity: !props.isForged && props.isAcquired ? 1 : 0,
               transition: 'all 0.3s ease-in',
             }}
