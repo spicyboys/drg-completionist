@@ -1,7 +1,7 @@
 import InfoCircleOutlined from '@ant-design/icons/InfoCircleOutlined';
 import { Card, Col, Popover, Tooltip } from 'antd';
 import { isMobile } from 'react-device-detect';
-import { Forged as ForgedIcon } from 'assets/other';
+import { ForgeHammer } from 'assets/other';
 import { Overclock } from 'data/overclocks';
 import { Miner, MinerColor, MinerColorContrastText } from 'utils/miner';
 import { MinerWeapon } from 'utils/weapons';
@@ -79,7 +79,7 @@ export default function OverclockCard(props: {
           trigger={isMobile ? 'click' : 'hover'}
         >
           <img
-            src={ForgedIcon}
+            src={ForgeHammer}
             style={{
               float: 'left',
               height: 25,
