@@ -9,8 +9,8 @@ import OverclockCard from './OverclockCard';
 
 export default function MinerOverclocks(props: { miner: Miner }) {
   const { miner } = props;
-  const [acquiredOverclocks, dispatchAcquired] = useStore('acquiredOverclocks');
-  const [forgedOverclocks, dispatchForged] = useStore('forgedOverclocks');
+  const [acquiredOverclocks, dispatchAcquired] = useStore('unforgedOverclocks');
+  const [forgedOverclocks, dispatchForged] = useStore('overclocks');
   const minerOverclocks = Overclocks[miner];
 
   const isAcquired = (weapon: MinerWeapon<Miner>, overclock: Overclock) => {

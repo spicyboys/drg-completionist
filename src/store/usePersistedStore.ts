@@ -28,6 +28,13 @@ function set(): PropSchema {
  */
 function map(valueSerializer: PropSchema) {
   return serializrMap(valueSerializer, {
+    beforeDeserialize: (callback, v) => {
+      if (v === undefined) {
+        callback(null, {});
+      } else {
+        callback(null, v);
+      }
+    },
     afterDeserialize: (callback, _, n) => {
       callback(null, new Map(Object.entries(n)));
     },
@@ -37,6 +44,7 @@ function map(valueSerializer: PropSchema) {
 const schema = createSimpleSchema<State>({
   overclocks: map(set()),
   frameworks: map(set()),
+  unforgedOverclocks: map(set()),
 });
 
 export default function usePersistedStore(): [State, (value: State) => void] {

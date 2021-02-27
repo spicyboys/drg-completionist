@@ -3,13 +3,13 @@ import { Miner } from 'utils/miner';
 import { MinerWeapon } from 'utils/weapons';
 
 export type State = Readonly<{
-  acquiredOverclocks: ReadonlyMap<MinerWeapon<Miner>, ReadonlySet<string>>;
-  forgedOverclocks: ReadonlyMap<MinerWeapon<Miner>, ReadonlySet<string>>;
+  unforgedOverclocks: ReadonlyMap<MinerWeapon<Miner>, ReadonlySet<string>>;
+  overclocks: ReadonlyMap<MinerWeapon<Miner>, ReadonlySet<string>>;
   frameworks: ReadonlyMap<MinerWeapon<Miner>, ReadonlySet<Framework>>;
 }>;
 
 export const INITIAL_STATE: State = {
-  acquiredOverclocks: new Map(),
-  forgedOverclocks: new Map(),
+  unforgedOverclocks: new Map(),
+  overclocks: new Map(),
   frameworks: new Map(),
 };

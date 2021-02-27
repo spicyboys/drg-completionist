@@ -20,11 +20,11 @@ type Actions =
   | {
       type: 'LOAD_SAVE';
       payload: {
-        acquiredOverclocks: ReadonlyMap<
+        unforgedOverclocks: ReadonlyMap<
           MinerWeapon<Miner>,
           ReadonlySet<string>
         >;
-        forgedOverclocks: ReadonlyMap<MinerWeapon<Miner>, ReadonlySet<string>>;
+        overclocks: ReadonlyMap<MinerWeapon<Miner>, ReadonlySet<string>>;
         frameworks: ReadonlyMap<MinerWeapon<Miner>, ReadonlySet<Framework>>;
       };
     }
