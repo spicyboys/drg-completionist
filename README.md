@@ -1,5 +1,6 @@
 # DRG Completionist
 
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/BobertForever/drg-completionist?color=darkred)](https://github.com/BobertForever/drg-completionist/releases)
 [![GitHub stars](https://img.shields.io/github/stars/BobertForever/drg-completionist)](https://github.com/BobertForever/drg-completionist/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/BobertForever/drg-completionist)](https://github.com/BobertForever/drg-completionist/issues)
 [![GitHub license](https://img.shields.io/github/license/BobertForever/drg-completionist)](https://github.com/BobertForever/drg-completionist)
