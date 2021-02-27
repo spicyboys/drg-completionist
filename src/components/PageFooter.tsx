@@ -1,6 +1,6 @@
-import { Layout, Tooltip } from 'antd';
-import { useMemo } from 'react';
-import { isMobile } from 'react-device-detect';
+import { useWorker } from '@koale/useworker';
+import { Layout } from 'antd';
+import { useEffect, useMemo, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { DEFAULT_TAB, TABS, TabName } from 'App';
 import { Frameworks } from 'data/frameworks';
@@ -8,6 +8,7 @@ import { Overclocks } from 'data/overclocks';
 import useStore from 'store/useStore';
 import { MinerColor } from 'utils/miner';
 import { MinerWeapons } from 'utils/weapons';
+import calculateTabProgress from './calculateTabProgress';
 import './PageFooter.css';
 
 const { Footer } = Layout;
@@ -24,64 +25,31 @@ const animationColor = `linear-gradient(270deg, ${Object.values(MinerColor)
 export default function PageFooter() {
   const [store] = useStore();
   const location = useLocation();
-  const currentTab = useMemo(
-    () => (location.pathname.substring(1) || DEFAULT_TAB) as TabName,
-    [location.pathname]
-  );
+  const [currentTab, currentTabDisplayName] = useMemo(() => {
+    const tab = (location.pathname.substring(1) || DEFAULT_TAB) as TabName;
+    const tabName = TABS.find((t) => t.key === tab)?.title;
+    return [tab, tabName];
+  }, [location.pathname]);
 
-  const currentTabPercentage = useMemo(() => {
-    switch (currentTab) {
-      case 'overclocks':
-        return Math.round(
-          (Array.from(store.overclocks.values()).reduce(
-            (p, c) => p + c.size,
-            0
-          ) /
-            Object.values(Overclocks)
-              .flatMap((w) => Object.values(w))
-              .flat().length) *
-            100
-        );
-      case 'frameworks':
-        return Math.round(
-          (Array.from(store.frameworks.values()).reduce(
-            (p, c) => p + c.size,
-            0
-          ) /
-            (Frameworks.length *
-              Object.values(MinerWeapons).reduce((p, c) => p + c.length, 0))) *
-            100
-        );
-    }
-  }, [currentTab, store]);
+  const [{ progress, partialProgress }, setProgress] = useState<{
+    progress: number;
+    partialProgress: number | null;
+  }>({ progress: 0, partialProgress: null });
 
-  const currentUnforgedPercentage = useMemo(() => {
-    return Math.round(
-      (Array.from(store.unforgedOverclocks.values()).reduce(
-        (p, c) => p + c.size,
-        0
-      ) /
-        Object.values(Overclocks)
-          .flatMap((w) => Object.values(w))
-          .flat().length) *
-        100
-    );
-  }, [store.unforgedOverclocks]);
+  const [calculateTabProgressWorker] = useWorker(calculateTabProgress);
+  useEffect(() => {
+    calculateTabProgressWorker(
+      currentTab,
+      store,
+      Frameworks,
+      Overclocks,
+      MinerWeapons
+    ).then((tabProgress) => setProgress(tabProgress));
+  }, [calculateTabProgressWorker, currentTab, store]);
 
-  const isFooterHidden = useMemo(() => {
-    switch (currentTab) {
-      case 'overclocks':
-        return currentTabPercentage === 0 && currentUnforgedPercentage === 0;
-      case 'frameworks':
-        return currentTabPercentage === 0;
-      default:
-        return true;
-    }
-  }, [currentTab, currentTabPercentage, currentUnforgedPercentage]);
-
-  const currentTabDisplayName = useMemo(
-    () => TABS.find((t) => t.key === currentTab)?.title,
-    [currentTab]
+  const isFooterHidden = useMemo(
+    () => progress === 0 && (partialProgress === null || partialProgress === 0),
+    [partialProgress, progress]
   );
 
   return (
@@ -97,14 +65,10 @@ export default function PageFooter() {
       }}
     >
       <div
-        className={
-          currentTabPercentage === 100 ? 'completeAnimation' : undefined
-        }
+        className={progress === 100 ? 'completeAnimation' : undefined}
         style={{
-          background:
-            currentTabPercentage === 100 ? animationColor : backgroundColor,
-          backgroundSize:
-            currentTabPercentage === 100 ? '800% 800%' : 'initial',
+          background: progress === 100 ? animationColor : backgroundColor,
+          backgroundSize: progress === 100 ? '800% 800%' : 'initial',
           height: FOOTER_HEIGHT,
           width: '100%',
           zIndex: 4,
@@ -126,7 +90,7 @@ export default function PageFooter() {
             position: 'absolute',
             right: 0,
             transition: 'all 0.3s',
-            width: `${100 - currentTabPercentage}%`,
+            width: `${100 - progress}%`,
             zIndex: 1,
           }}
         ></div>
@@ -139,9 +103,9 @@ export default function PageFooter() {
             right: 0,
             transition: 'all 0.3s',
             width:
-              currentTab === 'overclocks'
-                ? `${100 - currentTabPercentage - currentUnforgedPercentage}%`
-                : `${100 - currentTabPercentage}%`,
+              partialProgress === null
+                ? `${100 - progress}%`
+                : `${100 - progress - partialProgress}%`,
             zIndex: 2,
           }}
         ></div>
@@ -159,18 +123,7 @@ export default function PageFooter() {
             zIndex: 3,
           }}
         >
-          <Tooltip
-            title={
-              currentTab === 'overclocks'
-                ? `Forged + Unforged: ${
-                    currentTabPercentage + currentUnforgedPercentage
-                  }%`
-                : undefined
-            }
-            trigger={isMobile ? 'click' : 'hover'}
-          >
-            {currentTabDisplayName} Progress: {currentTabPercentage}%
-          </Tooltip>
+          {currentTabDisplayName} Progress: {progress}%
         </div>
       </div>
     </Footer>
