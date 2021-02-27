@@ -1,13 +1,4 @@
-import {
-  Col,
-  BackTop,
-  Layout,
-  PageHeader,
-  Row,
-  Typography,
-  Spin,
-  Card,
-} from 'antd';
+import { Col, BackTop, Layout, PageHeader, Row, Typography, Spin } from 'antd';
 import 'antd/dist/antd.dark.css';
 import React, { lazy } from 'react';
 import { Route, Switch } from 'react-router-dom';
