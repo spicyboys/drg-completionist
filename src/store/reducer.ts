@@ -7,15 +7,16 @@ export default function reducer(state: State, action: Actions): State {
   switch (action.type) {
     case 'TOGGLE_OVERCLOCK_ACQUIRED': {
       const { weapon, overclock } = action.payload;
-      const weaponOverclocks = state.overclocks.get(weapon) ?? new Set();
+      const unforgedOverclocks =
+        state.unforgedOverclocks.get(weapon) ?? new Set();
       return {
         ...state,
-        overclocks: updateKey(
-          state.overclocks,
+        unforgedOverclocks: updateKey(
+          state.unforgedOverclocks,
           weapon,
-          weaponOverclocks.has(overclock)
-            ? removeFromSet(weaponOverclocks, overclock)
-            : addToSet(weaponOverclocks, overclock)
+          unforgedOverclocks.has(overclock)
+            ? removeFromSet(unforgedOverclocks, overclock)
+            : addToSet(unforgedOverclocks, overclock)
         ),
       };
     }
