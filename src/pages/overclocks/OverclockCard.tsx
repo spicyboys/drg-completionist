@@ -74,7 +74,10 @@ export default function OverclockCard(props: {
             onClick={props.onClick}
           />
         </Popover>
-        <Tooltip title="Unforged" trigger={isMobile ? 'click' : 'hover'}>
+        <Tooltip
+          title={!props.isForged && props.isAcquired ? 'Unforged' : undefined}
+          trigger={isMobile ? 'click' : 'hover'}
+        >
           <img
             src={ForgedIcon}
             style={{
@@ -84,7 +87,9 @@ export default function OverclockCard(props: {
               opacity: !props.isForged && props.isAcquired ? 1 : 0,
               transition: 'all 0.3s ease-in',
             }}
-            onClick={props.onClick}
+            onClick={
+              !props.isForged && props.isAcquired ? props.onClick : undefined
+            }
           />
         </Tooltip>
       </Card>
