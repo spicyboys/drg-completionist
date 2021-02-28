@@ -5,6 +5,7 @@ import { useHistory, useLocation } from 'react-router-dom';
 import { DEFAULT_TAB, TABS } from 'App';
 import AnalyzeModal from './analyzeModal/AnalyzeModal';
 import SettingsModal from './settingsModal/SettingsModal';
+import './PageTabs.css';
 
 const { useBreakpoint } = Grid;
 const { TabPane } = Tabs;
