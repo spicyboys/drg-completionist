@@ -9,6 +9,7 @@ export default function MinerPageLayout(props: {
 }) {
   return (
     <Collapse
+      className="unselectable"
       expandIconPosition="right"
       defaultActiveKey={[
         ...AllMiners.filter(
