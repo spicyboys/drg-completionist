@@ -80,6 +80,7 @@ export default function OverclockCard(props: {
           destroyTooltipOnHide
         >
           <img
+            alt={`${props.overclock.name} is acquired, but unforged`}
             src={ForgeHammer}
             style={{
               float: 'left',
@@ -87,6 +88,7 @@ export default function OverclockCard(props: {
               marginTop: isMobile ? -30 : -20,
               opacity: !props.isForged && props.isAcquired ? 1 : 0,
               transition: 'all 0.3s ease-in',
+              width: 'auto',
             }}
             onClick={
               !props.isForged && props.isAcquired ? props.onClick : undefined
