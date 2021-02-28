@@ -47,7 +47,6 @@ export default function OverclockCard(props: {
           props.isAcquired && !props.isForged
             ? {
                 outline: `3px solid ${MinerColor[props.miner]}`,
-                transition: 'all 0.3s ease-in',
               }
             : undefined
         }
@@ -87,7 +86,6 @@ export default function OverclockCard(props: {
               height: isMobile ? 30 : 20,
               marginTop: isMobile ? -30 : -20,
               opacity: !props.isForged && props.isAcquired ? 1 : 0,
-              transition: 'all 0.3s ease-in',
               width: 'auto',
             }}
             onClick={
