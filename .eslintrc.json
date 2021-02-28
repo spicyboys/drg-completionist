@@ -56,7 +56,8 @@
       2,
       { "props": "never", "children": "never" }
     ],
-    "comma-dangle": ["error", "only-multiline"]
+    "comma-dangle": ["error", "only-multiline"],
+    "quotes": ["error", "single"]
   },
   "settings": {
     "import/resolver": {
