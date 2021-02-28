@@ -1,6 +1,6 @@
 module.exports = {
   babel: {
-    plugins: [["import", { "libraryName": "antd", style: true }]],
+    plugins: [['import', { libraryName: 'antd', style: true }]],
   },
   webpack: {
     configure: (webpackConfig) => {
