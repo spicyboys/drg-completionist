@@ -29,20 +29,14 @@ export default function OverclockCard(props: {
       <Card
         hoverable
         title={props.overclock.name}
-        headStyle={
-          props.isForged
-            ? {
-                backgroundColor: MinerColor[props.miner],
-                color: MinerColorContrastText[props.miner],
-                fontWeight: 'bold',
-                transition: 'all 0.3s',
-              }
-            : {
-                color: '#cccccc',
-                fontWeight: 'bold',
-                transition: 'all 0.3s',
-              }
-        }
+        headStyle={{
+          backgroundColor: props.isForged ? MinerColor[props.miner] : 'inherit',
+          color: props.isForged
+            ? MinerColorContrastText[props.miner]
+            : '#cccccc',
+          fontWeight: 'bold',
+          transition: 'all 0.3s',
+        }}
         style={
           props.isAcquired && !props.isForged
             ? {
