@@ -1,16 +1,11 @@
-import { useWorker } from '@koale/useworker';
 import { Layout, Tooltip } from 'antd';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import { isMobile } from 'react-device-detect';
 import { useLocation } from 'react-router-dom';
 import { DEFAULT_TAB, TABS, TabName } from 'App';
-import { Frameworks } from 'data/frameworks';
-import { Overclocks } from 'data/overclocks';
-import useStore from 'store/useStore';
 import { MinerColor } from 'utils/miner';
-import { MinerWeapons } from 'utils/weapons';
-import calculateTabProgress from './calculateTabProgress';
 import './PageFooter.css';
+import useCurrentTabProgress from './useCurrentTabProgress';
 
 const { Footer } = Layout;
 const FOOTER_HEIGHT = 50;
@@ -24,7 +19,6 @@ const animationColor = `linear-gradient(270deg, ${Object.values(MinerColor)
   .join(', ')}`;
 
 export default function PageFooter() {
-  const [store] = useStore();
   const location = useLocation();
   const [currentTab, currentTabDisplayName] = useMemo(() => {
     const tab = (location.pathname.substring(1) || DEFAULT_TAB) as TabName;
@@ -32,22 +26,7 @@ export default function PageFooter() {
     return [tab, tabName];
   }, [location.pathname]);
 
-  const [{ progress, partialProgress }, setProgress] = useState<{
-    progress: number;
-    partialProgress: number | null;
-  }>({ progress: 0, partialProgress: null });
-
-  const [calculateTabProgressWorker] = useWorker(calculateTabProgress);
-
-  useEffect(() => {
-    calculateTabProgressWorker(
-      currentTab,
-      store,
-      Frameworks,
-      Overclocks,
-      MinerWeapons
-    ).then((tabProgress) => setProgress(tabProgress));
-  }, [calculateTabProgressWorker, currentTab, store]);
+  const { progress, partialProgress } = useCurrentTabProgress(currentTab);
 
   const isFooterHidden = useMemo(
     () => progress === 0 && (partialProgress === null || partialProgress === 0),

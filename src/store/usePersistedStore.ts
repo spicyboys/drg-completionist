@@ -41,7 +41,7 @@ function map(valueSerializer: PropSchema) {
   });
 }
 
-const schema = createSimpleSchema<State>({
+export const schema = createSimpleSchema<State>({
   overclocks: map(set()),
   frameworks: map(set()),
   unforgedOverclocks: map(set()),
