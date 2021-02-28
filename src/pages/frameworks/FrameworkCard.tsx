@@ -21,11 +21,12 @@ export default function FrameworkCard<T extends Miner>(props: {
           hoverable
           onClick={props.onClick}
           size="small"
-          style={
-            props.isAcquired
-              ? { outline: `3px solid ${MinerColor[props.miner]}` }
-              : undefined
-          }
+          style={{
+            backgroundColor: props.isAcquired
+              ? MinerColor[props.miner]
+              : 'inherit',
+            transition: 'all 0.3s ease',
+          }}
         >
           <FrameworkIcon framework={props.framework} />
         </Card>
