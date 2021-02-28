@@ -1,14 +1,6 @@
-import {
-  Card,
-  Collapse,
-  CollapsePanelProps,
-  Image,
-  Progress,
-  Tooltip,
-} from 'antd';
-import { useMemo } from 'react';
-import { RockAndStone } from 'assets/other';
-import { Miner, MinerAvatar, MinerColor } from 'utils/miner';
+import { Card, Collapse, CollapsePanelProps, Image } from 'antd';
+import { Miner, MinerAvatar } from 'utils/miner';
+import MinerCardProgressBar from './MinerCardProgressBar';
 
 const { Panel } = Collapse;
 const { Meta } = Card;
@@ -21,31 +13,6 @@ export default function MinerCard(
   } & Omit<CollapsePanelProps, 'key' | 'header'>
 ) {
   const { children, miner, getProgress, ...panelProps } = props;
-  const progressBar = useMemo(() => {
-    return (
-      <Progress
-        percent={Math.round(getProgress(miner) * 100)}
-        strokeColor={{
-          '0%': MinerColor[miner],
-          '100%': '#87d068',
-        }}
-        format={(percent) =>
-          percent === 100 ? (
-            <Tooltip title="Mission complete! Well done, miner.">
-              <Image
-                src={RockAndStone}
-                preview={false}
-                style={{ height: 20, width: 'auto ' }}
-                alt="100% Complete"
-              />
-            </Tooltip>
-          ) : (
-            `${percent}%`
-          )
-        }
-      />
-    );
-  }, [getProgress, miner]);
 
   return (
     <Panel
@@ -63,7 +30,9 @@ export default function MinerCard(
               alt={miner}
             />
           }
-          description={progressBar}
+          description={
+            <MinerCardProgressBar miner={miner} getProgress={getProgress} />
+          }
         />
       }
       key={miner}
