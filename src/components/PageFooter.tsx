@@ -1,6 +1,7 @@
 import { useWorker } from '@koale/useworker';
-import { Layout } from 'antd';
+import { Layout, Tooltip } from 'antd';
 import { useEffect, useMemo, useState } from 'react';
+import { isMobile } from 'react-device-detect';
 import { useLocation } from 'react-router-dom';
 import { DEFAULT_TAB, TABS, TabName } from 'App';
 import { Frameworks } from 'data/frameworks';
@@ -37,6 +38,7 @@ export default function PageFooter() {
   }>({ progress: 0, partialProgress: null });
 
   const [calculateTabProgressWorker] = useWorker(calculateTabProgress);
+
   useEffect(() => {
     calculateTabProgressWorker(
       currentTab,
@@ -123,7 +125,17 @@ export default function PageFooter() {
             zIndex: 3,
           }}
         >
-          {currentTabDisplayName} Progress: {progress}%
+          <Tooltip
+            destroyTooltipOnHide
+            title={
+              partialProgress
+                ? `Forged + Unforged: ${progress + partialProgress}%`
+                : undefined
+            }
+            trigger={isMobile ? 'click' : 'hover'}
+          >
+            {currentTabDisplayName} Progress: {progress}%
+          </Tooltip>
         </div>
       </div>
     </Footer>
