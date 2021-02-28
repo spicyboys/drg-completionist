@@ -1,10 +1,11 @@
-import { Modal } from 'antd';
-import AnalyzeSaveFile from './AnalyzeSaveFile';
+import { Modal, Spin } from 'antd';
+import { lazy, Suspense } from 'react';
 
 export default function AnalyzeModal(props: {
   isVisible: boolean;
   hide: () => void;
 }) {
+  const AnalyzeSaveFile = lazy(() => import('./AnalyzeSaveFile'));
   return (
     <Modal
       title="Analyze Save File"
@@ -14,7 +15,9 @@ export default function AnalyzeModal(props: {
       footer={null}
       destroyOnClose
     >
-      <AnalyzeSaveFile hide={props.hide} />
+      <Suspense fallback={<Spin />}>
+        <AnalyzeSaveFile hide={props.hide} />
+      </Suspense>
     </Modal>
   );
 }
