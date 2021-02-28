@@ -1,6 +1,7 @@
-import { Card, Col } from 'antd';
+import { Card, Col, Tooltip } from 'antd';
+import { isMobile } from 'react-device-detect';
 import { Framework } from 'data/frameworks';
-import { Miner, MinerColor, MinerColorContrastText } from 'utils/miner';
+import { Miner, MinerColor } from 'utils/miner';
 import FrameworkIcon from './FrameworkIcon';
 
 export default function FrameworkCard<T extends Miner>(props: {
@@ -10,28 +11,25 @@ export default function FrameworkCard<T extends Miner>(props: {
   onClick: () => void;
 }) {
   return (
-    <Col xxl={4} xl={6} lg={8} md={12} sm={12} xs={24} key={props.framework}>
-      <Card
-        hoverable
+    <Col xxl={4} xl={4} lg={8} md={8} sm={8} xs={12} key={props.framework}>
+      <Tooltip
+        destroyTooltipOnHide
         title={props.framework}
-        headStyle={
-          props.isAcquired
-            ? {
-                backgroundColor: MinerColor[props.miner],
-                color: MinerColorContrastText[props.miner],
-                fontWeight: 'bold',
-                transition: 'all 0.3s',
-              }
-            : {
-                color: '#cccccc',
-                fontWeight: 'bold',
-                transition: 'all 0.3s',
-              }
-        }
-        onClick={props.onClick}
+        trigger={isMobile ? 'click' : 'hover'}
       >
-        <FrameworkIcon framework={props.framework} />
-      </Card>
+        <Card
+          hoverable
+          onClick={props.onClick}
+          size="small"
+          style={
+            props.isAcquired
+              ? { outline: `3px solid ${MinerColor[props.miner]}` }
+              : undefined
+          }
+        >
+          <FrameworkIcon framework={props.framework} />
+        </Card>
+      </Tooltip>
     </Col>
   );
 }
