@@ -34,7 +34,12 @@ export default function Settings(props: { hide: () => void }) {
             <img
               alt="Latest GitHub release (latest SemVer)"
               src="https://img.shields.io/github/v/release/BobertForever/drg-completionist"
-              style={{ marginBottom: 12, marginTop: -6 }}
+              height="auto"
+              width="auto"
+              style={{
+                marginBottom: 12,
+                marginTop: -6,
+              }}
             />
           </a>
           <br />

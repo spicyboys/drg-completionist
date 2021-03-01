@@ -7,11 +7,11 @@ export default function WeaponDivider(props: { weapon: MinerWeapon<Miner> }) {
     <Divider orientation="center">
       <Tooltip title={props.weapon} placement="right">
         <Image
-          src={WeaponOutlines[props.weapon]}
-          height={75}
-          style={{ width: 'auto' }}
-          preview={false}
           alt={props.weapon}
+          height={75}
+          preview={false}
+          src={WeaponOutlines[props.weapon]}
+          width="auto"
         />
       </Tooltip>
     </Divider>
