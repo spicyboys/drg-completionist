@@ -1,5 +1,4 @@
 body {
-  scrollbar-color: auto;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -23,6 +22,11 @@ code {
 
 /* Scroll Bar Styles */
 
+body {
+  overflow: overlay;
+  scrollbar-color: auto;
+}
+
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -32,7 +36,6 @@ code {
   -webkit-box-shadow: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -45,10 +48,10 @@ code {
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  background-color: rgba(90, 90, 90);
+  background-color: rgba(255, 255, 255, 0.5);
   background-clip: padding-box;
-  box-shadow: 0;
-  -webkit-box-shadow: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
 }
 
 ::-webkit-scrollbar-button {
