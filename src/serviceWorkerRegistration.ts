@@ -1,3 +1,6 @@
+import { isMobile } from 'react-device-detect';
+import { toast } from 'react-toastify';
+
 // This optional code is used to register a service worker.
 // register() is not called by default.
 
@@ -15,7 +18,9 @@ const isLocalhost = Boolean(
     // [::1] is the IPv6 localhost address.
     window.location.hostname === '[::1]' ||
     // 127.0.0.0/8 are considered localhost for IPv4.
-    window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
+    window.location.hostname.match(
+      /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
+    )
 );
 
 type Config = {
@@ -77,6 +82,30 @@ function registerValidSW(swUrl: string, config?: Config) {
                   'tabs for this page are closed. See https://cra.link/PWA.'
               );
 
+              const reloadPage = () => {
+                if (registration.waiting) {
+                  registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+                  location.reload();
+                }
+              };
+
+              toast.info(
+                `Update available! ${
+                  isMobile ? 'Tap' : 'Click'
+                } here to upgrade.`,
+                {
+                  onClick: () => reloadPage(),
+                  autoClose: false,
+                  closeOnClick: false,
+                  draggable: false,
+                  hideProgressBar: false,
+                  pauseOnHover: true,
+                  position: 'top-center',
+                  progress: undefined,
+                  toastId: 'swUpdateAvailable',
+                }
+              );
+
               // Execute callback
               if (config && config.onUpdate) {
                 config.onUpdate(registration);
@@ -125,7 +154,9 @@ function checkValidServiceWorker(swUrl: string, config?: Config) {
       }
     })
     .catch(() => {
-      console.log('No internet connection found. App is running in offline mode.');
+      console.log(
+        'No internet connection found. App is running in offline mode.'
+      );
     });
 }
 

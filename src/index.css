@@ -20,6 +20,14 @@ code {
   user-select: none;
 }
 
+.Toastify__toast {
+  justify-content: center;
+}
+
+.Toastify__close-button {
+  visibility: hidden;
+}
+
 /* Scroll Bar Styles */
 
 body {
