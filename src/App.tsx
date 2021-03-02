@@ -2,9 +2,11 @@ import { Col, BackTop, Layout, PageHeader, Row, Typography, Spin } from 'antd';
 import 'antd/dist/antd.dark.css';
 import React, { lazy } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { Slide, ToastContainer } from 'react-toastify';
 import { Assignment } from 'assets/other';
 import PageFooter from 'components/PageFooter';
 import PageTabs from 'components/PageTabs';
+import 'react-toastify/dist/ReactToastify.css';
 
 const { Content } = Layout;
 const { Title } = Typography;
@@ -51,6 +53,11 @@ export const TABS: Array<{
 export default function App() {
   return (
     <Layout style={{ backgroundColor: '#1a1a1a' }}>
+      <ToastContainer
+        hideProgressBar
+        position="top-center"
+        transition={Slide}
+      />
       <BackTop style={{ bottom: 110 }} />
       <Content style={{ marginBottom: 100 }}>
         <Row justify="center">
