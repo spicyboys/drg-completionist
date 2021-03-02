@@ -38,11 +38,11 @@ export default function ResetProgress(props: { hide: () => void }) {
               <img
                 src={SatchelCharge}
                 alt="Reset Progress"
-                height={25}
-                width="auto"
                 style={{
+                  height: 25,
                   marginRight: 10,
                   marginTop: -2,
+                  width: 'auto',
                 }}
               />
             }

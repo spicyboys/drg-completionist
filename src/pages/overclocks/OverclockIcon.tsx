@@ -24,7 +24,11 @@ export default function OverclockIcon(props: { overclock: Overclock }) {
           left: '50%',
         }}
       >
-        <img src={frame} alt={frameName} height="auto" width="auto" />
+        <img
+          alt={frameName}
+          src={frame}
+          style={{ height: 'auto', width: 'auto' }}
+        />
         <div
           style={{
             position: 'absolute',
@@ -33,7 +37,11 @@ export default function OverclockIcon(props: { overclock: Overclock }) {
             left: '50%',
           }}
         >
-          <img src={icon} alt={iconName} height="auto" width="auto" />
+          <img
+            alt={iconName}
+            src={icon}
+            style={{ height: 'auto', width: 'auto' }}
+          />
         </div>
       </div>
     </div>

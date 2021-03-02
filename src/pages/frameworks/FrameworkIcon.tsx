@@ -19,10 +19,9 @@ export default function FrameworkIcon(props: { framework: Framework }) {
         }}
       >
         <img
-          width="100"
-          height="100"
-          src={FrameworkIconMap[props.framework]}
           alt={props.framework}
+          src={FrameworkIconMap[props.framework]}
+          style={{ height: 100, width: 100 }}
         />
       </div>
     </div>
