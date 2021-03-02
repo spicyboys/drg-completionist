@@ -82,7 +82,7 @@ function registerValidSW(swUrl: string, config?: Config) {
                   'tabs for this page are closed. See https://cra.link/PWA.'
               );
 
-              const reloadPage = () => {
+              const updateAndReloadPage = () => {
                 if (registration.waiting) {
                   registration.waiting.postMessage({ type: 'SKIP_WAITING' });
                   location.reload();
@@ -94,7 +94,7 @@ function registerValidSW(swUrl: string, config?: Config) {
                   isMobile ? 'Tap' : 'Click'
                 } here to upgrade.`,
                 {
-                  onClick: () => reloadPage(),
+                  onClick: () => updateAndReloadPage(),
                   autoClose: false,
                   closeOnClick: false,
                   draggable: false,
