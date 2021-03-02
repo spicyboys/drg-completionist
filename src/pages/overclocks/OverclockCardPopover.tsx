@@ -35,10 +35,10 @@ export default memo(function OverclockCardPopover(props: {
             <Col span={8}>
               <Tooltip placement="bottomRight" title={props.weapon}>
                 <Image
-                  src={WeaponOutlines[props.weapon]}
-                  preview={false}
-                  style={{ height: 50, width: 'auto' }}
                   alt={props.weapon}
+                  preview={false}
+                  src={WeaponOutlines[props.weapon]}
+                  style={{ height: 50, width: 'auto' }}
                 />
               </Tooltip>
             </Col>
@@ -53,8 +53,8 @@ export default memo(function OverclockCardPopover(props: {
           <Col>
             <Space>
               <img
-                src={BuffIcon}
                 alt="Buff"
+                src={BuffIcon}
                 style={{ height: 10, width: 'auto' }}
               />
               <Text strong type="success">
@@ -69,8 +69,8 @@ export default memo(function OverclockCardPopover(props: {
           <Col>
             <Space>
               <img
-                src={NerfIcon}
                 alt="Nerf"
+                src={NerfIcon}
                 style={{ height: 10, width: 'auto' }}
               />
               <Text strong type="danger">

@@ -63,8 +63,8 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
             <Space direction="vertical">
               <Text>
                 Tired of all that clicking around just to input your current
-                progress? Upload your save file and let Bosco find your
-                overclocks for you!
+                progress? Upload your save file and let Bosco do all the hard
+                work for you!
               </Text>
               <Text>The file is located in your Steam folder by default:</Text>
               <Text code>

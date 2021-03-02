@@ -16,12 +16,12 @@ export default memo(function MinerCardProgressBar(props: {
       }}
       format={(percent) =>
         percent === 100 ? (
-          <Tooltip title="Mission complete! Well done, miner.">
+          <Tooltip title="Assignment complete! Well done, miner.">
             <Image
-              src={RockAndStone}
-              preview={false}
-              style={{ height: 20, width: 'auto ' }}
               alt="100% Complete"
+              preview={false}
+              src={RockAndStone}
+              style={{ height: 20, width: 'auto' }}
             />
           </Tooltip>
         ) : (

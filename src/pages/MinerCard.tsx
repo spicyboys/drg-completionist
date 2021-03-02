@@ -23,11 +23,10 @@ export default function MinerCard(
           title={miner}
           avatar={
             <Image
-              src={MinerAvatar[miner]}
-              preview={false}
-              height={64}
-              width={64}
               alt={miner}
+              preview={false}
+              src={MinerAvatar[miner]}
+              style={{ height: 64, width: 64 }}
             />
           }
           description={
