@@ -20,6 +20,8 @@ code {
   user-select: none;
 }
 
+/* Toast Styles */
+
 .Toastify__toast {
   justify-content: center;
 }
@@ -30,9 +32,9 @@ code {
 
 /* Scroll Bar Styles */
 
-body {
+:-webkit-any(body) {
   overflow: overlay;
-  scrollbar-color: auto;
+  width: 100% !important;
 }
 
 ::-webkit-scrollbar {
