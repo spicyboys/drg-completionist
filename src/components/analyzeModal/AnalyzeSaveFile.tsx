@@ -13,6 +13,7 @@ import { RcFile } from 'antd/lib/upload';
 import { useCallback, useState } from 'react';
 import { isMobile } from 'react-device-detect';
 import { MissionControlPortrait } from 'assets/portraits';
+import Image from 'components/Image';
 import useStore from 'store/useStore';
 import { getFrameworksFromSaveFile } from './getFrameworksFromSaveFile';
 import {
@@ -106,9 +107,13 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
                 <Avatar
                   size={64}
                   src={
-                    MissionControlPortrait.webp || MissionControlPortrait.png
+                    <Image
+                      src={MissionControlPortrait}
+                      alt="Mission Control"
+                      width={64}
+                      height={64}
+                    />
                   }
-                  alt="Mission Control"
                 />
                 <Text>
                   &quot;Management sees your intrepid attempts to access your

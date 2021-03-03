@@ -19,8 +19,14 @@ export default function ResetProgress(props: { hide: () => void }) {
             <Space>
               <Avatar
                 size={64}
-                src={MissionControlPortrait.webp || MissionControlPortrait.png}
-                alt="Reset Warning from Mission Control"
+                src={
+                  <Image
+                    src={MissionControlPortrait}
+                    alt="Reset Warning from Mission Control"
+                    width={64}
+                    height={64}
+                  />
+                }
               />
               <Text>
                 {
