@@ -95,7 +95,7 @@ function registerValidSW(swUrl: string, config?: Config) {
                 message: 'Update Ready!',
                 description:
                   `App will automatically reload in ${notificationDuration} ` +
-                  `seconds to install the new version.`,
+                  `seconds to install the latest version.`,
                 duration: notificationDuration,
                 onClick: () => updateAndReloadPage(),
                 onClose: () => updateAndReloadPage(),
