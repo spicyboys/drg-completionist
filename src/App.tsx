@@ -1,15 +1,13 @@
-import { Col, BackTop, Layout, PageHeader, Row, Typography, Spin } from 'antd';
+import { Col, BackTop, Layout, Row, Spin } from 'antd';
 import 'antd/dist/antd.dark.css';
 import React, { lazy } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Slide, ToastContainer } from 'react-toastify';
-import { Assignment } from 'assets/other';
 import PageFooter from 'components/PageFooter';
-import PageTabs from 'components/PageTabs';
+import PageHeader from 'components/PageHeader';
 import 'react-toastify/dist/ReactToastify.css';
 
 const { Content } = Layout;
-const { Title } = Typography;
 
 export type TabName = 'overclocks' | 'frameworks';
 
@@ -63,26 +61,7 @@ export default function App() {
       <Content style={{ marginBottom: 100 }}>
         <Row justify="center">
           <Col xs={22} lg={18}>
-            <PageHeader
-              title="DRG Completionist"
-              avatar={{
-                alt: 'Assignment Icon',
-                size: 'large',
-                src: Assignment.webp || Assignment.png,
-              }}
-              extra={
-                <Col xs={0} sm={24} style={{ marginTop: 12 }}>
-                  <Title
-                    level={5}
-                    type="secondary"
-                    style={{ color: '#ffffffa6' }}
-                  >
-                    Leave No Rock or Stone Unturned!
-                  </Title>
-                </Col>
-              }
-              footer={<PageTabs />}
-            />
+            <PageHeader />
           </Col>
           <Col xs={22} lg={18}>
             <Switch>
