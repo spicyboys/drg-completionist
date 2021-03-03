@@ -119,26 +119,6 @@ function registerValidSW(swUrl: string, config?: Config) {
                 duration: notificationDuration,
               });
 
-              // Check if user is in offline mode
-              fetch(swUrl, {
-                headers: { 'Service-Worker': 'script' },
-              }).catch(() => {
-                // Warn user app is in offline mode
-                console.log(
-                  'No internet connection found. App is running in offline mode.'
-                );
-
-                // Warn user no internet was detected and cache is being used instead
-                notification.warn({
-                  message: 'No Connection Detected',
-                  description:
-                    'App could not connect to the Internet ' +
-                    'and is now running in offline mode. ' +
-                    'Any changes you make will still be saved.',
-                  duration: notificationDuration,
-                });
-              });
-
               // Execute callback
               if (config && config.onSuccess) {
                 config.onSuccess(registration);
@@ -147,6 +127,26 @@ function registerValidSW(swUrl: string, config?: Config) {
           }
         };
       };
+
+      // Check if user is in offline mode
+      fetch(swUrl, {
+        headers: { 'Service-Worker': 'script' },
+      }).catch(() => {
+        // Warn user app is in offline mode
+        console.log(
+          'No internet connection found. App is running in offline mode.'
+        );
+
+        // Warn user no internet was detected and cache is being used instead
+        notification.warn({
+          message: 'No Connection Detected',
+          description:
+            'App could not connect to the Internet ' +
+            'and is now running in offline mode. ' +
+            'Any changes you make will still be saved.',
+          duration: notificationDuration,
+        });
+      });
     })
     .catch((error) => {
       console.error('Error during service worker registration:', error);
