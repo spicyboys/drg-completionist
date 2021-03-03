@@ -66,7 +66,7 @@ export default function App() {
               title="DRG Completionist"
               avatar={{
                 size: 'large',
-                src: Assignment,
+                src: Assignment.png,
                 alt: 'Assignment Icon',
               }}
               extra={
