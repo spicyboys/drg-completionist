@@ -30,30 +30,30 @@ export const MinerWeapons = {
 
 export type MinerWeapon<T extends Miner> = typeof MinerWeapons[T][number];
 
-export const WeaponOutlines: Record<MinerWeapon<Miner>, string> = {
+export const WeaponOutlines: Record<MinerWeapon<Miner>, ImgSrc> = {
   // Driller
-  'CRSPR Flamethrower': outlines.driller.Flamethrower.png,
-  'Cryo Cannon': outlines.driller.CryoCannon.png,
-  'Subata 120': outlines.driller.Subata.png,
-  'Experimental Plasma Charger': outlines.driller.Epc.png,
+  'CRSPR Flamethrower': outlines.driller.Flamethrower,
+  'Cryo Cannon': outlines.driller.CryoCannon,
+  'Subata 120': outlines.driller.Subata,
+  'Experimental Plasma Charger': outlines.driller.Epc,
 
   // Engineer
-  '"Warthog" Auto 210': outlines.engineer.Shotgun.png,
-  '"Stubby" Voltaic SMG': outlines.engineer.StubbySMG.png,
-  'Deepcore 40mm PGL': outlines.engineer.GrenadeLauncher.png,
-  'Breach Cutter': outlines.engineer.BreachCutter.png,
+  '"Warthog" Auto 210': outlines.engineer.Shotgun,
+  '"Stubby" Voltaic SMG': outlines.engineer.StubbySMG,
+  'Deepcore 40mm PGL': outlines.engineer.GrenadeLauncher,
+  'Breach Cutter': outlines.engineer.BreachCutter,
 
   // Gunner
-  '"Lead Storm" Powered Minigun': outlines.gunner.Minigun.png,
-  '"Thunderhead" Heavy Autocannon': outlines.gunner.Autocannon.png,
-  '"Bulldog" Heavy Revolver': outlines.gunner.Revolver.png,
-  'BRT7 Burst Fire Gun': outlines.gunner.BurstFireGun.png,
+  '"Lead Storm" Powered Minigun': outlines.gunner.Minigun,
+  '"Thunderhead" Heavy Autocannon': outlines.gunner.Autocannon,
+  '"Bulldog" Heavy Revolver': outlines.gunner.Revolver,
+  'BRT7 Burst Fire Gun': outlines.gunner.BurstFireGun,
 
   // Scout
-  'Deepcore GK2': outlines.scout.AssaultRifle.png,
-  'M1000 Classic': outlines.scout.M1000.png,
-  'Jury-Rigged Boomstick': outlines.scout.Boomstick.png,
-  'Zhukov NUK17': outlines.scout.Zhukov.png,
+  'Deepcore GK2': outlines.scout.AssaultRifle,
+  'M1000 Classic': outlines.scout.M1000,
+  'Jury-Rigged Boomstick': outlines.scout.Boomstick,
+  'Zhukov NUK17': outlines.scout.Zhukov,
 };
 
 export const WeaponIDs: Record<MinerWeapon<Miner>, string> = {
