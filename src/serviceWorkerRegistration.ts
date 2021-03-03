@@ -112,6 +112,17 @@ function registerValidSW(swUrl: string, config?: Config) {
               // "Content is cached for offline use." message.
               console.log('Content is cached for offline use.');
 
+              toast.info(`App is now ready for offline use!`, {
+                autoClose: 5000,
+                closeOnClick: false,
+                draggable: true,
+                hideProgressBar: false,
+                pauseOnHover: true,
+                position: 'top-center',
+                progress: undefined,
+                toastId: 'swCachedOffline',
+              });
+
               // Execute callback
               if (config && config.onSuccess) {
                 config.onSuccess(registration);
@@ -153,6 +164,18 @@ function checkValidServiceWorker(swUrl: string, config?: Config) {
       console.log(
         'No internet connection found. App is running in offline mode.'
       );
+
+      // Tell user no internet was detected
+      toast.info(`No internet found. Using offline mode.`, {
+        autoClose: 5000,
+        closeOnClick: false,
+        draggable: true,
+        hideProgressBar: false,
+        pauseOnHover: true,
+        position: 'top-center',
+        progress: undefined,
+        toastId: 'swNoInternet',
+      });
     });
 }
 
