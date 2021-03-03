@@ -29,9 +29,8 @@ export default function ResetProgress(props: { hide: () => void }) {
                 }
               />
               <Text>
-                {
-                  '"Careful, miner! Management\'s saying this can\'t be undone."'
-                }
+                &quot;Careful, miner! Management&apos;s saying this can&apos;t
+                be undone.&quot;
               </Text>
             </Space>
           </Col>
