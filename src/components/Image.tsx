@@ -1,15 +1,19 @@
 import { memo } from 'react';
 
-export default memo(function Image(props: {
-  src: ImgSrc;
-  alt: string;
-  style: React.CSSProperties;
-}) {
+export default memo(function Image(
+  props: {
+    src: ImgSrc;
+    alt: string;
+  } & Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'src' | 'alt'>
+) {
+  const { src, alt, ...imgProps } = props;
   return (
-    <picture>
-      <source type="image/webp" srcSet={props.src.webp} />
-      <source type="image/png" srcSet={props.src.png} />
-      <img src={props.src.png} alt={props.alt} style={props.style} />
-    </picture>
+    <div style={{ display: 'inline-block' }}>
+      <picture>
+        <source type="image/webp" srcSet={src.webp} />
+        <source type="image/png" srcSet={src.png} />
+        <img src={src.png} alt={alt} {...imgProps} />
+      </picture>
+    </div>
   );
 });
