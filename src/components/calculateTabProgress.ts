@@ -1,19 +1,14 @@
-import { TabName } from 'App';
-import { Frameworks } from 'data/frameworks';
-import { Overclocks } from 'data/overclocks';
-import { State } from 'store/state';
-import { MinerWeapons } from 'utils/weapons';
+import type { TabName } from 'App';
+import type { Frameworks } from 'data/frameworks';
+import type { Overclocks } from 'data/overclocks';
+import type { State } from 'store/state';
+import type { MinerWeapons } from 'utils/weapons';
 
 /**
  * Tab progress calculation is a lot of nonsense object and array manipulation,
- * and I want to get it off the critical render path. To do so, we call this
- * function from a webworker, which has the obnoxious limitation of not allowing
- * imports. Now, you may be thinking to yourself, "Robert, there's a list of
- * imports right at the top of this file. What are you on about?" Well, since
- * we're only using those imports in type positions (the arguments), they're
- * getting removed by the compiler and they're not a real issue. However it does
- * still mean passing in all of these things as arguments to the function. Well
- * now you know why.
+ * and I want to get it off the critical render path. This is a standalone
+ * function with no dependencies that we can call from a service worker in order
+ * to accomplish that.
  */
 export default function calculateTabProgress(
   currentTab: TabName,
