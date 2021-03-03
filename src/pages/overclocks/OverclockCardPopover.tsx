@@ -26,11 +26,13 @@ export default memo(function OverclockCardPopover(props: {
             </Col>
             <Col span={8}>
               <Tooltip placement="bottomRight" title={props.weapon}>
-                <Image
-                  alt={props.weapon}
-                  src={WeaponOutlines[props.weapon]}
-                  style={{ height: 50, width: 'auto' }}
-                />
+                <div>
+                  <Image
+                    alt={props.weapon}
+                    src={WeaponOutlines[props.weapon]}
+                    style={{ height: 50, width: 'auto' }}
+                  />
+                </div>
               </Tooltip>
             </Col>
           </Row>
