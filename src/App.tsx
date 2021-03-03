@@ -2,10 +2,8 @@ import { Col, BackTop, Layout, Row, Spin } from 'antd';
 import 'antd/dist/antd.dark.css';
 import React, { lazy } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Slide, ToastContainer } from 'react-toastify';
 import PageFooter from 'components/PageFooter';
 import PageHeader from 'components/PageHeader';
-import 'react-toastify/dist/ReactToastify.css';
 
 const { Content } = Layout;
 
@@ -51,12 +49,6 @@ export const TABS: Array<{
 export default function App() {
   return (
     <Layout style={{ backgroundColor: '#1a1a1a' }}>
-      <ToastContainer
-        autoClose={5000}
-        hideProgressBar={false}
-        position="top-center"
-        transition={Slide}
-      />
       <BackTop style={{ bottom: 110 }} />
       <Content style={{ marginBottom: 100 }}>
         <Row justify="center">

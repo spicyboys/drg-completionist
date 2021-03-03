@@ -1,4 +1,4 @@
-import { toast } from 'react-toastify';
+import { notification } from 'antd';
 
 // This optional code is used to register a service worker.
 // register() is not called by default.
@@ -89,17 +89,12 @@ function registerValidSW(swUrl: string, config?: Config) {
               };
 
               // Notify user that page is about to be reloaded
-              toast.success(`Update installed! Reloading in 5 seconds.`, {
+              notification.success({
+                message: 'Update installed!',
+                description: 'Reloading in 5 seconds for update to take effect',
+                duration: 5,
                 onClick: () => updateAndReloadPage(),
                 onClose: () => updateAndReloadPage(),
-                autoClose: 5000,
-                closeOnClick: false,
-                draggable: true,
-                hideProgressBar: false,
-                pauseOnHover: true,
-                position: 'top-center',
-                progress: undefined,
-                toastId: 'swUpdateAvailable',
               });
 
               // Execute callback
@@ -112,15 +107,12 @@ function registerValidSW(swUrl: string, config?: Config) {
               // "Content is cached for offline use." message.
               console.log('Content is cached for offline use.');
 
-              toast.info(`App is now ready for offline use!`, {
-                autoClose: 5000,
-                closeOnClick: false,
-                draggable: true,
-                hideProgressBar: false,
-                pauseOnHover: true,
-                position: 'top-center',
-                progress: undefined,
-                toastId: 'swCachedOffline',
+              notification.info({
+                message: 'Ready for offline use!',
+                description:
+                  'This page has been cached locally and will now work ' +
+                  'without an active internet connection',
+                duration: 5,
               });
 
               // Execute callback
@@ -166,15 +158,10 @@ function checkValidServiceWorker(swUrl: string, config?: Config) {
       );
 
       // Tell user no internet was detected
-      toast.info(`No internet found. Using offline mode.`, {
-        autoClose: 5000,
-        closeOnClick: false,
-        draggable: true,
-        hideProgressBar: false,
-        pauseOnHover: true,
-        position: 'top-center',
-        progress: undefined,
-        toastId: 'swNoInternet',
+      notification.info({
+        message: 'No internet found',
+        description: 'Using offline mode.',
+        duration: 5,
       });
     });
 }
