@@ -7,10 +7,7 @@ import { MissionControlPortrait } from 'assets/portraits';
 import Image from 'components/Image';
 import useStore from 'store/useStore';
 import { getFrameworksFromSaveFile } from './getFrameworksFromSaveFile';
-import {
-  getOverclocksFromSaveFile,
-  getUnforgedOverclocksFromSaveFile,
-} from './getOverclocksFromSaveFile';
+import { getOverclocksFromSaveFile } from './getOverclocksFromSaveFile';
 
 const { Text } = Typography;
 
@@ -25,12 +22,13 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
       try {
         const parser = await import('utils/save-parser');
         const saveFile = await parser.parse_save_file(f);
+        const overclocks = getOverclocksFromSaveFile(saveFile);
         dispatch({
           type: 'LOAD_SAVE',
           payload: {
             frameworks: getFrameworksFromSaveFile(saveFile),
-            overclocks: getOverclocksFromSaveFile(saveFile),
-            unforgedOverclocks: getUnforgedOverclocksFromSaveFile(saveFile),
+            overclocks: overclocks.forged,
+            unforgedOverclocks: overclocks.unforged,
           },
         });
         props.hide();
