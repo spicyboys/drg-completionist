@@ -1,5 +1,14 @@
 import { LoadingOutlined, UploadOutlined } from '@ant-design/icons';
-import { Button, Col, Divider, Row, Space, Typography, Upload } from 'antd';
+import {
+  Button,
+  Col,
+  Divider,
+  Row,
+  Space,
+  Typography,
+  Upload,
+  notification,
+} from 'antd';
 import { RcFile } from 'antd/lib/upload';
 import { useCallback, useState } from 'react';
 import { isMobile } from 'react-device-detect';
@@ -20,9 +29,15 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
     async (f: RcFile) => {
       setLoading(true);
       try {
+        // Parse the save file using the WASM library
         const parser = await import('utils/save-parser');
         const saveFile = await parser.parse_save_file(f);
+
+        // Extract the relevant information from the parsed save file
         const overclocks = getOverclocksFromSaveFile(saveFile);
+        const frameworks = getFrameworksFromSaveFile(saveFile);
+
+        // Update the store with the new save file data
         dispatch({
           type: 'LOAD_SAVE',
           payload: {
@@ -31,11 +46,32 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
             unforgedOverclocks: overclocks.unforged,
           },
         });
+
+        // Show the user a success notification with how many items were
+        // successfully imported
+        const getCount = (d: Map<unknown, Set<unknown>>) =>
+          Array.from(d.values()).reduce((p, c) => p + c.size, 0);
+        notification.success({
+          message: 'Save file analysis successful!',
+          description: `Successfully imported ${
+            getCount(overclocks.forged) + getCount(overclocks.unforged)
+          } overclocks (${getCount(overclocks.forged)} forged and ${getCount(
+            overclocks.unforged
+          )} unforged) and ${getCount(frameworks)} frameworks.`,
+          duration: 10,
+        });
+
+        // Hide the analyze modal
         props.hide();
       } catch (e) {
         gtag('event', 'exception', {
           description: e,
           fatal: false,
+        });
+        notification.error({
+          message: 'Got an error when analyzing save file',
+          description: e.message,
+          duration: 10,
         });
         console.error(e);
       } finally {
