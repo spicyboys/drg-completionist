@@ -28,12 +28,17 @@ function generate_index {
     name=${name^}
     imports+=( "import _$name from './$image';" )
     imports+=( "import _${name}_webp from './$image.webp';" )
-    exports+=( "export const $name = { png: _$name, webp: _${name}_webp };")
+    exports+=( "export const $name = { png: _$name, webp: _${name}_webp };" )
   done
 
   for directory in "${directories[@]}"; do
-    exports+=( "export * as $directory from './$directory';" )
+    imports+=( "import * as $directory from './$directory';" )
   done
+  if [[ ${directories[@]} ]]; then
+    local dir_import_string=$(IFS=,;printf  "%s" "${directories[*]}")
+    exports+=( "const _imports = { $dir_import_string };" )
+    exports+=( "export default _imports;" )
+  fi
 
   local export_string=""
   imports+=( "${exports[@]}" )

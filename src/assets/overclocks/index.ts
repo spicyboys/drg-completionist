@@ -3,6 +3,8 @@
  * To update it, run `yarn run update-codegen`
  */
 
-export * as arrows from './arrows';
-export * as frames from './frames';
-export * as icons from './icons';
+import * as arrows from './arrows';
+import * as frames from './frames';
+import * as icons from './icons';
+const _imports = { arrows,frames,icons };
+export default _imports;
