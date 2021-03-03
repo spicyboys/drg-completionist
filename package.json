@@ -50,7 +50,7 @@
     "lint": "yarn eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "format": "yarn prettier --write .",
     "clean": "yarn lint && yarn format",
-    "update-assets": "scripts/generate_asset_wrappers.sh",
+    "update-assets": "scripts/generate_asset_wrappers.sh && yarn clean",
     "update-save-parser": "wasm-pack build save-parser --release --out-dir ../src/utils/save-parser --out-name index"
   },
   "eslintConfig": {
