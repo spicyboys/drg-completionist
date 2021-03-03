@@ -13,13 +13,13 @@ export const Frameworks = [
 
 export type Framework = typeof Frameworks[number];
 
-export const FrameworkIcon: Record<Framework, string> = {
-  'Custom Engineered': FrameworkIcons.CustomEngineered.png,
-  'Fourth Relic': FrameworkIcons.FourthRelic.png,
-  'Glyphid Trophy Hunter': FrameworkIcons.GlyphidTrophyHunter.png,
-  Mechanized: FrameworkIcons.Mechanized.png,
-  Neonband: FrameworkIcons.NeonBand.png,
-  'Scale Brigade': FrameworkIcons.ScaleBrigade.png,
+export const FrameworkIcon: Record<Framework, ImgSrc> = {
+  'Custom Engineered': FrameworkIcons.CustomEngineered,
+  'Fourth Relic': FrameworkIcons.FourthRelic,
+  'Glyphid Trophy Hunter': FrameworkIcons.GlyphidTrophyHunter,
+  Mechanized: FrameworkIcons.Mechanized,
+  Neonband: FrameworkIcons.NeonBand,
+  'Scale Brigade': FrameworkIcons.ScaleBrigade,
 };
 
 export const FrameworkIDs: Record<
