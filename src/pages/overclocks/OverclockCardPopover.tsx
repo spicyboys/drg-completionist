@@ -1,6 +1,7 @@
 import { Card, Col, Divider, Row, Space, Tooltip, Typography } from 'antd';
 import Meta from 'antd/lib/card/Meta';
 import { memo } from 'react';
+import { isMobile } from 'react-device-detect';
 import { Buff as BuffIcon, Nerf as NerfIcon } from 'assets/overclocks/arrows';
 import Image from 'components/Image';
 import { Miner } from 'utils/miner';
@@ -25,7 +26,11 @@ export default memo(function OverclockCardPopover(props: {
               <Title level={4}>{props.overclock.name}</Title>
             </Col>
             <Col span={8}>
-              <Tooltip placement="bottomRight" title={props.weapon}>
+              <Tooltip
+                placement="bottomRight"
+                title={props.weapon}
+                trigger={isMobile ? 'click' : 'hover'}
+              >
                 <Image
                   alt={props.weapon}
                   src={WeaponOutlines[props.weapon]}
@@ -44,7 +49,7 @@ export default memo(function OverclockCardPopover(props: {
           <Col>
             <Space>
               <Image
-                alt="Buff"
+                alt="Buff Effect"
                 src={BuffIcon}
                 style={{ height: 10, width: 'auto' }}
               />
@@ -60,7 +65,7 @@ export default memo(function OverclockCardPopover(props: {
           <Col>
             <Space>
               <Image
-                alt="Nerf"
+                alt="Nerf Effect"
                 src={NerfIcon}
                 style={{ height: 10, width: 'auto' }}
               />
