@@ -1,14 +1,5 @@
 import { LoadingOutlined, UploadOutlined } from '@ant-design/icons';
-import {
-  Avatar,
-  Button,
-  Col,
-  Divider,
-  Row,
-  Space,
-  Typography,
-  Upload,
-} from 'antd';
+import { Button, Col, Divider, Row, Space, Typography, Upload } from 'antd';
 import { RcFile } from 'antd/lib/upload';
 import { useCallback, useState } from 'react';
 import { isMobile } from 'react-device-detect';
@@ -104,16 +95,11 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
           {hasClickedButton && isMobile ? (
             <Col span={20} style={{ marginTop: 24 }}>
               <Space>
-                <Avatar
-                  size={64}
-                  src={
-                    <Image
-                      src={MissionControlPortrait}
-                      alt="Mission Control"
-                      width={64}
-                      height={64}
-                    />
-                  }
+                <Image
+                  src={MissionControlPortrait}
+                  alt="Mission Control"
+                  width={64}
+                  height={64}
                 />
                 <Text>
                   &quot;Management sees your intrepid attempts to access your
