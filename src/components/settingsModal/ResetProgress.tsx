@@ -1,5 +1,4 @@
 import { Button, Col, Row, Space, Typography } from 'antd';
-import Avatar from 'antd/lib/avatar/avatar';
 import { SatchelCharge } from 'assets/other';
 import { MissionControlPortrait } from 'assets/portraits';
 import Image from 'components/Image';
@@ -17,16 +16,11 @@ export default function ResetProgress(props: { hide: () => void }) {
         <Row justify="center" align="middle">
           <Col sm={20} md={16}>
             <Space>
-              <Avatar
-                size={64}
-                src={
-                  <Image
-                    src={MissionControlPortrait}
-                    alt="Reset Warning from Mission Control"
-                    width={64}
-                    height={64}
-                  />
-                }
+              <Image
+                src={MissionControlPortrait}
+                alt="Reset Warning from Mission Control"
+                width={64}
+                height={64}
               />
               <Text>
                 &quot;Careful, miner! Management&apos;s saying this can&apos;t
