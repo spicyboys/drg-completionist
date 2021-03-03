@@ -74,7 +74,7 @@ export default function OverclockCard(props: {
         >
           <img
             alt={`${props.overclock.name} is acquired, but unforged`}
-            src={ForgeHammer}
+            src={ForgeHammer.png}
             style={{
               float: 'left',
               height: isMobile ? 30 : 20,

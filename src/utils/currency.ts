@@ -9,7 +9,7 @@ export type Currency =
   | 'magnite'
   | 'umanite';
 
-export const CurrencyIcons: Record<Currency, string> = {
+export const CurrencyIcons: Record<Currency, ImgSrc> = {
   credits: currencies.Credit,
   bismor: currencies.Bismor,
   croppa: currencies.Croppa,

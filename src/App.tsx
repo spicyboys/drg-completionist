@@ -54,7 +54,8 @@ export default function App() {
   return (
     <Layout style={{ backgroundColor: '#1a1a1a' }}>
       <ToastContainer
-        hideProgressBar
+        autoClose={5000}
+        hideProgressBar={false}
         position="top-center"
         transition={Slide}
       />
@@ -65,9 +66,9 @@ export default function App() {
             <PageHeader
               title="DRG Completionist"
               avatar={{
-                size: 'large',
-                src: Assignment,
                 alt: 'Assignment Icon',
+                size: 'large',
+                src: Assignment.png,
               }}
               extra={
                 <Col xs={0} sm={24} style={{ marginTop: 12 }}>

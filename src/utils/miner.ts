@@ -1,7 +1,4 @@
-import DrillerAvatar from 'assets/portraits/Driller_portrait.png';
-import EngineerAvatar from 'assets/portraits/Engineer_portrait.png';
-import GunnerAvatar from 'assets/portraits/Gunner_portrait.png';
-import ScoutAvatar from 'assets/portraits/Scout_portrait.png';
+import * as Avatars from 'assets/portraits';
 
 export enum Miner {
   Driller = 'Driller',
@@ -17,11 +14,11 @@ export const AllMiners = [
   Miner.Scout,
 ] as const;
 
-export const MinerAvatar: Record<Miner, string> = {
-  [Miner.Driller]: DrillerAvatar,
-  [Miner.Engineer]: EngineerAvatar,
-  [Miner.Gunner]: GunnerAvatar,
-  [Miner.Scout]: ScoutAvatar,
+export const MinerAvatar: Record<Miner, ImgSrc> = {
+  [Miner.Driller]: Avatars.DrillerPortrait,
+  [Miner.Engineer]: Avatars.EngineerPortrait,
+  [Miner.Gunner]: Avatars.GunnerPortrait,
+  [Miner.Scout]: Avatars.ScoutPortrait,
 };
 
 export const MinerColor: Record<Miner, string> = {

@@ -1,7 +1,15 @@
 {
-  "name": "DRG Completionist: Automatic Progress Tracker for Deep Rock Galactic",
+  "name": "DRG Completionist — Progress Tracker for Deep Rock Galactic",
   "short_name": "DRG Completionist",
-  "description": "A free open-source app that assists hard-working dwarves like yourselves in keeping track of all those overclocks and frameworks cluttering up the Space Rig. With this app by your side, you can see just how close you are to becoming Deep Rock Galactic's most valuable employee!",
+  "description": "A free, open-source progressive web app that assists hard-working dwarves like yourselves in keeping track of all those gizmos cluttering up your Space Rig. With this app by your side, you can see just how close you are to becoming Deep Rock Galactic's most valuable employee!",
+  "homepage_url": "https://drg-completionist.com/",
+  "start_url": ".",
+  "lang": "en",
+  "default_locale": "en",
+  "theme_color": "#b37721",
+  "background_color": "#1a1a1a",
+  "display": "standalone",
+  "orientation": "landscape-primary",
   "icons": [
     {
       "src": "favicon.ico",
@@ -19,22 +27,12 @@
       "type": "image/png"
     },
     {
-      "src": "/Mission_control_portrait.png",
-      "type": "image/png"
-    },
-    {
       "src": "/maskable_icon.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     }
   ],
-  "start_url": ".",
-  "homepage_url": "https://drg-completionist.com/",
-  "default_locale": "en",
-  "theme_color": "#b37721",
-  "background_color": "#1a1a1a",
-  "display": "standalone",
   "screenshots": [
     {
       "src": "/summary_large_image.png",

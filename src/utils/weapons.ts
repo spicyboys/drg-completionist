@@ -30,7 +30,7 @@ export const MinerWeapons = {
 
 export type MinerWeapon<T extends Miner> = typeof MinerWeapons[T][number];
 
-export const WeaponOutlines: Record<MinerWeapon<Miner>, string> = {
+export const WeaponOutlines: Record<MinerWeapon<Miner>, ImgSrc> = {
   // Driller
   'CRSPR Flamethrower': outlines.driller.Flamethrower,
   'Cryo Cannon': outlines.driller.CryoCannon,

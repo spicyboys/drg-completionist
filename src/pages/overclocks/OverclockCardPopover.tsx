@@ -1,16 +1,8 @@
-import {
-  Card,
-  Col,
-  Divider,
-  Image,
-  Row,
-  Space,
-  Tooltip,
-  Typography,
-} from 'antd';
+import { Card, Col, Divider, Row, Space, Tooltip, Typography } from 'antd';
 import Meta from 'antd/lib/card/Meta';
 import { memo } from 'react';
 import { Buff as BuffIcon, Nerf as NerfIcon } from 'assets/overclocks/arrows';
+import Image from 'components/Image';
 import { Miner } from 'utils/miner';
 import { MinerWeapon, WeaponOutlines } from 'utils/weapons';
 import { Overclock } from '../../data/overclocks';
@@ -34,12 +26,13 @@ export default memo(function OverclockCardPopover(props: {
             </Col>
             <Col span={8}>
               <Tooltip placement="bottomRight" title={props.weapon}>
-                <Image
-                  alt={props.weapon}
-                  preview={false}
-                  src={WeaponOutlines[props.weapon]}
-                  style={{ height: 50, width: 'auto' }}
-                />
+                <div>
+                  <Image
+                    alt={props.weapon}
+                    src={WeaponOutlines[props.weapon]}
+                    style={{ height: 50, width: 'auto' }}
+                  />
+                </div>
               </Tooltip>
             </Col>
           </Row>
@@ -52,7 +45,7 @@ export default memo(function OverclockCardPopover(props: {
         <Row key={buff} justify="center">
           <Col>
             <Space>
-              <img
+              <Image
                 alt="Buff"
                 src={BuffIcon}
                 style={{ height: 10, width: 'auto' }}
@@ -68,7 +61,7 @@ export default memo(function OverclockCardPopover(props: {
         <Row key={nerf} justify="center">
           <Col>
             <Space>
-              <img
+              <Image
                 alt="Nerf"
                 src={NerfIcon}
                 style={{ height: 10, width: 'auto' }}

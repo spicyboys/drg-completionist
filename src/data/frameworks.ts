@@ -13,7 +13,7 @@ export const Frameworks = [
 
 export type Framework = typeof Frameworks[number];
 
-export const FrameworkIcon: Record<Framework, string> = {
+export const FrameworkIcon: Record<Framework, ImgSrc> = {
   'Custom Engineered': FrameworkIcons.CustomEngineered,
   'Fourth Relic': FrameworkIcons.FourthRelic,
   'Glyphid Trophy Hunter': FrameworkIcons.GlyphidTrophyHunter,

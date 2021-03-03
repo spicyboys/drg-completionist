@@ -1,3 +1,4 @@
+import Image from 'components/Image';
 import { Framework, FrameworkIcon as FrameworkIconMap } from 'data/frameworks';
 
 export default function FrameworkIcon(props: { framework: Framework }) {
@@ -18,7 +19,7 @@ export default function FrameworkIcon(props: { framework: Framework }) {
           left: '50%',
         }}
       >
-        <img
+        <Image
           alt={props.framework}
           src={FrameworkIconMap[props.framework]}
           style={{ height: 100, width: 100 }}

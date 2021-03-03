@@ -2,6 +2,7 @@ import { Button, Col, Row, Space, Typography } from 'antd';
 import Avatar from 'antd/lib/avatar/avatar';
 import { SatchelCharge } from 'assets/other';
 import { MissionControlPortrait } from 'assets/portraits';
+import Image from 'components/Image';
 import useStore from 'store/useStore';
 const { Title, Text } = Typography;
 
@@ -35,7 +36,7 @@ export default function ResetProgress(props: { hide: () => void }) {
             danger
             size="large"
             icon={
-              <img
+              <Image
                 src={SatchelCharge}
                 alt="Reset Progress"
                 style={{

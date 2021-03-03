@@ -26,7 +26,7 @@ export default function OverclockIcon(props: { overclock: Overclock }) {
       >
         <img
           alt={frameName}
-          src={frame}
+          src={frame.png}
           style={{ height: 'auto', width: 'auto' }}
         />
         <div
@@ -39,7 +39,7 @@ export default function OverclockIcon(props: { overclock: Overclock }) {
         >
           <img
             alt={iconName}
-            src={icon}
+            src={icon.png}
             style={{ height: 'auto', width: 'auto' }}
           />
         </div>
