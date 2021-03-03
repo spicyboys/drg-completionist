@@ -1,4 +1,5 @@
-import { Card, Collapse, CollapsePanelProps, Image } from 'antd';
+import { Card, Collapse, CollapsePanelProps } from 'antd';
+import Image from 'components/Image';
 import { Miner, MinerAvatar } from 'utils/miner';
 import MinerCardProgressBar from './MinerCardProgressBar';
 
@@ -24,7 +25,6 @@ export default function MinerCard(
           avatar={
             <Image
               alt={miner}
-              preview={false}
               src={MinerAvatar[miner]}
               style={{ height: 64, width: 64 }}
             />
