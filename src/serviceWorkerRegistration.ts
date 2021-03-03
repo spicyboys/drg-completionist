@@ -22,6 +22,8 @@ const isLocalhost = Boolean(
     )
 );
 
+const notificationDuration = 10;
+
 type Config = {
   onSuccess?: (registration: ServiceWorkerRegistration) => void;
   onUpdate?: (registration: ServiceWorkerRegistration) => void;
@@ -90,9 +92,11 @@ function registerValidSW(swUrl: string, config?: Config) {
 
               // Notify user that page is about to be reloaded
               notification.success({
-                message: 'Update installed!',
-                description: 'Reloading in 5 seconds for update to take effect',
-                duration: 5,
+                message: 'Update Ready!',
+                description:
+                  `App will automatically reload in ${notificationDuration} ` +
+                  `seconds to install the new version.`,
+                duration: notificationDuration,
                 onClick: () => updateAndReloadPage(),
                 onClose: () => updateAndReloadPage(),
               });
@@ -107,12 +111,12 @@ function registerValidSW(swUrl: string, config?: Config) {
               // "Content is cached for offline use." message.
               console.log('Content is cached for offline use.');
 
-              notification.info({
-                message: 'Ready for offline use!',
+              notification.success({
+                message: 'App Ready for Offline Use',
                 description:
-                  'This page has been cached locally and will now work ' +
-                  'without an active internet connection',
-                duration: 5,
+                  'This app has been installed locally and will now ' +
+                  'work without an active Internet connection.',
+                duration: notificationDuration,
               });
 
               // Execute callback
@@ -157,11 +161,14 @@ function checkValidServiceWorker(swUrl: string, config?: Config) {
         'No internet connection found. App is running in offline mode.'
       );
 
-      // Tell user no internet was detected
-      notification.info({
-        message: 'No internet found',
-        description: 'Using offline mode.',
-        duration: 5,
+      // Warn user no internet was detected and cache is being used instead
+      notification.warning({
+        message: 'No Connection Detected',
+        description:
+          'App could not connect to the Internet ' +
+          'and is now running in offline mode. ' +
+          'Any changes you make will still be saved.',
+        duration: notificationDuration,
       });
     });
 }
