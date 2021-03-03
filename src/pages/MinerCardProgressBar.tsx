@@ -20,7 +20,7 @@ export default memo(function MinerCardProgressBar(props: {
             <Image
               alt="100% Complete"
               preview={false}
-              src={RockAndStone}
+              src={RockAndStone.png}
               style={{ height: 20, width: 'auto' }}
             />
           </Tooltip>

@@ -32,28 +32,28 @@ export type MinerWeapon<T extends Miner> = typeof MinerWeapons[T][number];
 
 export const WeaponOutlines: Record<MinerWeapon<Miner>, string> = {
   // Driller
-  'CRSPR Flamethrower': outlines.driller.Flamethrower,
-  'Cryo Cannon': outlines.driller.CryoCannon,
-  'Subata 120': outlines.driller.Subata,
-  'Experimental Plasma Charger': outlines.driller.Epc,
+  'CRSPR Flamethrower': outlines.driller.Flamethrower.png,
+  'Cryo Cannon': outlines.driller.CryoCannon.png,
+  'Subata 120': outlines.driller.Subata.png,
+  'Experimental Plasma Charger': outlines.driller.Epc.png,
 
   // Engineer
-  '"Warthog" Auto 210': outlines.engineer.Shotgun,
-  '"Stubby" Voltaic SMG': outlines.engineer.StubbySMG,
-  'Deepcore 40mm PGL': outlines.engineer.GrenadeLauncher,
-  'Breach Cutter': outlines.engineer.BreachCutter,
+  '"Warthog" Auto 210': outlines.engineer.Shotgun.png,
+  '"Stubby" Voltaic SMG': outlines.engineer.StubbySMG.png,
+  'Deepcore 40mm PGL': outlines.engineer.GrenadeLauncher.png,
+  'Breach Cutter': outlines.engineer.BreachCutter.png,
 
   // Gunner
-  '"Lead Storm" Powered Minigun': outlines.gunner.Minigun,
-  '"Thunderhead" Heavy Autocannon': outlines.gunner.Autocannon,
-  '"Bulldog" Heavy Revolver': outlines.gunner.Revolver,
-  'BRT7 Burst Fire Gun': outlines.gunner.BurstFireGun,
+  '"Lead Storm" Powered Minigun': outlines.gunner.Minigun.png,
+  '"Thunderhead" Heavy Autocannon': outlines.gunner.Autocannon.png,
+  '"Bulldog" Heavy Revolver': outlines.gunner.Revolver.png,
+  'BRT7 Burst Fire Gun': outlines.gunner.BurstFireGun.png,
 
   // Scout
-  'Deepcore GK2': outlines.scout.AssaultRifle,
-  'M1000 Classic': outlines.scout.M1000,
-  'Jury-Rigged Boomstick': outlines.scout.Boomstick,
-  'Zhukov NUK17': outlines.scout.Zhukov,
+  'Deepcore GK2': outlines.scout.AssaultRifle.png,
+  'M1000 Classic': outlines.scout.M1000.png,
+  'Jury-Rigged Boomstick': outlines.scout.Boomstick.png,
+  'Zhukov NUK17': outlines.scout.Zhukov.png,
 };
 
 export const WeaponIDs: Record<MinerWeapon<Miner>, string> = {

@@ -36,7 +36,7 @@ export default function ResetProgress(props: { hide: () => void }) {
             size="large"
             icon={
               <img
-                src={SatchelCharge}
+                src={SatchelCharge.png}
                 alt="Reset Progress"
                 style={{
                   height: 25,

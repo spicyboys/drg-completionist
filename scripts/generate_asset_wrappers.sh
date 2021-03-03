@@ -10,6 +10,7 @@ function generate_index {
     if [[ $file == *.png ]]; then
       images+=( ${file#"$1/"} )
     elif [ -d $file ]; then
+      yarn webpconvert $(realpath $file)
       directories+=( ${file#"$1/"} )
       generate_index $file
     fi
@@ -20,19 +21,23 @@ function generate_index {
   fi
 
   local imports=()
+  local exports=()
   for image in "${images[@]}"; do
     local name=${image%".png"}
     name=$(echo $name | sed -E 's/_(.)/\U\1/g')
     name=${name^}
-    imports+=( "export { default as $name } from './$image';" )
+    imports+=( "import _$name from './$image';" )
+    imports+=( "import _${name}_webp from './$image.webp';" )
+    exports+=( "export const $name = { png: _$name, webp: _${name}_webp };")
   done
 
   for directory in "${directories[@]}"; do
-    imports+=( "export * as $directory from './$directory';" )
+    exports+=( "export * as $directory from './$directory';" )
   done
 
-  local import_string=""
-  printf -v import_string "%s\n" "${imports[@]}"
+  local export_string=""
+  imports+=( "${exports[@]}" )
+  printf -v export_string "%s\n" "${imports[@]}"
 
   cat << EOF > $1/index.ts
 /**
@@ -40,7 +45,7 @@ function generate_index {
  * To update it, run \`yarn run update-codegen\`
  */
 
-$import_string
+$export_string
 EOF
 
   truncate -s -1 "$1/index.ts"

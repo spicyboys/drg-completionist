@@ -81,6 +81,7 @@
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "2.2.1",
-    "serve": "^11.3.2"
+    "serve": "^11.3.2",
+    "webpconvert": "^1.1.3"
   }
 }

@@ -10,13 +10,13 @@ export type Currency =
   | 'umanite';
 
 export const CurrencyIcons: Record<Currency, string> = {
-  credits: currencies.Credit,
-  bismor: currencies.Bismor,
-  croppa: currencies.Croppa,
-  enorPearl: currencies.EnorPearl,
-  jadiz: currencies.Jadiz,
-  magnite: currencies.Magnite,
-  umanite: currencies.Umanite,
+  credits: currencies.Credit.png,
+  bismor: currencies.Bismor.png,
+  croppa: currencies.Croppa.png,
+  enorPearl: currencies.EnorPearl.png,
+  jadiz: currencies.Jadiz.png,
+  magnite: currencies.Magnite.png,
+  umanite: currencies.Umanite.png,
 };
 
 export const CurrencyNames: Record<Currency, string> = {

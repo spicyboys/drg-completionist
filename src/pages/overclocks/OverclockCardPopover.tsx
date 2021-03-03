@@ -54,7 +54,7 @@ export default memo(function OverclockCardPopover(props: {
             <Space>
               <img
                 alt="Buff"
-                src={BuffIcon}
+                src={BuffIcon.png}
                 style={{ height: 10, width: 'auto' }}
               />
               <Text strong type="success">
@@ -70,7 +70,7 @@ export default memo(function OverclockCardPopover(props: {
             <Space>
               <img
                 alt="Nerf"
-                src={NerfIcon}
+                src={NerfIcon.png}
                 style={{ height: 10, width: 'auto' }}
               />
               <Text strong type="danger">
