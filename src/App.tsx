@@ -68,7 +68,7 @@ export default function App() {
               avatar={{
                 alt: 'Assignment Icon',
                 size: 'large',
-                src: Assignment.png,
+                src: Assignment.webp || Assignment.png,
               }}
               extra={
                 <Col xs={0} sm={24} style={{ marginTop: 12 }}>

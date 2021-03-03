@@ -105,7 +105,9 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
               <Space>
                 <Avatar
                   size={64}
-                  src={MissionControlPortrait}
+                  src={
+                    MissionControlPortrait.webp || MissionControlPortrait.png
+                  }
                   alt="Mission Control"
                 />
                 <Text>
