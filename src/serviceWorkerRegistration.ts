@@ -1,4 +1,3 @@
-import { isMobile } from 'react-device-detect';
 import { toast } from 'react-toastify';
 
 // This optional code is used to register a service worker.
@@ -89,22 +88,19 @@ function registerValidSW(swUrl: string, config?: Config) {
                 }
               };
 
-              toast.info(
-                `Update available! ${
-                  isMobile ? 'Tap' : 'Click'
-                } here to upgrade.`,
-                {
-                  onClick: () => updateAndReloadPage(),
-                  autoClose: false,
-                  closeOnClick: false,
-                  draggable: false,
-                  hideProgressBar: false,
-                  pauseOnHover: true,
-                  position: 'top-center',
-                  progress: undefined,
-                  toastId: 'swUpdateAvailable',
-                }
-              );
+              // Notify user that page is about to be reloaded
+              toast.success(`Update installed! Reloading in 5 seconds.`, {
+                onClick: () => updateAndReloadPage(),
+                onClose: () => updateAndReloadPage(),
+                autoClose: 5000,
+                closeOnClick: false,
+                draggable: true,
+                hideProgressBar: false,
+                pauseOnHover: true,
+                position: 'top-center',
+                progress: undefined,
+                toastId: 'swUpdateAvailable',
+              });
 
               // Execute callback
               if (config && config.onUpdate) {
