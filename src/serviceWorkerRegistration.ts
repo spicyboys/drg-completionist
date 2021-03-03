@@ -111,7 +111,7 @@ function registerValidSW(swUrl: string, config?: Config) {
               // "Content is cached for offline use." message.
               console.log('Content is cached for offline use.');
 
-              notification.success({
+              notification.info({
                 message: 'App Ready for Offline Use',
                 description:
                   'This app has been installed locally and will now ' +
@@ -162,7 +162,7 @@ function checkValidServiceWorker(swUrl: string, config?: Config) {
       );
 
       // Warn user no internet was detected and cache is being used instead
-      notification.warning({
+      notification.warn({
         message: 'No Connection Detected',
         description:
           'App could not connect to the Internet ' +
