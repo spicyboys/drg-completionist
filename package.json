@@ -49,6 +49,7 @@
     "babel-plugin-import": "^1.13.3",
     "dexie": "^3.1-alpha",
     "dexie-react-hooks": "^1.0.6",
+    "framer-motion": "^3.10.0",
     "react": "^17.0.1",
     "react-device-detect": "^1.15.0",
     "react-dom": "^17.0.1",

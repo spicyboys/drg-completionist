@@ -1,7 +1,8 @@
 import { Col, BackTop, Layout, Row, Spin } from 'antd';
 import 'antd/dist/antd.dark.css';
 import React, { lazy } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import PreloadRoutes from 'PreloadRoutes';
+import Routes from 'Routes';
 import PageFooter from 'components/PageFooter';
 import PageHeader from 'components/PageHeader';
 import useDB from 'db/useDB';
@@ -61,36 +62,22 @@ export default function App() {
             <PageHeader />
           </Col>
           <Col xs={22} lg={18}>
-            <Switch>
-              {TABS.map((tab) => (
-                <Route
-                  exact
-                  path={
-                    [
-                      `/${tab.key}`,
-                      tab.key === DEFAULT_TAB ? '/' : undefined,
-                    ].filter((x) => x !== undefined) as string[]
-                  }
-                  key={tab.key}
+            <React.Suspense
+              fallback={
+                <div
+                  style={{
+                    lineHeight: '50vh',
+                    width: '100%',
+                    textAlign: 'center',
+                  }}
                 >
-                  <React.Suspense
-                    fallback={
-                      <div
-                        style={{
-                          lineHeight: '50vh',
-                          width: '100%',
-                          textAlign: 'center',
-                        }}
-                      >
-                        <Spin />
-                      </div>
-                    }
-                  >
-                    <tab.content />
-                  </React.Suspense>
-                </Route>
-              ))}
-            </Switch>
+                  <Spin />
+                </div>
+              }
+            >
+              <PreloadRoutes />
+              <Routes />
+            </React.Suspense>
           </Col>
         </Row>
       </Content>
