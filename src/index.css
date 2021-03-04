@@ -73,3 +73,9 @@ code {
 ::-webkit-scrollbar-corner {
   background-color: transparent;
 }
+
+/* Loader styling */
+
+.loading {
+  height: 8px;
+}

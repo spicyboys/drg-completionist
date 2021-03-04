@@ -1,9 +1,9 @@
 import { Image, Progress, Tooltip } from 'antd';
-import { useLiveQuery } from 'dexie-react-hooks';
 import { memo } from 'react';
 import { RockAndStone } from 'assets/other';
 import type { AppDatabase } from 'db/AppDatabase';
 import useDB from 'db/useDB';
+import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
 import { Miner, MinerColor } from 'utils/miner';
 
 export type ProgressQuery = (db: AppDatabase, miner: Miner) => Promise<number>;
@@ -16,7 +16,7 @@ export default memo(function MinerCardProgressBar({
   getProgress: ProgressQuery;
 }) {
   const db = useDB();
-  const progress = useLiveQuery(() => getProgress(db, miner), [
+  const progress = useSuspendedLiveQuery(() => getProgress(db, miner), [
     miner,
     getProgress,
   ]);

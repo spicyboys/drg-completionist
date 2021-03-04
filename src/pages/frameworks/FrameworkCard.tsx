@@ -1,9 +1,9 @@
 import { Card, Col, Tooltip } from 'antd';
-import { useLiveQuery } from 'dexie-react-hooks';
 import { useCallback } from 'react';
 import { isMobile } from 'react-device-detect';
 import { Framework } from 'data/frameworks';
 import useDB from 'db/useDB';
+import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
 import { Miner, MinerColor } from 'utils/miner';
 import { MinerWeapon } from 'utils/weapons';
 import FrameworkIcon from './FrameworkIcon';
@@ -14,8 +14,9 @@ export default function FrameworkCard(props: {
   framework: Framework;
 }) {
   const db = useDB();
-  const query = useLiveQuery(() =>
-    db.frameworks.get({ weapon: props.weapon, name: props.framework })
+  const query = useSuspendedLiveQuery(
+    () => db.frameworks.get({ weapon: props.weapon, name: props.framework }),
+    [props.weapon, props.framework]
   );
 
   const onClick = useCallback(() => {

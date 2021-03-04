@@ -1,12 +1,12 @@
 import InfoCircleOutlined from '@ant-design/icons/InfoCircleOutlined';
 import { Card, Col, Popover, Tooltip } from 'antd';
-import { useLiveQuery } from 'dexie-react-hooks';
 import { useCallback } from 'react';
 import { isMobile } from 'react-device-detect';
 import { ForgeHammer } from 'assets/other';
 import Image from 'components/Image';
 import { Overclock } from 'data/overclocks';
 import useDB from 'db/useDB';
+import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
 import { Miner, MinerColor, MinerColorContrastText } from 'utils/miner';
 import { MinerWeapon } from 'utils/weapons';
 import OverclockCardPopover from './OverclockCardPopover';
@@ -18,8 +18,10 @@ export default function OverclockCard(props: {
   weapon: MinerWeapon<Miner>;
 }) {
   const db = useDB();
-  const query = useLiveQuery(() =>
-    db.overclocks.get({ weapon: props.weapon, name: props.overclock.name })
+  const query = useSuspendedLiveQuery(
+    () =>
+      db.overclocks.get({ weapon: props.weapon, name: props.overclock.name }),
+    [props.weapon, props.overclock.name]
   );
 
   const onClick = useCallback(() => {
