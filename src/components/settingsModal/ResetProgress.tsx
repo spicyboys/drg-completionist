@@ -2,11 +2,11 @@ import { Button, Col, Row, Space, Typography } from 'antd';
 import { SatchelCharge } from 'assets/other';
 import { MissionControlPortrait } from 'assets/portraits';
 import Image from 'components/Image';
-import useStore from 'store/useStore';
+import useDB from 'db/useDB';
 const { Title, Text } = Typography;
 
 export default function ResetProgress(props: { hide: () => void }) {
-  const [, dispatch] = useStore();
+  const db = useDB();
   return (
     <Row justify="center">
       <Space size="middle" direction="vertical">
@@ -47,8 +47,10 @@ export default function ResetProgress(props: { hide: () => void }) {
               />
             }
             onClick={() => {
-              dispatch({ type: 'RESET' });
-              props.hide();
+              Promise.all([
+                db.frameworks.clear(),
+                db.overclocks.clear(),
+              ]).then(() => props.hide());
             }}
           >
             Reset

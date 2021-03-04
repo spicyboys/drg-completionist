@@ -1,13 +1,10 @@
-import { useWorker } from '@koale/useworker';
-import { useEffect, useRef, useState } from 'react';
-import { serialize } from 'serializr';
+import { useLiveQuery } from 'dexie-react-hooks';
+import { useMemo } from 'react';
 import { TabName } from 'App';
 import { Frameworks } from 'data/frameworks';
 import { Overclocks } from 'data/overclocks';
-import { schema } from 'store/usePersistedStore';
-import useStore from 'store/useStore';
+import useDB from 'db/useDB';
 import { MinerWeapons } from 'utils/weapons';
-import calculateTabProgress from './calculateTabProgress';
 
 type TabProgress = {
   progress: number;
@@ -17,50 +14,57 @@ type TabProgress = {
 export default function useCurrentTabProgress(
   currentTab: TabName
 ): TabProgress {
-  const [store] = useStore();
-  const [isRunning, setIsRunning] = useState(false);
-  const [progress, setProgress] = useState<TabProgress>({
-    progress: 0,
-    partialProgress: null,
-  });
+  const db = useDB();
 
-  const [calculateTabProgressWorker] = useWorker(calculateTabProgress);
-
-  const previousStore = useRef<string | null>(null);
-  const previousTab = useRef<TabName | null>(null);
-  useEffect(() => {
-    if (isRunning) {
-      // If the worker is currently running, we can't start it again.
-      return;
+  const totalItems = useMemo(() => {
+    switch (currentTab) {
+      case 'frameworks':
+        return (
+          Frameworks.length *
+          Object.values(MinerWeapons).reduce((p, c) => p + c.length, 0)
+        );
+      case 'overclocks':
+        return Object.values(Overclocks)
+          .flatMap((w) => Object.values(w))
+          .flat().length;
     }
+  }, [currentTab]);
 
-    // Deep object comparison with complex data structues requires us to
-    // serialize the store and stringify it
-    const serializedStore = JSON.stringify(serialize(schema, store));
-
-    if (
-      previousStore.current === serializedStore &&
-      previousTab.current === currentTab
-    ) {
-      // We've already processed the current set of data
-      return;
+  const p = useLiveQuery(
+    async () => {
+      switch (currentTab) {
+        case 'frameworks': {
+          const acquiredFrameworks = await db.frameworks.count();
+          return {
+            progress: (acquiredFrameworks / totalItems) * 100,
+            partialProgress: null,
+          };
+        }
+        case 'overclocks': {
+          const acquiredOverclocks = await db.overclocks.toArray();
+          return {
+            progress:
+              (acquiredOverclocks.filter((o) => o.isForged).length /
+                totalItems) *
+              100,
+            partialProgress:
+              (acquiredOverclocks.filter((o) => !o.isForged).length /
+                totalItems) *
+              100,
+          };
+        }
+      }
+    },
+    [currentTab],
+    {
+      progress: 0,
+      partialProgress: null,
     }
+  );
 
-    setIsRunning(true);
-    calculateTabProgressWorker(
-      currentTab,
-      store,
-      Frameworks,
-      Overclocks,
-      MinerWeapons
-    )
-      .then((tabProgress) => {
-        previousStore.current = serializedStore;
-        previousTab.current = currentTab;
-        setProgress(tabProgress);
-      })
-      .finally(() => setIsRunning(false));
-  }, [calculateTabProgressWorker, isRunning, currentTab, store]);
-
-  return progress;
+  return {
+    progress: Math.round(p.progress),
+    partialProgress:
+      p.partialProgress === null ? null : Math.round(p.partialProgress),
+  };
 }

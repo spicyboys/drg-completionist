@@ -1,13 +1,13 @@
 import { Framework, FrameworkIDs } from 'data/frameworks';
-import { Miner } from 'utils/miner';
+import type { FrameworkEntry } from 'db/AppDatabase';
 import { flipObject } from 'utils/object';
-import { SaveFile } from 'utils/save-parser';
-import { MinerWeapon, WeaponIDs } from 'utils/weapons';
+import type { SaveFile } from 'utils/save-parser';
+import { WeaponIDs } from 'utils/weapons';
 
 export const getFrameworksFromSaveFile = ({
   UnlockedItemSkins: unlockedItemSkins,
-}: SaveFile): Map<MinerWeapon<Miner>, Set<Framework>> => {
-  const acquiredFrameworks: Map<MinerWeapon<Miner>, Set<Framework>> = new Map();
+}: SaveFile): FrameworkEntry[] => {
+  const acquiredFrameworks: FrameworkEntry[] = [];
   const weaponIDs = flipObject(WeaponIDs);
   Object.entries(unlockedItemSkins).forEach(([weaponID, frameworkIDs]) => {
     const weapon = weaponIDs[weaponID];
@@ -20,7 +20,9 @@ export const getFrameworksFromSaveFile = ({
           flipObject(FrameworkIDs[weapon])[frameworkID] as Framework | undefined
       )
       .filter((f) => f !== undefined) as Framework[];
-    acquiredFrameworks.set(weapon, new Set(frameworks));
+    for (const framework of frameworks) {
+      acquiredFrameworks.push({ weapon: weapon, name: framework });
+    }
   });
   return acquiredFrameworks;
 };

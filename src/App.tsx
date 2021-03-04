@@ -4,6 +4,8 @@ import React, { lazy } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import PageFooter from 'components/PageFooter';
 import PageHeader from 'components/PageHeader';
+import useDB from 'db/useDB';
+import migrateStore from 'store/migrateStore';
 
 const { Content } = Layout;
 
@@ -47,6 +49,9 @@ export const TABS: Array<{
 ];
 
 export default function App() {
+  const db = useDB();
+  migrateStore(db);
+
   return (
     <Layout style={{ backgroundColor: '#1a1a1a' }}>
       <BackTop style={{ bottom: 110 }} />

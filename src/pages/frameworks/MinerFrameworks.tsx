@@ -2,14 +2,12 @@ import { Row } from 'antd';
 import React from 'react';
 import WeaponDivider from 'components/WeaponDivider';
 import { Frameworks } from 'data/frameworks';
-import useStore from 'store/useStore';
 import { Miner } from 'utils/miner';
 import { MinerWeapon, MinerWeapons } from 'utils/weapons';
 import FrameworkCard from './FrameworkCard';
 
 export default function MinerFrameworks<T extends Miner>(props: { miner: T }) {
   const { miner } = props;
-  const [acquiredFrameworks, dispatch] = useStore('frameworks');
 
   return (
     <>
@@ -21,19 +19,8 @@ export default function MinerFrameworks<T extends Miner>(props: { miner: T }) {
               <FrameworkCard
                 key={framework}
                 miner={miner}
+                weapon={weapon}
                 framework={framework}
-                isAcquired={
-                  acquiredFrameworks.get(weapon)?.has(framework) ?? false
-                }
-                onClick={() =>
-                  dispatch({
-                    type: 'TOGGLE_FRAMEWORK',
-                    payload: {
-                      weapon,
-                      framework,
-                    },
-                  })
-                }
               />
             ))}
           </Row>

@@ -3,17 +3,17 @@ import React from 'react';
 import { render } from 'react-dom';
 import './index.css';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Store from 'store/Store';
+import DBContextProvider from 'db/DBContext';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 render(
   <React.StrictMode>
-    <Store>
+    <DBContextProvider>
       <Router>
         <App />
       </Router>
-    </Store>
+    </DBContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
