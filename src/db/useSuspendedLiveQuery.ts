@@ -7,8 +7,8 @@ export default function useSuspendedLiveQuery<T>(
   querier: () => Promise<T>,
   dependencies: unknown[]
 ): T {
-  const initialData = usePromise(async () => {
-    await Promise.all([
+  const [initialData] = usePromise(async () => {
+    return await Promise.all([
       querier(),
       // Oh look at you, Mr. Smart man, sitting on your high throne, looking
       // down on me. Who are we if not feeble humans circling this empty

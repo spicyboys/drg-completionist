@@ -16,10 +16,7 @@ export default memo(function MinerCardProgressBar({
   getProgress: ProgressQuery;
 }) {
   const db = useDB();
-  const progress = useSuspendedLiveQuery(() => getProgress(db, miner), [
-    miner,
-    getProgress,
-  ]);
+  const progress = useSuspendedLiveQuery(() => getProgress(db, miner), [miner]);
 
   return (
     <Progress
