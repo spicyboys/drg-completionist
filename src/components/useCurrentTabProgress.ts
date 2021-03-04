@@ -55,7 +55,7 @@ export default function useCurrentTabProgress(
         }
       }
     },
-    [],
+    [currentTab],
     {
       progress: 0,
       partialProgress: null,
