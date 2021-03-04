@@ -2,6 +2,37 @@
   "name": "drg-completionist",
   "version": "1.3.2",
   "private": true,
+  "scripts": {
+    "start": "craco start",
+    "start-task": "set BROWSER=none && craco start",
+    "build": "craco build",
+    "serve-build": "craco build && serve -s build",
+    "test": "react-scripts test",
+    "eject": "craco eject",
+    "lint": "yarn eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "yarn prettier --write .",
+    "clean": "yarn lint && yarn format",
+    "update-assets": "scripts/generate_asset_wrappers.sh && yarn clean",
+    "update-save-parser": "wasm-pack build save-parser --release --out-dir ../src/utils/save-parser --out-name index"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "dependencies": {
     "@craco/craco": "^6.1.1",
     "@koale/useworker": "^3.4.0",
@@ -39,37 +70,6 @@
     "workbox-routing": "^6.1.1",
     "workbox-strategies": "^6.1.1",
     "workbox-streams": "^6.1.1"
-  },
-  "scripts": {
-    "start": "craco start",
-    "start-task": "set BROWSER=none && craco start",
-    "build": "craco build",
-    "serve-build": "craco build && serve -s build",
-    "test": "react-scripts test",
-    "eject": "craco eject",
-    "lint": "yarn eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "format": "yarn prettier --write .",
-    "clean": "yarn lint && yarn format",
-    "update-assets": "scripts/generate_asset_wrappers.sh && yarn clean",
-    "update-save-parser": "wasm-pack build save-parser --release --out-dir ../src/utils/save-parser --out-name index"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.16.1",
