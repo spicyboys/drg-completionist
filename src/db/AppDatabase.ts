@@ -1,4 +1,5 @@
 import { Dexie } from 'dexie';
+import { Framework } from 'data/frameworks';
 import { Miner } from 'utils/miner';
 import { MinerWeapon } from 'utils/weapons';
 
@@ -7,7 +8,10 @@ export class AppDatabase extends Dexie {
     { weapon: MinerWeapon<Miner>; name: string; isForged: boolean },
     number
   >;
-  frameworks: Dexie.Table<{ weapon: MinerWeapon<Miner>; name: string }, number>;
+  frameworks: Dexie.Table<
+    { weapon: MinerWeapon<Miner>; name: Framework },
+    number
+  >;
 
   constructor() {
     super('DRG-Completionist');

@@ -20,7 +20,6 @@ export default memo(function MinerCardProgressBar({
     miner,
     getProgress,
   ]);
-  console.log(progress);
 
   return (
     <Progress
