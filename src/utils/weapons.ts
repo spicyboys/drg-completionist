@@ -1,4 +1,4 @@
-import { outlines } from 'assets/weapons';
+import outlines from 'assets/weapons/outlines';
 import { Miner } from 'utils/miner';
 
 export const MinerWeapons = {

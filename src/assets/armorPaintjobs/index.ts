@@ -3,8 +3,10 @@
  * To update it, run `yarn run update-codegen`
  */
 
-export * as AllClass from './AllClass';
-export * as Driller from './Driller';
-export * as Engineer from './Engineer';
-export * as Gunner from './Gunner';
-export * as Scout from './Scout';
+import * as AllClass from './AllClass';
+import * as Driller from './Driller';
+import * as Engineer from './Engineer';
+import * as Gunner from './Gunner';
+import * as Scout from './Scout';
+const _imports = { AllClass,Driller,Engineer,Gunner,Scout };
+export default _imports;

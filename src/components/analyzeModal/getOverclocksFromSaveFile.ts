@@ -9,40 +9,16 @@ import { MinerWeapon } from 'utils/weapons';
  */
 export const getOverclocksFromSaveFile = ({
   SchematicSave: {
-    SchematicSave: { ForgedSchematics: forgedSchematics },
+    SchematicSave: {
+      ForgedSchematics: forgedSchematics,
+      OwnedSchematics: unforgedSchematics,
+    },
   },
-}: SaveFile): Map<MinerWeapon<Miner>, Set<string>> => {
-  const acquiredOverclocks: Map<MinerWeapon<Miner>, Set<string>> = new Map();
-  Object.entries(
-    Object.values(Overclocks).reduce(
-      (p, c) => Object.assign(p, c),
-      {}
-    ) as Record<MinerWeapon<Miner>, Overclock[]>
-  ).forEach(([weapon, overclocks]) => {
-    for (const overclock of overclocks) {
-      if (forgedSchematics.some((f) => overclock.id === f)) {
-        let acquiredWeaponOverclocks = acquiredOverclocks.get(
-          weapon as MinerWeapon<Miner>
-        );
-        if (acquiredWeaponOverclocks === undefined) {
-          acquiredWeaponOverclocks = new Set();
-        }
-        acquiredWeaponOverclocks.add(overclock.name);
-        acquiredOverclocks.set(
-          weapon as MinerWeapon<Miner>,
-          acquiredWeaponOverclocks
-        );
-      }
-    }
-  });
-  return acquiredOverclocks;
-};
-
-export const getUnforgedOverclocksFromSaveFile = ({
-  SchematicSave: {
-    SchematicSave: { OwnedSchematics: unforgedSchematics },
-  },
-}: SaveFile): Map<MinerWeapon<Miner>, Set<string>> => {
+}: SaveFile): {
+  forged: Map<MinerWeapon<Miner>, Set<string>>;
+  unforged: Map<MinerWeapon<Miner>, Set<string>>;
+} => {
+  const forgedOverclocks: Map<MinerWeapon<Miner>, Set<string>> = new Map();
   const unforgedOverclocks: Map<MinerWeapon<Miner>, Set<string>> = new Map();
   Object.entries(
     Object.values(Overclocks).reduce(
@@ -51,6 +27,19 @@ export const getUnforgedOverclocksFromSaveFile = ({
     ) as Record<MinerWeapon<Miner>, Overclock[]>
   ).forEach(([weapon, overclocks]) => {
     for (const overclock of overclocks) {
+      if (forgedSchematics.some((f) => overclock.id === f)) {
+        let acquiredWeaponOverclocks = forgedOverclocks.get(
+          weapon as MinerWeapon<Miner>
+        );
+        if (acquiredWeaponOverclocks === undefined) {
+          acquiredWeaponOverclocks = new Set();
+        }
+        acquiredWeaponOverclocks.add(overclock.name);
+        forgedOverclocks.set(
+          weapon as MinerWeapon<Miner>,
+          acquiredWeaponOverclocks
+        );
+      }
       if (unforgedSchematics.some((f) => overclock.id === f)) {
         let unforgedWeaponOverclocks = unforgedOverclocks.get(
           weapon as MinerWeapon<Miner>
@@ -66,5 +55,8 @@ export const getUnforgedOverclocksFromSaveFile = ({
       }
     }
   });
-  return unforgedOverclocks;
+  return {
+    forged: forgedOverclocks,
+    unforged: unforgedOverclocks,
+  };
 };

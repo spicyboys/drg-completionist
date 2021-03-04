@@ -1,5 +1,6 @@
 import * as frames from 'assets/overclocks/frames';
 import * as icons from 'assets/overclocks/icons';
+import Image from 'components/Image';
 import { Overclock } from 'data/overclocks';
 
 export default function OverclockIcon(props: { overclock: Overclock }) {
@@ -24,9 +25,9 @@ export default function OverclockIcon(props: { overclock: Overclock }) {
           left: '50%',
         }}
       >
-        <img
+        <Image
           alt={frameName}
-          src={frame.png}
+          src={frame}
           style={{ height: 'auto', width: 'auto' }}
         />
         <div
@@ -37,9 +38,9 @@ export default function OverclockIcon(props: { overclock: Overclock }) {
             left: '50%',
           }}
         >
-          <img
+          <Image
             alt={iconName}
-            src={icon.png}
+            src={icon}
             style={{ height: 'auto', width: 'auto' }}
           />
         </div>

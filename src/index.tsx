@@ -1,3 +1,4 @@
+import { notification } from 'antd';
 import React from 'react';
 import { render } from 'react-dom';
 import './index.css';
@@ -16,5 +17,9 @@ render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+notification.config({
+  placement: 'bottomRight',
+});
 
 serviceWorkerRegistration.register();

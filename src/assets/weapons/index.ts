@@ -3,5 +3,7 @@
  * To update it, run `yarn run update-codegen`
  */
 
-export * as images from './images';
-export * as outlines from './outlines';
+import * as images from './images';
+import * as outlines from './outlines';
+const _imports = { images,outlines };
+export default _imports;

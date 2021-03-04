@@ -1,4 +1,4 @@
-import { toast } from 'react-toastify';
+import { notification } from 'antd';
 
 // This optional code is used to register a service worker.
 // register() is not called by default.
@@ -21,6 +21,8 @@ const isLocalhost = Boolean(
       /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
     )
 );
+
+const notificationDuration = 10;
 
 type Config = {
   onSuccess?: (registration: ServiceWorkerRegistration) => void;
@@ -89,17 +91,14 @@ function registerValidSW(swUrl: string, config?: Config) {
               };
 
               // Notify user that page is about to be reloaded
-              toast.success(`Update installed! Reloading in 5 seconds.`, {
+              notification.success({
+                message: 'Update Ready!',
+                description:
+                  `App will automatically reload in ${notificationDuration} ` +
+                  `seconds to install the latest version.`,
+                duration: notificationDuration,
                 onClick: () => updateAndReloadPage(),
                 onClose: () => updateAndReloadPage(),
-                autoClose: 5000,
-                closeOnClick: false,
-                draggable: true,
-                hideProgressBar: false,
-                pauseOnHover: true,
-                position: 'top-center',
-                progress: undefined,
-                toastId: 'swUpdateAvailable',
               });
 
               // Execute callback
@@ -112,15 +111,12 @@ function registerValidSW(swUrl: string, config?: Config) {
               // "Content is cached for offline use." message.
               console.log('Content is cached for offline use.');
 
-              toast.info(`App is now ready for offline use!`, {
-                autoClose: 5000,
-                closeOnClick: false,
-                draggable: true,
-                hideProgressBar: false,
-                pauseOnHover: true,
-                position: 'top-center',
-                progress: undefined,
-                toastId: 'swCachedOffline',
+              notification.info({
+                message: 'App Ready for Offline Use',
+                description:
+                  'This app has been installed locally and will now ' +
+                  'work without an active Internet connection.',
+                duration: notificationDuration,
               });
 
               // Execute callback
@@ -131,6 +127,26 @@ function registerValidSW(swUrl: string, config?: Config) {
           }
         };
       };
+
+      // Check if user is in offline mode
+      fetch(swUrl, {
+        headers: { 'Service-Worker': 'script' },
+      }).catch(() => {
+        // Warn user app is in offline mode
+        console.log(
+          'No internet connection found. App is running in offline mode.'
+        );
+
+        // Warn user no internet was detected and cache is being used instead
+        notification.warn({
+          message: 'No Connection Detected',
+          description:
+            'App could not connect to the Internet ' +
+            'and is now running in offline mode. ' +
+            'Any changes you make will still be saved.',
+          duration: notificationDuration,
+        });
+      });
     })
     .catch((error) => {
       console.error('Error during service worker registration:', error);
@@ -162,19 +178,17 @@ function checkValidServiceWorker(swUrl: string, config?: Config) {
     })
     .catch(() => {
       console.log(
-        'No internet connection found. App is running in offline mode.'
+        'No internet connection found in localhost. App is running in offline mode.'
       );
 
-      // Tell user no internet was detected
-      toast.info(`No internet found. Using offline mode.`, {
-        autoClose: 5000,
-        closeOnClick: false,
-        draggable: true,
-        hideProgressBar: false,
-        pauseOnHover: true,
-        position: 'top-center',
-        progress: undefined,
-        toastId: 'swNoInternet',
+      // Warn user no internet was detected and cache is being used instead
+      notification.warn({
+        message: 'No Connection Detected',
+        description:
+          'App could not connect to the Internet ' +
+          'and is now running in offline mode. ' +
+          'Any changes you make will still be saved.',
+        duration: notificationDuration,
       });
     });
 }
