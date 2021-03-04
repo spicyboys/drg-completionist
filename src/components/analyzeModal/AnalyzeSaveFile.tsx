@@ -52,25 +52,24 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
         const getCount = (d: Map<unknown, Set<unknown>>) =>
           Array.from(d.values()).reduce((p, c) => p + c.size, 0);
         notification.success({
-          message: 'Save file analysis successful!',
+          message: <Text type="success">Save File Analyzed!</Text>,
           description: `Successfully imported ${
             getCount(overclocks.forged) + getCount(overclocks.unforged)
-          } overclocks (${getCount(overclocks.forged)} forged and ${getCount(
-            overclocks.unforged
-          )} unforged) and ${getCount(frameworks)} frameworks.`,
+          } Overclocks and ${getCount(frameworks)} Weapon Frameworks.`,
           duration: 10,
         });
 
-        // Hide the analyze modal
+        // Hide the Analyze modal
         props.hide();
       } catch (e) {
+        // Catch file analysis errors
         gtag('event', 'exception', {
           description: e,
           fatal: false,
         });
         notification.error({
-          message: 'Got an error when analyzing save file',
-          description: e.message,
+          message: <Text type="danger">Error Analyzing Save File:</Text>,
+          description: <Text code>{e.message}</Text>,
           duration: 10,
         });
         console.error(e);
