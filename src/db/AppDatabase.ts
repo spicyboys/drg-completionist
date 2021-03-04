@@ -4,14 +4,8 @@ import { Miner } from 'utils/miner';
 import { MinerWeapon } from 'utils/weapons';
 
 export class AppDatabase extends Dexie {
-  overclocks: Dexie.Table<
-    { weapon: MinerWeapon<Miner>; name: string; isForged: boolean },
-    number
-  >;
-  frameworks: Dexie.Table<
-    { weapon: MinerWeapon<Miner>; name: Framework },
-    number
-  >;
+  overclocks: Dexie.Table<OverclockEntry, number>;
+  frameworks: Dexie.Table<FrameworkEntry, number>;
 
   constructor() {
     super('DRG-Completionist');
@@ -24,3 +18,11 @@ export class AppDatabase extends Dexie {
     this.frameworks = this.table('frameworks');
   }
 }
+
+export type OverclockEntry = {
+  weapon: MinerWeapon<Miner>;
+  name: string;
+  isForged: boolean;
+};
+
+export type FrameworkEntry = { weapon: MinerWeapon<Miner>; name: Framework };
