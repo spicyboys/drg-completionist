@@ -12,8 +12,8 @@ export class AppDatabase extends Dexie {
   constructor() {
     super('DRG-Completionist');
     this.version(1).stores({
-      overclocks: '[weapon+name]',
-      frameworks: '[weapon+name]',
+      overclocks: '[weapon+name], weapon',
+      frameworks: '[weapon+name], weapon',
     });
 
     this.overclocks = this.table('overclocks');
