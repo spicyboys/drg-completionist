@@ -52,23 +52,24 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
         // Show the user a success notification with how many items were
         // successfully imported
         notification.success({
-          message: 'Save file analysis successful!',
+          message: <Text type="success">Save File Analyzed!</Text>,
           description:
-            `Successfully imported ${overclocks.length} overclocks and ` +
-            `${frameworks.length} frameworks.`,
+            `Successfully imported ${overclocks.length} Overclocks and ` +
+            `${frameworks.length} Weapon Frameworks.`,
           duration: 10,
         });
 
-        // Hide the analyze modal
+        // Hide the Analyze modal
         props.hide();
       } catch (e) {
+        // Catch file analysis errors
         gtag('event', 'exception', {
           description: e,
           fatal: false,
         });
         notification.error({
-          message: 'Got an error when analyzing save file',
-          description: e.message,
+          message: <Text type="danger">Error Analyzing Save File:</Text>,
+          description: <Text code>{e.message}</Text>,
           duration: 10,
         });
         console.error(e);

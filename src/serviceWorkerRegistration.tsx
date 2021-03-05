@@ -1,4 +1,5 @@
-import { notification } from 'antd';
+import { notification, Typography } from 'antd';
+const { Text } = Typography;
 
 // This optional code is used to register a service worker.
 // register() is not called by default.
@@ -92,7 +93,7 @@ function registerValidSW(swUrl: string, config?: Config) {
 
               // Notify user that page is about to be reloaded
               notification.success({
-                message: 'Update Ready!',
+                message: <Text type="success">Update Ready!</Text>,
                 description:
                   `App will automatically reload in ${notificationDuration} ` +
                   `seconds to install the latest version.`,
@@ -112,9 +113,14 @@ function registerValidSW(swUrl: string, config?: Config) {
               console.log('Content is cached for offline use.');
 
               notification.info({
-                message: 'App Ready for Offline Use',
+                message: (
+                  // This is the same color blue as the Info icon
+                  <Text style={{ color: '#1890ff' }}>
+                    App Ready for Offline Use
+                  </Text>
+                ),
                 description:
-                  'This app has been installed locally and will now ' +
+                  'This app can now be installed locally and will also ' +
                   'work without an active Internet connection.',
                 duration: notificationDuration,
               });
@@ -139,7 +145,7 @@ function registerValidSW(swUrl: string, config?: Config) {
 
         // Warn user no internet was detected and cache is being used instead
         notification.warn({
-          message: 'No Connection Detected',
+          message: <Text type="warning">No Connection Detected</Text>,
           description:
             'App could not connect to the Internet ' +
             'and is now running in offline mode. ' +
@@ -183,7 +189,7 @@ function checkValidServiceWorker(swUrl: string, config?: Config) {
 
       // Warn user no internet was detected and cache is being used instead
       notification.warn({
-        message: 'No Connection Detected',
+        message: <Text type="warning">No Connection Detected</Text>,
         description:
           'App could not connect to the Internet ' +
           'and is now running in offline mode. ' +
