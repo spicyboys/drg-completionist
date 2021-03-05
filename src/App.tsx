@@ -1,6 +1,6 @@
 import { Col, BackTop, Layout, Row, Spin } from 'antd';
 import 'antd/dist/antd.dark.css';
-import React, { lazy } from 'react';
+import React, { lazy, memo } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import PageFooter from 'components/PageFooter';
 import PageHeader from 'components/PageHeader';
@@ -46,6 +46,20 @@ export const TABS: Array<{
   // },
 ];
 
+const PageSpinner = memo(function PageSpinner() {
+  return (
+    <div
+      style={{
+        lineHeight: '50vh',
+        width: '100%',
+        textAlign: 'center',
+      }}
+    >
+      <Spin />
+    </div>
+  );
+});
+
 export default function App() {
   return (
     <Layout style={{ backgroundColor: '#1a1a1a' }}>
@@ -68,19 +82,7 @@ export default function App() {
                   }
                   key={tab.key}
                 >
-                  <React.Suspense
-                    fallback={
-                      <div
-                        style={{
-                          lineHeight: '50vh',
-                          width: '100%',
-                          textAlign: 'center',
-                        }}
-                      >
-                        <Spin />
-                      </div>
-                    }
-                  >
+                  <React.Suspense fallback={<PageSpinner />}>
                     <tab.content />
                   </React.Suspense>
                 </Route>

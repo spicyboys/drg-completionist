@@ -1,8 +1,12 @@
 import InfoCircleOutlined from '@ant-design/icons/InfoCircleOutlined';
 import { Card, Col, Popover, Tooltip } from 'antd';
+import { useCallback } from 'react';
 import { isMobile } from 'react-device-detect';
 import { ForgeHammer } from 'assets/other';
+import Image from 'components/Image';
 import { Overclock } from 'data/overclocks';
+import useDB from 'db/useDB';
+import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
 import { Miner, MinerColor, MinerColorContrastText } from 'utils/miner';
 import { MinerWeapon } from 'utils/weapons';
 import OverclockCardPopover from './OverclockCardPopover';
@@ -12,10 +16,38 @@ export default function OverclockCard(props: {
   overclock: Overclock;
   miner: Miner;
   weapon: MinerWeapon<Miner>;
-  isAcquired: boolean;
-  isForged: boolean;
-  onClick: () => void;
 }) {
+  const db = useDB();
+  const query = useSuspendedLiveQuery(
+    () =>
+      db.overclocks.get({ weapon: props.weapon, name: props.overclock.name }),
+    [props.weapon, props.overclock.name]
+  );
+
+  const onClick = useCallback(() => {
+    if (query === undefined) {
+      db.overclocks.add({
+        weapon: props.weapon,
+        name: props.overclock.name,
+        isForged: false,
+      });
+    } else if (query.isForged) {
+      db.overclocks
+        .where({
+          weapon: props.weapon,
+          name: props.overclock.name,
+        })
+        .delete();
+    } else {
+      db.overclocks
+        .where({
+          weapon: props.weapon,
+          name: props.overclock.name,
+        })
+        .modify({ isForged: true });
+    }
+  }, [db, props.overclock.name, props.weapon, query]);
+
   return (
     <Col
       key={props.overclock.name}
@@ -30,21 +62,23 @@ export default function OverclockCard(props: {
         hoverable
         title={props.overclock.name}
         headStyle={{
-          backgroundColor: props.isForged ? MinerColor[props.miner] : 'inherit',
-          color: props.isForged
+          backgroundColor: query?.isForged
+            ? MinerColor[props.miner]
+            : 'inherit',
+          color: query?.isForged
             ? MinerColorContrastText[props.miner]
             : '#cccccc',
           fontWeight: 'bold',
           transition: 'all 0.3s',
         }}
         style={
-          props.isAcquired && !props.isForged
+          query && !query?.isForged
             ? {
                 outline: `3px solid ${MinerColor[props.miner]}`,
               }
             : undefined
         }
-        onClick={props.onClick}
+        onClick={onClick}
       >
         <OverclockIcon overclock={props.overclock} />
         <Popover
@@ -64,27 +98,23 @@ export default function OverclockCard(props: {
               fontSize: isMobile ? 30 : 14,
               marginTop: isMobile ? -30 : -14,
             }}
-            onClick={props.onClick}
           />
         </Popover>
         <Tooltip
-          title={!props.isForged && props.isAcquired ? 'Unforged' : undefined}
+          title={query && !query?.isForged ? 'Unforged' : undefined}
           trigger={isMobile ? 'click' : 'hover'}
           destroyTooltipOnHide
         >
-          <img
+          <Image
             alt={`${props.overclock.name} is acquired, but unforged`}
-            src={ForgeHammer.png}
+            src={ForgeHammer}
             style={{
               float: 'left',
               height: isMobile ? 30 : 20,
               marginTop: isMobile ? -30 : -20,
-              opacity: !props.isForged && props.isAcquired ? 1 : 0,
+              opacity: query && !query?.isForged ? 1 : 0,
               width: 'auto',
             }}
-            onClick={
-              !props.isForged && props.isAcquired ? props.onClick : undefined
-            }
           />
         </Tooltip>
       </Card>

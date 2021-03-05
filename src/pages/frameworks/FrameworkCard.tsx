@@ -1,15 +1,40 @@
 import { Card, Col, Tooltip } from 'antd';
+import { useCallback } from 'react';
 import { isMobile } from 'react-device-detect';
 import { Framework } from 'data/frameworks';
+import useDB from 'db/useDB';
+import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
 import { Miner, MinerColor } from 'utils/miner';
+import { MinerWeapon } from 'utils/weapons';
 import FrameworkIcon from './FrameworkIcon';
 
-export default function FrameworkCard<T extends Miner>(props: {
-  miner: T;
+export default function FrameworkCard(props: {
+  miner: Miner;
+  weapon: MinerWeapon<Miner>;
   framework: Framework;
-  isAcquired: boolean;
-  onClick: () => void;
 }) {
+  const db = useDB();
+  const query = useSuspendedLiveQuery(
+    () => db.frameworks.get({ weapon: props.weapon, name: props.framework }),
+    [props.weapon, props.framework]
+  );
+
+  const onClick = useCallback(() => {
+    if (query === undefined) {
+      db.frameworks.add({
+        weapon: props.weapon,
+        name: props.framework,
+      });
+    } else {
+      db.frameworks
+        .where({
+          weapon: props.weapon,
+          name: props.framework,
+        })
+        .delete();
+    }
+  }, [db.frameworks, props.framework, props.weapon, query]);
+
   return (
     <Col xxl={4} xl={4} lg={8} md={8} sm={8} xs={12} key={props.framework}>
       <Tooltip
@@ -19,12 +44,10 @@ export default function FrameworkCard<T extends Miner>(props: {
       >
         <Card
           hoverable
-          onClick={props.onClick}
+          onClick={onClick}
           size="small"
           style={{
-            backgroundColor: props.isAcquired
-              ? MinerColor[props.miner]
-              : 'inherit',
+            backgroundColor: query ? MinerColor[props.miner] : 'inherit',
             transition: 'all 0.3s ease',
           }}
         >

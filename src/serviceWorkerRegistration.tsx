@@ -120,7 +120,7 @@ function registerValidSW(swUrl: string, config?: Config) {
                   </Text>
                 ),
                 description:
-                  'This app has been installed locally and will now ' +
+                  'This app can now be installed locally and will also ' +
                   'work without an active Internet connection.',
                 duration: notificationDuration,
               });

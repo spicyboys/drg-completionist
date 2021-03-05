@@ -14,7 +14,7 @@ import { useCallback, useState } from 'react';
 import { isMobile } from 'react-device-detect';
 import { MissionControlPortrait } from 'assets/portraits';
 import Image from 'components/Image';
-import useStore from 'store/useStore';
+import useDB from 'db/useDB';
 import { getFrameworksFromSaveFile } from './getFrameworksFromSaveFile';
 import { getOverclocksFromSaveFile } from './getOverclocksFromSaveFile';
 
@@ -23,7 +23,7 @@ const { Text } = Typography;
 export default function AnalyzeSaveFile(props: { hide: () => void }) {
   const [hasClickedButton, setHasClickedButton] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [, dispatch] = useStore();
+  const db = useDB();
 
   const parseSaveFile = useCallback(
     async (f: RcFile) => {
@@ -38,24 +38,24 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
         const frameworks = getFrameworksFromSaveFile(saveFile);
 
         // Update the store with the new save file data
-        dispatch({
-          type: 'LOAD_SAVE',
-          payload: {
-            frameworks: getFrameworksFromSaveFile(saveFile),
-            overclocks: overclocks.forged,
-            unforgedOverclocks: overclocks.unforged,
-          },
-        });
+        await Promise.all([
+          (async () => {
+            await db.overclocks.clear();
+            await db.overclocks.bulkAdd(overclocks);
+          })(),
+          (async () => {
+            await db.frameworks.clear();
+            await db.frameworks.bulkAdd(frameworks);
+          })(),
+        ]);
 
         // Show the user a success notification with how many items were
         // successfully imported
-        const getCount = (d: Map<unknown, Set<unknown>>) =>
-          Array.from(d.values()).reduce((p, c) => p + c.size, 0);
         notification.success({
           message: <Text type="success">Save File Analyzed!</Text>,
-          description: `Successfully imported ${
-            getCount(overclocks.forged) + getCount(overclocks.unforged)
-          } Overclocks and ${getCount(frameworks)} Weapon Frameworks.`,
+          description:
+            `Successfully imported ${overclocks.length} Overclocks and ` +
+            `${frameworks.length} Weapon Frameworks.`,
           duration: 10,
         });
 
@@ -77,7 +77,7 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
         setLoading(false);
       }
     },
-    [dispatch, props]
+    [db, props]
   );
 
   return (

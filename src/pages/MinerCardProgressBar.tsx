@@ -1,17 +1,28 @@
 import { Image, Progress, Tooltip } from 'antd';
 import { memo } from 'react';
 import { RockAndStone } from 'assets/other';
+import type { AppDatabase } from 'db/AppDatabase';
+import useDB from 'db/useDB';
+import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
 import { Miner, MinerColor } from 'utils/miner';
 
-export default memo(function MinerCardProgressBar(props: {
+export type ProgressQuery = (db: AppDatabase, miner: Miner) => Promise<number>;
+
+export default memo(function MinerCardProgressBar({
+  miner,
+  getProgress,
+}: {
   miner: Miner;
-  getProgress: (miner: Miner) => number;
+  getProgress: ProgressQuery;
 }) {
+  const db = useDB();
+  const progress = useSuspendedLiveQuery(() => getProgress(db, miner), [miner]);
+
   return (
     <Progress
-      percent={Math.round(props.getProgress(props.miner) * 100)}
+      percent={Math.round((progress || 0) * 100)}
       strokeColor={{
-        '0%': MinerColor[props.miner],
+        '0%': MinerColor[miner],
         '100%': '#87d068',
       }}
       format={(percent) =>

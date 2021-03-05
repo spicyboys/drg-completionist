@@ -1,75 +1,14 @@
 import { Row } from 'antd';
-import React, { useCallback } from 'react';
+import React from 'react';
 import WeaponDivider from 'components/WeaponDivider';
-import { Overclock, Overclocks } from 'data/overclocks';
-import useStore from 'store/useStore';
+import { Overclocks } from 'data/overclocks';
 import { Miner } from 'utils/miner';
 import { MinerWeapon } from 'utils/weapons';
 import OverclockCard from './OverclockCard';
 
 export default function MinerOverclocks(props: { miner: Miner }) {
   const { miner } = props;
-  const [
-    { overclocks: forgedOverclocks, unforgedOverclocks: acquiredOverclocks },
-    dispatch,
-  ] = useStore();
   const minerOverclocks = Overclocks[miner];
-
-  const isAcquired = useCallback(
-    (weapon: MinerWeapon<Miner>, overclock: Overclock) => {
-      return acquiredOverclocks.get(weapon)?.has(overclock.name) ?? false;
-    },
-    [acquiredOverclocks]
-  );
-
-  const isForged = useCallback(
-    (weapon: MinerWeapon<Miner>, overclock: Overclock) => {
-      return forgedOverclocks.get(weapon)?.has(overclock.name) ?? false;
-    },
-    [forgedOverclocks]
-  );
-
-  // Cycles a given overclock state from unacquired, to acquired-but-unforged, to forged, then back to unacquired
-  const setOverclockState = useCallback(
-    (weapon: MinerWeapon<Miner>, overclock: Overclock) => {
-      const toggleAcquired = (
-        weapon: MinerWeapon<Miner>,
-        overclock: Overclock
-      ) =>
-        dispatch({
-          type: 'TOGGLE_OVERCLOCK_ACQUIRED',
-          payload: {
-            weapon: weapon,
-            overclock: overclock.name,
-          },
-        });
-
-      const toggleForged = (weapon: MinerWeapon<Miner>, overclock: Overclock) =>
-        dispatch({
-          type: 'TOGGLE_OVERCLOCK_FORGED',
-          payload: {
-            weapon: weapon,
-            overclock: overclock.name,
-          },
-        });
-
-      // Set unacquired to unforged (but still acquired)
-      if (!isAcquired(weapon, overclock) && !isForged(weapon, overclock)) {
-        toggleAcquired(weapon, overclock);
-      }
-      // Set unforged to forged
-      else if (isAcquired(weapon, overclock)) {
-        toggleAcquired(weapon, overclock);
-        toggleForged(weapon, overclock);
-      }
-      // Set forged back to unacquired
-      else {
-        toggleForged(weapon, overclock);
-      }
-    },
-    [dispatch, isAcquired, isForged]
-  );
-
   return (
     <>
       {Object.entries(minerOverclocks).map(([weapon, overclocks]) => (
@@ -82,11 +21,6 @@ export default function MinerOverclocks(props: { miner: Miner }) {
                 overclock={overclock}
                 miner={miner}
                 weapon={weapon as MinerWeapon<Miner>}
-                isAcquired={isAcquired(weapon as MinerWeapon<Miner>, overclock)}
-                isForged={isForged(weapon as MinerWeapon<Miner>, overclock)}
-                onClick={() =>
-                  setOverclockState(weapon as MinerWeapon<Miner>, overclock)
-                }
               />
             ))}
           </Row>

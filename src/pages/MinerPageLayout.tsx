@@ -2,20 +2,17 @@ import RightOutlined from '@ant-design/icons/RightOutlined';
 import { Collapse } from 'antd';
 import { AllMiners, Miner } from 'utils/miner';
 import MinerCard from './MinerCard';
+import { ProgressQuery } from './MinerCardProgressBar';
 
 export default function MinerPageLayout(props: {
   children: (miner: Miner) => React.ReactNode;
-  getProgress: (miner: Miner) => number;
+  getProgress: ProgressQuery;
 }) {
   return (
     <Collapse
       className="unselectable"
       expandIconPosition="right"
-      defaultActiveKey={[
-        ...AllMiners.filter(
-          (m) => Math.round(props.getProgress(m) * 100) !== 100
-        ),
-      ]}
+      defaultActiveKey={[...AllMiners]}
       expandIcon={(p) => (
         <RightOutlined
           style={{ marginTop: 16 }}
