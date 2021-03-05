@@ -29,12 +29,9 @@ export default function useSuspendedLiveQuery<T>(
   let cacheEntry: PromiseCache | undefined;
   for (const promiseCache of promiseCaches) {
     if (deepEqual(dependencies, promiseCache.dependencies)) {
-      if (Object.prototype.hasOwnProperty.call(promiseCache, 'error')) {
-        console.error(promiseCache.error);
+      if ('error' in promiseCache) {
         throw promiseCache.error;
-      } else if (
-        Object.prototype.hasOwnProperty.call(promiseCache, 'response')
-      ) {
+      } else if ('response' in promiseCache) {
         cacheEntry = promiseCache;
         break;
       } else {
