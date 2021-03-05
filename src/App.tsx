@@ -1,12 +1,9 @@
 import { Col, BackTop, Layout, Row, Spin } from 'antd';
 import 'antd/dist/antd.dark.css';
-import React, { lazy } from 'react';
-import PreloadRoutes from 'PreloadRoutes';
-import Routes from 'Routes';
+import React, { lazy, memo } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import PageFooter from 'components/PageFooter';
 import PageHeader from 'components/PageHeader';
-import useDB from 'db/useDB';
-import migrateStore from 'store/migrateStore';
 
 const { Content } = Layout;
 
@@ -49,10 +46,21 @@ export const TABS: Array<{
   // },
 ];
 
-export default function App() {
-  const db = useDB();
-  migrateStore(db);
+const PageSpinner = memo(function PageSpinner() {
+  return (
+    <div
+      style={{
+        lineHeight: '50vh',
+        width: '100%',
+        textAlign: 'center',
+      }}
+    >
+      <Spin />
+    </div>
+  );
+});
 
+export default function App() {
   return (
     <Layout style={{ backgroundColor: '#1a1a1a' }}>
       <BackTop style={{ bottom: 110 }} />
@@ -62,22 +70,24 @@ export default function App() {
             <PageHeader />
           </Col>
           <Col xs={22} lg={18}>
-            <React.Suspense
-              fallback={
-                <div
-                  style={{
-                    lineHeight: '50vh',
-                    width: '100%',
-                    textAlign: 'center',
-                  }}
+            <Switch>
+              {TABS.map((tab) => (
+                <Route
+                  exact
+                  path={
+                    [
+                      `/${tab.key}`,
+                      tab.key === DEFAULT_TAB ? '/' : undefined,
+                    ].filter((x) => x !== undefined) as string[]
+                  }
+                  key={tab.key}
                 >
-                  <Spin />
-                </div>
-              }
-            >
-              <PreloadRoutes />
-              <Routes />
-            </React.Suspense>
+                  <React.Suspense fallback={<PageSpinner />}>
+                    <tab.content />
+                  </React.Suspense>
+                </Route>
+              ))}
+            </Switch>
           </Col>
         </Row>
       </Content>
