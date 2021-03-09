@@ -7,6 +7,7 @@ import PickaxePaintjobs from './PickaxePaintjobs';
 import PickaxeParts from './PickaxeParts';
 
 export default function FrameworksPage() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const getProgress = useCallback(async (db: AppDatabase) => {
     const pickaxes = PickaxeSets;
     // TODO: Replace this random number with actual IndexedDB call
