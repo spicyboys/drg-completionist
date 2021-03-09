@@ -49,7 +49,7 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
         }
       >
         <Row justify="space-between">
-          <Col span={10}>
+          <Col span={11}>
             <Image
               alt={props.pickaxe.name}
               src={props.pickaxe.icon}
@@ -60,8 +60,10 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
               }}
             />
           </Col>
-          <Divider type="vertical" style={{ height: 'auto' }} />
-          <Col span={10}>
+          <Col span={2}>
+            <Divider type="vertical" style={{ height: '100%' }} />
+          </Col>
+          <Col span={11}>
             <Row align="middle" justify="space-between">
               <Checkbox.Group
                 onChange={onChange}
