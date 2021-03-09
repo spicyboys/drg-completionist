@@ -1,7 +1,7 @@
 import RightOutlined from '@ant-design/icons/RightOutlined';
 import { Collapse } from 'antd';
 import { useCallback } from 'react';
-import { PickaxeSets } from 'data/pickaxes';
+import { Pickaxes, PickaxeSets } from 'data/pickaxes';
 import { AppDatabase } from 'db/AppDatabase';
 import PickaxePaintjobs from './PickaxePaintjobs';
 import PickaxeParts from './PickaxeParts';
@@ -32,7 +32,7 @@ export default function FrameworksPage() {
         />
       )}
     >
-      <PickaxeParts getProgress={getProgress} />
+      <PickaxeParts pickaxes={Pickaxes} getProgress={getProgress} />
       <PickaxePaintjobs getProgress={getProgress} />
     </Collapse>
   );
