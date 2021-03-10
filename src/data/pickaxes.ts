@@ -91,6 +91,7 @@ type PickaxeParts =
 export type Pickaxe = {
   name: typeof PickaxeSets[number];
   source: ItemSource;
+  assignmentRank?: number;
   icon: typeof PickaxeIcons[typeof PickaxeSets[number]];
   paintjobIcon: typeof PickaxePaintjobIcons[typeof PickaxePaintjobNames[number]];
   partIDs: Record<PickaxeParts, string>;
@@ -107,6 +108,7 @@ export const Pickaxes: Pickaxe[] = [
   {
     name: 'Chasm-Borne Cliffhanger',
     source: 'Assignment',
+    assignmentRank: 20,
     icon: PickaxeIcons['Chasm-Borne Cliffhanger'],
     paintjobIcon: PickaxePaintjobIcons['Chasm-Borne Cliffhanger'],
     partIDs: {
@@ -119,22 +121,9 @@ export const Pickaxes: Pickaxe[] = [
     },
   },
   {
-    name: 'Drift Crusher',
-    source: 'Assignment',
-    icon: PickaxeIcons['Drift Crusher'],
-    paintjobIcon: PickaxePaintjobIcons['Drift Crusher'],
-    partIDs: {
-      Blades: '50A8E7414FBABD41AA31191DEBA25EAC',
-      Head: 'E0CD8E02333000449F74D69DBBFA1801',
-      Shaft: 'B70578A2A27C5E488489039CEA0A0734',
-      Handle: 'EF72D2C6579C0B4C9088A28E518BA8BE',
-      Pommel: '44CB48E9B424EA4B9F11E846150696FF',
-      Paintjob: 'E13FCC3DB7B2284EAA2179BBBE126056',
-    },
-  },
-  {
     name: "Gadgeteer's Favorite",
     source: 'Assignment',
+    assignmentRank: 30,
     icon: PickaxeIcons["Gadgeteer's Favorite"],
     paintjobIcon: PickaxePaintjobIcons["Gadgeteer's Favorite"],
     partIDs: {
@@ -149,6 +138,7 @@ export const Pickaxes: Pickaxe[] = [
   {
     name: "Reaper's Claw",
     source: 'Assignment',
+    assignmentRank: 50,
     icon: PickaxeIcons["Reaper's Claw"],
     paintjobIcon: PickaxePaintjobIcons["Reaper's Claw"],
     partIDs: {
@@ -160,6 +150,22 @@ export const Pickaxes: Pickaxe[] = [
       Paintjob: '76541AA666147B4EBC8DEF6EADE80EAC',
     },
   },
+  {
+    name: 'Drift Crusher',
+    source: 'Assignment',
+    assignmentRank: 75,
+    icon: PickaxeIcons['Drift Crusher'],
+    paintjobIcon: PickaxePaintjobIcons['Drift Crusher'],
+    partIDs: {
+      Blades: '50A8E7414FBABD41AA31191DEBA25EAC',
+      Head: 'E0CD8E02333000449F74D69DBBFA1801',
+      Shaft: 'B70578A2A27C5E488489039CEA0A0734',
+      Handle: 'EF72D2C6579C0B4C9088A28E518BA8BE',
+      Pommel: '44CB48E9B424EA4B9F11E846150696FF',
+      Paintjob: 'E13FCC3DB7B2284EAA2179BBBE126056',
+    },
+  },
+
   {
     name: 'Bug Hide',
     source: 'Lost Pack',
