@@ -1,4 +1,4 @@
-import RightOutlined from '@ant-design/icons/RightOutlined';
+import { RightOutlined } from '@ant-design/icons';
 import { Collapse } from 'antd';
 import { useCallback } from 'react';
 import { Pickaxes, PickaxeSets } from 'data/pickaxes';
