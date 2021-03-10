@@ -1,11 +1,19 @@
-import { Card, Checkbox, Col, Divider, Row } from 'antd';
+import { Card, Checkbox, Col, Divider, Image as AntImage, Row } from 'antd';
 import { CheckboxValueType } from 'antd/lib/checkbox/Group';
 import { useEffect, useState } from 'react';
-import Image from 'components/Image';
 import { Pickaxe } from 'data/pickaxes';
 
 const accentColor = '#dc8c13';
 const checkboxOptions = ['Blades', 'Head', 'Shaft', 'Handle', 'Pommel'];
+
+/** These type guards are used to get the fallback PNGs or JPGs for
+ *  Ant's Image component, which only accepts strings and not ImgSrc's
+ *  union type. (TypeScript is rather unhappy without them.)
+ * */
+const isPNGSrc = (imgSrc: ImgSrc): imgSrc is PNGSrc => true;
+const isJPGSrc = (imgSrc: ImgSrc): imgSrc is JPGSrc => true;
+const getFallbackSrc = (imgSrc: ImgSrc) =>
+  isPNGSrc(imgSrc) ? imgSrc.png : isJPGSrc(imgSrc) ? imgSrc.jpg : undefined;
 
 export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
   const [checkedParts, setCheckedParts] = useState<CheckboxValueType[]>([]);
@@ -50,9 +58,10 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
       >
         <Row justify="space-between">
           <Col span={11}>
-            <Image
+            <AntImage
               alt={props.pickaxe.name}
-              src={props.pickaxe.icon}
+              src={props.pickaxe.icon.webp}
+              fallback={getFallbackSrc(props.pickaxe.icon)}
               style={{
                 border: '2px solid #cccccc',
                 height: 110,
