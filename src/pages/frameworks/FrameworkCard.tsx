@@ -1,12 +1,12 @@
-import { Card, Col, Tooltip } from 'antd';
+import { Badge, Card, Col } from 'antd';
 import { useCallback } from 'react';
-import { isMobile } from 'react-device-detect';
 import { Framework } from 'data/frameworks';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
 import { Miner, MinerColor } from 'utils/miner';
 import { MinerWeapon } from 'utils/weapons';
 import FrameworkIcon from './FrameworkIcon';
+import './FrameworkCard.css';
 
 export default function FrameworkCard(props: {
   miner: Miner;
@@ -37,11 +37,7 @@ export default function FrameworkCard(props: {
 
   return (
     <Col xxl={4} xl={4} lg={8} md={8} sm={8} xs={12} key={props.framework}>
-      <Tooltip
-        destroyTooltipOnHide
-        title={props.framework}
-        trigger={isMobile ? 'click' : 'hover'}
-      >
+      <Badge.Ribbon className="framework-ribbon" text={props.framework}>
         <Card
           hoverable
           onClick={onClick}
@@ -53,7 +49,7 @@ export default function FrameworkCard(props: {
         >
           <FrameworkIcon framework={props.framework} />
         </Card>
-      </Tooltip>
+      </Badge.Ribbon>
     </Col>
   );
 }

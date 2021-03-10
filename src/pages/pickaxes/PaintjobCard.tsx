@@ -1,12 +1,12 @@
-import { Card, Col, Tooltip } from 'antd';
+import { Badge, Card, Col } from 'antd';
 import { useState } from 'react';
-import { isMobile } from 'react-device-detect';
 import { PickaxePaintjobNames } from 'data/pickaxes';
 import PaintjobIcon from './PaintjobIcon';
+import './PaintjobCard.css';
 // import useDB from 'db/useDB';
 // import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
 
-const accentColor = '#fea817';
+const accentColor = '#176cff';
 
 export default function PaintjobCard(props: {
   paintjob: typeof PickaxePaintjobNames[number];
@@ -31,11 +31,7 @@ export default function PaintjobCard(props: {
 
   return (
     <Col xxl={4} xl={4} lg={8} md={8} sm={8} xs={12}>
-      <Tooltip
-        destroyTooltipOnHide
-        title={props.paintjob}
-        trigger={isMobile ? 'click' : 'hover'}
-      >
+      <Badge.Ribbon className="pickaxe-ribbon" text={props.paintjob}>
         <Card
           hoverable
           onClick={onClick}
@@ -47,7 +43,7 @@ export default function PaintjobCard(props: {
         >
           <PaintjobIcon paintjob={props.paintjob} />
         </Card>
-      </Tooltip>
+      </Badge.Ribbon>
     </Col>
   );
 }
