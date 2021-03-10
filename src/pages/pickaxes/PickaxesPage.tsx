@@ -1,12 +1,12 @@
 import { RightOutlined } from '@ant-design/icons';
 import { Collapse } from 'antd';
 import { useCallback } from 'react';
-import { Pickaxes, PickaxeSets } from 'data/pickaxes';
+import { PickaxePaintjobNames, Pickaxes, PickaxeSets } from 'data/pickaxes';
 import { AppDatabase } from 'db/AppDatabase';
 import PickaxePaintjobs from './PickaxePaintjobs';
 import PickaxeParts from './PickaxeParts';
 
-export default function FrameworksPage() {
+export default function PickaxesPage() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const getProgress = useCallback(async (db: AppDatabase) => {
     const pickaxes = PickaxeSets;
@@ -34,7 +34,10 @@ export default function FrameworksPage() {
       )}
     >
       <PickaxeParts pickaxes={Pickaxes} getProgress={getProgress} />
-      <PickaxePaintjobs getProgress={getProgress} />
+      <PickaxePaintjobs
+        paintjobs={PickaxePaintjobNames}
+        getProgress={getProgress}
+      />
     </Collapse>
   );
 }

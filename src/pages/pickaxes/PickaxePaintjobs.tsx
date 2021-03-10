@@ -1,5 +1,7 @@
-import { Card, Collapse, CollapsePanelProps } from 'antd';
+import { Card, Collapse, CollapsePanelProps, Row } from 'antd';
 import PaintPickaxeIcon from 'assets/other/paintPickaxeIcon.png';
+import { PickaxePaintjobNames } from 'data/pickaxes';
+import PaintjobCard from './PaintjobCard';
 import PickaxeProgressBar, { ProgressQuery } from './PickaxeProgressBar';
 
 const { Panel } = Collapse;
@@ -8,9 +10,10 @@ const { Meta } = Card;
 export default function PickaxePaintjobs(
   props: {
     getProgress: ProgressQuery;
+    paintjobs: typeof PickaxePaintjobNames;
   } & Omit<CollapsePanelProps, 'key' | 'header'>
 ) {
-  const { getProgress, ...panelProps } = props;
+  const { getProgress, paintjobs, ...panelProps } = props;
 
   return (
     <Panel
@@ -34,7 +37,11 @@ export default function PickaxePaintjobs(
         />
       }
     >
-      {/* {children(miner)} */}
+      <Row gutter={[16, 16]}>
+        {paintjobs.map((paintjob) => (
+          <PaintjobCard key={paintjob} paintjob={paintjob} />
+        ))}
+      </Row>
     </Panel>
   );
 }
