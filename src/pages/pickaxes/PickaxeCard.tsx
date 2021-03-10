@@ -1,6 +1,17 @@
-import { Card, Checkbox, Col, Divider, Image as AntImage, Row } from 'antd';
+import {
+  Card,
+  Checkbox,
+  Col,
+  Divider,
+  Image as AntImage,
+  Row,
+  Tooltip,
+} from 'antd';
 import { CheckboxValueType } from 'antd/lib/checkbox/Group';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { Credit } from 'assets/currencies';
+import { Assignment, LostPack } from 'assets/other';
+import Image from 'components/Image';
 import { Pickaxe } from 'data/pickaxes';
 
 const accentColor = '#dc8c13';
@@ -37,11 +48,36 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
         : (checkboxOptions as CheckboxValueType[])
     );
 
+  const iconSrc = useMemo(() => {
+    switch (props.pickaxe.source) {
+      case 'Assignment':
+        return Assignment;
+      case 'DLC':
+        return Credit;
+      case 'Lost Pack':
+        return LostPack;
+    }
+  }, [props.pickaxe.source]);
+
   return (
     <Col xxl={6} xl={6} lg={8} md={12} sm={12} xs={24}>
       <Card
         hoverable
-        title={<div onClick={onClick}>{props.pickaxe.name}</div>}
+        title={
+          <div onClick={onClick}>
+            {props.pickaxe.name}
+            <Image
+              alt={`${props.pickaxe.name} is acquired via ${props.pickaxe.source}`}
+              src={iconSrc}
+              style={{
+                filter: isComplete ? 'grayscale(1) invert(1)' : undefined,
+                float: 'right',
+                height: 24,
+                width: 'auto',
+              }}
+            />
+          </div>
+        }
         headStyle={{
           backgroundColor: isComplete ? accentColor : 'inherit',
           color: isComplete ? '#1a1a1a' : '#cccccc',
@@ -58,16 +94,22 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
       >
         <Row justify="space-between">
           <Col span={11}>
-            <AntImage
-              alt={props.pickaxe.name}
-              src={props.pickaxe.icon.webp}
-              fallback={getFallbackSrc(props.pickaxe.icon)}
-              style={{
-                border: '2px solid #cccccc',
-                height: 110,
-                width: 'auto',
-              }}
-            />
+            <Tooltip
+              destroyTooltipOnHide
+              placement="bottom"
+              title={`Obtained via ${props.pickaxe.source}`}
+            >
+              <AntImage
+                alt={props.pickaxe.name}
+                src={props.pickaxe.icon.webp}
+                fallback={getFallbackSrc(props.pickaxe.icon)}
+                style={{
+                  border: '2px solid #cccccc',
+                  height: 110,
+                  width: 'auto',
+                }}
+              />
+            </Tooltip>
           </Col>
           <Col span={2}>
             <Divider type="vertical" style={{ height: '100%' }} />
