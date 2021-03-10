@@ -97,7 +97,11 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
             <Tooltip
               destroyTooltipOnHide
               placement="bottom"
-              title={`Obtained via ${props.pickaxe.source}`}
+              title={`Obtained via ${props.pickaxe.source}${
+                props.pickaxe.assignmentRank
+                  ? ' at Rank ' + props.pickaxe.assignmentRank
+                  : ''
+              }`}
             >
               <AntImage
                 alt={props.pickaxe.name}
