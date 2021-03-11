@@ -7,20 +7,28 @@ import PickaxePaintjobs from './PickaxePaintjobs';
 import PickaxeParts from './PickaxeParts';
 
 export default function PickaxesPage() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const getProgress = useCallback(async (db: AppDatabase) => {
-    const pickaxes = PickaxeSets;
-    // TODO: Replace this random number with actual IndexedDB call
-    const acquiredPickaxes = Math.round(pickaxes.length * Math.random());
-    console.warn(
-      'Setting Pickaxe Progress to random value. Fix me before going live!'
-    );
-    // const acquiredPickaxes = await db.pickaxes
-    //   .where('pickaxes')
-    //   .anyOf(pickaxes)
-    //   .count();
-    return acquiredPickaxes / pickaxes.length;
+  /** Get total count for all acquired pickaxe parts EXCEPT Paintjobs. */
+  const getPartProgress = useCallback(async (db: AppDatabase) => {
+    const acquiredPickaxes = await db.pickaxes
+      .where('name')
+      .anyOf(PickaxeSets)
+      .and((p) => p.part !== 'Paintjob')
+      .count();
+    // 6 Total Pickaxe Parts - 1 Paintjob Part = 5 Remaining Parts
+    return acquiredPickaxes / (PickaxeSets.length * 5);
   }, []);
+
+  /** Get total count for all pickaxe Paintjob parts ONLY. */
+  const getPaintjobProgress = useCallback(async (db: AppDatabase) => {
+    const acquiredPaintjobs = await db.pickaxes
+      .where('name')
+      .anyOf(PickaxePaintjobNames)
+      .and((p) => p.part === 'Paintjob')
+      .count();
+    // 6 Total Pickaxe Parts - 1 Paintjob Part = 5 Remaining Parts
+    return acquiredPaintjobs / PickaxePaintjobNames.length;
+  }, []);
+
   return (
     <Collapse
       className="unselectable"
@@ -33,10 +41,10 @@ export default function PickaxesPage() {
         />
       )}
     >
-      <PickaxeParts pickaxes={Pickaxes} getProgress={getProgress} />
+      <PickaxeParts pickaxes={Pickaxes} getProgress={getPartProgress} />
       <PickaxePaintjobs
         paintjobs={PickaxePaintjobNames}
-        getProgress={getProgress}
+        getProgress={getPaintjobProgress}
       />
     </Collapse>
   );

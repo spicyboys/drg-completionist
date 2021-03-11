@@ -3,7 +3,7 @@ import { useMemo } from 'react';
 import { TabName } from 'App';
 import { Frameworks } from 'data/frameworks';
 import { Overclocks } from 'data/overclocks';
-import { Pickaxes } from 'data/pickaxes';
+import { PickaxePaintjobNames, PickaxeSets } from 'data/pickaxes';
 import useDB from 'db/useDB';
 import { MinerWeapons } from 'utils/weapons';
 
@@ -29,9 +29,8 @@ export default function useCurrentTabProgress(
           .flatMap((w) => Object.values(w))
           .flat().length;
       case 'pickaxes':
-        return Object.values(Pickaxes)
-          .flatMap((w) => Object.values(w))
-          .flat().length;
+        // TODO: Add Pickaxe Unique Parts
+        return PickaxeSets.length * 5 + PickaxePaintjobNames.length;
     }
   }, [currentTab]);
 
@@ -58,14 +57,10 @@ export default function useCurrentTabProgress(
               100,
           };
         }
-        // TODO: Fix placeholder progress data for pickaxes tab
         case 'pickaxes': {
-          // const acquiredPickaxeParts = await db.pickaxes.toArray();
-          console.warn(
-            'Overall progress bar using random Pickaxe progress. Fix me before going live!'
-          );
+          const acquiredPickaxeParts = await db.pickaxes.count();
           return {
-            progress: Math.random() * 100,
+            progress: (acquiredPickaxeParts / totalItems) * 100,
             partialProgress: null,
           };
         }
