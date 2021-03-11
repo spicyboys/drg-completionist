@@ -1,8 +1,9 @@
 import { Card, Collapse, CollapsePanelProps, Row } from 'antd';
 import PickaxeIcon from 'assets/other/pickaxeIcon.png';
-import { Pickaxe } from 'data/pickaxes';
+import { Pickaxe, UniqueParts } from 'data/pickaxes';
 import PickaxeCard from './PickaxeCard';
 import PickaxeProgressBar, { ProgressQuery } from './PickaxeProgressBar';
+import UniquePartsCard from './UniquePartsCard';
 
 const { Panel } = Collapse;
 const { Meta } = Card;
@@ -40,6 +41,9 @@ export default function PickaxeParts(
       <Row gutter={[16, 16]}>
         {pickaxes.map((pickaxe) => (
           <PickaxeCard key={pickaxe.name} pickaxe={pickaxe} />
+        ))}
+        {UniqueParts.map((uniquePart) => (
+          <UniquePartsCard key={uniquePart.name} uniquePart={uniquePart} />
         ))}
       </Row>
     </Panel>
