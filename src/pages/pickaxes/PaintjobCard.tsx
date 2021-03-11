@@ -1,33 +1,30 @@
 import { Badge, Card, Col } from 'antd';
-import { useState } from 'react';
-import { PickaxePaintjobNames } from 'data/pickaxes';
-import PaintjobIcon from './PaintjobIcon';
+import { useCallback } from 'react';
+import { PickaxePaintjobNames, PickaxeParts } from 'data/pickaxes';
 import './PaintjobCard.css';
-// import useDB from 'db/useDB';
-// import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
+import useDB from 'db/useDB';
+import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
+import PaintjobIcon from './PaintjobIcon';
 
 const accentColor = '#176cff';
 
 export default function PaintjobCard(props: {
   paintjob: typeof PickaxePaintjobNames[number];
 }) {
-  // TODO: Replace this dummy state with IndexedDB stuff
-  const [isAcquired, setIsAcquired] = useState(false);
-  // const db = useDB();
-  // const query = useSuspendedLiveQuery(
-  //   () => db.pickaxePaintjobs.get({ paintjob: props.paintjob }),
-  //   [props.paintjob]
-  // );
+  const db = useDB();
+  const part: PickaxeParts = 'Paintjob';
+  const query = useSuspendedLiveQuery(
+    () => db.pickaxes.get({ name: props.paintjob, part: part }),
+    [props.paintjob]
+  );
 
-  // const onClick = useCallback(() => {
-  //   if (query === undefined) {
-  //     db.paintjobs.add({ paintjob: props.paintjob });
-  //   } else {
-  //     db.paintjobs.where({ paintjob: props.paintjob }).delete();
-  //   }
-  // }, [db.paintjobs, props.paintjob, query]);
-
-  const onClick = () => setIsAcquired(!isAcquired);
+  const onClick = useCallback(() => {
+    if (query === undefined) {
+      db.pickaxes.add({ name: props.paintjob, part: part });
+    } else {
+      db.pickaxes.where({ name: props.paintjob, part: part }).delete();
+    }
+  }, [db.pickaxes, props.paintjob, query]);
 
   return (
     <Col xxl={4} xl={4} lg={8} md={8} sm={8} xs={12}>
@@ -37,7 +34,7 @@ export default function PaintjobCard(props: {
           onClick={onClick}
           size="small"
           style={{
-            backgroundColor: isAcquired ? accentColor : 'inherit',
+            backgroundColor: query ? accentColor : 'inherit',
             transition: 'all 0.3s ease',
           }}
         >

@@ -8,14 +8,22 @@ import {
   Tooltip,
 } from 'antd';
 import { CheckboxValueType } from 'antd/lib/checkbox/Group';
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useMemo } from 'react';
 import { Credit } from 'assets/currencies';
 import { Assignment, LostPack } from 'assets/other';
 import Image from 'components/Image';
-import { Pickaxe } from 'data/pickaxes';
+import { Pickaxe, PickaxeParts } from 'data/pickaxes';
+import useDB from 'db/useDB';
+import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
 
 const accentColor = '#dc8c13';
-const checkboxOptions = ['Blades', 'Head', 'Shaft', 'Handle', 'Pommel'];
+const checkboxOptions: PickaxeParts[] = [
+  'Blades',
+  'Head',
+  'Shaft',
+  'Handle',
+  'Pommel',
+];
 
 /** These type guards are used to get the fallback PNGs or JPGs for
  *  Ant's Image component, which only accepts strings and not ImgSrc's
@@ -27,26 +35,64 @@ const getFallbackSrc = (imgSrc: ImgSrc) =>
   isPNGSrc(imgSrc) ? imgSrc.png : isJPGSrc(imgSrc) ? imgSrc.jpg : undefined;
 
 export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
-  const [checkedParts, setCheckedParts] = useState<CheckboxValueType[]>([]);
-  const [isComplete, setIsComplete] = useState(false);
-  const [isPartiallyComplete, setIsPartiallyComplete] = useState(false);
+  // Get all matching queries when pickaxe name changes (i.e., only once, on mount)
+  const db = useDB();
+  const checkedParts = useSuspendedLiveQuery(
+    () => db.pickaxes.where({ name: props.pickaxe.name }).toArray(),
+    [props.pickaxe.name]
+  ).map((p) => p.part);
 
-  useEffect(() => {
-    setIsComplete(checkedParts.length === checkboxOptions.length);
-    setIsPartiallyComplete(
-      checkedParts.length !== 0 &&
-        checkedParts.length !== checkboxOptions.length
-    );
-  }, [checkedParts]);
+  // Add and delete IndexedDB entries
+  const setCheckedParts = useCallback(
+    (values: CheckboxValueType[]) => {
+      values.map((part) => {
+        if (checkedParts.includes(part as PickaxeParts)) {
+          db.pickaxes
+            .where({
+              name: props.pickaxe.name,
+              part: part as PickaxeParts,
+            })
+            .delete();
+        } else {
+          db.pickaxes.add({
+            name: props.pickaxe.name,
+            part: part as PickaxeParts,
+          });
+        }
+      });
+    },
+    [checkedParts, db.pickaxes, props.pickaxe.name]
+  );
 
-  const onChange = (checked: CheckboxValueType[]) => setCheckedParts(checked);
+  const isComplete = useMemo(
+    () => checkedParts.length === checkboxOptions.length,
+    [checkedParts.length]
+  );
 
-  const onClick = () =>
-    setCheckedParts(
+  const onHeaderClick = useCallback(() => {
+    if (isComplete) {
+      db.pickaxes
+        .where({
+          name: props.pickaxe.name,
+        })
+        .and((p) => p.part !== 'Paintjob')
+        .delete();
+    } else {
+      db.pickaxes.bulkAdd(
+        checkboxOptions
+          .filter((c) => !checkedParts.includes(c))
+          .map((p) => ({ name: props.pickaxe.name, part: p }))
+      );
+    }
+  }, [checkedParts, db.pickaxes, isComplete, props.pickaxe.name]);
+
+  const isPartiallyComplete = useMemo(
+    () =>
       checkedParts.length === checkboxOptions.length
         ? []
-        : (checkboxOptions as CheckboxValueType[])
-    );
+        : (checkboxOptions as CheckboxValueType[]),
+    [checkedParts.length]
+  );
 
   const iconSrc = useMemo(() => {
     switch (props.pickaxe.source) {
@@ -64,7 +110,7 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
       <Card
         hoverable
         title={
-          <div onClick={onClick}>
+          <div onClick={onHeaderClick}>
             {props.pickaxe.name}
             <Image
               alt={`${props.pickaxe.name} is acquired via ${props.pickaxe.source}`}
@@ -121,7 +167,7 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
           <Col span={11}>
             <Row align="middle" justify="space-between">
               <Checkbox.Group
-                onChange={onChange}
+                onChange={setCheckedParts}
                 style={{ width: '100%' }}
                 value={checkedParts}
               >

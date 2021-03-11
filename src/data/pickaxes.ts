@@ -81,7 +81,7 @@ export const PickaxeUniquePartIcons: Record<
 
 type ItemSource = 'Lost Pack' | 'Assignment' | 'DLC';
 
-type PickaxeParts =
+export type PickaxeParts =
   | 'Blades'
   | 'Head'
   | 'Shaft'
