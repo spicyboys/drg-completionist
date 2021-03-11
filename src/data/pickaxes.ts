@@ -18,13 +18,13 @@ export const PickaxeSets = [
   "Reaper's Claw", // ReapersClaw
 ] as const;
 
-// Includes the DLC paintjobs
+// NOTE: DLC Paintjobs disabled until GUIDs can be found
 export const PickaxePaintjobNames = [
   ...PickaxeSets,
-  'Dawn of the Dread',
-  'MegaCorp',
-  'Roughneck',
-  'The Supporter',
+  // 'Dawn of the Dread',
+  // 'MegaCorp',
+  // 'Roughneck',
+  // 'The Supporter',
 ] as const;
 
 // Unpacked DRG source file name suffixes included in comment
@@ -48,6 +48,7 @@ export const PickaxeIcons: Record<typeof PickaxeSets[number], ImgSrc> = {
   "Reaper's Claw": skinIcons.ReapersClaw,
 };
 
+// NOTE: DLC Paintjobs disabled until GUIDs can be found
 export const PickaxePaintjobIcons: Record<
   typeof PickaxePaintjobNames[number],
   ImgSrc
@@ -62,10 +63,10 @@ export const PickaxePaintjobIcons: Record<
   'Jagged Son': paintjobIcons.JaggedSon,
   Pneumatic: paintjobIcons.Pneumatic,
   "Reaper's Claw": paintjobIcons.ReapersClaw,
-  'Dawn of the Dread': paintjobIcons.DawnOfTheDread,
-  MegaCorp: paintjobIcons.MegaCorp,
-  Roughneck: paintjobIcons.Roughneck,
-  'The Supporter': paintjobIcons.TheSupporter,
+  // 'Dawn of the Dread': paintjobIcons.DawnOfTheDread,
+  // MegaCorp: paintjobIcons.MegaCorp,
+  // Roughneck: paintjobIcons.Roughneck,
+  // 'The Supporter': paintjobIcons.TheSupporter,
 };
 
 export const PickaxeUniquePartIcons: Record<
