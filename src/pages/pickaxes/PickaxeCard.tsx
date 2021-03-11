@@ -17,7 +17,7 @@ import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
 
 const accentColor = '#dc8c13';
-const checkboxOptions: PickaxeParts[] = [
+const CheckboxOptions: PickaxeParts[] = [
   'Blades',
   'Head',
   'Shaft',
@@ -38,34 +38,44 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
   // Get all matching queries when pickaxe name changes (i.e., only once, on mount)
   const db = useDB();
   const checkedParts = useSuspendedLiveQuery(
-    () => db.pickaxes.where({ name: props.pickaxe.name }).toArray(),
+    () =>
+      db.pickaxes
+        .where({ name: props.pickaxe.name })
+        .and((p) => p.part !== 'Paintjob')
+        .toArray(),
     [props.pickaxe.name]
   ).map((p) => p.part);
 
   // Add and delete IndexedDB entries
   const setCheckedParts = useCallback(
     (values: CheckboxValueType[]) => {
-      values.map((part) => {
-        if (checkedParts.includes(part as PickaxeParts)) {
-          db.pickaxes
-            .where({
-              name: props.pickaxe.name,
-              part: part as PickaxeParts,
-            })
-            .delete();
-        } else {
-          db.pickaxes.add({
+      const newlyCheckedItems = values.filter(
+        (v) => !checkedParts.includes(v as PickaxeParts)
+      );
+      if (newlyCheckedItems.length > 0) {
+        db.pickaxes.bulkAdd(
+          newlyCheckedItems.map((i) => ({
             name: props.pickaxe.name,
-            part: part as PickaxeParts,
-          });
-        }
-      });
+            part: i as PickaxeParts,
+          }))
+        );
+      }
+
+      const newlyUncheckedItems = checkedParts.filter(
+        (v) => !values.includes(v)
+      );
+      if (newlyUncheckedItems.length > 0) {
+        db.pickaxes
+          .where({ name: props.pickaxe.name })
+          .and((p) => newlyUncheckedItems.includes(p.part))
+          .delete();
+      }
     },
     [checkedParts, db.pickaxes, props.pickaxe.name]
   );
 
   const isComplete = useMemo(
-    () => checkedParts.length === checkboxOptions.length,
+    () => checkedParts.length === CheckboxOptions.length,
     [checkedParts.length]
   );
 
@@ -79,18 +89,18 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
         .delete();
     } else {
       db.pickaxes.bulkAdd(
-        checkboxOptions
-          .filter((c) => !checkedParts.includes(c))
-          .map((p) => ({ name: props.pickaxe.name, part: p }))
+        CheckboxOptions.filter((c) => !checkedParts.includes(c)).map((p) => ({
+          name: props.pickaxe.name,
+          part: p,
+        }))
       );
     }
   }, [checkedParts, db.pickaxes, isComplete, props.pickaxe.name]);
 
   const isPartiallyComplete = useMemo(
     () =>
-      checkedParts.length === checkboxOptions.length
-        ? []
-        : (checkboxOptions as CheckboxValueType[]),
+      checkedParts.length !== CheckboxOptions.length &&
+      checkedParts.length !== 0,
     [checkedParts.length]
   );
 
@@ -171,7 +181,7 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
                 style={{ width: '100%' }}
                 value={checkedParts}
               >
-                {checkboxOptions.map((option) => (
+                {CheckboxOptions.map((option) => (
                   <Col key={option} span={24}>
                     <Checkbox value={option}>{option}</Checkbox>
                   </Col>
