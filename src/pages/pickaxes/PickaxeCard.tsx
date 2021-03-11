@@ -25,10 +25,9 @@ const CheckboxOptions: PickaxeParts[] = [
   'Pommel',
 ];
 
-/** These type guards are used to get the fallback PNGs or JPGs for
- *  Ant's Image component, which only accepts strings and not ImgSrc's
- *  union type. (TypeScript is rather unhappy without them.)
- * */
+// These type guards are used to get the fallback PNGs or JPGs for
+//   Ant's Image component, which only accepts strings and not ImgSrc's
+//   union type. (TypeScript is rather unhappy without them.)
 const isPNGSrc = (imgSrc: ImgSrc): imgSrc is PNGSrc => true;
 const isJPGSrc = (imgSrc: ImgSrc): imgSrc is JPGSrc => true;
 const getFallbackSrc = (imgSrc: ImgSrc) =>
@@ -46,9 +45,12 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
     [props.pickaxe.name]
   ).map((p) => p.part);
 
-  // Add and delete IndexedDB entries
+  /** Check for newly checked and unchecked partsAdd and delete IndexedDB entries
+   *  and add and delete IndexedDB entries, respectively.
+   */
   const setCheckedParts = useCallback(
     (values: CheckboxValueType[]) => {
+      // Filter for parts that aren't currently checked and add entries
       const newlyCheckedItems = values.filter(
         (v) => !checkedParts.includes(v as PickaxeParts)
       );
@@ -61,6 +63,7 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
         );
       }
 
+      // Filter for parts that were previously checked and delete entries
       const newlyUncheckedItems = checkedParts.filter(
         (v) => !values.includes(v)
       );
@@ -74,13 +77,26 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
     [checkedParts, db.pickaxes, props.pickaxe.name]
   );
 
+  /** Checks if all checkboxes are currently checked. */
   const isComplete = useMemo(
     () => checkedParts.length === CheckboxOptions.length,
     [checkedParts.length]
   );
 
+  /** Checks if only some of the checkboxes are currently checked. */
+  const isPartiallyComplete = useMemo(
+    () =>
+      checkedParts.length !== 0 &&
+      checkedParts.length !== CheckboxOptions.length,
+    [checkedParts.length]
+  );
+
+  /** Toggle between checking and unchecking all checkboxes
+   *  when card header is clicked.
+   *  Also adds and deletes all IndexedDB entries appropriately. */
   const onHeaderClick = useCallback(() => {
     if (isComplete) {
+      // If all checked, delete all part entries from set (except Paintjob)
       db.pickaxes
         .where({
           name: props.pickaxe.name,
@@ -88,6 +104,7 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
         .and((p) => p.part !== 'Paintjob')
         .delete();
     } else {
+      // Otherwise, add entries for all currently unchecked parts
       db.pickaxes.bulkAdd(
         CheckboxOptions.filter((c) => !checkedParts.includes(c)).map((p) => ({
           name: props.pickaxe.name,
@@ -97,13 +114,7 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
     }
   }, [checkedParts, db.pickaxes, isComplete, props.pickaxe.name]);
 
-  const isPartiallyComplete = useMemo(
-    () =>
-      checkedParts.length !== CheckboxOptions.length &&
-      checkedParts.length !== 0,
-    [checkedParts.length]
-  );
-
+  /** Returns the appropriate icon based on the current pickaxe's source. */
   const iconSrc = useMemo(() => {
     switch (props.pickaxe.source) {
       case 'Assignment':

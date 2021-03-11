@@ -12,17 +12,19 @@ export default function PaintjobCard(props: {
   paintjob: typeof PickaxePaintjobNames[number];
 }) {
   const db = useDB();
-  const part: PickaxeParts = 'Paintjob';
+  const paintjobPart: PickaxeParts = 'Paintjob';
   const query = useSuspendedLiveQuery(
-    () => db.pickaxes.get({ name: props.paintjob, part: part }),
+    () => db.pickaxes.get({ name: props.paintjob, part: paintjobPart }),
     [props.paintjob]
   );
 
-  const onClick = useCallback(() => {
+  /** When clicked, add new entry to IndexedDB if Paintjob doesn't exist,
+   *  or delete its entry if it does. */
+  const toggleEntry = useCallback(() => {
     if (query === undefined) {
-      db.pickaxes.add({ name: props.paintjob, part: part });
+      db.pickaxes.add({ name: props.paintjob, part: paintjobPart });
     } else {
-      db.pickaxes.where({ name: props.paintjob, part: part }).delete();
+      db.pickaxes.where({ name: props.paintjob, part: paintjobPart }).delete();
     }
   }, [db.pickaxes, props.paintjob, query]);
 
@@ -31,7 +33,7 @@ export default function PaintjobCard(props: {
       <Badge.Ribbon className="pickaxe-ribbon" text={props.paintjob}>
         <Card
           hoverable
-          onClick={onClick}
+          onClick={toggleEntry}
           size="small"
           style={{
             backgroundColor: query ? accentColor : 'inherit',
