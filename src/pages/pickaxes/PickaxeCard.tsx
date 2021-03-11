@@ -127,11 +127,11 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
   }, [props.pickaxe.source]);
 
   return (
-    <Col xxl={6} xl={6} lg={8} md={12} sm={12} xs={24}>
+    <Col xxl={6} xl={8} lg={12} md={12} sm={12} xs={24}>
       <Card
         hoverable
         title={
-          <div onClick={onHeaderClick}>
+          <div onClick={onHeaderClick} style={{ whiteSpace: 'break-spaces' }}>
             {props.pickaxe.name}
             <Image
               alt={`${props.pickaxe.name} is acquired via ${props.pickaxe.source}`}
@@ -160,7 +160,7 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
         }
       >
         <Row justify="space-between">
-          <Col span={11}>
+          <Col span={11} style={{ textAlign: 'center' }}>
             <Tooltip
               destroyTooltipOnHide
               placement="bottom"
@@ -189,7 +189,7 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
             <Row align="middle" justify="space-between">
               <Checkbox.Group
                 onChange={setCheckedParts}
-                style={{ width: '100%' }}
+                style={{ width: '100%', whiteSpace: 'nowrap' }}
                 value={checkedParts}
               >
                 {CheckboxOptions.map((option) => (
