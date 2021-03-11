@@ -47,10 +47,7 @@ export default function ResetProgress(props: { hide: () => void }) {
               />
             }
             onClick={() => {
-              Promise.all([
-                db.frameworks.clear(),
-                db.overclocks.clear(),
-              ]).then(() => props.hide());
+              db.clearAll().then(() => props.hide());
             }}
           >
             Reset

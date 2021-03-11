@@ -12,7 +12,7 @@ export class AppDatabase extends Dexie {
   overclocks: Dexie.Table<OverclockEntry, number>;
   frameworks: Dexie.Table<FrameworkEntry, number>;
   pickaxes: Dexie.Table<PickaxeEntry, number>;
-  pickaxeUniqueParts: Dexie.Table<PickaxeUniquePartEntry, number>;
+  pickaxeUniques: Dexie.Table<PickaxeUniquePartEntry, number>;
 
   constructor() {
     super('DRG-Completionist');
@@ -26,8 +26,16 @@ export class AppDatabase extends Dexie {
     this.overclocks = this.table('overclocks');
     this.frameworks = this.table('frameworks');
     this.pickaxes = this.table('pickaxes');
-    this.pickaxeUniqueParts = this.table('pickaxeUniques');
+    this.pickaxeUniques = this.table('pickaxeUniques');
   }
+  /** Async call to clear all current IndexedDB tables completely. */
+  clearAll = () =>
+    Promise.all([
+      this.frameworks.clear(),
+      this.overclocks.clear(),
+      this.pickaxes.clear(),
+      this.pickaxeUniques.clear(),
+    ]);
 }
 
 export type OverclockEntry = {
