@@ -78,6 +78,7 @@ EOF
 
 for file in $SRC_DIR/assets/*; do
   if [ -d $file ]; then
+    yarn webpconvert $(realpath $file)
     generate_index $(realpath $file)
   fi
 done

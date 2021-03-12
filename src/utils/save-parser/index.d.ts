@@ -12,7 +12,7 @@ export function parse_save_file(file: File): Promise<SaveFile>;
  * type in the future, console.log the return from the parser, figure out the
  * type, and add it here later.
  *
- * Or complain to future Robert, this is past Robert's fault anyways.
+ * Or complain to future-Robert -- this is past-Robert's fault anyways.
  */
 export type SaveFile = {
   "SchematicSave": {
