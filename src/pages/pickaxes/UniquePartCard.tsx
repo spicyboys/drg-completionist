@@ -17,7 +17,7 @@ const isJPGSrc = (imgSrc: ImgSrc): imgSrc is JPGSrc => true;
 const getFallbackSrc = (imgSrc: ImgSrc) =>
   isPNGSrc(imgSrc) ? imgSrc.png : isJPGSrc(imgSrc) ? imgSrc.jpg : undefined;
 
-export default function UniquePartsCard(props: {
+export default function UniquePartCard(props: {
   uniquePart: PickaxeUniquePart;
 }) {
   // Get matching IndexedDB entry on mount
@@ -49,6 +49,7 @@ export default function UniquePartsCard(props: {
     }
   }, [props.uniquePart.source]);
 
+  // This prevents the regular onClick event from triggering if it is on the Image element.
   const imageRef = useRef<HTMLDivElement>(null);
   const onClick = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {

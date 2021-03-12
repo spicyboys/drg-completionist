@@ -4,7 +4,7 @@ import Image from 'components/Image';
 import { Pickaxe, UniqueParts } from 'data/pickaxes';
 import PickaxeCard from './PickaxeCard';
 import PickaxeProgressBar, { ProgressQuery } from './PickaxeProgressBar';
-import UniquePartsCard from './UniquePartsCard';
+import UniquePartCard from './UniquePartCard';
 
 const { Panel } = Collapse;
 const { Meta } = Card;
@@ -43,7 +43,7 @@ export default function PickaxeParts(
           <PickaxeCard key={pickaxe.name} pickaxe={pickaxe} />
         ))}
         {UniqueParts.map((uniquePart) => (
-          <UniquePartsCard key={uniquePart.name} uniquePart={uniquePart} />
+          <UniquePartCard key={uniquePart.name} uniquePart={uniquePart} />
         ))}
       </Row>
     </Panel>
