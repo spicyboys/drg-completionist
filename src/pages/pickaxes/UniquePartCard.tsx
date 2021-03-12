@@ -76,7 +76,13 @@ export default function UniquePartCard(props: {
               alt={`${props.uniquePart.name} is acquired via ${props.uniquePart.source}`}
               src={iconSrc}
               style={{
-                filter: query ? 'grayscale(1) invert(1)' : undefined,
+                filter: query
+                  ? `grayscale(1) invert(1) ${
+                      props.uniquePart.source === 'Lost Pack'
+                        ? 'brightness(100)'
+                        : ''
+                    }`
+                  : undefined,
                 float: 'right',
                 height: 24,
                 width: 'auto',

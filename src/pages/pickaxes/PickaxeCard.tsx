@@ -139,7 +139,13 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
               alt={`${props.pickaxe.name} is acquired via ${props.pickaxe.source}`}
               src={iconSrc}
               style={{
-                filter: isComplete ? 'grayscale(1) invert(1)' : undefined,
+                filter: isComplete
+                  ? `grayscale(1) invert(1) ${
+                      props.pickaxe.source === 'Lost Pack'
+                        ? 'brightness(0)'
+                        : ''
+                    }`
+                  : undefined,
                 float: 'right',
                 height: 24,
                 width: 'auto',
