@@ -28,7 +28,12 @@ export default function useSuspendedLiveQuery<T>(
   // or rethrow the promise to continue suspending
   let cacheEntry: PromiseCache | undefined;
   for (const promiseCache of promiseCaches) {
-    if (deepEqual(dependencies, promiseCache.dependencies)) {
+    if (
+      deepEqual(
+        [...dependencies, querier.toString()],
+        promiseCache.dependencies
+      )
+    ) {
       if ('error' in promiseCache) {
         throw promiseCache.error;
       } else if ('response' in promiseCache) {
@@ -51,7 +56,7 @@ export default function useSuspendedLiveQuery<T>(
         .catch((e) => {
           promiseCache.error = e;
         }),
-      dependencies,
+      dependencies: [...dependencies, querier.toString()],
     };
     promiseCaches.push(promiseCache);
     throw promiseCache.promise;
