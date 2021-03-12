@@ -24,14 +24,20 @@ export const getOverclocksFromSaveFile = ({
     ) as Record<MinerWeapon<Miner>, Overclock[]>
   ).forEach(([weapon, overclocks]) => {
     for (const overclock of overclocks) {
-      if (forgedSchematics.some((f) => overclock.id === f)) {
+      if (
+        forgedSchematics !== undefined &&
+        forgedSchematics.some((f) => overclock.id === f)
+      ) {
         acquiredOverclocks.push({
           weapon: weapon as MinerWeapon<Miner>,
           name: overclock.name,
           isForged: true,
         });
       }
-      if (unforgedSchematics.some((f) => overclock.id === f)) {
+      if (
+        unforgedSchematics !== undefined &&
+        unforgedSchematics.some((f) => overclock.id === f)
+      ) {
         acquiredOverclocks.push({
           weapon: weapon as MinerWeapon<Miner>,
           name: overclock.name,

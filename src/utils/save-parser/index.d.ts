@@ -17,8 +17,8 @@ export function parse_save_file(file: File): Promise<SaveFile>;
 export type SaveFile = {
   "SchematicSave": {
     "SchematicSave": {
-      "ForgedSchematics": string[],
-      "OwnedSchematics": string[],
+      "ForgedSchematics"?: string[],
+      "OwnedSchematics"?: string[],
     },
   },
   "UnlockedItemSkins": { [s: string] : [string] },

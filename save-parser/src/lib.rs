@@ -33,8 +33,8 @@ const TS_APPEND_CONTENT: &'static str = r#"
 export type SaveFile = {
   "SchematicSave": {
     "SchematicSave": {
-      "ForgedSchematics": string[],
-      "OwnedSchematics": string[],
+      "ForgedSchematics"?: string[],
+      "OwnedSchematics"?: string[],
     },
   },
   "UnlockedItemSkins": { [s: string] : [string] },
