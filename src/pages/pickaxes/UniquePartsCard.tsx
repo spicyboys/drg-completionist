@@ -1,5 +1,5 @@
 import { Card, Col, Image as AntImage, Row, Tooltip } from 'antd';
-import { useCallback, useMemo } from 'react';
+import { useCallback, useMemo, useRef } from 'react';
 import { Credit } from 'assets/currencies';
 import { Assignment, LostPack } from 'assets/other';
 import Image from 'components/Image';
@@ -49,6 +49,19 @@ export default function UniquePartsCard(props: {
     }
   }, [props.uniquePart.source]);
 
+  const imageRef = useRef<HTMLDivElement>(null);
+  const onClick = useCallback(
+    (e: React.MouseEvent<HTMLDivElement>) => {
+      if (
+        e.target instanceof HTMLElement &&
+        !imageRef.current?.contains(e.target)
+      ) {
+        toggleEntry();
+      }
+    },
+    [toggleEntry]
+  );
+
   return (
     <Col xxl={6} xl={8} lg={12} md={12} sm={12} xs={24}>
       <Card
@@ -74,7 +87,7 @@ export default function UniquePartsCard(props: {
           fontWeight: 'bold',
           transition: 'all 0.3s',
         }}
-        onClick={toggleEntry}
+        onClick={onClick}
       >
         <Row>
           <Col span={24} style={{ textAlign: 'center' }}>
@@ -83,16 +96,18 @@ export default function UniquePartsCard(props: {
               placement="bottom"
               title={`Unique Part obtained via ${props.uniquePart.source}`}
             >
-              <AntImage
-                alt={props.uniquePart.name}
-                src={props.uniquePart.icon.webp}
-                fallback={getFallbackSrc(props.uniquePart.icon)}
-                style={{
-                  border: '2px solid #cccccc',
-                  height: 110,
-                  width: 'auto',
-                }}
-              />
+              <div style={{ display: 'inline-block' }} ref={imageRef}>
+                <AntImage
+                  alt={props.uniquePart.name}
+                  src={props.uniquePart.icon.webp}
+                  fallback={getFallbackSrc(props.uniquePart.icon)}
+                  style={{
+                    border: '2px solid #cccccc',
+                    height: 110,
+                    width: 'auto',
+                  }}
+                />
+              </div>
             </Tooltip>
           </Col>
         </Row>
