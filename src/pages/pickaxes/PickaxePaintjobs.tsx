@@ -1,5 +1,6 @@
 import { Card, Collapse, CollapsePanelProps, Row } from 'antd';
-import PaintPickaxeIcon from 'assets/other/paintPickaxeIcon.png';
+import { PaintPickaxeIcon } from 'assets/other';
+import Image from 'components/Image';
 import { PickaxePaintjobNames } from 'data/pickaxes';
 import PaintjobCard from './PaintjobCard';
 import PickaxeProgressBar, { ProgressQuery } from './PickaxeProgressBar';
@@ -24,8 +25,7 @@ export default function PickaxePaintjobs(
         <Meta
           title="Pickaxe Paintjobs"
           avatar={
-            // TODO: Replace this with WebP-optimized Image component
-            <img
+            <Image
               alt="Pickaxe Paintjobs Progress"
               src={PaintPickaxeIcon}
               style={{ height: 64, width: 64 }}
