@@ -22,6 +22,7 @@ export type SaveFile = {
     },
   },
   "UnlockedItemSkins": { [s: string] : [string] },
+  "UnlockedPickaxeParts": string[],
 }; 
 
 

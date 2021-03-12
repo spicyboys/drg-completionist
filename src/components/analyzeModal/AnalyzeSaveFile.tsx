@@ -17,6 +17,8 @@ import Image from 'components/Image';
 import useDB from 'db/useDB';
 import { getFrameworksFromSaveFile } from './getFrameworksFromSaveFile';
 import { getOverclocksFromSaveFile } from './getOverclocksFromSaveFile';
+import { getPickaxeUniquesFromSaveFile } from './getPickaxeUniquesFromSaveFile';
+import { getPickaxesFromSaveFile } from './getPickaxesFromSaveFile';
 
 const { Text } = Typography;
 
@@ -32,10 +34,13 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
         // Parse the save file using the WASM library
         const parser = await import('utils/save-parser');
         const saveFile = await parser.parse_save_file(f);
+        console.log(saveFile);
 
         // Extract the relevant information from the parsed save file
         const overclocks = getOverclocksFromSaveFile(saveFile);
         const frameworks = getFrameworksFromSaveFile(saveFile);
+        const pickaxes = getPickaxesFromSaveFile(saveFile);
+        const pickaxeUniques = getPickaxeUniquesFromSaveFile(saveFile);
 
         // Update the store with the new save file data
         await Promise.all([
@@ -47,6 +52,14 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
             await db.frameworks.clear();
             await db.frameworks.bulkAdd(frameworks);
           })(),
+          (async () => {
+            await db.pickaxes.clear();
+            await db.pickaxes.bulkAdd(pickaxes);
+          })(),
+          (async () => {
+            await db.pickaxeUniques.clear();
+            await db.pickaxeUniques.bulkAdd(pickaxeUniques);
+          })(),
         ]);
 
         // Show the user a success notification with how many items were
@@ -54,8 +67,9 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
         notification.success({
           message: <Text type="success">Save File Analyzed!</Text>,
           description:
-            `Successfully imported ${overclocks.length} Overclocks and ` +
-            `${frameworks.length} Weapon Frameworks.`,
+            `Successfully imported ${overclocks.length} Overclocks, ` +
+            `${frameworks.length} Frameworks, and ` +
+            `${pickaxes.length + pickaxeUniques.length} Pickaxe Parts.`,
           duration: 10,
         });
 
