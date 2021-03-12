@@ -28,14 +28,9 @@ export class AppDatabase extends Dexie {
     this.pickaxes = this.table('pickaxes');
     this.pickaxeUniques = this.table('pickaxeUniques');
   }
+
   /** Async call to clear all current IndexedDB tables completely. */
-  clearAll = () =>
-    Promise.all([
-      this.frameworks.clear(),
-      this.overclocks.clear(),
-      this.pickaxes.clear(),
-      this.pickaxeUniques.clear(),
-    ]);
+  clearAll = () => Promise.all(this.tables.map((t) => t.clear()));
 }
 
 export type OverclockEntry = {

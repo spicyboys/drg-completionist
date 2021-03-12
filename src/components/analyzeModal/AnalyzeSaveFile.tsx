@@ -42,24 +42,13 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
         const pickaxeUniques = getPickaxeUniquesFromSaveFile(saveFile);
 
         // Update the store with the new save file data
-        await Promise.all([
-          (async () => {
-            await db.overclocks.clear();
-            await db.overclocks.bulkAdd(overclocks);
-          })(),
-          (async () => {
-            await db.frameworks.clear();
-            await db.frameworks.bulkAdd(frameworks);
-          })(),
-          (async () => {
-            await db.pickaxes.clear();
-            await db.pickaxes.bulkAdd(pickaxes);
-          })(),
-          (async () => {
-            await db.pickaxeUniques.clear();
-            await db.pickaxeUniques.bulkAdd(pickaxeUniques);
-          })(),
-        ]);
+        await db.transaction('rw', db.tables, async () => {
+          await db.clearAll();
+          await db.overclocks.bulkAdd(overclocks);
+          await db.frameworks.bulkAdd(frameworks);
+          await db.pickaxes.bulkAdd(pickaxes);
+          await db.pickaxeUniques.bulkAdd(pickaxeUniques);
+        });
 
         // Show the user a success notification with how many items were
         // successfully imported
