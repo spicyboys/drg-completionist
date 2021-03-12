@@ -34,7 +34,6 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
         // Parse the save file using the WASM library
         const parser = await import('utils/save-parser');
         const saveFile = await parser.parse_save_file(f);
-        console.log(saveFile);
 
         // Extract the relevant information from the parsed save file
         const overclocks = getOverclocksFromSaveFile(saveFile);

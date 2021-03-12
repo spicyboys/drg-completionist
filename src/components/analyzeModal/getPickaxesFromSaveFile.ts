@@ -14,7 +14,7 @@ export const getPickaxesFromSaveFile = ({
   Object.values(unlockedPickaxeParts).forEach((unlockedPartId) => {
     if (unlockedPartId === undefined) return;
 
-    // First check for any parts in the Pickaxe Set
+    // Checks each GUID in the save file against all PartIDs in each Pickaxe Set
     for (const pickaxe of Pickaxes) {
       Object.entries(pickaxe.partIDs).forEach(([partType, id]) => {
         if (id === unlockedPartId) {

@@ -14,7 +14,6 @@ export const getPickaxeUniquesFromSaveFile = ({
   Object.values(unlockedPickaxeParts).forEach((unlockedPartId) => {
     if (unlockedPartId === undefined) return;
 
-    // Then check for any Unique Parts
     for (const unique of UniqueParts) {
       if (unique.id === unlockedPartId) {
         acquiredUniques.push({
