@@ -15,8 +15,10 @@ import Image from 'components/Image';
 import { Pickaxe, PickaxeParts } from 'data/pickaxes';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
+import { MinerColor, MinerColorContrastText } from 'utils/miner';
 
-const accentColor = '#dc8c13';
+const accentColor = MinerColor.Driller;
+const contrastText = MinerColorContrastText.Driller;
 const CheckboxOptions: PickaxeParts[] = [
   'Blades',
   'Head',
@@ -147,7 +149,7 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
         }
         headStyle={{
           backgroundColor: isComplete ? accentColor : 'inherit',
-          color: isComplete ? '#1a1a1a' : '#cccccc',
+          color: isComplete ? contrastText : '#cccccc',
           fontWeight: 'bold',
           transition: 'all 0.3s',
         }}

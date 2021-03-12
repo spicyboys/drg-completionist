@@ -6,8 +6,10 @@ import Image from 'components/Image';
 import { PickaxeUniquePart } from 'data/pickaxes';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
+import { MinerColor, MinerColorContrastText } from 'utils/miner';
 
-const accentColor = '#F870FF';
+const accentColor = MinerColor.Engineer;
+const contrastText = MinerColorContrastText.Engineer;
 
 // These type guards are used to get the fallback PNGs or JPGs for
 //   Ant's Image component, which only accepts strings and not ImgSrc's
@@ -84,7 +86,7 @@ export default function UniquePartCard(props: {
         }
         headStyle={{
           backgroundColor: query ? accentColor : 'inherit',
-          color: query ? '#1a1a1a' : '#cccccc',
+          color: query ? contrastText : '#cccccc',
           fontWeight: 'bold',
           transition: 'all 0.3s',
         }}

@@ -4,9 +4,10 @@ import { PickaxePaintjobNames, PickaxeParts } from 'data/pickaxes';
 import './PaintjobCard.css';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
+import { MinerColor } from 'utils/miner';
 import PaintjobIcon from './PaintjobIcon';
 
-const accentColor = '#176cff';
+const accentColor = MinerColor.Scout;
 
 export default function PaintjobCard(props: {
   paintjob: typeof PickaxePaintjobNames[number];
