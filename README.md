@@ -1,15 +1,15 @@
 # DRG Completionist
 
-[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/BobertForever/drg-completionist?color=limegreen)](https://github.com/BobertForever/drg-completionist/releases)
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/BobertForever/drg-completionist?color=darkgreen)](https://github.com/BobertForever/drg-completionist/releases)
 [![GitHub stars](https://img.shields.io/github/stars/BobertForever/drg-completionist)](https://github.com/BobertForever/drg-completionist/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/BobertForever/drg-completionist)](https://github.com/BobertForever/drg-completionist/issues)
-[![GitHub license](https://img.shields.io/github/license/BobertForever/drg-completionist)](https://github.com/BobertForever/drg-completionist/blob/main/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/BobertForever/drg-completionist?color=darkred)](https://github.com/BobertForever/drg-completionist/blob/main/LICENSE)
 
-_[DRG Completionist](https://drg-completionist.com/)_ is a free, open-source progress tracker for [Deep Rock Galactic](https://www.deeprockgalactic.com/). It's designed to help keep track of all the different overclocks and frameworks available for hard-working employees like yourselves to earn, as well as to serve as an handy reference for overclock data.
+_[DRG Completionist](https://drg-completionist.com/)_ is a free, open-source online progress tracker for [Deep Rock Galactic](https://www.deeprockgalactic.com/). It's designed to help keep track of all the different overclocks and cosmetics available for hard-working employees like yourselves, as well as to serve as an handy reference for overclock data.
 
-_DRG Completionist_ is a fully-fledged [Progressive Web App (PWA)](https://en.wikipedia.org/wiki/Progressive_web_application), which means it will automatically continue to function without an Internet connection and can be installed as a stand-alone app on supported browsers _(e.g., Google Chrome, Microsoft Edge, Safari on iOS)_. The app is also responsively designed for both desktop and mobile use, and it supports using both mouse and touchscreen on nearly any screen size.
+_DRG Completionist_ is a fully-fledged [Progressive Web App (PWA)](https://en.wikipedia.org/wiki/Progressive_web_application), which means it will automatically continue to function without an Internet connection and can be installed as a stand-alone app on supported browsers _(e.g., Google Chrome, Microsoft Edge, Safari on iOS)_. The app is also responsively designed for both desktop and mobile use, and it supports using both mouse and touchscreen on nearly any screen size. We recommend installing this app via your browser for the best experience.
 
-While progress can be input by clicking and tapping the old-fashioned way, _DRG Completionist_ also includes a snazzy (and optional) [WASM](https://en.wikipedia.org/wiki/WebAssembly)-based save file parsing tool that locally analyzes your PC's Deep Rock Galactic save file and automatically inputs your current progress into the app so you don't have to.
+While progress can be input by clicking and tapping the old-fashioned way, _DRG Completionist_ also includes a snazzy [WASM](https://en.wikipedia.org/wiki/WebAssembly)-based save file parsing tool that locally analyzes your PC's Deep Rock Galactic save file. Simply upload your save file and the Save Parser will automatically input your current progress into each page so you don't have to!
 
 _The Steam save file is located here by default on Windows, but may vary based on your install location:_
 
@@ -18,9 +18,9 @@ _The Steam save file is located here by default on Windows, but may vary based o
 ## Upcoming Features
 
 - Add weapon paintjobs
-- Add armor accessories
+- Add cosmetic Matrix Cores
 - Add armor paintjobs
-- Add pickaxe parts and paintjobs
+- Add victory moves
 
 ## Privacy
 
@@ -43,4 +43,4 @@ Neither this app nor its developers are associated with Deep Rock Galactic or Gh
 
 ---
 
-###### README Last Updated: Mar. 3, 2021
+###### README Last Updated: Mar. 12, 2021
