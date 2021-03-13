@@ -39,5 +39,25 @@
       "type": "image/png",
       "sizes": "1200x628"
     }
+  ],
+  "shortcuts": [
+    {
+      "name": "View Overclocks",
+      "short_name": "Overclocks",
+      "description": "View Your Current Overclocks Progress",
+      "url": "/overclocks"
+    },
+    {
+      "name": "View Weapon Frameworks",
+      "short_name": "Frameworks",
+      "description": "View Your Current Weapon Frameworks Progress",
+      "url": "/frameworks"
+    },
+    {
+      "name": "View Pickaxe Parts",
+      "short_name": "Pickaxes",
+      "description": "View Your Current Pickaxes Part Progress",
+      "url": "/pickaxes"
+    }
   ]
 }
