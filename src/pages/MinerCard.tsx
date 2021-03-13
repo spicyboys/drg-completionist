@@ -9,11 +9,12 @@ const { Meta } = Card;
 export default function MinerCard(
   props: {
     children: (miner: Miner) => React.ReactNode;
+    category: string;
     miner: Miner;
     getProgress: ProgressQuery;
   } & Omit<CollapsePanelProps, 'key' | 'header'>
 ) {
-  const { children, miner, getProgress, ...panelProps } = props;
+  const { category, children, miner, getProgress, ...panelProps } = props;
 
   return (
     <Panel
@@ -30,7 +31,11 @@ export default function MinerCard(
             />
           }
           description={
-            <MinerCardProgressBar miner={miner} getProgress={getProgress} />
+            <MinerCardProgressBar
+              category={category}
+              miner={miner}
+              getProgress={getProgress}
+            />
           }
         />
       }

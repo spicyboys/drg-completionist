@@ -10,6 +10,7 @@
 
 import { clientsClaim } from 'workbox-core';
 import { ExpirationPlugin } from 'workbox-expiration';
+import * as googleAnalytics from 'workbox-google-analytics';
 import { precacheAndRoute, createHandlerBoundToURL } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing';
 import { StaleWhileRevalidate } from 'workbox-strategies';
@@ -78,4 +79,11 @@ self.addEventListener('message', (event) => {
   }
 });
 
-// Any other custom service worker logic can go here.
+// This allows the web app to queue gtags when in offline mode,
+// marking them as 'offline' with a custom dimension.
+// These gtags will be sent when the app reconnects to the network.
+googleAnalytics.initialize({
+  parameterOverrides: {
+    cd1: 'offline',
+  },
+});

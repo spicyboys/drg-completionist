@@ -1,5 +1,5 @@
 import { useLiveQuery } from 'dexie-react-hooks';
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import { TabName } from 'App';
 import { Frameworks } from 'data/frameworks';
 import { Overclocks } from 'data/overclocks';
@@ -82,6 +82,14 @@ export default function useCurrentTabProgress(
       partialProgress: null,
     }
   );
+
+  useEffect(() => {
+    gtag('event', `progress`, {
+      event_category: 'tab_progress',
+      event_label: currentTab,
+      value: Math.round(p.progress),
+    });
+  }, [p.progress, currentTab]);
 
   return {
     progress: Math.round(p.progress),

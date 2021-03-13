@@ -16,7 +16,7 @@ export default function FrameworksPage() {
     return acquiredFrameworks / (Frameworks.length * weapons.length);
   }, []);
   return (
-    <MinerPageLayout getProgress={getProgress}>
+    <MinerPageLayout category="WeaponFrameworks" getProgress={getProgress}>
       {(miner) => <MinerFrameworks miner={miner} />}
     </MinerPageLayout>
   );

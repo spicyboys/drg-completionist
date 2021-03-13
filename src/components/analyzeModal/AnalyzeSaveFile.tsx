@@ -27,9 +27,20 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
   const [loading, setLoading] = useState(false);
   const db = useDB();
 
+  const upload = (f: RcFile): false => {
+    gtag('event', 'upload_attempt', {
+      event_label: `Attempted on ${isMobile ? 'Mobile' : 'Desktop'}`,
+    });
+    parseSaveFile(f);
+    return false;
+  };
+
   const parseSaveFile = useCallback(
-    async (f: RcFile) => {
+    async (f: RcFile): Promise<void> => {
+      // Start a timer to keep track of how long it took to parse (if browser supports it)
+      const startTime = window.performance ? performance.now() : undefined;
       setLoading(true);
+
       try {
         // Parse the save file using the WASM library
         const parser = await import('utils/save-parser');
@@ -61,10 +72,43 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
           duration: 10,
         });
 
-        // Hide the Analyze modal
+        // Let the devs know (anonymously, of course) how many items of each
+        // type were found, and how long it took to parse the file
+        if (startTime) {
+          gtag('event', 'timing_complete', {
+            name: 'parsing_time',
+            value: Math.round(performance.now() - startTime),
+          });
+        }
+        gtag('event', 'success', {
+          event_category: 'Save File Analyzed',
+          event_label: 'Overclock Count',
+          value: `${overclocks.length}`,
+          non_interaction: true,
+        });
+        gtag('event', 'success', {
+          event_category: 'Save File Analyzed',
+          event_label: 'Frameworks Count',
+          value: `${frameworks.length}`,
+          non_interaction: true,
+        });
+        gtag('event', 'success', {
+          event_category: 'Save File Analyzed',
+          event_label: 'Pickaxe Parts Count',
+          value: `${pickaxes.length}`,
+          non_interaction: true,
+        });
+        gtag('event', 'success', {
+          event_category: 'Save File Analyzed',
+          event_label: 'Pickaxe Uniques Count',
+          value: `${pickaxeUniques.length}`,
+          non_interaction: true,
+        });
+
+        // Hide the Analyze Modal on Success
         props.hide();
       } catch (e) {
-        // Catch file analysis errors
+        // Catch file analysis errors (and let the devs know there was a problem)
         gtag('event', 'exception', {
           description: e,
           fatal: false,
@@ -103,15 +147,7 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
           </Col>
         </Row>
         <Row justify="center">
-          <Upload
-            accept=".sav"
-            fileList={[]}
-            beforeUpload={(f) => {
-              gtag('event', 'analyze_save');
-              parseSaveFile(f);
-              return false;
-            }}
-          >
+          <Upload accept=".sav" fileList={[]} beforeUpload={upload}>
             {loading ? (
               <Button disabled size="large" icon={<LoadingOutlined />}>
                 Analyzing...

@@ -5,9 +5,12 @@ import MinerCard from './MinerCard';
 import { ProgressQuery } from './MinerCardProgressBar';
 
 export default function MinerPageLayout(props: {
+  category: string;
   children: (miner: Miner) => React.ReactNode;
   getProgress: ProgressQuery;
 }) {
+  const { category } = props;
+
   return (
     <Collapse
       className="unselectable"
@@ -21,7 +24,12 @@ export default function MinerPageLayout(props: {
       )}
     >
       {AllMiners.map((miner) => (
-        <MinerCard key={miner} miner={miner} getProgress={props.getProgress}>
+        <MinerCard
+          key={miner}
+          category={category}
+          miner={miner}
+          getProgress={props.getProgress}
+        >
           {props.children}
         </MinerCard>
       ))}

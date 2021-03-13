@@ -30,6 +30,12 @@ export default function Settings(props: { hide: () => void }) {
             href="https://github.com/BobertForever/drg-completionist/releases/"
             rel="noreferrer noopener"
             target="_blank"
+            onClick={() => {
+              gtag('event', 'page_view', {
+                page_location:
+                  'https://github.com/BobertForever/drg-completionist/releases/',
+              });
+            }}
           >
             <img
               alt="Latest GitHub release (latest SemVer)"
