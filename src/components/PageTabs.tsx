@@ -48,7 +48,12 @@ export default function PageTabs() {
     <Select
       defaultValue={DEFAULT_TAB}
       onChange={history.push}
-      style={{ marginBottom: 12, width: '100%' }}
+      style={{
+        fontSize: 16,
+        fontWeight: 'bold',
+        marginBottom: 12,
+        width: '100%',
+      }}
     >
       {TABS.map((tab) => (
         <Option value={tab.key} key={tab.key}>
