@@ -47,6 +47,7 @@ export default function PageTabs() {
   const smallTabsDropdown = (
     <Select
       defaultValue={DEFAULT_TAB}
+      value={location.pathname.substring(1) || DEFAULT_TAB}
       onChange={history.push}
       style={{
         fontSize: 16,
