@@ -3,6 +3,11 @@ import { useMemo } from 'react';
 import { TabName } from 'App';
 import { Frameworks } from 'data/frameworks';
 import { Overclocks } from 'data/overclocks';
+import {
+  PickaxePaintjobNames,
+  PickaxeSets,
+  PickaxeUniquePartNames,
+} from 'data/pickaxes';
 import useDB from 'db/useDB';
 import { MinerWeapons } from 'utils/weapons';
 
@@ -27,6 +32,12 @@ export default function useCurrentTabProgress(
         return Object.values(Overclocks)
           .flatMap((w) => Object.values(w))
           .flat().length;
+      case 'pickaxes':
+        return (
+          PickaxeSets.length * 5 +
+          PickaxePaintjobNames.length +
+          PickaxeUniquePartNames.length
+        );
     }
   }, [currentTab]);
 
@@ -51,6 +62,16 @@ export default function useCurrentTabProgress(
               (acquiredOverclocks.filter((o) => !o.isForged).length /
                 totalItems) *
               100,
+          };
+        }
+        case 'pickaxes': {
+          const acquiredPickaxeParts = await db.pickaxes.count();
+          const acquiredPickaxeUniques = await db.pickaxeUniques.count();
+          return {
+            progress:
+              ((acquiredPickaxeParts + acquiredPickaxeUniques) / totalItems) *
+              100,
+            partialProgress: null,
           };
         }
       }

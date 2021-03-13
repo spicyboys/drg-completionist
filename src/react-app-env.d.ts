@@ -1,6 +1,13 @@
 /// <reference types="react-scripts" />
 
-declare type ImgSrc = {
+type PNGSrc = {
   png: string;
   webp: string;
 };
+
+type JPGSrc = {
+  jpg: string;
+  webp: string;
+};
+
+declare type ImgSrc = PNGSrc | JPGSrc;

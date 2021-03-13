@@ -1,6 +1,6 @@
 {
   "name": "drg-completionist",
-  "version": "1.3.4",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "start": "craco start",

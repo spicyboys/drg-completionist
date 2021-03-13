@@ -7,7 +7,7 @@ import PageHeader from 'components/PageHeader';
 
 const { Content } = Layout;
 
-export type TabName = 'overclocks' | 'frameworks';
+export type TabName = 'overclocks' | 'frameworks' | 'pickaxes';
 
 export const DEFAULT_TAB: TabName = 'overclocks';
 
@@ -39,11 +39,11 @@ export const TABS: Array<{
   //   content: <></>,
   // },
   // https://github.com/BobertForever/drg-completionist/issues/3
-  // {
-  //   title: "Pickaxe Components",
-  //   key: "pickaxe",
-  //   content: <></>,
-  // },
+  {
+    title: 'Pickaxes',
+    key: 'pickaxes',
+    content: lazy(() => import('pages/pickaxes/PickaxesPage')),
+  },
 ];
 
 const PageSpinner = memo(function PageSpinner() {
