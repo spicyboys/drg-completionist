@@ -2,6 +2,7 @@
   "name": "drg-completionist",
   "version": "2.0.0",
   "private": true,
+  "sideEffects": false,
   "scripts": {
     "start": "craco start",
     "start-task": "set BROWSER=none && craco start",
