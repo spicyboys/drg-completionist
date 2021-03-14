@@ -47,7 +47,10 @@ export default function ResetProgress(props: { hide: () => void }) {
               />
             }
             onClick={() => {
-              db.clearAll().then(() => props.hide());
+              db.clearAll().then(() => {
+                gtag('event', 'resetAllProgress');
+                props.hide();
+              });
             }}
           >
             Reset
