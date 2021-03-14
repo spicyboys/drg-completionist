@@ -1,6 +1,6 @@
 import { RobotOutlined, SettingOutlined } from '@ant-design/icons/';
 import { Button, Col, Divider, Grid, Row, Select, Tabs } from 'antd';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { DEFAULT_TAB, TABS } from 'App';
 import AnalyzeModal from './analyzeModal/AnalyzeModal';
@@ -16,6 +16,27 @@ export default function PageTabs() {
   const location = useLocation();
   const [settingsVisible, setSettingsVisible] = useState(false);
   const [uploadVisible, setUploadVisible] = useState(false);
+
+  useEffect(() => {
+    gtag('event', 'page_view', {
+      page_location: window.location.href,
+      page_path: location.pathname,
+    });
+  }, [location.pathname]);
+  useEffect(() => {
+    if (uploadVisible) {
+      gtag('event', 'screen_view', {
+        screen_name: 'Upload Modal',
+      });
+    }
+  }, [uploadVisible]);
+  useEffect(() => {
+    if (settingsVisible) {
+      gtag('event', 'screen_view', {
+        screen_name: 'Settings Modal',
+      });
+    }
+  }, [settingsVisible]);
 
   const smallModalBar = (
     <Row justify="space-around">

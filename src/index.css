@@ -79,3 +79,9 @@ code {
 .loading {
   height: 8px;
 }
+
+/* Progress Bar Mobile Clipping Fix */
+
+.ant-progress-outer {
+  width: 99% !important;
+}

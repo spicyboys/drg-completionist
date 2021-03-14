@@ -33,7 +33,11 @@ export default function PickaxeParts(
             />
           }
           description={
-            <PickaxeProgressBar barColor="#dc8c13" getProgress={getProgress} />
+            <PickaxeProgressBar
+              barColor="#dc8c13"
+              category="PickaxeSets"
+              getProgress={getProgress}
+            />
           }
         />
       }

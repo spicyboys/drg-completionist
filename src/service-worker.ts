@@ -10,6 +10,7 @@
 
 import { clientsClaim } from 'workbox-core';
 import { ExpirationPlugin } from 'workbox-expiration';
+import * as googleAnalytics from 'workbox-google-analytics';
 import { precacheAndRoute, createHandlerBoundToURL } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing';
 import { StaleWhileRevalidate } from 'workbox-strategies';
@@ -54,11 +55,17 @@ registerRoute(
 );
 
 // An example runtime caching route for requests that aren't handled by the
-// precache, in this case same-origin .png requests like those from in public/
+// precache, in this case same-origin .png/.jpg/.webp/.ico
+// requests like those from in the /public folder
 registerRoute(
   // Add in any other file extensions or routing criteria as needed.
   ({ url }) =>
-    url.origin === self.location.origin && url.pathname.endsWith('.png'),
+    url.origin === self.location.origin &&
+    (url.pathname.endsWith('.png') ||
+      url.pathname.endsWith('.jpeg') ||
+      url.pathname.endsWith('.jpg') ||
+      url.pathname.endsWith('.webp') ||
+      url.pathname.endsWith('.ico')),
   // Customize this strategy as needed, e.g., by changing to CacheFirst.
   new StaleWhileRevalidate({
     cacheName: 'images',
@@ -78,4 +85,11 @@ self.addEventListener('message', (event) => {
   }
 });
 
-// Any other custom service worker logic can go here.
+// This allows the web app to queue gtags when in offline mode,
+// marking them as 'offline' with a custom dimension.
+// These gtags will be sent when the app reconnects to the network.
+googleAnalytics.initialize({
+  parameterOverrides: {
+    cd1: 'offline',
+  },
+});

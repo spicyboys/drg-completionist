@@ -32,7 +32,11 @@ export default function PickaxePaintjobs(
             />
           }
           description={
-            <PickaxeProgressBar barColor="#b00f86" getProgress={getProgress} />
+            <PickaxeProgressBar
+              barColor="#b00f86"
+              category="PickaxePaintjobs"
+              getProgress={getProgress}
+            />
           }
         />
       }

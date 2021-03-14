@@ -16,7 +16,7 @@ export default function OverclocksPage() {
     return forgedOverclocks / Object.values(Overclocks[miner]).flat().length;
   }, []);
   return (
-    <MinerPageLayout getProgress={getProgress}>
+    <MinerPageLayout category="Overclocks" getProgress={getProgress}>
       {(miner) => <MinerOverclocks miner={miner} />}
     </MinerPageLayout>
   );

@@ -1,5 +1,5 @@
 import { Image, Progress, Tooltip } from 'antd';
-import { memo } from 'react';
+import { memo, useEffect } from 'react';
 import { RockAndStone } from 'assets/other';
 import type { AppDatabase } from 'db/AppDatabase';
 import useDB from 'db/useDB';
@@ -9,18 +9,29 @@ import { Miner, MinerColor } from 'utils/miner';
 export type ProgressQuery = (db: AppDatabase, miner: Miner) => Promise<number>;
 
 export default memo(function MinerCardProgressBar({
+  category,
   miner,
   getProgress,
 }: {
+  category: string;
   miner: Miner;
   getProgress: ProgressQuery;
 }) {
   const db = useDB();
   const progress = useSuspendedLiveQuery(() => getProgress(db, miner), [miner]);
+  const progressPercentage = Math.round((progress || 0) * 100);
+
+  useEffect(() => {
+    gtag('event', 'progress', {
+      event_category: category,
+      event_label: miner,
+      value: progressPercentage,
+    });
+  }, [category, miner, progressPercentage]);
 
   return (
     <Progress
-      percent={Math.round((progress || 0) * 100)}
+      percent={progressPercentage}
       strokeColor={{
         '0%': MinerColor[miner],
         '100%': '#87d068',
