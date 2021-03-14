@@ -48,8 +48,9 @@
       "url": "/overclocks",
       "icons": [
         {
-          "src": "/overclock.png",
-          "type": "image/png",
+          "src": "/overclock.webp",
+          "sizes": "64x64",
+          "type": "image/webp",
           "purpose": "any"
         }
       ]
@@ -61,8 +62,9 @@
       "url": "/frameworks",
       "icons": [
         {
-          "src": "/framework.png",
-          "type": "image/png",
+          "src": "/framework.webp",
+          "sizes": "64x64",
+          "type": "image/webp",
           "purpose": "any"
         }
       ]
@@ -74,8 +76,9 @@
       "url": "/pickaxes",
       "icons": [
         {
-          "src": "/pickaxe.png",
-          "type": "image/png",
+          "src": "/pickaxe.webp",
+          "sizes": "64x64",
+          "type": "image/webp",
           "purpose": "any"
         }
       ]
