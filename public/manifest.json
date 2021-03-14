@@ -45,19 +45,40 @@
       "name": "View Overclocks",
       "short_name": "Overclocks",
       "description": "View Your Current Overclocks Progress",
-      "url": "/overclocks"
+      "url": "/overclocks",
+      "icons": [
+        {
+          "src": "/overclock.png",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ]
     },
     {
       "name": "View Weapon Frameworks",
       "short_name": "Frameworks",
       "description": "View Your Current Weapon Frameworks Progress",
-      "url": "/frameworks"
+      "url": "/frameworks",
+      "icons": [
+        {
+          "src": "/framework.png",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ]
     },
     {
       "name": "View Pickaxe Parts",
       "short_name": "Pickaxes",
       "description": "View Your Current Pickaxes Part Progress",
-      "url": "/pickaxes"
+      "url": "/pickaxes",
+      "icons": [
+        {
+          "src": "/pickaxe.png",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ]
     }
   ]
 }
