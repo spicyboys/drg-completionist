@@ -59,22 +59,23 @@ registerRoute(
 // requests like those from in the /public folder
 registerRoute(
   // Add in any other file extensions or routing criteria as needed.
-  ({ url }) =>
-    (url.origin === self.location.origin &&
+  ({ url }) => (
+    url.origin === self.location.origin &&
       (url.pathname.endsWith('.png') ||
         url.pathname.endsWith('.jpeg') ||
         url.pathname.endsWith('.jpg') ||
         url.pathname.endsWith('.webp') ||
         url.pathname.endsWith('.ico')),
-  // Customize this strategy as needed, e.g., by changing to CacheFirst.
-  new StaleWhileRevalidate({
-    cacheName: 'images',
-    plugins: [
-      // Ensure that once this runtime cache reaches a maximum size the
-      // least-recently used images are removed.
-      new ExpirationPlugin({ maxEntries: 50 }),
-    ],
-  })
+    // Customize this strategy as needed, e.g., by changing to CacheFirst.
+    new StaleWhileRevalidate({
+      cacheName: 'images',
+      plugins: [
+        // Ensure that once this runtime cache reaches a maximum size the
+        // least-recently used images are removed.
+        new ExpirationPlugin({ maxEntries: 50 }),
+      ],
+    })
+  )
 );
 
 // This allows the web app to trigger skipWaiting via
