@@ -7,7 +7,7 @@ import PageHeader from 'components/PageHeader';
 
 const { Content } = Layout;
 
-export type TabName = 'overclocks' | 'frameworks' | 'pickaxes';
+export type TabName = 'overclocks' | 'frameworks' | 'armor' | 'pickaxes';
 
 export const DEFAULT_TAB: TabName = 'overclocks';
 
@@ -26,12 +26,11 @@ export const TABS: Array<{
     key: 'frameworks',
     content: lazy(() => import('pages/frameworks/FrameworksPage')),
   },
-  // https://github.com/BobertForever/drg-completionist/issues/1
-  // {
-  //   title: "Weapon Skins",
-  //   key: "skins",
-  //   content: <></>,
-  // },
+  {
+    title: 'Armor',
+    key: 'armor',
+    content: lazy(() => import('pages/armor/ArmorPage')),
+  },
   // https://github.com/BobertForever/drg-completionist/issues/2
   // {
   //   title: "Miner Accessories",
