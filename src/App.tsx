@@ -22,7 +22,7 @@ export const TABS: Array<{
     content: lazy(() => import('pages/overclocks/OverclocksPage')),
   },
   {
-    title: 'Weapon Frameworks',
+    title: 'Frameworks',
     key: 'frameworks',
     content: lazy(() => import('pages/frameworks/FrameworksPage')),
   },
