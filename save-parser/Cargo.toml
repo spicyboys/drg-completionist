@@ -26,4 +26,4 @@ features = [
   "ProgressEvent",
   "EventTarget",
 ]
-version = "0.3.22"
+version = "0.3.49"
