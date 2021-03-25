@@ -14219,10 +14219,10 @@ webpack@4.44.2:
     watchpack "^1.7.4"
     webpack-sources "^1.4.1"
 
-webpconvert@^1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/webpconvert/-/webpconvert-1.1.3.tgz#3428f372840542174a0958c3db044cf6389db654"
-  integrity sha512-osJMyy5Wg7RPl2uWfnpsX5z5rQQNgHhhDPyIdbANwKa2BlH1r3wm2FJ8D0fT/BAzwdxew8cny8EZd6rzGsaOKw==
+webpconvert@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/webpconvert/-/webpconvert-1.1.4.tgz#bc92fb48ac8a1aa04f9c17acc284567fb9981b1b"
+  integrity sha512-j7guuJePXfR7l0BaGDAbLbJUxjNStn9HT68RIvJ/2BCknzic1U5twLnLlzO+lXbD+qShcNKTDDihj76GgzZeUg==
   dependencies:
     gulp "^4.0.2"
     gulp-imagemin "^7.1.0"
