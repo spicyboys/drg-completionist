@@ -76,11 +76,11 @@ export const Overclocks: Overclocks = {
           umanite: 130,
         },
         effects: {
-          buffs: ['+25 Tank Size'],
-          nerfs: ['-2.0m Flame Reach'],
+          buffs: ['+25 Tank Size', '+75 Max Fuel'],
+          nerfs: ['-2.0m Flame Reach', '+0.2s Reload Time'],
         },
         description:
-          'The smaller mechanism leaves room to increase tank capacity at the cost of operational range.',
+          'The smaller mechanism allows for greater tank capacity and more fuel at the cost of reload speed and operational range.',
       },
       {
         name: 'Fuel Stream Diffuser',
@@ -95,7 +95,7 @@ export const Overclocks: Overclocks = {
         },
         effects: {
           buffs: ['+5.0m Flame Reach'],
-          nerfs: ['-20% Fuel Flow Rate'],
+          nerfs: ['-1.2 Fuel Flow Rate'],
         },
         description:
           'Increases operation range, but decreases the fuel flow rate.',
@@ -112,11 +112,11 @@ export const Overclocks: Overclocks = {
           magnite: 90,
         },
         effects: {
-          buffs: ['+2 Damage', '+30% Rate of Fire'],
-          nerfs: ['-75 Max Fuel', '-50% Movement Speed While Using'],
+          buffs: ['+4 Damage', '+1.8 Fuel Flow Rate'],
+          nerfs: ['-3.0m Flame Reach', '-15 Tank Size'],
         },
         description:
-          'This crazy bit of tweaking will give a boost in damage, but at the cost of both mobility and fuel.',
+          'This crazy bit of tweaking will give a big boost in damage and flow rate, but at the cost of operational range and tank capacity.',
       },
       {
         name: 'Sticky Fuel',
@@ -157,10 +157,10 @@ export const Overclocks: Overclocks = {
           'Get all you can from your fuel and lose pressure slower from the main chamber.',
       },
       {
-        name: 'Perfectly Tuned Cooler',
+        name: 'Tuned Cooler',
         id: '6ADB23B3C8ED884086A88B8107C93CBE',
         icon: 'Cold',
-        type: 'Clean',
+        type: 'Balanced',
         price: {
           credits: 8750,
           bismor: 110,
@@ -168,10 +168,11 @@ export const Overclocks: Overclocks = {
           umanite: 130,
         },
         effects: {
-          buffs: ['+1 Freezing Power', '+10% Flow Rate'],
-          nerfs: [],
+          buffs: ['+1 Freezing Power', '+0.8 Flow Rate'],
+          nerfs: ['+0.2s Charge-up Time', '-20% Pressure Gain Rate'],
         },
-        description: 'Freeze things faster, no strings attached.',
+        description:
+          'Freeze things faster at the cost of a slower pump and turbine.',
       },
       {
         name: 'Flow Rate Expansion',
@@ -185,7 +186,7 @@ export const Overclocks: Overclocks = {
           magnite: 125,
         },
         effects: {
-          buffs: ['+170% Pressure Gain Rate', '+10% Flow Rate'],
+          buffs: ['+170% Pressure Gain Rate', '+0.8 Flow Rate'],
           nerfs: ['+125% Pressure Drop Rate'],
         },
         description:
@@ -221,15 +222,15 @@ export const Overclocks: Overclocks = {
           umanite: 75,
         },
         effects: {
-          buffs: ['+100% Damage'],
+          buffs: ['+100% Damage', '+100% Damage vs. Frozen'],
           nerfs: [
             '-3 Freezing Power',
-            '-50 Tank Capacity',
+            '-75 Tank Capacity',
             '+50% Pressure Drop Rate',
           ],
         },
         description:
-          "A change in the fuel mixture along with some heavy cooler unit tweaks means that you'll be doing less freezing and more killing with razor-sharp ice shards. However, the capacity of the pressure chamber suffers.",
+          'A change in the fuel mixture (along with some heavy cooler unit tweaks) means a lot more damage -- especially to frozen targets. However, freezing takes longer, and the capacity of the pressure chamber is reduced.',
       },
       {
         name: 'Snowball',
@@ -263,7 +264,7 @@ export const Overclocks: Overclocks = {
           jadiz: 100,
         },
         effects: {
-          buffs: ['+50% Weakpoint Chain Hit Chance'],
+          buffs: ['+75% Weakpoint Ricochet Chance'],
           nerfs: [],
         },
         description:
@@ -352,7 +353,7 @@ export const Overclocks: Overclocks = {
         },
         effects: {
           buffs: ['+50% Stun Chance'],
-          nerfs: ['-4 Magazine Size', '-4 Rate of Fire'],
+          nerfs: ['-4 Magazine Size', '-2 Rate of Fire'],
         },
         description:
           'Part-bullet, part-syringe: these rounds are very effective at stunning most enemies.',
@@ -389,7 +390,7 @@ export const Overclocks: Overclocks = {
           umanite: 125,
         },
         effects: {
-          buffs: ['+25% Cooling Rate', '-30% Heat Buildup When Charged'],
+          buffs: ['+0.1 Cooling Rate', '-30% Heat Buildup When Charged'],
           nerfs: [],
         },
         description:
@@ -408,10 +409,13 @@ export const Overclocks: Overclocks = {
         },
         effects: {
           buffs: ['-2 Charged Shot Ammo Use', '+30% Charge Speed'],
-          nerfs: ['+50% Normal Shot Heat Generation'],
+          nerfs: [
+            '+100% Charged Shot Heat Generation',
+            '+100% Heat Buildup When Charged',
+          ],
         },
         description:
-          'By channeling exhaust heat back into the charge chamber, a shot can be charged faster while using less energy. This does, however, make the weapon less efficient at dissipating heat from normal shots.',
+          'By channeling exhaust heat back into the charge chamber, a shot can be charged faster while using less energy. Unfortunately, this process generates a lot more heat.',
       },
       {
         name: 'Heavy Hitter',
@@ -443,8 +447,12 @@ export const Overclocks: Overclocks = {
           enorPearl: 60,
         },
         effects: {
-          buffs: ['+50% Charged Damage', '+50% Charged Area Damage'],
-          nerfs: ['+50% Charged Shot Ammo Use', '-25% Cooling Rate'],
+          buffs: [
+            '+50% Charged Damage',
+            '+50% Charged Area Damage',
+            '+20% Charged Effect Radius',
+          ],
+          nerfs: ['+2 Charged Shot Ammo Use', '-0.1 Cooling Rate'],
         },
         description:
           'Pushing the EPC to the limit will give you a significant increase in charge shot damage and a boost in the size of the explosion, but at the cost of thermal efficiency and energy consumption.',
@@ -462,7 +470,7 @@ export const Overclocks: Overclocks = {
         },
         effects: {
           buffs: ['+Persistent Plasma'],
-          nerfs: ['-20 Charged Damage', '-20 Area Damage'],
+          nerfs: ['-15 Charged Shot Damage', '-15 Area Damage'],
         },
         description:
           'By changing how the plasma is layered within the charged projectile, a slow and persistent discharge can be achieved upon impact. However, this does reduce the instant damage done.',
@@ -504,7 +512,7 @@ export const Overclocks: Overclocks = {
           umanite: 60,
         },
         effects: {
-          buffs: ['+20 Max Ammo', '-0.4s Reload Time'],
+          buffs: ['+18 Max Ammo', '-0.4s Reload Time'],
           nerfs: [],
         },
         description:
@@ -562,7 +570,7 @@ export const Overclocks: Overclocks = {
           nerfs: ['-2 Damage', 'No Stun Chance', 'No Stun Duration'],
         },
         description:
-          'Smaller shells designed around a new charge type reduce recoil and increase overall ammo and magazine capacity at the cost of raw damage.',
+          'Smaller shells designed around a new charge type reduce recoil and increase overall ammo and magazine capacity at the cost of raw damage and ability to stun.',
       },
     ],
     '"Stubby" Voltaic SMG': [
@@ -585,7 +593,7 @@ export const Overclocks: Overclocks = {
           'Same power but in a smaller package, giving slightly better accuracy and letting you fit a few more rounds in each magazine.',
       },
       {
-        name: 'Well Oiled Machine',
+        name: 'Well-Oiled Machine',
         id: 'CE9490445B036B49B89DB2BC8D18FD12',
         icon: 'FireRate',
         type: 'Clean',
@@ -649,7 +657,7 @@ export const Overclocks: Overclocks = {
           umanite: 60,
         },
         effects: {
-          buffs: ['+Turret Arc (10m Range)'],
+          buffs: ['+Turret Arc (15.0m Range)'],
           nerfs: ['-120 Max Ammo', '-2 Rate of Fire'],
         },
         description:
@@ -668,10 +676,10 @@ export const Overclocks: Overclocks = {
         },
         effects: {
           buffs: ['+Turret EM Discharge (5.0m Range)'],
-          nerfs: ['-5% Electrocution Chance', '-3 Damage'],
+          nerfs: ['-5 Magazine Size', '-2 Damage'],
         },
         description:
-          'Shoot a turret to turn it into the epicenter of an electric explosion! The bullet modifications unfortunately also lower the direct damage and electrocution chance.',
+          'Shoot a turret to turn it into the epicenter of an electric explosion! The bullet modifications unfortunately also lower the direct damage and magazine size.',
       },
     ],
     'Deepcore 40mm PGL': [
@@ -722,7 +730,7 @@ export const Overclocks: Overclocks = {
           umanite: 70,
         },
         effects: {
-          buffs: ['+4 Max Ammo'],
+          buffs: ['+5 Max Ammo'],
           nerfs: ['-10 Area Damage', '-0.5m Radius'],
         },
         description:
@@ -740,11 +748,11 @@ export const Overclocks: Overclocks = {
           umanite: 120,
         },
         effects: {
-          buffs: ['+RJ250 Compound'],
-          nerfs: ['-25 Area Damage'],
+          buffs: ['+RJ250 Compound', '+70% Max Ammo', '-0.6s Reload Time'],
+          nerfs: ['-35 Area Damage'],
         },
         description:
-          'Trade raw damage for the ability to use explosions to move yourself and your teammates.',
+          'Use explosions to launch yourself and your teammates into the air. Increases max ammo and reduces reload time at the cost of raw damage.',
       },
       {
         name: 'Fat Boy',
@@ -891,7 +899,7 @@ export const Overclocks: Overclocks = {
             '+150% Projectile Lifetime',
             '+1.5m Beam Width',
           ],
-          nerfs: ['-80% Beam DPS', '-50% Max Ammo', '-70% Magazine Size'],
+          nerfs: ['-75% Beam DPS', '-50% Max Ammo', '-70% Magazine Size'],
         },
         description:
           'These modified plasma nodes convert most of the forward momentum into angular momentum, streatching out the beam and continuously doing damage to the immediate area where it was launched. The nodes run for a longer duration but deal less damage every second. Due to the weight, both magazine and total capacity is greatly reduced.',
@@ -909,10 +917,10 @@ export const Overclocks: Overclocks = {
         },
         effects: {
           buffs: ['+Inferno'],
-          nerfs: ['-175 Beam DPS', '-6 Max Ammo', '-75% Armor Breaking'],
+          nerfs: ['-175 Beam DPS', '-75% Armor Breaking'],
         },
         description:
-          'Turn your Breach Cutter into a tool of burning death and destruction at the cost of ammo and armor breaking. As a bonus, the extreme internal heating keeps the targets burning for an extended period.',
+          'Turn your Breach Cutter into a tool of burning death and destruction at the cost of armor breaking. As a bonus, the extreme internal heating keeps the targets burning for an extended period.',
       },
     ],
   },
@@ -985,7 +993,7 @@ export const Overclocks: Overclocks = {
         },
         effects: {
           buffs: ['+800 Max Ammo'],
-          nerfs: ['-4 Rate of Fire'],
+          nerfs: ['-2 Rate of Fire'],
         },
         description:
           'More space left for ammo at the cost of a reduced rate of fire.',
@@ -1019,7 +1027,7 @@ export const Overclocks: Overclocks = {
           umanite: 75,
         },
         effects: {
-          buffs: ['+50% Ricochet Chance on Bullets'],
+          buffs: ['+75% Ricochet Chance on Bullets'],
           nerfs: ['-3 Damage', '+500% Base Spread'],
         },
         description:
@@ -1038,10 +1046,14 @@ export const Overclocks: Overclocks = {
         },
         effects: {
           buffs: ['+4 Damage'],
-          nerfs: ['No Movement While Using', 'No Stun Chance'],
+          nerfs: [
+            'No Movement While Using',
+            '-75% Stun Chance',
+            '-50% Stun Duration',
+          ],
         },
         description:
-          'Pushing things to the limit, this overclock greatly increases damage output, but the weapon no longer stuns targets and the kickback makes it almost impossible to move.',
+          'Pushing things to the limit, this overclock greatly increases damage output at the cost of consistently stunning targets, and the kickback makes it almost impossible to move.',
       },
     ],
     '"Thunderhead" Heavy Autocannon': [
@@ -1093,8 +1105,8 @@ export const Overclocks: Overclocks = {
           umanite: 70,
         },
         effects: {
-          buffs: ['+3 Area Damage', '+0.7m Effect Radius'],
-          nerfs: ['-6 Damage'],
+          buffs: ['+3 Area Damage', '+0.6m Effect Radius'],
+          nerfs: ['-7 Damage'],
         },
         description:
           'A few tweaks here and there, and the autocannon can now shoot HE rounds! Direct damage is lower, but the increased splash damage and range lets you saturate an area like no other weapon can.',
@@ -1114,12 +1126,13 @@ export const Overclocks: Overclocks = {
           buffs: [
             '+35% Movement Speed While Using',
             '-30% Base Spread',
-            '-1.0s Reload Time',
+            '+50% Rate of Fire Scaling',
+            '0.9 Starting Rate of Fire',
           ],
           nerfs: ['-50% Magazine Size'],
         },
         description:
-          'Custom compact ammo drums improve weapon balance, making it more accurate and easier to handle on the move and faster to reload at the cost of magazine capacity.',
+          'Fancy custom ammo drums improve weapon balance, making it more accurate and easier to handle on the move while the improved feed motor increases the speed with which the max fire rate is reached. All this, however, comes at the cost of magazine capacity.',
       },
       {
         name: 'Big Bertha',
@@ -1155,31 +1168,14 @@ export const Overclocks: Overclocks = {
           magnite: 135,
         },
         effects: {
-          buffs: ['+Neurotoxin Payload (30% Chance)', '+0.3m Effect Radius'],
-          nerfs: ['-3 Damage', '-6 Area Damage'],
+          buffs: ['+Neurotoxin Payload (50% Chance)', '+0.6m Effect Radius'],
+          nerfs: ['-2 Damage', '-5 Area Damage'],
         },
         description:
           'Channel your inner war criminal by mixing some neurotoxin into the explosive compound. The rounds deal less direct damage and splash damage, but affected bugs move slower and take lots of damage over time.',
       },
     ],
     '"Bulldog" Heavy Revolver': [
-      {
-        name: 'Homebrew Powder',
-        id: 'CD6993F938E27C49AC69293BF942A8F0',
-        icon: 'Chance',
-        type: 'Clean',
-        price: {
-          credits: 7350,
-          croppa: 135,
-          enorPearl: 105,
-          magnite: 70,
-        },
-        effects: {
-          buffs: ['+Randomized Damage (80% to 140%)'],
-          nerfs: [],
-        },
-        description: "More damage on average, but it's a bit inconsistent.",
-      },
       {
         name: 'Chain Hit',
         id: '5885A33B15AE844591A66B65A2E5494E',
@@ -1192,11 +1188,28 @@ export const Overclocks: Overclocks = {
           magnite: 120,
         },
         effects: {
-          buffs: ['+33% Weakpoint Chain Hit Chance'],
+          buffs: ['+75% Weakpoint Ricochet Chance'],
           nerfs: [],
         },
         description:
           'Any shot that hits a weakspot has a chance to ricochet into a nearby enemy.',
+      },
+      {
+        name: 'Homebrew Powder',
+        id: 'CD6993F938E27C49AC69293BF942A8F0',
+        icon: 'Chance',
+        type: 'Balanced',
+        price: {
+          credits: 7350,
+          croppa: 135,
+          enorPearl: 105,
+          magnite: 70,
+        },
+        effects: {
+          buffs: ['+Randomized Damage (75% to 200%)'],
+          nerfs: [],
+        },
+        description: "More damage on average, but it's a bit inconsistent.",
       },
       {
         name: 'Volatile Bullets',
@@ -1211,7 +1224,7 @@ export const Overclocks: Overclocks = {
         },
         effects: {
           buffs: ['+300% Damage vs. Burning'],
-          nerfs: ['-25 Damage'],
+          nerfs: ['-10 Damage'],
         },
         description:
           'Fuel on the fire! These rounds are extremely effective against burning targets, but at the cost of direct damage dealt to unaffected creatures.',
@@ -1228,7 +1241,7 @@ export const Overclocks: Overclocks = {
           magnite: 100,
         },
         effects: {
-          buffs: ['+2 Magazine Size', '+8 Max Ammo', '+4 Rate of Fire'],
+          buffs: ['+2 Magazine Size', '+6 Max Ammo', '+2 Rate of Fire'],
           nerfs: ['+0.5s Reload Time', '+50% Base Spread'],
         },
         description:
@@ -1248,7 +1261,7 @@ export const Overclocks: Overclocks = {
         effects: {
           buffs: ['+100% Damage', '-50% Base Spread'],
           nerfs: [
-            '-13 Max Ammo',
+            '-12 Max Ammo',
             '-1 Magazine Size',
             '+0.5s Reload Time',
             '+150% Recoil',
@@ -1345,7 +1358,7 @@ export const Overclocks: Overclocks = {
         },
         effects: {
           buffs: ['+9 Damage'],
-          nerfs: ['-36 Max Ammo', '-6 Magazine Size'],
+          nerfs: ['-30 Max Ammo', '-6 Magazine Size'],
         },
         description:
           'A new shape to the bullet delivers a lot more damage, but its odd size means fewer rounds in the clip and a bit less ammo overall.',
@@ -1363,10 +1376,10 @@ export const Overclocks: Overclocks = {
         },
         effects: {
           buffs: ['+Electro Minelets'],
-          nerfs: ['-3 Damage', '-6 Magazine Size'],
+          nerfs: ['-2 Damage', '-12 Magazine Size'],
         },
         description:
-          "After impacting terrain, these high-tech bullets convert in to electro-minelets that will electrocute anything unfortunate enough to come close. However they don't last forever and the rounds themselves take more space in the clip and deal less direct damage.",
+          "After impacting terrain, these high-tech bullets convert in to electro-minelets that will electrocute anything unfortunate enough to come close. However, they don't last forever, and the rounds themselves take more space in the clip and deal less direct damage.",
       },
       {
         name: 'Micro Flechettes',
@@ -1386,7 +1399,7 @@ export const Overclocks: Overclocks = {
             '-50% Recoil',
             '-50% Spread per Shot',
           ],
-          nerfs: ['-50% Damage'],
+          nerfs: ['-11 Damage'],
         },
         description:
           'Convert the BRT to fire small flechettes instead of slugs. Increases overall ammo and magazine size as well as reducing recoil, but at the cost of raw damage.',
@@ -1479,7 +1492,7 @@ export const Overclocks: Overclocks = {
         },
         effects: {
           buffs: ['+3 Rate of Fire'],
-          nerfs: ['+150% Recoil'],
+          nerfs: ['+100% Recoil'],
         },
         description: 'More bullets faster, and it kicks like a mule.',
       },
@@ -1495,7 +1508,7 @@ export const Overclocks: Overclocks = {
           magnite: 125,
         },
         effects: {
-          buffs: ['+33% Damage to Status-Afflicted Targets'],
+          buffs: ['+33% Damage vs. Status-Afflicted Targets'],
           nerfs: ['-5 Magazine Size'],
         },
         description:
@@ -1536,7 +1549,7 @@ export const Overclocks: Overclocks = {
         },
         effects: {
           buffs: ['+Electric Reload (100% Chance)'],
-          nerfs: ['-3 Damage', '-5 Magazine Size'],
+          nerfs: ['-2 Damage', '-5 Magazine Size'],
         },
         description:
           'Embedded capacitors electrocute targets from the inside when you reload. However, all that tech reduces the raw damage of the bullets and takes up some space in the magazines.',
@@ -1573,11 +1586,11 @@ export const Overclocks: Overclocks = {
           magnite: 75,
         },
         effects: {
-          buffs: ['+16 Max Ammo', '-0.2s Reload Time'],
+          buffs: ['+25% Clip Size', '-0.2s Reload Time'],
           nerfs: [],
         },
         description:
-          'Make space for more ammo and speed up reloads by getting rid of dead weight on the clips.',
+          'Increase clip capacity and speed up reloads by getting rid of dead weight on the clips.',
       },
       {
         name: 'Active Stability System',
@@ -1609,8 +1622,8 @@ export const Overclocks: Overclocks = {
           umanite: 80,
         },
         effects: {
-          buffs: ['+75% Max Ammo', '+3 Rate of Fire', '-50% Recoil'],
-          nerfs: ['-40% Damage'],
+          buffs: ['+91% Max Ammo', '+3 Rate of Fire', '-50% Recoil'],
+          nerfs: ['-17 Damage'],
         },
         description:
           'A less powerful round together with a rebalancing of weight distribution, enlarged vents, and a reshaped grip result in a rifle that is more controllable when hip-firing in quick succession, but at the cost of pure damage output. As an added bonus, you can carry more of the new ammunition.',
@@ -1648,7 +1661,7 @@ export const Overclocks: Overclocks = {
           buffs: ['+125% Focused Shot Damage Bonus'],
           nerfs: [
             '-36.5% Max Ammo',
-            '-50% Focus Speed',
+            '-40% Focus Speed',
             'No Movement in Focus Mode',
           ],
         },
@@ -1740,8 +1753,8 @@ export const Overclocks: Overclocks = {
           jadiz: 135,
         },
         effects: {
-          buffs: ['-35% Base Spread'],
-          nerfs: ['-2 Pellets'],
+          buffs: ['-50% Base Spread'],
+          nerfs: ['-1 Pellets'],
         },
         description:
           'Specially shaped shells result in a tighter shot, but the number of pellets is reduced.',
@@ -1778,7 +1791,7 @@ export const Overclocks: Overclocks = {
           jadiz: 70,
         },
         effects: {
-          buffs: ['+2 Combined Rate of Fire', '-0.4s Reload Time'],
+          buffs: ['+1 Combined Rate of Fire', '-0.4s Reload Time'],
           nerfs: [],
         },
         description:
@@ -1797,10 +1810,10 @@ export const Overclocks: Overclocks = {
         },
         effects: {
           buffs: ['+30 Combined Clip Size'],
-          nerfs: ['-1 Damage'],
+          nerfs: ['-2 Combined Rate of Fire'],
         },
         description:
-          'Fit more of these custom rounds in each magazine, but at small loss in raw damage.',
+          'Fit more of these custom rounds in each magazine, but at small reduction in the rate of fire.',
       },
       {
         name: 'Cryo Minelets',
