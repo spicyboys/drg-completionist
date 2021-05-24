@@ -50,7 +50,7 @@ export default function Settings(props: { hide: () => void }) {
           </a>
           <br />
           Up-to-date as of Deep Rock Galactic version{' '}
-          <Text code>1.33.49660.0</Text>
+          <Text code>1.34.52538.0</Text>
         </Col>
       </Row>
       <Divider dashed />
