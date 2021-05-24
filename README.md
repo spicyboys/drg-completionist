@@ -17,6 +17,8 @@ _The Steam save file is located here by default on Windows, but may vary based o
 
 ## Upcoming Features
 
+_**NOTE:** Development of the following features is on hold until either we find a way to datamine their values from the save file, or GSG provides a list of item GUIDs for third-party developers. We apologize for the inconvenience._
+
 - Add weapon paintjobs
 - Add cosmetic Matrix Cores
 - Add armor paintjobs
@@ -43,4 +45,4 @@ Neither this app nor its developers are associated with Deep Rock Galactic or Gh
 
 ---
 
-###### README Last Updated: Mar. 12, 2021
+###### README Last Updated: May 24, 2021
