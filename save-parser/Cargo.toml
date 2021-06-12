@@ -13,11 +13,11 @@ callback-future = "0.1"
 console_error_panic_hook = "0.1.6"
 enum_dispatch = "0.3.5"
 fragile = "1.0.0"
-hex = "0.4.2"
+hex = "0.4.3"
 js-sys = "0.3"
 serde = {version = "1.0", features = ["derive"]}
 wasm-bindgen = {version = "0.2", features = ["serde-serialize"]}
-wasm-bindgen-futures = "0.4.20"
+wasm-bindgen-futures = "0.4.22"
 
 [dependencies.web-sys]
 features = [
@@ -26,4 +26,4 @@ features = [
   "ProgressEvent",
   "EventTarget",
 ]
-version = "0.3.22"
+version = "0.3.49"
