@@ -1,6 +1,6 @@
 import { Card, Collapse, CollapsePanelProps } from 'antd';
 import Image from 'components/Image';
-import { Miner, MinerAvatar, MinerWithAllClass } from 'utils/miner';
+import { Miner, MinerAvatar } from 'utils/miner';
 import MinerCardProgressBar, { ProgressQuery } from './MinerCardProgressBar';
 
 const { Panel } = Collapse;
@@ -8,9 +8,9 @@ const { Meta } = Card;
 
 export default function MinerCard(
   props: {
-    children: (miner: Miner | MinerWithAllClass) => React.ReactNode;
+    children: (miner: Miner) => React.ReactNode;
     category: string;
-    miner: Miner | MinerWithAllClass;
+    miner: Miner;
     getProgress: ProgressQuery;
   } & Omit<CollapsePanelProps, 'key' | 'header'>
 ) {

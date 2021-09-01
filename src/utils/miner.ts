@@ -1,16 +1,6 @@
-import { PlayerRankIcon } from 'assets/other';
 import * as Avatars from 'assets/portraits';
 
 export enum Miner {
-  Driller = 'Driller',
-  Engineer = 'Engineer',
-  Gunner = 'Gunner',
-  Scout = 'Scout',
-}
-
-// For item types with some members usable by all Miners (e.g., Paintjobs).
-export enum MinerWithAllClass {
-  AllClass = 'All-Class',
   Driller = 'Driller',
   Engineer = 'Engineer',
   Gunner = 'Gunner',
@@ -24,31 +14,23 @@ export const AllMiners = [
   Miner.Scout,
 ] as const;
 
-export const AllMinersWithAllClass = [
-  ...AllMiners,
-  MinerWithAllClass.AllClass,
-] as const;
-
-export const MinerAvatar: Record<MinerWithAllClass, ImgSrc> = {
-  [MinerWithAllClass.AllClass]: PlayerRankIcon,
-  [MinerWithAllClass.Driller]: Avatars.DrillerPortrait,
-  [MinerWithAllClass.Engineer]: Avatars.EngineerPortrait,
-  [MinerWithAllClass.Gunner]: Avatars.GunnerPortrait,
-  [MinerWithAllClass.Scout]: Avatars.ScoutPortrait,
+export const MinerAvatar: Record<Miner, ImgSrc> = {
+  [Miner.Driller]: Avatars.DrillerPortrait,
+  [Miner.Engineer]: Avatars.EngineerPortrait,
+  [Miner.Gunner]: Avatars.GunnerPortrait,
+  [Miner.Scout]: Avatars.ScoutPortrait,
 };
 
-export const MinerColor: Record<MinerWithAllClass, string> = {
-  [MinerWithAllClass.AllClass]: '#0076D1',
-  [MinerWithAllClass.Driller]: '#D19724',
-  [MinerWithAllClass.Engineer]: '#892F30',
-  [MinerWithAllClass.Gunner]: '#446043',
-  [MinerWithAllClass.Scout]: '#106193',
+export const MinerColor: Record<Miner, string> = {
+  [Miner.Driller]: '#D19724',
+  [Miner.Engineer]: '#892F30',
+  [Miner.Gunner]: '#446043',
+  [Miner.Scout]: '#106193',
 };
 
-export const MinerColorContrastText: Record<MinerWithAllClass, string> = {
-  [MinerWithAllClass.AllClass]: '#000000',
-  [MinerWithAllClass.Driller]: '#161616',
-  [MinerWithAllClass.Engineer]: '#ECECEC',
-  [MinerWithAllClass.Gunner]: '#FFFFFFE6',
-  [MinerWithAllClass.Scout]: '#FFFFFFF2',
+export const MinerColorContrastText: Record<Miner, string> = {
+  [Miner.Driller]: '#161616',
+  [Miner.Engineer]: '#ECECEC',
+  [Miner.Gunner]: '#FFFFFFE6',
+  [Miner.Scout]: '#FFFFFFF2',
 };

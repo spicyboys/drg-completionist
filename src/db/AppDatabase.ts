@@ -6,7 +6,7 @@ import {
   PickaxeParts,
   PickaxeUniquePartNames,
 } from 'data/pickaxes';
-import { Miner, MinerWithAllClass } from 'utils/miner';
+import { Miner } from 'utils/miner';
 import { MinerWeapon } from 'utils/weapons';
 
 export class AppDatabase extends Dexie {
@@ -55,6 +55,6 @@ export type PickaxeUniquePartEntry = {
 };
 
 export type ArmorPaintjobEntry = {
-  miner: MinerWithAllClass;
-  name: typeof ArmorPaintjobNames[MinerWithAllClass][number];
+  miner: Miner;
+  name: typeof ArmorPaintjobNames[Miner][number];
 };

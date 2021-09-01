@@ -3,12 +3,12 @@ import { useCallback } from 'react';
 import { ArmorPaintjob } from 'data/armor';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
-import { MinerColor, MinerWithAllClass } from 'utils/miner';
+import { Miner, MinerColor } from 'utils/miner';
 import ArmorPaintjobIcon from './ArmorPaintjobIcon';
 import './ArmorPaintjobCard.css';
 
 export default function ArmorPaintjobCard(props: {
-  miner: MinerWithAllClass;
+  miner: Miner;
   paintjob: ArmorPaintjob;
 }) {
   const db = useDB();

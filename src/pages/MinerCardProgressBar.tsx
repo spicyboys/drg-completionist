@@ -4,12 +4,9 @@ import { RockAndStone } from 'assets/other';
 import type { AppDatabase } from 'db/AppDatabase';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
-import { Miner, MinerColor, MinerWithAllClass } from 'utils/miner';
+import { Miner, MinerColor } from 'utils/miner';
 
-export type ProgressQuery = (
-  db: AppDatabase,
-  miner: Miner | MinerWithAllClass
-) => Promise<number>;
+export type ProgressQuery = (db: AppDatabase, miner: Miner) => Promise<number>;
 
 export default memo(function MinerCardProgressBar({
   category,
@@ -17,7 +14,7 @@ export default memo(function MinerCardProgressBar({
   getProgress,
 }: {
   category: string;
-  miner: Miner | MinerWithAllClass;
+  miner: Miner;
   getProgress: ProgressQuery;
 }) {
   const db = useDB();

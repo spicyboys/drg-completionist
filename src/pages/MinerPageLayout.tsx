@@ -1,11 +1,6 @@
 import { RightOutlined } from '@ant-design/icons';
 import { Collapse } from 'antd';
-import {
-  AllMiners,
-  AllMinersWithAllClass,
-  Miner,
-  MinerWithAllClass,
-} from 'utils/miner';
+import { AllMiners, Miner } from 'utils/miner';
 import MinerCard from './MinerCard';
 import { ProgressQuery } from './MinerCardProgressBar';
 
@@ -17,12 +12,11 @@ import { ProgressQuery } from './MinerCardProgressBar';
  * @returns JSX.Element
  */
 export default function MinerPageLayout(props: {
-  allClass?: boolean;
   category: string;
-  children: (miner: Miner | MinerWithAllClass) => React.ReactNode;
+  children: (miner: Miner) => React.ReactNode;
   getProgress: ProgressQuery;
 }) {
-  const { allClass, category } = props;
+  const { category } = props;
 
   return (
     <Collapse
@@ -36,27 +30,16 @@ export default function MinerPageLayout(props: {
         />
       )}
     >
-      {allClass
-        ? AllMinersWithAllClass.map((miner) => (
-            <MinerCard
-              key={miner}
-              category={category}
-              miner={miner}
-              getProgress={props.getProgress}
-            >
-              {props.children}
-            </MinerCard>
-          ))
-        : AllMiners.map((miner) => (
-            <MinerCard
-              key={miner}
-              category={category}
-              miner={miner}
-              getProgress={props.getProgress}
-            >
-              {props.children}
-            </MinerCard>
-          ))}
+      {AllMiners.map((miner) => (
+        <MinerCard
+          key={miner}
+          category={category}
+          miner={miner}
+          getProgress={props.getProgress}
+        >
+          {props.children}
+        </MinerCard>
+      ))}
     </Collapse>
   );
 }
