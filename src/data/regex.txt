@@ -1,0 +1,14 @@
+Hello Robert, you lazy idiot. You're here because you're about to go pull some
+GUIDs again and don't want to have to do that weird backwards translation thing
+by hand, and would be awful mad if Past Robert made you go type up those awful
+regexes again. Well, I'm not that mean, so here you go:
+
+REGEX:
+
+([0-9A-F]{2})([0-9A-F]{2})([0-9A-F]{2})([0-9A-F]{2})-([0-9A-F]{2})([0-9A-F]{2})([0-9A-F]{2})([0-9A-F]{2})-([0-9A-F]{2})([0-9A-F]{2})([0-9A-F]{2})([0-9A-F]{2})-([0-9A-F]{2})([0-9A-F]{2})([0-9A-F]{2})([0-9A-F]{2})
+
+REPLACEMENT:
+
+$4$3$2$1$8$7$6$5$12$11$10$9$16$15$14$13
+
+Regex101: https://regex101.com/r/GUaZSx/1
