@@ -23,6 +23,13 @@ export type SaveFile = {
   },
   "UnlockedItemSkins": { [s: string] : [string] },
   "UnlockedPickaxeParts": string[],
+  "CharacterSaves": {
+    "Vanity": {
+      "CharacterVanitySave": {
+        "UnLockedVanityItemIDs": string[],
+      }
+    }
+  }[],
 }; 
 
 
