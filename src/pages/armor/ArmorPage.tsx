@@ -11,7 +11,7 @@ export default function ArmorPage() {
     async (db: AppDatabase, miner: Miner | MinerWithAllClass) => {
       const paintjobs = ArmorPaintjobs[miner];
       const acquiredPaintjobs = await db.armorPaintjobs
-        .where('armorPaintjobs')
+        .where('miner')
         .anyOf(miner)
         .count();
       return acquiredPaintjobs / paintjobs.length;

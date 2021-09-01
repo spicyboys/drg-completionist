@@ -23,7 +23,7 @@ export class AppDatabase extends Dexie {
       frameworks: '[weapon+name], weapon',
       pickaxes: '[part+name], name',
       pickaxeUniques: 'name',
-      armorPaintjobs: '[miner+name], name',
+      armorPaintjobs: '[miner+name], miner',
     });
 
     this.overclocks = this.table('overclocks');
