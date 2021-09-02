@@ -153,34 +153,38 @@ export type CommonArmorPaintjob = Omit<ArmorPaintjob, 'name'> & {
   name: typeof CommonArmorPaintjobNames[number];
 };
 
+// These are technically implemeneted as unlocking four _unique_ paint jobs,
+// one per class. However, since they're all given via promotion assignments,
+// all four are acquired at the same time. Therefore, we only save one of the
+// GUIDs (the drillers's, specifically, because of alphabetical ordering).
 export const CommonArmorPaintjobs: CommonArmorPaintjob[] = [
   {
     name: 'Toxic Defender',
     source: 'Assignment',
     requiredLevel: 40,
     icon: CommonArmorPaintjobIcons['Toxic Defender'],
-    partID: 'GUIDGUIDGUIDGUIDGUIDGUIDGUIDGUID',
+    partID: '725D907BAD703B42BDB1ECF8F6088AB9',
   },
   {
     name: 'Regal Aegis',
     source: 'Assignment',
     requiredLevel: 60,
     icon: CommonArmorPaintjobIcons['Regal Aegis'],
-    partID: 'GUIDGUIDGUIDGUIDGUIDGUIDGUIDGUID',
+    partID: '99CD0CDB80834B4AA993F1E2C4671D4B',
   },
   {
     name: 'Black Crag',
     source: 'Assignment',
     requiredLevel: 80,
     icon: CommonArmorPaintjobIcons['Black Crag'],
-    partID: 'GUIDGUIDGUIDGUIDGUIDGUIDGUIDGUID',
+    partID: 'BA2540C7DD0B144182F3287B87E17E60',
   },
   {
     name: 'Scale Brigade',
     source: 'Assignment',
     requiredLevel: 100,
     icon: CommonArmorPaintjobIcons['Scale Brigade'],
-    partID: 'GUIDGUIDGUIDGUIDGUIDGUIDGUIDGUID',
+    partID: '71901424329FB349A131DA3FE28D4E0E',
   },
 ];
 
