@@ -15,6 +15,7 @@ import { isMobile } from 'react-device-detect';
 import { MissionControlPortrait } from 'assets/portraits';
 import Image from 'components/Image';
 import useDB from 'db/useDB';
+import { getArmorPaintJobsFromSaveFile } from './getArmorPaintjobsFromSaveFile';
 import { getFrameworksFromSaveFile } from './getFrameworksFromSaveFile';
 import { getOverclocksFromSaveFile } from './getOverclocksFromSaveFile';
 import { getPickaxeUniquesFromSaveFile } from './getPickaxeUniquesFromSaveFile';
@@ -51,6 +52,7 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
         const frameworks = getFrameworksFromSaveFile(saveFile);
         const pickaxes = getPickaxesFromSaveFile(saveFile);
         const pickaxeUniques = getPickaxeUniquesFromSaveFile(saveFile);
+        const armorePaintjobs = getArmorPaintJobsFromSaveFile(saveFile);
 
         // Update the store with the new save file data
         await db.transaction('rw', db.tables, async () => {
@@ -59,6 +61,7 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
           await db.frameworks.bulkAdd(frameworks);
           await db.pickaxes.bulkAdd(pickaxes);
           await db.pickaxeUniques.bulkAdd(pickaxeUniques);
+          await db.armorPaintjobs.bulkAdd(armorePaintjobs);
         });
 
         // Show the user a success notification with how many items were

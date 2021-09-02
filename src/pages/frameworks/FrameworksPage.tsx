@@ -8,7 +8,7 @@ import MinerFrameworks from './MinerFrameworks';
 
 export default function FrameworksPage() {
   const getProgress = useCallback(async (db: AppDatabase, miner: Miner) => {
-    const weapons = MinerWeapons[miner];
+    const weapons = MinerWeapons[miner as Miner];
     const acquiredFrameworks = await db.frameworks
       .where('weapon')
       .anyOf(weapons)
@@ -17,7 +17,7 @@ export default function FrameworksPage() {
   }, []);
   return (
     <MinerPageLayout category="WeaponFrameworks" getProgress={getProgress}>
-      {(miner) => <MinerFrameworks miner={miner} />}
+      {(miner) => <MinerFrameworks miner={miner as Miner} />}
     </MinerPageLayout>
   );
 }

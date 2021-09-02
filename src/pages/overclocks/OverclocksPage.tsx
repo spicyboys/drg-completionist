@@ -10,14 +10,16 @@ export default function OverclocksPage() {
   const getProgress = useCallback(async (db: AppDatabase, miner: Miner) => {
     const forgedOverclocks = await db.overclocks
       .where('weapon')
-      .anyOf(MinerWeapons[miner])
+      .anyOf(MinerWeapons[miner as Miner])
       .filter((o) => o.isForged)
       .count();
-    return forgedOverclocks / Object.values(Overclocks[miner]).flat().length;
+    return (
+      forgedOverclocks / Object.values(Overclocks[miner as Miner]).flat().length
+    );
   }, []);
   return (
     <MinerPageLayout category="Overclocks" getProgress={getProgress}>
-      {(miner) => <MinerOverclocks miner={miner} />}
+      {(miner) => <MinerOverclocks miner={miner as Miner} />}
     </MinerPageLayout>
   );
 }

@@ -7,25 +7,11 @@ export enum Miner {
   Scout = 'Scout',
 }
 
-// For item types with some members usable by all Miners (e.g., Paintjobs).
-export enum MinerWithAllClass {
-  AllClass = 'All-Class',
-  Driller = 'Driller',
-  Engineer = 'Engineer',
-  Gunner = 'Gunner',
-  Scout = 'Scout',
-}
-
 export const AllMiners = [
   Miner.Driller,
   Miner.Engineer,
   Miner.Gunner,
   Miner.Scout,
-] as const;
-
-export const AllMinersWithAllClass = [
-  ...AllMiners,
-  MinerWithAllClass.AllClass,
 ] as const;
 
 export const MinerAvatar: Record<Miner, ImgSrc> = {
