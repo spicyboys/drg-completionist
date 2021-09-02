@@ -17,11 +17,8 @@ _The Steam save file is located here by default on Windows, but may vary based o
 
 ## Upcoming Features
 
-_**NOTE:** Development of the following features is on hold until either we find a way to datamine their values from the save file, or GSG provides a list of item GUIDs for third-party developers. We apologize for the inconvenience._
-
 - Add weapon paintjobs
 - Add cosmetic Matrix Cores
-- Add armor paintjobs
 - Add victory moves
 
 ## Privacy
@@ -36,6 +33,7 @@ The only tracking this app has are a few fully anonymized Google Analytics tags 
 
 - The folks who maintain the [Deep Rock Galactic Wiki](https://deeprockgalactic.gamepedia.com/Deep_Rock_Galactic_Wiki), which provided all the pictures and data that make this app run
 - [@robertnunn](https://github.com/robertnunn) for their work on [DRG-Save-Editor](https://github.com/robertnunn/DRG-Save-Editor) that helped us get us started on our save parser
+- [@iAmAsval](https://github.com/iAmAsval) for their work on [FModel](https://github.com/iAmAsval/FModel) that let us move forward with identifying the cosmetic GUIDs in the save file
 - The helpful folks on the _DRG Community Tools_ Discord server, who always helped us out with our questions
 - The couple Ghost Ship Games devs who got us pointed in the right direction with save file stuff early on
 
@@ -45,4 +43,4 @@ Neither this app nor its developers are associated with Deep Rock Galactic or Gh
 
 ---
 
-###### README Last Updated: May 24, 2021
+###### README Last Updated: Sept. 1, 2021
