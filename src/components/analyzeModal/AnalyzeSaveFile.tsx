@@ -75,8 +75,11 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
           message: <Text type="success">Save File Analyzed!</Text>,
           description:
             `Successfully imported ${overclocks.length} Overclocks, ` +
-            `${frameworks.length} Frameworks, and ` +
-            `${pickaxes.length + pickaxeUniques.length} Pickaxe Parts.`,
+            `${frameworks.length} Frameworks, ` +
+            `${armorPaintjobs.length + commonArmorPaintjobs.length} ` +
+            `Armor Paintjobs, and ` +
+            `${pickaxes.length + pickaxeUniques.length} ` +
+            `Pickaxe Parts.`,
           duration: 10,
         });
 
