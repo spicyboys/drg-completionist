@@ -1,7 +1,7 @@
 import { useLiveQuery } from 'dexie-react-hooks';
 import { useEffect, useMemo } from 'react';
 import { TabName } from 'App';
-import { ArmorPaintjobs } from 'data/armor';
+import { ArmorPaintjobs, CommonArmorPaintjobs } from 'data/armor';
 import { Frameworks } from 'data/frameworks';
 import { Overclocks } from 'data/overclocks';
 import {
@@ -34,9 +34,11 @@ export default function useCurrentTabProgress(
           .flatMap((w) => Object.values(w))
           .flat().length;
       case 'armor':
-        return Object.values(ArmorPaintjobs)
-          .flatMap((w) => Object.values(w))
-          .flat().length;
+        return (
+          Object.values(ArmorPaintjobs)
+            .flatMap((w) => Object.values(w))
+            .flat().length + CommonArmorPaintjobs.length
+        );
       case 'pickaxes':
         return (
           PickaxeSets.length * 5 +
@@ -71,8 +73,12 @@ export default function useCurrentTabProgress(
         }
         case 'armor': {
           const acquiredArmorPaintjobs = await db.armorPaintjobs.count();
+          const acquiredCommonArmorPaintJobs = await db.commonArmorPaintjobs.count();
           return {
-            progress: (acquiredArmorPaintjobs / totalItems) * 100,
+            progress:
+              ((acquiredArmorPaintjobs + acquiredCommonArmorPaintJobs) /
+                totalItems) *
+              100,
             partialProgress: null,
           };
         }

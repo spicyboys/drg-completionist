@@ -50,7 +50,7 @@ export type ArmorPaintjobNames = {
   [K in Miner]: typeof ArmorPaintjobNames[K];
 };
 
-export const CommonArmorPaintJobNames = [
+export const CommonArmorPaintjobNames = [
   'Black Crag',
   'Regal Aegis',
   'Scale Brigade',
@@ -128,8 +128,8 @@ export const ArmorPaintjobIcons: {
   },
 } as const;
 
-export const CommonArmorPaintJobIcons: Record<
-  typeof CommonArmorPaintJobNames[number],
+export const CommonArmorPaintjobIcons: Record<
+  typeof CommonArmorPaintjobNames[number],
   ImgSrc
 > = {
   'Black Crag': PaintjobIconSrcs.AllClass.BlackCrag,
@@ -149,35 +149,37 @@ export type ArmorPaintjob = {
   partID: string;
 };
 
-export const CommonArmorPaintJobs: (Omit<ArmorPaintjob, 'name'> & {
-  name: typeof CommonArmorPaintJobNames[number];
-})[] = [
+export type CommonArmorPaintjob = Omit<ArmorPaintjob, 'name'> & {
+  name: typeof CommonArmorPaintjobNames[number];
+};
+
+export const CommonArmorPaintjobs: CommonArmorPaintjob[] = [
   {
     name: 'Toxic Defender',
     source: 'Assignment',
     requiredLevel: 40,
-    icon: CommonArmorPaintJobIcons['Toxic Defender'],
+    icon: CommonArmorPaintjobIcons['Toxic Defender'],
     partID: 'GUIDGUIDGUIDGUIDGUIDGUIDGUIDGUID',
   },
   {
     name: 'Regal Aegis',
     source: 'Assignment',
     requiredLevel: 60,
-    icon: CommonArmorPaintJobIcons['Regal Aegis'],
+    icon: CommonArmorPaintjobIcons['Regal Aegis'],
     partID: 'GUIDGUIDGUIDGUIDGUIDGUIDGUIDGUID',
   },
   {
     name: 'Black Crag',
     source: 'Assignment',
     requiredLevel: 80,
-    icon: CommonArmorPaintJobIcons['Black Crag'],
+    icon: CommonArmorPaintjobIcons['Black Crag'],
     partID: 'GUIDGUIDGUIDGUIDGUIDGUIDGUIDGUID',
   },
   {
     name: 'Scale Brigade',
     source: 'Assignment',
     requiredLevel: 100,
-    icon: CommonArmorPaintJobIcons['Scale Brigade'],
+    icon: CommonArmorPaintjobIcons['Scale Brigade'],
     partID: 'GUIDGUIDGUIDGUIDGUIDGUIDGUIDGUID',
   },
 ];

@@ -1,9 +1,8 @@
 import { RightOutlined } from '@ant-design/icons';
 import { Collapse } from 'antd';
 import { useMemo } from 'react';
+import MinerCard, { ProgressQuery } from 'components/progressCard/MinerCard';
 import { AllMiners, Miner } from 'utils/miner';
-import MinerCard from './MinerCard';
-import { ProgressQuery } from './MinerCardProgressBar';
 
 /**
  * Returns a Collapse with a card for each Miner containing an Avatar

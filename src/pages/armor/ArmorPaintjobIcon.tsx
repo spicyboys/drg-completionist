@@ -1,7 +1,9 @@
 import Image from 'components/Image';
-import { ArmorPaintjob } from 'data/armor';
+import { ArmorPaintjob, CommonArmorPaintjob } from 'data/armor';
 
-export default function ArmorPaintjobIcon(props: { paintjob: ArmorPaintjob }) {
+export default function ArmorPaintjobIcon(props: {
+  paintjob: ArmorPaintjob | CommonArmorPaintjob;
+}) {
   return (
     <div
       style={{
