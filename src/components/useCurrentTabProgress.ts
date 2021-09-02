@@ -72,7 +72,7 @@ export default function useCurrentTabProgress(
         case 'armor': {
           const acquiredArmorPaintjobs = await db.armorPaintjobs.count();
           return {
-            progress: acquiredArmorPaintjobs / totalItems,
+            progress: (acquiredArmorPaintjobs / totalItems) * 100,
             partialProgress: null,
           };
         }
