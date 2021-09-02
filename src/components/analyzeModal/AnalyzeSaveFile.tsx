@@ -118,7 +118,8 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
         });
         notification.error({
           message: <Text type="danger">Error Analyzing Save File:</Text>,
-          description: <Text code>{e.message}</Text>,
+          // eslint-disable-next-line
+          description: <Text code>{(e as any).message}</Text>,
           duration: 10,
         });
         console.error(e);
