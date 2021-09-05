@@ -1,7 +1,7 @@
+import type { SaveFile } from 'drg-save-parser';
 import { Overclocks, Overclock } from 'data/overclocks';
 import type { OverclockEntry } from 'db/AppDatabase';
 import { Miner } from 'utils/miner';
-import { SaveFile } from 'utils/save-parser';
 import { MinerWeapon } from 'utils/weapons';
 
 /**

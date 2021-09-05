@@ -45,7 +45,7 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
 
       try {
         // Parse the save file using the WASM library
-        const parser = await import('utils/save-parser');
+        const parser = await import('drg-save-parser');
         const saveFile = await parser.parse_save_file(f);
 
         // Extract the relevant information from the parsed save file

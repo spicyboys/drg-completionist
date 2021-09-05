@@ -1,6 +1,6 @@
+import type { SaveFile } from 'drg-save-parser';
 import { Pickaxes, PickaxeParts, PickaxeSets } from 'data/pickaxes';
 import type { PickaxeEntry } from 'db/AppDatabase';
-import { SaveFile } from 'utils/save-parser';
 
 /**
  * The save file just contains a list of GUIDs of the acquired pickaxe parts.

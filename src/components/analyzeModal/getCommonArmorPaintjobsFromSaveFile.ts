@@ -1,6 +1,6 @@
+import type { SaveFile } from 'drg-save-parser';
 import { CommonArmorPaintjobs } from 'data/armor';
 import type { CommonArmorPaintjobEntry } from 'db/AppDatabase';
-import { SaveFile } from 'utils/save-parser';
 
 export const getCommonArmorPaintJobsFromSaveFile = ({
   CharacterSaves,

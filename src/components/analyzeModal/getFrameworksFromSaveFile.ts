@@ -1,7 +1,7 @@
+import type { SaveFile } from 'drg-save-parser';
 import { Framework, FrameworkIDs } from 'data/frameworks';
 import type { FrameworkEntry } from 'db/AppDatabase';
 import { flipObject } from 'utils/object';
-import type { SaveFile } from 'utils/save-parser';
 import { WeaponIDs } from 'utils/weapons';
 
 export const getFrameworksFromSaveFile = ({

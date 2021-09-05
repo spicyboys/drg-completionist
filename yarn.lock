@@ -5113,6 +5113,11 @@ download@^7.1.0:
     p-event "^2.1.0"
     pify "^3.0.0"
 
+drg-save-parser@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/drg-save-parser/-/drg-save-parser-1.0.1.tgz#8eeabcaa0f13ca4b10c79fe33a6effd4aef75f53"
+  integrity sha512-zklHldhBHd5j60kNlAKIOzLu7rc/71Et/plunwv4hwkokz8axZ7RwL2TY1cUwC8i/eSWV6Z7zEhINWYRus/9jg==
+
 duplexer3@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/duplexer3/-/duplexer3-0.1.4.tgz#ee01dd1cac0ed3cbc7fdbea37dc0a8f1ce002ce2"
