@@ -9,7 +9,7 @@ _[DRG Completionist](https://drg-completionist.com/)_ is a free, open-source onl
 
 _DRG Completionist_ is a fully-fledged [Progressive Web App (PWA)](https://en.wikipedia.org/wiki/Progressive_web_application), which means it will automatically continue to function without an Internet connection and can be installed as a stand-alone app on supported browsers _(e.g., Google Chrome, Microsoft Edge, Safari on iOS)_. The app is also responsively designed for both desktop and mobile use, and it supports using both mouse and touchscreen on nearly any screen size. We recommend installing this app via your browser for the best experience.
 
-While progress can be input by clicking and tapping the old-fashioned way, _DRG Completionist_ also includes a snazzy [WASM](https://en.wikipedia.org/wiki/WebAssembly)-based save file parsing tool that locally analyzes your PC's Deep Rock Galactic save file. Simply upload your save file and the Save Parser will automatically input your current progress into each page so you don't have to!
+While progress can be input by clicking and tapping the old-fashioned way, _DRG Completionist_ also utilizes a custom snazzy [WASM](https://en.wikipedia.org/wiki/WebAssembly)-based [save file parsing tool](https://github.com/BobertForever/drg-save-parser) that locally analyzes your PC's Deep Rock Galactic save file. Simply upload your save file and the Save Parser will automatically input your current progress into each page so you don't have to!
 
 _The Steam save file is located here by default on Windows, but may vary based on your install location:_
 
@@ -25,17 +25,15 @@ _The Steam save file is located here by default on Windows, but may vary based o
 
 _DRG Completionist_ respects your privacy. The app is entirely serverless and uses the browser's local storage to keep track of your progress. No personally identifying information is ever collected or stored.
 
-If you choose to upload your save file, neither the file nor its contents ever leaves your computer. The save file parser is compiled from [Rust](<https://en.wikipedia.org/wiki/Rust_(programming_language)>) into [WASM](https://en.wikipedia.org/wiki/WebAssembly) specifically so it can run completely within your browser. We encourage you to [inspect the source code](https://github.com/BobertForever/drg-completionist/tree/main/save-parser) if you want to see what it's doing.
+If you choose to upload your save file, neither the file nor its contents ever leaves your computer. The save file parser is compiled from [Rust](<https://en.wikipedia.org/wiki/Rust_(programming_language)>) into [WASM](https://en.wikipedia.org/wiki/WebAssembly) specifically so it can run completely within your browser. We encourage you to [inspect the source code](https://github.com/BobertForever/drg-save-parser) if you want to see what it's doing.
 
 The only tracking this app has are a few fully anonymized Google Analytics tags that allow us to see how (or if) this app is used in the wild. These `gtags` are blocked by default if you use any of the privacy-oriented browser settings and extensions that are widely available today.
 
 ## Special Thanks
 
 - The folks who maintain the [Deep Rock Galactic Wiki](https://deeprockgalactic.gamepedia.com/Deep_Rock_Galactic_Wiki), which provided all the pictures and data that make this app run
-- [@robertnunn](https://github.com/robertnunn) for their work on [DRG-Save-Editor](https://github.com/robertnunn/DRG-Save-Editor) that helped us get us started on our save parser
 - [@iAmAsval](https://github.com/iAmAsval) for their work on [FModel](https://github.com/iAmAsval/FModel) that let us move forward with identifying the cosmetic GUIDs in the save file
 - The helpful folks on the _DRG Community Tools_ Discord server, who always helped us out with our questions
-- The couple Ghost Ship Games devs who got us pointed in the right direction with save file stuff early on
 
 ## Disclaimer
 
