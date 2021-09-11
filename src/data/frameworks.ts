@@ -67,7 +67,7 @@ export const FrameworkIDs: Record<
     'Glyphid Trophy Hunter': '67E1B71D8131B341A86DE41AFCC28153',
     Mechanized: '7BA483ADD0C5AD438D3DDE088DE42E5B',
     Neonband: 'CCF1DA53129E8848A071896B57BD0E3F',
-    'Scale Brigade': '231632BCB5910AAF94FFBCCFF0434232',
+    'Scale Brigade': '231632BCB5910A4F94FFBCCFF0434232',
   },
   '"Stubby" Voltaic SMG': {
     'Custom Engineered': 'AA94530A9AA69B4184C8C006DE67FC17',
@@ -91,7 +91,7 @@ export const FrameworkIDs: Record<
     'Glyphid Trophy Hunter': '797A77FFD7105242A609F6740A0E684E',
     Mechanized: '779BE9A55F960945A406D389AD4030FE',
     Neonband: 'A989EB6D58EFE54494E471BB61E535C8',
-    'Scale Brigade': 'FEF1a*A6925F984BA2136D81B0085067',
+    'Scale Brigade': 'FEF1A8A6925F984BA2136D81B0085067',
   },
 
   // Gunner
