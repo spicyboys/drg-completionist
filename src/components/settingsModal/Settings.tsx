@@ -27,19 +27,19 @@ export default function Settings(props: { hide: () => void }) {
       <Row justify="center">
         <Col span={18} style={{ textAlign: 'center' }}>
           <a
-            href="https://github.com/BobertForever/drg-completionist/releases/"
+            href="https://github.com/spicyboys/drg-completionist/releases/"
             rel="noreferrer noopener"
             target="_blank"
             onClick={() => {
               gtag('event', 'page_view', {
                 page_location:
-                  'https://github.com/BobertForever/drg-completionist/releases/',
+                  'https://github.com/spicyboys/drg-completionist/releases/',
               });
             }}
           >
             <img
               alt="Latest GitHub release (latest SemVer)"
-              src="https://img.shields.io/github/v/release/BobertForever/drg-completionist"
+              src="https://img.shields.io/github/v/release/spicyboys/drg-completionist"
               height="auto"
               width="auto"
               style={{
