@@ -47,7 +47,7 @@
     "@types/use-subscription": "^1.0.0",
     "antd": "^4.13.0",
     "babel-plugin-import": "^1.13.3",
-    "dexie": "^3.1.0-alpha.9",
+    "dexie": "^3.2.2",
     "dexie-react-hooks": "^1.0.6",
     "drg-save-parser": "^3.0.0",
     "fast-deep-equal": "^3.1.3",
