@@ -5113,10 +5113,10 @@ download@^7.1.0:
     p-event "^2.1.0"
     pify "^3.0.0"
 
-drg-save-parser@^2.0.0:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/drg-save-parser/-/drg-save-parser-2.0.1.tgz#4f607017b5b79eb8f4573527696eddd4e9963b65"
-  integrity sha512-farKBpf6Iot8wgxtETBPrAgIn8KGx9dvrcis4Cx+h+KyVDZLRUN+dQPGnPXjZkkQWLyqB46aBuC4K+JCrOUqKw==
+drg-save-parser@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/drg-save-parser/-/drg-save-parser-3.0.0.tgz#d4b0f1a3719927547af1edd3ba564615470dca8a"
+  integrity sha512-/koIXFgg7/2Q3pY0GZdLsYysjiAkWOMZb7J5izNBXUttRS/EwpSxdQzra9PLDjOjKbqTgyF7fR24BtyKwGKwkQ==
 
 duplexer3@^0.1.4:
   version "0.1.4"
