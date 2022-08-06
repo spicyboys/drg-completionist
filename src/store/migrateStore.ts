@@ -6,9 +6,9 @@ import {
   map as serializrMap,
 } from 'serializr';
 import { Framework } from 'data/frameworks';
+import { Miner } from 'data/miner';
+import type { MinerWeapon } from 'data/weapons';
 import type { AppDatabase } from 'db/AppDatabase';
-import { Miner } from 'utils/miner';
-import { MinerWeapon } from 'utils/weapons';
 
 type State = Readonly<{
   unforgedOverclocks: ReadonlyMap<MinerWeapon<Miner>, ReadonlySet<string>>;

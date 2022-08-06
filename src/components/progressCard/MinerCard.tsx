@@ -1,10 +1,10 @@
 import { CollapsePanelProps } from 'antd';
 import { useEffect } from 'react';
 import Image from 'components/Image';
+import { Miner, MinerAvatar, MinerColor } from 'data/miner';
 import { AppDatabase } from 'db/AppDatabase';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
-import { Miner, MinerAvatar, MinerColor } from 'utils/miner';
 import ProgressCard from './ProgressCard';
 
 export type ProgressQuery = (db: AppDatabase, miner: Miner) => Promise<number>;

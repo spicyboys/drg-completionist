@@ -1,5 +1,5 @@
 import PaintjobIconSrcs from 'assets/armorPaintjobs';
-import { Miner } from 'utils/miner';
+import { Miner } from 'data/miner';
 
 // All-Class Paintjobs are identical with no class-specific variation.
 // Default and DLC Paintjobs excluded for now.

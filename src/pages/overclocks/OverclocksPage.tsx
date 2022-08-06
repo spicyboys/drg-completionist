@@ -1,9 +1,9 @@
 import { useCallback } from 'react';
+import { Miner } from 'data/miner';
 import { Overclocks } from 'data/overclocks';
+import { MinerWeapons } from 'data/weapons';
 import type { AppDatabase } from 'db/AppDatabase';
 import MinerPageLayout from 'pages/MinerPageLayout';
-import { Miner } from 'utils/miner';
-import { MinerWeapons } from 'utils/weapons';
 import MinerOverclocks from './MinerOverclocks';
 
 export default function OverclocksPage() {

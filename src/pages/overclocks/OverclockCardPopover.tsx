@@ -4,9 +4,9 @@ import { memo } from 'react';
 import { isMobile } from 'react-device-detect';
 import { Buff as BuffIcon, Nerf as NerfIcon } from 'assets/overclocks/arrows';
 import Image from 'components/Image';
-import { Miner } from 'utils/miner';
-import { MinerWeapon, WeaponOutlines } from 'utils/weapons';
-import { Overclock } from '../../data/overclocks';
+import { Miner } from 'data/miner';
+import { MinerWeapon, WeaponOutlines } from 'data/weapons';
+import type { Overclock } from 'types/overclock';
 import OverclockIcon from './OverclockIcon';
 import OverclockPrice from './OverclockPrice';
 

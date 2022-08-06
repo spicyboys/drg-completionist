@@ -5,11 +5,11 @@ import { PlayerRankIcon } from 'assets/other';
 import Image from 'components/Image';
 import ProgressCard from 'components/progressCard/ProgressCard';
 import { ArmorPaintjobs, CommonArmorPaintjobs } from 'data/armor';
+import { Miner } from 'data/miner';
 import { AppDatabase } from 'db/AppDatabase';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
 import MinerPageLayout from 'pages/MinerPageLayout';
-import { Miner } from 'utils/miner';
 import ArmorPaintjobCard from './ArmorPaintjobCard';
 import CommonArmorPaintjobCard from './CommonArmorPaintjobCard';
 

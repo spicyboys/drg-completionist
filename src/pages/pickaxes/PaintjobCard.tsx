@@ -1,10 +1,10 @@
 import { Badge, Card, Col } from 'antd';
 import { useCallback } from 'react';
+import { MinerColor } from 'data/miner';
 import { PickaxePaintjobNames, PickaxeParts } from 'data/pickaxes';
 import './PaintjobCard.css';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
-import { MinerColor } from 'utils/miner';
 import PaintjobIcon from './PaintjobIcon';
 
 const accentColor = MinerColor.Scout;

@@ -1,10 +1,10 @@
 import { Badge, Card, Col } from 'antd';
 import { useCallback } from 'react';
 import { Framework } from 'data/frameworks';
+import { Miner, MinerColor } from 'data/miner';
+import { MinerWeapon } from 'data/weapons';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
-import { Miner, MinerColor } from 'utils/miner';
-import { MinerWeapon } from 'utils/weapons';
 import FrameworkIcon from './FrameworkIcon';
 import './FrameworkCard.css';
 

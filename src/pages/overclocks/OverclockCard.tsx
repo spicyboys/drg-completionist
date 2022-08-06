@@ -4,11 +4,11 @@ import { useCallback } from 'react';
 import { isMobile } from 'react-device-detect';
 import { ForgeHammer } from 'assets/other';
 import Image from 'components/Image';
-import { Overclock } from 'data/overclocks';
+import { Miner, MinerColor, MinerColorContrastText } from 'data/miner';
+import { MinerWeapon } from 'data/weapons';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
-import { Miner, MinerColor, MinerColorContrastText } from 'utils/miner';
-import { MinerWeapon } from 'utils/weapons';
+import type { Overclock } from 'types/overclock';
 import OverclockCardPopover from './OverclockCardPopover';
 import OverclockIcon from './OverclockIcon';
 

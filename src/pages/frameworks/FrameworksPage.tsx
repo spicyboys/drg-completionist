@@ -1,9 +1,9 @@
 import { useCallback } from 'react';
 import { Frameworks } from 'data/frameworks';
+import { Miner } from 'data/miner';
+import { MinerWeapons } from 'data/weapons';
 import { AppDatabase } from 'db/AppDatabase';
 import MinerPageLayout from 'pages/MinerPageLayout';
-import { Miner } from 'utils/miner';
-import { MinerWeapons } from 'utils/weapons';
 import MinerFrameworks from './MinerFrameworks';
 
 export default function FrameworksPage() {

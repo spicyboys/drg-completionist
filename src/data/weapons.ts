@@ -1,5 +1,5 @@
 import outlines from 'assets/weapons/outlines';
-import { Miner } from 'utils/miner';
+import { Miner } from 'data/miner';
 
 export const MinerWeapons = {
   [Miner.Driller]: [

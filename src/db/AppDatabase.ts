@@ -1,13 +1,13 @@
 import { Dexie } from 'dexie';
 import { ArmorPaintjobNames, CommonArmorPaintjobNames } from 'data/armor';
 import { Framework } from 'data/frameworks';
+import { Miner } from 'data/miner';
 import {
   PickaxeSets,
   PickaxeParts,
   PickaxeUniquePartNames,
 } from 'data/pickaxes';
-import { Miner } from 'utils/miner';
-import { MinerWeapon } from 'utils/weapons';
+import { MinerWeapon } from 'data/weapons';
 
 export class AppDatabase extends Dexie {
   overclocks: Dexie.Table<OverclockEntry, number>;

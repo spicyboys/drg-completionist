@@ -1,8 +1,9 @@
 import type { SaveFile } from 'drg-save-parser';
-import { Overclocks, Overclock } from 'data/overclocks';
+import { Miner } from 'data/miner';
+import { Overclocks } from 'data/overclocks';
+import { MinerWeapon } from 'data/weapons';
 import type { OverclockEntry } from 'db/AppDatabase';
-import { Miner } from 'utils/miner';
-import { MinerWeapon } from 'utils/weapons';
+import type { Overclock } from 'types/overclock';
 
 /**
  * The save file just contains a list of GUIDs of the acquired overclocks ("schematics").

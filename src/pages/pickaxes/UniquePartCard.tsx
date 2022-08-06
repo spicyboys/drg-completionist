@@ -3,10 +3,10 @@ import { useCallback, useMemo, useRef } from 'react';
 import { Credit } from 'assets/currencies';
 import { Assignment, LostPack } from 'assets/other';
 import Image from 'components/Image';
+import { MinerColor, MinerColorContrastText } from 'data/miner';
 import { PickaxeUniquePart } from 'data/pickaxes';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
-import { MinerColor, MinerColorContrastText } from 'utils/miner';
 
 const accentColor = MinerColor.Engineer;
 const contrastText = MinerColorContrastText.Engineer;

@@ -9,8 +9,8 @@ import {
   PickaxeSets,
   PickaxeUniquePartNames,
 } from 'data/pickaxes';
+import { MinerWeapons } from 'data/weapons';
 import useDB from 'db/useDB';
-import { MinerWeapons } from 'utils/weapons';
 
 type TabProgress = {
   progress: number;

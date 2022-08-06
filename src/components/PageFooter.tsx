@@ -3,7 +3,7 @@ import { useMemo } from 'react';
 import { isMobile } from 'react-device-detect';
 import { useLocation } from 'react-router-dom';
 import { DEFAULT_TAB, TABS, TabName } from 'App';
-import { MinerColor } from 'utils/miner';
+import { MinerColor } from 'data/miner';
 import './PageFooter.css';
 import useCurrentTabProgress from './useCurrentTabProgress';
 

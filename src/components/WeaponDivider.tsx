@@ -1,8 +1,8 @@
 import { Divider, Grid, Tooltip } from 'antd';
 import { isMobile } from 'react-device-detect';
 import Image from 'components/Image';
-import { Miner } from 'utils/miner';
-import { MinerWeapon, WeaponOutlines } from 'utils/weapons';
+import { Miner } from 'data/miner';
+import { MinerWeapon, WeaponOutlines } from 'data/weapons';
 
 const { useBreakpoint } = Grid;
 
