@@ -15,6 +15,10 @@ _The Steam save file is located here by default on Windows, but may vary based o
 
 `C:\Program Files (x86)\Steam\steamapps\common\Deep Rock Galactic\FSD\Saved\SaveGames\{steam_ID}_Player.sav`
 
+_The Windows 10 Store / Xbox App save game is located (Copy this file to a differnt location and add .sav to the filename to open it with DRG Completionist):_
+
+`C:\Users\(Your username here)\AppData\Local\Packages\CoffeeStainStudios.[NUMBERS]\SystemAppData\wgs\[NUMBERS]\[NUMBERS]\[NUMBERS]`
+
 ## Upcoming Features
 
 _**NOTE:** Development of the following features is on hold until either we find a way to datamine their values from the save file, or GSG provides a list of item GUIDs for third-party developers. We apologize for the inconvenience._
