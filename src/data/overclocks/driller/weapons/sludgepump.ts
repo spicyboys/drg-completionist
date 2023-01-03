@@ -10,7 +10,7 @@ const SludgePumpOverclocks: Overclock[] = [
       credits: 8800,
       umanite: 70,
       enorPearl: 100,
-      bismor: 130,
+      bismor: 135,
     },
     effects: {
       buffs: [
