@@ -59,6 +59,14 @@ export const FrameworkIDs: Record<
     Neonband: '878D8711CB1F1B41B395248E0276D850',
     'Scale Brigade': '1E901E972CF2BC4DA9D0E0D6353B992C',
   },
+  'Corrosive Sludge Pump': {
+    'Custom Engineered': 'FIXME',
+    'Fourth Relic': 'FIXME',
+    'Glyphid Trophy Hunter': 'FIXME',
+    Mechanized: 'FIXME',
+    Neonband: 'FIXME',
+    'Scale Brigade': 'FIXME',
+  },
 
   // Engineer
   '"Warthog" Auto 210': {

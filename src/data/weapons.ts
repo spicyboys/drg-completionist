@@ -7,6 +7,7 @@ export const MinerWeapons = {
     'Cryo Cannon',
     'Subata 120',
     'Experimental Plasma Charger',
+    'Corrosive Sludge Pump',
   ],
   [Miner.Engineer]: [
     '"Warthog" Auto 210',
@@ -37,6 +38,7 @@ export const WeaponOutlines: Record<MinerWeapon<Miner>, ImgSrc> = {
   'Cryo Cannon': outlines.driller.CryoCannon,
   'Subata 120': outlines.driller.Subata,
   'Experimental Plasma Charger': outlines.driller.Epc,
+  'Corrosive Sludge Pump': outlines.engineer.StubbySMG,
 
   // Engineer
   '"Warthog" Auto 210': outlines.engineer.Shotgun,
@@ -64,6 +66,7 @@ export const WeaponIDs: Record<MinerWeapon<Miner>, string> = {
   'Cryo Cannon': '82082AAB25319F43B43A8458F5228E8C',
   'Subata 120': '9D772549A4B54045A1377F38795655C1',
   'Experimental Plasma Charger': '4E96F432D0182343A62E81D821A1480F',
+  'Corrosive Sludge Pump': 'F1985B1C74C1A548B789B8AC8517FE4E',
 
   // Engineer
   '"Warthog" Auto 210': 'B66739F359A40443B70D9BACF8AA2D39',
