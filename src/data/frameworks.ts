@@ -209,4 +209,12 @@ export const FrameworkIDs: Record<
     Neonband: '0F46B7676CD4064BB1111DE8881D93FF',
     'Scale Brigade': 'B23A6BB17D842A4891630877D47CF97E',
   },
+  'DRAK-25 Plasma Carbine': {
+    'Custom Engineered': 'FIXME',
+    'Fourth Relic': 'FIXME',
+    'Glyphid Trophy Hunter': 'FIXME',
+    Mechanized: 'FIXME',
+    Neonband: 'FIXME',
+    'Scale Brigade': 'FIXME',
+  },
 };
