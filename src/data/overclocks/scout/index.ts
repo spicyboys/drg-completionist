@@ -11,9 +11,9 @@ import ZhukovOverclocks from './weapons/zhukov';
 const ScoutOverclocks: Record<MinerWeapon<Miner.Scout>, Overclock[]> = {
   'Deepcore GK2': AssaultRifleOverclocks,
   'M1000 Classic': M1000Overclocks,
+  'DRAK-25 Plasma Carbine': PlasmaCarbineOverclocks,
   'Jury-Rigged Boomstick': BoomstickOverclocks,
   'Zhukov NUK17': ZhukovOverclocks,
-  'DRAK-25 Plasma Carbine': PlasmaCarbineOverclocks,
   'Nishanka Boltshark X-80': CrossbowOverclocks,
 };
 

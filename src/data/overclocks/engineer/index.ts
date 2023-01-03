@@ -11,9 +11,9 @@ import StubbySMGOverclocks from './weapons/stubbysmg';
 const EngineerOverclocks: Record<MinerWeapon<Miner.Engineer>, Overclock[]> = {
   '"Warthog" Auto 210': ShotgunOverclocks,
   '"Stubby" Voltaic SMG': StubbySMGOverclocks,
+  'Lok-1 Smart Rifle': LockOnRifleOverclocks,
   'Deepcore 40mm PGL': GrenadeLauncherOverclocks,
   'Breach Cutter': BreachCutterOverclocks,
-  'Lok-1 Smart Rifle': LockOnRifleOverclocks,
   'Shard Diffractor': ShardDiffractorOverclocks,
 };
 

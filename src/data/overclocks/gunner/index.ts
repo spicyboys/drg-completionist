@@ -11,9 +11,9 @@ import RevolverOverclocks from './weapons/revolver';
 const GunnerOverclocks: Record<MinerWeapon<Miner.Gunner>, Overclock[]> = {
   '"Lead Storm" Powered Minigun': MinigunOverclocks,
   '"Thunderhead" Heavy Autocannon': AutocannonOverclocks,
+  '"Hurricane" Guided Rocket System': HurricaneOverclocks,
   '"Bulldog" Heavy Revolver': RevolverOverclocks,
   'BRT7 Burst Fire Gun': BurstFireGunOverclocks,
-  '"Hurricane" Guided Rocket System': HurricaneOverclocks,
   'ArmsKore Coil Gun': CoilGunOverclocks,
 };
 
