@@ -24,6 +24,7 @@ export const MinerWeapons = {
     '"Bulldog" Heavy Revolver',
     'BRT7 Burst Fire Gun',
     '"Hurricane" Guided Rocket System',
+    'ArmsKore Coil Gun',
   ],
   [Miner.Scout]: [
     'Deepcore GK2',
@@ -58,6 +59,7 @@ export const WeaponOutlines: Record<MinerWeapon<Miner>, ImgSrc> = {
   '"Bulldog" Heavy Revolver': outlines.gunner.Revolver,
   'BRT7 Burst Fire Gun': outlines.gunner.BurstFireGun,
   '"Hurricane" Guided Rocket System': outlines.engineer.StubbySMG,
+  'ArmsKore Coil Gun': outlines.engineer.StubbySMG,
 
   // Scout
   'Deepcore GK2': outlines.scout.AssaultRifle,
@@ -89,6 +91,7 @@ export const WeaponIDs: Record<MinerWeapon<Miner>, string> = {
   '"Bulldog" Heavy Revolver': 'D8A5F7F6BD131D45ACBD2CFE7E5416CC',
   'BRT7 Burst Fire Gun': 'B95EDEC1BDDB1C478E5DC57322105134',
   '"Hurricane" Guided Rocket System': 'A3ED6A8ACE08CD4DB471A10C697B6B64',
+  'ArmsKore Coil Gun': '00356685FFB79E4598D8F64C15CD4A9B',
 
   // Scout
   'Deepcore GK2': '1AF31165BCB11C48A5A3D1A6BA5A3540',
