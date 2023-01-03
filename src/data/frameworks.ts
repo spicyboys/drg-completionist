@@ -67,6 +67,14 @@ export const FrameworkIDs: Record<
     Neonband: 'FIXME',
     'Scale Brigade': 'FIXME',
   },
+  'Colette Wave Cooker': {
+    'Custom Engineered': 'FIXME',
+    'Fourth Relic': 'FIXME',
+    'Glyphid Trophy Hunter': 'FIXME',
+    Mechanized: 'FIXME',
+    Neonband: 'FIXME',
+    'Scale Brigade': 'FIXME',
+  },
 
   // Engineer
   '"Warthog" Auto 210': {
