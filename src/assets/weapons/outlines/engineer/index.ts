@@ -18,3 +18,4 @@ export const GrenadeLauncher = {
 };
 export const Shotgun = { png: _Shotgun, webp: _Shotgun_webp };
 export const StubbySMG = { png: _StubbySMG, webp: _StubbySMG_webp };
+export const LockOnRifle = { png: _StubbySMG, webp: _StubbySMG_webp };
