@@ -6,6 +6,7 @@ import EPCOverclocks from './weapons/epc';
 import FlamethrowerOverclocks from './weapons/flamethrower';
 import SludgePumpOverclocks from './weapons/sludgepump';
 import SubataOverclocks from './weapons/subata';
+import WaveCookerOverclocks from './weapons/wavecooker';
 
 const DrillerOverclocks: Record<MinerWeapon<Miner.Driller>, Overclock[]> = {
   'CRSPR Flamethrower': FlamethrowerOverclocks,
@@ -13,6 +14,7 @@ const DrillerOverclocks: Record<MinerWeapon<Miner.Driller>, Overclock[]> = {
   'Subata 120': SubataOverclocks,
   'Experimental Plasma Charger': EPCOverclocks,
   'Corrosive Sludge Pump': SludgePumpOverclocks,
+  'Colette Wave Cooker': WaveCookerOverclocks,
 };
 
 export default DrillerOverclocks;
