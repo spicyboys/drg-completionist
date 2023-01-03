@@ -32,6 +32,7 @@ export const MinerWeapons = {
     'Jury-Rigged Boomstick',
     'Zhukov NUK17',
     'DRAK-25 Plasma Carbine',
+    'Nishanka Boltshark X-80',
   ],
 } as const;
 
@@ -68,6 +69,7 @@ export const WeaponOutlines: Record<MinerWeapon<Miner>, ImgSrc> = {
   'Jury-Rigged Boomstick': outlines.scout.Boomstick,
   'Zhukov NUK17': outlines.scout.Zhukov,
   'DRAK-25 Plasma Carbine': outlines.engineer.StubbySMG,
+  'Nishanka Boltshark X-80': outlines.engineer.StubbySMG,
 };
 
 export const WeaponIDs: Record<MinerWeapon<Miner>, string> = {
@@ -101,4 +103,5 @@ export const WeaponIDs: Record<MinerWeapon<Miner>, string> = {
   'Jury-Rigged Boomstick': '895756CB9017B0419D74C47AC45A16A5',
   'Zhukov NUK17': '9736EE110D4C8749A224AF6F2DBA0160',
   'DRAK-25 Plasma Carbine': '3DF53AB5B7F66048B686F785F634E5A4',
+  'Nishanka Boltshark X-80': '0598B596016E324886832D1A6D62F981',
 };
