@@ -93,6 +93,14 @@ export const FrameworkIDs: Record<
     Neonband: 'A989EB6D58EFE54494E471BB61E535C8',
     'Scale Brigade': 'FEF1A8A6925F984BA2136D81B0085067',
   },
+  'Lok-1 Smart Rifle': {
+    'Custom Engineered': 'FIXME',
+    'Fourth Relic': 'FIXME',
+    'Glyphid Trophy Hunter': 'FIXME',
+    Mechanized: 'FIXME',
+    Neonband: 'FIXME',
+    'Scale Brigade': 'FIXME',
+  },
 
   // Gunner
   '"Lead Storm" Powered Minigun': {

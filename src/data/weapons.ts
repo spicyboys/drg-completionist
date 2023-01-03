@@ -13,6 +13,7 @@ export const MinerWeapons = {
     '"Stubby" Voltaic SMG',
     'Deepcore 40mm PGL',
     'Breach Cutter',
+    'Lok-1 Smart Rifle',
   ],
   [Miner.Gunner]: [
     '"Lead Storm" Powered Minigun',
@@ -42,6 +43,7 @@ export const WeaponOutlines: Record<MinerWeapon<Miner>, ImgSrc> = {
   '"Stubby" Voltaic SMG': outlines.engineer.StubbySMG,
   'Deepcore 40mm PGL': outlines.engineer.GrenadeLauncher,
   'Breach Cutter': outlines.engineer.BreachCutter,
+  'Lok-1 Smart Rifle': outlines.engineer.StubbySMG,
 
   // Gunner
   '"Lead Storm" Powered Minigun': outlines.gunner.Minigun,
@@ -68,6 +70,7 @@ export const WeaponIDs: Record<MinerWeapon<Miner>, string> = {
   '"Stubby" Voltaic SMG': 'DDB5DA9086CD4442AF6006DE2A4390A9',
   'Deepcore 40mm PGL': '501A4F4CCC24CB42B0287F2AF9AE120D',
   'Breach Cutter': '28D22472C409224EAFFACAC8B1377287',
+  'Lok-1 Smart Rifle': '192AC9D763B05942A4A92436658CDAC2',
 
   // Gunner
   '"Lead Storm" Powered Minigun': 'DF573B09420B2E408BCE3AB9D36542F8',
