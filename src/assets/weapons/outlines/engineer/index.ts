@@ -7,6 +7,10 @@ import _BreachCutter from './BreachCutter.png';
 import _BreachCutter_webp from './BreachCutter.png.webp';
 import _GrenadeLauncher from './GrenadeLauncher.png';
 import _GrenadeLauncher_webp from './GrenadeLauncher.png.webp';
+import _LockOnRifle from './LockOnRifle.png';
+import _LockOnRifle_webp from './LockOnRifle.png.webp';
+import _ShardDiffractor from './ShardDiffractor.png';
+import _ShardDiffractor_webp from './ShardDiffractor.png.webp';
 import _Shotgun from './Shotgun.png';
 import _Shotgun_webp from './Shotgun.png.webp';
 import _StubbySMG from './StubbySMG.png';
@@ -16,6 +20,10 @@ export const GrenadeLauncher = {
   png: _GrenadeLauncher,
   webp: _GrenadeLauncher_webp,
 };
+export const LockOnRifle = { png: _LockOnRifle, webp: _LockOnRifle_webp };
+export const ShardDiffractor = {
+  png: _ShardDiffractor,
+  webp: _ShardDiffractor_webp,
+};
 export const Shotgun = { png: _Shotgun, webp: _Shotgun_webp };
 export const StubbySMG = { png: _StubbySMG, webp: _StubbySMG_webp };
-export const LockOnRifle = { png: _StubbySMG, webp: _StubbySMG_webp };
