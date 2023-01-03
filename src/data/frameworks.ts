@@ -159,6 +159,14 @@ export const FrameworkIDs: Record<
     Neonband: '507DFD1792BC6A48840FA5A6C8230C17',
     'Scale Brigade': 'EF8C3C197E4A41429FACE5F9F91DD364',
   },
+  '"Hurricane" Guided Rocket System': {
+    'Custom Engineered': 'FIXME',
+    'Fourth Relic': 'FIXME',
+    'Glyphid Trophy Hunter': 'FIXME',
+    Mechanized: 'FIXME',
+    Neonband: 'FIXME',
+    'Scale Brigade': 'FIXME',
+  },
 
   // Scout
   'Deepcore GK2': {
