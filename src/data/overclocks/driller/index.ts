@@ -11,9 +11,9 @@ import WaveCookerOverclocks from './weapons/wavecooker';
 const DrillerOverclocks: Record<MinerWeapon<Miner.Driller>, Overclock[]> = {
   'CRSPR Flamethrower': FlamethrowerOverclocks,
   'Cryo Cannon': CryoCannonOverclocks,
+  'Corrosive Sludge Pump': SludgePumpOverclocks,
   'Subata 120': SubataOverclocks,
   'Experimental Plasma Charger': EPCOverclocks,
-  'Corrosive Sludge Pump': SludgePumpOverclocks,
   'Colette Wave Cooker': WaveCookerOverclocks,
 };
 
