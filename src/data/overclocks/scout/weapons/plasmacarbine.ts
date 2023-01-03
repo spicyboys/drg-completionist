@@ -4,7 +4,7 @@ const PlasmaCarbineOverclocks: Overclock[] = [
   {
     name: 'Aggressive Venting',
     id: 'D831B000F2A2C84C8749A5B182348574',
-    icon: 'Damage',
+    icon: 'Special',
     type: 'Clean',
     price: {
       credits: 8000,
@@ -22,7 +22,7 @@ const PlasmaCarbineOverclocks: Overclock[] = [
   {
     name: 'Thermal Liquid Coolant',
     id: '00EA09DA14DA7646982DD5A1B2467A08',
-    icon: 'Damage',
+    icon: 'Cooldown',
     type: 'Clean',
     price: {
       credits: 8100,
@@ -40,7 +40,7 @@ const PlasmaCarbineOverclocks: Overclock[] = [
   {
     name: 'Impact Deflection',
     id: '1BD74059739E094BBE0A3B79F2E94B46',
-    icon: 'Damage',
+    icon: 'Ricochet',
     type: 'Balanced',
     price: {
       credits: 7950,
@@ -49,7 +49,9 @@ const PlasmaCarbineOverclocks: Overclock[] = [
       umanite: 105,
     },
     effects: {
-      buffs: ['Projectiles will bounce 1 time, either off of terrain or enemies'],
+      buffs: [
+        'Projectiles will bounce 1 time, either off of terrain or enemies',
+      ],
       nerfs: ['-2 Rate of Fire'],
     },
     description:
@@ -58,7 +60,7 @@ const PlasmaCarbineOverclocks: Overclock[] = [
   {
     name: 'Rewiring Mod',
     id: '5ABF1C487BF3BD4BAFDAF2A4428720EC',
-    icon: 'Damage',
+    icon: 'Ammo',
     type: 'Balanced',
     price: {
       credits: 8200,
@@ -86,7 +88,11 @@ const PlasmaCarbineOverclocks: Overclock[] = [
     },
     effects: {
       buffs: ['+8 Direct Damage'],
-      nerfs: ['x0.8 Battery Capacity', 'x1.5 Heat per Shot', 'Increased Base Spread'],
+      nerfs: [
+        'x0.8 Battery Capacity',
+        'x1.5 Heat per Shot',
+        'Increased Base Spread',
+      ],
     },
     description:
       'The particle accelerator has been tuned way over safety standards to push the damage output to the limit! The modifications comes with a price to overall stability of the weapon and increased heat generation.',
@@ -94,7 +100,7 @@ const PlasmaCarbineOverclocks: Overclock[] = [
   {
     name: 'Shield Battery Booster',
     id: '532714B803867C4F8AA6EA78FA4EAAEA',
-    icon: 'Damage',
+    icon: 'Resistance',
     type: 'Unstable',
     price: {
       credits: 8850,
@@ -103,8 +109,17 @@ const PlasmaCarbineOverclocks: Overclock[] = [
       bismor: 65,
     },
     effects: {
-      buffs: ['Increased Damage and Projectile Speed while shield is full', '+1 Rate of Fire', '+100 Battery Capacity'],
-      nerfs: ['x0.5 Cooling Rate', 'x1.5 Heat per Shot', 'x2 Overheat Duration', 'Overheating Disables shield'],
+      buffs: [
+        'Increased Damage and Projectile Speed while shield is full',
+        '+1 Rate of Fire',
+        '+100 Battery Capacity',
+      ],
+      nerfs: [
+        'x0.5 Cooling Rate',
+        'x1.5 Heat per Shot',
+        'x2 Overheat Duration',
+        'Overheating Disables shield',
+      ],
     },
     description:
       'Plugging your shield directly into the weapon battery boosts the plasma feed and density significantly while at full shield and improves total ammo and rate of fire at all times. However the extra energy generates more heat and overheating the weapon will short circuit your shield.',
@@ -112,7 +127,7 @@ const PlasmaCarbineOverclocks: Overclock[] = [
   {
     name: 'Thermal Exhaust Feedback',
     id: 'BFFE0C3436AC584D890B6EFE9124AAF1',
-    icon: 'Damage',
+    icon: 'Heat',
     type: 'Unstable',
     price: {
       credits: 7500,

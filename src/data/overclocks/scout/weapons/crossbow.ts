@@ -4,7 +4,7 @@ const CrossbowOverclocks: Overclock[] = [
   {
     name: 'Quick Fire',
     id: '1CFA57FA35D0DB49A9AAF87CAA011EF4',
-    icon: 'Damage',
+    icon: 'FireRate',
     type: 'Clean',
     price: {
       credits: 8400,
@@ -22,7 +22,7 @@ const CrossbowOverclocks: Overclock[] = [
   {
     name: 'The Specialist',
     id: '6C464531820EA849BB3C80C0F190A74F',
-    icon: 'Damage',
+    icon: 'Special',
     type: 'Clean',
     price: {
       credits: 7900,
@@ -40,7 +40,7 @@ const CrossbowOverclocks: Overclock[] = [
   {
     name: 'Cryo Bolt',
     id: '75CFD0A90F31C94A9D6A8D02147DE1FC',
-    icon: 'Damage',
+    icon: 'Cold',
     type: 'Balanced',
     price: {
       credits: 7350,
@@ -58,7 +58,7 @@ const CrossbowOverclocks: Overclock[] = [
   {
     name: 'Fire Bolt',
     id: 'DDCA81E29C6BE8488C2DF4F0B0C72A72',
-    icon: 'Damage',
+    icon: 'Heat',
     type: 'Balanced',
     price: {
       credits: 7100,
@@ -76,7 +76,7 @@ const CrossbowOverclocks: Overclock[] = [
   {
     name: 'Bodkin Points',
     id: 'AECB0F241DFA194AB04BBB86563FA840',
-    icon: 'Damage',
+    icon: 'Ricochet',
     type: 'Unstable',
     price: {
       credits: 8400,
@@ -94,7 +94,7 @@ const CrossbowOverclocks: Overclock[] = [
   {
     name: 'Trifork Volley',
     id: '62FE96DE32A5454EB0F1952BD68DBAF4',
-    icon: 'Damage',
+    icon: 'LastShellHigherDamage',
     type: 'Unstable',
     price: {
       credits: 7650,
@@ -104,7 +104,11 @@ const CrossbowOverclocks: Overclock[] = [
     },
     effects: {
       buffs: ['3x Normal Projectiles', '20% more ammo capacity'],
-      nerfs: ['Bolts are no longer retrievable', '15% less damage per projectile', '1.5x Reload Time'],
+      nerfs: [
+        'Bolts are no longer retrievable',
+        '15% less damage per projectile',
+        '1.5x Reload Time',
+      ],
     },
     description:
       'With a few adjustments to the firing mechanism and the string you can load a volley of three bolts into the chamber. The bolts do a tad less damage, but are packed compactly enough for you to carry more of them. The modification and size of the rounds make reloading slower, and the bolts are ruined after firing them, making them unretrievable. This does not affect special bolts.',
