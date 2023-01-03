@@ -5,33 +5,33 @@ export const MinerWeapons = {
   [Miner.Driller]: [
     'CRSPR Flamethrower',
     'Cryo Cannon',
+    'Corrosive Sludge Pump',
     'Subata 120',
     'Experimental Plasma Charger',
-    'Corrosive Sludge Pump',
     'Colette Wave Cooker',
   ],
   [Miner.Engineer]: [
     '"Warthog" Auto 210',
     '"Stubby" Voltaic SMG',
+    'Lok-1 Smart Rifle',
     'Deepcore 40mm PGL',
     'Breach Cutter',
-    'Lok-1 Smart Rifle',
     'Shard Diffractor',
   ],
   [Miner.Gunner]: [
     '"Lead Storm" Powered Minigun',
     '"Thunderhead" Heavy Autocannon',
+    '"Hurricane" Guided Rocket System',
     '"Bulldog" Heavy Revolver',
     'BRT7 Burst Fire Gun',
-    '"Hurricane" Guided Rocket System',
     'ArmsKore Coil Gun',
   ],
   [Miner.Scout]: [
     'Deepcore GK2',
     'M1000 Classic',
+    'DRAK-25 Plasma Carbine',
     'Jury-Rigged Boomstick',
     'Zhukov NUK17',
-    'DRAK-25 Plasma Carbine',
     'Nishanka Boltshark X-80',
   ],
 } as const;
@@ -44,32 +44,32 @@ export const WeaponOutlines: Record<MinerWeapon<Miner>, ImgSrc> = {
   'Cryo Cannon': outlines.driller.CryoCannon,
   'Subata 120': outlines.driller.Subata,
   'Experimental Plasma Charger': outlines.driller.Epc,
-  'Corrosive Sludge Pump': outlines.engineer.StubbySMG,
-  'Colette Wave Cooker': outlines.engineer.StubbySMG,
+  'Corrosive Sludge Pump': outlines.driller.SludgePump,
+  'Colette Wave Cooker': outlines.driller.WaveCooker,
 
   // Engineer
   '"Warthog" Auto 210': outlines.engineer.Shotgun,
   '"Stubby" Voltaic SMG': outlines.engineer.StubbySMG,
   'Deepcore 40mm PGL': outlines.engineer.GrenadeLauncher,
   'Breach Cutter': outlines.engineer.BreachCutter,
-  'Lok-1 Smart Rifle': outlines.engineer.StubbySMG,
-  'Shard Diffractor': outlines.engineer.StubbySMG,
+  'Lok-1 Smart Rifle': outlines.engineer.LockOnRifle,
+  'Shard Diffractor': outlines.engineer.ShardDiffractor,
 
   // Gunner
   '"Lead Storm" Powered Minigun': outlines.gunner.Minigun,
   '"Thunderhead" Heavy Autocannon': outlines.gunner.Autocannon,
   '"Bulldog" Heavy Revolver': outlines.gunner.Revolver,
   'BRT7 Burst Fire Gun': outlines.gunner.BurstFireGun,
-  '"Hurricane" Guided Rocket System': outlines.engineer.StubbySMG,
-  'ArmsKore Coil Gun': outlines.engineer.StubbySMG,
+  '"Hurricane" Guided Rocket System': outlines.gunner.Hurricane,
+  'ArmsKore Coil Gun': outlines.gunner.Coilgun,
 
   // Scout
   'Deepcore GK2': outlines.scout.AssaultRifle,
   'M1000 Classic': outlines.scout.M1000,
   'Jury-Rigged Boomstick': outlines.scout.Boomstick,
   'Zhukov NUK17': outlines.scout.Zhukov,
-  'DRAK-25 Plasma Carbine': outlines.engineer.StubbySMG,
-  'Nishanka Boltshark X-80': outlines.engineer.StubbySMG,
+  'DRAK-25 Plasma Carbine': outlines.scout.PlasmaCarbine,
+  'Nishanka Boltshark X-80': outlines.scout.Crossbow,
 };
 
 export const WeaponIDs: Record<MinerWeapon<Miner>, string> = {
