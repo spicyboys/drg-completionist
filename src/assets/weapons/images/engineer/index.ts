@@ -7,16 +7,23 @@ import _BreachCutter from './BreachCutter.png';
 import _BreachCutter_webp from './BreachCutter.png.webp';
 import _DeepcoreGrenadeLauncher from './DeepcoreGrenadeLauncher.png';
 import _DeepcoreGrenadeLauncher_webp from './DeepcoreGrenadeLauncher.png.webp';
+import _LockOnRifle from './LockOnRifle.png';
+import _LockOnRifle_webp from './LockOnRifle.png.webp';
+import _ShardDiffractor from './ShardDiffractor.png';
+import _ShardDiffractor_webp from './ShardDiffractor.png.webp';
 import _StubbyVoltaicSMG from './StubbyVoltaicSMG.png';
 import _StubbyVoltaicSMG_webp from './StubbyVoltaicSMG.png.webp';
 import _WarthogShotgun from './WarthogShotgun.png';
 import _WarthogShotgun_webp from './WarthogShotgun.png.webp';
-import _LockOnRifle from './StubbyVoltaicSMG.png';
-import _LockOnRifle_webp from './StubbyVoltaicSMG.png.webp';
 export const BreachCutter = { png: _BreachCutter, webp: _BreachCutter_webp };
 export const DeepcoreGrenadeLauncher = {
   png: _DeepcoreGrenadeLauncher,
   webp: _DeepcoreGrenadeLauncher_webp,
+};
+export const LockOnRifle = { png: _LockOnRifle, webp: _LockOnRifle_webp };
+export const ShardDiffractor = {
+  png: _ShardDiffractor,
+  webp: _ShardDiffractor_webp,
 };
 export const StubbyVoltaicSMG = {
   png: _StubbyVoltaicSMG,
@@ -26,7 +33,3 @@ export const WarthogShotgun = {
   png: _WarthogShotgun,
   webp: _WarthogShotgun_webp,
 };
-export const LockOnRifle = {
-  png: _LockOnRifle,
-  webp: _LockOnRifle_webp,
-}

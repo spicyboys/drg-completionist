@@ -9,12 +9,18 @@ import _ExperimentalPlasmaCharger from './ExperimentalPlasmaCharger.png';
 import _ExperimentalPlasmaCharger_webp from './ExperimentalPlasmaCharger.png.webp';
 import _FlameThrower from './FlameThrower.png';
 import _FlameThrower_webp from './FlameThrower.png.webp';
+import _SludgePump from './SludgePump.png';
+import _SludgePump_webp from './SludgePump.png.webp';
 import _Subata120 from './Subata120.png';
 import _Subata120_webp from './Subata120.png.webp';
+import _Wavecooker from './Wavecooker.png';
+import _Wavecooker_webp from './Wavecooker.png.webp';
 export const CryoCannon = { png: _CryoCannon, webp: _CryoCannon_webp };
 export const ExperimentalPlasmaCharger = {
   png: _ExperimentalPlasmaCharger,
   webp: _ExperimentalPlasmaCharger_webp,
 };
 export const FlameThrower = { png: _FlameThrower, webp: _FlameThrower_webp };
+export const SludgePump = { png: _SludgePump, webp: _SludgePump_webp };
 export const Subata120 = { png: _Subata120, webp: _Subata120_webp };
+export const Wavecooker = { png: _Wavecooker, webp: _Wavecooker_webp };
