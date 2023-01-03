@@ -4,7 +4,7 @@ const CoilGunOverclocks: Overclock[] = [
   {
     name: 'Re-atomizer',
     id: '8C5D24BD68D5F14A89A6B87A857CCD9B',
-    icon: 'Damage',
+    icon: 'Special',
     type: 'Clean',
     price: {
       credits: 7750,
@@ -22,7 +22,7 @@ const CoilGunOverclocks: Overclock[] = [
   {
     name: 'Ultra-Magnetic Coils',
     id: '26841EB5823A284B81BF7DA3792708D7',
-    icon: 'Damage',
+    icon: 'DurationHourglass',
     type: 'Clean',
     price: {
       credits: 7900,
@@ -40,7 +40,7 @@ const CoilGunOverclocks: Overclock[] = [
   {
     name: 'Backfeeding Module',
     id: 'F82F326576E8A74899753CB6316B7C20',
-    icon: 'Damage',
+    icon: 'Ammo',
     type: 'Balanced',
     price: {
       credits: 8100,
@@ -58,7 +58,7 @@ const CoilGunOverclocks: Overclock[] = [
   {
     name: 'The Mole',
     id: '56471F219BE014448DFE5F087CABD447',
-    icon: 'Damage',
+    icon: 'BulletPenetration',
     type: 'Balanced',
     price: {
       credits: 8100,
@@ -67,7 +67,10 @@ const CoilGunOverclocks: Overclock[] = [
       enorPearl: 95,
     },
     effects: {
-      buffs: ['Damage bonus for every terrain pierced', 'Greater penetrability'],
+      buffs: [
+        'Damage bonus for every terrain pierced',
+        'Greater penetrability',
+      ],
       nerfs: ['x0.8 Charge Speed'],
     },
     description:
@@ -76,7 +79,7 @@ const CoilGunOverclocks: Overclock[] = [
   {
     name: 'Hellfire',
     id: '80DEA90AD5F3174695138FF47A32A96A',
-    icon: 'Damage',
+    icon: 'Heat',
     type: 'Unstable',
     price: {
       credits: 8700,
@@ -85,7 +88,10 @@ const CoilGunOverclocks: Overclock[] = [
       enorPearl: 80,
     },
     effects: {
-      buffs: ['Ignites ground or other terrain within 2m of projectile trajectory', '+1m Trail Radius'],
+      buffs: [
+        'Ignites ground or other terrain within 2m of projectile trajectory',
+        '+1m Trail Radius',
+      ],
       nerfs: ['-200 Ammo', 'x0.7 Charge Speed', '-2s Trail Duration'],
     },
     description:
@@ -107,7 +113,7 @@ const CoilGunOverclocks: Overclock[] = [
       nerfs: ['+0.5 Reload Speed', 'x0.7 Charge Speed', 'Stronger recoil'],
     },
     description:
-      'Prototype chamber tech that allows the weapon to fire off residual energy up to two times in quick succession after shooting, at half the cost and damage of a normal shot. The extra shots don\'t penetrate and the heavy modification takes a toll on the energy flow, reducing charge rate and reload speed.',
+      "Prototype chamber tech that allows the weapon to fire off residual energy up to two times in quick succession after shooting, at half the cost and damage of a normal shot. The extra shots don't penetrate and the heavy modification takes a toll on the energy flow, reducing charge rate and reload speed.",
   },
 ];
 

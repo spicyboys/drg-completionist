@@ -3,6 +3,8 @@
  * To update it, run `yarn update-assets` in the project root.
  */
 
+import _Acid from './acid.png';
+import _Acid_webp from './acid.png.webp';
 import _Aim from './aim.png';
 import _Aim_webp from './aim.png.webp';
 import _Ammo from './ammo.png';
@@ -11,6 +13,10 @@ import _Area from './area.png';
 import _Area_webp from './area.png.webp';
 import _AreaDamage from './areaDamage.png';
 import _AreaDamage_webp from './areaDamage.png.webp';
+import _ArmorBreak from './armorBreak.png';
+import _ArmorBreak_webp from './armorBreak.png.webp';
+import _BulletPenetration from './bulletPenetration.png';
+import _BulletPenetration_webp from './bulletPenetration.png.webp';
 import _Chance from './chance.png';
 import _Chance_webp from './chance.png.webp';
 import _ChargeUp from './chargeUp.png';
@@ -43,16 +49,24 @@ import _Fuel from './fuel.png';
 import _Fuel_webp from './fuel.png.webp';
 import _Heat from './heat.png';
 import _Heat_webp from './heat.png.webp';
+import _LastShellHigherDamage from './lastShellHigherDamage.png';
+import _LastShellHigherDamage_webp from './lastShellHigherDamage.png.webp';
 import _MovementSpeed from './movementSpeed.png';
 import _MovementSpeed_webp from './movementSpeed.png.webp';
 import _Neuro from './neuro.png';
 import _Neuro_webp from './neuro.png.webp';
 import _ProjectileSpeed from './projectileSpeed.png';
 import _ProjectileSpeed_webp from './projectileSpeed.png.webp';
+import _Radioactive from './radioactive.png';
+import _Radioactive_webp from './radioactive.png.webp';
 import _ReloadSpeed from './reloadSpeed.png';
 import _ReloadSpeed_webp from './reloadSpeed.png.webp';
+import _Resistance from './resistance.png';
+import _Resistance_webp from './resistance.png.webp';
 import _Ricochet from './ricochet.png';
 import _Ricochet_webp from './ricochet.png.webp';
+import _ShotgunBlast from './shotgunBlast.png';
+import _ShotgunBlast_webp from './shotgunBlast.png.webp';
 import _ShotgunJump from './shotgunJump.png';
 import _ShotgunJump_webp from './shotgunJump.png.webp';
 import _ShotgunPellet from './shotgunPellet.png';
@@ -69,10 +83,18 @@ import _SpinningLinecutter from './spinningLinecutter.png';
 import _SpinningLinecutter_webp from './spinningLinecutter.png.webp';
 import _Stun from './stun.png';
 import _Stun_webp from './stun.png.webp';
+import _Weakspot from './weakspot.png';
+import _Weakspot_webp from './weakspot.png.webp';
+export const Acid = { png: _Acid, webp: _Acid_webp };
 export const Aim = { png: _Aim, webp: _Aim_webp };
 export const Ammo = { png: _Ammo, webp: _Ammo_webp };
-export const Area = { png: _Area, webp: _Area_webp };
 export const AreaDamage = { png: _AreaDamage, webp: _AreaDamage_webp };
+export const Area = { png: _Area, webp: _Area_webp };
+export const ArmorBreak = { png: _ArmorBreak, webp: _ArmorBreak_webp };
+export const BulletPenetration = {
+  png: _BulletPenetration,
+  webp: _BulletPenetration_webp,
+};
 export const Chance = { png: _Chance, webp: _Chance_webp };
 export const ChargeUp = { png: _ChargeUp, webp: _ChargeUp_webp };
 export const ClipSize = { png: _ClipSize, webp: _ClipSize_webp };
@@ -80,14 +102,14 @@ export const Cold = { png: _Cold, webp: _Cold_webp };
 export const Cooldown = { png: _Cooldown, webp: _Cooldown_webp };
 export const Damage = { png: _Damage, webp: _Damage_webp };
 export const Distance = { png: _Distance, webp: _Distance_webp };
-export const Duration = { png: _Duration, webp: _Duration_webp };
 export const DurationHourglass = {
   png: _DurationHourglass,
   webp: _DurationHourglass_webp,
 };
+export const Duration = { png: _Duration, webp: _Duration_webp };
 export const Electricity = { png: _Electricity, webp: _Electricity_webp };
-export const Explosion = { png: _Explosion, webp: _Explosion_webp };
 export const ExplosionJump = { png: _ExplosionJump, webp: _ExplosionJump_webp };
+export const Explosion = { png: _Explosion, webp: _Explosion_webp };
 export const FireRate = { png: _FireRate, webp: _FireRate_webp };
 export const ForthAndBackLinecutter = {
   png: _ForthAndBackLinecutter,
@@ -95,25 +117,33 @@ export const ForthAndBackLinecutter = {
 };
 export const Fuel = { png: _Fuel, webp: _Fuel_webp };
 export const Heat = { png: _Heat, webp: _Heat_webp };
+export const LastShellHigherDamage = {
+  png: _LastShellHigherDamage,
+  webp: _LastShellHigherDamage_webp,
+};
 export const MovementSpeed = { png: _MovementSpeed, webp: _MovementSpeed_webp };
 export const Neuro = { png: _Neuro, webp: _Neuro_webp };
 export const ProjectileSpeed = {
   png: _ProjectileSpeed,
   webp: _ProjectileSpeed_webp,
 };
+export const Radioactive = { png: _Radioactive, webp: _Radioactive_webp };
 export const ReloadSpeed = { png: _ReloadSpeed, webp: _ReloadSpeed_webp };
+export const Resistance = { png: _Resistance, webp: _Resistance_webp };
 export const Ricochet = { png: _Ricochet, webp: _Ricochet_webp };
+export const ShotgunBlast = { png: _ShotgunBlast, webp: _ShotgunBlast_webp };
 export const ShotgunJump = { png: _ShotgunJump, webp: _ShotgunJump_webp };
 export const ShotgunPellet = { png: _ShotgunPellet, webp: _ShotgunPellet_webp };
 export const Slowdown = { png: _Slowdown, webp: _Slowdown_webp };
 export const SmallBullets = { png: _SmallBullets, webp: _SmallBullets_webp };
-export const Special = { png: _Special, webp: _Special_webp };
 export const SpecialMagazine = {
   png: _SpecialMagazine,
   webp: _SpecialMagazine_webp,
 };
+export const Special = { png: _Special, webp: _Special_webp };
 export const SpinningLinecutter = {
   png: _SpinningLinecutter,
   webp: _SpinningLinecutter_webp,
 };
 export const Stun = { png: _Stun, webp: _Stun_webp };
+export const Weakspot = { png: _Weakspot, webp: _Weakspot_webp };
