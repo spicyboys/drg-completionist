@@ -109,6 +109,14 @@ export const FrameworkIDs: Record<
     Neonband: 'FIXME',
     'Scale Brigade': 'FIXME',
   },
+  'Shard Diffractor': {
+    'Custom Engineered': 'FIXME',
+    'Fourth Relic': 'FIXME',
+    'Glyphid Trophy Hunter': 'FIXME',
+    Mechanized: 'FIXME',
+    Neonband: 'FIXME',
+    'Scale Brigade': 'FIXME',
+  },
 
   // Gunner
   '"Lead Storm" Powered Minigun': {

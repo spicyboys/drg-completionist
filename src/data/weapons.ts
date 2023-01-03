@@ -15,6 +15,7 @@ export const MinerWeapons = {
     'Deepcore 40mm PGL',
     'Breach Cutter',
     'Lok-1 Smart Rifle',
+    'Shard Diffractor',
   ],
   [Miner.Gunner]: [
     '"Lead Storm" Powered Minigun',
@@ -46,6 +47,7 @@ export const WeaponOutlines: Record<MinerWeapon<Miner>, ImgSrc> = {
   'Deepcore 40mm PGL': outlines.engineer.GrenadeLauncher,
   'Breach Cutter': outlines.engineer.BreachCutter,
   'Lok-1 Smart Rifle': outlines.engineer.StubbySMG,
+  'Shard Diffractor': outlines.engineer.StubbySMG,
 
   // Gunner
   '"Lead Storm" Powered Minigun': outlines.gunner.Minigun,
@@ -74,6 +76,7 @@ export const WeaponIDs: Record<MinerWeapon<Miner>, string> = {
   'Deepcore 40mm PGL': '501A4F4CCC24CB42B0287F2AF9AE120D',
   'Breach Cutter': '28D22472C409224EAFFACAC8B1377287',
   'Lok-1 Smart Rifle': '192AC9D763B05942A4A92436658CDAC2',
+  'Shard Diffractor': 'F9CC8DCBB9EBC44F9B0CB80D58F30031',
 
   // Gunner
   '"Lead Storm" Powered Minigun': 'DF573B09420B2E408BCE3AB9D36542F8',
