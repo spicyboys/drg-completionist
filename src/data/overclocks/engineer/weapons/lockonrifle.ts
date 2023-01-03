@@ -27,8 +27,8 @@ const LockOnRifleOverclocks: Overclock[] = [
     price: {
       credits: 7850,
       croppa: 125,
-      umanite: 80,
       magnite: 90,
+      umanite: 80,
     },
     effects: {
       buffs: ['More Damage against Armor when all Locks are engaged'],
@@ -44,8 +44,8 @@ const LockOnRifleOverclocks: Overclock[] = [
     type: 'Balanced',
     price: {
       credits: 8500,
-      jadiz: 130,
       croppa: 65,
+      jadiz: 130,
       magnite: 95,
     },
     effects: {
@@ -63,8 +63,8 @@ const LockOnRifleOverclocks: Overclock[] = [
     price: {
       credits: 8150,
       magnite: 135,
-      bismor: 60,
       umanite: 95,
+      bismor: 60,
     },
     effects: {
       buffs: ['+Seeker Rounds', 'x1.33 Lose Lock Threshold'],
@@ -80,9 +80,9 @@ const LockOnRifleOverclocks: Overclock[] = [
     type: 'Unstable',
     price: {
       credits: 8750,
-      enorPearl: 130,
-      magnite: 65,
       jadiz: 105,
+      magnite: 65,
+      enorPearl: 130,
     },
     effects: {
       buffs: ['+50% Weakpoint Damage Bonus at Full Lock', 'x0.5 Lock-On Time'],
