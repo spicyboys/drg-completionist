@@ -13,14 +13,34 @@ import _DustyWinds from './Dusty_Winds.png';
 import _DustyWinds_webp from './Dusty_Winds.png.webp';
 import _FrigidTiger from './Frigid_Tiger.png';
 import _FrigidTiger_webp from './Frigid_Tiger.png.webp';
+import _SChippedShadow from './S_Chipped_Shadow.png';
+import _SChippedShadow_webp from './S_Chipped_Shadow.png.webp';
 import _SDarkFuture from './S_Dark_Future.png';
 import _SDarkFuture_webp from './S_Dark_Future.png.webp';
+import _SDarkNeon from './S_Dark_Neon.png';
+import _SDarkNeon_webp from './S_Dark_Neon.png.webp';
 import _SDefaultPaintjob from './S_Default_Paintjob.png';
 import _SDefaultPaintjob_webp from './S_Default_Paintjob.png.webp';
+import _SGrittySandbox from './S_Gritty_Sandbox.png';
+import _SGrittySandbox_webp from './S_Gritty_Sandbox.png.webp';
+import _SMonochromatic from './S_Monochromatic.png';
+import _SMonochromatic_webp from './S_Monochromatic.png.webp';
+import _SMossCrawler from './S_Moss_Crawler.png';
+import _SMossCrawler_webp from './S_Moss_Crawler.png.webp';
+import _SOxidizedCopper from './S_Oxidized_Copper.png';
+import _SOxidizedCopper_webp from './S_Oxidized_Copper.png.webp';
+import _SPlatinum from './S_Platinum.png';
+import _SPlatinum_webp from './S_Platinum.png.webp';
+import _SRustyColossus from './S_Rusty_Colossus.png';
+import _SRustyColossus_webp from './S_Rusty_Colossus.png.webp';
+import _SSpeckledPredator from './S_Speckled_Predator.png';
+import _SSpeckledPredator_webp from './S_Speckled_Predator.png.webp';
 import _SSplattered from './S_Splattered.png';
 import _SSplattered_webp from './S_Splattered.png.webp';
 import _STheSupporter from './S_The_Supporter.png';
 import _STheSupporter_webp from './S_The_Supporter.png.webp';
+import _SUmberCorrosion from './S_Umber_Corrosion.png';
+import _SUmberCorrosion_webp from './S_Umber_Corrosion.png.webp';
 import _SubtleShadow from './Subtle_Shadow.png';
 import _SubtleShadow_webp from './Subtle_Shadow.png.webp';
 export const AquaForce = { png: _AquaForce, webp: _AquaForce_webp };
@@ -28,11 +48,42 @@ export const AzureDraft = { png: _AzureDraft, webp: _AzureDraft_webp };
 export const DarkStripes = { png: _DarkStripes, webp: _DarkStripes_webp };
 export const DustyWinds = { png: _DustyWinds, webp: _DustyWinds_webp };
 export const FrigidTiger = { png: _FrigidTiger, webp: _FrigidTiger_webp };
+export const SChippedShadow = {
+  png: _SChippedShadow,
+  webp: _SChippedShadow_webp,
+};
 export const SDarkFuture = { png: _SDarkFuture, webp: _SDarkFuture_webp };
+export const SDarkNeon = { png: _SDarkNeon, webp: _SDarkNeon_webp };
 export const SDefaultPaintjob = {
   png: _SDefaultPaintjob,
   webp: _SDefaultPaintjob_webp,
 };
+export const SGrittySandbox = {
+  png: _SGrittySandbox,
+  webp: _SGrittySandbox_webp,
+};
+export const SMonochromatic = {
+  png: _SMonochromatic,
+  webp: _SMonochromatic_webp,
+};
+export const SMossCrawler = { png: _SMossCrawler, webp: _SMossCrawler_webp };
+export const SOxidizedCopper = {
+  png: _SOxidizedCopper,
+  webp: _SOxidizedCopper_webp,
+};
+export const SPlatinum = { png: _SPlatinum, webp: _SPlatinum_webp };
+export const SRustyColossus = {
+  png: _SRustyColossus,
+  webp: _SRustyColossus_webp,
+};
+export const SSpeckledPredator = {
+  png: _SSpeckledPredator,
+  webp: _SSpeckledPredator_webp,
+};
 export const SSplattered = { png: _SSplattered, webp: _SSplattered_webp };
 export const STheSupporter = { png: _STheSupporter, webp: _STheSupporter_webp };
 export const SubtleShadow = { png: _SubtleShadow, webp: _SubtleShadow_webp };
+export const SUmberCorrosion = {
+  png: _SUmberCorrosion,
+  webp: _SUmberCorrosion_webp,
+};

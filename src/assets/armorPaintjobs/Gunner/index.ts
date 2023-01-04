@@ -9,14 +9,34 @@ import _DesertRoad from './Desert_Road.png';
 import _DesertRoad_webp from './Desert_Road.png.webp';
 import _DistantField from './Distant_Field.png';
 import _DistantField_webp from './Distant_Field.png.webp';
+import _GChippedShadow from './G_Chipped_Shadow.png';
+import _GChippedShadow_webp from './G_Chipped_Shadow.png.webp';
 import _GDarkFuture from './G_Dark_Future.png';
 import _GDarkFuture_webp from './G_Dark_Future.png.webp';
+import _GDarkNeon from './G_Dark_Neon.png';
+import _GDarkNeon_webp from './G_Dark_Neon.png.webp';
 import _GDefaultPaintjob from './G_Default_Paintjob.png';
 import _GDefaultPaintjob_webp from './G_Default_Paintjob.png.webp';
+import _GGrittySandbox from './G_Gritty_Sandbox.png';
+import _GGrittySandbox_webp from './G_Gritty_Sandbox.png.webp';
+import _GMonochromatic from './G_Monochromatic.png';
+import _GMonochromatic_webp from './G_Monochromatic.png.webp';
+import _GMossCrawler from './G_Moss_Crawler.png';
+import _GMossCrawler_webp from './G_Moss_Crawler.png.webp';
+import _GOxidizedCopper from './G_Oxidized_Copper.png';
+import _GOxidizedCopper_webp from './G_Oxidized_Copper.png.webp';
+import _GPlatinum from './G_Platinum.png';
+import _GPlatinum_webp from './G_Platinum.png.webp';
+import _GRustyColossus from './G_Rusty_Colossus.png';
+import _GRustyColossus_webp from './G_Rusty_Colossus.png.webp';
+import _GSpeckledPredator from './G_Speckled_Predator.png';
+import _GSpeckledPredator_webp from './G_Speckled_Predator.png.webp';
 import _GSplattered from './G_Splattered.png';
 import _GSplattered_webp from './G_Splattered.png.webp';
 import _GTheSupporter from './G_The_Supporter.png';
 import _GTheSupporter_webp from './G_The_Supporter.png.webp';
+import _GUmberCorrosion from './G_Umber_Corrosion.png';
+import _GUmberCorrosion_webp from './G_Umber_Corrosion.png.webp';
 import _LimeThunder from './Lime_Thunder.png';
 import _LimeThunder_webp from './Lime_Thunder.png.webp';
 import _MercuryBulwark from './Mercury_Bulwark.png';
@@ -26,13 +46,44 @@ import _TopsoilDefender_webp from './Topsoil_Defender.png.webp';
 export const Copperbug = { png: _Copperbug, webp: _Copperbug_webp };
 export const DesertRoad = { png: _DesertRoad, webp: _DesertRoad_webp };
 export const DistantField = { png: _DistantField, webp: _DistantField_webp };
+export const GChippedShadow = {
+  png: _GChippedShadow,
+  webp: _GChippedShadow_webp,
+};
 export const GDarkFuture = { png: _GDarkFuture, webp: _GDarkFuture_webp };
+export const GDarkNeon = { png: _GDarkNeon, webp: _GDarkNeon_webp };
 export const GDefaultPaintjob = {
   png: _GDefaultPaintjob,
   webp: _GDefaultPaintjob_webp,
 };
+export const GGrittySandbox = {
+  png: _GGrittySandbox,
+  webp: _GGrittySandbox_webp,
+};
+export const GMonochromatic = {
+  png: _GMonochromatic,
+  webp: _GMonochromatic_webp,
+};
+export const GMossCrawler = { png: _GMossCrawler, webp: _GMossCrawler_webp };
+export const GOxidizedCopper = {
+  png: _GOxidizedCopper,
+  webp: _GOxidizedCopper_webp,
+};
+export const GPlatinum = { png: _GPlatinum, webp: _GPlatinum_webp };
+export const GRustyColossus = {
+  png: _GRustyColossus,
+  webp: _GRustyColossus_webp,
+};
+export const GSpeckledPredator = {
+  png: _GSpeckledPredator,
+  webp: _GSpeckledPredator_webp,
+};
 export const GSplattered = { png: _GSplattered, webp: _GSplattered_webp };
 export const GTheSupporter = { png: _GTheSupporter, webp: _GTheSupporter_webp };
+export const GUmberCorrosion = {
+  png: _GUmberCorrosion,
+  webp: _GUmberCorrosion_webp,
+};
 export const LimeThunder = { png: _LimeThunder, webp: _LimeThunder_webp };
 export const MercuryBulwark = {
   png: _MercuryBulwark,
