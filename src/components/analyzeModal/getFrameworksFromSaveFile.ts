@@ -16,8 +16,8 @@ export const getFrameworksFromSaveFile = ({
     }
 
     const frameworks = Object.entries(FrameworkIDs[weapon])
-      .filter(([_, id]) => frameworkIDs.includes(id))
-      .map(([framework, _]) => framework as Framework) as Framework[];
+      .filter((framework_id_mapping) => frameworkIDs.includes(framework_id_mapping[1]))
+      .map((framework_id_mapping) => framework_id_mapping[0] as Framework) as Framework[];
 
     for (const framework of frameworks) {
       acquiredFrameworks.push({ weapon: weapon, name: framework });
