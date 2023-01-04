@@ -19,6 +19,8 @@ import _ScaleBrigade from './Scale_Brigade.png';
 import _ScaleBrigade_webp from './Scale_Brigade.png.webp';
 import _ToxicDefender from './Toxic_Defender.png';
 import _ToxicDefender_webp from './Toxic_Defender.png.webp';
+import _Verdigris from './Verdigris.png';
+import _Verdigris_webp from './Verdigris.png.webp';
 export const BlackCrag = { png: _BlackCrag, webp: _BlackCrag_webp };
 export const BootCamp = { png: _BootCamp, webp: _BootCamp_webp };
 export const DawnOfTheDread = {
@@ -30,3 +32,4 @@ export const RegalAegis = { png: _RegalAegis, webp: _RegalAegis_webp };
 export const Roughneck = { png: _Roughneck, webp: _Roughneck_webp };
 export const ScaleBrigade = { png: _ScaleBrigade, webp: _ScaleBrigade_webp };
 export const ToxicDefender = { png: _ToxicDefender, webp: _ToxicDefender_webp };
+export const Verdigris = { png: _Verdigris, webp: _Verdigris_webp };

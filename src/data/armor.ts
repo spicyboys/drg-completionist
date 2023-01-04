@@ -27,7 +27,7 @@ export const ArmorPaintjobNames = {
     'Platinum',
     'Umber Corrosion',
     'Monochromatic',
-    //'Verdigris',
+    'Verdigris',
   ],
   [Miner.Engineer]: [
     //'Default Paintjob',
@@ -52,7 +52,7 @@ export const ArmorPaintjobNames = {
     'Platinum',
     'Umber Corrosion',
     'Monochromatic',
-    //'Verdigris',
+    'Verdigris',
   ],
   [Miner.Gunner]: [
     //'Default Paintjob',
@@ -77,7 +77,7 @@ export const ArmorPaintjobNames = {
     'Platinum',
     'Umber Corrosion',
     'Monochromatic',
-    //'Verdigris',
+    'Verdigris',
   ],
   [Miner.Scout]: [
     //'Default Paintjob',
@@ -102,7 +102,7 @@ export const ArmorPaintjobNames = {
     'Platinum',
     'Umber Corrosion',
     'Monochromatic',
-    //'Verdigris',
+    'Verdigris',
   ],
 } as const;
 
@@ -174,8 +174,7 @@ export const ArmorPaintjobIcons: {
     Platinum: PaintjobIconSrcs.Driller.DPlatinum,
     'Umber Corrosion': PaintjobIconSrcs.Driller.DUmberCorrosion,
     Monochromatic: PaintjobIconSrcs.Driller.DMonochromatic,
-    // FIXME: Add correct paintjobsrc when the wiki has a png for it
-    // Verdigris: PaintjobIconSrcs.Driller.DPlatinum,
+    Verdigris: PaintjobIconSrcs.AllClass.Verdigris,
   },
   [Miner.Engineer]: {
     Dustrunner: PaintjobIconSrcs.Engineer.Dustrunner,
@@ -199,8 +198,7 @@ export const ArmorPaintjobIcons: {
     Platinum: PaintjobIconSrcs.Engineer.EPlatinum,
     'Umber Corrosion': PaintjobIconSrcs.Engineer.EUmberCorrosion,
     Monochromatic: PaintjobIconSrcs.Engineer.EMonochromatic,
-    // FIXME: Add correct paintjobsrc when the wiki has a png for it
-    // Verdigris: PaintjobIconSrcs.Engineer.EPlatinum,
+    Verdigris: PaintjobIconSrcs.AllClass.Verdigris,
   },
   [Miner.Gunner]: {
     Copperbug: PaintjobIconSrcs.Gunner.Copperbug,
@@ -224,8 +222,7 @@ export const ArmorPaintjobIcons: {
     Platinum: PaintjobIconSrcs.Gunner.GPlatinum,
     'Umber Corrosion': PaintjobIconSrcs.Gunner.GUmberCorrosion,
     Monochromatic: PaintjobIconSrcs.Gunner.GMonochromatic,
-    // FIXME: Add correct paintjobsrc when the wiki has a png for it
-    // Verdigris: PaintjobIconSrcs.Gunner.GPlatinum,
+    Verdigris: PaintjobIconSrcs.AllClass.Verdigris,
   },
   [Miner.Scout]: {
     'Aqua Force': PaintjobIconSrcs.Scout.AquaForce,
@@ -249,8 +246,7 @@ export const ArmorPaintjobIcons: {
     Platinum: PaintjobIconSrcs.Scout.SPlatinum,
     'Umber Corrosion': PaintjobIconSrcs.Scout.SUmberCorrosion,
     Monochromatic: PaintjobIconSrcs.Scout.SMonochromatic,
-    // FIXME: Add correct paintjobsrc when the wiki has a png for it
-    // Verdigris: PaintjobIconSrcs.Scout.SPlatinum,
+    Verdigris: PaintjobIconSrcs.AllClass.Verdigris,
   },
 } as const;
 
@@ -430,12 +426,12 @@ export const ArmorPaintjobs: Record<Miner, ArmorPaintjob[]> = {
       icon: ArmorPaintjobIcons[Miner.Driller]['Monochromatic'],
       partID: 'D60954FDC866C9439346C07333D35046',
     },
-    // {
-    //   name: 'Verdigris',
-    //   source: 'Performance Pass',
-    //   icon: ArmorPaintjobIcons[Miner.Driller]['Verdigris'],
-    //   partID: '4DDAA57F8F95204CAB9EA459B788B9D4',
-    // },
+    {
+      name: 'Verdigris',
+      source: 'Performance Pass',
+      icon: ArmorPaintjobIcons[Miner.Driller]['Verdigris'],
+      partID: '4DDAA57F8F95204CAB9EA459B788B9D4',
+    },
   ],
   [Miner.Engineer]: [
     {
@@ -548,12 +544,12 @@ export const ArmorPaintjobs: Record<Miner, ArmorPaintjob[]> = {
       icon: ArmorPaintjobIcons[Miner.Engineer]['Monochromatic'],
       partID: '80C5FEE77494DA418B09A402E19D3AAB',
     },
-    // {
-    //   name: 'Verdigris',
-    //   source: 'Performance Pass',
-    //   icon: ArmorPaintjobIcons[Miner.Engineer]['Verdigris'],
-    //   partID: '62205D9CE9733B468E5CD48ADA95B419',
-    // },
+    {
+      name: 'Verdigris',
+      source: 'Performance Pass',
+      icon: ArmorPaintjobIcons[Miner.Engineer]['Verdigris'],
+      partID: '62205D9CE9733B468E5CD48ADA95B419',
+    },
   ],
   [Miner.Gunner]: [
     {
@@ -666,12 +662,12 @@ export const ArmorPaintjobs: Record<Miner, ArmorPaintjob[]> = {
       icon: ArmorPaintjobIcons[Miner.Gunner]['Monochromatic'],
       partID: '56CE32F232D4AB4A9DB4B72906FF7A4D',
     },
-    // {
-    //   name: 'Verdigris',
-    //   source: 'Performance Pass',
-    //   icon: ArmorPaintjobIcons[Miner.Gunner]['Verdigris'],
-    //   partID: '6B19D4CAB6F5294480DEE30835D9E1AF',
-    // },
+    {
+      name: 'Verdigris',
+      source: 'Performance Pass',
+      icon: ArmorPaintjobIcons[Miner.Gunner]['Verdigris'],
+      partID: '6B19D4CAB6F5294480DEE30835D9E1AF',
+    },
   ],
   [Miner.Scout]: [
     {
@@ -784,11 +780,11 @@ export const ArmorPaintjobs: Record<Miner, ArmorPaintjob[]> = {
       icon: ArmorPaintjobIcons[Miner.Scout]['Monochromatic'],
       partID: '39CBB611A0A6CD47B3753AD0228FEC64',
     },
-    // {
-    //   name: 'Verdigris',
-    //   source: 'Performance Pass',
-    //   icon: ArmorPaintjobIcons[Miner.Scout]['Verdigris'],
-    //   partID: 'AD73D5D2BAD5644EB7B5E5CC9DDFAA0B',
-    // },
+    {
+      name: 'Verdigris',
+      source: 'Performance Pass',
+      icon: ArmorPaintjobIcons[Miner.Scout]['Verdigris'],
+      partID: 'AD73D5D2BAD5644EB7B5E5CC9DDFAA0B',
+    },
   ],
 };
