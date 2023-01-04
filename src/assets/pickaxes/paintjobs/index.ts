@@ -3,14 +3,20 @@
  * To update it, run `yarn update-assets` in the project root.
  */
 
+import _ArcWeldersDelight from './arcWeldersDelight.png';
+import _ArcWeldersDelight_webp from './arcWeldersDelight.png.webp';
 import _BugHide from './bugHide.png';
 import _BugHide_webp from './bugHide.png.webp';
 import _CarvenPride from './carvenPride.png';
 import _CarvenPride_webp from './carvenPride.png.webp';
 import _ChasmBorneCliffhanger from './chasmBorneCliffhanger.png';
 import _ChasmBorneCliffhanger_webp from './chasmBorneCliffhanger.png.webp';
+import _Chillaxe from './chillaxe.png';
+import _Chillaxe_webp from './chillaxe.png.webp';
 import _CompanyStandard from './companyStandard.png';
 import _CompanyStandard_webp from './companyStandard.png.webp';
+import _CoreHound from './coreHound.png';
+import _CoreHound_webp from './coreHound.png.webp';
 import _DawnOfTheDread from './dawnOfTheDread.png';
 import _DawnOfTheDread_webp from './dawnOfTheDread.png.webp';
 import _DriftCrusher from './driftCrusher.png';
@@ -33,16 +39,22 @@ import _Roughneck from './roughneck.png';
 import _Roughneck_webp from './roughneck.png.webp';
 import _TheSupporter from './theSupporter.png';
 import _TheSupporter_webp from './theSupporter.png.webp';
+export const ArcWeldersDelight = {
+  png: _ArcWeldersDelight,
+  webp: _ArcWeldersDelight_webp,
+};
 export const BugHide = { png: _BugHide, webp: _BugHide_webp };
 export const CarvenPride = { png: _CarvenPride, webp: _CarvenPride_webp };
 export const ChasmBorneCliffhanger = {
   png: _ChasmBorneCliffhanger,
   webp: _ChasmBorneCliffhanger_webp,
 };
+export const Chillaxe = { png: _Chillaxe, webp: _Chillaxe_webp };
 export const CompanyStandard = {
   png: _CompanyStandard,
   webp: _CompanyStandard_webp,
 };
+export const CoreHound = { png: _CoreHound, webp: _CoreHound_webp };
 export const DawnOfTheDread = {
   png: _DawnOfTheDread,
   webp: _DawnOfTheDread_webp,

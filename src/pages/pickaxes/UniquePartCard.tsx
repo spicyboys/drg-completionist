@@ -48,6 +48,9 @@ export default function UniquePartCard(props: {
         return Credit;
       case 'Lost Pack':
         return LostPack;
+      case 'Performance Pass':
+        // FIXME: Add own icon for performance pass
+        return Assignment;
     }
   }, [props.uniquePart.source]);
 

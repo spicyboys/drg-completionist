@@ -144,6 +144,9 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
         return Credit;
       case 'Lost Pack':
         return LostPack;
+      case 'Performance Pass':
+        // FIXME: Add own icon for performance pass
+        return Assignment;
     }
   }, [props.pickaxe.source]);
 

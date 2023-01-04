@@ -3,14 +3,22 @@
  * To update it, run `yarn update-assets` in the project root.
  */
 
+import _ArcWeldersDelight from './arcWeldersDelight.jpg';
+import _ArcWeldersDelight_webp from './arcWeldersDelight.jpg.webp';
+import _BlightGuard from './blightGuard.jpg';
+import _BlightGuard_webp from './blightGuard.jpg.webp';
 import _BugHide from './bugHide.jpg';
 import _BugHide_webp from './bugHide.jpg.webp';
 import _CarvenPride from './carvenPride.jpg';
 import _CarvenPride_webp from './carvenPride.jpg.webp';
 import _ChasmBorneCliffhanger from './chasmBorneCliffhanger.jpg';
 import _ChasmBorneCliffhanger_webp from './chasmBorneCliffhanger.jpg.webp';
+import _Chillaxe from './chillaxe.jpg';
+import _Chillaxe_webp from './chillaxe.jpg.webp';
 import _CompanyStandard from './companyStandard.jpg';
 import _CompanyStandard_webp from './companyStandard.jpg.webp';
+import _CoreHound from './coreHound.jpg';
+import _CoreHound_webp from './coreHound.jpg.webp';
 import _DriftCrusher from './driftCrusher.jpg';
 import _DriftCrusher_webp from './driftCrusher.jpg.webp';
 import _GadgeteersFavorite from './gadgeteersFavorite.jpg';
@@ -25,16 +33,23 @@ import _Pneumatic from './pneumatic.jpg';
 import _Pneumatic_webp from './pneumatic.jpg.webp';
 import _ReapersClaw from './reapersClaw.jpg';
 import _ReapersClaw_webp from './reapersClaw.jpg.webp';
+export const ArcWeldersDelight = {
+  jpg: _ArcWeldersDelight,
+  webp: _ArcWeldersDelight_webp,
+};
+export const BlightGuard = { jpg: _BlightGuard, webp: _BlightGuard_webp };
 export const BugHide = { jpg: _BugHide, webp: _BugHide_webp };
 export const CarvenPride = { jpg: _CarvenPride, webp: _CarvenPride_webp };
 export const ChasmBorneCliffhanger = {
   jpg: _ChasmBorneCliffhanger,
   webp: _ChasmBorneCliffhanger_webp,
 };
+export const Chillaxe = { jpg: _Chillaxe, webp: _Chillaxe_webp };
 export const CompanyStandard = {
   jpg: _CompanyStandard,
   webp: _CompanyStandard_webp,
 };
+export const CoreHound = { jpg: _CoreHound, webp: _CoreHound_webp };
 export const DriftCrusher = { jpg: _DriftCrusher, webp: _DriftCrusher_webp };
 export const GadgeteersFavorite = {
   jpg: _GadgeteersFavorite,
