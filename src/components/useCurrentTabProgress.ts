@@ -2,14 +2,13 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import { useEffect, useMemo } from 'react';
 import { TabName } from 'App';
 import { ArmorPaintjobs, CommonArmorPaintjobs } from 'data/armor';
-import { Frameworks } from 'data/frameworks';
+import { FrameworkIDs } from 'data/frameworks';
 import { Overclocks } from 'data/overclocks';
 import {
   PickaxePaintjobNames,
   PickaxeSets,
   PickaxeUniquePartNames,
 } from 'data/pickaxes';
-import { MinerWeapons } from 'data/weapons';
 import useDB from 'db/useDB';
 
 type TabProgress = {
@@ -25,10 +24,8 @@ export default function useCurrentTabProgress(
   const totalItems = useMemo(() => {
     switch (currentTab) {
       case 'frameworks':
-        return (
-          Frameworks.length *
-          Object.values(MinerWeapons).reduce((p, c) => p + c.length, 0)
-        );
+        return Object.values(FrameworkIDs).flatMap((w) => Object.values(w))
+          .length;
       case 'overclocks':
         return Object.values(Overclocks)
           .flatMap((w) => Object.values(w))
