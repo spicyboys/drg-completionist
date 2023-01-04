@@ -28,7 +28,6 @@ export const FrameworkIcon: Record<Framework, ImgSrc> = {
   MilSpec: FrameworkIcons.MilSpec,
 };
 
-
 export const FrameworkIDs: Record<
   MinerWeapon<Miner>,
   Partial<Record<Framework, string>>

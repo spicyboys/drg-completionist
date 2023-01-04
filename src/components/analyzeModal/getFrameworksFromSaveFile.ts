@@ -21,11 +21,11 @@ export const getFrameworksFromSaveFile = ({
     for (const frameworkID of frameworkIDs) {
       for (const [framework, id] of Object.entries(all_weapon_frameworks)) {
         if (id === frameworkID) {
-          frameworks.push(framework as Framework)
+          frameworks.push(framework as Framework);
         }
       }
     }
-    
+
     for (const framework of frameworks) {
       acquiredFrameworks.push({ weapon: weapon, name: framework });
     }

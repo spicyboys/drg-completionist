@@ -15,14 +15,15 @@ export default function MinerFrameworks<T extends Miner>(props: { miner: T }) {
         <React.Fragment key={weapon}>
           <WeaponDivider weapon={weapon} />
           <Row gutter={[16, 16]}>
-            {Frameworks.filter((framework) => FrameworkIDs[weapon][framework] !== undefined)
-              .map((framework) => (
-                <FrameworkCard
-                  key={framework}
-                  miner={miner}
-                  weapon={weapon}
-                  framework={framework}
-                />
+            {Frameworks.filter(
+              (framework) => FrameworkIDs[weapon][framework] !== undefined
+            ).map((framework) => (
+              <FrameworkCard
+                key={framework}
+                miner={miner}
+                weapon={weapon}
+                framework={framework}
+              />
             ))}
           </Row>
         </React.Fragment>
