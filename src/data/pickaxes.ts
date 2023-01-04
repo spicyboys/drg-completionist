@@ -16,6 +16,10 @@ export const PickaxeSets = [
   'Drift Crusher', // Drift
   "Gadgeteer's Favorite", // Gadgeteer
   "Reaper's Claw", // ReapersClaw
+  "Arc Welder's Delight", // S01
+  'Core Hound', // S02
+  'Blight Guard', // S03
+  'Chillaxe', // Xmas2022
 ] as const;
 
 // NOTE: DLC Paintjobs disabled until GUIDs can be found
@@ -46,6 +50,10 @@ export const PickaxeIcons: Record<typeof PickaxeSets[number], ImgSrc> = {
   'Jagged Son': skinIcons.JaggedSon,
   Pneumatic: skinIcons.Pneumatic,
   "Reaper's Claw": skinIcons.ReapersClaw,
+  "Arc Welder's Delight": skinIcons.ArcWeldersDelight,
+  'Core Hound': skinIcons.CoreHound,
+  'Blight Guard': skinIcons.BlightGuard,
+  Chillaxe: skinIcons.Chillaxe,
 };
 
 // NOTE: DLC Paintjobs disabled until GUIDs can be found
@@ -67,6 +75,10 @@ export const PickaxePaintjobIcons: Record<
   // MegaCorp: paintjobIcons.MegaCorp,
   // Roughneck: paintjobIcons.Roughneck,
   // 'The Supporter': paintjobIcons.TheSupporter,
+  "Arc Welder's Delight": paintjobIcons.ArcWeldersDelight,
+  'Core Hound': paintjobIcons.CoreHound,
+  'Blight Guard': paintjobIcons.BlightGuard,
+  Chillaxe: paintjobIcons.Chillaxe,
 };
 
 export const PickaxeUniquePartIcons: Record<
@@ -79,7 +91,7 @@ export const PickaxeUniquePartIcons: Record<
   'Skull Buster': uniquePartIcons.SkullBuster,
 };
 
-type ItemSource = 'Lost Pack' | 'Assignment' | 'DLC';
+type ItemSource = 'Lost Pack' | 'Assignment' | 'DLC' | 'Performance Pass';
 
 export type PickaxeParts =
   | 'Blades'
@@ -250,6 +262,62 @@ export const Pickaxes: Pickaxe[] = [
       Handle: '10DF45BBD71BF24E85883F409979C02C',
       Pommel: '521C31964D6B574DA8EFF58E483E5265',
       Paintjob: 'A06DE30648D152448FA21E94CA0D2280',
+    },
+  },
+  {
+    name: "Arc Welder's Delight",
+    source: 'Lost Pack',
+    icon: PickaxeIcons["Arc Welder's Delight"],
+    paintjobIcon: PickaxePaintjobIcons["Arc Welder's Delight"],
+    partIDs: {
+      Blades: '0105CEFE8571BD49B9EE4B5DA1A7F84D',
+      Head: 'DA7E89D43A213E4AB19C0DA558C630BA',
+      Shaft: 'FAE6460EDEE71649A784AB1DF44C2E72',
+      Handle: 'CB7B940374103346A9419B07714F075A',
+      Pommel: '54F6BB7EDE7FC844B14642B0C5043639',
+      Paintjob: 'F351FF534374ED4DB25E169C2EBF72B7',
+    },
+  },
+  {
+    name: 'Core Hound',
+    source: 'Lost Pack',
+    icon: PickaxeIcons['Core Hound'],
+    paintjobIcon: PickaxePaintjobIcons['Core Hound'],
+    partIDs: {
+      Blades: '5AD15B8156B02B4B91A8928A5C0ECF1E',
+      Head: '2A5D87C84E08634EBDFD9B0852726C7C',
+      Shaft: '9879B0049FEACD43B1080F4E5A14E581',
+      Handle: '238C216EBBAFEC4A8CCB3F1CA7B7BB99',
+      Pommel: '878FF8A9135C5E4C942D466DFE9EDEF1',
+      Paintjob: '78F324F4C7C3A5408A89D95E00887D3A',
+    },
+  },
+  {
+    name: 'Blight Guard',
+    source: 'Performance Pass',
+    icon: PickaxeIcons['Blight Guard'],
+    paintjobIcon: PickaxePaintjobIcons['Blight Guard'],
+    partIDs: {
+      Blades: 'BFCBDF0BF786804EA542B6737BEF7961',
+      Head: 'BA9BB49B1696C64BAD9196DDA5CD08FC',
+      Shaft: 'E4E1393576458E4EAF2D627275E5D391',
+      Handle: '86AC107EAA647A488A24610E04AB3F6D',
+      Pommel: '4F18C80C72999844A218FFE6B4A20987',
+      Paintjob: 'F7867A472AF10349A5A57E9302E6D0B3',
+    },
+  },
+  {
+    name: 'Chillaxe',
+    source: 'Lost Pack',
+    icon: PickaxeIcons['Chillaxe'],
+    paintjobIcon: PickaxePaintjobIcons['Chillaxe'],
+    partIDs: {
+      Blades: 'BB762A32671A6F4B8D088A0ED2E8B26E',
+      Head: '287C19E0F4A3474EAEC54E2B0788F643',
+      Shaft: 'E9D514EA1C2DCC4287A98B15A1471D94',
+      Handle: '4515B8A89F17D249944B678007E844AA',
+      Pommel: '32641478397EBA43826E9A60C1501A4E',
+      Paintjob: 'DD3BEC439337424992D639378894B850',
     },
   },
 ];

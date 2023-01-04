@@ -9,14 +9,34 @@ import _ChocolateReign from './Chocolate_Reign.png';
 import _ChocolateReign_webp from './Chocolate_Reign.png.webp';
 import _Colossus from './Colossus.png';
 import _Colossus_webp from './Colossus.png.webp';
+import _DChippedShadow from './D_Chipped_Shadow.png';
+import _DChippedShadow_webp from './D_Chipped_Shadow.png.webp';
 import _DDarkFuture from './D_Dark_Future.png';
 import _DDarkFuture_webp from './D_Dark_Future.png.webp';
+import _DDarkNeon from './D_Dark_Neon.png';
+import _DDarkNeon_webp from './D_Dark_Neon.png.webp';
 import _DDefaultPaintjob from './D_Default_Paintjob.png';
 import _DDefaultPaintjob_webp from './D_Default_Paintjob.png.webp';
+import _DGrittySandbox from './D_Gritty_Sandbox.png';
+import _DGrittySandbox_webp from './D_Gritty_Sandbox.png.webp';
+import _DMonochromatic from './D_Monochromatic.png';
+import _DMonochromatic_webp from './D_Monochromatic.png.webp';
+import _DMossCrawler from './D_Moss_Crawler.png';
+import _DMossCrawler_webp from './D_Moss_Crawler.png.webp';
+import _DOxidizedCopper from './D_Oxidized_Copper.png';
+import _DOxidizedCopper_webp from './D_Oxidized_Copper.png.webp';
+import _DPlatinum from './D_Platinum.png';
+import _DPlatinum_webp from './D_Platinum.png.webp';
+import _DRustyColossus from './D_Rusty_Colossus.png';
+import _DRustyColossus_webp from './D_Rusty_Colossus.png.webp';
+import _DSpeckledPredator from './D_Speckled_Predator.png';
+import _DSpeckledPredator_webp from './D_Speckled_Predator.png.webp';
 import _DSplattered from './D_Splattered.png';
 import _DSplattered_webp from './D_Splattered.png.webp';
 import _DTheSupporter from './D_The_Supporter.png';
 import _DTheSupporter_webp from './D_The_Supporter.png.webp';
+import _DUmberCorrosion from './D_Umber_Corrosion.png';
+import _DUmberCorrosion_webp from './D_Umber_Corrosion.png.webp';
 import _IntricateCarver from './Intricate_Carver.png';
 import _IntricateCarver_webp from './Intricate_Carver.png.webp';
 import _MudRunner from './Mud_Runner.png';
@@ -29,16 +49,47 @@ export const ChocolateReign = {
   webp: _ChocolateReign_webp,
 };
 export const Colossus = { png: _Colossus, webp: _Colossus_webp };
+export const DChippedShadow = {
+  png: _DChippedShadow,
+  webp: _DChippedShadow_webp,
+};
 export const DDarkFuture = { png: _DDarkFuture, webp: _DDarkFuture_webp };
+export const DDarkNeon = { png: _DDarkNeon, webp: _DDarkNeon_webp };
 export const DDefaultPaintjob = {
   png: _DDefaultPaintjob,
   webp: _DDefaultPaintjob_webp,
 };
+export const DGrittySandbox = {
+  png: _DGrittySandbox,
+  webp: _DGrittySandbox_webp,
+};
+export const DMonochromatic = {
+  png: _DMonochromatic,
+  webp: _DMonochromatic_webp,
+};
+export const DMossCrawler = { png: _DMossCrawler, webp: _DMossCrawler_webp };
+export const DOxidizedCopper = {
+  png: _DOxidizedCopper,
+  webp: _DOxidizedCopper_webp,
+};
+export const DPlatinum = { png: _DPlatinum, webp: _DPlatinum_webp };
+export const DRustyColossus = {
+  png: _DRustyColossus,
+  webp: _DRustyColossus_webp,
+};
+export const DSpeckledPredator = {
+  png: _DSpeckledPredator,
+  webp: _DSpeckledPredator_webp,
+};
 export const DSplattered = { png: _DSplattered, webp: _DSplattered_webp };
 export const DTheSupporter = { png: _DTheSupporter, webp: _DTheSupporter_webp };
+export const DUmberCorrosion = {
+  png: _DUmberCorrosion,
+  webp: _DUmberCorrosion_webp,
+};
 export const IntricateCarver = {
   png: _IntricateCarver,
   webp: _IntricateCarver_webp,
 };
-export const MudRunner = { png: _MudRunner, webp: _MudRunner_webp };
 export const MuddyPath = { png: _MuddyPath, webp: _MuddyPath_webp };
+export const MudRunner = { png: _MudRunner, webp: _MudRunner_webp };
