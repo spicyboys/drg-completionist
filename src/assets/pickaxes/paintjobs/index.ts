@@ -5,6 +5,8 @@
 
 import _ArcWeldersDelight from './arcWeldersDelight.png';
 import _ArcWeldersDelight_webp from './arcWeldersDelight.png.webp';
+import _BlightGuard from './blightGuard.png';
+import _BlightGuard_webp from './blightGuard.png.webp';
 import _BugHide from './bugHide.png';
 import _BugHide_webp from './bugHide.png.webp';
 import _CarvenPride from './carvenPride.png';
@@ -43,6 +45,7 @@ export const ArcWeldersDelight = {
   png: _ArcWeldersDelight,
   webp: _ArcWeldersDelight_webp,
 };
+export const BlightGuard = { png: _BlightGuard, webp: _BlightGuard_webp };
 export const BugHide = { png: _BugHide, webp: _BugHide_webp };
 export const CarvenPride = { png: _CarvenPride, webp: _CarvenPride_webp };
 export const ChasmBorneCliffhanger = {

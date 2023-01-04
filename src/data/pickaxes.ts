@@ -77,8 +77,7 @@ export const PickaxePaintjobIcons: Record<
   // 'The Supporter': paintjobIcons.TheSupporter,
   "Arc Welder's Delight": paintjobIcons.ArcWeldersDelight,
   'Core Hound': paintjobIcons.CoreHound,
-  // FIXME: Blight guard has no paintjob, maybe use 'no paintjob' icon
-  'Blight Guard': paintjobIcons.CompanyStandard,
+  'Blight Guard': paintjobIcons.BlightGuard,
   Chillaxe: paintjobIcons.Chillaxe,
 };
 
