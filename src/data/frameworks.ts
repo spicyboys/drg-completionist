@@ -28,11 +28,10 @@ export const FrameworkIcon: Record<Framework, ImgSrc> = {
   MilSpec: FrameworkIcons.MilSpec,
 };
 
-type PartialRecord<K extends keyof any, T> = Partial<Record<K, T>>
 
 export const FrameworkIDs: Record<
   MinerWeapon<Miner>,
-  PartialRecord<Framework, string>
+  Partial<Record<Framework, string>>
 > = {
   // Driller
   'CRSPR Flamethrower': {

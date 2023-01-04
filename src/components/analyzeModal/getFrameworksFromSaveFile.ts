@@ -14,12 +14,18 @@ export const getFrameworksFromSaveFile = ({
     if (weapon === undefined) {
       return;
     }
-    const frameworks = frameworkIDs
-      .map(
-        (frameworkID) =>
-          flipObject(FrameworkIDs[weapon])[frameworkID] as Framework | undefined
-      )
-      .filter((f) => f !== undefined) as Framework[];
+
+    const all_weapon_frameworks = FrameworkIDs[weapon];
+
+    const frameworks: Framework[] = [];
+    for (const frameworkID of frameworkIDs) {
+      for (const [framework, id] of Object.entries(all_weapon_frameworks)) {
+        if (id === frameworkID) {
+          frameworks.push(framework as Framework)
+        }
+      }
+    }
+    
     for (const framework of frameworks) {
       acquiredFrameworks.push({ weapon: weapon, name: framework });
     }
