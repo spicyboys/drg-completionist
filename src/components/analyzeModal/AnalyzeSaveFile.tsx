@@ -25,6 +25,7 @@ import {
   getCommonVictoryPosesFromSaveFile,
   getMatrixVictoryPosesFromSaveFile,
 } from './getVictoryPosesFromSaveFile';
+import { getWeaponPaintjobsFromSaveFile } from './getWeaponPaintjobsFromSaveFile';
 
 const { Text } = Typography;
 
@@ -61,6 +62,7 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
         const commonArmorPaintjobs = getCommonArmorPaintJobsFromSaveFile(
           saveFile
         );
+        const weaponPaintjobs = getWeaponPaintjobsFromSaveFile(saveFile);
         const matrixVictoryPoses = getMatrixVictoryPosesFromSaveFile(saveFile);
         const commonVictoryPoses = getCommonVictoryPosesFromSaveFile(saveFile);
 
@@ -73,6 +75,7 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
           await db.pickaxeUniques.bulkAdd(pickaxeUniques);
           await db.armorPaintjobs.bulkAdd(armorPaintjobs);
           await db.commonArmorPaintjobs.bulkAdd(commonArmorPaintjobs);
+          await db.weaponPaintjobs.bulkAdd(weaponPaintjobs);
           await db.matrixVictoryPoses.bulkAdd(matrixVictoryPoses);
           await db.commonVictoryPoses.bulkAdd(commonVictoryPoses);
         });
@@ -85,7 +88,9 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
             `Successfully imported ${overclocks.length} Overclocks, ` +
             `${frameworks.length} Frameworks, ` +
             `${armorPaintjobs.length + commonArmorPaintjobs.length} ` +
-            `Armor Paintjobs, and ` +
+            `Armor Paintjobs, ` +
+            `${weaponPaintjobs.length} ` +
+            `Weapon Paintjobs, and ` +
             `${matrixVictoryPoses.length + commonVictoryPoses.length} ` +
             `Victory Poses, and ` +
             `${pickaxes.length + pickaxeUniques.length} ` +
@@ -95,6 +100,7 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
 
         // Let the devs know (anonymously, of course) how many items of each
         // type were found, and how long it took to parse the file
+        // FIXME: Add armor paintjobs logging
         if (startTime) {
           gtag('event', 'timing_complete', {
             name: 'parsing_time',
@@ -123,6 +129,12 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
           event_category: 'Save File Analyzed',
           event_label: 'Pickaxe Uniques Count',
           value: `${pickaxeUniques.length}`,
+          non_interaction: true,
+        });
+        gtag('event', 'success', {
+          event_category: 'Save File Analyzed',
+          event_label: 'Weapon Paintjobs Count',
+          value: `${weaponPaintjobs.length}`,
           non_interaction: true,
         });
         gtag('event', 'success', {

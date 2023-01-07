@@ -11,6 +11,7 @@ import {
   CommonVictoryPoseNames,
   MatrixVictoryPoseNames,
 } from 'data/victoryPoses';
+import { WeaponPaintjob } from 'data/weaponPaintjobs';
 import { MinerWeapon } from 'data/weapons';
 
 export class AppDatabase extends Dexie {
@@ -20,12 +21,13 @@ export class AppDatabase extends Dexie {
   pickaxeUniques: Dexie.Table<PickaxeUniquePartEntry, number>;
   armorPaintjobs: Dexie.Table<ArmorPaintjobEntry, number>;
   commonArmorPaintjobs: Dexie.Table<CommonArmorPaintjobEntry, number>;
+  weaponPaintjobs: Dexie.Table<WeaponPaintjobEntry, number>;
   commonVictoryPoses: Dexie.Table<CommonVictoryPoseEntry, number>;
   matrixVictoryPoses: Dexie.Table<MatrixVictoryPoseEntry, number>;
 
   constructor() {
     super('DRG-Completionist');
-    this.version(7).stores({
+    this.version(5).stores({
       overclocks: '[weapon+name], weapon',
 
       frameworks: '[weapon+name], weapon',
@@ -35,6 +37,8 @@ export class AppDatabase extends Dexie {
 
       armorPaintjobs: '[miner+name], miner',
       commonArmorPaintjobs: 'name',
+
+      weaponPaintjobs: '[weapon+name], weapon',
 
       commonVictoryPoses: '[miner+name], miner',
       matrixVictoryPoses: '[miner+name], miner',
@@ -49,6 +53,8 @@ export class AppDatabase extends Dexie {
 
     this.armorPaintjobs = this.table('armorPaintjobs');
     this.commonArmorPaintjobs = this.table('commonArmorPaintjobs');
+
+    this.weaponPaintjobs = this.table('weaponPaintjobs');
 
     this.commonVictoryPoses = this.table('commonVictoryPoses');
     this.matrixVictoryPoses = this.table('matrixVictoryPoses');
@@ -82,6 +88,11 @@ export type ArmorPaintjobEntry = {
 
 export type CommonArmorPaintjobEntry = {
   name: typeof CommonArmorPaintjobNames[number];
+};
+
+export type WeaponPaintjobEntry = {
+  weapon: MinerWeapon<Miner>;
+  name: WeaponPaintjob;
 };
 
 export type CommonVictoryPoseEntry = {

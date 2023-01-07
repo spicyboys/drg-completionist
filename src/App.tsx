@@ -11,6 +11,7 @@ export type TabName =
   | 'overclocks'
   | 'frameworks'
   | 'armor'
+  | 'weaponPaintjobs'
   | 'pickaxes'
   | 'victoryPoses';
 
@@ -35,6 +36,11 @@ export const TABS: Array<{
     title: 'Armor',
     key: 'armor',
     content: lazy(() => import('pages/armor/ArmorPage')),
+  },
+  {
+    title: 'Weapons',
+    key: 'weaponPaintjobs',
+    content: lazy(() => import('pages/weaponPaintjobs/WeaponPaintjobsPage')),
   },
   // https://github.com/BobertForever/drg-completionist/issues/2
   // {
