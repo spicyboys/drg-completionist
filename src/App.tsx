@@ -7,7 +7,12 @@ import PageHeader from 'components/PageHeader';
 
 const { Content } = Layout;
 
-export type TabName = 'overclocks' | 'frameworks' | 'armor' | 'pickaxes';
+export type TabName =
+  | 'overclocks'
+  | 'frameworks'
+  | 'armor'
+  | 'weaponPaintjobs'
+  | 'pickaxes';
 
 export const DEFAULT_TAB: TabName = 'overclocks';
 
@@ -30,6 +35,11 @@ export const TABS: Array<{
     title: 'Armor',
     key: 'armor',
     content: lazy(() => import('pages/armor/ArmorPage')),
+  },
+  {
+    title: 'Weapon Paintjobs',
+    key: 'weaponPaintjobs',
+    content: lazy(() => import('pages/weaponPaintjobs/WeaponPaintjobsPage')),
   },
   // https://github.com/BobertForever/drg-completionist/issues/2
   // {
