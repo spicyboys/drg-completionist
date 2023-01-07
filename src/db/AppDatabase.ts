@@ -7,6 +7,10 @@ import {
   PickaxeParts,
   PickaxeUniquePartNames,
 } from 'data/pickaxes';
+import {
+  CommonVictoryPoseNames,
+  MatrixVictoryPoseNames,
+} from 'data/victoryPoses';
 import { MinerWeapon } from 'data/weapons';
 
 export class AppDatabase extends Dexie {
@@ -16,10 +20,12 @@ export class AppDatabase extends Dexie {
   pickaxeUniques: Dexie.Table<PickaxeUniquePartEntry, number>;
   armorPaintjobs: Dexie.Table<ArmorPaintjobEntry, number>;
   commonArmorPaintjobs: Dexie.Table<CommonArmorPaintjobEntry, number>;
+  commonVictoryPoses: Dexie.Table<CommonVictoryPoseEntry, number>;
+  matrixVictoryPoses: Dexie.Table<MatrixVictoryPoseEntry, number>;
 
   constructor() {
     super('DRG-Completionist');
-    this.version(3).stores({
+    this.version(7).stores({
       overclocks: '[weapon+name], weapon',
 
       frameworks: '[weapon+name], weapon',
@@ -29,6 +35,9 @@ export class AppDatabase extends Dexie {
 
       armorPaintjobs: '[miner+name], miner',
       commonArmorPaintjobs: 'name',
+
+      commonVictoryPoses: '[miner+name], miner',
+      matrixVictoryPoses: '[miner+name], miner',
     });
 
     this.overclocks = this.table('overclocks');
@@ -40,6 +49,9 @@ export class AppDatabase extends Dexie {
 
     this.armorPaintjobs = this.table('armorPaintjobs');
     this.commonArmorPaintjobs = this.table('commonArmorPaintjobs');
+
+    this.commonVictoryPoses = this.table('commonVictoryPoses');
+    this.matrixVictoryPoses = this.table('matrixVictoryPoses');
   }
 
   /** Async call to clear all current IndexedDB tables completely. */
@@ -70,4 +82,15 @@ export type ArmorPaintjobEntry = {
 
 export type CommonArmorPaintjobEntry = {
   name: typeof CommonArmorPaintjobNames[number];
+};
+
+export type CommonVictoryPoseEntry = {
+  miner: Miner;
+  name: typeof CommonVictoryPoseNames[number];
+};
+
+export type MatrixVictoryPoseEntry = {
+  miner: Miner;
+  name: typeof MatrixVictoryPoseNames[number];
+  isForged: boolean;
 };
