@@ -4,9 +4,9 @@ import { WeaponPaintjobs } from 'data/weaponPaintjobs';
 import { MinerWeapons } from 'data/weapons';
 import { AppDatabase } from 'db/AppDatabase';
 import MinerPageLayout from 'pages/MinerPageLayout';
-import MinerFrameworks from './MinerWeaponPaintjobs';
+import MinerWeaponPaintjobs from './MinerWeaponPaintjobs';
 
-export default function FrameworksPage() {
+export default function WeaponPaintjobPage() {
   const getProgress = useCallback(async (db: AppDatabase, miner: Miner) => {
     const weapons = MinerWeapons[miner as Miner];
     const acquiredPaintjobs = await db.weaponPaintjobs
@@ -17,7 +17,7 @@ export default function FrameworksPage() {
   }, []);
   return (
     <MinerPageLayout category="WeaponPaintjobs" getProgress={getProgress}>
-      {(miner) => <MinerFrameworks miner={miner as Miner} />}
+      {(miner) => <MinerWeaponPaintjobs miner={miner as Miner} />}
     </MinerPageLayout>
   );
 }
