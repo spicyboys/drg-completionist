@@ -7,7 +7,12 @@ import PageHeader from 'components/PageHeader';
 
 const { Content } = Layout;
 
-export type TabName = 'overclocks' | 'frameworks' | 'armor' | 'pickaxes';
+export type TabName =
+  | 'overclocks'
+  | 'frameworks'
+  | 'armor'
+  | 'pickaxes'
+  | 'victoryPoses';
 
 export const DEFAULT_TAB: TabName = 'overclocks';
 
@@ -42,6 +47,11 @@ export const TABS: Array<{
     title: 'Pickaxes',
     key: 'pickaxes',
     content: lazy(() => import('pages/pickaxes/PickaxesPage')),
+  },
+  {
+    title: 'Victory Poses',
+    key: 'victoryPoses',
+    content: lazy(() => import('pages/victoryPoses/VictoryPosesPage')),
   },
 ];
 

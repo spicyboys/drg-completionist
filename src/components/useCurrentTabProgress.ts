@@ -3,12 +3,14 @@ import { useEffect, useMemo } from 'react';
 import { TabName } from 'App';
 import { ArmorPaintjobs, CommonArmorPaintjobs } from 'data/armor';
 import { FrameworkIDs } from 'data/frameworks';
+import { Miner } from 'data/miner';
 import { Overclocks } from 'data/overclocks';
 import {
   PickaxePaintjobNames,
   PickaxeSets,
   PickaxeUniquePartNames,
 } from 'data/pickaxes';
+import { CommonVictoryPoses, MatrixVictoryPoses } from 'data/victoryPoses';
 import useDB from 'db/useDB';
 
 type TabProgress = {
@@ -41,6 +43,13 @@ export default function useCurrentTabProgress(
           PickaxeSets.length * 5 +
           PickaxePaintjobNames.length +
           PickaxeUniquePartNames.length
+        );
+      case 'victoryPoses':
+        return (
+          Object.values(MatrixVictoryPoses).flatMap((p) => Object.values(p))
+            .length *
+            Object.entries(Miner).length +
+          CommonVictoryPoses.length * Object.entries(Miner).length
         );
     }
   }, [currentTab]);
@@ -87,6 +96,25 @@ export default function useCurrentTabProgress(
               ((acquiredPickaxeParts + acquiredPickaxeUniques) / totalItems) *
               100,
             partialProgress: null,
+          };
+        }
+        case 'victoryPoses': {
+          const acquiredCommonVictoryPoses = await db.commonVictoryPoses.toArray();
+          const acquiredMatrixVictoryPoses = await db.matrixVictoryPoses.toArray();
+          const progress =
+            ((acquiredCommonVictoryPoses.length +
+              acquiredMatrixVictoryPoses.filter((pose) => pose.isForged)
+                .length) /
+              totalItems) *
+            100;
+          const partialProgress =
+            (acquiredMatrixVictoryPoses.filter((pose) => !pose.isForged)
+              .length /
+              totalItems) *
+            100;
+          return {
+            progress: progress,
+            partialProgress: partialProgress,
           };
         }
       }
