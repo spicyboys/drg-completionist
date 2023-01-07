@@ -1,10 +1,10 @@
 import { Badge, Card, Col } from 'antd';
 import { useCallback } from 'react';
 import { Miner, MinerColor } from 'data/miner';
+import { WeaponPaintjob } from 'data/weaponPaintjobs';
 import { MinerWeapon } from 'data/weapons';
-import { WeaponPaintjob } from '../../data/weaponPaintjobs';
-import useDB from '../../db/useDB';
-import useSuspendedLiveQuery from '../../db/useSuspendedLiveQuery';
+import useDB from 'db/useDB';
+import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
 import WeaponPaintjobIcon from './WeaponPaintjobIcon';
 import './WeaponPaintjobCard.css';
 

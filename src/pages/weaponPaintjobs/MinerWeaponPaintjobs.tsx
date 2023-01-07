@@ -1,13 +1,13 @@
 import { Row } from 'antd';
 import React from 'react';
-import { Miner } from 'data/miner';
-import { MinerWeapon, MinerWeapons } from 'data/weapons';
-import WeaponPaintjobCard from 'pages/weaponPaintjobs/WeaponPaintjobCard';
 import WeaponDivider from 'components/WeaponDivider';
+import { Miner } from 'data/miner';
 import {
   CommonWeaponPaintjobIDs,
   WeaponPaintjob,
 } from 'data/weaponPaintjobs';
+import { MinerWeapon, MinerWeapons } from 'data/weapons';
+import WeaponPaintjobCard from 'pages/weaponPaintjobs/WeaponPaintjobCard';
 
 export default function MinerWeaponPaintjobs<T extends Miner>(props: {
   miner: T;
