@@ -1,11 +1,7 @@
 import { Row } from 'antd';
 import { useCallback } from 'react';
 import { Miner } from 'data/miner';
-import {
-  CommonVictoryPoses,
-  MatrixVictoryPoses,
-  VictoryPose,
-} from 'data/victoryPoses';
+import { CommonVictoryPoses, MatrixVictoryPoses } from 'data/victoryPoses';
 import { AppDatabase } from 'db/AppDatabase';
 import MinerPageLayout from 'pages/MinerPageLayout';
 import CommonVictoryPoseCard from './CommonVictoryPosesCard';
