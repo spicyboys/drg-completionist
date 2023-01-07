@@ -21,7 +21,6 @@ export default function CommonArmorPaintjobCard({
   );
 
   const onClick = useCallback(() => {
-    console.log(query);
     if (query) {
       db.commonArmorPaintjobs
         .where({

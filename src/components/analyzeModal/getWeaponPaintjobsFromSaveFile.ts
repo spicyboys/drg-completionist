@@ -17,14 +17,15 @@ export const getWeaponPaintjobsFromSaveFile = ({
     }
 
     const paintjobs = Object.entries(CommonWeaponPaintjobIDs)
+      // eslint-disable-next-line
       .filter(([paintjob, id]) => painjobIDs.includes(id))
       .map(
+        // eslint-disable-next-line
         ([paintjob, id]) => paintjob as WeaponPaintjob
       ) as WeaponPaintjob[];
 
 
     for (const paintjob of paintjobs) {
-      console.log("found paintjob " + paintjob + " for weapon " + weapon);
       acquiredPaintjobs.push({ weapon: weapon, name: paintjob });
     }
   });

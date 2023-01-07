@@ -1,7 +1,4 @@
 import * as PaintjobIconSrcs from 'assets/weaponPaintjobs';
-import { BulldogRevolver } from 'assets/weapons/images/gunner';
-import { Miner } from './miner';
-import { MinerWeapon, MinerWeapons } from './weapons';
 
 export const WeaponPaintjobs = [
   // Exclude DLC paintjobs for now until we have a switch to enable DLC content.
