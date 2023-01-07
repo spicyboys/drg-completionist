@@ -41,6 +41,8 @@ import _MegaCorp from './MegaCorp.png';
 import _MegaCorp_webp from './MegaCorp.png.webp';
 import _MetallicVintage from './Metallic_Vintage.png';
 import _MetallicVintage_webp from './Metallic_Vintage.png.webp';
+import _Military from './Military.png';
+import _Military_webp from './Military.png.webp';
 import _MintAssault from './Mint_Assault.png';
 import _MintAssault_webp from './Mint_Assault.png.webp';
 import _MossCrawler from './Moss_Crawler.png';
@@ -105,6 +107,7 @@ export const MetallicVintage = {
   png: _MetallicVintage,
   webp: _MetallicVintage_webp,
 };
+export const Military = { png: _Military, webp: _Military_webp };
 export const MintAssault = { png: _MintAssault, webp: _MintAssault_webp };
 export const MossCrawler = { png: _MossCrawler, webp: _MossCrawler_webp };
 export const Predator = { png: _Predator, webp: _Predator_webp };

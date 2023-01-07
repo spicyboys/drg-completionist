@@ -101,6 +101,6 @@ export const WeaponPaintjobIcons: Record<WeaponPaintjob, ImgSrc> = {
   'Acid Wash': PaintjobIconSrcs.AcidWash,
   'Golden Mauve': PaintjobIconSrcs.GoldenMauve,
   // FIXME: get military image src and run script again.
-  Military: PaintjobIconSrcs.PrimalBlood,
+  Military: PaintjobIconSrcs.Military,
   Sleek: PaintjobIconSrcs.Sleek,
 };
