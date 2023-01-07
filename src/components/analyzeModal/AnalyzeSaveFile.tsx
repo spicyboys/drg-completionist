@@ -21,6 +21,10 @@ import { getFrameworksFromSaveFile } from './getFrameworksFromSaveFile';
 import { getOverclocksFromSaveFile } from './getOverclocksFromSaveFile';
 import { getPickaxeUniquesFromSaveFile } from './getPickaxeUniquesFromSaveFile';
 import { getPickaxesFromSaveFile } from './getPickaxesFromSaveFile';
+import {
+  getCommonVictoryPosesFromSaveFile,
+  getMatrixVictoryPosesFromSaveFile,
+} from './getVictoryPosesFromSaveFile';
 
 const { Text } = Typography;
 
@@ -57,6 +61,8 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
         const commonArmorPaintjobs = getCommonArmorPaintJobsFromSaveFile(
           saveFile
         );
+        const matrixVictoryPoses = getMatrixVictoryPosesFromSaveFile(saveFile);
+        const commonVictoryPoses = getCommonVictoryPosesFromSaveFile(saveFile);
 
         // Update the store with the new save file data
         await db.transaction('rw', db.tables, async () => {
@@ -67,6 +73,8 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
           await db.pickaxeUniques.bulkAdd(pickaxeUniques);
           await db.armorPaintjobs.bulkAdd(armorPaintjobs);
           await db.commonArmorPaintjobs.bulkAdd(commonArmorPaintjobs);
+          await db.matrixVictoryPoses.bulkAdd(matrixVictoryPoses);
+          await db.commonVictoryPoses.bulkAdd(commonVictoryPoses);
         });
 
         // Show the user a success notification with how many items were
@@ -78,6 +86,8 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
             `${frameworks.length} Frameworks, ` +
             `${armorPaintjobs.length + commonArmorPaintjobs.length} ` +
             `Armor Paintjobs, and ` +
+            `${matrixVictoryPoses.length + commonVictoryPoses.length} ` +
+            `Victory Poses, and ` +
             `${pickaxes.length + pickaxeUniques.length} ` +
             `Pickaxe Parts.`,
           duration: 10,
@@ -113,6 +123,18 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
           event_category: 'Save File Analyzed',
           event_label: 'Pickaxe Uniques Count',
           value: `${pickaxeUniques.length}`,
+          non_interaction: true,
+        });
+        gtag('event', 'success', {
+          event_category: 'Save File Analyzed',
+          event_label: 'Matrix Victory Poses Count',
+          value: `${matrixVictoryPoses.length}`,
+          non_interaction: true,
+        });
+        gtag('event', 'success', {
+          event_category: 'Save File Analyzed',
+          event_label: 'Common Victory Poses Count',
+          value: `${commonVictoryPoses.length}`,
           non_interaction: true,
         });
 

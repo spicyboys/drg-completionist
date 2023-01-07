@@ -34,3 +34,10 @@ export const MinerColorContrastText: Record<Miner, string> = {
   [Miner.Gunner]: '#FFFFFFE6',
   [Miner.Scout]: '#FFFFFFF2',
 };
+
+export const MinerIDs: Record<Miner, string> = {
+  [Miner.Driller]: '9EDD56F1EEBCC5488D5B5E5B80B62DB4',
+  [Miner.Engineer]: '85EF626C65F1024A8DFEB5D0F3909D2E',
+  [Miner.Gunner]: 'AE56E180FEC0C44D96FA29C28366B97B',
+  [Miner.Scout]: '30D8EA17D8FBBA4C95306DE9655C2F8C',
+};
