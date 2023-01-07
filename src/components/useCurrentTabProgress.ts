@@ -9,6 +9,8 @@ import {
   PickaxeSets,
   PickaxeUniquePartNames,
 } from 'data/pickaxes';
+import { WeaponPaintjobs } from 'data/weaponPaintjobs';
+import { MinerWeapons } from 'data/weapons';
 import useDB from 'db/useDB';
 
 type TabProgress = {
@@ -36,6 +38,11 @@ export default function useCurrentTabProgress(
             .flatMap((w) => Object.values(w))
             .flat().length + CommonArmorPaintjobs.length
         );
+      case 'weaponPaintjobs':
+        return (
+          WeaponPaintjobs.length *
+          Object.values(MinerWeapons).flatMap((w) => Object.values(w)).length
+        );
       case 'pickaxes':
         return (
           PickaxeSets.length * 5 +
@@ -43,7 +50,7 @@ export default function useCurrentTabProgress(
           PickaxeUniquePartNames.length
         );
     }
-  }, [currentTab]);
+  }, [currentTab]) as number;
 
   const p = useLiveQuery(
     async () => {
@@ -79,6 +86,13 @@ export default function useCurrentTabProgress(
             partialProgress: null,
           };
         }
+        case 'weaponPaintjobs': {
+          const acquiredWeaponSkins: number = await db.weaponPaintjobs.count();
+          return {
+            progress: (acquiredWeaponSkins / totalItems) * 100,
+            partialProgress: null,
+          };
+        }
         case 'pickaxes': {
           const acquiredPickaxeParts = await db.pickaxes.count();
           const acquiredPickaxeUniques = await db.pickaxeUniques.count();
@@ -96,7 +110,7 @@ export default function useCurrentTabProgress(
       progress: 0,
       partialProgress: null,
     }
-  );
+  ) as { progress: number; partialProgress: number };
 
   useEffect(() => {
     gtag('event', `progress`, {

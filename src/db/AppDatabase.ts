@@ -7,6 +7,7 @@ import {
   PickaxeParts,
   PickaxeUniquePartNames,
 } from 'data/pickaxes';
+import { WeaponPaintjob } from 'data/weaponPaintjobs';
 import { MinerWeapon } from 'data/weapons';
 
 export class AppDatabase extends Dexie {
@@ -16,10 +17,11 @@ export class AppDatabase extends Dexie {
   pickaxeUniques: Dexie.Table<PickaxeUniquePartEntry, number>;
   armorPaintjobs: Dexie.Table<ArmorPaintjobEntry, number>;
   commonArmorPaintjobs: Dexie.Table<CommonArmorPaintjobEntry, number>;
+  weaponPaintjobs: Dexie.Table<WeaponPaintjobEntry, number>;
 
   constructor() {
     super('DRG-Completionist');
-    this.version(3).stores({
+    this.version(4).stores({
       overclocks: '[weapon+name], weapon',
 
       frameworks: '[weapon+name], weapon',
@@ -29,6 +31,8 @@ export class AppDatabase extends Dexie {
 
       armorPaintjobs: '[miner+name], miner',
       commonArmorPaintjobs: 'name',
+
+      weaponPaintjobs: '[weapon+name], weapon',
     });
 
     this.overclocks = this.table('overclocks');
@@ -40,6 +44,8 @@ export class AppDatabase extends Dexie {
 
     this.armorPaintjobs = this.table('armorPaintjobs');
     this.commonArmorPaintjobs = this.table('commonArmorPaintjobs');
+
+    this.weaponPaintjobs = this.table('weaponPaintjobs');
   }
 
   /** Async call to clear all current IndexedDB tables completely. */
@@ -70,4 +76,9 @@ export type ArmorPaintjobEntry = {
 
 export type CommonArmorPaintjobEntry = {
   name: typeof CommonArmorPaintjobNames[number];
+};
+
+export type WeaponPaintjobEntry = {
+  weapon: MinerWeapon<Miner>;
+  name: WeaponPaintjob;
 };
