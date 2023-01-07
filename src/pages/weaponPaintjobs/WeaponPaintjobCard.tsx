@@ -6,7 +6,7 @@ import { WeaponPaintjob } from '../../data/weaponPaintjobs';
 import useDB from '../../db/useDB';
 import useSuspendedLiveQuery from '../../db/useSuspendedLiveQuery';
 import WeaponPaintjobIcon from './WeaponPaintjobIcon';
-import './WeaponPaintjobCard.css'
+import './WeaponPaintjobCard.css';
 
 export default function WeaponPaintjobCard(props: {
   miner: Miner;

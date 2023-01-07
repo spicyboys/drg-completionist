@@ -1,5 +1,8 @@
 import Image from 'components/Image';
-import { WeaponPaintjob, WeaponPaintjobIcons } from '../../data/weaponPaintjobs';
+import {
+  WeaponPaintjob,
+  WeaponPaintjobIcons,
+} from '../../data/weaponPaintjobs';
 
 export default function WeaponPaintjobIcon(props: {
   weaponPaintjob: WeaponPaintjob;

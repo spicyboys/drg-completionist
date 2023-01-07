@@ -24,7 +24,6 @@ export const getWeaponPaintjobsFromSaveFile = ({
         ([paintjob, id]) => paintjob as WeaponPaintjob
       ) as WeaponPaintjob[];
 
-
     for (const paintjob of paintjobs) {
       acquiredPaintjobs.push({ weapon: weapon, name: paintjob });
     }
