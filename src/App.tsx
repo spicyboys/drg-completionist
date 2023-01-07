@@ -37,7 +37,7 @@ export const TABS: Array<{
     content: lazy(() => import('pages/armor/ArmorPage')),
   },
   {
-    title: 'Weapon Paintjobs',
+    title: 'Weapons',
     key: 'weaponPaintjobs',
     content: lazy(() => import('pages/weaponPaintjobs/WeaponPaintjobsPage')),
   },
