@@ -43,11 +43,38 @@ export const getUniqueWeaponPaintjobsFromSaveFile = ({
 };
 
 export const getMatrixWeaponPaintjobsFromSaveFile = ({
+  SchematicSave: {
+    SchematicSave: {
+      OwnedSchematics: unforgedSchematics,
+    },
+  },
   UnlockedItemSkins: unlockedItemSkins,
 }: SaveFile): MatrixWeaponPaintjobEntry[] => {
   const acquiredPaintjobs: MatrixWeaponPaintjobEntry[] = [];
-  const weaponIDs = flipObject(WeaponIDs);
 
+  // Check for unforged matrix core
+  Object.values(MatrixWeaponPaintjobs).forEach((paintjob) => {
+    for (const miner of Object.values(Miner)) {
+      if (
+        unforgedSchematics &&
+        unforgedSchematics.some((f) => paintjob.matrixCoreIds[miner] === f)
+      ) {
+        acquiredPaintjobs.push({
+          miner: miner,
+          name: paintjob.name,
+          isForged: false,
+        });
+      }
+    }
+  });
+
+  // We can't just check ForgedSchematics from the save file, since you could
+  // get past season weapon paintjobs through the performance pass and not
+  // from matrix cores like you would when you get them after the season ends.
+  // This way they dont show up in ForgedSchematics and we can just check if a
+  // player has the weapon paintjob available to them. This will cover both cases
+  // of getting them through the performance pass and cosmetic matrix cores.
+  const weaponIDs = flipObject(WeaponIDs);
   Object.entries(unlockedItemSkins).forEach(([weaponID, painjobIDs]) => {
     const weapon = weaponIDs[weaponID];
     if (weapon === undefined) {
@@ -107,7 +134,11 @@ export const getCommonWeaponPaintjobsFromSaveFile = ({
     for (const paintjob of matrixPaintjobs) {
       // We need to check for duplicates since they can occur if a common weapon paintjob is already
       // added for another weapon of this miner.
-      if (!acquiredPaintjobs.some((p) => p.miner === miner && p.name === paintjob.name)) {
+      if (
+        !acquiredPaintjobs.some(
+          (p) => p.miner === miner && p.name === paintjob.name
+        )
+      ) {
         acquiredPaintjobs.push({ miner: miner, name: paintjob.name });
       }
     }
