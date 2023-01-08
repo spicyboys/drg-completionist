@@ -1,11 +1,12 @@
 import Image from 'components/Image';
 import {
-  WeaponPaintjob,
-  WeaponPaintjobIcons,
+  CommonWeaponPaintjob,
+  MatrixWeaponPaintjob,
+  UniqueWeaponPaintjob,
 } from 'data/weaponPaintjobs';
 
 export default function WeaponPaintjobIcon(props: {
-  weaponPaintjob: WeaponPaintjob;
+  weaponPaintjob: CommonWeaponPaintjob | MatrixWeaponPaintjob | UniqueWeaponPaintjob;
 }) {
   return (
     <div
@@ -25,8 +26,8 @@ export default function WeaponPaintjobIcon(props: {
         }}
       >
         <Image
-          alt={props.weaponPaintjob}
-          src={WeaponPaintjobIcons[props.weaponPaintjob]}
+          alt={props.weaponPaintjob.name}
+          src={props.weaponPaintjob.icon}
           style={{ height: 100, width: 100 }}
         />
       </div>
