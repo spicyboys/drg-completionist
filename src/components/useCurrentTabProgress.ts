@@ -11,7 +11,7 @@ import {
   PickaxeUniquePartNames,
 } from 'data/pickaxes';
 import { CommonVictoryPoses, MatrixVictoryPoses } from 'data/victoryPoses';
-import { WeaponPaintjobs } from 'data/weaponPaintjobs';
+import { CommonWeaponPaintjobs, MatrixWeaponPaintjobs, UniqueWeaponPaintjobs } from 'data/weaponPaintjobs';
 import { MinerWeapons } from 'data/weapons';
 import useDB from 'db/useDB';
 
@@ -42,8 +42,10 @@ export default function useCurrentTabProgress(
         );
       case 'weaponPaintjobs':
         return (
-          WeaponPaintjobs.length *
-          Object.values(MinerWeapons).flatMap((w) => Object.values(w)).length
+          UniqueWeaponPaintjobs.length *
+          Object.values(MinerWeapons).flatMap((w) => Object.values(w)).length +
+          MatrixWeaponPaintjobs.length * Object.values(Miner).length +
+          CommonWeaponPaintjobs.length * Object.values(Miner).length
         );
       case 'pickaxes':
         return (
@@ -96,10 +98,14 @@ export default function useCurrentTabProgress(
           };
         }
         case 'weaponPaintjobs': {
-          const acquiredWeaponSkins: number = await db.weaponPaintjobs.count();
+          const acquiredMatrixPaintjobs = await db.matrixWeaponPaintjobs.toArray();
+          const acquiredUniquePaintjobs = await db.uniqueWeaponPaintjobs.toArray();
+          const acquiredCommonPaintjobs = await db.commonWeaponPaintjobs.toArray();
+          const progress = ((acquiredCommonPaintjobs.length + acquiredUniquePaintjobs.length + acquiredMatrixPaintjobs.filter((p) => p.isForged).length) / totalItems) * 100;
+          const partialProgress = acquiredMatrixPaintjobs.filter((p) => !p.isForged).length / totalItems * 100;
           return {
-            progress: (acquiredWeaponSkins / totalItems) * 100,
-            partialProgress: null,
+            progress: progress,
+            partialProgress: partialProgress,
           };
         }
         case 'pickaxes': {
