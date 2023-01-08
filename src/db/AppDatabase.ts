@@ -7,7 +7,7 @@ import {
   PickaxeParts,
   PickaxeUniquePartNames,
 } from 'data/pickaxes';
-import { WeaponPaintjob } from 'data/weaponPaintjobs';
+import { CommonWeaponPaintjobNames, MatrixWeaponPaintjobNames, UniqueWeaponPaintjobNames } from 'data/weaponPaintjobs';
 import { MinerWeapon } from 'data/weapons';
 
 export class AppDatabase extends Dexie {
@@ -17,11 +17,13 @@ export class AppDatabase extends Dexie {
   pickaxeUniques: Dexie.Table<PickaxeUniquePartEntry, number>;
   armorPaintjobs: Dexie.Table<ArmorPaintjobEntry, number>;
   commonArmorPaintjobs: Dexie.Table<CommonArmorPaintjobEntry, number>;
-  weaponPaintjobs: Dexie.Table<WeaponPaintjobEntry, number>;
+  matrixWeaponPaintjobs: Dexie.Table<MatrixWeaponPaintjobEntry, number>;
+  uniqueWeaponPaintjobs: Dexie.Table<UniqueWeaponPaintjobEntry, number>;
+  commonWeaponPaintjobs: Dexie.Table<CommonWeaponPaintjobEntry, number>;
 
   constructor() {
     super('DRG-Completionist');
-    this.version(4).stores({
+    this.version(5).stores({
       overclocks: '[weapon+name], weapon',
 
       frameworks: '[weapon+name], weapon',
@@ -32,7 +34,9 @@ export class AppDatabase extends Dexie {
       armorPaintjobs: '[miner+name], miner',
       commonArmorPaintjobs: 'name',
 
-      weaponPaintjobs: '[weapon+name], weapon',
+      uniqueWeaponPaintjobs: '[weapon+name], weapon',
+      matrixWeaponPaintjobs: '[miner+name], miner',
+      commonWeaponPaintjobs: '[miner+name], miner'
     });
 
     this.overclocks = this.table('overclocks');
@@ -45,7 +49,9 @@ export class AppDatabase extends Dexie {
     this.armorPaintjobs = this.table('armorPaintjobs');
     this.commonArmorPaintjobs = this.table('commonArmorPaintjobs');
 
-    this.weaponPaintjobs = this.table('weaponPaintjobs');
+    this.matrixWeaponPaintjobs = this.table('matrixWeaponPaintjobs');
+    this.uniqueWeaponPaintjobs = this.table('uniqueWeaponPaintjobs');
+    this.commonWeaponPaintjobs = this.table('commonWeaponPaintjobs');
   }
 
   /** Async call to clear all current IndexedDB tables completely. */
@@ -78,7 +84,18 @@ export type CommonArmorPaintjobEntry = {
   name: typeof CommonArmorPaintjobNames[number];
 };
 
-export type WeaponPaintjobEntry = {
+export type MatrixWeaponPaintjobEntry = {
+  miner: Miner;
+  name: typeof MatrixWeaponPaintjobNames[number];
+  isForged: boolean;
+};
+
+export type UniqueWeaponPaintjobEntry = {
   weapon: MinerWeapon<Miner>;
-  name: WeaponPaintjob;
+  name: typeof UniqueWeaponPaintjobNames[number];
+};
+
+export type CommonWeaponPaintjobEntry = {
+  miner: Miner;
+  name: typeof CommonWeaponPaintjobNames[number];
 };
