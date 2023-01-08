@@ -21,7 +21,7 @@ import { getFrameworksFromSaveFile } from './getFrameworksFromSaveFile';
 import { getOverclocksFromSaveFile } from './getOverclocksFromSaveFile';
 import { getPickaxeUniquesFromSaveFile } from './getPickaxeUniquesFromSaveFile';
 import { getPickaxesFromSaveFile } from './getPickaxesFromSaveFile';
-import { getWeaponPaintjobsFromSaveFile } from './getWeaponPaintjobsFromSaveFile';
+import { getCommonWeaponPaintjobsFromSaveFile, getMatrixWeaponPaintjobsFromSaveFile, getUniqueWeaponPaintjobsFromSaveFile } from './getWeaponPaintjobsFromSaveFile';
 
 const { Text } = Typography;
 
@@ -58,7 +58,9 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
         const commonArmorPaintjobs = getCommonArmorPaintJobsFromSaveFile(
           saveFile
         );
-        const weaponPaintjobs = getWeaponPaintjobsFromSaveFile(saveFile);
+        const matrixWeaponPaintjobs = getMatrixWeaponPaintjobsFromSaveFile(saveFile);
+        const uniqueWeaponPaintjobs = getUniqueWeaponPaintjobsFromSaveFile(saveFile);
+        const commonWeaponPaintjobs = getCommonWeaponPaintjobsFromSaveFile(saveFile);
 
         // Update the store with the new save file data
         await db.transaction('rw', db.tables, async () => {
@@ -69,7 +71,9 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
           await db.pickaxeUniques.bulkAdd(pickaxeUniques);
           await db.armorPaintjobs.bulkAdd(armorPaintjobs);
           await db.commonArmorPaintjobs.bulkAdd(commonArmorPaintjobs);
-          await db.weaponPaintjobs.bulkAdd(weaponPaintjobs);
+          await db.matrixWeaponPaintjobs.bulkAdd(matrixWeaponPaintjobs);
+          await db.uniqueWeaponPaintjobs.bulkAdd(uniqueWeaponPaintjobs);
+          await db.commonWeaponPaintjobs.bulkAdd(commonWeaponPaintjobs);
         });
 
         // Show the user a success notification with how many items were
@@ -81,7 +85,7 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
             `${frameworks.length} Frameworks, ` +
             `${armorPaintjobs.length + commonArmorPaintjobs.length} ` +
             `Armor Paintjobs, ` +
-            `${weaponPaintjobs.length} ` +
+            `${matrixWeaponPaintjobs.length + uniqueWeaponPaintjobs.length + commonWeaponPaintjobs.length} ` +
             `Weapon Paintjobs, and ` +
             `${pickaxes.length + pickaxeUniques.length} ` +
             `Pickaxe Parts.`,
@@ -123,8 +127,20 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
         });
         gtag('event', 'success', {
           event_category: 'Save File Analyzed',
-          event_label: 'Weapon Paintjobs Count',
-          value: `${weaponPaintjobs.length}`,
+          event_label: 'Matrix Weapon Paintjobs Count',
+          value: `${matrixWeaponPaintjobs.length}`,
+          non_interaction: true,
+        });
+        gtag('event', 'success', {
+          event_category: 'Save File Analyzed',
+          event_label: 'Unique Weapon Paintjobs Count',
+          value: `${uniqueWeaponPaintjobs.length}`,
+          non_interaction: true,
+        });
+        gtag('event', 'success', {
+          event_category: 'Save File Analyzed',
+          event_label: 'Common Weapon Paintjobs Count',
+          value: `${commonWeaponPaintjobs.length}`,
           non_interaction: true,
         });
 
