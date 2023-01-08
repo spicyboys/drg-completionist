@@ -13,6 +13,8 @@ import _ForgeMastery from './forgeMastery.png';
 import _ForgeMastery_webp from './forgeMastery.png.webp';
 import _LostPack from './lostPack.png';
 import _LostPack_webp from './lostPack.png.webp';
+import _MatrixCore from './matrixCore.png';
+import _MatrixCore_webp from './matrixCore.png.webp';
 import _PaintPickaxeIcon from './paintPickaxeIcon.png';
 import _PaintPickaxeIcon_webp from './paintPickaxeIcon.png.webp';
 import _PerkStar from './perkStar.png';
@@ -30,6 +32,7 @@ export const Assignment = { png: _Assignment, webp: _Assignment_webp };
 export const ForgeHammer = { png: _ForgeHammer, webp: _ForgeHammer_webp };
 export const ForgeMastery = { png: _ForgeMastery, webp: _ForgeMastery_webp };
 export const LostPack = { png: _LostPack, webp: _LostPack_webp };
+export const MatrixCore = { png: _MatrixCore, webp: _MatrixCore_webp };
 export const PaintPickaxeIcon = {
   png: _PaintPickaxeIcon,
   webp: _PaintPickaxeIcon_webp,
