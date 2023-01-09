@@ -10,7 +10,12 @@ import {
   PickaxeSets,
   PickaxeUniquePartNames,
 } from 'data/pickaxes';
-import { CommonWeaponPaintjobs, MatrixWeaponPaintjobs, UniqueWeaponPaintjobs } from 'data/weaponPaintjobs';
+import { CommonVictoryPoses, MatrixVictoryPoses } from 'data/victoryPoses';
+import {
+  CommonWeaponPaintjobs,
+  MatrixWeaponPaintjobs,
+  UniqueWeaponPaintjobs,
+} from 'data/weaponPaintjobs';
 import { MinerWeapons } from 'data/weapons';
 import useDB from 'db/useDB';
 
@@ -42,7 +47,8 @@ export default function useCurrentTabProgress(
       case 'weaponPaintjobs':
         return (
           UniqueWeaponPaintjobs.length *
-          Object.values(MinerWeapons).flatMap((w) => Object.values(w)).length +
+            Object.values(MinerWeapons).flatMap((w) => Object.values(w))
+              .length +
           MatrixWeaponPaintjobs.length * Object.values(Miner).length +
           CommonWeaponPaintjobs.length * Object.values(Miner).length
         );
@@ -52,6 +58,13 @@ export default function useCurrentTabProgress(
           PickaxePaintjobNames.length +
           PickaxeUniquePartNames.length
         );
+      case 'victoryPoses': {
+        return (
+          Object.values(MatrixVictoryPoses).flatMap((p) => Object.values(p))
+            .length +
+          CommonVictoryPoses.length * Object.values(Miner).length
+        );
+      }
     }
   }, [currentTab]) as number;
 
@@ -93,8 +106,16 @@ export default function useCurrentTabProgress(
           const acquiredMatrixPaintjobs = await db.matrixWeaponPaintjobs.toArray();
           const acquiredUniquePaintjobs = await db.uniqueWeaponPaintjobs.toArray();
           const acquiredCommonPaintjobs = await db.commonWeaponPaintjobs.toArray();
-          const progress = ((acquiredCommonPaintjobs.length + acquiredUniquePaintjobs.length + acquiredMatrixPaintjobs.filter((p) => p.isForged).length) / totalItems) * 100;
-          const partialProgress = acquiredMatrixPaintjobs.filter((p) => !p.isForged).length / totalItems * 100;
+          const progress =
+            ((acquiredCommonPaintjobs.length +
+              acquiredUniquePaintjobs.length +
+              acquiredMatrixPaintjobs.filter((p) => p.isForged).length) /
+              totalItems) *
+            100;
+          const partialProgress =
+            (acquiredMatrixPaintjobs.filter((p) => !p.isForged).length /
+              totalItems) *
+            100;
           return {
             progress: progress,
             partialProgress: partialProgress,
@@ -108,6 +129,25 @@ export default function useCurrentTabProgress(
               ((acquiredPickaxeParts + acquiredPickaxeUniques) / totalItems) *
               100,
             partialProgress: null,
+          };
+        }
+        case 'victoryPoses': {
+          const acquiredCommonVictoryPoses = await db.commonVictoryPoses.toArray();
+          const acquiredMatrixVictoryPoses = await db.matrixVictoryPoses.toArray();
+          const progress =
+            ((acquiredCommonVictoryPoses.length +
+              acquiredMatrixVictoryPoses.filter((pose) => pose.isForged)
+                .length) /
+              totalItems) *
+            100;
+          const partialProgress =
+            (acquiredMatrixVictoryPoses.filter((pose) => !pose.isForged)
+              .length /
+              totalItems) *
+            100;
+          return {
+            progress: progress,
+            partialProgress: partialProgress,
           };
         }
       }

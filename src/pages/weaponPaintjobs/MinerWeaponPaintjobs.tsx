@@ -22,7 +22,7 @@ export default function MinerWeaponPaintjobs<T extends Miner>(props: {
     <>
       <React.Fragment key={props.miner + '-matrix-paintjobs'}>
         <>
-          <Divider orientation='center'>
+          <Divider orientation="center">
             <Tooltip
               placement={useBreakpoint()['xs'] ? 'top' : 'right'}
               title={`Common ${props.miner} Weapon Paintjobs`}

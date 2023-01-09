@@ -7,7 +7,15 @@ import {
   PickaxeParts,
   PickaxeUniquePartNames,
 } from 'data/pickaxes';
-import { CommonWeaponPaintjobNames, MatrixWeaponPaintjobNames, UniqueWeaponPaintjobNames } from 'data/weaponPaintjobs';
+import {
+  CommonVictoryPoseNames,
+  MatrixVictoryPoseNames,
+} from 'data/victoryPoses';
+import {
+  CommonWeaponPaintjobNames,
+  MatrixWeaponPaintjobNames,
+  UniqueWeaponPaintjobNames,
+} from 'data/weaponPaintjobs';
 import { MinerWeapon } from 'data/weapons';
 
 export class AppDatabase extends Dexie {
@@ -20,10 +28,12 @@ export class AppDatabase extends Dexie {
   matrixWeaponPaintjobs: Dexie.Table<MatrixWeaponPaintjobEntry, number>;
   uniqueWeaponPaintjobs: Dexie.Table<UniqueWeaponPaintjobEntry, number>;
   commonWeaponPaintjobs: Dexie.Table<CommonWeaponPaintjobEntry, number>;
+  commonVictoryPoses: Dexie.Table<CommonVictoryPoseEntry, number>;
+  matrixVictoryPoses: Dexie.Table<MatrixVictoryPoseEntry, number>;
 
   constructor() {
     super('DRG-Completionist');
-    this.version(5).stores({
+    this.version(6).stores({
       overclocks: '[weapon+name], weapon',
 
       frameworks: '[weapon+name], weapon',
@@ -36,7 +46,10 @@ export class AppDatabase extends Dexie {
 
       uniqueWeaponPaintjobs: '[weapon+name], weapon',
       matrixWeaponPaintjobs: '[miner+name], miner',
-      commonWeaponPaintjobs: '[miner+name], miner'
+      commonWeaponPaintjobs: '[miner+name], miner',
+
+      commonVictoryPoses: '[miner+name], miner',
+      matrixVictoryPoses: '[miner+name], miner',
     });
 
     this.overclocks = this.table('overclocks');
@@ -52,6 +65,9 @@ export class AppDatabase extends Dexie {
     this.matrixWeaponPaintjobs = this.table('matrixWeaponPaintjobs');
     this.uniqueWeaponPaintjobs = this.table('uniqueWeaponPaintjobs');
     this.commonWeaponPaintjobs = this.table('commonWeaponPaintjobs');
+
+    this.commonVictoryPoses = this.table('commonVictoryPoses');
+    this.matrixVictoryPoses = this.table('matrixVictoryPoses');
   }
 
   /** Async call to clear all current IndexedDB tables completely. */
@@ -98,4 +114,15 @@ export type UniqueWeaponPaintjobEntry = {
 export type CommonWeaponPaintjobEntry = {
   miner: Miner;
   name: typeof CommonWeaponPaintjobNames[number];
+};
+
+export type CommonVictoryPoseEntry = {
+  miner: Miner;
+  name: typeof CommonVictoryPoseNames[number];
+};
+
+export type MatrixVictoryPoseEntry = {
+  miner: Miner;
+  name: typeof MatrixVictoryPoseNames[number];
+  isForged: boolean;
 };

@@ -44,9 +44,7 @@ export const getUniqueWeaponPaintjobsFromSaveFile = ({
 
 export const getMatrixWeaponPaintjobsFromSaveFile = ({
   SchematicSave: {
-    SchematicSave: {
-      OwnedSchematics: unforgedSchematics,
-    },
+    SchematicSave: { OwnedSchematics: unforgedSchematics },
   },
   UnlockedItemSkins: unlockedItemSkins,
 }: SaveFile): MatrixWeaponPaintjobEntry[] => {
@@ -97,8 +95,16 @@ export const getMatrixWeaponPaintjobsFromSaveFile = ({
     for (const paintjob of matrixPaintjobs) {
       // We need to check for duplicates since they can occur if a matrix core weapon paintjob is already
       // added for another weapon of this miner.
-      if (!acquiredPaintjobs.some((p) => p.miner === miner && p.name === paintjob.name)) {
-        acquiredPaintjobs.push({ miner: miner, name: paintjob.name, isForged: true });
+      if (
+        !acquiredPaintjobs.some(
+          (p) => p.miner === miner && p.name === paintjob.name
+        )
+      ) {
+        acquiredPaintjobs.push({
+          miner: miner,
+          name: paintjob.name,
+          isForged: true,
+        });
       }
     }
   });

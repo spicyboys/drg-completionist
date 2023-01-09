@@ -55,13 +55,13 @@ export default function UniqueWeaponPaintjobCard(props: {
       key={props.weaponPaintjob.name}
     >
       <Badge.Ribbon
-        className='weaponPaintjob-ribbon'
+        className="weaponPaintjob-ribbon"
         text={props.weaponPaintjob.name}
       >
         <Card
           hoverable
           onClick={onClick}
-          size='small'
+          size="small"
           style={{
             backgroundColor: query ? MinerColor[props.miner] : 'inherit',
             transition: 'all 0.3s ease',

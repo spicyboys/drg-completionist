@@ -6,7 +6,10 @@ import {
 } from 'data/weaponPaintjobs';
 
 export default function WeaponPaintjobIcon(props: {
-  weaponPaintjob: CommonWeaponPaintjob | MatrixWeaponPaintjob | UniqueWeaponPaintjob;
+  weaponPaintjob:
+    | CommonWeaponPaintjob
+    | MatrixWeaponPaintjob
+    | UniqueWeaponPaintjob;
 }) {
   return (
     <div

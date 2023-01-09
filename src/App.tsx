@@ -12,7 +12,8 @@ export type TabName =
   | 'frameworks'
   | 'armor'
   | 'weaponPaintjobs'
-  | 'pickaxes';
+  | 'pickaxes'
+  | 'victoryPoses';
 
 export const DEFAULT_TAB: TabName = 'overclocks';
 
@@ -52,6 +53,11 @@ export const TABS: Array<{
     title: 'Pickaxes',
     key: 'pickaxes',
     content: lazy(() => import('pages/pickaxes/PickaxesPage')),
+  },
+  {
+    title: 'Victory Poses',
+    key: 'victoryPoses',
+    content: lazy(() => import('pages/victoryPoses/VictoryPosesPage')),
   },
 ];
 

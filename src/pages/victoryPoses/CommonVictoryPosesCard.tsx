@@ -1,44 +1,44 @@
-import { Badge, Card, Col, Row, Tooltip } from 'antd';
+import { Col, Badge, Card, Tooltip, Row } from 'antd';
 import { useCallback } from 'react';
 import { isMobile } from 'react-device-detect';
-import { Assignment } from 'assets/other';
+import { LostPack } from 'assets/other';
 import Image from 'components/Image';
 import { Miner, MinerColor } from 'data/miner';
-import { CommonWeaponPaintjob } from 'data/weaponPaintjobs';
+import { CommonVictoryPose } from 'data/victoryPoses';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
-import WeaponPaintjobIcon from './WeaponPaintjobIcon';
-import './WeaponPaintjobCard.css';
+import VictoryPoseIcon from './VictoryPoseIcon';
+import './VictoryPoseCard.css';
 
-export default function CommonWeaponPaintjobCard(props: {
+export default function CommonVictoryPoseCard(props: {
+  commonVictoryPose: CommonVictoryPose;
   miner: Miner;
-  weaponPaintjob: CommonWeaponPaintjob;
 }) {
   const db = useDB();
   const query = useSuspendedLiveQuery(
     () =>
-      db.commonWeaponPaintjobs.get({
+      db.commonVictoryPoses.get({
         miner: props.miner,
-        name: props.weaponPaintjob.name,
+        name: props.commonVictoryPose.name,
       }),
-    [props.miner, props.weaponPaintjob.name]
+    [props.miner, props.commonVictoryPose.name]
   );
 
   const onClick = useCallback(() => {
     if (query === undefined) {
-      db.commonWeaponPaintjobs.add({
+      db.commonVictoryPoses.add({
         miner: props.miner,
-        name: props.weaponPaintjob.name,
+        name: props.commonVictoryPose.name,
       });
     } else {
-      db.commonWeaponPaintjobs
+      db.commonVictoryPoses
         .where({
           miner: props.miner,
-          name: props.weaponPaintjob.name,
+          name: props.commonVictoryPose.name,
         })
         .delete();
     }
-  }, [db.commonWeaponPaintjobs, props.weaponPaintjob.name, props.miner, query]);
+  }, [db.commonVictoryPoses, props.miner, props.commonVictoryPose, query]);
 
   return (
     <Col
@@ -48,11 +48,11 @@ export default function CommonWeaponPaintjobCard(props: {
       md={8}
       sm={8}
       xs={12}
-      key={props.weaponPaintjob.name}
+      key={props.miner + props.commonVictoryPose.name}
     >
       <Badge.Ribbon
-        className="weaponPaintjob-ribbon"
-        text={props.weaponPaintjob.name}
+        className="victory-pose-ribbon"
+        text={props.commonVictoryPose.name}
       >
         <Card
           hoverable
@@ -63,25 +63,27 @@ export default function CommonWeaponPaintjobCard(props: {
             transition: 'all 0.3s ease',
           }}
         >
-          <WeaponPaintjobIcon weaponPaintjob={props.weaponPaintjob} />
-
-          <Row justify="space-between">
+          <VictoryPoseIcon victoryPose={props.commonVictoryPose} />
+          <Row>
             <Col flex="auto"></Col>
             <Col>
               <Tooltip
-                title="Obtained via Performance Pass"
+                title="Obtained via Lost Pack"
                 trigger={isMobile ? 'click' : 'hover'}
                 destroyTooltipOnHide
               >
                 <Image
-                  alt={`${props.weaponPaintjob.name} is acquired through Performance Pass`}
-                  src={Assignment}
+                  alt={`${props.commonVictoryPose.name} is acquired through lost packs`}
+                  src={LostPack}
                   style={{
                     float: 'right',
                     height: isMobile ? 30 : 20,
                     marginTop: isMobile ? -30 : -20,
                     opacity: 1,
                     width: 'auto',
+                    filter: query
+                      ? 'grayscale(1) invert(1) brightness(100)'
+                      : undefined,
                   }}
                 />
               </Tooltip>
