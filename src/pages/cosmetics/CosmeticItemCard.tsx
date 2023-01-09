@@ -8,7 +8,7 @@ import { Miner, MinerColor, MinerColorContrastText } from 'data/miner';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
 import CosmeticItemIcon from './CosmeticItemIcon';
-import './CosmeticItemCard.css'
+import './CosmeticItemCard.css';
 
 export default function CosmeticItemCard(props: {
   miner: Miner;

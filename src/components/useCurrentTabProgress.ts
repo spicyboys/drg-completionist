@@ -155,9 +155,15 @@ export default function useCurrentTabProgress(
         case 'cosmetics': {
           const acquiredCosmetics = await db.cosmeticMatrixItems.toArray();
           return {
-            progress: (acquiredCosmetics.filter((item) => item.isForged).length / totalItems) * 100,
-            partialProgress: (acquiredCosmetics.filter((item) => !item.isForged).length / totalItems) * 100,
-          }
+            progress:
+              (acquiredCosmetics.filter((item) => item.isForged).length /
+                totalItems) *
+              100,
+            partialProgress:
+              (acquiredCosmetics.filter((item) => !item.isForged).length /
+                totalItems) *
+              100,
+          };
         }
       }
     },
