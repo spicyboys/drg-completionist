@@ -17,7 +17,7 @@ _The Steam save file is located here by default on Windows, but may vary based o
 
 ## Upcoming Features
 
-- Add cosmetic Matrix Cores
+- None planned right now, please open an issue if you have any suggestions 
 
 ## Privacy
 
