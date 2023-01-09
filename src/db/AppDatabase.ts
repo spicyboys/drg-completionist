@@ -1,5 +1,6 @@
 import { Dexie } from 'dexie';
 import { ArmorPaintjobNames, CommonArmorPaintjobNames } from 'data/armor';
+import { CosmeticMatrixItemNames } from 'data/cosmetics';
 import { Framework } from 'data/frameworks';
 import { Miner } from 'data/miner';
 import {
@@ -30,10 +31,11 @@ export class AppDatabase extends Dexie {
   commonWeaponPaintjobs: Dexie.Table<CommonWeaponPaintjobEntry, number>;
   commonVictoryPoses: Dexie.Table<CommonVictoryPoseEntry, number>;
   matrixVictoryPoses: Dexie.Table<MatrixVictoryPoseEntry, number>;
+  cosmeticMatrixItems: Dexie.Table<CosmeticMatrixItemEntry, number>;
 
   constructor() {
     super('DRG-Completionist');
-    this.version(6).stores({
+    this.version(7).stores({
       overclocks: '[weapon+name], weapon',
 
       frameworks: '[weapon+name], weapon',
@@ -50,6 +52,8 @@ export class AppDatabase extends Dexie {
 
       commonVictoryPoses: '[miner+name], miner',
       matrixVictoryPoses: '[miner+name], miner',
+
+      cosmeticMatrixItems: '[miner+name], miner',
     });
 
     this.overclocks = this.table('overclocks');
@@ -68,6 +72,8 @@ export class AppDatabase extends Dexie {
 
     this.commonVictoryPoses = this.table('commonVictoryPoses');
     this.matrixVictoryPoses = this.table('matrixVictoryPoses');
+
+    this.cosmeticMatrixItems = this.table('cosmeticMatrixItems');
   }
 
   /** Async call to clear all current IndexedDB tables completely. */
@@ -124,5 +130,11 @@ export type CommonVictoryPoseEntry = {
 export type MatrixVictoryPoseEntry = {
   miner: Miner;
   name: typeof MatrixVictoryPoseNames[number];
+  isForged: boolean;
+};
+
+export type CosmeticMatrixItemEntry = {
+  miner: Miner;
+  name: typeof CosmeticMatrixItemNames[number];
   isForged: boolean;
 };
