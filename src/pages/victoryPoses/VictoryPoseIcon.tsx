@@ -1,4 +1,4 @@
-import { Popover, Typography } from 'antd';
+import { Popover } from 'antd';
 import { isMobile } from 'react-device-detect';
 import Image from 'components/Image';
 import { CommonVictoryPose, VictoryPose } from 'data/victoryPoses';
@@ -31,14 +31,14 @@ export default function VictoryPoseIcon(props: {
               <Image
                 alt={props.victoryPose.name}
                 src={props.victoryPose.icon}
-                style={{ height: 380, width: 300 }}
+                style={{ height: 380, width: 'auto' }}
               />
           )}
         >
           <Image
             alt={props.victoryPose.name}
             src={props.victoryPose.icon}
-            style={{ height: 100, width: 77 }}
+            style={{ height: 100, width: 'auto' }}
           />
         </Popover>
       </div>

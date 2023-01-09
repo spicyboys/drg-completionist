@@ -33,14 +33,14 @@ export default function VictoryPosePage() {
         <Row gutter={[16, 16]}>
           {Object.values(MatrixVictoryPoses[miner]).map((matrixVictoryPose) => (
             <MatrixVictoryPoseCard
-              key={miner + matrixVictoryPose}
+              key={miner + matrixVictoryPose.name}
               miner={miner}
               victoryPose={matrixVictoryPose}
             />
           ))}
           {Object.values(CommonVictoryPoses).map((commonVictoryPose) => (
             <CommonVictoryPoseCard
-              key={miner + commonVictoryPose}
+              key={miner + commonVictoryPose.name}
               miner={miner}
               commonVictoryPose={commonVictoryPose}
             />
