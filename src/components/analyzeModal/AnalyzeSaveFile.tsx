@@ -108,7 +108,7 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
               uniqueWeaponPaintjobs.length +
               commonWeaponPaintjobs.length
             } ` +
-            `Weapon Paintjobs, and ` +
+            `Weapon Paintjobs, ` +
             `${matrixVictoryPoses.length + commonVictoryPoses.length} ` +
             `Victory Poses, and ` +
             `${pickaxes.length + pickaxeUniques.length} ` +
