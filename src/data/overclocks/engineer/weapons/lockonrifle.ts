@@ -57,7 +57,7 @@ const LockOnRifleOverclocks: Overclock[] = [
   },
   {
     name: 'Seeker Rounds',
-    id: '783EA86F4AF55135F004BC9742A8F19D',
+    id: '798B9546AB16B34CAD766DAB554150D9',
     icon: 'Aim',
     type: 'Balanced',
     price: {
