@@ -25,7 +25,11 @@ import {
   getCommonVictoryPosesFromSaveFile,
   getMatrixVictoryPosesFromSaveFile,
 } from './getVictoryPosesFromSaveFile';
-import { getCommonWeaponPaintjobsFromSaveFile, getMatrixWeaponPaintjobsFromSaveFile, getUniqueWeaponPaintjobsFromSaveFile } from './getWeaponPaintjobsFromSaveFile';
+import {
+  getCommonWeaponPaintjobsFromSaveFile,
+  getMatrixWeaponPaintjobsFromSaveFile,
+  getUniqueWeaponPaintjobsFromSaveFile,
+} from './getWeaponPaintjobsFromSaveFile';
 
 const { Text } = Typography;
 
@@ -62,9 +66,15 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
         const commonArmorPaintjobs = getCommonArmorPaintJobsFromSaveFile(
           saveFile
         );
-        const matrixWeaponPaintjobs = getMatrixWeaponPaintjobsFromSaveFile(saveFile);
-        const uniqueWeaponPaintjobs = getUniqueWeaponPaintjobsFromSaveFile(saveFile);
-        const commonWeaponPaintjobs = getCommonWeaponPaintjobsFromSaveFile(saveFile);
+        const matrixWeaponPaintjobs = getMatrixWeaponPaintjobsFromSaveFile(
+          saveFile
+        );
+        const uniqueWeaponPaintjobs = getUniqueWeaponPaintjobsFromSaveFile(
+          saveFile
+        );
+        const commonWeaponPaintjobs = getCommonWeaponPaintjobsFromSaveFile(
+          saveFile
+        );
         const matrixVictoryPoses = getMatrixVictoryPosesFromSaveFile(saveFile);
         const commonVictoryPoses = getCommonVictoryPosesFromSaveFile(saveFile);
 
@@ -93,7 +103,11 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
             `${frameworks.length} Frameworks, ` +
             `${armorPaintjobs.length + commonArmorPaintjobs.length} ` +
             `Armor Paintjobs, ` +
-            `${matrixWeaponPaintjobs.length + uniqueWeaponPaintjobs.length + commonWeaponPaintjobs.length} ` +
+            `${
+              matrixWeaponPaintjobs.length +
+              uniqueWeaponPaintjobs.length +
+              commonWeaponPaintjobs.length
+            } ` +
             `Weapon Paintjobs, and ` +
             `${matrixVictoryPoses.length + commonVictoryPoses.length} ` +
             `Victory Poses, and ` +

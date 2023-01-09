@@ -11,7 +11,11 @@ import {
   PickaxeUniquePartNames,
 } from 'data/pickaxes';
 import { CommonVictoryPoses, MatrixVictoryPoses } from 'data/victoryPoses';
-import { CommonWeaponPaintjobs, MatrixWeaponPaintjobs, UniqueWeaponPaintjobs } from 'data/weaponPaintjobs';
+import {
+  CommonWeaponPaintjobs,
+  MatrixWeaponPaintjobs,
+  UniqueWeaponPaintjobs,
+} from 'data/weaponPaintjobs';
 import { MinerWeapons } from 'data/weapons';
 import useDB from 'db/useDB';
 
@@ -43,7 +47,8 @@ export default function useCurrentTabProgress(
       case 'weaponPaintjobs':
         return (
           UniqueWeaponPaintjobs.length *
-          Object.values(MinerWeapons).flatMap((w) => Object.values(w)).length +
+            Object.values(MinerWeapons).flatMap((w) => Object.values(w))
+              .length +
           MatrixWeaponPaintjobs.length * Object.values(Miner).length +
           CommonWeaponPaintjobs.length * Object.values(Miner).length
         );
@@ -101,8 +106,16 @@ export default function useCurrentTabProgress(
           const acquiredMatrixPaintjobs = await db.matrixWeaponPaintjobs.toArray();
           const acquiredUniquePaintjobs = await db.uniqueWeaponPaintjobs.toArray();
           const acquiredCommonPaintjobs = await db.commonWeaponPaintjobs.toArray();
-          const progress = ((acquiredCommonPaintjobs.length + acquiredUniquePaintjobs.length + acquiredMatrixPaintjobs.filter((p) => p.isForged).length) / totalItems) * 100;
-          const partialProgress = acquiredMatrixPaintjobs.filter((p) => !p.isForged).length / totalItems * 100;
+          const progress =
+            ((acquiredCommonPaintjobs.length +
+              acquiredUniquePaintjobs.length +
+              acquiredMatrixPaintjobs.filter((p) => p.isForged).length) /
+              totalItems) *
+            100;
+          const partialProgress =
+            (acquiredMatrixPaintjobs.filter((p) => !p.isForged).length /
+              totalItems) *
+            100;
           return {
             progress: progress,
             partialProgress: partialProgress,

@@ -55,18 +55,18 @@ export const CommonWeaponPaintjobNames = [
   'Golden Mauve',
   'Military',
   'Sleek',
-]
+];
 
 type WeaponPaintjob = {
   name: string;
   icon: ImgSrc;
   id: string;
-}
+};
 
 export type MatrixWeaponPaintjob = Omit<WeaponPaintjob, 'name'> & {
   name: typeof MatrixWeaponPaintjobNames[number];
   matrixCoreIds: Record<Miner, string>;
-}
+};
 
 export type UniqueWeaponPaintjob = Omit<WeaponPaintjob, 'name'> & {
   name: typeof UniqueWeaponPaintjobNames[number];
@@ -74,7 +74,7 @@ export type UniqueWeaponPaintjob = Omit<WeaponPaintjob, 'name'> & {
 
 export type CommonWeaponPaintjob = Omit<WeaponPaintjob, 'name'> & {
   name: typeof CommonWeaponPaintjobNames[number];
-}
+};
 
 export const MatrixWeaponPaintjobs: MatrixWeaponPaintjob[] = [
   {
@@ -297,45 +297,45 @@ export const MatrixWeaponPaintjobs: MatrixWeaponPaintjob[] = [
       [Miner.Scout]: 'E73C3FD3D2667045ACBAA8A5C24DC0EF',
     },
   },
-]
+];
 
 export const CommonWeaponPaintjobs: CommonWeaponPaintjob[] = [
   {
     name: 'Acid Wash',
     icon: PaintjobIconSrcs.AcidWash,
-    id: 'A5C3686A9799F5468C5B06D949ADC008'
+    id: 'A5C3686A9799F5468C5B06D949ADC008',
   },
   {
     name: 'Golden Mauve',
     icon: PaintjobIconSrcs.GoldenMauve,
-    id: 'D61ADA8A49A2634093621B772D845E3A'
+    id: 'D61ADA8A49A2634093621B772D845E3A',
   },
   {
     name: 'Military',
     icon: PaintjobIconSrcs.Military,
-    id: '07050D026A127B4B9C614D5812BD0563'
+    id: '07050D026A127B4B9C614D5812BD0563',
   },
   {
     name: 'Sleek',
     icon: PaintjobIconSrcs.Sleek,
-    id: '68BBAA8468499C4AB03DDFEF6771E3E1'
+    id: '68BBAA8468499C4AB03DDFEF6771E3E1',
   },
-]
+];
 
 export const UniqueWeaponPaintjobs: UniqueWeaponPaintjob[] = [
   {
     name: 'First Stripe',
     icon: PaintjobIconSrcs.FirstStripe,
-    id: '08D558F65F0C5945BAA4F9649A56589C'
+    id: '08D558F65F0C5945BAA4F9649A56589C',
   },
   {
     name: 'Deepcore',
     icon: PaintjobIconSrcs.Deepcore,
-    id: 'A5854A679A019D4DAA0178EE23FE4E9E'
+    id: 'A5854A679A019D4DAA0178EE23FE4E9E',
   },
   {
     name: 'The Company Special',
     icon: PaintjobIconSrcs.TheCompanySpecial,
-    id: 'BF510980B965B540918AA0A29D8E052B'
+    id: 'BF510980B965B540918AA0A29D8E052B',
   },
-]
+];

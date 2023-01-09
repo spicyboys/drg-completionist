@@ -25,17 +25,21 @@ export default function WeaponPaintjobPage() {
     const acquiredCommonPaintjobs = await db.commonWeaponPaintjobs
       .where('miner')
       .anyOf(miner)
-      .count()
-    const num_acquired = acquiredMatrixPaintjobs + acquiredUniquePaintjobs + acquiredCommonPaintjobs;
+      .count();
+    const num_acquired =
+      acquiredMatrixPaintjobs +
+      acquiredUniquePaintjobs +
+      acquiredCommonPaintjobs;
     const total_number =
       MatrixWeaponPaintjobs.length +
-      UniqueWeaponPaintjobs.length * Object.values(MinerWeapons[miner as Miner]).length +
+      UniqueWeaponPaintjobs.length *
+        Object.values(MinerWeapons[miner as Miner]).length +
       CommonWeaponPaintjobs.length;
     return num_acquired / total_number;
   }, []);
 
   return (
-    <MinerPageLayout category='Weapons' getProgress={getProgress}>
+    <MinerPageLayout category="Weapons" getProgress={getProgress}>
       {(miner) => (
         <>
           <MinerUniqueWeaponPaintjobs miner={miner as Miner} />

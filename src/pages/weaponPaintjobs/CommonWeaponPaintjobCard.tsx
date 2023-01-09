@@ -51,13 +51,13 @@ export default function CommonWeaponPaintjobCard(props: {
       key={props.weaponPaintjob.name}
     >
       <Badge.Ribbon
-        className='weaponPaintjob-ribbon'
+        className="weaponPaintjob-ribbon"
         text={props.weaponPaintjob.name}
       >
         <Card
           hoverable
           onClick={onClick}
-          size='small'
+          size="small"
           style={{
             backgroundColor: query ? MinerColor[props.miner] : 'inherit',
             transition: 'all 0.3s ease',
@@ -65,11 +65,11 @@ export default function CommonWeaponPaintjobCard(props: {
         >
           <WeaponPaintjobIcon weaponPaintjob={props.weaponPaintjob} />
 
-          <Row justify='space-between'>
-            <Col flex='auto'></Col>
+          <Row justify="space-between">
+            <Col flex="auto"></Col>
             <Col>
               <Tooltip
-                title='Obtained via Performance Pass'
+                title="Obtained via Performance Pass"
                 trigger={isMobile ? 'click' : 'hover'}
                 destroyTooltipOnHide
               >

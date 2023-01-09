@@ -11,7 +11,11 @@ import {
   CommonVictoryPoseNames,
   MatrixVictoryPoseNames,
 } from 'data/victoryPoses';
-import { CommonWeaponPaintjobNames, MatrixWeaponPaintjobNames, UniqueWeaponPaintjobNames } from 'data/weaponPaintjobs';
+import {
+  CommonWeaponPaintjobNames,
+  MatrixWeaponPaintjobNames,
+  UniqueWeaponPaintjobNames,
+} from 'data/weaponPaintjobs';
 import { MinerWeapon } from 'data/weapons';
 
 export class AppDatabase extends Dexie {

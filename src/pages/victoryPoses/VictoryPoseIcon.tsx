@@ -1,10 +1,7 @@
-import { Card, Divider, Popover, Typography } from 'antd';
-import Meta from 'antd/lib/card/Meta';
+import { Popover, Typography } from 'antd';
 import { isMobile } from 'react-device-detect';
 import Image from 'components/Image';
 import { CommonVictoryPose, VictoryPose } from 'data/victoryPoses';
-
-const { Paragraph, Text, Title } = Typography;
 
 export default function VictoryPoseIcon(props: {
   victoryPose: VictoryPose | CommonVictoryPose;
