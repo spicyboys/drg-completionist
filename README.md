@@ -17,9 +17,7 @@ _The Steam save file is located here by default on Windows, but may vary based o
 
 ## Upcoming Features
 
-- Add weapon paintjobs
 - Add cosmetic Matrix Cores
-- Add victory moves
 
 ## Privacy
 
