@@ -58,13 +58,13 @@ export default function useCurrentTabProgress(
           PickaxePaintjobNames.length +
           PickaxeUniquePartNames.length
         );
-      case 'victoryPoses':
+      case 'victoryPoses': {
         return (
           Object.values(MatrixVictoryPoses).flatMap((p) => Object.values(p))
-            .length *
-            Object.entries(Miner).length +
-          CommonVictoryPoses.length * Object.entries(Miner).length
+            .length +
+          CommonVictoryPoses.length * Object.values(Miner).length
         );
+      }
     }
   }, [currentTab]) as number;
 
