@@ -13,7 +13,8 @@ export type TabName =
   | 'armor'
   | 'weaponPaintjobs'
   | 'pickaxes'
-  | 'victoryPoses';
+  | 'victoryPoses'
+  | 'cosmetics';
 
 export const DEFAULT_TAB: TabName = 'overclocks';
 
@@ -58,6 +59,11 @@ export const TABS: Array<{
     title: 'Victory Poses',
     key: 'victoryPoses',
     content: lazy(() => import('pages/victoryPoses/VictoryPosesPage')),
+  },
+  {
+    title: 'Cosmetics',
+    key: 'cosmetics',
+    content: lazy(() => import('pages/cosmetics/CosmeticsPage')),
   },
 ];
 

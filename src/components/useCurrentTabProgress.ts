@@ -2,6 +2,7 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import { useEffect, useMemo } from 'react';
 import { TabName } from 'App';
 import { ArmorPaintjobs, CommonArmorPaintjobs } from 'data/armor';
+import { CosmeticMatrixItems } from 'data/cosmetics';
 import { FrameworkIDs } from 'data/frameworks';
 import { Miner } from 'data/miner';
 import { Overclocks } from 'data/overclocks';
@@ -58,13 +59,14 @@ export default function useCurrentTabProgress(
           PickaxePaintjobNames.length +
           PickaxeUniquePartNames.length
         );
-      case 'victoryPoses': {
+      case 'victoryPoses':
         return (
           Object.values(MatrixVictoryPoses).flatMap((p) => Object.values(p))
             .length +
           CommonVictoryPoses.length * Object.values(Miner).length
         );
-      }
+      case 'cosmetics':
+        return CosmeticMatrixItems.length * Object.values(Miner).length;
     }
   }, [currentTab]) as number;
 
@@ -149,6 +151,13 @@ export default function useCurrentTabProgress(
             progress: progress,
             partialProgress: partialProgress,
           };
+        }
+        case 'cosmetics': {
+          const acquiredCosmetics = await db.cosmeticMatrixItems.toArray();
+          return {
+            progress: (acquiredCosmetics.filter((item) => item.isForged).length / totalItems) * 100,
+            partialProgress: (acquiredCosmetics.filter((item) => !item.isForged).length / totalItems) * 100,
+          }
         }
       }
     },
