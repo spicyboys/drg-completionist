@@ -1,4 +1,3 @@
-import { PickaxeIcon } from 'assets/other';
 import * as VictoryPoseIconSrcs from 'assets/victoryPoses';
 import { Miner } from './miner';
 
@@ -63,12 +62,12 @@ export const CommonVictoryPoses: CommonVictoryPose[] = [
   },
   {
     name: 'Boxer',
-    icon: PickaxeIcon,
+    icon: VictoryPoseIconSrcs.Boxer,
     id: '5BB7B372EBF0C649AE9AE4C1B4EF4DD3',
   },
   {
     name: 'Chest Thumper',
-    icon: PickaxeIcon,
+    icon: VictoryPoseIconSrcs.ChestThumper,
     id: '7E169FA0CD0183418FD60EBAC9946D06',
   },
   {
@@ -78,12 +77,12 @@ export const CommonVictoryPoses: CommonVictoryPose[] = [
   },
   {
     name: 'Confetti Cannon',
-    icon: PickaxeIcon,
+    icon: VictoryPoseIconSrcs.ConfettiCannon,
     id: '4F90B17E8B1C6F458810C886ACEB717C',
   },
   {
     name: 'Feeding Lootbug',
-    icon: PickaxeIcon,
+    icon: VictoryPoseIconSrcs.FeedingLootbug,
     id: 'FE4584A2CD8EA14B80AD8B0193623A91',
   },
   {
@@ -93,22 +92,22 @@ export const CommonVictoryPoses: CommonVictoryPose[] = [
   },
   {
     name: 'Juggle',
-    icon: PickaxeIcon,
+    icon: VictoryPoseIconSrcs.Juggle,
     id: '7EB0CB84760025458177BF164B163427',
   },
   {
     name: 'Knight',
-    icon: PickaxeIcon,
+    icon: VictoryPoseIconSrcs.Knight,
     id: '7CA6C9EE2DEF294AAB91BE3AF25BA0FE',
   },
   {
     name: 'Lootbug Lover',
-    icon: PickaxeIcon,
+    icon: VictoryPoseIconSrcs.LootbugLover,
     id: 'D58031A7521D81439D1833480E6E6AB2',
   },
   {
     name: 'Pickaxe Throw',
-    icon: PickaxeIcon,
+    icon: VictoryPoseIconSrcs.PickaxeThrow,
     id: '4550827513464448A92448FE3AB08383',
   },
   {
@@ -118,7 +117,7 @@ export const CommonVictoryPoses: CommonVictoryPose[] = [
   },
   {
     name: 'Salt',
-    icon: PickaxeIcon,
+    icon: VictoryPoseIconSrcs.Salt,
     id: 'DCAE4CCDC24A884A92F4712D199C7C86',
   },
   {

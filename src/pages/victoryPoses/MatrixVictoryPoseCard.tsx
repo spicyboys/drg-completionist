@@ -82,40 +82,44 @@ export default function MatrixVictoryPoseCard(props: {
         >
           <VictoryPoseIcon victoryPose={props.victoryPose} />
           <Row justify="space-between">
-            <Tooltip
-              title={query && !query?.isForged ? 'Unforged' : undefined}
-              trigger={isMobile ? 'click' : 'hover'}
-              destroyTooltipOnHide
-            >
-              <Image
-                alt={`${props.victoryPose.name} is acquired, but unforged`}
-                src={ForgeHammer}
-                style={{
-                  float: 'left',
-                  height: isMobile ? 30 : 20,
-                  marginTop: isMobile ? -30 : -20,
-                  opacity: query && !query?.isForged ? 1 : 0,
-                  width: 'auto',
-                }}
-              />
-            </Tooltip>
-            <Tooltip
-              title="Obtained via Matrix Core"
-              trigger={isMobile ? 'click' : 'hover'}
-              destroyTooltipOnHide
-            >
-              <Image
-                alt={`${props.victoryPose.name} is acquired through matrix cores`}
-                src={MatrixCore}
-                style={{
-                  float: 'right',
-                  height: isMobile ? 30 : 20,
-                  marginTop: isMobile ? -30 : -20,
-                  opacity: 1,
-                  width: 'auto',
-                }}
-              />
-            </Tooltip>
+            <Col>
+              <Tooltip
+                title={query && !query?.isForged ? 'Unforged' : undefined}
+                trigger={isMobile ? 'click' : 'hover'}
+                destroyTooltipOnHide
+              >
+                <Image
+                  alt={`${props.victoryPose.name} is acquired, but unforged`}
+                  src={ForgeHammer}
+                  style={{
+                    float: 'left',
+                    height: isMobile ? 30 : 20,
+                    marginTop: isMobile ? -30 : -20,
+                    opacity: query && !query?.isForged ? 1 : 0,
+                    width: 'auto',
+                  }}
+                />
+              </Tooltip>
+            </Col>
+            <Col>
+              <Tooltip
+                title="Obtained via Matrix Core"
+                trigger={isMobile ? 'click' : 'hover'}
+                destroyTooltipOnHide
+              >
+                <Image
+                  alt={`${props.victoryPose.name} is acquired through matrix cores`}
+                  src={MatrixCore}
+                  style={{
+                    float: 'right',
+                    height: isMobile ? 30 : 20,
+                    marginTop: isMobile ? -30 : -20,
+                    opacity: 1,
+                    width: 'auto',
+                  }}
+                />
+              </Tooltip>
+            </Col>
           </Row>
         </Card>
       </Badge.Ribbon>
