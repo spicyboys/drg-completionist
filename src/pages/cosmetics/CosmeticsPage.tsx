@@ -11,7 +11,6 @@ import Image from 'components/Image';
 import {
   CosmeticMatrixBeards,
   CosmeticMatrixHeadwears,
-  CosmeticMatrixItem,
   CosmeticMatrixItems,
   CosmeticMatrixMoustaches,
   CosmeticMatrixSideburns,
