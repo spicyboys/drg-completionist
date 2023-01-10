@@ -17,6 +17,7 @@ import Image from 'components/Image';
 import useDB from 'db/useDB';
 import { getArmorPaintJobsFromSaveFile } from './getArmorPaintjobsFromSaveFile';
 import { getCommonArmorPaintJobsFromSaveFile } from './getCommonArmorPaintjobsFromSaveFile';
+import { getCosmeticMatrixItemFromSaveFile } from './getCosmeticMatrixItemsFromSaveFile';
 import { getFrameworksFromSaveFile } from './getFrameworksFromSaveFile';
 import { getOverclocksFromSaveFile } from './getOverclocksFromSaveFile';
 import { getPickaxeUniquesFromSaveFile } from './getPickaxeUniquesFromSaveFile';
@@ -77,6 +78,7 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
         );
         const matrixVictoryPoses = getMatrixVictoryPosesFromSaveFile(saveFile);
         const commonVictoryPoses = getCommonVictoryPosesFromSaveFile(saveFile);
+        const cosmeticMatrixItems = getCosmeticMatrixItemFromSaveFile(saveFile);
 
         // Update the store with the new save file data
         await db.transaction('rw', db.tables, async () => {
@@ -92,6 +94,7 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
           await db.commonWeaponPaintjobs.bulkAdd(commonWeaponPaintjobs);
           await db.matrixVictoryPoses.bulkAdd(matrixVictoryPoses);
           await db.commonVictoryPoses.bulkAdd(commonVictoryPoses);
+          await db.cosmeticMatrixItems.bulkAdd(cosmeticMatrixItems);
         });
 
         // Show the user a success notification with how many items were
@@ -110,7 +113,9 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
             } ` +
             `Weapon Paintjobs, ` +
             `${matrixVictoryPoses.length + commonVictoryPoses.length} ` +
-            `Victory Poses, and ` +
+            `Victory Poses, ` +
+            `${cosmeticMatrixItems.length} ` +
+            `Cosmetic Matrix Core Items, and ` +
             `${pickaxes.length + pickaxeUniques.length} ` +
             `Pickaxe Parts.`,
           duration: 10,
@@ -176,6 +181,12 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
         gtag('event', 'success', {
           event_category: 'Save File Analyzed',
           event_label: 'Common Victory Poses Count',
+          value: `${commonVictoryPoses.length}`,
+          non_interaction: true,
+        });
+        gtag('event', 'success', {
+          event_category: 'Save File Analyzed',
+          event_label: 'Cosmetic Matrix Core Item Count',
           value: `${commonVictoryPoses.length}`,
           non_interaction: true,
         });
