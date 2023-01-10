@@ -37,6 +37,14 @@ import _BraidedBoldness from './Braided_Boldness.png';
 import _BraidedBoldness_webp from './Braided_Boldness.png.webp';
 import _BushyGoodGuy from './Bushy_Good_Guy.png';
 import _BushyGoodGuy_webp from './Bushy_Good_Guy.png.webp';
+import _CategoryBeards from './Category_Beards.png';
+import _CategoryBeards_webp from './Category_Beards.png.webp';
+import _CategoryHeadwear from './Category_Headwear.png';
+import _CategoryHeadwear_webp from './Category_Headwear.png.webp';
+import _CategoryMoustaches from './Category_Moustaches.png';
+import _CategoryMoustaches_webp from './Category_Moustaches.png.webp';
+import _CategorySideburns from './Category_Sideburns.png';
+import _CategorySideburns_webp from './Category_Sideburns.png.webp';
 import _CrescentMoon from './Crescent_Moon.png';
 import _CrescentMoon_webp from './Crescent_Moon.png.webp';
 import _CrestedWaterfall from './Crested_Waterfall.png';
@@ -215,6 +223,22 @@ export const BraidedBoldness = {
   webp: _BraidedBoldness_webp,
 };
 export const BushyGoodGuy = { png: _BushyGoodGuy, webp: _BushyGoodGuy_webp };
+export const CategoryBeards = {
+  png: _CategoryBeards,
+  webp: _CategoryBeards_webp,
+};
+export const CategoryHeadwear = {
+  png: _CategoryHeadwear,
+  webp: _CategoryHeadwear_webp,
+};
+export const CategoryMoustaches = {
+  png: _CategoryMoustaches,
+  webp: _CategoryMoustaches_webp,
+};
+export const CategorySideburns = {
+  png: _CategorySideburns,
+  webp: _CategorySideburns_webp,
+};
 export const CrescentMoon = { png: _CrescentMoon, webp: _CrescentMoon_webp };
 export const CrestedWaterfall = {
   png: _CrestedWaterfall,

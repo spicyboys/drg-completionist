@@ -102,7 +102,7 @@ export type CosmeticMatrixItem = {
   matrixCoreIds: Record<Miner, string>;
 };
 
-export const CosmeticMatrixItems: CosmeticMatrixItem[] = [
+export const CosmeticMatrixHeadwears: CosmeticMatrixItem[] = [
   {
     name: 'Biker Helmet',
     icon: CosmeticIconSrcs.BikerHelmet,
@@ -323,8 +323,9 @@ export const CosmeticMatrixItems: CosmeticMatrixItem[] = [
       [Miner.Scout]: 'A6C5053EDD564B4E9990F6A8E1A42816',
     },
   },
+];
 
-  // Moustache
+export const CosmeticMatrixMoustaches: CosmeticMatrixItem[] = [
   {
     name: 'Bangled Braids',
     icon: CosmeticIconSrcs.BangledBraids,
@@ -479,8 +480,9 @@ export const CosmeticMatrixItems: CosmeticMatrixItem[] = [
       [Miner.Scout]: '5234308D2704474CB2F455ED419B6D31',
     },
   },
+];
 
-  // Beards
+export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   {
     name: 'Bound Goatee',
     icon: CosmeticIconSrcs.BoundGoatee,
@@ -932,8 +934,9 @@ export const CosmeticMatrixItems: CosmeticMatrixItem[] = [
       [Miner.Scout]: '6D3A35EECE87514E96AFADA3AE96324F',
     },
   },
+];
 
-  // Sideburns
+export const CosmeticMatrixSideburns: CosmeticMatrixItem[] = [
   {
     name: 'Berserker',
     icon: CosmeticIconSrcs.Berserker,
@@ -1034,3 +1037,9 @@ export const CosmeticMatrixItems: CosmeticMatrixItem[] = [
     },
   },
 ];
+
+export const CosmeticMatrixItems: CosmeticMatrixItem[] = CosmeticMatrixHeadwears.concat(
+  CosmeticMatrixMoustaches
+)
+  .concat(CosmeticMatrixBeards)
+  .concat(CosmeticMatrixSideburns);
