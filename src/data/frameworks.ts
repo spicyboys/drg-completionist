@@ -30,7 +30,7 @@ export const FrameworkIcon: Record<Framework, ImgSrc> = {
 
 export const FrameworkIDs: Record<
   MinerWeapon<Miner>,
-  Partial<Record<Framework, string>>
+  Record<Framework, string>
 > = {
   // Driller
   'CRSPR Flamethrower': {
@@ -95,8 +95,7 @@ export const FrameworkIDs: Record<
     Mechanized: '471E9B62C52B4243ACECDC6F24DD9D7D',
     Neonband: '0FA33FCAED92AD4EAFD8C47E1F076D86',
     'Scale Brigade': '294898A78E8E7B459B1E38402320E687',
-    // This weapon was released after the 'Waster' framework was introduced,
-    // so we do not list it here.
+    Waster: 'C4FF5849DDA9BE4C950DBB3BA49E73B5',
     "Builder's Choice": 'A73428B8D8D1374AB1AF3D619390A387',
     MilSpec: 'E884811E4B64714DB2DE57EC29EF5298',
   },
@@ -164,8 +163,7 @@ export const FrameworkIDs: Record<
     Mechanized: 'C4E4D10B8944614AA104E6197F5EFC70',
     Neonband: 'EABE767BEEF2CD45A4BD9B33B841D42E',
     'Scale Brigade': 'D1BC37E1512D67418A22765F2A8B15EB',
-    // This weapon was released after the 'Waster' framework was introduced,
-    // so we do not list it here.
+    Waster: 'A3DFB06533AC354C81AD8946D5AFE4F2',
     "Builder's Choice": 'D1F726BE92725442940E2F83CE217F37',
     MilSpec: 'A0B86E89D2C56C40834FA6768F705138',
   },
@@ -233,8 +231,7 @@ export const FrameworkIDs: Record<
     Mechanized: 'F98B0BE1498AEF42B5ADE7890EC77270',
     Neonband: '6A1CADAC7AD48C489E6D645C50886689',
     'Scale Brigade': '0F48414B7B6FB64794D47F44FA4734D9',
-    // This weapon was released after the 'Waster' framework was introduced,
-    // so we do not list it here.
+    Waster: '50ED4FE1B2758A40AEBEC16F3D5E6A8B',
     "Builder's Choice": '9E11CFB50A64F24D8DB668A4E4C55EA5',
     MilSpec: 'FDC5A51473356642B99EA3687BC57ECF',
   },
@@ -302,8 +299,7 @@ export const FrameworkIDs: Record<
     Mechanized: 'F9B8E96C71FF2E459C3D06BA70175D17',
     Neonband: '3E4350A85723C847A89B388C57655570',
     'Scale Brigade': '9B1D97F7686B8B4DB460D6CBAC18F92E',
-    // This weapon was released after the 'Waster' framework was introduced,
-    // so we do not list it here.
+    Waster: '5D25EFDC62D5A349B69FC40987BE5286',
     "Builder's Choice": '3448724AA0A47F43A0213E929248CCB7',
     MilSpec: '351FADEE3668F746B5140F2AFE320A8D',
   },
