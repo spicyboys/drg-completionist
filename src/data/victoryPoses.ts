@@ -8,7 +8,7 @@ export const CommonVictoryPoseNames = [
   'Classic Flex',
   'Confetti Cannon',
   // 'Crowd Pleaser', // unlocked by default
-  'Feeding Lootbug',
+  // 'Feeding Lootbug', // not obtainable right now, except you already got it
   'Handstand',
   'Juggle',
   'Knight',
@@ -16,7 +16,7 @@ export const CommonVictoryPoseNames = [
   'Pickaxe Throw',
   'Praise Me',
   // 'Proud Fist', // unlocked by default
-  'Salt',
+  // 'Salt', // not obtainable right now, except you already got it
   // 'Satisfied Applause',  // unlocked by default
   'Sharp Salute',
   'Smug Pushups',
@@ -80,11 +80,11 @@ export const CommonVictoryPoses: CommonVictoryPose[] = [
     icon: VictoryPoseIconSrcs.ConfettiCannon,
     id: '4F90B17E8B1C6F458810C886ACEB717C',
   },
-  {
-    name: 'Feeding Lootbug',
-    icon: VictoryPoseIconSrcs.FeedingLootbug,
-    id: 'FE4584A2CD8EA14B80AD8B0193623A91',
-  },
+  // {
+  //   name: 'Feeding Lootbug',
+  //   icon: VictoryPoseIconSrcs.FeedingLootbug,
+  //   id: 'FE4584A2CD8EA14B80AD8B0193623A91',
+  // },
   {
     name: 'Handstand',
     icon: VictoryPoseIconSrcs.Handstand,
@@ -115,11 +115,11 @@ export const CommonVictoryPoses: CommonVictoryPose[] = [
     icon: VictoryPoseIconSrcs.PraiseMe,
     id: '2D13472815AE1540A47F396FE2277817',
   },
-  {
-    name: 'Salt',
-    icon: VictoryPoseIconSrcs.Salt,
-    id: 'DCAE4CCDC24A884A92F4712D199C7C86',
-  },
+  // {
+  //   name: 'Salt',
+  //   icon: VictoryPoseIconSrcs.Salt,
+  //   id: 'DCAE4CCDC24A884A92F4712D199C7C86',
+  // },
   {
     name: 'Sharp Salute',
     icon: VictoryPoseIconSrcs.SharpSalute,
