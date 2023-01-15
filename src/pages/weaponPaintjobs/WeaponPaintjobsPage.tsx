@@ -17,6 +17,7 @@ export default function WeaponPaintjobPage() {
     const acquiredMatrixPaintjobs = await db.matrixWeaponPaintjobs
       .where('miner')
       .anyOf(miner)
+      .filter((paintjob) => paintjob.isForged)
       .count();
     const acquiredUniquePaintjobs = await db.uniqueWeaponPaintjobs
       .where('weapon')
