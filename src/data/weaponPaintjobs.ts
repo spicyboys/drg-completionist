@@ -4,9 +4,12 @@ import { Miner } from './miner';
 // These are weapon paintjobs that are unlocked for each weapon
 // individually
 export const UniqueWeaponPaintjobNames = [
-  'First Stripe',
-  'Deepcore',
-  'The Company Special',
+  // These are obtainable through weapon mod upgrades and not via
+  // matrix cores or lost packs. Since we do not want to track buyable
+  // paintjobs, we do not track these.
+  // 'First Stripe',
+  // 'Deepcore',
+  // 'The Company Special',
 ] as const;
 
 // These are weapon paintjobs that acquired through cosmetic
@@ -323,19 +326,19 @@ export const CommonWeaponPaintjobs: CommonWeaponPaintjob[] = [
 ];
 
 export const UniqueWeaponPaintjobs: UniqueWeaponPaintjob[] = [
-  {
-    name: 'First Stripe',
-    icon: PaintjobIconSrcs.FirstStripe,
-    id: '08D558F65F0C5945BAA4F9649A56589C',
-  },
-  {
-    name: 'Deepcore',
-    icon: PaintjobIconSrcs.Deepcore,
-    id: 'A5854A679A019D4DAA0178EE23FE4E9E',
-  },
-  {
-    name: 'The Company Special',
-    icon: PaintjobIconSrcs.TheCompanySpecial,
-    id: 'BF510980B965B540918AA0A29D8E052B',
-  },
+  // {
+  //   name: 'First Stripe',
+  //   icon: PaintjobIconSrcs.FirstStripe,
+  //   id: '08D558F65F0C5945BAA4F9649A56589C',
+  // },
+  // {
+  //   name: 'Deepcore',
+  //   icon: PaintjobIconSrcs.Deepcore,
+  //   id: 'A5854A679A019D4DAA0178EE23FE4E9E',
+  // },
+  // {
+  //   name: 'The Company Special',
+  //   icon: PaintjobIconSrcs.TheCompanySpecial,
+  //   id: 'BF510980B965B540918AA0A29D8E052B',
+  // },
 ];

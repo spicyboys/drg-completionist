@@ -42,7 +42,7 @@ export default function WeaponPaintjobPage() {
     <MinerPageLayout category="Weapons" getProgress={getProgress}>
       {(miner) => (
         <>
-          <MinerUniqueWeaponPaintjobs miner={miner as Miner} />
+          {UniqueWeaponPaintjobs.length > 0 && <MinerUniqueWeaponPaintjobs miner={miner as Miner} />}
           <MinerWeaponPaintjobs miner={miner as Miner} />
         </>
       )}
