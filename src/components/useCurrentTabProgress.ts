@@ -3,7 +3,7 @@ import { useEffect, useMemo } from 'react';
 import { TabName } from 'App';
 import { ArmorPaintjobs, CommonArmorPaintjobs } from 'data/armor';
 import { CosmeticMatrixItems } from 'data/cosmetics';
-import { FrameworkIDs } from 'data/frameworks';
+import { Frameworks } from 'data/frameworks';
 import { Miner } from 'data/miner';
 import { Overclocks } from 'data/overclocks';
 import {
@@ -33,7 +33,7 @@ export default function useCurrentTabProgress(
   const totalItems = useMemo(() => {
     switch (currentTab) {
       case 'frameworks':
-        return Object.values(FrameworkIDs).flatMap((w) => Object.values(w))
+        return Object.values(Frameworks).flatMap((w) => Object.values(w))
           .length;
       case 'overclocks':
         return Object.values(Overclocks)

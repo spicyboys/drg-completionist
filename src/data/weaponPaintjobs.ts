@@ -1,4 +1,5 @@
 import * as PaintjobIconSrcs from 'assets/weaponPaintjobs';
+import { ItemSource } from 'types/itemSource';
 import { Miner } from './miner';
 
 // These are weapon paintjobs that are unlocked for each weapon
@@ -62,6 +63,7 @@ export const CommonWeaponPaintjobNames = [
 
 type WeaponPaintjob = {
   name: string;
+  itemSource: ItemSource;
   icon: ImgSrc;
   id: string;
 };
@@ -82,6 +84,7 @@ export type CommonWeaponPaintjob = Omit<WeaponPaintjob, 'name'> & {
 export const MatrixWeaponPaintjobs: MatrixWeaponPaintjob[] = [
   {
     name: 'Beyond the Circuit',
+    itemSource: ItemSource.MatrixCore,
     icon: PaintjobIconSrcs.BeyondTheCircuit,
     id: 'D826AB19A2BEE94384AF511D9D7FE1FD',
     matrixCoreIds: {
@@ -93,6 +96,7 @@ export const MatrixWeaponPaintjobs: MatrixWeaponPaintjob[] = [
   },
   {
     name: 'Dark Descent',
+    itemSource: ItemSource.MatrixCore,
     icon: PaintjobIconSrcs.DarkDescent,
     id: 'EABD44801F5E934A8E69BE4B0EED7C35',
     matrixCoreIds: {
@@ -104,6 +108,7 @@ export const MatrixWeaponPaintjobs: MatrixWeaponPaintjob[] = [
   },
   {
     name: 'Desert Ranger',
+    itemSource: ItemSource.MatrixCore,
     icon: PaintjobIconSrcs.DesertRanger,
     id: 'BA5793B566282C40A2FB7778C799A96C',
     matrixCoreIds: {
@@ -115,6 +120,7 @@ export const MatrixWeaponPaintjobs: MatrixWeaponPaintjob[] = [
   },
   {
     name: 'Digital Danger',
+    itemSource: ItemSource.MatrixCore,
     icon: PaintjobIconSrcs.DigitalDanger,
     id: '7466A7F7766C18459E6BA5C9BEEFF312',
     matrixCoreIds: {
@@ -126,6 +132,7 @@ export const MatrixWeaponPaintjobs: MatrixWeaponPaintjob[] = [
   },
   {
     name: 'Ghostly Pale',
+    itemSource: ItemSource.MatrixCore,
     icon: PaintjobIconSrcs.GhostlyPale,
     id: 'A17A38BA612F4A498F92BE6703328208',
     matrixCoreIds: {
@@ -137,6 +144,7 @@ export const MatrixWeaponPaintjobs: MatrixWeaponPaintjob[] = [
   },
   {
     name: 'Jungle Raid',
+    itemSource: ItemSource.MatrixCore,
     icon: PaintjobIconSrcs.JungleRaid,
     id: '1957D372B4B35C4D954C51A780C473E5',
     matrixCoreIds: {
@@ -148,6 +156,7 @@ export const MatrixWeaponPaintjobs: MatrixWeaponPaintjob[] = [
   },
   {
     name: 'Metallic Vintage',
+    itemSource: ItemSource.MatrixCore,
     icon: PaintjobIconSrcs.MetallicVintage,
     id: 'E88044A4EC7D1241A8ACFECB00CD8E4F',
     matrixCoreIds: {
@@ -159,6 +168,7 @@ export const MatrixWeaponPaintjobs: MatrixWeaponPaintjob[] = [
   },
   {
     name: 'Mint Assault',
+    itemSource: ItemSource.MatrixCore,
     icon: PaintjobIconSrcs.MintAssault,
     id: '51B09F80D624FB4BB3D205189686B06E',
     matrixCoreIds: {
@@ -170,6 +180,7 @@ export const MatrixWeaponPaintjobs: MatrixWeaponPaintjob[] = [
   },
   {
     name: 'Primal Blood',
+    itemSource: ItemSource.MatrixCore,
     icon: PaintjobIconSrcs.PrimalBlood,
     id: '6FD2A372F8B4AA4DAB32181383E9784B',
     matrixCoreIds: {
@@ -181,6 +192,7 @@ export const MatrixWeaponPaintjobs: MatrixWeaponPaintjob[] = [
   },
   {
     name: 'Tool of Destruction',
+    itemSource: ItemSource.MatrixCore,
     icon: PaintjobIconSrcs.ToolOfDestruction,
     id: '0E4D7888ACE8774493ABFE9791AA4401',
     matrixCoreIds: {
@@ -192,6 +204,7 @@ export const MatrixWeaponPaintjobs: MatrixWeaponPaintjob[] = [
   },
   {
     name: 'Trusty Rusty',
+    itemSource: ItemSource.MatrixCore,
     icon: PaintjobIconSrcs.TrustyRusty,
     id: '3396FB4FAECC3048B0B789D09399B690',
     matrixCoreIds: {
@@ -203,6 +216,7 @@ export const MatrixWeaponPaintjobs: MatrixWeaponPaintjob[] = [
   },
   {
     name: 'Warmonger',
+    itemSource: ItemSource.MatrixCore,
     icon: PaintjobIconSrcs.Warmonger,
     id: '26B8E6D501A45E46977CAD539A6C94E7',
     matrixCoreIds: {
@@ -214,6 +228,7 @@ export const MatrixWeaponPaintjobs: MatrixWeaponPaintjob[] = [
   },
   {
     name: 'Copper Patinate',
+    itemSource: ItemSource.MatrixCore,
     icon: PaintjobIconSrcs.CopperPatinate,
     id: '4A1FC304A8E3DD4E943E7133DCBE8BB4',
     matrixCoreIds: {
@@ -225,6 +240,7 @@ export const MatrixWeaponPaintjobs: MatrixWeaponPaintjob[] = [
   },
   {
     name: 'Deep Sea Defender',
+    itemSource: ItemSource.MatrixCore,
     icon: PaintjobIconSrcs.DeepSeaDefender,
     id: '13A9CBE045098D4B8105D0D5AFE380EC',
     matrixCoreIds: {
@@ -236,6 +252,7 @@ export const MatrixWeaponPaintjobs: MatrixWeaponPaintjob[] = [
   },
   {
     name: 'Moss Crawler',
+    itemSource: ItemSource.MatrixCore,
     icon: PaintjobIconSrcs.MossCrawler,
     id: 'CEA1CFF97FBEC24B8E9E08AC756CE034',
     matrixCoreIds: {
@@ -247,6 +264,7 @@ export const MatrixWeaponPaintjobs: MatrixWeaponPaintjob[] = [
   },
   {
     name: 'Scratched Metal',
+    itemSource: ItemSource.MatrixCore,
     icon: PaintjobIconSrcs.ScratchedMetal,
     id: 'AB17B146AA0D0348A19206EFB2188835',
     matrixCoreIds: {
@@ -258,6 +276,7 @@ export const MatrixWeaponPaintjobs: MatrixWeaponPaintjob[] = [
   },
   {
     name: 'Bootcamp',
+    itemSource: ItemSource.MatrixCore,
     icon: PaintjobIconSrcs.BootCamp,
     id: 'A134866D6E29CD4C8AA37704DDBDC3A7',
     matrixCoreIds: {
@@ -269,6 +288,7 @@ export const MatrixWeaponPaintjobs: MatrixWeaponPaintjob[] = [
   },
   {
     name: 'Fiery',
+    itemSource: ItemSource.MatrixCore,
     icon: PaintjobIconSrcs.Fiery,
     id: 'A6173B15A79B5149AB59124FBCCA31EE',
     matrixCoreIds: {
@@ -280,6 +300,7 @@ export const MatrixWeaponPaintjobs: MatrixWeaponPaintjob[] = [
   },
   {
     name: 'Predator',
+    itemSource: ItemSource.MatrixCore,
     icon: PaintjobIconSrcs.Predator,
     id: 'F5E185065AD96C478E32B3644C87B0B9',
     matrixCoreIds: {
@@ -291,6 +312,7 @@ export const MatrixWeaponPaintjobs: MatrixWeaponPaintjob[] = [
   },
   {
     name: 'Salt Crystal',
+    itemSource: ItemSource.MatrixCore,
     icon: PaintjobIconSrcs.SaltCrystal,
     id: '5902CD23C3DA1B4CBB5FF01057F15E37',
     matrixCoreIds: {
@@ -305,21 +327,25 @@ export const MatrixWeaponPaintjobs: MatrixWeaponPaintjob[] = [
 export const CommonWeaponPaintjobs: CommonWeaponPaintjob[] = [
   {
     name: 'Acid Wash',
+    itemSource: ItemSource.PerformancePass,
     icon: PaintjobIconSrcs.AcidWash,
     id: 'A5C3686A9799F5468C5B06D949ADC008',
   },
   {
     name: 'Golden Mauve',
+    itemSource: ItemSource.PerformancePass,
     icon: PaintjobIconSrcs.GoldenMauve,
     id: 'D61ADA8A49A2634093621B772D845E3A',
   },
   {
     name: 'Military',
+    itemSource: ItemSource.PerformancePass,
     icon: PaintjobIconSrcs.Military,
     id: '07050D026A127B4B9C614D5812BD0563',
   },
   {
     name: 'Sleek',
+    itemSource: ItemSource.PerformancePass,
     icon: PaintjobIconSrcs.Sleek,
     id: '68BBAA8468499C4AB03DDFEF6771E3E1',
   },
@@ -328,16 +354,19 @@ export const CommonWeaponPaintjobs: CommonWeaponPaintjob[] = [
 export const UniqueWeaponPaintjobs: UniqueWeaponPaintjob[] = [
   // {
   //   name: 'First Stripe',
+  //   itemSource: ItemSource.Mastery,
   //   icon: PaintjobIconSrcs.FirstStripe,
   //   id: '08D558F65F0C5945BAA4F9649A56589C',
   // },
   // {
   //   name: 'Deepcore',
+  //   itemSource: ItemSource.Mastery,
   //   icon: PaintjobIconSrcs.Deepcore,
   //   id: 'A5854A679A019D4DAA0178EE23FE4E9E',
   // },
   // {
   //   name: 'The Company Special',
+  //   itemSource: ItemSource.Mastery,
   //   icon: PaintjobIconSrcs.TheCompanySpecial,
   //   id: 'BF510980B965B540918AA0A29D8E052B',
   // },

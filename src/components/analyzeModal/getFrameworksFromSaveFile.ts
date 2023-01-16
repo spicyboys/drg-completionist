@@ -1,5 +1,5 @@
 import type { SaveFile } from 'drg-save-parser';
-import { Framework, FrameworkIDs } from 'data/frameworks';
+import { Frameworks } from 'data/frameworks';
 import { WeaponIDs } from 'data/weapons';
 import type { FrameworkEntry } from 'db/AppDatabase';
 import { flipObject } from 'utils/object';
@@ -15,16 +15,12 @@ export const getFrameworksFromSaveFile = ({
       return;
     }
 
-    const frameworks = Object.entries(FrameworkIDs[weapon])
-      .filter((framework_id_mapping) =>
-        frameworkIDs.includes(framework_id_mapping[1])
-      )
-      .map(
-        (framework_id_mapping) => framework_id_mapping[0] as Framework
-      ) as Framework[];
+    const frameworks = Frameworks[weapon].filter((framework) =>
+      frameworkIDs.includes(framework.id)
+    );
 
     for (const framework of frameworks) {
-      acquiredFrameworks.push({ weapon: weapon, name: framework });
+      acquiredFrameworks.push({ weapon: weapon, name: framework.name });
     }
   });
   return acquiredFrameworks;

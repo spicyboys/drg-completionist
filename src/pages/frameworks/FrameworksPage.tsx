@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import { Frameworks } from 'data/frameworks';
+import { FrameworkNames } from 'data/frameworks';
 import { Miner } from 'data/miner';
 import { MinerWeapons } from 'data/weapons';
 import { AppDatabase } from 'db/AppDatabase';
@@ -13,7 +13,7 @@ export default function FrameworksPage() {
       .where('weapon')
       .anyOf(weapons)
       .count();
-    return acquiredFrameworks / (Frameworks.length * weapons.length);
+    return acquiredFrameworks / (FrameworkNames.length * weapons.length);
   }, []);
   return (
     <MinerPageLayout category="WeaponFrameworks" getProgress={getProgress}>

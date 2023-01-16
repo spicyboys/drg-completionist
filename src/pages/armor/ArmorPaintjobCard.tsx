@@ -1,9 +1,10 @@
-import { Badge, Card, Col } from 'antd';
+import { Badge, Card, Col, Row } from 'antd';
 import { useCallback } from 'react';
 import { ArmorPaintjob } from 'data/armor';
 import { Miner, MinerColor } from 'data/miner';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
+import ItemOrigin from 'pages/ItemOrigin';
 import ArmorPaintjobIcon from './ArmorPaintjobIcon';
 import './ArmorPaintjobCard.css';
 
@@ -50,6 +51,11 @@ export default function ArmorPaintjobCard(props: {
           }}
         >
           <ArmorPaintjobIcon paintjob={props.paintjob} />
+          <Row justify="end">
+            <Col>
+              <ItemOrigin item={props.paintjob} acquired={query && true} />
+            </Col>
+          </Row>
         </Card>
       </Badge.Ribbon>
     </Col>

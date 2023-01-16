@@ -1,4 +1,5 @@
 import * as CosmeticIconSrcs from 'assets/cosmeticMatrixCoreItems';
+import { ItemSource } from 'types/itemSource';
 import { Miner } from './miner';
 
 export const CosmeticMatrixItemNames = [
@@ -97,6 +98,7 @@ export const CosmeticMatrixItemNames = [
 
 export type CosmeticMatrixItem = {
   name: typeof CosmeticMatrixItemNames[number];
+  itemSource: ItemSource;
   icon: ImgSrc;
   id: string;
   matrixCoreIds: Record<Miner, string>;
@@ -105,6 +107,7 @@ export type CosmeticMatrixItem = {
 export const CosmeticMatrixHeadwears: CosmeticMatrixItem[] = [
   {
     name: 'Biker Helmet',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.BikerHelmet,
     id: 'C29C109682E03C4EA5E1DE495DE3D506',
     matrixCoreIds: {
@@ -116,6 +119,7 @@ export const CosmeticMatrixHeadwears: CosmeticMatrixItem[] = [
   },
   {
     name: 'Cyborg Eye',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.CyborgEye,
     id: '776CCA88136FEC41A76E4218CA737355',
     matrixCoreIds: {
@@ -127,6 +131,7 @@ export const CosmeticMatrixHeadwears: CosmeticMatrixItem[] = [
   },
   {
     name: 'First Blood',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.FirstBlood,
     id: '7956915D7BC4A74B978A103663F2BE3B',
     matrixCoreIds: {
@@ -138,6 +143,7 @@ export const CosmeticMatrixHeadwears: CosmeticMatrixItem[] = [
   },
   {
     name: 'Forehead Goggles',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.ForeheadGoggles,
     id: 'DA9AE45F01DE254389F6253921709761',
     matrixCoreIds: {
@@ -149,6 +155,7 @@ export const CosmeticMatrixHeadwears: CosmeticMatrixItem[] = [
   },
   {
     name: 'Full Headwrap',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.FullHeadwrap,
     id: '2C7A6F180DBA854C86133DB1BCEECC88',
     matrixCoreIds: {
@@ -160,6 +167,7 @@ export const CosmeticMatrixHeadwears: CosmeticMatrixItem[] = [
   },
   {
     name: 'Geek Chic',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.GeekChic,
     id: '2DAAAAF9B5A4F545BB6FD98D1C3BCE5A',
     matrixCoreIds: {
@@ -171,6 +179,7 @@ export const CosmeticMatrixHeadwears: CosmeticMatrixItem[] = [
   },
   {
     name: 'Gem-Studded Headcover',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.GemStuddedHeadcover,
     id: '1868B08AF1D40B4FA456D3B9BCED5E85',
     matrixCoreIds: {
@@ -182,6 +191,7 @@ export const CosmeticMatrixHeadwears: CosmeticMatrixItem[] = [
   },
   {
     name: 'Goggled Headwrap',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.GoggledHeadwrap,
     id: '12A28277E3469044999E763B7912B84F',
     matrixCoreIds: {
@@ -193,6 +203,7 @@ export const CosmeticMatrixHeadwears: CosmeticMatrixItem[] = [
   },
   {
     name: 'Grim Specter - Full Face',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.GrimSpecterFullFace,
     id: '8F3DFE2A24DDCA49B46C718EFC126BDB',
     matrixCoreIds: {
@@ -204,6 +215,7 @@ export const CosmeticMatrixHeadwears: CosmeticMatrixItem[] = [
   },
   {
     name: 'Grim Specter - Half Face',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.GrimSpecterHalfFace,
     id: 'E43EE34B9D19FB489F018799254468DB',
     matrixCoreIds: {
@@ -215,6 +227,7 @@ export const CosmeticMatrixHeadwears: CosmeticMatrixItem[] = [
   },
   {
     name: 'Heatwave',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.Heatwave,
     id: '13A4B455385A2740938F2B665B606F77',
     matrixCoreIds: {
@@ -226,6 +239,7 @@ export const CosmeticMatrixHeadwears: CosmeticMatrixItem[] = [
   },
   {
     name: 'Hex Helmet',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.HexHelmet,
     id: 'CDAFEEE41B809F458F9E2BC4E84C9AA9',
     matrixCoreIds: {
@@ -237,6 +251,7 @@ export const CosmeticMatrixHeadwears: CosmeticMatrixItem[] = [
   },
   {
     name: 'Hockey Mask',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.HockeyMask,
     id: 'D250E847E41EB643AC0CE4E833412365',
     matrixCoreIds: {
@@ -248,6 +263,7 @@ export const CosmeticMatrixHeadwears: CosmeticMatrixItem[] = [
   },
   {
     name: 'Iron Cyclops',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.IronCyclops,
     id: '65DE56A5D82A804C8F3B485FBB68FB48',
     matrixCoreIds: {
@@ -259,6 +275,7 @@ export const CosmeticMatrixHeadwears: CosmeticMatrixItem[] = [
   },
   {
     name: 'Shock Trooper',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.ShockTrooper,
     id: '3E81AFDDF5224B47B34D158D9C10D6E8',
     matrixCoreIds: {
@@ -270,6 +287,7 @@ export const CosmeticMatrixHeadwears: CosmeticMatrixItem[] = [
   },
   {
     name: 'Space Biker',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.SpaceBiker,
     id: '29FC810DA1DFB34DA4B793C4BD9C8EA7',
     matrixCoreIds: {
@@ -281,6 +299,7 @@ export const CosmeticMatrixHeadwears: CosmeticMatrixItem[] = [
   },
   {
     name: 'Spiked Mohawk',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.SpikedMohawk,
     id: '26C18FE043B0E44882A7329B27FE9A41',
     matrixCoreIds: {
@@ -292,6 +311,7 @@ export const CosmeticMatrixHeadwears: CosmeticMatrixItem[] = [
   },
   {
     name: 'Tech Eye',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.TechEye,
     id: 'FC4B789FB174184A9F8C97A5645865D0',
     matrixCoreIds: {
@@ -303,6 +323,7 @@ export const CosmeticMatrixHeadwears: CosmeticMatrixItem[] = [
   },
   {
     name: 'Tech Trooper',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.TechTrooper,
     id: 'F7B23A2CD61DC645A5B299209C365499',
     matrixCoreIds: {
@@ -314,6 +335,7 @@ export const CosmeticMatrixHeadwears: CosmeticMatrixItem[] = [
   },
   {
     name: 'Techy Hard Hat',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.TechyHardHat,
     id: '6C761BE349A37C44BB97307A89C079CC',
     matrixCoreIds: {
@@ -328,6 +350,7 @@ export const CosmeticMatrixHeadwears: CosmeticMatrixItem[] = [
 export const CosmeticMatrixMoustaches: CosmeticMatrixItem[] = [
   {
     name: 'Bangled Braids',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.BangledBraids,
     id: 'F056382C58B5374B96E3D3D2FC353BF0',
     matrixCoreIds: {
@@ -339,6 +362,7 @@ export const CosmeticMatrixMoustaches: CosmeticMatrixItem[] = [
   },
   {
     name: "Big Ol' Swirls",
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.BigOlSwirls,
     id: 'F38E260CEB0A13428580AE12EFC8556B',
     matrixCoreIds: {
@@ -350,6 +374,7 @@ export const CosmeticMatrixMoustaches: CosmeticMatrixItem[] = [
   },
   {
     name: 'Bound Braids',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.BoundBraids,
     id: '158BD2B53090F34995C10077063C1A84',
     matrixCoreIds: {
@@ -361,6 +386,7 @@ export const CosmeticMatrixMoustaches: CosmeticMatrixItem[] = [
   },
   {
     name: 'Braided Boldness',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.BraidedBoldness,
     id: '29632877737C4143AC1BF4D2039D7D8E',
     matrixCoreIds: {
@@ -372,6 +398,7 @@ export const CosmeticMatrixMoustaches: CosmeticMatrixItem[] = [
   },
   {
     name: 'Bushy Goodguy',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.BushyGoodGuy,
     id: '8BAA8ACAE543F942A97741EB2BC8A6C9',
     matrixCoreIds: {
@@ -383,6 +410,7 @@ export const CosmeticMatrixMoustaches: CosmeticMatrixItem[] = [
   },
   {
     name: 'Crescent Moon',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.CrescentMoon,
     id: '23BDA21C5AD4824C898E73D73154F2A4',
     matrixCoreIds: {
@@ -394,6 +422,7 @@ export const CosmeticMatrixMoustaches: CosmeticMatrixItem[] = [
   },
   {
     name: 'Curly Optimist',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.CurlyOptimist,
     id: '55CED858E63CD043A3257B21B7926F94',
     matrixCoreIds: {
@@ -405,6 +434,7 @@ export const CosmeticMatrixMoustaches: CosmeticMatrixItem[] = [
   },
   {
     name: 'Dandy Handlebar',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.DandyHandlebar,
     id: '2534842703D28B40A281EC995B2DFB84',
     matrixCoreIds: {
@@ -416,6 +446,7 @@ export const CosmeticMatrixMoustaches: CosmeticMatrixItem[] = [
   },
   {
     name: 'Exquisite Handlebar',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.ExquisiteHandlebar,
     id: 'F806CA3C6AAF024B9563E6B048CFEB85',
     matrixCoreIds: {
@@ -427,6 +458,7 @@ export const CosmeticMatrixMoustaches: CosmeticMatrixItem[] = [
   },
   {
     name: 'Lowrider',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.Lowrider,
     id: '7E15F5F5DD74C64093C6A71DE595ACA8',
     matrixCoreIds: {
@@ -438,6 +470,7 @@ export const CosmeticMatrixMoustaches: CosmeticMatrixItem[] = [
   },
   {
     name: 'Magnificent Raider',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.MagnificentRaider,
     id: '63FBDD5A2A7C7B409CD0DD1AEB1512F0',
     matrixCoreIds: {
@@ -449,6 +482,7 @@ export const CosmeticMatrixMoustaches: CosmeticMatrixItem[] = [
   },
   {
     name: 'Marshall',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.Marshall,
     id: '4578AF1EB393ED44975A704C0CE8C924',
     matrixCoreIds: {
@@ -460,6 +494,7 @@ export const CosmeticMatrixMoustaches: CosmeticMatrixItem[] = [
   },
   {
     name: 'Spiky Neurotic',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.SpikyNeurotic,
     id: '61A5F62545CDF445A4FA76FAFA9CEF8E',
     matrixCoreIds: {
@@ -471,6 +506,7 @@ export const CosmeticMatrixMoustaches: CosmeticMatrixItem[] = [
   },
   {
     name: 'Swirly Droop',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.SwirlyDroop,
     id: '2E8E8E56F0B1A948BBCB9640EFCCF327',
     matrixCoreIds: {
@@ -485,6 +521,7 @@ export const CosmeticMatrixMoustaches: CosmeticMatrixItem[] = [
 export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   {
     name: 'Bound Goatee',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.BoundGoatee,
     id: '6B746417B26DC5408AD41BDC47DA854C',
     matrixCoreIds: {
@@ -496,6 +533,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Bound Goatee - Armored',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.BoundGoateeArmored,
     id: '921373546ACFCE408BF88BF57C976489',
     matrixCoreIds: {
@@ -507,6 +545,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Bound Goatee - Gilded',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.BoundGoateeGilded,
     id: '8983FBDB029B7641B44EA6154B3D0F9E',
     matrixCoreIds: {
@@ -518,6 +557,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Bound Unicord',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.BoundUnicord,
     id: '1473968C92BF514FAAA6CC28F6850AC0',
     matrixCoreIds: {
@@ -529,6 +569,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Bound Unicord - Armored',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.BoundUnicordArmored,
     id: '9721B0FDF03222438AF6991FA771718F',
     matrixCoreIds: {
@@ -540,6 +581,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Bound Unicord - Gilded',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.BoundUnicordGilded,
     id: 'A62E6779884C3947B5BC42266CB4C4B4',
     matrixCoreIds: {
@@ -551,6 +593,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Braided Abundance',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.BraidedAbundance,
     id: '1EBFE7D42C2BF540A4C473A59F7EFFC9',
     matrixCoreIds: {
@@ -562,6 +605,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Braided Abundance - Armored',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.BraidedAbundanceArmored,
     id: '025DA252D10DE942B35904A88D73F4A8',
     matrixCoreIds: {
@@ -573,6 +617,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Braided Abundance - Gilded',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.BraidedAbundanceGilded,
     id: '5B186AFF4E74BE4193E7C8F5422DFD67',
     matrixCoreIds: {
@@ -584,6 +629,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Crested Waterfall',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.CrestedWaterfall,
     id: 'E03A35F4A4BBDD4DA818994CFB344735',
     matrixCoreIds: {
@@ -595,6 +641,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Double Horsetails',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.DoubleHorsetails,
     id: '796C0B8C2882FC4797992B92CA4CE7D9',
     matrixCoreIds: {
@@ -606,6 +653,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Double Horsetails - Armored',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.DoubleHorsetailsArmored,
     id: '11A02805529EC74E8D24DE9FDE3E12E4',
     matrixCoreIds: {
@@ -617,6 +665,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Double Horsetails - Gilded',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.DoubleHorsetailsGilded,
     id: '5084DB00951DDE44A1CA408B40FA3ED1',
     matrixCoreIds: {
@@ -628,6 +677,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Great Fork',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.GreatFork,
     id: '4700BA086A0FB149BC1AEA9585B585E4',
     matrixCoreIds: {
@@ -639,6 +689,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Great Fork - Armored',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.GreatForkArmored,
     id: 'F11A46772F449E41B64C2928C5B31236',
     matrixCoreIds: {
@@ -650,6 +701,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Great Fork - Gilded',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.GreatForkGilded,
     id: '82CB30ABD9CEC74193660F98A4BF4654',
     matrixCoreIds: {
@@ -661,6 +713,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Industrial Facemask',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.IndustrialFacemask,
     id: '6CE1676A204FFC48BEC0FF3E007CBDB7',
     matrixCoreIds: {
@@ -672,6 +725,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Massive Braid',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.MassiveBraid,
     id: 'A479CBAAAA10A842A07E5CB8820EAB63',
     matrixCoreIds: {
@@ -683,6 +737,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Massive Braid - Armored',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.MassiveBraidArmored,
     id: '2712FF6C88B51E40A62F506CDF2272D9',
     matrixCoreIds: {
@@ -694,6 +749,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Massive Braid - Gilded',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.MassiveBraidGilded,
     id: 'E87122087C67AD47B68F86E58EDD13DC',
     matrixCoreIds: {
@@ -705,6 +761,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Mighty Pelt',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.MightyPelt,
     id: 'DFBE35D9F9824C408D668976A4A661C7',
     matrixCoreIds: {
@@ -716,6 +773,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Mighty Pelt - Armored',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.MightyPeltArmored,
     id: '3BDDB674C3DF7F4E9CD1B7D003D20D04',
     matrixCoreIds: {
@@ -727,6 +785,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Mighty Pelt - Gilded',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.MightyPeltGilded,
     id: 'CD98E28914D16742A5564668CF10021E',
     matrixCoreIds: {
@@ -738,6 +797,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Monumental Goatee',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.MonumentalGoatee,
     id: 'AFB031BEBA1B6B488E83FEEF782F8E4F',
     matrixCoreIds: {
@@ -749,6 +809,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Monumental Goatee - Armored',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.MonumentalGoateeArmored,
     id: 'A7E3FF826A8AE04EAA10745A59A828D3',
     matrixCoreIds: {
@@ -760,6 +821,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Monumental Goatee - Gilded',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.MonumentalGoateeGilded,
     id: '7B16C9555B75B2439E3A3513D14DCC62',
     matrixCoreIds: {
@@ -771,6 +833,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Neck Guard',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.NeckGuard,
     id: 'F2C49A21698A494D9A9E60ED4FE58763',
     matrixCoreIds: {
@@ -782,6 +845,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Positronic Neckbrace',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.PositronicNeckbrace,
     id: '5880353DAF14504A93F0B614681F7DED',
     matrixCoreIds: {
@@ -793,6 +857,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Rambunctious Elder',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.RambunctiousElder,
     id: '35DF374A4626E64EBA62F2DD9BC2385A',
     matrixCoreIds: {
@@ -804,6 +869,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Savage Full',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.SavageFull,
     id: '261CC3A2CED27845BB3C9DA1292BB758',
     matrixCoreIds: {
@@ -815,6 +881,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Savage Full - Armored',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.SavageFullArmored,
     id: 'A7EE9F2F31B0E74E86D546338AC016E0',
     matrixCoreIds: {
@@ -826,6 +893,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Savage Full - Gilded',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.SavageFullGilded,
     id: '1E5AC6A94A2ABF488552F93035200C86',
     matrixCoreIds: {
@@ -837,6 +905,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Scorpion Mask',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.ScorpionMask,
     id: 'C5EB43E7C52E8441A0959EB7076BB54C',
     matrixCoreIds: {
@@ -848,6 +917,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Shaving Accident',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.ShavingAccident,
     id: 'C5079E17CD91354BA28739560C25A15A',
     matrixCoreIds: {
@@ -859,6 +929,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Tank Division',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.TankDivision,
     id: 'AEF7A9BC3DABC249AA4F24266BD7B0F2',
     matrixCoreIds: {
@@ -870,6 +941,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Triple Trouble',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.TripleTrouble,
     id: '94EACBDE315E9147961BCE51A35DC702',
     matrixCoreIds: {
@@ -881,6 +953,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Triple Trouble - Armored',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.TripleTroubleArmored,
     id: 'DCDDB81EF75A6C45927FD2DD76B04EF1',
     matrixCoreIds: {
@@ -892,6 +965,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Triple Trouble - Gilded',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.TripleTroubleGilded,
     id: '60338E2F6A8F7145A7907D5C8E887C8C',
     matrixCoreIds: {
@@ -903,6 +977,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Twinned Wintry',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.TwinnedWintry,
     id: '703E0DF32EA7BD4BB3B11A06FE94B7BD',
     matrixCoreIds: {
@@ -914,6 +989,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Twinned Wintry - Armored',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.TwinnedWintryArmored,
     id: '67938C1DC01658419C36982EBE4743B6',
     matrixCoreIds: {
@@ -925,6 +1001,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
   },
   {
     name: 'Twinned Wintry - Gilded',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.TwinnedWintryGilded,
     id: '0893B1F939A03E469F3217C2A3258C98',
     matrixCoreIds: {
@@ -939,6 +1016,7 @@ export const CosmeticMatrixBeards: CosmeticMatrixItem[] = [
 export const CosmeticMatrixSideburns: CosmeticMatrixItem[] = [
   {
     name: 'Berserker',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.Berserker,
     id: 'C55610E4539A36489DEEF0A5710D5309',
     matrixCoreIds: {
@@ -950,6 +1028,7 @@ export const CosmeticMatrixSideburns: CosmeticMatrixItem[] = [
   },
   {
     name: 'Braided Bangles',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.BraidedBangles,
     id: 'D70225ED33671745B2F6C019C0213CDE',
     matrixCoreIds: {
@@ -961,6 +1040,7 @@ export const CosmeticMatrixSideburns: CosmeticMatrixItem[] = [
   },
   {
     name: 'Immense Danglies',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.ImmenseDanglies,
     id: '172886218300EE4FB4D51CF18B78B966',
     matrixCoreIds: {
@@ -972,6 +1052,7 @@ export const CosmeticMatrixSideburns: CosmeticMatrixItem[] = [
   },
   {
     name: 'Jovial Majesty',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.JovialMajesty,
     id: 'EDF7CF656F43054FB700B8978BEBDC04',
     matrixCoreIds: {
@@ -983,6 +1064,7 @@ export const CosmeticMatrixSideburns: CosmeticMatrixItem[] = [
   },
   {
     name: 'Pointed Noble',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.PointedNoble,
     id: '5D65A62D4FF51848B560833B85660B4F',
     matrixCoreIds: {
@@ -994,6 +1076,7 @@ export const CosmeticMatrixSideburns: CosmeticMatrixItem[] = [
   },
   {
     name: 'Rounded Muttonchops',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.RoundedMuttonchops,
     id: 'DD94431ABF62B948BE6259127499A0A5',
     matrixCoreIds: {
@@ -1005,6 +1088,7 @@ export const CosmeticMatrixSideburns: CosmeticMatrixItem[] = [
   },
   {
     name: 'The Thickest',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.TheThickest,
     id: 'C4E7184FAEF28E4F8E50D11B1B968804',
     matrixCoreIds: {
@@ -1016,6 +1100,7 @@ export const CosmeticMatrixSideburns: CosmeticMatrixItem[] = [
   },
   {
     name: 'Upbeat Youngling',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.UpbeatYoungling,
     id: 'AFEF616562A05E4D8FF18CB3631FF416',
     matrixCoreIds: {
@@ -1027,6 +1112,7 @@ export const CosmeticMatrixSideburns: CosmeticMatrixItem[] = [
   },
   {
     name: 'Valiant Berserker',
+    itemSource: ItemSource.MatrixCore,
     icon: CosmeticIconSrcs.ValiantBerserker,
     id: 'BBF93120B839B949A0A01D2017C209A4',
     matrixCoreIds: {

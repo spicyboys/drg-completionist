@@ -1,12 +1,10 @@
-import { Badge, Card, Col, Row, Tooltip } from 'antd';
+import { Badge, Card, Col, Row } from 'antd';
 import { useCallback } from 'react';
-import { isMobile } from 'react-device-detect';
-import { Assignment } from 'assets/other';
-import Image from 'components/Image';
 import { Miner, MinerColor } from 'data/miner';
 import { CommonWeaponPaintjob } from 'data/weaponPaintjobs';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
+import ItemOrigin from 'pages/ItemOrigin';
 import WeaponPaintjobIcon from './WeaponPaintjobIcon';
 import './WeaponPaintjobCard.css';
 
@@ -66,25 +64,9 @@ export default function CommonWeaponPaintjobCard(props: {
           <WeaponPaintjobIcon weaponPaintjob={props.weaponPaintjob} />
 
           <Row justify="space-between">
-            <Col flex="auto"></Col>
+            <Col flex="auto" />
             <Col>
-              <Tooltip
-                title="Obtained via Performance Pass"
-                trigger={isMobile ? 'click' : 'hover'}
-                destroyTooltipOnHide
-              >
-                <Image
-                  alt={`${props.weaponPaintjob.name} is acquired through Performance Pass`}
-                  src={Assignment}
-                  style={{
-                    float: 'right',
-                    height: isMobile ? 30 : 20,
-                    marginTop: isMobile ? -30 : -20,
-                    opacity: 1,
-                    width: 'auto',
-                  }}
-                />
-              </Tooltip>
+              <ItemOrigin item={props.weaponPaintjob} />
             </Col>
           </Row>
         </Card>

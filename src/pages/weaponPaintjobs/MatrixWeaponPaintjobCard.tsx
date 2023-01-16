@@ -1,12 +1,13 @@
 import { Badge, Card, Col, Row, Tooltip } from 'antd';
 import { useCallback } from 'react';
 import { isMobile } from 'react-device-detect';
-import { ForgeHammer, MatrixCore } from 'assets/other';
+import { ForgeHammer } from 'assets/other';
 import Image from 'components/Image';
 import { Miner, MinerColor } from 'data/miner';
 import { MatrixWeaponPaintjob } from 'data/weaponPaintjobs';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
+import ItemOrigin from 'pages/ItemOrigin';
 import WeaponPaintjobIcon from './WeaponPaintjobIcon';
 import './WeaponPaintjobCard.css';
 
@@ -103,25 +104,7 @@ export default function MatrixWeaponPaintjobCard(props: {
               </Tooltip>
             </Col>
             <Col>
-              <Tooltip
-                title="Obtained via Cosmetic Matrix Cores"
-                trigger={isMobile ? 'click' : 'hover'}
-                destroyTooltipOnHide
-                style={{ float: 'right' }}
-              >
-                <Image
-                  alt={`${props.weaponPaintjob.name} is acquired through Cosmetic Matrix Cores`}
-                  src={MatrixCore}
-                  key={`${props.miner + props.weaponPaintjob.name}-matrix-core`}
-                  style={{
-                    float: 'right',
-                    height: isMobile ? 30 : 20,
-                    marginTop: isMobile ? -30 : -20,
-                    opacity: 1,
-                    width: 'auto',
-                  }}
-                />
-              </Tooltip>
+              <ItemOrigin item={props.weaponPaintjob} />
             </Col>
           </Row>
         </Card>
