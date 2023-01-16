@@ -15,7 +15,8 @@ export default function FrameworkCard(props: {
 }) {
   const db = useDB();
   const query = useSuspendedLiveQuery(
-    () => db.frameworks.get({ weapon: props.weapon, name: props.framework }),
+    () =>
+      db.frameworks.get({ weapon: props.weapon, name: props.framework.name }),
     [props.weapon, props.framework]
   );
 
@@ -23,21 +24,21 @@ export default function FrameworkCard(props: {
     if (query === undefined) {
       db.frameworks.add({
         weapon: props.weapon,
-        name: props.framework,
+        name: props.framework.name,
       });
     } else {
       db.frameworks
         .where({
           weapon: props.weapon,
-          name: props.framework,
+          name: props.framework.name,
         })
         .delete();
     }
   }, [db.frameworks, props.framework, props.weapon, query]);
 
   return (
-    <Col xxl={4} xl={4} lg={8} md={8} sm={8} xs={12} key={props.framework}>
-      <Badge.Ribbon className="framework-ribbon" text={props.framework}>
+    <Col xxl={4} xl={4} lg={8} md={8} sm={8} xs={12} key={props.framework.name}>
+      <Badge.Ribbon className="framework-ribbon" text={props.framework.name}>
         <Card
           hoverable
           onClick={onClick}

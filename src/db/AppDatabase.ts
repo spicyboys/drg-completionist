@@ -1,7 +1,7 @@
 import { Dexie } from 'dexie';
 import { ArmorPaintjobNames, CommonArmorPaintjobNames } from 'data/armor';
 import { CosmeticMatrixItemNames } from 'data/cosmetics';
-import { Framework } from 'data/frameworks';
+import { FrameworkNames } from 'data/frameworks';
 import { Miner } from 'data/miner';
 import {
   PickaxeSets,
@@ -86,7 +86,10 @@ export type OverclockEntry = {
   isForged: boolean;
 };
 
-export type FrameworkEntry = { weapon: MinerWeapon<Miner>; name: Framework };
+export type FrameworkEntry = {
+  name: typeof FrameworkNames[number];
+  weapon: MinerWeapon<Miner>;
+};
 
 export type PickaxeEntry = {
   name: typeof PickaxeSets[number];
