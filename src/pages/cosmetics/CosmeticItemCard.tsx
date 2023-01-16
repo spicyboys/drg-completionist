@@ -1,4 +1,4 @@
-import { Badge, Card, Col, Tooltip } from 'antd';
+import { Badge, Card, Col, Row, Tooltip } from 'antd';
 import { useCallback } from 'react';
 import { isMobile } from 'react-device-detect';
 import { ForgeHammer } from 'assets/other';
@@ -7,6 +7,7 @@ import { CosmeticMatrixItem } from 'data/cosmetics';
 import { Miner, MinerColor, MinerColorContrastText } from 'data/miner';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
+import ItemOrigin from 'pages/ItemOrigin';
 import CosmeticItemIcon from './CosmeticItemIcon';
 import './CosmeticItemCard.css';
 
@@ -78,23 +79,30 @@ export default function CosmeticItemCard(props: {
           }}
         >
           <CosmeticItemIcon item={props.item} />
-          <Tooltip
-            title={query && !query?.isForged ? 'Unforged' : undefined}
-            trigger={isMobile ? 'click' : 'hover'}
-            destroyTooltipOnHide
-          >
-            <Image
-              alt={`${props.item.name} is acquired, but unforged`}
-              src={ForgeHammer}
-              style={{
-                float: 'left',
-                height: isMobile ? 30 : 20,
-                marginTop: isMobile ? -30 : -20,
-                opacity: query && !query?.isForged ? 1 : 0,
-                width: 'auto',
-              }}
-            />
-          </Tooltip>
+          <Row justify="space-between">
+            <Col>
+              <Tooltip
+                title={query && !query?.isForged ? 'Unforged' : undefined}
+                trigger={isMobile ? 'click' : 'hover'}
+                destroyTooltipOnHide
+              >
+                <Image
+                  alt={`${props.item.name} is acquired, but unforged`}
+                  src={ForgeHammer}
+                  style={{
+                    float: 'left',
+                    height: isMobile ? 30 : 20,
+                    marginTop: isMobile ? -30 : -20,
+                    opacity: query && !query?.isForged ? 1 : 0,
+                    width: 'auto',
+                  }}
+                />
+              </Tooltip>
+            </Col>
+            <Col>
+              <ItemOrigin item={props.item} />
+            </Col>
+          </Row>
         </Card>
       </Badge.Ribbon>
     </Col>

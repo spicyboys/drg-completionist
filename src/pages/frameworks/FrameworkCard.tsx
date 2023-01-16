@@ -1,10 +1,11 @@
-import { Badge, Card, Col } from 'antd';
+import { Badge, Card, Col, Row } from 'antd';
 import { useCallback } from 'react';
 import { Framework } from 'data/frameworks';
 import { Miner, MinerColor } from 'data/miner';
 import { MinerWeapon } from 'data/weapons';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
+import ItemOrigin from 'pages/ItemOrigin';
 import FrameworkIcon from './FrameworkIcon';
 import './FrameworkCard.css';
 
@@ -49,6 +50,11 @@ export default function FrameworkCard(props: {
           }}
         >
           <FrameworkIcon framework={props.framework} />
+          <Row justify="end">
+            <Col>
+              <ItemOrigin item={props.framework} />
+            </Col>
+          </Row>
         </Card>
       </Badge.Ribbon>
     </Col>

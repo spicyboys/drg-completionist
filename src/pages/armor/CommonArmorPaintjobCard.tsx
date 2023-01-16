@@ -1,8 +1,9 @@
-import { Badge, Card, Col } from 'antd';
+import { Badge, Card, Col, Row } from 'antd';
 import { useCallback } from 'react';
 import { CommonArmorPaintjob } from 'data/armor';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
+import ItemOrigin from 'pages/ItemOrigin';
 import ArmorPaintjobIcon from './ArmorPaintjobIcon';
 import './ArmorPaintjobCard.css';
 
@@ -47,6 +48,12 @@ export default function CommonArmorPaintjobCard({
           }}
         >
           <ArmorPaintjobIcon paintjob={paintjob} />
+          <Row justify="space-between">
+            <Col flex="auto" />
+            <Col>
+              <ItemOrigin item={paintjob} />
+            </Col>
+          </Row>
         </Card>
       </Badge.Ribbon>
     </Col>

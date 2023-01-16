@@ -31,7 +31,7 @@ export default function MinerWeaponPaintjobs<T extends Miner>(props: {
               <Image
                 alt={`${props.miner} Common Weapon Paintjobs`}
                 src={Assignment}
-                style={{ height: 75, width: 'auto' }}
+                style={{ height: 60, width: 'auto' }}
               />
             </Tooltip>
           </Divider>

@@ -1,12 +1,13 @@
 import { Card, Col, Image as AntImage, Row, Tooltip } from 'antd';
 import { useCallback, useMemo, useRef } from 'react';
 import { Credit } from 'assets/currencies';
-import { Assignment, LostPack } from 'assets/other';
+import { Assignment, LostPack, PerformancePass } from 'assets/other';
 import Image from 'components/Image';
 import { MinerColor, MinerColorContrastText } from 'data/miner';
 import { PickaxeUniquePart } from 'data/pickaxes';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
+import { ItemSource } from 'types/itemSource';
 
 const accentColor = MinerColor.Engineer;
 const contrastText = MinerColorContrastText.Engineer;
@@ -42,14 +43,15 @@ export default function UniquePartCard(props: {
   /** Returns the appropriate icon based on the current pickaxe's source. */
   const iconSrc = useMemo(() => {
     switch (props.uniquePart.source) {
-      case 'Assignment':
+      case ItemSource.Assignment:
         return Assignment;
-      case 'DLC':
+      case ItemSource.DLC:
         return Credit;
-      case 'Lost Pack':
+      case ItemSource.LostPack:
         return LostPack;
-      case 'Performance Pass':
-        // FIXME: Add own icon for performance pass
+      case ItemSource.PerformancePass:
+        return PerformancePass;
+      default:
         return Assignment;
     }
   }, [props.uniquePart.source]);

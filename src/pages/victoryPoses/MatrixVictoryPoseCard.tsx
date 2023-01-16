@@ -1,12 +1,13 @@
 import { Badge, Card, Col, Row, Tooltip } from 'antd';
 import { useCallback } from 'react';
 import { isMobile } from 'react-device-detect';
-import { ForgeHammer, MatrixCore } from 'assets/other';
+import { ForgeHammer } from 'assets/other';
 import Image from 'components/Image';
 import { Miner, MinerColor, MinerColorContrastText } from 'data/miner';
 import { VictoryPose } from 'data/victoryPoses';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
+import ItemOrigin from 'pages/ItemOrigin';
 import VictoryPoseIcon from './VictoryPoseIcon';
 import './VictoryPoseCard.css';
 
@@ -102,23 +103,7 @@ export default function MatrixVictoryPoseCard(props: {
               </Tooltip>
             </Col>
             <Col>
-              <Tooltip
-                title="Obtained via Matrix Core"
-                trigger={isMobile ? 'click' : 'hover'}
-                destroyTooltipOnHide
-              >
-                <Image
-                  alt={`${props.victoryPose.name} is acquired through matrix cores`}
-                  src={MatrixCore}
-                  style={{
-                    float: 'right',
-                    height: isMobile ? 30 : 20,
-                    marginTop: isMobile ? -30 : -20,
-                    opacity: 1,
-                    width: 'auto',
-                  }}
-                />
-              </Tooltip>
+              <ItemOrigin item={props.victoryPose} />
             </Col>
           </Row>
         </Card>

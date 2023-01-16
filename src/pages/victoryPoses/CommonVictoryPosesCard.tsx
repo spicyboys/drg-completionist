@@ -1,12 +1,10 @@
-import { Col, Badge, Card, Tooltip, Row } from 'antd';
+import { Col, Badge, Card, Row } from 'antd';
 import { useCallback } from 'react';
-import { isMobile } from 'react-device-detect';
-import { LostPack } from 'assets/other';
-import Image from 'components/Image';
 import { Miner, MinerColor } from 'data/miner';
 import { CommonVictoryPose } from 'data/victoryPoses';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
+import ItemOrigin from 'pages/ItemOrigin';
 import VictoryPoseIcon from './VictoryPoseIcon';
 import './VictoryPoseCard.css';
 
@@ -65,28 +63,9 @@ export default function CommonVictoryPoseCard(props: {
         >
           <VictoryPoseIcon victoryPose={props.commonVictoryPose} />
           <Row>
-            <Col flex="auto"></Col>
+            <Col flex="auto" />
             <Col>
-              <Tooltip
-                title="Obtained via Lost Pack"
-                trigger={isMobile ? 'click' : 'hover'}
-                destroyTooltipOnHide
-              >
-                <Image
-                  alt={`${props.commonVictoryPose.name} is acquired through lost packs`}
-                  src={LostPack}
-                  style={{
-                    float: 'right',
-                    height: isMobile ? 30 : 20,
-                    marginTop: isMobile ? -30 : -20,
-                    opacity: 1,
-                    width: 'auto',
-                    filter: query
-                      ? 'grayscale(1) invert(1) brightness(100)'
-                      : undefined,
-                  }}
-                />
-              </Tooltip>
+              <ItemOrigin item={props.commonVictoryPose} />
             </Col>
           </Row>
         </Card>

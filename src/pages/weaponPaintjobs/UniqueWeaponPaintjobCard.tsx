@@ -1,10 +1,11 @@
-import { Badge, Card, Col } from 'antd';
+import { Badge, Card, Col, Row } from 'antd';
 import { useCallback } from 'react';
 import { Miner, MinerColor } from 'data/miner';
 import { UniqueWeaponPaintjob } from 'data/weaponPaintjobs';
 import { MinerWeapon } from 'data/weapons';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
+import ItemOrigin from 'pages/ItemOrigin';
 import WeaponPaintjobIcon from './WeaponPaintjobIcon';
 import './WeaponPaintjobCard.css';
 
@@ -68,6 +69,12 @@ export default function UniqueWeaponPaintjobCard(props: {
           }}
         >
           <WeaponPaintjobIcon weaponPaintjob={props.weaponPaintjob} />
+          <Row justify="space-between">
+            <Col flex="auto" />
+            <Col>
+              <ItemOrigin item={props.weaponPaintjob} />
+            </Col>
+          </Row>
         </Card>
       </Badge.Ribbon>
     </Col>
