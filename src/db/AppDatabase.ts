@@ -1,5 +1,6 @@
 import { Dexie } from 'dexie';
 import { ArmorPaintjobNames, CommonArmorPaintjobNames } from 'data/armor';
+import { BoscoFrameworkNames, BoscoPaintjobNames } from 'data/bosco';
 import { CosmeticMatrixItemNames } from 'data/cosmetics';
 import { FrameworkNames } from 'data/frameworks';
 import { Miner } from 'data/miner';
@@ -32,10 +33,12 @@ export class AppDatabase extends Dexie {
   commonVictoryPoses: Dexie.Table<CommonVictoryPoseEntry, number>;
   matrixVictoryPoses: Dexie.Table<MatrixVictoryPoseEntry, number>;
   cosmeticMatrixItems: Dexie.Table<CosmeticMatrixItemEntry, number>;
+  boscoFrameworks: Dexie.Table<BoscoFrameworkEntry, number>;
+  boscoPaintjobs: Dexie.Table<BoscoPaintjobEntry, number>;
 
   constructor() {
     super('DRG-Completionist');
-    this.version(7).stores({
+    this.version(8).stores({
       overclocks: '[weapon+name], weapon',
 
       frameworks: '[weapon+name], weapon',
@@ -54,6 +57,9 @@ export class AppDatabase extends Dexie {
       matrixVictoryPoses: '[miner+name], miner',
 
       cosmeticMatrixItems: '[miner+name], miner',
+
+      boscoFrameworks: 'name',
+      boscoPaintjobs: 'name',
     });
 
     this.overclocks = this.table('overclocks');
@@ -74,6 +80,9 @@ export class AppDatabase extends Dexie {
     this.matrixVictoryPoses = this.table('matrixVictoryPoses');
 
     this.cosmeticMatrixItems = this.table('cosmeticMatrixItems');
+
+    this.boscoFrameworks = this.table('boscoFrameworks');
+    this.boscoPaintjobs = this.table('boscoPaintjobs');
   }
 
   /** Async call to clear all current IndexedDB tables completely. */
@@ -140,4 +149,12 @@ export type CosmeticMatrixItemEntry = {
   miner: Miner;
   name: typeof CosmeticMatrixItemNames[number];
   isForged: boolean;
+};
+
+export type BoscoFrameworkEntry = {
+  name: typeof BoscoFrameworkNames[number];
+};
+
+export type BoscoPaintjobEntry = {
+  name: typeof BoscoPaintjobNames[number];
 };

@@ -16,6 +16,10 @@ import { MissionControlPortrait } from 'assets/portraits';
 import Image from 'components/Image';
 import useDB from 'db/useDB';
 import { getArmorPaintJobsFromSaveFile } from './getArmorPaintjobsFromSaveFile';
+import {
+  getBoscoFrameworksFromSaveFile,
+  getBoscoPaintjobsFromSaveFile,
+} from './getBoscoItemsFromSaveFile';
 import { getCommonArmorPaintJobsFromSaveFile } from './getCommonArmorPaintjobsFromSaveFile';
 import { getCosmeticMatrixItemFromSaveFile } from './getCosmeticMatrixItemsFromSaveFile';
 import { getFrameworksFromSaveFile } from './getFrameworksFromSaveFile';
@@ -79,6 +83,8 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
         const matrixVictoryPoses = getMatrixVictoryPosesFromSaveFile(saveFile);
         const commonVictoryPoses = getCommonVictoryPosesFromSaveFile(saveFile);
         const cosmeticMatrixItems = getCosmeticMatrixItemFromSaveFile(saveFile);
+        const boscoFrameworks = getBoscoFrameworksFromSaveFile(saveFile);
+        const boscoPaintjobs = getBoscoPaintjobsFromSaveFile(saveFile);
 
         // Update the store with the new save file data
         await db.transaction('rw', db.tables, async () => {
@@ -95,6 +101,8 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
           await db.matrixVictoryPoses.bulkAdd(matrixVictoryPoses);
           await db.commonVictoryPoses.bulkAdd(commonVictoryPoses);
           await db.cosmeticMatrixItems.bulkAdd(cosmeticMatrixItems);
+          await db.boscoFrameworks.bulkAdd(boscoFrameworks);
+          await db.boscoPaintjobs.bulkAdd(boscoPaintjobs);
         });
 
         // Show the user a success notification with how many items were
@@ -112,12 +120,14 @@ export default function AnalyzeSaveFile(props: { hide: () => void }) {
               commonWeaponPaintjobs.length
             } ` +
             `Weapon Paintjobs, ` +
+            `${pickaxes.length + pickaxeUniques.length} ` +
+            `Pickaxe Parts, ` +
             `${matrixVictoryPoses.length + commonVictoryPoses.length} ` +
             `Victory Poses, ` +
             `${cosmeticMatrixItems.length} ` +
-            `Cosmetic Matrix Core Items, and ` +
-            `${pickaxes.length + pickaxeUniques.length} ` +
-            `Pickaxe Parts.`,
+            `Cosmetic Matrix Core Items and ` +
+            `${boscoFrameworks.length + boscoPaintjobs.length} ` +
+            `Bosco Cosmetics.`,
           duration: 10,
         });
 
