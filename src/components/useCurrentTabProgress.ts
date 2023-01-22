@@ -2,6 +2,7 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import { useEffect, useMemo } from 'react';
 import { TabName } from 'App';
 import { ArmorPaintjobs, CommonArmorPaintjobs } from 'data/armor';
+import { BoscoFrameworks, BoscoPaintjobs } from 'data/bosco';
 import { CosmeticMatrixItems } from 'data/cosmetics';
 import { Frameworks } from 'data/frameworks';
 import { Miner } from 'data/miner';
@@ -67,6 +68,8 @@ export default function useCurrentTabProgress(
         );
       case 'cosmetics':
         return CosmeticMatrixItems.length * Object.values(Miner).length;
+      case 'bosco':
+        return BoscoFrameworks.length + BoscoPaintjobs.length;
     }
   }, [currentTab]) as number;
 
@@ -163,6 +166,17 @@ export default function useCurrentTabProgress(
               (acquiredCosmetics.filter((item) => !item.isForged).length /
                 totalItems) *
               100,
+          };
+        }
+        case 'bosco': {
+          const acquiredBoscoFrameworks = await db.boscoFrameworks.count();
+          const acquiredBoscoPaintjobs = await db.boscoPaintjobs.count();
+          return {
+            progress:
+              ((acquiredBoscoFrameworks + acquiredBoscoPaintjobs) /
+                totalItems) *
+              100,
+            partialProgress: null,
           };
         }
       }
