@@ -75,7 +75,7 @@ export const Frameworks: Record<MinerWeapon<Miner>, Framework[]> = {
     },
     {
       name: 'MilSpec',
-      itemSource: ItemSource.CargoCrate,
+      itemSource: ItemSource.PerformancePass,
       icon: FrameworkIcons.MilSpec,
       id: 'B16AF562D648CD40A0D5D145962E365D',
     },
@@ -131,7 +131,7 @@ export const Frameworks: Record<MinerWeapon<Miner>, Framework[]> = {
     },
     {
       name: 'MilSpec',
-      itemSource: ItemSource.CargoCrate,
+      itemSource: ItemSource.PerformancePass,
       icon: FrameworkIcons.MilSpec,
       id: 'C7A1ADFE9C2AE245A78F660458CCC9CE',
     },
@@ -187,7 +187,7 @@ export const Frameworks: Record<MinerWeapon<Miner>, Framework[]> = {
     },
     {
       name: 'MilSpec',
-      itemSource: ItemSource.CargoCrate,
+      itemSource: ItemSource.PerformancePass,
       icon: FrameworkIcons.MilSpec,
       id: 'D2951B5C4997E243A4FE517077E21647',
     },
@@ -243,7 +243,7 @@ export const Frameworks: Record<MinerWeapon<Miner>, Framework[]> = {
     },
     {
       name: 'MilSpec',
-      itemSource: ItemSource.CargoCrate,
+      itemSource: ItemSource.PerformancePass,
       icon: FrameworkIcons.MilSpec,
       id: '266240A60964A3469EE9DE623EA48D9E',
     },
@@ -299,7 +299,7 @@ export const Frameworks: Record<MinerWeapon<Miner>, Framework[]> = {
     },
     {
       name: 'MilSpec',
-      itemSource: ItemSource.CargoCrate,
+      itemSource: ItemSource.PerformancePass,
       icon: FrameworkIcons.MilSpec,
       id: '57C677BC9411D04DBFF46A13F187F2AC',
     },
@@ -355,7 +355,7 @@ export const Frameworks: Record<MinerWeapon<Miner>, Framework[]> = {
     },
     {
       name: 'MilSpec',
-      itemSource: ItemSource.CargoCrate,
+      itemSource: ItemSource.PerformancePass,
       icon: FrameworkIcons.MilSpec,
       id: 'E884811E4B64714DB2DE57EC29EF5298',
     },
@@ -413,7 +413,7 @@ export const Frameworks: Record<MinerWeapon<Miner>, Framework[]> = {
     },
     {
       name: 'MilSpec',
-      itemSource: ItemSource.CargoCrate,
+      itemSource: ItemSource.PerformancePass,
       icon: FrameworkIcons.MilSpec,
       id: 'F368A4F49C401E45A83AE00718B4E8F3',
     },
@@ -469,7 +469,7 @@ export const Frameworks: Record<MinerWeapon<Miner>, Framework[]> = {
     },
     {
       name: 'MilSpec',
-      itemSource: ItemSource.CargoCrate,
+      itemSource: ItemSource.PerformancePass,
       icon: FrameworkIcons.MilSpec,
       id: 'AF3F4B81F221D14F8873E48AC35095C9',
     },
@@ -525,7 +525,7 @@ export const Frameworks: Record<MinerWeapon<Miner>, Framework[]> = {
     },
     {
       name: 'MilSpec',
-      itemSource: ItemSource.CargoCrate,
+      itemSource: ItemSource.PerformancePass,
       icon: FrameworkIcons.MilSpec,
       id: '859F271DD8367E4DB2F24229D4EBB89E',
     },
@@ -581,7 +581,7 @@ export const Frameworks: Record<MinerWeapon<Miner>, Framework[]> = {
     },
     {
       name: 'MilSpec',
-      itemSource: ItemSource.CargoCrate,
+      itemSource: ItemSource.PerformancePass,
       icon: FrameworkIcons.MilSpec,
       id: '98EFC1EA16D17349979F4233510F4AC4',
     },
@@ -637,7 +637,7 @@ export const Frameworks: Record<MinerWeapon<Miner>, Framework[]> = {
     },
     {
       name: 'MilSpec',
-      itemSource: ItemSource.CargoCrate,
+      itemSource: ItemSource.PerformancePass,
       icon: FrameworkIcons.MilSpec,
       id: 'BFBBBD800898804DA210A4B9499F840A',
     },
@@ -693,7 +693,7 @@ export const Frameworks: Record<MinerWeapon<Miner>, Framework[]> = {
     },
     {
       name: 'MilSpec',
-      itemSource: ItemSource.CargoCrate,
+      itemSource: ItemSource.PerformancePass,
       icon: FrameworkIcons.MilSpec,
       id: 'A0B86E89D2C56C40834FA6768F705138',
     },
@@ -751,7 +751,7 @@ export const Frameworks: Record<MinerWeapon<Miner>, Framework[]> = {
     },
     {
       name: 'MilSpec',
-      itemSource: ItemSource.CargoCrate,
+      itemSource: ItemSource.PerformancePass,
       icon: FrameworkIcons.MilSpec,
       id: '51B0E85C8861714BAB9CD4761CE3732E',
     },
@@ -807,7 +807,7 @@ export const Frameworks: Record<MinerWeapon<Miner>, Framework[]> = {
     },
     {
       name: 'MilSpec',
-      itemSource: ItemSource.CargoCrate,
+      itemSource: ItemSource.PerformancePass,
       icon: FrameworkIcons.MilSpec,
       id: 'C1A56F07FB22B14680C865310B2A5440',
     },
@@ -863,7 +863,7 @@ export const Frameworks: Record<MinerWeapon<Miner>, Framework[]> = {
     },
     {
       name: 'MilSpec',
-      itemSource: ItemSource.CargoCrate,
+      itemSource: ItemSource.PerformancePass,
       icon: FrameworkIcons.MilSpec,
       id: '85D6DCD09497514793B662BF1839B2FC',
     },
@@ -919,7 +919,7 @@ export const Frameworks: Record<MinerWeapon<Miner>, Framework[]> = {
     },
     {
       name: 'MilSpec',
-      itemSource: ItemSource.CargoCrate,
+      itemSource: ItemSource.PerformancePass,
       icon: FrameworkIcons.MilSpec,
       id: 'E46271ED10452749A737629040746C30',
     },
@@ -975,7 +975,7 @@ export const Frameworks: Record<MinerWeapon<Miner>, Framework[]> = {
     },
     {
       name: 'MilSpec',
-      itemSource: ItemSource.CargoCrate,
+      itemSource: ItemSource.PerformancePass,
       icon: FrameworkIcons.MilSpec,
       id: 'B3511338CA916C42B957F392851D15A2',
     },
@@ -1031,7 +1031,7 @@ export const Frameworks: Record<MinerWeapon<Miner>, Framework[]> = {
     },
     {
       name: 'MilSpec',
-      itemSource: ItemSource.CargoCrate,
+      itemSource: ItemSource.PerformancePass,
       icon: FrameworkIcons.MilSpec,
       id: 'FDC5A51473356642B99EA3687BC57ECF',
     },
@@ -1089,7 +1089,7 @@ export const Frameworks: Record<MinerWeapon<Miner>, Framework[]> = {
     },
     {
       name: 'MilSpec',
-      itemSource: ItemSource.CargoCrate,
+      itemSource: ItemSource.PerformancePass,
       icon: FrameworkIcons.MilSpec,
       id: 'EB89321B14430348B9509B6F7A829810',
     },
@@ -1145,7 +1145,7 @@ export const Frameworks: Record<MinerWeapon<Miner>, Framework[]> = {
     },
     {
       name: 'MilSpec',
-      itemSource: ItemSource.CargoCrate,
+      itemSource: ItemSource.PerformancePass,
       icon: FrameworkIcons.MilSpec,
       id: '3D8F596C1C7C274B8621BF7A736AA087',
     },
@@ -1201,7 +1201,7 @@ export const Frameworks: Record<MinerWeapon<Miner>, Framework[]> = {
     },
     {
       name: 'MilSpec',
-      itemSource: ItemSource.CargoCrate,
+      itemSource: ItemSource.PerformancePass,
       icon: FrameworkIcons.MilSpec,
       id: 'FBFD0D031C19174BA49013BDC5DA4EB5',
     },
@@ -1257,7 +1257,7 @@ export const Frameworks: Record<MinerWeapon<Miner>, Framework[]> = {
     },
     {
       name: 'MilSpec',
-      itemSource: ItemSource.CargoCrate,
+      itemSource: ItemSource.PerformancePass,
       icon: FrameworkIcons.MilSpec,
       id: '17DE50EF5AB50F43A392AAF233ECEA7E',
     },
@@ -1313,7 +1313,7 @@ export const Frameworks: Record<MinerWeapon<Miner>, Framework[]> = {
     },
     {
       name: 'MilSpec',
-      itemSource: ItemSource.CargoCrate,
+      itemSource: ItemSource.PerformancePass,
       icon: FrameworkIcons.MilSpec,
       id: '263202B30919034C99ABED4E657D1EF1',
     },
@@ -1369,7 +1369,7 @@ export const Frameworks: Record<MinerWeapon<Miner>, Framework[]> = {
     },
     {
       name: 'MilSpec',
-      itemSource: ItemSource.CargoCrate,
+      itemSource: ItemSource.PerformancePass,
       icon: FrameworkIcons.MilSpec,
       id: '351FADEE3668F746B5140F2AFE320A8D',
     },
