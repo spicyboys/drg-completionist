@@ -20,7 +20,6 @@ export const PickaxeSets = [
   "Arc Welder's Delight", // S01
   'Core Hound', // S02
   'Blight Guard', // S03
-  'Chillaxe', // Xmas2022
 ] as const;
 
 // NOTE: DLC Paintjobs disabled until GUIDs can be found
@@ -54,7 +53,6 @@ export const PickaxeIcons: Record<typeof PickaxeSets[number], ImgSrc> = {
   "Arc Welder's Delight": skinIcons.ArcWeldersDelight,
   'Core Hound': skinIcons.CoreHound,
   'Blight Guard': skinIcons.BlightGuard,
-  Chillaxe: skinIcons.Chillaxe,
 };
 
 // NOTE: DLC Paintjobs disabled until GUIDs can be found
@@ -79,7 +77,6 @@ export const PickaxePaintjobIcons: Record<
   "Arc Welder's Delight": paintjobIcons.ArcWeldersDelight,
   'Core Hound': paintjobIcons.CoreHound,
   'Blight Guard': paintjobIcons.BlightGuard,
-  Chillaxe: paintjobIcons.Chillaxe,
 };
 
 export const PickaxeUniquePartIcons: Record<
@@ -303,20 +300,6 @@ export const Pickaxes: Pickaxe[] = [
       Handle: '86AC107EAA647A488A24610E04AB3F6D',
       Pommel: '4F18C80C72999844A218FFE6B4A20987',
       Paintjob: 'F7867A472AF10349A5A57E9302E6D0B3',
-    },
-  },
-  {
-    name: 'Chillaxe',
-    source: ItemSource.TemporaryEvent,
-    icon: PickaxeIcons['Chillaxe'],
-    paintjobIcon: PickaxePaintjobIcons['Chillaxe'],
-    partIDs: {
-      Blades: 'BB762A32671A6F4B8D088A0ED2E8B26E',
-      Head: '287C19E0F4A3474EAEC54E2B0788F643',
-      Shaft: 'E9D514EA1C2DCC4287A98B15A1471D94',
-      Handle: '4515B8A89F17D249944B678007E844AA',
-      Pommel: '32641478397EBA43826E9A60C1501A4E',
-      Paintjob: 'DD3BEC439337424992D639378894B850',
     },
   },
 ];

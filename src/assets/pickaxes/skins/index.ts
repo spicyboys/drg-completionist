@@ -13,8 +13,6 @@ import _CarvenPride from './carvenPride.jpg';
 import _CarvenPride_webp from './carvenPride.jpg.webp';
 import _ChasmBorneCliffhanger from './chasmBorneCliffhanger.jpg';
 import _ChasmBorneCliffhanger_webp from './chasmBorneCliffhanger.jpg.webp';
-import _Chillaxe from './chillaxe.jpg';
-import _Chillaxe_webp from './chillaxe.jpg.webp';
 import _CompanyStandard from './companyStandard.jpg';
 import _CompanyStandard_webp from './companyStandard.jpg.webp';
 import _CoreHound from './coreHound.jpg';
@@ -44,7 +42,6 @@ export const ChasmBorneCliffhanger = {
   jpg: _ChasmBorneCliffhanger,
   webp: _ChasmBorneCliffhanger_webp,
 };
-export const Chillaxe = { jpg: _Chillaxe, webp: _Chillaxe_webp };
 export const CompanyStandard = {
   jpg: _CompanyStandard,
   webp: _CompanyStandard_webp,
