@@ -6,7 +6,6 @@ export enum ItemSource {
   LostPack = 'Lost Pack',
   MatrixCore = 'Matrix Core',
   PerformancePass = 'Performance Pass',
-  TemporaryEvent = 'Temporary Event',
 }
 
 export interface ObtainableItem {
