@@ -3,6 +3,7 @@ import { Collapse } from 'antd';
 import { useMemo } from 'react';
 import MinerCard, { ProgressQuery } from 'components/progressCard/MinerCard';
 import { AllMiners, Miner } from 'data/miner';
+import { getOpenCategories, updateOpenCategories } from 'utils/localStorage';
 
 /**
  * Returns a Collapse with a card for each Miner containing an Avatar
@@ -28,11 +29,21 @@ export default function MinerPageLayout(props: {
     }
   }, [children]);
 
+  const localStoragePrefix = category + '-closed-';
+
   return (
     <Collapse
       className="unselectable"
       expandIconPosition="right"
-      defaultActiveKey={[...AllMiners]}
+      defaultActiveKey={getOpenCategories(
+        AllMiners.map((miner) => localStoragePrefix + miner)
+      ).map((open) => open.split(localStoragePrefix)[1])}
+      onChange={(open) =>
+        updateOpenCategories(
+          (open as string[]).map((o) => localStoragePrefix + o),
+          AllMiners.map((miner) => localStoragePrefix + miner)
+        )
+      }
       expandIcon={(p) => (
         <RightOutlined
           style={{ marginTop: 16 }}
@@ -42,6 +53,7 @@ export default function MinerPageLayout(props: {
     >
       {AllMiners.map((miner) => (
         <MinerCard
+          forceRender
           key={miner}
           category={category}
           miner={miner}

@@ -10,6 +10,7 @@ import { AppDatabase } from 'db/AppDatabase';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
 import MinerPageLayout from 'pages/MinerPageLayout';
+import { getOpenCategories, updateOpenCategories } from 'utils/localStorage';
 import ArmorPaintjobCard from './ArmorPaintjobCard';
 import CommonArmorPaintjobCard from './CommonArmorPaintjobCard';
 
@@ -29,6 +30,8 @@ export default function ArmorPage() {
     []
   );
 
+  const categories = ['common-armor-paintjob'];
+
   return (
     <MinerPageLayout category="Armor" getProgress={getProgress}>
       {(miner) => (
@@ -47,7 +50,8 @@ export default function ArmorPage() {
       <Collapse
         className="unselectable"
         expandIconPosition="right"
-        defaultActiveKey="common"
+        defaultActiveKey={getOpenCategories(categories)}
+        onChange={(open) => updateOpenCategories(open, categories)}
         expandIcon={(p) => (
           <RightOutlined
             style={{ marginTop: 16 }}
@@ -56,8 +60,9 @@ export default function ArmorPage() {
         )}
       >
         <ProgressCard
+          forceRender
           title="Common"
-          key="common"
+          key="common-armor-paintjob"
           avatar={
             <Image
               src={PlayerRankIcon}

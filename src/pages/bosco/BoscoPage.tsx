@@ -8,6 +8,7 @@ import {
   BoscoPaintjobs as BoscoPaintjobsList,
 } from 'data/bosco';
 import { AppDatabase } from 'db/AppDatabase';
+import { getOpenCategories, updateOpenCategories } from 'utils/localStorage';
 import BoscoFrameworks from './BoscoFrameworks';
 import BoscoPaintjobs from './BoscoPaintjobs';
 
@@ -30,11 +31,14 @@ export default function BoscoPage() {
     return acquiredFrameworks / BoscoFrameworksList.length;
   }, []);
 
+  const categories = ['bosco-frameworks', 'bosco-paintjobs'];
+
   return (
     <Collapse
       className="unselectable"
       expandIconPosition="right"
-      defaultActiveKey={[0, 1]}
+      defaultActiveKey={getOpenCategories(categories)}
+      onChange={(open) => updateOpenCategories(open, categories)}
       expandIcon={(p) => (
         <RightOutlined
           style={{ marginTop: 16 }}
@@ -43,10 +47,14 @@ export default function BoscoPage() {
       )}
     >
       <BoscoFrameworks
+        forceRender
+        key="bosco-frameworks"
         frameworks={BoscoFrameworksList}
         getProgress={getFrameworkProgress}
       />
       <BoscoPaintjobs
+        forceRender
+        key="bosco-paintjobs"
         paintjobs={BoscoPaintjobsList}
         getProgress={getPaintjobProgress}
       />
