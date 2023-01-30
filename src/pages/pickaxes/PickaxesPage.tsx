@@ -8,6 +8,7 @@ import {
   PickaxeUniquePartNames,
 } from 'data/pickaxes';
 import { AppDatabase } from 'db/AppDatabase';
+import { getOpenCategories, updateOpenCategories } from 'utils/localStorage';
 import PickaxePaintjobs from './PickaxePaintjobs';
 import PickaxeParts from './PickaxeParts';
 
@@ -41,11 +42,14 @@ export default function PickaxesPage() {
     return acquiredPaintjobs / PickaxePaintjobNames.length;
   }, []);
 
+  const categories = ['pickaxe-parts', 'pickaxe-paintjobs'];
+
   return (
     <Collapse
       className="unselectable"
       expandIconPosition="right"
-      defaultActiveKey={[0, 1]}
+      defaultActiveKey={getOpenCategories(categories)}
+      onChange={(open) => updateOpenCategories(open, categories)}
       expandIcon={(p) => (
         <RightOutlined
           style={{ marginTop: 16 }}
@@ -53,8 +57,15 @@ export default function PickaxesPage() {
         />
       )}
     >
-      <PickaxeParts pickaxes={Pickaxes} getProgress={getPartProgress} />
+      <PickaxeParts
+        forceRender
+        key="pickaxe-parts"
+        pickaxes={Pickaxes}
+        getProgress={getPartProgress}
+      />
       <PickaxePaintjobs
+        forceRender
+        key="pickaxe-paintjobs"
         paintjobs={PickaxePaintjobNames}
         getProgress={getPaintjobProgress}
       />
