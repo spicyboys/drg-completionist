@@ -1,3 +1,5 @@
+import assert from "assert";
+
 /**
  * Updates the localStorage to remeber closed and open Collapse components.
  * Use this in the "onChange" CollapseProp callback function, which gives you
@@ -8,16 +10,23 @@
  */
 export function updateOpenCategories(
   openKeys: string | string[],
-  allKeys: string[]
+  allKeys: string[],
+  localStoragePrefix?: string
 ) {
-  if (typeof openKeys === 'string') openKeys = [openKeys];
+  if (typeof openKeys === 'string') openKeys = openKeys.split(" ");
 
-  // we remove the localStorage entry when the the Collapse is opened
-  openKeys.forEach((openCategory) => removeItem(openCategory));
+  // add localStorage prefix for indexing
+  if (localStoragePrefix) {
+    allKeys = allKeys.map((key) => localStoragePrefix + key);
+    openKeys = openKeys.map((key) => localStoragePrefix + key);
+  }
 
-  // we set a localStorage entry if a specific Collapse is closed
+  // we remove the localStorage entry when a Collapse item is opened
+  openKeys.forEach((key) => removeItem(key));
+
+  // we set a localStorage entry if a Collapse item is closed
   allKeys
-    .filter((c) => !openKeys.includes(c))
+    .filter((key) => !openKeys.includes(key))
     .forEach((closed) => setItem(closed, 'closed'));
 }
 
@@ -28,8 +37,26 @@ export function updateOpenCategories(
  * @param allKeys The keys of all items in this Collapse component.
  * @returns The keys of all items in this Collapse component that should be open.
  */
-export function getOpenCategories(allKeys: string[]): string[] {
-  return allKeys.filter((c) => !getItem(c));
+export function getOpenCategories(
+  allKeys: string[],
+  localStoragePrefix?: string
+): string[] {
+  const originalAllKeys = allKeys;
+
+  // add localStoragePrefix for indexing
+  if (localStoragePrefix)
+    allKeys = allKeys.map((key) => localStoragePrefix + key);
+
+  let openKeys = allKeys.filter((key) => !getItem(key));
+
+  // remove localStoragePrefix so we return the correct keys
+  if (localStoragePrefix)
+    openKeys = openKeys.map((key) => key.replace(localStoragePrefix, ""));
+
+  // we will only return keys that were passed in
+  assert(openKeys.filter((key) => originalAllKeys.includes(key)).length == openKeys.length);
+
+  return openKeys;
 }
 
 function setItem(key: string, value: string) {

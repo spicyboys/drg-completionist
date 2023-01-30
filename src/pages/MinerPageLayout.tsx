@@ -29,21 +29,13 @@ export default function MinerPageLayout(props: {
     }
   }, [children]);
 
-  const localStoragePrefix = category + '-closed-';
-
   return (
     <Collapse
       className="unselectable"
       expandIconPosition="right"
-      defaultActiveKey={getOpenCategories(
-        AllMiners.map((miner) => localStoragePrefix + miner)
-      ).map((open) => open.split(localStoragePrefix)[1])}
+      defaultActiveKey={getOpenCategories([...AllMiners], category)}
       onChange={(open) =>
-        updateOpenCategories(
-          (open as string[]).map((o) => localStoragePrefix + o),
-          AllMiners.map((miner) => localStoragePrefix + miner)
-        )
-      }
+        updateOpenCategories(open, [...AllMiners], category)}
       expandIcon={(p) => (
         <RightOutlined
           style={{ marginTop: 16 }}
