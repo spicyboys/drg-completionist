@@ -26,7 +26,7 @@ export default function PageFooter() {
     return [tab, tabName];
   }, [location.pathname]);
 
-  const { progress, partialProgress } = useCurrentTabProgress(currentTab);
+  const { progress, partialProgress, acquiredItems, totalItems } = useCurrentTabProgress(currentTab);
 
   const isFooterHidden = useMemo(
     () => progress === 0 && (partialProgress === null || partialProgress === 0),
@@ -113,7 +113,7 @@ export default function PageFooter() {
             }
             trigger={isMobile ? 'click' : 'hover'}
           >
-            {currentTabDisplayName} Progress: {progress}%
+            {currentTabDisplayName} Progress: {progress}% ({acquiredItems}/{totalItems})
           </Tooltip>
         </div>
       </div>

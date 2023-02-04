@@ -209,7 +209,6 @@ export default function useCurrentTabProgress(
   currentTab: TabName
 ): TabProgress {
   const db = useDB();
-  getAmountCargoCrateItems;
   const totalItems = useMemo(() => {
     switch (currentTab) {
       case 'frameworks':
@@ -281,7 +280,7 @@ export default function useCurrentTabProgress(
               (acquiredOverclocks.filter((o) => !o.isForged).length /
                 totalItems) *
               100,
-            acquiredItems: acquiredOverclocks,
+            acquiredItems: acquiredOverclocks.length,
             totalItems: totalItems,
           };
         }
@@ -369,6 +368,8 @@ export default function useCurrentTabProgress(
               (acquiredCosmetics.filter((item) => !item.isForged).length /
                 totalItems) *
               100,
+              acquiredItems: acquiredCosmetics.length,
+              totalItems: totalItems,
           };
         }
         case 'bosco': {
@@ -436,7 +437,7 @@ export default function useCurrentTabProgress(
   return {
     progress: Math.floor(p.progress),
     partialProgress:
-      p.partialProgress === null ? null : Math.round(p.partialProgress),
+      p.partialProgress === null ? null : Math.floor(p.partialProgress),
     acquiredItems: p.acquiredItems,
     totalItems: p.totalItems,
   };
