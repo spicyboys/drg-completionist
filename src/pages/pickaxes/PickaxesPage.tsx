@@ -66,7 +66,7 @@ export default function PickaxesPage() {
       <PickaxePaintjobs
         forceRender
         key="pickaxe-paintjobs"
-        paintjobs={PickaxePaintjobNames}
+        paintjobs={Object.values(PickaxePaintjobNames)}
         getProgress={getPaintjobProgress}
       />
     </Collapse>

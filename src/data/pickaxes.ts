@@ -56,10 +56,7 @@ export const PickaxeIcons: Record<typeof PickaxeSets[number], ImgSrc> = {
 };
 
 // NOTE: DLC Paintjobs disabled until GUIDs can be found
-export const PickaxePaintjobIcons: Record<
-  typeof PickaxePaintjobNames[number],
-  ImgSrc
-> = {
+export const PickaxePaintjobIcons: Record<PickaxePaintjobName, ImgSrc> = {
   'Bug Hide': paintjobIcons.BugHide,
   'Carven Pride': paintjobIcons.CarvenPride,
   'Chasm-Borne Cliffhanger': paintjobIcons.ChasmBorneCliffhanger,
@@ -97,12 +94,14 @@ export type PickaxeParts =
   | 'Pommel'
   | 'Paintjob';
 
+export type PickaxePaintjobName = typeof PickaxePaintjobNames[number];
+
 export type Pickaxe = {
   name: typeof PickaxeSets[number];
   source: ItemSource;
   assignmentRank?: number;
   icon: typeof PickaxeIcons[typeof PickaxeSets[number]];
-  paintjobIcon: typeof PickaxePaintjobIcons[typeof PickaxePaintjobNames[number]];
+  paintjobIcon: typeof PickaxePaintjobIcons[PickaxePaintjobName];
   partIDs: Record<PickaxeParts, string>;
 };
 

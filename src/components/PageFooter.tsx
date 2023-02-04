@@ -2,7 +2,7 @@ import { Layout, Tooltip } from 'antd';
 import { useMemo } from 'react';
 import { isMobile } from 'react-device-detect';
 import { useLocation } from 'react-router-dom';
-import { DEFAULT_TAB, TABS, TabName } from 'App';
+import { DEFAULT_TAB, TabName, TABS } from 'App';
 import { MinerColor } from 'data/miner';
 import './PageFooter.css';
 import useCurrentTabProgress from './useCurrentTabProgress';

@@ -34,8 +34,7 @@ export default function MinerPageLayout(props: {
       className="unselectable"
       expandIconPosition="right"
       defaultActiveKey={getOpenCategories([...AllMiners], category)}
-      onChange={(open) =>
-        updateOpenCategories(open, [...AllMiners], category)}
+      onChange={(open) => updateOpenCategories(open, [...AllMiners], category)}
       expandIcon={(p) => (
         <RightOutlined
           style={{ marginTop: 16 }}
