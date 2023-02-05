@@ -437,7 +437,7 @@ export default function useCurrentTabProgress(
   return {
     progress: Math.floor(p.progress),
     partialProgress:
-      p.partialProgress === null ? null : Math.floor(p.partialProgress),
+      p.partialProgress === null ? null : Math.ceil(p.partialProgress),
     acquiredItems: p.acquiredItems,
     totalItems: p.totalItems,
   };
