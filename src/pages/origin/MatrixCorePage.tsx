@@ -93,21 +93,21 @@ export default function MatrixCorePage() {
                   />
                 ))}
               </Row>
-              <Divider />
-              <Row gutter={[16, 16]}>
-                {MatrixWeaponPaintjobs.map((paintjob) => (
-                  <MatrixWeaponPaintjobCard
-                    key={miner + paintjob.name + paintjob.id}
-                    miner={miner}
-                    weaponPaintjob={paintjob as MatrixWeaponPaintjob}
-                  />
-                ))}
-              </Row>
             </React.Fragment>
           ))}
 
           <Divider />
+          <Row gutter={[16, 16]}>
+            {MatrixWeaponPaintjobs.map((paintjob) => (
+              <MatrixWeaponPaintjobCard
+                key={miner + paintjob.name + paintjob.id}
+                miner={miner}
+                weaponPaintjob={paintjob as MatrixWeaponPaintjob}
+              />
+            ))}
+          </Row>
 
+          <Divider />
           <Row gutter={[16, 16]}>
             {Object.values(MatrixVictoryPoses[miner]).map(
               (matrixVictoryPose) => (
@@ -120,12 +120,10 @@ export default function MatrixCorePage() {
             )}
           </Row>
 
-          <>
-            <CosmeticHeadwears miner={miner}></CosmeticHeadwears>
-            <CosmeticMoustaches miner={miner}></CosmeticMoustaches>
-            <CosmeticBeards miner={miner}></CosmeticBeards>
-            <CosmeticSideburns miner={miner}></CosmeticSideburns>
-          </>
+          <CosmeticHeadwears miner={miner}></CosmeticHeadwears>
+          <CosmeticMoustaches miner={miner}></CosmeticMoustaches>
+          <CosmeticBeards miner={miner}></CosmeticBeards>
+          <CosmeticSideburns miner={miner}></CosmeticSideburns>
         </>
       )}
     </MinerPageLayout>
