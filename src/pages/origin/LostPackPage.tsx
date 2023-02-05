@@ -69,7 +69,7 @@ export default function LostPackPage() {
         .and((p) => p.part !== 'Paintjob')
         .toArray();
       const lostPackPickaxes = Pickaxes.filter(
-        (p) => p.source === ItemSource.LostPack
+        (p) => p.itemSource === ItemSource.LostPack
       ).map((p) => p.name);
       const acquiredLostPackPickaxes = acquiredPickaxes.filter((p) =>
         lostPackPickaxes.includes(p.name)
@@ -96,7 +96,7 @@ export default function LostPackPage() {
         .and((p) => p.part === 'Paintjob')
         .toArray();
       const lostPackPickaxePaintjobs = Pickaxes.filter(
-        (p) => p.source === ItemSource.LostPack
+        (p) => p.itemSource === ItemSource.LostPack
       ).map((p) => p.name);
       const acquiredLostPackPickaxePaintjobs = acquiredPaintjobs.filter((p) =>
         lostPackPickaxePaintjobs.includes(p.name)
@@ -111,7 +111,7 @@ export default function LostPackPage() {
   );
 
   const lostPackPickaxePaintjobs: PickaxePaintjobName[] = Pickaxes.filter(
-    (p) => p.source === ItemSource.LostPack
+    (p) => p.itemSource === ItemSource.LostPack
   ).map((p) => p.name);
 
   const boscoCategories = ['lostpack-bocso-paintjobs'];
@@ -173,7 +173,7 @@ export default function LostPackPage() {
         <PickaxeParts
           forceRender
           key="lostpack-pickaxe-parts"
-          pickaxes={Pickaxes.filter((p) => p.source === ItemSource.LostPack)}
+          pickaxes={Pickaxes.filter((p) => p.itemSource === ItemSource.LostPack)}
           getProgress={getLostPackPickaxePartProgress}
         />
         <PickaxePaintjobs

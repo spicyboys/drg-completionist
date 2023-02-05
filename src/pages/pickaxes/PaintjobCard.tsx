@@ -1,10 +1,11 @@
-import { Badge, Card, Col } from 'antd';
+import { Badge, Card, Col, Row } from 'antd';
 import { useCallback } from 'react';
 import { MinerColor } from 'data/miner';
-import { PickaxePaintjobNames, PickaxeParts } from 'data/pickaxes';
+import { Pickaxe, PickaxePaintjobNames, PickaxeParts, Pickaxes } from 'data/pickaxes';
 import './PaintjobCard.css';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
+import ItemOrigin from 'pages/ItemOrigin';
 import PaintjobIcon from './PaintjobIcon';
 
 const accentColor = MinerColor.Scout;
@@ -42,6 +43,11 @@ export default function PaintjobCard(props: {
           }}
         >
           <PaintjobIcon paintjob={props.paintjob} />
+          <Row justify="end">
+            <Col>
+              <ItemOrigin item={Pickaxes.find((pick) => pick.name === props.paintjob) as Pickaxe} acquired={query && true} />
+            </Col>
+          </Row>
         </Card>
       </Badge.Ribbon>
     </Col>

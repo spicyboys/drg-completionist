@@ -67,7 +67,7 @@ function getAmountLostPackItems(): number {
       .flat()
       .filter((p) => p.itemSource === ItemSource.LostPack).length +
     BoscoPaintjobs.filter((p) => p.itemSource === ItemSource.LostPack).length + 
-    Pickaxes.filter((p) => p.source === ItemSource.LostPack).length * 6 + UniqueParts.length
+    Pickaxes.filter((p) => p.itemSource === ItemSource.LostPack).length * 6 + UniqueParts.length
   );
 }
 
@@ -132,7 +132,7 @@ async function getAmountAcquiredLostPackItems(
     .and((p) => p.part === 'Paintjob')
     .toArray();
   const lostPackPickaxePaintjobs = Pickaxes.filter(
-    (p) => p.source === ItemSource.LostPack
+    (p) => p.itemSource === ItemSource.LostPack
   ).map((p) => p.name);
   const acquiredLostPackPickaxePaintjobs = acquiredPickaxePaintjobs.filter(
     (p) => lostPackPickaxePaintjobs.includes(p.name)
@@ -149,7 +149,7 @@ async function getAmountAcquiredLostPackItems(
     .and((p) => p.part !== 'Paintjob')
     .toArray();
 
-  const lostPackPickaxeParts = Pickaxes.filter((p) => p.source === ItemSource.LostPack).map((p) => p.name);
+  const lostPackPickaxeParts = Pickaxes.filter((p) => p.itemSource === ItemSource.LostPack).map((p) => p.name);
   const acquiredLostPackPickaxeParts = acquiredPickaxeParts.filter((p) => lostPackPickaxeParts.includes(p.name)).length;
 
   return (

@@ -138,7 +138,7 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
 
   // Returns the appropriate icon based on the current pickaxe's source.
   const iconSrc = useMemo(() => {
-    switch (props.pickaxe.source) {
+    switch (props.pickaxe.itemSource) {
       case ItemSource.Assignment:
         return Assignment;
       case ItemSource.DLC:
@@ -150,7 +150,7 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
       default:
         return Assignment;
     }
-  }, [props.pickaxe.source]);
+  }, [props.pickaxe.itemSource]);
 
   return (
     <Col xxl={6} xl={8} lg={12} md={12} sm={12} xs={24}>
@@ -160,12 +160,12 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
           <div style={{ whiteSpace: 'break-spaces' }}>
             {props.pickaxe.name}
             <Image
-              alt={`${props.pickaxe.name} is acquired via ${props.pickaxe.source}`}
+              alt={`${props.pickaxe.name} is acquired via ${props.pickaxe.itemSource}`}
               src={iconSrc}
               style={{
                 filter: isComplete
                   ? `grayscale(1) invert(1) ${
-                      props.pickaxe.source === 'Lost Pack'
+                      props.pickaxe.itemSource === 'Lost Pack'
                         ? 'brightness(0)'
                         : ''
                     }`
@@ -197,7 +197,7 @@ export default function PickaxeCard(props: { pickaxe: Pickaxe }) {
             <Tooltip
               destroyTooltipOnHide
               placement="bottom"
-              title={`Obtained via ${props.pickaxe.source}${
+              title={`Obtained via ${props.pickaxe.itemSource}${
                 props.pickaxe.assignmentRank
                   ? ' at Rank ' + props.pickaxe.assignmentRank
                   : ''
