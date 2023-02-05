@@ -29,7 +29,10 @@ export default function CosmeticMatrixCoreItemPage() {
       .anyOf(miner)
       .filter((item) => item.isForged)
       .count();
-    return acquiredCosmetics / CosmeticMatrixItems.length;
+    return {
+      obtained: acquiredCosmetics,
+      total: CosmeticMatrixItems.length,
+    };
   }, []);
 
   return (

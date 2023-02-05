@@ -36,7 +36,10 @@ export default function WeaponPaintjobPage() {
       UniqueWeaponPaintjobs.length *
         Object.values(MinerWeapons[miner as Miner]).length +
       CommonWeaponPaintjobs.length;
-    return num_acquired / total_number;
+    return {
+      obtained: num_acquired,
+      total: total_number,
+    };
   }, []);
 
   return (

@@ -13,7 +13,10 @@ export default function FrameworksPage() {
       .where('weapon')
       .anyOf(weapons)
       .count();
-    return acquiredFrameworks / (FrameworkNames.length * weapons.length);
+    return {
+      obtained: acquiredFrameworks,
+      total: FrameworkNames.length * weapons.length,
+    };
   }, []);
   return (
     <MinerPageLayout category="WeaponFrameworks" getProgress={getProgress}>

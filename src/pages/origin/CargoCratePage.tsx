@@ -47,10 +47,10 @@ export default function CargoCratePage() {
         cargoCrateVictoryPoses.includes(v.name)
       ).length;
 
-      return (
-        (acquiredCargoCrateFrameworks + acquiredCargoCrateVictoryPoses) /
-        (cargoCrateFrameworks.length + cargoCrateVictoryPoses.length)
-      );
+      return {
+        obtained: acquiredCargoCrateFrameworks + acquiredCargoCrateVictoryPoses,
+        total: cargoCrateFrameworks.length + cargoCrateVictoryPoses.length,
+      };
     },
     []
   );
@@ -66,7 +66,10 @@ export default function CargoCratePage() {
     const acquiredCargoCrateBoscoFrameworks = acquiredBoscoFrameworks.filter(
       (f) => cargoCrateBoscoFrameworks.includes(f.name)
     ).length;
-    return acquiredCargoCrateBoscoFrameworks / cargoCrateBoscoFrameworks.length;
+    return {
+      obtained: acquiredCargoCrateBoscoFrameworks,
+      total: cargoCrateBoscoFrameworks.length,
+    };
   }, []);
 
   const categories = ['cargo-bosco-frameworks'];

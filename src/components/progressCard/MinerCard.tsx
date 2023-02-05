@@ -2,26 +2,27 @@ import { CollapsePanelProps } from 'antd';
 import { useEffect } from 'react';
 import Image from 'components/Image';
 import { Miner, MinerAvatar, MinerColor } from 'data/miner';
-import { AppDatabase } from 'db/AppDatabase';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
+import { MinerProgressQuery } from 'types/progress';
 import ProgressCard from './ProgressCard';
-
-export type ProgressQuery = (db: AppDatabase, miner: Miner) => Promise<number>;
 
 export default function MinerCard(
   props: {
     children: (miner: Miner) => React.ReactNode;
     category: string;
     miner: Miner;
-    getProgress: ProgressQuery;
+    getProgress: MinerProgressQuery;
   } & Omit<CollapsePanelProps, 'key' | 'header'>
 ) {
   const { category, children, miner, getProgress, ...panelProps } = props;
 
   const db = useDB();
-  const progress = useSuspendedLiveQuery(() => getProgress(db, miner), [miner]);
-  const progressPercentage = Math.round((progress || 0) * 100);
+  const { obtained, total } = useSuspendedLiveQuery(
+    () => getProgress(db, miner),
+    [miner]
+  );
+  const progressPercentage = Math.floor((obtained / total || 0) * 100);
 
   useEffect(() => {
     gtag('event', 'progress', {
@@ -45,6 +46,8 @@ export default function MinerCard(
       }
       progress={{
         percentage: progressPercentage,
+        obtained: obtained,
+        total: total,
         initialStrokeColor: MinerColor[miner],
       }}
     >

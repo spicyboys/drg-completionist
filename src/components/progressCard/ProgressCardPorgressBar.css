@@ -1,0 +1,8 @@
+.ant-progress-text {
+  width: 6em;
+}
+
+.ant-progress {
+  display: flex;
+  align-items: center;
+}

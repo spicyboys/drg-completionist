@@ -55,16 +55,18 @@ export default function MatrixCorePage() {
         .filter((item) => item.isForged)
         .count();
 
-      return (
-        (forgedOverclocks +
+      return {
+        obtained:
+          forgedOverclocks +
           acquiredMatrixPaintjobs +
           acquiredMatrixVictoryPoses +
-          acquiredCosmetics) /
-        (totalOverclocks +
+          acquiredCosmetics,
+        total:
+          totalOverclocks +
           totalMatrixPaintjobs +
           totalMatrixVictoryPoses +
-          totalCosmetics)
-      );
+          totalCosmetics,
+      };
     },
     []
   );

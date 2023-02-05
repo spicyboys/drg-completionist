@@ -13,9 +13,10 @@ export default function OverclocksPage() {
       .anyOf(MinerWeapons[miner as Miner])
       .filter((o) => o.isForged)
       .count();
-    return (
-      forgedOverclocks / Object.values(Overclocks[miner as Miner]).flat().length
-    );
+    return {
+      obtained: forgedOverclocks,
+      total: Object.values(Overclocks[miner as Miner]).flat().length,
+    };
   }, []);
   return (
     <MinerPageLayout category="Overclocks" getProgress={getProgress}>

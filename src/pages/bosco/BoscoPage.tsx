@@ -12,15 +12,16 @@ import { getOpenCategories, updateOpenCategories } from 'utils/localStorage';
 import BoscoFrameworks from './BoscoFrameworks';
 import BoscoPaintjobs from './BoscoPaintjobs';
 
-export type ProgressQuery = (db: AppDatabase) => Promise<number>;
-
 export default function BoscoPage() {
   const getPaintjobProgress = useCallback(async (db: AppDatabase) => {
     const acquiredPaintjobs = await db.boscoPaintjobs
       .where('name')
       .anyOf(BoscoPaintjobNames)
       .count();
-    return acquiredPaintjobs / BoscoPaintjobsList.length;
+    return {
+      obtained: acquiredPaintjobs,
+      total: BoscoPaintjobsList.length,
+    };
   }, []);
 
   const getFrameworkProgress = useCallback(async (db: AppDatabase) => {
@@ -28,7 +29,10 @@ export default function BoscoPage() {
       .where('name')
       .anyOf(BoscoFrameworkNames)
       .count();
-    return acquiredFrameworks / BoscoFrameworksList.length;
+    return {
+      obtained: acquiredFrameworks,
+      total: BoscoFrameworksList.length,
+    };
   }, []);
 
   const categories = ['bosco-frameworks', 'bosco-paintjobs'];

@@ -2,8 +2,9 @@ import { Card, Collapse, CollapsePanelProps, Row } from 'antd';
 import { PaintPickaxeIcon } from 'assets/other';
 import Image from 'components/Image';
 import { PickaxePaintjobName } from 'data/pickaxes';
+import { ProgressQuery } from 'types/progress';
 import PaintjobCard from './PaintjobCard';
-import PickaxeProgressBar, { ProgressQuery } from './PickaxeProgressBar';
+import PickaxeProgressBar from './PickaxeProgressBar';
 
 const { Panel } = Collapse;
 const { Meta } = Card;

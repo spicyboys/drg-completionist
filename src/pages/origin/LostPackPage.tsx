@@ -35,7 +35,10 @@ export default function LostPackPage() {
         (p) => lostPackArmorPaintjobs.includes(p.name)
       ).length;
 
-      return acquiredLostPackArmorPaintjobs / lostPackArmorPaintjobs.length;
+      return {
+        obtained: acquiredLostPackArmorPaintjobs,
+        total: lostPackArmorPaintjobs.length,
+      };
     },
     []
   );
@@ -50,7 +53,10 @@ export default function LostPackPage() {
         (p) => lostPackBoscoPaintjobs.includes(p.name)
       ).length;
 
-      return acquiredLostPackBoscoPaintjobs / lostPackBoscoPaintjobs.length;
+      return {
+        obtained: acquiredLostPackBoscoPaintjobs,
+        total: lostPackBoscoPaintjobs.length,
+      };
     },
     []
   );
@@ -74,10 +80,10 @@ export default function LostPackPage() {
         .anyOf(PickaxeUniquePartNames)
         .count();
       // Denominator: 6 Total Pickaxe Parts - 1 Paintjob Part = 5 Non-Paintjob Parts
-      return (
-        (acquiredLostPackPickaxes + acquiredUniques) /
-        (lostPackPickaxes.length * 5 + UniqueParts.length)
-      );
+      return {
+        obtained: acquiredLostPackPickaxes + acquiredUniques,
+        total: lostPackPickaxes.length * 5 + UniqueParts.length,
+      };
     },
     []
   );
@@ -96,7 +102,10 @@ export default function LostPackPage() {
         lostPackPickaxePaintjobs.includes(p.name)
       ).length;
       // 6 Total Pickaxe Parts - 1 Paintjob Part = 5 Remaining Parts
-      return acquiredLostPackPickaxePaintjobs / lostPackPickaxePaintjobs.length;
+      return {
+        obtained: acquiredLostPackPickaxePaintjobs,
+        total: lostPackPickaxePaintjobs.length,
+      };
     },
     []
   );
@@ -105,8 +114,11 @@ export default function LostPackPage() {
     (p) => p.source === ItemSource.LostPack
   ).map((p) => p.name);
 
-  const boscoCategories = ['lostpack-bocso-paintjobs']
-  const pickaxeCategories = ['lostpack-pickaxe-paintjobs', 'lostpack-pickaxe-parts']
+  const boscoCategories = ['lostpack-bocso-paintjobs'];
+  const pickaxeCategories = [
+    'lostpack-pickaxe-paintjobs',
+    'lostpack-pickaxe-parts',
+  ];
 
   return (
     <>
