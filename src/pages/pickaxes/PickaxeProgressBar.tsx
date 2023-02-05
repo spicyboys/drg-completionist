@@ -44,7 +44,7 @@ export default memo(function PickaxeProgressBar({
             />
           </Tooltip>
         ) : (
-          `${percent}%`
+          `${percent}% (${obtained}/${total})`
         )
       }
     />
