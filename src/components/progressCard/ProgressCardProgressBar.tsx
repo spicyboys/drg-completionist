@@ -1,9 +1,12 @@
 import { Image, Progress, Tooltip } from 'antd';
 import { memo } from 'react';
 import { RockAndStone } from 'assets/other';
+import './ProgressCardPorgressBar.css';
 
 export default memo(function ProgressCardProgressBar(props: {
   percentage: number;
+  obtained: number;
+  total: number;
   initialStrokeColor: string;
 }) {
   return (
@@ -24,7 +27,7 @@ export default memo(function ProgressCardProgressBar(props: {
             />
           </Tooltip>
         ) : (
-          `${percent}%`
+          `${percent}% (${props.obtained}/${props.total})`
         )
       }
     />

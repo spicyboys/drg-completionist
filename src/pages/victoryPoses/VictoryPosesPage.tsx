@@ -21,10 +21,10 @@ export default function VictoryPosePage() {
       .where('miner')
       .anyOf(miner)
       .count();
-    return (
-      (acquiredMatrixVictoryPoses + acquiredCommonVictoryPoses) /
-      (matrixVictoryPoses.length + commonVictoryPoses.length)
-    );
+    return {
+      obtained: acquiredMatrixVictoryPoses + acquiredCommonVictoryPoses,
+      total: matrixVictoryPoses.length + commonVictoryPoses.length,
+    };
   }, []);
 
   return (

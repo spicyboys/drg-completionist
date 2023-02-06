@@ -2,8 +2,8 @@ import { Card, Collapse, CollapsePanelProps, Row } from 'antd';
 import { Bosco } from 'assets/bosco';
 import Image from 'components/Image';
 import { BoscoFramework } from 'data/bosco';
+import { ProgressQuery } from 'types/progress';
 import BoscoFrameworkCard from './BoscoFrameworkCard';
-import { ProgressQuery } from './BoscoPage';
 import BoscoProgressBar from './BoscoProgressBar';
 
 const { Panel } = Collapse;

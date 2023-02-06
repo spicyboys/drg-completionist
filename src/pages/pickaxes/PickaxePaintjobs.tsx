@@ -1,9 +1,10 @@
 import { Card, Collapse, CollapsePanelProps, Row } from 'antd';
 import { PaintPickaxeIcon } from 'assets/other';
 import Image from 'components/Image';
-import { PickaxePaintjobNames } from 'data/pickaxes';
+import { PickaxePaintjobName } from 'data/pickaxes';
+import { ProgressQuery } from 'types/progress';
 import PaintjobCard from './PaintjobCard';
-import PickaxeProgressBar, { ProgressQuery } from './PickaxeProgressBar';
+import PickaxeProgressBar from './PickaxeProgressBar';
 
 const { Panel } = Collapse;
 const { Meta } = Card;
@@ -11,7 +12,7 @@ const { Meta } = Card;
 export default function PickaxePaintjobs(
   props: {
     getProgress: ProgressQuery;
-    paintjobs: typeof PickaxePaintjobNames;
+    paintjobs: PickaxePaintjobName[];
   } & Omit<CollapsePanelProps, 'key' | 'header'>
 ) {
   const { getProgress, paintjobs, ...panelProps } = props;

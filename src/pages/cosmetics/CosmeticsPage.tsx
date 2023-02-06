@@ -29,7 +29,10 @@ export default function CosmeticMatrixCoreItemPage() {
       .anyOf(miner)
       .filter((item) => item.isForged)
       .count();
-    return acquiredCosmetics / CosmeticMatrixItems.length;
+    return {
+      obtained: acquiredCosmetics,
+      total: CosmeticMatrixItems.length,
+    };
   }, []);
 
   return (
@@ -46,7 +49,7 @@ export default function CosmeticMatrixCoreItemPage() {
   );
 }
 
-function CosmeticHeadwears(props: { miner: Miner }) {
+export function CosmeticHeadwears(props: { miner: Miner }) {
   return (
     <React.Fragment key={props.miner + '-headwears'}>
       <Divider orientation="center">
@@ -75,7 +78,7 @@ function CosmeticHeadwears(props: { miner: Miner }) {
   );
 }
 
-function CosmeticBeards(props: { miner: Miner }) {
+export function CosmeticBeards(props: { miner: Miner }) {
   return (
     <React.Fragment key={props.miner + '-beards'}>
       <Divider orientation="center">
@@ -104,7 +107,7 @@ function CosmeticBeards(props: { miner: Miner }) {
   );
 }
 
-function CosmeticMoustaches(props: { miner: Miner }) {
+export function CosmeticMoustaches(props: { miner: Miner }) {
   return (
     <React.Fragment key={props.miner + '-moustache'}>
       <Divider orientation="center">
@@ -133,7 +136,7 @@ function CosmeticMoustaches(props: { miner: Miner }) {
   );
 }
 
-function CosmeticSideburns(props: { miner: Miner }) {
+export function CosmeticSideburns(props: { miner: Miner }) {
   return (
     <React.Fragment key={props.miner + '-sideburns'}>
       <Divider orientation="center">

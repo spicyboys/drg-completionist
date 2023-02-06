@@ -15,11 +15,14 @@ export type TabName =
   | 'pickaxes'
   | 'victoryPoses'
   | 'cosmetics'
-  | 'bosco';
+  | 'bosco'
+  | 'matrixCore'
+  | 'cargoCrate'
+  | 'lostPack';
 
 export const DEFAULT_TAB: TabName = 'overclocks';
 
-export const TABS: Array<{
+const CATEGORY_TABS: Array<{
   title: string;
   key: TabName;
   content: React.ComponentType;
@@ -44,13 +47,6 @@ export const TABS: Array<{
     key: 'weaponPaintjobs',
     content: lazy(() => import('pages/weaponPaintjobs/WeaponPaintjobsPage')),
   },
-  // https://github.com/BobertForever/drg-completionist/issues/2
-  // {
-  //   title: "Miner Accessories",
-  //   key: "accessories",
-  //   content: <></>,
-  // },
-  // https://github.com/BobertForever/drg-completionist/issues/3
   {
     title: 'Pickaxes',
     key: 'pickaxes',
@@ -72,6 +68,30 @@ export const TABS: Array<{
     content: lazy(() => import('pages/bosco/BoscoPage')),
   },
 ];
+
+const ORIGIN_TABS: Array<{
+  title: string;
+  key: TabName;
+  content: React.ComponentType;
+}> = [
+  {
+    title: 'Matrix Core',
+    key: 'matrixCore',
+    content: lazy(() => import('pages/origin/MatrixCorePage')),
+  },
+  {
+    title: 'Cargo Crate',
+    key: 'cargoCrate',
+    content: lazy(() => import('pages/origin/CargoCratePage')),
+  },
+  {
+    title: 'Lost Pack',
+    key: 'lostPack',
+    content: lazy(() => import('pages/origin/LostPackPage')),
+  },
+];
+
+export const TABS = [...CATEGORY_TABS, ...ORIGIN_TABS];
 
 const PageSpinner = memo(function PageSpinner() {
   return (

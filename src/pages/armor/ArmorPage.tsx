@@ -21,7 +21,10 @@ export default function ArmorPage() {
       .where('miner')
       .anyOf(miner)
       .count();
-    return acquiredPaintjobs / paintjobs.length;
+    return {
+      obtained: acquiredPaintjobs,
+      total: paintjobs.length,
+    };
   }, []);
 
   const db = useDB();
@@ -74,6 +77,8 @@ export default function ArmorPage() {
             percentage:
               (acquiredCommonArmorPaintJobs / CommonArmorPaintjobs.length) *
               100,
+            obtained: acquiredCommonArmorPaintJobs,
+            total: CommonArmorPaintjobs.length,
             initialStrokeColor: '#A8A8A8',
           }}
         >

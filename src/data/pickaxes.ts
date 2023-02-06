@@ -56,10 +56,7 @@ export const PickaxeIcons: Record<typeof PickaxeSets[number], ImgSrc> = {
 };
 
 // NOTE: DLC Paintjobs disabled until GUIDs can be found
-export const PickaxePaintjobIcons: Record<
-  typeof PickaxePaintjobNames[number],
-  ImgSrc
-> = {
+export const PickaxePaintjobIcons: Record<PickaxePaintjobName, ImgSrc> = {
   'Bug Hide': paintjobIcons.BugHide,
   'Carven Pride': paintjobIcons.CarvenPride,
   'Chasm-Borne Cliffhanger': paintjobIcons.ChasmBorneCliffhanger,
@@ -97,12 +94,14 @@ export type PickaxeParts =
   | 'Pommel'
   | 'Paintjob';
 
+export type PickaxePaintjobName = typeof PickaxePaintjobNames[number];
+
 export type Pickaxe = {
   name: typeof PickaxeSets[number];
-  source: ItemSource;
+  itemSource: ItemSource;
   assignmentRank?: number;
   icon: typeof PickaxeIcons[typeof PickaxeSets[number]];
-  paintjobIcon: typeof PickaxePaintjobIcons[typeof PickaxePaintjobNames[number]];
+  paintjobIcon: typeof PickaxePaintjobIcons[PickaxePaintjobName];
   partIDs: Record<PickaxeParts, string>;
 };
 
@@ -116,7 +115,7 @@ export type PickaxeUniquePart = {
 export const Pickaxes: Pickaxe[] = [
   {
     name: 'Chasm-Borne Cliffhanger',
-    source: ItemSource.Assignment,
+    itemSource: ItemSource.Assignment,
     assignmentRank: 20,
     icon: PickaxeIcons['Chasm-Borne Cliffhanger'],
     paintjobIcon: PickaxePaintjobIcons['Chasm-Borne Cliffhanger'],
@@ -131,7 +130,7 @@ export const Pickaxes: Pickaxe[] = [
   },
   {
     name: "Gadgeteer's Favorite",
-    source: ItemSource.Assignment,
+    itemSource: ItemSource.Assignment,
     assignmentRank: 30,
     icon: PickaxeIcons["Gadgeteer's Favorite"],
     paintjobIcon: PickaxePaintjobIcons["Gadgeteer's Favorite"],
@@ -146,7 +145,7 @@ export const Pickaxes: Pickaxe[] = [
   },
   {
     name: "Reaper's Claw",
-    source: ItemSource.Assignment,
+    itemSource: ItemSource.Assignment,
     assignmentRank: 50,
     icon: PickaxeIcons["Reaper's Claw"],
     paintjobIcon: PickaxePaintjobIcons["Reaper's Claw"],
@@ -161,7 +160,7 @@ export const Pickaxes: Pickaxe[] = [
   },
   {
     name: 'Drift Crusher',
-    source: ItemSource.Assignment,
+    itemSource: ItemSource.Assignment,
     assignmentRank: 75,
     icon: PickaxeIcons['Drift Crusher'],
     paintjobIcon: PickaxePaintjobIcons['Drift Crusher'],
@@ -177,7 +176,7 @@ export const Pickaxes: Pickaxe[] = [
 
   {
     name: 'Bug Hide',
-    source: ItemSource.LostPack,
+    itemSource: ItemSource.LostPack,
     icon: PickaxeIcons['Bug Hide'],
     paintjobIcon: PickaxePaintjobIcons['Bug Hide'],
     partIDs: {
@@ -191,7 +190,7 @@ export const Pickaxes: Pickaxe[] = [
   },
   {
     name: 'Carven Pride',
-    source: ItemSource.LostPack,
+    itemSource: ItemSource.LostPack,
     icon: PickaxeIcons['Carven Pride'],
     paintjobIcon: PickaxePaintjobIcons['Carven Pride'],
     partIDs: {
@@ -206,7 +205,7 @@ export const Pickaxes: Pickaxe[] = [
 
   {
     name: 'Hammerblow',
-    source: ItemSource.LostPack,
+    itemSource: ItemSource.LostPack,
     icon: PickaxeIcons['Hammerblow'],
     paintjobIcon: PickaxePaintjobIcons['Hammerblow'],
     partIDs: {
@@ -220,7 +219,7 @@ export const Pickaxes: Pickaxe[] = [
   },
   {
     name: 'Incorruptible',
-    source: ItemSource.LostPack,
+    itemSource: ItemSource.LostPack,
     icon: PickaxeIcons['Incorruptible'],
     paintjobIcon: PickaxePaintjobIcons['Incorruptible'],
     partIDs: {
@@ -234,7 +233,7 @@ export const Pickaxes: Pickaxe[] = [
   },
   {
     name: 'Jagged Son',
-    source: ItemSource.LostPack,
+    itemSource: ItemSource.LostPack,
     icon: PickaxeIcons['Jagged Son'],
     paintjobIcon: PickaxePaintjobIcons['Jagged Son'],
     partIDs: {
@@ -248,7 +247,7 @@ export const Pickaxes: Pickaxe[] = [
   },
   {
     name: 'Pneumatic',
-    source: ItemSource.LostPack,
+    itemSource: ItemSource.LostPack,
     icon: PickaxeIcons['Pneumatic'],
     paintjobIcon: PickaxePaintjobIcons['Pneumatic'],
     partIDs: {
@@ -262,7 +261,7 @@ export const Pickaxes: Pickaxe[] = [
   },
   {
     name: "Arc Welder's Delight",
-    source: ItemSource.LostPack,
+    itemSource: ItemSource.LostPack,
     icon: PickaxeIcons["Arc Welder's Delight"],
     paintjobIcon: PickaxePaintjobIcons["Arc Welder's Delight"],
     partIDs: {
@@ -276,7 +275,7 @@ export const Pickaxes: Pickaxe[] = [
   },
   {
     name: 'Core Hound',
-    source: ItemSource.LostPack,
+    itemSource: ItemSource.LostPack,
     icon: PickaxeIcons['Core Hound'],
     paintjobIcon: PickaxePaintjobIcons['Core Hound'],
     partIDs: {
@@ -290,7 +289,7 @@ export const Pickaxes: Pickaxe[] = [
   },
   {
     name: 'Blight Guard',
-    source: ItemSource.PerformancePass,
+    itemSource: ItemSource.PerformancePass,
     icon: PickaxeIcons['Blight Guard'],
     paintjobIcon: PickaxePaintjobIcons['Blight Guard'],
     partIDs: {

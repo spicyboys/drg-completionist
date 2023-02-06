@@ -2,7 +2,7 @@ import { Card, Collapse, CollapsePanelProps, Row } from 'antd';
 import { Bosco } from 'assets/bosco';
 import Image from 'components/Image';
 import { BoscoPaintjob } from 'data/bosco';
-import { ProgressQuery } from './BoscoPage';
+import { ProgressQuery } from 'types/progress';
 import BoscoPaintjobCard from './BoscoPaintjobCard';
 import BoscoProgressBar from './BoscoProgressBar';
 

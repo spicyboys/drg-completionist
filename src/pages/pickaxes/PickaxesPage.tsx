@@ -25,10 +25,10 @@ export default function PickaxesPage() {
       .anyOf(PickaxeUniquePartNames)
       .count();
     // Denominator: 6 Total Pickaxe Parts - 1 Paintjob Part = 5 Non-Paintjob Parts
-    return (
-      (acquiredPickaxes + acquiredUniques) /
-      (PickaxeSets.length * 5 + PickaxeUniquePartNames.length)
-    );
+    return {
+      obtained: acquiredPickaxes + acquiredUniques,
+      total: PickaxeSets.length * 5 + PickaxeUniquePartNames.length,
+    };
   }, []);
 
   /** Get total count for all pickaxe Paintjob parts ONLY. */
@@ -39,7 +39,10 @@ export default function PickaxesPage() {
       .and((p) => p.part === 'Paintjob')
       .count();
     // 6 Total Pickaxe Parts - 1 Paintjob Part = 5 Remaining Parts
-    return acquiredPaintjobs / PickaxePaintjobNames.length;
+    return {
+      obtained: acquiredPaintjobs,
+      total: PickaxePaintjobNames.length,
+    };
   }, []);
 
   const categories = ['pickaxe-parts', 'pickaxe-paintjobs'];
@@ -66,7 +69,7 @@ export default function PickaxesPage() {
       <PickaxePaintjobs
         forceRender
         key="pickaxe-paintjobs"
-        paintjobs={PickaxePaintjobNames}
+        paintjobs={Object.values(PickaxePaintjobNames)}
         getProgress={getPaintjobProgress}
       />
     </Collapse>

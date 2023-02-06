@@ -1,19 +1,20 @@
 import { Image, Progress, Tooltip } from 'antd';
 import { memo } from 'react';
 import { RockAndStone } from 'assets/other';
-import type { AppDatabase } from 'db/AppDatabase';
 import useDB from 'db/useDB';
 import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
-
-export type ProgressQuery = (db: AppDatabase) => Promise<number>;
+import { ProgressQuery } from 'types/progress';
 
 export default memo(function BoscoProgressBar(props: {
   barColor: string;
   getProgress: ProgressQuery;
 }) {
   const db = useDB();
-  const progress = useSuspendedLiveQuery(() => props.getProgress(db), []);
-  const progressPercentage = Math.round((progress || 0) * 100);
+  const { obtained, total } = useSuspendedLiveQuery(
+    () => props.getProgress(db),
+    []
+  );
+  const progressPercentage = Math.floor((obtained / total || 0) * 100);
 
   return (
     <Progress

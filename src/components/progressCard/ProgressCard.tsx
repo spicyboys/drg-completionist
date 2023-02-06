@@ -15,6 +15,8 @@ export default function ProgressCard(
 
     progress: {
       percentage: number;
+      obtained: number;
+      total: number;
       initialStrokeColor: string;
     };
   } & Omit<CollapsePanelProps, 'key' | 'header'>

@@ -1,8 +1,9 @@
 import { RightOutlined } from '@ant-design/icons';
 import { Collapse } from 'antd';
 import { useMemo } from 'react';
-import MinerCard, { ProgressQuery } from 'components/progressCard/MinerCard';
+import MinerCard from 'components/progressCard/MinerCard';
 import { AllMiners, Miner } from 'data/miner';
+import { MinerProgressQuery } from 'types/progress';
 import { getOpenCategories, updateOpenCategories } from 'utils/localStorage';
 
 /**
@@ -17,7 +18,7 @@ export default function MinerPageLayout(props: {
   children:
     | ((miner: Miner) => React.ReactNode)
     | [(miner: Miner) => React.ReactNode, React.ReactNode];
-  getProgress: ProgressQuery;
+  getProgress: MinerProgressQuery;
 }) {
   const { category, children } = props;
 
@@ -34,8 +35,7 @@ export default function MinerPageLayout(props: {
       className="unselectable"
       expandIconPosition="right"
       defaultActiveKey={getOpenCategories([...AllMiners], category)}
-      onChange={(open) =>
-        updateOpenCategories(open, [...AllMiners], category)}
+      onChange={(open) => updateOpenCategories(open, [...AllMiners], category)}
       expandIcon={(p) => (
         <RightOutlined
           style={{ marginTop: 16 }}
