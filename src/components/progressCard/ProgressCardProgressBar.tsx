@@ -1,7 +1,7 @@
-import { Image, Progress, Tooltip } from 'antd';
+import { Image, Progress, Row, Tooltip, Typography } from 'antd';
 import { memo } from 'react';
 import { RockAndStone } from 'assets/other';
-import './ProgressCardPorgressBar.css';
+import './ProgressCardProgressBar.css';
 
 export default memo(function ProgressCardProgressBar(props: {
   percentage: number;
@@ -19,12 +19,17 @@ export default memo(function ProgressCardProgressBar(props: {
       format={(percent) =>
         percent === 100 ? (
           <Tooltip title="Assignment complete! Well done, miner.">
-            <Image
-              alt="100% Complete"
-              preview={false}
-              src={RockAndStone.png}
-              style={{ height: 20, width: 'auto' }}
-            />
+            <Row style={{ marginLeft: '4px' }}>
+              <Image
+                alt="100% Complete"
+                preview={false}
+                src={RockAndStone.png}
+                style={{ height: 20, width: 'auto' }}
+              />
+              <Typography style={{ marginLeft: '8px', alignSelf: 'center', color: props.obtained === props.total ? 'green' : 'white' }}>
+                ({props.obtained}/{props.total})
+              </Typography>
+            </Row>
           </Tooltip>
         ) : (
           `${percent}% (${props.obtained}/${props.total})`

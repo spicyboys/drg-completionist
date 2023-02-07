@@ -1,10 +1,12 @@
 import { Card, Collapse, CollapsePanelProps, Row } from 'antd';
 import { PaintPickaxeIcon } from 'assets/other';
 import Image from 'components/Image';
+import ProgressCardProgressBar from 'components/progressCard/ProgressCardProgressBar';
 import { PickaxePaintjobName } from 'data/pickaxes';
+import useDB from 'db/useDB';
+import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
 import { ProgressQuery } from 'types/progress';
 import PaintjobCard from './PaintjobCard';
-import PickaxeProgressBar from './PickaxeProgressBar';
 
 const { Panel } = Collapse;
 const { Meta } = Card;
@@ -16,6 +18,10 @@ export default function PickaxePaintjobs(
   } & Omit<CollapsePanelProps, 'key' | 'header'>
 ) {
   const { getProgress, paintjobs, ...panelProps } = props;
+
+  const db = useDB();
+  const { obtained, total } = useSuspendedLiveQuery(() => getProgress(db), []);
+  const progressPercentage = Math.floor((obtained / total || 0) * 100);
 
   return (
     <Panel
@@ -33,10 +39,11 @@ export default function PickaxePaintjobs(
             />
           }
           description={
-            <PickaxeProgressBar
-              barColor="#b00f86"
-              category="PickaxePaintjobs"
-              getProgress={getProgress}
+            <ProgressCardProgressBar
+              initialStrokeColor="#b00f86"
+              percentage={progressPercentage}
+              obtained={obtained}
+              total={total}
             />
           }
         />
