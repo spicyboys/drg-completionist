@@ -26,7 +26,7 @@ export default memo(function ProgressCardProgressBar(props: {
                 src={RockAndStone.png}
                 style={{ height: 20, width: 'auto' }}
               />
-              <Typography style={{ marginLeft: '8px', alignSelf: 'center', color: props.obtained === props.total ? 'green' : 'white' }}>
+              <Typography style={{ marginLeft: '9px', alignSelf: 'center', color: props.obtained === props.total ? 'green' : 'white' }}>
                 ({props.obtained}/{props.total})
               </Typography>
             </Row>
