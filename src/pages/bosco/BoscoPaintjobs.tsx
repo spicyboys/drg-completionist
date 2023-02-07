@@ -1,10 +1,12 @@
 import { Card, Collapse, CollapsePanelProps, Row } from 'antd';
 import { Bosco } from 'assets/bosco';
 import Image from 'components/Image';
+import ProgressCardProgressBar from 'components/progressCard/ProgressCardProgressBar';
 import { BoscoPaintjob } from 'data/bosco';
+import useDB from 'db/useDB';
+import useSuspendedLiveQuery from 'db/useSuspendedLiveQuery';
 import { ProgressQuery } from 'types/progress';
 import BoscoPaintjobCard from './BoscoPaintjobCard';
-import BoscoProgressBar from './BoscoProgressBar';
 
 const { Panel } = Collapse;
 const { Meta } = Card;
@@ -16,6 +18,13 @@ export default function BoscoPaintjobs(
   } & Omit<CollapsePanelProps, 'key' | 'header'>
 ) {
   const { getProgress, paintjobs, ...panelProps } = props;
+
+  const db = useDB();
+  const { obtained, total } = useSuspendedLiveQuery(
+    () => getProgress(db),
+    []
+  );
+  const progressPercentage = Math.floor((obtained / total || 0) * 100);
 
   return (
     <Panel
@@ -33,7 +42,12 @@ export default function BoscoPaintjobs(
             />
           }
           description={
-            <BoscoProgressBar barColor="#dc8c13" getProgress={getProgress} />
+            <ProgressCardProgressBar
+              initialStrokeColor="#dc8c13"
+              percentage={progressPercentage}
+              obtained={obtained}
+              total={total}
+            />
           }
         />
       }
