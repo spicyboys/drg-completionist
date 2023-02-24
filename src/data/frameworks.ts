@@ -239,7 +239,7 @@ export const Frameworks: Record<MinerWeapon<Miner>, Framework[]> = {
       name: "Builder's Choice",
       itemSource: ItemSource.CargoCrate,
       icon: FrameworkIcons.BuildersChoice,
-      id: '04EBE2E6AC0B97488B67307E63F7CB5A',
+      id: '7F613F82FCAE9443A510008733A81383',
     },
     {
       name: 'MilSpec',
