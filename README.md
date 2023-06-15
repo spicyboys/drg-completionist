@@ -17,7 +17,7 @@ _The Steam save file is located here by default on Windows, but may vary based o
 
 ## Upcoming Features
 
-- None planned right now, please open an issue if you have any suggestions
+- None are planned right now. Please [open an issue](https://github.com/spicyboys/drg-completionist/issues) with any suggestions.
 
 ## Privacy
 
@@ -25,7 +25,7 @@ _DRG Completionist_ respects your privacy. The app is entirely serverless and us
 
 If you choose to upload your save file, neither the file nor its contents ever leaves your computer. The save file parser is compiled from [Rust](<https://en.wikipedia.org/wiki/Rust_(programming_language)>) into [WASM](https://en.wikipedia.org/wiki/WebAssembly) specifically so it can run completely within your browser. We encourage you to [inspect the source code](https://github.com/spicyboys/drg-save-parser) if you want to see what it's doing.
 
-The only tracking this app has are a few fully anonymized Google Analytics tags that allow us to see how (or if) this app is used in the wild. These `gtags` are blocked by default if you use any of the privacy-oriented browser settings and extensions that are widely available today.
+The only tracking this app has are a few fully anonymized Google Analytics tags that allow us to see how (or if) this app is used in the wild. These `gtags` are blocked by default if you use any of the privacy-oriented browser settings or extensions that are widely available today.
 
 ## Special Thanks
 
@@ -35,8 +35,8 @@ The only tracking this app has are a few fully anonymized Google Analytics tags 
 
 ## Disclaimer
 
-Neither this app nor its developers are associated with Deep Rock Galactic or Ghost Ship Games in any way whatsoever. _(But we really admire what they do.)_
+Neither this app nor its developers are associated with Deep Rock Galactic or Ghost Ship Games in any way. _(But we really admire what they do.)_
 
 ---
 
-###### README Last Updated: Sept. 1, 2021
+###### README Last Updated: June 15, 2023
