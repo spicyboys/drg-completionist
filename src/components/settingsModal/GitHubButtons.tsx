@@ -6,30 +6,30 @@ export default function GitHubButtons() {
     <Row justify="center">
       <Space>
         <GitHubButton
-          aria-label="Star BobertForever/drg-completionist on GitHub"
+          aria-label="Star spicyboys/drg-completionist on GitHub"
           data-icon="octicon-star"
           data-show-count="true"
           data-size="large"
           data-text="Star"
-          href="https://github.com/BobertForever/drg-completionist/"
+          href="https://github.com/spicyboys/drg-completionist"
         />
         <GitHubButton
-          aria-label="Fork BobertForever/drg-completionist on GitHub"
+          aria-label="Fork spicyboys/drg-completionist on GitHub"
           data-color-scheme="no-preference: light; light: light; dark: light;"
           data-icon="octicon-repo-forked"
           data-show-count="true"
           data-size="large"
           data-text="Fork"
-          href="https://github.com/BobertForever/drg-completionist/fork"
+          href="https://github.com/spicyboys/drg-completionist/fork"
         />
         <GitHubButton
-          aria-label="Issue BobertForever/drg-completionist on GitHub"
+          aria-label="Issue spicyboys/drg-completionist on GitHub"
           data-color-scheme="no-preference: light; light: light; dark: light;"
           data-icon="octicon-issue-opened"
           data-show-count="true"
           data-size="large"
           data-text="Issues"
-          href="https://github.com/BobertForever/drg-completionist/issues"
+          href="https://github.com/spicyboys/drg-completionist/issues"
         />
       </Space>
     </Row>
