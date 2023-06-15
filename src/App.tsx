@@ -2,6 +2,9 @@ import { Col, BackTop, Layout, Row, Spin } from 'antd';
 import 'antd/dist/antd.dark.css';
 import React, { lazy, memo } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import * as BoscoPhotos from 'assets/bosco';
+import * as OtherIcons from 'assets/other/';
+import * as OverclockFrame from 'assets/overclocks/frames';
 import PageFooter from 'components/PageFooter';
 import PageHeader from 'components/PageHeader';
 
@@ -25,46 +28,55 @@ export const DEFAULT_TAB: TabName = 'overclocks';
 const CATEGORY_TABS: Array<{
   title: string;
   key: TabName;
+  icon: ImgSrc;
   content: React.ComponentType;
 }> = [
   {
     title: 'Overclocks',
     key: 'overclocks',
+    icon: OverclockFrame.Clean,
     content: lazy(() => import('pages/overclocks/OverclocksPage')),
   },
   {
     title: 'Frameworks',
     key: 'frameworks',
+    icon: OtherIcons.ForgeHammer,
     content: lazy(() => import('pages/frameworks/FrameworksPage')),
   },
   {
     title: 'Armor',
     key: 'armor',
+    icon: OtherIcons.Armor,
     content: lazy(() => import('pages/armor/ArmorPage')),
   },
   {
     title: 'Weapons',
     key: 'weaponPaintjobs',
+    icon: OtherIcons.PaintPickaxeIcon,
     content: lazy(() => import('pages/weaponPaintjobs/WeaponPaintjobsPage')),
   },
   {
     title: 'Pickaxes',
     key: 'pickaxes',
+    icon: OtherIcons.PickaxeIcon,
     content: lazy(() => import('pages/pickaxes/PickaxesPage')),
   },
   {
     title: 'Victory Poses',
     key: 'victoryPoses',
+    icon: OtherIcons.RockAndStone,
     content: lazy(() => import('pages/victoryPoses/VictoryPosesPage')),
   },
   {
     title: 'Cosmetics',
     key: 'cosmetics',
+    icon: OtherIcons.AccessoryIcon,
     content: lazy(() => import('pages/cosmetics/CosmeticsPage')),
   },
   {
     title: 'Bosco',
     key: 'bosco',
+    icon: BoscoPhotos.Bosco,
     content: lazy(() => import('pages/bosco/BoscoPage')),
   },
 ];
@@ -72,21 +84,25 @@ const CATEGORY_TABS: Array<{
 const ORIGIN_TABS: Array<{
   title: string;
   key: TabName;
+  icon: ImgSrc;
   content: React.ComponentType;
 }> = [
   {
     title: 'Matrix Core',
     key: 'matrixCore',
+    icon: OtherIcons.MatrixCore,
     content: lazy(() => import('pages/origin/MatrixCorePage')),
   },
   {
     title: 'Cargo Crate',
     key: 'cargoCrate',
+    icon: OtherIcons.CargoCrateMed,
     content: lazy(() => import('pages/origin/CargoCratePage')),
   },
   {
     title: 'Lost Pack',
     key: 'lostPack',
+    icon: OtherIcons.LostPack,
     content: lazy(() => import('pages/origin/LostPackPage')),
   },
 ];

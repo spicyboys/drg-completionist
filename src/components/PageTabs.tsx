@@ -3,6 +3,7 @@ import { Button, Col, Divider, Grid, Row, Select, Tabs } from 'antd';
 import { useEffect, useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { DEFAULT_TAB, TABS } from 'App';
+import Image from './Image';
 import AnalyzeModal from './analyzeModal/AnalyzeModal';
 import SettingsModal from './settingsModal/SettingsModal';
 import './PageTabs.css';
@@ -79,6 +80,11 @@ export default function PageTabs() {
     >
       {TABS.map((tab) => (
         <Option value={tab.key} key={tab.key}>
+          <Image
+            alt={tab.title}
+            src={tab.icon}
+            style={{ marginBottom: 2, marginRight: 8, height: 16, width: 16 }}
+          />
           {tab.title}
         </Option>
       ))}
@@ -113,7 +119,24 @@ export default function PageTabs() {
       }}
     >
       {TABS.map((tab) => (
-        <TabPane tab={tab.title} key={tab.key} />
+        <TabPane
+          key={tab.key}
+          tab={
+            <>
+              <Image
+                alt={tab.title}
+                src={tab.icon}
+                style={{
+                  height: 20,
+                  width: 20,
+                  marginBottom: 2,
+                  marginRight: 8,
+                }}
+              />
+              {tab.title}
+            </>
+          }
+        />
       ))}
     </Tabs>
   );
