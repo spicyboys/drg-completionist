@@ -107,7 +107,7 @@ const CryoCannonOverclocks: Overclock[] = [
       umanite: 130,
     },
     effects: {
-      buffs: ['+Snowball'],
+      buffs: ['+Snowball', 'Targets Cannot Warm Up Briefly'],
       nerfs: ['-100 Tank Capacity', '+1.0s Repressurization Delay'],
     },
     description:

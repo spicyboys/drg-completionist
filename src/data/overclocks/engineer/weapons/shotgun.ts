@@ -88,11 +88,11 @@ const ShotgunOverclocks: Overclock[] = [
       magnite: 90,
     },
     effects: {
-      buffs: ['+90 Max Ammo', '+6 Magazine Size', '-50% Recoil'],
-      nerfs: ['-2 Damage', 'No Stun Chance', 'No Stun Duration'],
+      buffs: ['+78 Max Ammo', '+6 Magazine Size', '-50% Recoil'],
+      nerfs: ['-2 Damage', '-10% Stun Chance', 'No Stun Duration'],
     },
     description:
-      'Smaller shells designed around a new charge type reduce recoil and increase overall ammo and magazine capacity at the cost of raw damage and ability to stun.',
+      'Smaller shells designed around a new charge type reduce recoil and increase overall ammo and magazine capacity at the cost of raw damage.',
   },
 ];
 

@@ -104,11 +104,7 @@ const M1000Overclocks: Overclock[] = [
     },
     effects: {
       buffs: ['+125% Focused Shot Damage Bonus'],
-      nerfs: [
-        '-36.5% Max Ammo',
-        '-40% Focus Speed',
-        'No Movement in Focus Mode',
-      ],
+      nerfs: ['-33% Max Ammo', '-40% Focus Speed', 'No Movement in Focus Mode'],
     },
     description:
       "Takes the M1000's focus mode to the extreme by supercooling the rounds before firing to improve their acceleration through the coils, but the extra coolant in the clips limits how much ammo you can bring.",

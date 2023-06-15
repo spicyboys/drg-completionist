@@ -13,7 +13,7 @@ const PlasmaCarbineOverclocks: Overclock[] = [
       bismor: 130,
     },
     effects: {
-      buffs: ['Burn AoE on overheat', 'x0.8 Overheat Duration'],
+      buffs: ['Burn AoE on Overheat', '-20% Overheat Duration'],
       nerfs: [],
     },
     description:
@@ -31,11 +31,11 @@ const PlasmaCarbineOverclocks: Overclock[] = [
       bismor: 75,
     },
     effects: {
-      buffs: ['x1.25 Cooling Rate', 'x0.85 Heat per Shot'],
+      buffs: ['+25% Cooling Rate', '-15% Heat per Shot'],
       nerfs: [],
     },
     description:
-      'With a liquid coolant fitted to the weapons thermal system it transfers heat more efficiently, accelerating its cooling rate and reducing heat per shot.',
+      'With a liquid coolant fitted to the weapons thermal system, it transfers heat more efficiently, accelerating its cooling rate and reducing heat per shot.',
   },
   {
     name: 'Impact Deflection',
@@ -49,9 +49,7 @@ const PlasmaCarbineOverclocks: Overclock[] = [
       umanite: 105,
     },
     effects: {
-      buffs: [
-        'Projectiles will bounce 1 time, either off of terrain or enemies',
-      ],
+      buffs: ['+1 Projectile Bounce (Terrain or Enemies)'],
       nerfs: ['-2 Rate of Fire'],
     },
     description:
@@ -70,7 +68,7 @@ const PlasmaCarbineOverclocks: Overclock[] = [
     },
     effects: {
       buffs: ['Regenerate Ammo while Overheated'],
-      nerfs: ['x1.3 Overheat Duration', 'x0.7 Battery Capacity'],
+      nerfs: ['+30% Overheat Duration', '-30% Battery Capacity'],
     },
     description:
       'By rewiring the thermal systems into a secondary cell and connecting it to the primary battery, your weapon can convert the energy from overheating into ammo. However this reduces the maximum capacity of the primary battery significantly.',
@@ -89,13 +87,13 @@ const PlasmaCarbineOverclocks: Overclock[] = [
     effects: {
       buffs: ['+8 Direct Damage'],
       nerfs: [
-        'x0.8 Battery Capacity',
-        'x1.5 Heat per Shot',
+        '-20% Battery Capacity',
+        '+50% Heat per Shot',
         'Increased Base Spread',
       ],
     },
     description:
-      'The particle accelerator has been tuned way over safety standards to push the damage output to the limit! The modifications comes with a price to overall stability of the weapon and increased heat generation.',
+      'The particle accelerator has been tuned way over safety standards to push the damage output to the limit! The modifications comes at the cost of overall stability of the weapon and increased heat generation.',
   },
   {
     name: 'Shield Battery Booster',
@@ -110,19 +108,19 @@ const PlasmaCarbineOverclocks: Overclock[] = [
     },
     effects: {
       buffs: [
-        'Increased Damage and Projectile Speed while shield is full',
+        '+Damage and Projectile Speed at Full Shield',
         '+1 Rate of Fire',
         '+100 Battery Capacity',
       ],
       nerfs: [
-        'x0.5 Cooling Rate',
-        'x1.5 Heat per Shot',
-        'x2 Overheat Duration',
-        'Overheating Disables shield',
+        '-50% Cooling Rate',
+        '+50% Heat per Shot',
+        '+100% Overheat Duration',
+        'Overheating Disables Shield',
       ],
     },
     description:
-      'Plugging your shield directly into the weapon battery boosts the plasma feed and density significantly while at full shield and improves total ammo and rate of fire at all times. However the extra energy generates more heat and overheating the weapon will short circuit your shield.',
+      'Plugging your shield directly into the weapon battery boosts the plasma feed and density significantly while at full shield and improves total ammo and rate of fire at all times. However, the extra energy generates more heat, and overheating the weapon will short circuit your shield.',
   },
   {
     name: 'Thermal Exhaust Feedback',
@@ -136,11 +134,11 @@ const PlasmaCarbineOverclocks: Overclock[] = [
       bismor: 140,
     },
     effects: {
-      buffs: ['Up to +6 Damage/Heat per Shot when over 50% Heat'],
-      nerfs: ['+0.8s Overheat Duration', 'x1.2 Heat per Shot'],
+      buffs: ['Up to +6 Damage/Heat at >50% Heat'],
+      nerfs: ['+0.8s Overheat Duration', '+20% Heat per Shot'],
     },
     description:
-      'Feeding the thermal exhaust back into the system transfers the heat generated after a 50% threshold to the plasma, making it increasingly hot. The modifications means more heat generated and it takes longer to get rid of during overheat.',
+      'Feeding the thermal exhaust back into the system transfers the heat generated after a 50% threshold to the plasma, making it increasingly hot. The modifications means more heat generated, and it takes longer to get rid of while overheating.',
   },
 ];
 

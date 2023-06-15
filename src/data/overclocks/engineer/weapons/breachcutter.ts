@@ -85,10 +85,10 @@ const BreachCutterOverclocks: Overclock[] = [
     },
     effects: {
       buffs: ['+High Voltage Crossover'],
-      nerfs: ['-33% Magazine Size'],
+      nerfs: ['-40% Magazine Size'],
     },
     description:
-      'By passing an electric current through the plasma, the beam electrocutes anything it touches, but the bulky hardware limits magazine capacity.',
+      'By passing an electric current through the plasma the beam electrocutes anything it touches, but the bulky hardware limits magazine capacity.',
   },
   {
     name: 'Spinning Death',

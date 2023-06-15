@@ -32,7 +32,7 @@ const AssaultRifleOverclocks: Overclock[] = [
     },
     effects: {
       buffs: ['+1 Rate of Fire'],
-      nerfs: ['-0.3s Reload Time'],
+      nerfs: ['-16% Reload Time'],
     },
     description:
       "Increases the weapon's rate of fire without affecting performance, and helps with magazine ejection as well.",
@@ -83,8 +83,8 @@ const AssaultRifleOverclocks: Overclock[] = [
       magnite: 125,
     },
     effects: {
-      buffs: ['+33% Damage vs. Status-Afflicted Targets'],
-      nerfs: ['-5 Magazine Size'],
+      buffs: ['+50% Damage vs. Status-Afflicted Targets'],
+      nerfs: ['-40% Magazine Size'],
     },
     description:
       'Deal bonus damage to burning, stunned, electrocuted, frozen, or poisoned targets.',
@@ -106,7 +106,7 @@ const AssaultRifleOverclocks: Overclock[] = [
         '+800% Spread Recovery Speed',
         '+40% Weakpoint Damage Bonus',
       ],
-      nerfs: ['-2 Damage', '-2 Rate of Fire'],
+      nerfs: ['-1 Damage', '-2 Rate of Fire'],
     },
     description:
       "It's like it knows what you are going to do before you do it, compensating for all recoil and bullet spread. The system requires a lower rate of fire and the fin-stabilized rounds do less direct damage, but give a bonus to weakpoint hits.",
@@ -124,7 +124,7 @@ const AssaultRifleOverclocks: Overclock[] = [
     },
     effects: {
       buffs: ['+Electric Reload (100% Chance)'],
-      nerfs: ['-2 Damage', '-5 Magazine Size'],
+      nerfs: ['-60 Max Ammo', '-10 Magazine Size'],
     },
     description:
       'Embedded capacitors electrocute targets from the inside when you reload. However, all that tech reduces the raw damage of the bullets and takes up some space in the magazines.',

@@ -107,7 +107,7 @@ const AutocannonOverclocks: Overclock[] = [
       magnite: 135,
     },
     effects: {
-      buffs: ['+Neurotoxin Payload (50% Chance)', '+0.6m Effect Radius'],
+      buffs: ['+50% Neurotoxin Payload', '+0.6m Effect Radius'],
       nerfs: ['-2 Damage', '-5 Area Damage'],
     },
     description:

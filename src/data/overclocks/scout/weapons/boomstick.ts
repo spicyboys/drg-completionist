@@ -20,23 +20,6 @@ const BoomstickOverclocks: Overclock[] = [
       'You can carry a few more of these compact shells in your pockets, and they are a bit faster to reload with.',
   },
   {
-    name: 'Double Barrel',
-    id: '5F090BB3EFC96F4297F1BFC3F152C663',
-    icon: 'FireRate',
-    type: 'Clean',
-    price: {
-      credits: 7950,
-      croppa: 100,
-      enorPearl: 75,
-      umanite: 125,
-    },
-    effects: {
-      buffs: ['+Double Barrel', '+1 Damage'],
-      nerfs: [],
-    },
-    description: 'Unload both barrels at once, no regrets.',
-  },
-  {
     name: 'Special Powder',
     id: 'E6DAF7D6065004439EF966D6FDBD69A6',
     icon: 'ShotgunJump',
@@ -85,10 +68,28 @@ const BoomstickOverclocks: Overclock[] = [
     },
     effects: {
       buffs: ['-50% Base Spread'],
-      nerfs: ['-1 Pellets'],
+      nerfs: ['-4 Ammo'],
     },
     description:
       'Specially shaped shells result in a tighter shot, but the number of pellets is reduced.',
+  },
+  {
+    name: 'Double Barrel',
+    id: '5F090BB3EFC96F4297F1BFC3F152C663',
+    icon: 'FireRate',
+    type: 'Unstable',
+    price: {
+      credits: 7950,
+      croppa: 100,
+      enorPearl: 75,
+      umanite: 125,
+    },
+    effects: {
+      buffs: ['+100% Pellets', '+90 Blast Wave Damage'],
+      nerfs: ['-1 Clip Size', '-50% Ammo', '+50% Spread'],
+    },
+    description:
+      'Unload both barrels at once, no regrets. As an added bonus, the simultaneous firing of both shells has an amplifying effect on the blast wave.',
   },
   {
     name: 'Jumbo Shells',

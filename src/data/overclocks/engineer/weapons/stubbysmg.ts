@@ -84,7 +84,7 @@ const StubbySMGOverclocks: Overclock[] = [
       umanite: 60,
     },
     effects: {
-      buffs: ['+Turret Arc (15.0m Range)'],
+      buffs: ['+Turret Arc (15m Range)'],
       nerfs: ['-120 Max Ammo', '-2 Rate of Fire'],
     },
     description:

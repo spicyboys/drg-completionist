@@ -17,7 +17,7 @@ const ShardDiffractorOverclocks: Overclock[] = [
       nerfs: [],
     },
     description:
-      'Careful tweaking has resulted in greater charge capacity as well as an increase in total capacity.',
+      'Careful tweaking has resulted in greater charge capacity, as well as an increase in total capacity.',
   },
   {
     name: 'Automated Beam Controller',
@@ -33,13 +33,13 @@ const ShardDiffractorOverclocks: Overclock[] = [
     effects: {
       buffs: ['+100 Ammo Capacity', '+4 Discharge Rate', '-0.2 Recharge Time'],
       nerfs: [
-        '0.8x Charge Capacity',
-        'Beam continues Firing until the Charge Capacity is empty',
-        'Manually stopping the beam consumes 50% of the remaining Charge Capacity',
+        '-20% Charge Capacity',
+        'Beam Fires Until the Charge is Empty',
+        'Lose 50% Remaining Charge on Stop',
       ],
     },
     description:
-      'Removing manual control and automating the fire sequence improves speed of operation and allows for a significant expansion of the total battery capacity. However the charge capacity had to be reduced to prevent overheating. Manually interrupting the beam stresses the capacitor, resulting in a loss of some of the remaining charge.',
+      'Removing manual control and automating the fire sequence improves speed of operation and allows for a significant expansion of the total battery capacity. However, the charge capacity had to be reduced to prevent overheating. Manually interrupting the beam stresses the capacitor, resulting in a loss of some of the remaining charge.',
   },
   {
     name: 'Feedback Loop',
@@ -57,7 +57,7 @@ const ShardDiffractorOverclocks: Overclock[] = [
       nerfs: ['-100 Total Capacity'],
     },
     description:
-      'Heavy modifications to the weapon keeps excess energy within the beam, increasing the radius and damage of the area of effect while the beam is fired. However the changes leave little room for the battery, reducing the maximum energy capacity of the weapon.',
+      'Heavy modifications to the weapon keeps excess energy within the beam, increasing the radius and damage of the area of effect while the beam is fired. However, the changes leave little room for the battery, reducing the maximum energy capacity of the weapon.',
   },
   {
     name: 'Volatile Impact Reactor',
@@ -72,7 +72,7 @@ const ShardDiffractorOverclocks: Overclock[] = [
     },
     effects: {
       buffs: ['+Volatile Impact'],
-      nerfs: ['0.5x Area Radius', '0.5x Charge Capacity'],
+      nerfs: ['-50% Area Radius', '-50% Charge Capacity'],
     },
     description:
       'A mixture of high energy and atomic frequency tuning lets you temporarily turn dirt and rock into magma, damaging and potentially igniting any enemy that walks across it.',
@@ -89,11 +89,11 @@ const ShardDiffractorOverclocks: Overclock[] = [
       magnite: 75,
     },
     effects: {
-      buffs: ['+Plastcrete Explosion and Damage/Range Boost'],
-      nerfs: ['-50 Total Capacity', '+0.8 Recharge Time'],
+      buffs: ['+Plastcrete Explosion', 'Damage/Range Boost'],
+      nerfs: ['-50 Total Capacity', '+0.8s Recharge Time'],
     },
     description:
-      'The beam has been finely tuned to violently react with plascrete platforms, significantly increasing AoE damage and range. If the beam is held long enough the reaction becomes unstable causing a powerful explosion damaging everything in a wide area. The tweaks reduce total capacity and come with a limited charge rate to avoid frying the circuits.',
+      'The beam has been finely tuned to violently react with plascrete platforms, significantly increasing AoE damage and range. If the beam is held long enough the reaction becomes unstable, causing a powerful explosion damaging everything in a wide area. The tweaks reduce total capacity and come with a limited charge rate to avoid frying the circuits.',
   },
   {
     name: 'Overdrive Booster',
@@ -109,13 +109,13 @@ const ShardDiffractorOverclocks: Overclock[] = [
     effects: {
       buffs: ['+Overdrive Booster'],
       nerfs: [
-        "Can't move while boosting",
-        'Longer recharge after boosting',
-        'Boosted beam continues firing untill capacitor is fully discharged',
+        'Cannot Move While Boosting',
+        'Longer Recharge After Boosting',
+        'Boosted Beam Fires Until Empty',
       ],
     },
     description:
-      'Drastically increase the energy throughput by pressing the reload button while a beam is firing. Unfortunately maintaining control requires that you stand still while firing a boosted beam and the weapon cannot stop firing once boosted until the capacitor is fully discharged. Manually interrupting the beam stresses the capacitor, resulting in a loss of some of the remaining charge.',
+      'Drastically increases the energy throughput by pressing the reload button while a beam is firing. Unfortunately, maintaining control requires that you stand still while firing a boosted beam, and the weapon cannot stop firing once boosted until the capacitor is fully discharged. Manually interrupting the beam stresses the capacitor, resulting in a loss of some of the remaining charge.',
   },
 ];
 

@@ -13,7 +13,7 @@ const CrossbowOverclocks: Overclock[] = [
       enorPearl: 70,
     },
     effects: {
-      buffs: ['-0.2s Reload Time', '2x Projectile Velocity'],
+      buffs: ['-0.2s Reload Time', '+100% Projectile Velocity'],
       nerfs: [],
     },
     description:
@@ -31,7 +31,7 @@ const CrossbowOverclocks: Overclock[] = [
       umanite: 90,
     },
     effects: {
-      buffs: ['1.25x Special Ammo', '1.3x Special Effect Duration'],
+      buffs: ['+25% Special Ammo', '+30% Special Effect Duration'],
       nerfs: [],
     },
     description:
@@ -49,8 +49,8 @@ const CrossbowOverclocks: Overclock[] = [
       magnite: 135,
     },
     effects: {
-      buffs: ['Bolts freeze enemies. Effect stacks.'],
-      nerfs: ['Bolts are no longer retrievable.', 'Lower damage output.'],
+      buffs: ['Bolts Freeze Enemies (Effect Stacks)'],
+      nerfs: ['Bolts No Longer Retrievable', 'Lower Damage Output'],
     },
     description:
       'A small module based on the Cryo Grenade tech has been strapped to your bolts, enabling them to cool and freeze enemies. Pin them to the ground or the face of enemies and turn any bugs in near proximity into popsicles. The intense cold takes a toll on the bolt, reducing overall damage and destroying it after use.',
@@ -67,8 +67,8 @@ const CrossbowOverclocks: Overclock[] = [
       umanite: 130,
     },
     effects: {
-      buffs: ['Bolts ignite enemies. Effect stacks.'],
-      nerfs: ['Bolts are no longer retrievable.', 'Lower damage output.'],
+      buffs: ['Bolts Ignite Enemies (Effect Stacks)'],
+      nerfs: ['Bolts No Longer Retrievable', 'Lower Damage Output'],
     },
     description:
       'Bolts with highly advanced cannisters full of volatile chemicals, with the ability to radiate intense heat. Shoot it at your enemies or the ground to activate it. The high temperature comes at a cost though, reducing overall damage and rendering the bolt useless after impact.',
@@ -85,11 +85,11 @@ const CrossbowOverclocks: Overclock[] = [
       magnite: 140,
     },
     effects: {
-      buffs: ['Normal bolts ricochet to nearby enemies up to two times'],
-      nerfs: ['-75 Direct Damage', '1.5x Reload Time'],
+      buffs: ['Normal Bolts Ricochet up to Twice'],
+      nerfs: ['-75 Direct Damage', '+50% Reload Time'],
     },
     description:
-      'The crossbow has been modified so it can fire a thinner bodkin point bolt with the ability to penetrate targets and ricochet to the nearest target. Its thin frame makes it do less damage and requires a slower reload process. This however does not affect special bolts.',
+      'The crossbow has been modified so it can fire a thinner bodkin point bolt with the ability to penetrate targets and ricochet to the nearest target. Its thin frame makes it do less damage and requires a slower reload process. This, however, does not affect special bolts.',
   },
   {
     name: 'Trifork Volley',
@@ -103,15 +103,15 @@ const CrossbowOverclocks: Overclock[] = [
       bismor: 130,
     },
     effects: {
-      buffs: ['3x Normal Projectiles', '20% more ammo capacity'],
+      buffs: ['+200% Normal Projectiles', '+20% Ammo Capacity'],
       nerfs: [
-        'Bolts are no longer retrievable',
-        '15% less damage per projectile',
-        '1.5x Reload Time',
+        'Bolts No Longer Retrievable',
+        '-15% Damage per Projectile',
+        '+50% Reload Time',
       ],
     },
     description:
-      'With a few adjustments to the firing mechanism and the string you can load a volley of three bolts into the chamber. The bolts do a tad less damage, but are packed compactly enough for you to carry more of them. The modification and size of the rounds make reloading slower, and the bolts are ruined after firing them, making them unretrievable. This does not affect special bolts.',
+      'With a few adjustments to the firing mechanism and the string, you can load a volley of three bolts into the chamber. The bolts do a tad less damage, but are packed compactly enough for you to carry more of them. The modification and size of the rounds make reloading slower, and the bolts are ruined after firing them, making them unretrievable. This does not affect special bolts.',
   },
 ];
 
