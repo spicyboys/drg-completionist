@@ -49,8 +49,8 @@ export default function Settings(props: { hide: () => void }) {
             />
           </a>
           <br />
-          Up-to-date as of Deep Rock Galactic version{' '}
-          <Text code>1.37.80750.0</Text>
+          Up to date as of Deep Rock Galactic version{' '}
+          <Text code>1.38.88240.0</Text>
         </Col>
       </Row>
       <Divider dashed />

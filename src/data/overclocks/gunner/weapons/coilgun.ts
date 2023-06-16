@@ -13,11 +13,11 @@ const CoilGunOverclocks: Overclock[] = [
       bismor: 90,
     },
     effects: {
-      buffs: ['Spread target ailments to enemies behind them'],
+      buffs: ["Spread Target's Debuffs Behind Them"],
       nerfs: [],
     },
     description:
-      'A charge so powerful it splits and rebinds atoms in hit enemies, spreading ailments to other targets behind them. The amount of power required slows down the reload process significantly.',
+      'A charge so powerful it splits and rebinds atoms in targetted enemies, spreading ailments to other targets behind them.',
   },
   {
     name: 'Ultra-Magnetic Coils',
@@ -31,11 +31,11 @@ const CoilGunOverclocks: Overclock[] = [
       enorPearl: 125,
     },
     effects: {
-      buffs: ['0.5m Trail Radius', '+1s Trail Duration'],
+      buffs: ['0.5m Trail Radius', '+1.0s Trail Duration'],
       nerfs: [],
     },
     description:
-      'Extremely magnetic coils able to store more energy. The extra energy increases the radius and duration of the trail left behind by the projectile.',
+      'Extremely magnetic coils are able to store more energy. The extra energy increases the radius and duration of the trail left behind by the projectile.',
   },
   {
     name: 'Backfeeding Module',
@@ -53,7 +53,7 @@ const CoilGunOverclocks: Overclock[] = [
       nerfs: ['-20 damage'],
     },
     description:
-      'The electrical flow is reversed by adding a tiny module onto the battery, increasing the amount of power it can store. Unfortunately the reversed flow causes less energy to spin the coils, resulting in less damage.',
+      'The electrical flow is reversed by adding a tiny module onto the battery, increasing the amount of power it can store. Unfortunately, the reversed flow leaves less energy to spin the coils, resulting in less damage.',
   },
   {
     name: 'The Mole',
@@ -67,11 +67,8 @@ const CoilGunOverclocks: Overclock[] = [
       enorPearl: 95,
     },
     effects: {
-      buffs: [
-        'Damage bonus for every terrain pierced',
-        'Greater penetrability',
-      ],
-      nerfs: ['x0.8 Charge Speed'],
+      buffs: ['Damage Bonus on Each Terrain Pierce', 'Greater Penetrability'],
+      nerfs: ['-20% Charge Speed'],
     },
     description:
       'R&D are proud of this one. A bullet that uses the traction from impacting with terrain to generate energy, making it travel further and do more damage. The extra energy required to fire The Mole comes with the cost of charge speed.',
@@ -89,13 +86,13 @@ const CoilGunOverclocks: Overclock[] = [
     },
     effects: {
       buffs: [
-        'Ignites ground or other terrain within 2m of projectile trajectory',
-        '+1m Trail Radius',
+        'Ignites Terrain within 2.0m of Trajectory',
+        '+1.0m Trail Radius',
       ],
-      nerfs: ['-200 Ammo', 'x0.7 Charge Speed', '-2s Trail Duration'],
+      nerfs: ['-200 Ammo', '-30% Charge Speed', '-2.0s Trail Duration'],
     },
     description:
-      'By using a highly volatile injection fuel the trail radius greatly increases and at a full charge pushes the temperature changes so high it heats up anything in it. The huge amounts of energy required reduces charge time and battery capacity, while shortening the trail duration.',
+      'By using a highly volatile injection fuel the trail radius greatly increases, and at a full charge it pushes the temperature changes so high it heats up anything in it. The huge amounts of energy required reduces charge time and battery capacity, while also shortening the trail duration.',
   },
   {
     name: 'Triple-Tech Chambers',
@@ -109,8 +106,8 @@ const CoilGunOverclocks: Overclock[] = [
       bismor: 70,
     },
     effects: {
-      buffs: ['Fire off residue energy up to two times after shooting'],
-      nerfs: ['+0.5 Reload Speed', 'x0.7 Charge Speed', 'Stronger recoil'],
+      buffs: ['Fire Residual Energy up to Two Times'],
+      nerfs: ['+0.5s Reload Speed', '-30% Charge Speed', 'Stronger Recoil'],
     },
     description:
       "Prototype chamber tech that allows the weapon to fire off residual energy up to two times in quick succession after shooting, at half the cost and damage of a normal shot. The extra shots don't penetrate and the heavy modification takes a toll on the energy flow, reducing charge rate and reload speed.",

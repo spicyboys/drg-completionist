@@ -21,7 +21,7 @@ const WaveCookerOverclocks: Overclock[] = [
       nerfs: [],
     },
     description:
-      'Extremely efficient cooling system that helps the weapon generate slightly less heat, makes it cool faster and will spend less time jammed.',
+      'Extremely efficient cooling system that helps the weapon generate slightly less heat, makes it cool faster, and will spend less time jammed.',
   },
   {
     name: 'Super Focus Lens',
@@ -35,7 +35,7 @@ const WaveCookerOverclocks: Overclock[] = [
       bismor: 130,
     },
     effects: {
-      buffs: ['1.5x Damage to targets within 4 meters'],
+      buffs: ['+50% Damage to Targets Within 4m'],
       nerfs: [],
     },
     description:
@@ -53,11 +53,11 @@ const WaveCookerOverclocks: Overclock[] = [
       umanite: 65,
     },
     effects: {
-      buffs: ['+3 Penetrations on each enemy', '0.2x Movespeed on hit'],
+      buffs: ['+3 Penetrations per Target', '-80% Movespeed on hit'],
       nerfs: ['-1 Damage'],
     },
     description:
-      'With some mechanical stress to the heat generator the microwaves can penetrate deeper, being able to go through several enemies at once and slows them down. However the stress takes its toll on the generator and decreases its damage output slightly.',
+      'With some mechanical stress to the heat generator the microwaves can penetrate deeper, going through several enemies at once and slowing them down. However, the stress takes its toll on the generator and decreases its damage output slightly.',
   },
   {
     name: 'Mega Power Supply',
@@ -72,7 +72,7 @@ const WaveCookerOverclocks: Overclock[] = [
     },
     effects: {
       buffs: ['+100 Magazine Size', '+3 Rate of Fire'],
-      nerfs: ['-50% Cooling Rate', '+1s Overheat Duration'],
+      nerfs: ['-50% Cooling Rate', '+1.0s Overheat Duration'],
     },
     description:
       'A bit on the larger side, but with a few modifications to the weapon you can now use the most powerful power source R&D could smuggle back from the black market. The extra energy boosts rate of fire and total ammo at the cost of a lower cooldown and longer unjam duration.',
@@ -89,11 +89,11 @@ const WaveCookerOverclocks: Overclock[] = [
       bismor: 70,
     },
     effects: {
-      buffs: ['10% Chance to spawn blisters on hit'],
-      nerfs: ['1.25x Weapon Heat generation', '0.75x Cooling Rate '],
+      buffs: ['10% Chance to Blister Enemy on Hit'],
+      nerfs: ['+25% Weapon Heat Generation', '-25% Cooling Rate'],
     },
     description:
-      'Adding an experimental electron tube makes the microwaves generate more heat, boiling the skin of enemies in the shape of large blisters. The blisters bypass armor, enhances incoming direct damage and hurts the target when popped. The large amounts of heat generated comes at the price of a lower cooldown rate.',
+      'Adding an experimental electron tube makes the microwaves generate more heat, boiling the skin of enemies in the shape of large blisters. The blisters bypass armor, enhancing incoming direct damage and hurting the target when popped. The large amounts of heat generated comes at the price of a slower cooldown rate.',
   },
   {
     name: 'Gamma Contamination',
@@ -107,7 +107,7 @@ const WaveCookerOverclocks: Overclock[] = [
       bismor: 100,
     },
     effects: {
-      buffs: ['25% Chance to irradiate an enemy on hit'],
+      buffs: ['25% Chance to Irradiate Enemy on Hit'],
       nerfs: ['-1 Beam Damage', '-50 Magazine Size', '-50 Shot Width'],
     },
     description:

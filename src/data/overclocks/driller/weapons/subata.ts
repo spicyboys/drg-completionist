@@ -34,7 +34,7 @@ const SubataOverclocks: Overclock[] = [
       buffs: ['+Randomized Damage (80% to 140%)'],
       nerfs: [],
     },
-    description: "More damage on average, but it's a bit inconsistent.",
+    description: "More damage on average (+20%), but it's a bit inconsistent.",
   },
   {
     name: 'Oversized Magazine',
@@ -101,8 +101,8 @@ const SubataOverclocks: Overclock[] = [
       umanite: 75,
     },
     effects: {
-      buffs: ['+50% Stun Chance'],
-      nerfs: ['-4 Magazine Size', '-2 Rate of Fire'],
+      buffs: ['+50% Stun Chance', '+50% Slow on Stun-Immune Enemies'],
+      nerfs: ['-4 Magazine Size', '-25% Rate of Fire'],
     },
     description:
       'Part-bullet, part-syringe: these rounds are very effective at stunning most enemies.',

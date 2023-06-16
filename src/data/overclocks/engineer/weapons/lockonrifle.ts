@@ -13,7 +13,7 @@ const LockOnRifleOverclocks: Overclock[] = [
       enorPearl: 90,
     },
     effects: {
-      buffs: ['+12 Magazine Size', 'x1.33 Max Targets'],
+      buffs: ['+12 Magazine Size', '+33% Max Targets'],
       nerfs: [],
     },
     description:
@@ -31,7 +31,7 @@ const LockOnRifleOverclocks: Overclock[] = [
       umanite: 80,
     },
     effects: {
-      buffs: ['More Damage against Armor when all Locks are engaged'],
+      buffs: ['More Armor Damage at Full Lock'],
       nerfs: [],
     },
     description:
@@ -53,7 +53,7 @@ const LockOnRifleOverclocks: Overclock[] = [
       nerfs: ['-5 Damage', '-36 Max Ammo'],
     },
     description:
-      'Every enemy with 3 locks triggers an explosion on the last shot.',
+      'Every enemy with at least three locks triggers an explosion on the last shot.',
   },
   {
     name: 'Seeker Rounds',
@@ -67,11 +67,11 @@ const LockOnRifleOverclocks: Overclock[] = [
       bismor: 60,
     },
     effects: {
-      buffs: ['+Seeker Rounds', 'x1.33 Lose Lock Threshold'],
-      nerfs: ['47% slower Burst Fire Rate', '+0.5 Reload Time'],
+      buffs: ['+Seeker Rounds', '+33% Lock Loss Threshold'],
+      nerfs: ['47% Slower Burst Fire Rate', '+0.5s Reload Time'],
     },
     description:
-      'Locked shots will always hit their target even finding their way around heavy armor and the system can maintain locks at more extreme angles. However the extra processing load reduces the rate of fire for locked shots and more care must be taken when reloading the advanced rounds.',
+      'Locked shots will always hit their target, even finding their way around heavy armor. The system can also maintain locks at more extreme angles. However, the extra processing load reduces the rate of fire for locked shots and more care must be taken when reloading the advanced rounds.',
   },
   {
     name: 'Executioner',
@@ -85,11 +85,11 @@ const LockOnRifleOverclocks: Overclock[] = [
       enorPearl: 130,
     },
     effects: {
-      buffs: ['+50% Weakpoint Damage Bonus at Full Lock', 'x0.5 Lock-On Time'],
-      nerfs: ['-12 Max Ammo', '-12 Magazine Size', 'x0.66 Max Targets'],
+      buffs: ['+50% Weakpoint Damage at Full Lock', '-50% Lock-On Time'],
+      nerfs: ['-12 Max Ammo', '-12 Magazine Size', '-33% Max Targets'],
     },
     description:
-      'Tweaks to the fire control mechanism and camera software bring lightning fast lock acquisition and more weakspot damage when all locks are used. However, the max number of locks is reduced as is the magazine and total ammo capacity.',
+      'Tweaks to the fire control mechanism and camera software bring lightning-fast lock acquisition and more weakspot damage when all locks are engaged. However, the max number of locks is reduced, as is the magazine and total ammo capacity.',
   },
   {
     name: 'Neuro-Lasso',
@@ -104,10 +104,10 @@ const LockOnRifleOverclocks: Overclock[] = [
     },
     effects: {
       buffs: ['+Slowdown Locked Targets'],
-      nerfs: ['x1.5 Lock-On Time', 'Limited Lock-On Duration of 5 seconds'],
+      nerfs: ['+50% Lock-On Time', 'Lock-On Limited to 5.0s'],
     },
     description:
-      'Slow down enemies by locking on to them, the more locks the slower an enemy gets! The downside is a slightly slower lock-on rate and the locks can only be maintained for a limited time before the system resets.',
+      'Slow down enemies by locking on to them: the more locks, the slower the enemy gets! The downside is a slightly slower lock-on rate, and the locks can only be maintained for a limited time before the system resets.',
   },
 ];
 

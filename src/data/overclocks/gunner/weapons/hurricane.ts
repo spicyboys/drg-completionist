@@ -2,27 +2,6 @@ import type { Overclock } from 'types/overclock';
 
 const HurricaneOverclocks: Overclock[] = [
   {
-    name: 'Manual Guidance Cutoff',
-    id: '8E6816C3DAEE2C49B93E8FA67CF13B1A',
-    icon: 'SpinningLinecutter',
-    type: 'Clean',
-    price: {
-      credits: 7050,
-      jadiz: 105,
-      umanite: 130,
-      bismor: 75,
-    },
-    effects: {
-      buffs: [
-        'Releasing the trigger disables the guidance system',
-        'x1.33 Max Projectile Velocity',
-      ],
-      nerfs: [],
-    },
-    description:
-      "New guidance system that disables missile guidance when the trigger is released. It's also lighter so the missiles can reach a higher top speed!",
-  },
-  {
     name: 'Overtuned Feed Mechanism',
     id: '2A257648DF688844BA3DB091A3756BA5',
     icon: 'FireRate',
@@ -34,7 +13,7 @@ const HurricaneOverclocks: Overclock[] = [
       magnite: 130,
     },
     effects: {
-      buffs: ['x1.2 Max Velocity', '+1 Rate of Fire'],
+      buffs: ['+20% Max Velocity', '+1 Rate of Fire'],
       nerfs: [],
     },
     description:
@@ -70,12 +49,17 @@ const HurricaneOverclocks: Overclock[] = [
       enorPearl: 80,
     },
     effects: {
-      buffs: ['+Plasma Burster Missiles', 'x1.3 Turn Rate'],
+      buffs: [
+        '+Plasma Burster Missiles',
+        '+33% Turn Rate',
+        'Each Missile Hits Up to 7 Times',
+        "Guided Missiles Can't Hit Ground",
+      ],
       nerfs: [
-        'x0.5 Direct Damage',
-        'x0.5 Area Damage',
-        'x0.5 AoE Radius',
-        'x0.75 Max Velocity',
+        '-50% Direct Damage',
+        '-50% Area Damage',
+        '-50% AoE Radius',
+        '-25% Max Velocity',
         '-108 Max Ammo',
       ],
     },
@@ -95,10 +79,10 @@ const HurricaneOverclocks: Overclock[] = [
     },
     effects: {
       buffs: ['+Minelayer System'],
-      nerfs: ['Missiles are now unguided', '-36 Max Ammo'],
+      nerfs: ['Missiles Cannot Be Guided', '-36 Max Ammo'],
     },
     description:
-      'When your missiles hit the ground they are planted as mines that explode when damaged or if enemies are in close proximity. When setup as mines the warheads explode with significantly more force over a larger area but keep in mind that these missiles do not have guidance. The total ammo capacity is slightly reduced.',
+      'When your missiles hit the ground, they are planted as mines that explode when damaged or when enemies are in close proximity. When setup as mines the warheads explode with significantly more force over a larger area, but keep in mind that these missiles do not have guidance. The total ammo capacity is slightly reduced.',
   },
   {
     name: 'Jet Fuel Homebrew',
@@ -113,19 +97,38 @@ const HurricaneOverclocks: Overclock[] = [
     },
     effects: {
       buffs: [
-        'x2.5 Direct Damage',
-        'x1.5 Max Velocity',
+        '+150% Direct Damage',
+        '+50% Max Velocity',
         'Projectiles Start at Max Speed',
       ],
       nerfs: [
-        'x0.5 Area Damage',
+        '-50% Area Damage',
         '-0.5m AoE Radius',
-        'x0.75 Magazine Size',
+        '-25% Magazine Size',
         '-72 Max Ammo',
       ],
     },
     description:
       "Grandpa's recipe. Highly unstable and heavy, but works like a charm! Your missiles get a much higher top speed and reach it instantly. The extra energy greatly improves direct damage but all that extra fuel reduces the missile payload capacity. Due to the extra weight both magazine and total ammo capacity are also reduced.",
+  },
+  {
+    name: 'Rocket Barrage',
+    // TODO: Double-Check ID, icon, and description
+    id: '8E6816C3DAEE2C49B93E8FA67CF13B1A',
+    icon: 'AreaDamage',
+    type: 'Unstable',
+    price: {
+      credits: 7050,
+      jadiz: 105,
+      umanite: 130,
+      bismor: 75,
+    },
+    effects: {
+      buffs: ['+200% Rate of Fire', '+216 Max Ammo', '-50% Base Spread'],
+      nerfs: ['-8 Direct Damage', '-9 Area Damage'],
+    },
+    description:
+      "Sometimes it's quantity over quality. A revamped loading mechanism launches missiles faster than ever, but the smaller missiles don't do as much damage.",
   },
   {
     name: 'Salvo Module',
@@ -140,12 +143,14 @@ const HurricaneOverclocks: Overclock[] = [
     },
     effects: {
       buffs: [
-        'Holding down the trigger now charges up a shotgun like blast of faster, unguided missiles that get a damage bonus the more missiles are in the salvo',
+        'Hold Trigger to Load Salvo (Up to 9)',
+        'Velocity Increases with Missile Count',
+        'Damage Increases with Missile Count',
       ],
-      nerfs: [],
+      nerfs: ['Missiles Cannot Be Guided'],
     },
     description:
-      'Enables your weapon to load up to 9 missiles and launch them at once! As an added bonus the overloaded exhaust ports increase missile velocity and boost damage based on how many missiles are in the salvo. However the missiles in the salvo cannot be guided.',
+      'Enables your weapon to load up to 9 missiles and launch them at once! As an added bonus, the overloaded exhaust ports increase missile velocity and boost their damage based on how many missiles are in the salvo. However, the missiles in the salvo cannot be guided.',
   },
 ];
 

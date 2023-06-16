@@ -15,12 +15,12 @@ const SludgePumpOverclocks: Overclock[] = [
     effects: {
       buffs: [
         '+0.5 Direct Hit Corrosive Damage',
-        'x0.85 Direct Hit Corrosive Slowdown',
+        '+15% Direct Hit Corrosive Slowdown',
       ],
       nerfs: [],
     },
     description:
-      'Experimental additive that activates on impact gives a small improvement to the corrosive DoT and slowdown effect of direct hits.',
+      'An experimental additive that activates on impact gives a small improvement to the corrosive DoT and slowdown effect of direct hits.',
   },
   {
     name: 'AG Mixture',
@@ -34,11 +34,11 @@ const SludgePumpOverclocks: Overclock[] = [
       umanite: 140,
     },
     effects: {
-      buffs: ['+30% Projectile Velocity', 'x0.25 Gravity on Projectiles'],
+      buffs: ['+30% Projectile Velocity', '-75% Gravity on Projectiles'],
       nerfs: [],
     },
     description:
-      'Anti-gravity pellets suspended in the sludge let the projectiles fly further and faster.',
+      'Anti-gravity pellets suspended in the sludge let the projectiles fly farther and faster.',
   },
   {
     name: 'Volatile Impact Mixture',
@@ -52,11 +52,14 @@ const SludgePumpOverclocks: Overclock[] = [
       bismor: 120,
     },
     effects: {
-      buffs: ['2x Regular Shot Area Damage', '2x Charged Shot Area Damage'],
-      nerfs: ['x0.5 Corrosive DoT Duration', 'x0.75 Sludge Puddle Duration'],
+      buffs: [
+        '+100% Regular Shot Area Damage',
+        '+100% Charged Shot Area Damage',
+      ],
+      nerfs: ['-50% Corrosive DoT Duration', '-25% Sludge Puddle Duration'],
     },
     description:
-      'Special mixture greatly increases projectile impact damage. However the volatile compound evaporates quicker, reducing the duration of the corrosive and slowdown effects as well as the puddle lifetime.',
+      'Special mixture greatly increases projectile impact damage. However, the volatile compound evaporates quicker, reducing the duration of the corrosive and slowdown effects as well as the puddle lifetime.',
   },
   {
     name: 'Disperser Compound',
@@ -74,7 +77,7 @@ const SludgePumpOverclocks: Overclock[] = [
       nerfs: ['-24 Charged Shot Area Damage'],
     },
     description:
-      'Charged shots break apart into more fragments on impact and each fragment is more potent, however the initial damage of the charged projectile impact is reduced.',
+      'Charged shots break apart into more fragments on impact, and each fragment is more potent. However, the initial damage of the charged projectile impact is reduced.',
   },
   {
     name: 'Goo Bomber Special',
@@ -89,15 +92,15 @@ const SludgePumpOverclocks: Overclock[] = [
     },
     effects: {
       buffs: [
-        'Charged projectile drops fragments as it flies',
+        'Charged Shot Drops Fragments',
         '+4 Fragment Area Damage',
-        'x1.5 Charged Shot Fragments',
-        'x1.33 Sludge Puddle Duration',
+        '+50% Charged Shot Fragments',
+        '+33% Sludge Puddle Duration',
       ],
-      nerfs: ['Charged projectile does not break into fragments on impact'],
+      nerfs: ["Charged Shot Doesn't Break on Impact"],
     },
     description:
-      'The addition of finely tuned timed separation compounds cause the charged shots to leave a trail of sludge as they fly through the air. However the projectile depletes its mass as it flies, dealing less impact damage as fragments separate and completely expiring once all fragments are dropped.',
+      'The addition of finely-tuned timed-separation compounds cause the charged shots to leave a trail of sludge as they fly through the air. However, the projectile depletes its mass as it flies, dealing less impact damage as fragments separate and completely expiring once all fragments are dropped.',
   },
   {
     name: 'Sludge Blast',
@@ -113,13 +116,13 @@ const SludgePumpOverclocks: Overclock[] = [
     effects: {
       buffs: ['+Sludge Blast', '+100% Charged Shot Velocity'],
       nerfs: [
-        'x0.5 Charged Shot Area Damage',
+        '-50% Charged Shot Area Damage',
         '-40 Max Ammo',
-        '+0.6 Reload Time',
+        '+0.6s Reload Time',
       ],
     },
     description:
-      'The charged shot cohesion is disrupted on firing, instantly shooting out fast-moving fragments in a shotgun-like blast. While spectacular the modifications result in reduced ammo capacity and an extended reload process.',
+      'The charged shot cohesion is disrupted on firing, instantly shooting out fast-moving fragments in a shotgun-like blast. While spectacular, the modifications result in reduced ammo capacity and an extended reload process.',
   },
 ];
 

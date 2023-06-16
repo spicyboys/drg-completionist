@@ -101,7 +101,7 @@ const FlamethrowerOverclocks: Overclock[] = [
       magnite: 75,
     },
     effects: {
-      buffs: ['+5 Sticky Flame Damage', '+6.0s Sticky Flame Duration'],
+      buffs: ['+10 Sticky Flame Damage', '+6.0s Sticky Flame Duration'],
       nerfs: ['-25 Tank Size', '-75 Max Fuel'],
     },
     description:
