@@ -70,7 +70,7 @@ export default function PageTabs() {
     <Select
       defaultValue={DEFAULT_TAB}
       value={location.pathname.substring(1) || DEFAULT_TAB}
-      onChange={history.push}
+      onChange={(path: string) => history.push(path)}
       style={{
         fontSize: 16,
         fontWeight: 'bold',
@@ -94,7 +94,7 @@ export default function PageTabs() {
   const tabsBar = (
     <Tabs
       activeKey={location.pathname.substring(1) || DEFAULT_TAB}
-      onChange={history.push}
+      onChange={(path: string) => history.push(path)}
       tabBarExtraContent={{
         right: (
           <Col xs={0} sm={24}>
