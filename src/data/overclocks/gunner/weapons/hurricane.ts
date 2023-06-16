@@ -113,7 +113,7 @@ const HurricaneOverclocks: Overclock[] = [
   },
   {
     name: 'Rocket Barrage',
-    // TODO: Double-Check this ID and icon type
+    // TODO: Double-Check ID, icon, and description
     id: '8E6816C3DAEE2C49B93E8FA67CF13B1A',
     icon: 'AreaDamage',
     type: 'Unstable',
@@ -128,7 +128,7 @@ const HurricaneOverclocks: Overclock[] = [
       nerfs: ['-8 Direct Damage', '-9 Area Damage'],
     },
     description:
-      "New guidance system that disables missile guidance when the trigger is released. It's also lighter so the missiles can reach a higher top speed!",
+      "Sometimes it's quantity over quality. A revamped loading mechanism launches missiles faster than ever, but the smaller missiles don't do as much damage.",
   },
   {
     name: 'Salvo Module',
