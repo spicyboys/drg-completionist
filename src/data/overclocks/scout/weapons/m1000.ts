@@ -67,7 +67,7 @@ const M1000Overclocks: Overclock[] = [
       umanite: 80,
     },
     effects: {
-      buffs: ['+91% Max Ammo', '+3 Rate of Fire', '-50% Recoil'],
+      buffs: ['+91% Max Ammo', '+2 Rate of Fire', '-50% Recoil'],
       nerfs: ['-17 Damage'],
     },
     description:

@@ -111,11 +111,11 @@ const PlasmaCarbineOverclocks: Overclock[] = [
         '+Damage and Projectile Speed at Full Shield',
         '+1 Rate of Fire',
         '+100 Battery Capacity',
+        'Shield Regeneration Bonus',
       ],
       nerfs: [
         '-50% Cooling Rate',
         '+50% Heat per Shot',
-        '+100% Overheat Duration',
         'Overheating Disables Shield',
       ],
     },

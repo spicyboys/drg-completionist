@@ -107,7 +107,7 @@ const BreachCutterOverclocks: Overclock[] = [
         '+150% Projectile Lifetime',
         '+1.5m Beam Width',
       ],
-      nerfs: ['-75% Beam DPS', '-50% Max Ammo', '-70% Magazine Size'],
+      nerfs: ['-75% Beam DPS', '-35% Max Ammo', '-70% Magazine Size'],
     },
     description:
       'These modified plasma nodes convert most of the forward momentum into angular momentum, streatching out the beam and continuously doing damage to the immediate area where it was launched. The nodes run for a longer duration but deal less damage every second. Due to the weight, both magazine and total capacity is greatly reduced.',

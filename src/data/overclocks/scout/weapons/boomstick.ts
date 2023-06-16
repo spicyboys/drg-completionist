@@ -76,7 +76,7 @@ const BoomstickOverclocks: Overclock[] = [
   {
     name: 'Double Barrel',
     id: '5F090BB3EFC96F4297F1BFC3F152C663',
-    icon: 'FireRate',
+    icon: 'Special',
     type: 'Unstable',
     price: {
       credits: 7950,
@@ -85,8 +85,13 @@ const BoomstickOverclocks: Overclock[] = [
       umanite: 125,
     },
     effects: {
-      buffs: ['+100% Pellets', '+90 Blast Wave Damage'],
-      nerfs: ['-1 Clip Size', '-50% Ammo', '+50% Spread'],
+      buffs: ['+100% Pellets', '+450% Blast Wave Damage'],
+      nerfs: [
+        '-50% Magazine Size',
+        '-50% Max Ammo',
+        '+50% Spread',
+        '+100% Recoil per Shot',
+      ],
     },
     description:
       'Unload both barrels at once, no regrets. As an added bonus, the simultaneous firing of both shells has an amplifying effect on the blast wave.',

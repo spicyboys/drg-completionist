@@ -2,27 +2,6 @@ import type { Overclock } from 'types/overclock';
 
 const HurricaneOverclocks: Overclock[] = [
   {
-    name: 'Manual Guidance Cutoff',
-    id: '8E6816C3DAEE2C49B93E8FA67CF13B1A',
-    icon: 'SpinningLinecutter',
-    type: 'Clean',
-    price: {
-      credits: 7050,
-      jadiz: 105,
-      umanite: 130,
-      bismor: 75,
-    },
-    effects: {
-      buffs: [
-        'Releasing Trigger Disables Guidance',
-        '+33% Max Projectile Velocity',
-      ],
-      nerfs: [],
-    },
-    description:
-      "New guidance system that disables missile guidance when the trigger is released. It's also lighter so the missiles can reach a higher top speed!",
-  },
-  {
     name: 'Overtuned Feed Mechanism',
     id: '2A257648DF688844BA3DB091A3756BA5',
     icon: 'FireRate',
@@ -70,7 +49,12 @@ const HurricaneOverclocks: Overclock[] = [
       enorPearl: 80,
     },
     effects: {
-      buffs: ['+Plasma Burster Missiles', '+33% Turn Rate'],
+      buffs: [
+        '+Plasma Burster Missiles',
+        '+33% Turn Rate',
+        'Each Missile Hits Up to 7 Times',
+        "Guided Missiles Can't Hit Ground",
+      ],
       nerfs: [
         '-50% Direct Damage',
         '-50% Area Damage',
@@ -126,6 +110,25 @@ const HurricaneOverclocks: Overclock[] = [
     },
     description:
       "Grandpa's recipe. Highly unstable and heavy, but works like a charm! Your missiles get a much higher top speed and reach it instantly. The extra energy greatly improves direct damage but all that extra fuel reduces the missile payload capacity. Due to the extra weight both magazine and total ammo capacity are also reduced.",
+  },
+  {
+    name: 'Rocket Barrage',
+    // TODO: Double-Check this ID and icon type
+    id: '8E6816C3DAEE2C49B93E8FA67CF13B1A',
+    icon: 'AreaDamage',
+    type: 'Unstable',
+    price: {
+      credits: 7050,
+      jadiz: 105,
+      umanite: 130,
+      bismor: 75,
+    },
+    effects: {
+      buffs: ['+200% Rate of Fire', '+216 Max Ammo', '-50% Base Spread'],
+      nerfs: ['-8 Direct Damage', '-9 Area Damage'],
+    },
+    description:
+      "New guidance system that disables missile guidance when the trigger is released. It's also lighter so the missiles can reach a higher top speed!",
   },
   {
     name: 'Salvo Module',

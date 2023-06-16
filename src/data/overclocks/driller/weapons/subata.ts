@@ -101,8 +101,8 @@ const SubataOverclocks: Overclock[] = [
       umanite: 75,
     },
     effects: {
-      buffs: ['+50% Stun Chance', 'Slow Stun-Immune Enemies'],
-      nerfs: ['-4 Magazine Size', '-2 Rate of Fire'],
+      buffs: ['+50% Stun Chance', '+50% Slow on Stun-Immune Enemies'],
+      nerfs: ['-4 Magazine Size', '-25% Rate of Fire'],
     },
     description:
       'Part-bullet, part-syringe: these rounds are very effective at stunning most enemies.',

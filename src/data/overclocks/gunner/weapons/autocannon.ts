@@ -48,7 +48,7 @@ const AutocannonOverclocks: Overclock[] = [
       umanite: 70,
     },
     effects: {
-      buffs: ['+3 Area Damage', '+0.6m Effect Radius'],
+      buffs: ['+35% Area Damage', '+45% Effect Radius'],
       nerfs: ['-7 Damage'],
     },
     description:
@@ -107,8 +107,8 @@ const AutocannonOverclocks: Overclock[] = [
       magnite: 135,
     },
     effects: {
-      buffs: ['+50% Neurotoxin Payload', '+0.6m Effect Radius'],
-      nerfs: ['-2 Damage', '-5 Area Damage'],
+      buffs: ['+50% Neurotoxin Payload (50% Chance)', '+0.3m Effect Radius'],
+      nerfs: ['-110 Max Ammo', '-6 Area Damage'],
     },
     description:
       'Channel your inner war criminal by mixing some neurotoxin into the explosive compound. The rounds deal less direct damage and splash damage, but affected bugs move slower and take lots of damage over time.',
