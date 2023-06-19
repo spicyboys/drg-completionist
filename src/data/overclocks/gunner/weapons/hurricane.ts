@@ -113,9 +113,8 @@ const HurricaneOverclocks: Overclock[] = [
   },
   {
     name: 'Rocket Barrage',
-    // TODO: Double-Check ID, icon, and description
     id: '8E6816C3DAEE2C49B93E8FA67CF13B1A',
-    icon: 'AreaDamage',
+    icon: 'Distance',
     type: 'Unstable',
     price: {
       credits: 7050,
