@@ -9,6 +9,7 @@
     "build": "craco build",
     "serve-build": "craco build && serve -s build",
     "test": "react-scripts test",
+    "check": "tsc --noEmit",
     "eject": "craco eject",
     "lint": "yarn eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "format": "yarn prettier --write .",
