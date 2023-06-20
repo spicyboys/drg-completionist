@@ -13,7 +13,7 @@ export default function MinerCard(
     category: string;
     miner: Miner;
     getProgress: MinerProgressQuery;
-  } & Omit<CollapsePanelProps, 'key' | 'header'>
+  } & Omit<CollapsePanelProps, 'key' | 'header' | 'children'>
 ) {
   const { category, children, miner, getProgress, ...panelProps } = props;
 
