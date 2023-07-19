@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Driller",
+    "save_id": "9EDD56F1EEBCC5488D5B5E5B80B62DB4",
+    "portrait": "./portraits/driller.png",
+    "weapons": [
+      "cryocannon",
+      "epc",
+      "flamethrower",
+      "sludgepump",
+      "subata",
+      "wavecooker"
+    ]
+  },
+  {
+    "name": "Gunner",
+    "save_id": "9EDD56F1EEBCC5488D5B5E5B80B62DB4",
+    "portrait": "./portraits/gunner.png",
+    "weapons": [
+      "cryocannon",
+      "epc",
+      "flamethrower",
+      "sludgepump",
+      "subata",
+      "wavecooker"
+    ]
+  }
+]
