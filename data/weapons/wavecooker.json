@@ -4,7 +4,7 @@
     {
       "name": "Liquid Cooling System",
       "id": "5F614059B3ADA14E930831EF4B609802",
-      "icon": "Cooldown",
+      "icon": "./icons/cooldown.png",
       "type": "Clean",
       "price": {
         "credits": 7400,
@@ -25,7 +25,7 @@
     {
       "name": "Super Focus Lens",
       "id": "79A870ED00C9814A942BE4AD49A10B63",
-      "icon": "Aim",
+      "icon": "./icons/aim.png",
       "type": "Clean",
       "price": {
         "credits": 7550,
@@ -42,7 +42,7 @@
     {
       "name": "Diffusion Ray",
       "id": "0CD9E18B85E271449901D38D50BA62B4",
-      "icon": "BulletPenetration",
+      "icon": "./icons/bullet-penetration.png",
       "type": "Balanced",
       "price": {
         "credits": 8300,
@@ -59,7 +59,7 @@
     {
       "name": "Mega Power Supply",
       "id": "A3E85790ABCBC74ABCCB3CC636509A1B",
-      "icon": "Ammo",
+      "icon": "./icons/ammo.png",
       "type": "Balanced",
       "price": {
         "credits": 8100,
@@ -76,7 +76,7 @@
     {
       "name": "Blistering Necrosis",
       "id": "48648832AA11E04DAE9F2E8ADF89AD8D",
-      "icon": "Weakspot",
+      "icon": "./icons/weakspot.png",
       "type": "Unstable",
       "price": {
         "credits": 7850,
@@ -93,7 +93,7 @@
     {
       "name": "Gamma Contamination",
       "id": "5EDD2987DB047F498ADD72FCEB6C1EE3",
-      "icon": "Radioactive",
+      "icon": "./icons/radioactive.png",
       "type": "Unstable",
       "price": {
         "credits": 8350,

@@ -4,7 +4,7 @@
     {
       "name": "Chain Hit",
       "id": "A4AB7C627AF7FE4FA235E3AAC398ED1F",
-      "icon": "Ricochet",
+      "icon": "./icons/richochet.png",
       "type": "Clean",
       "price": {
         "credits": 7600,
@@ -21,7 +21,7 @@
     {
       "name": "Homebrew Powder",
       "id": "D57B542FBC793542B6BB5617C1A67229",
-      "icon": "Chance",
+      "icon": "./icons/chance.png",
       "type": "Clean",
       "price": {
         "credits": 7150,
@@ -38,7 +38,7 @@
     {
       "name": "Oversized Magazine",
       "id": "F13E20C4E74976438E85C237AE071830",
-      "icon": "ClipSize",
+      "icon": "./icons/clip-size.png",
       "type": "Balanced",
       "price": {
         "credits": 9000,
@@ -55,7 +55,7 @@
     {
       "name": "Automatic Fire",
       "id": "28A8E817E50A7346963E418BA08DFE18",
-      "icon": "FireRate",
+      "icon": "./icons/fire-rate.png",
       "type": "Unstable",
       "price": {
         "credits": 7400,
@@ -72,7 +72,7 @@
     {
       "name": "Explosive Reload",
       "id": "2949A3BE68EA2A4197D532AF80549101",
-      "icon": "SpecialMagazine",
+      "icon": "./icons/special-magazine.png",
       "type": "Unstable",
       "price": {
         "credits": 8100,
@@ -89,7 +89,7 @@
     {
       "name": "Tranquilizer Rounds",
       "id": "587488BA77B28D4DA177400D995737A7",
-      "icon": "Stun",
+      "icon": "./icons/stun.png",
       "type": "Unstable",
       "price": {
         "credits": 7150,

@@ -4,7 +4,7 @@
     {
       "name": "Hydrogen Ion Additive",
       "id": "ECCAB2551405F044A93FFB6C51FF9B39",
-      "icon": "Acid",
+      "icon": "./icons/acid.png",
       "type": "Clean",
       "price": {
         "credits": 8800,
@@ -24,7 +24,7 @@
     {
       "name": "AG Mixture",
       "id": "4956672BA68D3A439D4EC260F0B98CE4",
-      "icon": "ProjectileSpeed",
+      "icon": "./icons/projectile-speed.png",
       "type": "Clean",
       "price": {
         "credits": 7800,
@@ -41,7 +41,7 @@
     {
       "name": "Volatile Impact Mixture",
       "id": "539F16D0ECA50447B21BD3B1ADD439CB",
-      "icon": "Damage",
+      "icon": "./icons/damage.png",
       "type": "Balanced",
       "price": {
         "credits": 8500,
@@ -61,7 +61,7 @@
     {
       "name": "Disperser Compound",
       "id": "C1D77A8BAFD433408E4A8397F1A63AEC",
-      "icon": "AreaDamage",
+      "icon": "./icons/area-damage.png",
       "type": "Balanced",
       "price": {
         "credits": 8800,
@@ -78,7 +78,7 @@
     {
       "name": "Goo Bomber Special",
       "id": "4CCC7E994163A14AAAC97AB3777FF1F9",
-      "icon": "Special",
+      "icon": "./icons/special.png",
       "type": "Unstable",
       "price": {
         "credits": 7450,
@@ -100,7 +100,7 @@
     {
       "name": "Sludge Blast",
       "id": "EA7D273B56099B4B9F44768A099A8C1C",
-      "icon": "ShotgunBlast",
+      "icon": "./icons/shotgun-blast.png",
       "type": "Unstable",
       "price": {
         "credits": 8200,

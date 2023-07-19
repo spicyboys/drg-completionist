@@ -4,7 +4,7 @@
     {
       "name": "Energy Rerouting",
       "id": "97822071D586CE45ACD6489782B700FA",
-      "icon": "ChargeUp",
+      "icon": "./icons/charge-up.png",
       "type": "Clean",
       "price": {
         "credits": 7300,
@@ -21,7 +21,7 @@
     {
       "name": "Magnetic Cooling Unit",
       "id": "F1E6CC307C11DE4586B88B419E530ABF",
-      "icon": "Cooldown",
+      "icon": "./icons/cooldown.png",
       "type": "Clean",
       "price": {
         "credits": 8900,
@@ -38,7 +38,7 @@
     {
       "name": "Heat Pipe",
       "id": "A0E018C45FE679418FD3730E6E9B631D",
-      "icon": "Fuel",
+      "icon": "./icons/fuel.png",
       "type": "Balanced",
       "price": {
         "credits": 7450,
@@ -58,7 +58,7 @@
     {
       "name": "Heavy Hitter",
       "id": "39E43E13CC0DAE4691DD51A11383E9E1",
-      "icon": "Damage",
+      "icon": "./icons/damage.png",
       "type": "Balanced",
       "price": {
         "credits": 8100,
@@ -75,7 +75,7 @@
     {
       "name": "Overcharger",
       "id": "55BB52A0ECFA7C43B37BBBE640114196",
-      "icon": "Damage",
+      "icon": "./icons/damage.png",
       "type": "Unstable",
       "price": {
         "credits": 7050,
@@ -96,7 +96,7 @@
     {
       "name": "Persistent Plasma",
       "id": "165CD93E660B8147BCA2F86CDE5CF8F7",
-      "icon": "DurationHourglass",
+      "icon": "./icons/duration-hourglass.png",
       "type": "Unstable",
       "price": {
         "credits": 8150,

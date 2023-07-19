@@ -4,7 +4,7 @@
     {
       "name": "Lighter Tanks",
       "id": "C5057A9608CF5E4BA4AAB32AD613BA3E",
-      "icon": "Ammo",
+      "icon": "./icons/ammo.png",
       "type": "Clean",
       "price": {
         "credits": 7500,
@@ -21,7 +21,7 @@
     {
       "name": "Sticky Additive",
       "id": "415F1D83A77E7A448DBF60383103FD6C",
-      "icon": "DurationHourglass",
+      "icon": "./icons/duration-hourglass.png",
       "type": "Clean",
       "price": {
         "credits": 8250,
@@ -38,7 +38,7 @@
     {
       "name": "Compact Feed Valves",
       "id": "71588D43A7589A4ABE61A8DE2EB449BF",
-      "icon": "ClipSize",
+      "icon": "./icons/clip-size.png",
       "type": "Balanced",
       "price": {
         "credits": 7350,
@@ -55,7 +55,7 @@
     {
       "name": "Fuel Stream Diffuser",
       "id": "19E85D1C3585B349B151779CBD7303D9",
-      "icon": "Distance",
+      "icon": "./icons/distance.png",
       "type": "Balanced",
       "price": {
         "credits": 7100,
@@ -72,7 +72,7 @@
     {
       "name": "Face Melter",
       "id": "6431A8DDEAA6894B90C57BAC7552A5FF",
-      "icon": "Damage",
+      "icon": "./icons/damage.png",
       "type": "Unstable",
       "price": {
         "credits": 7000,
@@ -89,7 +89,7 @@
     {
       "name": "Sticky Fuel",
       "id": "F28C3EE38A960D48965E9F69F56B3F19",
-      "icon": "DurationHourglass",
+      "icon": "./icons/duration-hourglass.png",
       "type": "Unstable",
       "price": {
         "credits": 8800,
