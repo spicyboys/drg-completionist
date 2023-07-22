@@ -1,9 +1,10 @@
 {
-  "name": "epc",
+  "name": "Experimental Plasma Charger",
+  "outline": "./outlines/epc.png",
   "overclocks": [
     {
       "name": "Energy Rerouting",
-      "id": "97822071D586CE45ACD6489782B700FA",
+      "save_id": "71208297-45CE86D5-9748D6AC-FA00B782",
       "icon": "./icons/charge-up.png",
       "type": "Clean",
       "price": {
@@ -20,7 +21,7 @@
     },
     {
       "name": "Magnetic Cooling Unit",
-      "id": "F1E6CC307C11DE4586B88B419E530ABF",
+      "save_id": "30CCE6F1-45DE117C-418BB886-BF0A539E",
       "icon": "./icons/cooldown.png",
       "type": "Clean",
       "price": {
@@ -37,7 +38,7 @@
     },
     {
       "name": "Heat Pipe",
-      "id": "A0E018C45FE679418FD3730E6E9B631D",
+      "save_id": "C418E0A0-4179E65F-0E73D38F-1D639B6E",
       "icon": "./icons/fuel.png",
       "type": "Balanced",
       "price": {
@@ -57,7 +58,7 @@
     },
     {
       "name": "Heavy Hitter",
-      "id": "39E43E13CC0DAE4691DD51A11383E9E1",
+      "save_id": "133EE439-46AE0DCC-A151DD91-E1E98313",
       "icon": "./icons/damage.png",
       "type": "Balanced",
       "price": {
@@ -74,7 +75,7 @@
     },
     {
       "name": "Overcharger",
-      "id": "55BB52A0ECFA7C43B37BBBE640114196",
+      "save_id": "A052BB55-437CFAEC-E6BB7BB3-96411140",
       "icon": "./icons/damage.png",
       "type": "Unstable",
       "price": {
@@ -95,7 +96,7 @@
     },
     {
       "name": "Persistent Plasma",
-      "id": "165CD93E660B8147BCA2F86CDE5CF8F7",
+      "save_id": "3ED95C16-47810B66-6CF8A2BC-F7F85CDE",
       "icon": "./icons/duration-hourglass.png",
       "type": "Unstable",
       "price": {

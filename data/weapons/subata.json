@@ -1,9 +1,10 @@
 {
-  "name": "subata",
+  "name": "Subata 120",
+  "outline": "./outlines/subata.png",
   "overclocks": [
     {
       "name": "Chain Hit",
-      "id": "A4AB7C627AF7FE4FA235E3AAC398ED1F",
+      "save_id": "627CABA4-4FFEF77A-AAE335A2-1FED98C3",
       "icon": "./icons/richochet.png",
       "type": "Clean",
       "price": {
@@ -20,7 +21,7 @@
     },
     {
       "name": "Homebrew Powder",
-      "id": "D57B542FBC793542B6BB5617C1A67229",
+      "save_id": "2F547BD5-423579BC-1756BBB6-2972A6C1",
       "icon": "./icons/chance.png",
       "type": "Clean",
       "price": {
@@ -37,7 +38,7 @@
     },
     {
       "name": "Oversized Magazine",
-      "id": "F13E20C4E74976438E85C237AE071830",
+      "save_id": "C4203EF1-437649E7-37C2858E-301807AE",
       "icon": "./icons/clip-size.png",
       "type": "Balanced",
       "price": {
@@ -54,7 +55,7 @@
     },
     {
       "name": "Automatic Fire",
-      "id": "28A8E817E50A7346963E418BA08DFE18",
+      "save_id": "17E8A828-46730AE5-8B413E96-18FE8DA0",
       "icon": "./icons/fire-rate.png",
       "type": "Unstable",
       "price": {
@@ -71,7 +72,7 @@
     },
     {
       "name": "Explosive Reload",
-      "id": "2949A3BE68EA2A4197D532AF80549101",
+      "save_id": "BEA34929-412AEA68-AF32D597-01915480",
       "icon": "./icons/special-magazine.png",
       "type": "Unstable",
       "price": {
@@ -88,7 +89,7 @@
     },
     {
       "name": "Tranquilizer Rounds",
-      "id": "587488BA77B28D4DA177400D995737A7",
+      "save_id": "BA887458-4D8DB277-0D4077A1-A7375799",
       "icon": "./icons/stun.png",
       "type": "Unstable",
       "price": {

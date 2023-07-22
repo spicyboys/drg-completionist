@@ -1,0 +1,94 @@
+{
+  "name": "\"Warthog\" Auto 210",
+  "outline": "./outlines/shotgun.png",
+  "overclocks": [
+    {
+      "name": "Stunner",
+      "id": "38D28D33-4E2E2A33-080249A5-02F5D7AA",
+      "icon": "./overclock-icons/stun.png",
+      "type": "Clean",
+      "price": {
+        "credits": 7350,
+        "bismor": 100,
+        "jadiz": 135,
+        "magnite": 60
+      },
+      "effects": {
+        "buffs": [
+          "+Stun Chance Occurs on All Body Parts",
+          "+30% Kinetic Damage vs. Stunned"
+        ],
+        "nerfs": []
+      },
+      "description": "Heavier rounds allow for Stun chance on all body parts, not just weakpoints. Shooting already stunned enemies with this overclock will deal extra damage."
+    },
+    {
+      "name": "Light-Weight Magazines",
+      "id": "38EC4ECD-4E7229C0-DCCC1783-5760D022",
+      "icon": "./overclock-icons/ammo.png",
+      "type": "Clean",
+      "price": {
+        "credits": 7250,
+        "croppa": 125,
+        "magnite": 105,
+        "umanite": 60
+      },
+      "effects": {
+        "buffs": ["+18 Max Ammo", "-0.4s Reload Time"],
+        "nerfs": []
+      },
+      "description": "It's amazing how much material can be removed without affecting anything, and lighter magazines means more magazines and faster reloading."
+    },
+    {
+      "name": "Magnetic Pellet Alignment",
+      "id": "9927E907-419CBF56-3E31EA8E-8D9FC52D",
+      "icon": "./overclock-icons/aim.png",
+      "type": "Balanced",
+      "price": {
+        "credits": 7900,
+        "enorPearl": 120,
+        "jadiz": 105,
+        "umanite": 75
+      },
+      "effects": {
+        "buffs": ["-50% Base Spread", "+30% Weakpoint Damage Bonus"],
+        "nerfs": ["-25% Rate of Fire"]
+      },
+      "description": "Electromagnets in the chamber greatly reduces shot spread and increases weakpoint damage at the cost of a slower rate of fire."
+    },
+    {
+      "name": "Cycle Overload",
+      "id": "A22B1270-48BFDAFB-C909DC95-85E69402",
+      "icon": "./overclock-icons/fire-rate.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 8050,
+        "bismor": 125,
+        "croppa": 100,
+        "umanite": 80
+      },
+      "effects": {
+        "buffs": ["+1 Damage", "+2 Rate of Fire"],
+        "nerfs": ["+0.5s Reload Time", "+50% Base Spread"]
+      },
+      "description": "Heavy modification to the chamber greatly increases the maximum rate of fire and increases raw damage, but reduces the weapon's accuracy and reload speed as a consequence."
+    },
+    {
+      "name": "Mini Shells",
+      "id": "4CC9D462-41E86713-77B69196-FBA47D83",
+      "icon": "./overclock-icons/small-bullets.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 7700,
+        "croppa": 125,
+        "enorPearl": 65,
+        "magnite": 90
+      },
+      "effects": {
+        "buffs": ["+78 Max Ammo", "+6 Magazine Size", "-50% Recoil"],
+        "nerfs": ["-2 Damage", "-10% Stun Chance", "No Stun Duration"]
+      },
+      "description": "Smaller shells designed around a new charge type reduce recoil and increase overall ammo and magazine capacity at the cost of raw damage."
+    }
+  ]
+}

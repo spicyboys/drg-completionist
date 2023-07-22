@@ -1,9 +1,10 @@
 {
-  "name": "wavecooker",
+  "name": "Colette Wave Cooker",
+  "outline": "./outlines/wave-cooker.png",
   "overclocks": [
     {
       "name": "Liquid Cooling System",
-      "id": "5F614059B3ADA14E930831EF4B609802",
+      "save_id": "5940615F-4EA1ADB3-EF310893-0298604B",
       "icon": "./icons/cooldown.png",
       "type": "Clean",
       "price": {
@@ -24,7 +25,7 @@
     },
     {
       "name": "Super Focus Lens",
-      "id": "79A870ED00C9814A942BE4AD49A10B63",
+      "save_id": "ED70A879-4A81C900-ADE42B94-630BA149",
       "icon": "./icons/aim.png",
       "type": "Clean",
       "price": {
@@ -41,7 +42,7 @@
     },
     {
       "name": "Diffusion Ray",
-      "id": "0CD9E18B85E271449901D38D50BA62B4",
+      "save_id": "8BE1D90C-4471E285-8DD30199-B462BA50",
       "icon": "./icons/bullet-penetration.png",
       "type": "Balanced",
       "price": {
@@ -58,7 +59,7 @@
     },
     {
       "name": "Mega Power Supply",
-      "id": "A3E85790ABCBC74ABCCB3CC636509A1B",
+      "save_id": "9057E8A3-4AC7CBAB-C63CCBBC-1B9A5036",
       "icon": "./icons/ammo.png",
       "type": "Balanced",
       "price": {
@@ -75,7 +76,7 @@
     },
     {
       "name": "Blistering Necrosis",
-      "id": "48648832AA11E04DAE9F2E8ADF89AD8D",
+      "save_id": "32886448-4DE011AA-8A2E9FAE-8DAD89DF",
       "icon": "./icons/weakspot.png",
       "type": "Unstable",
       "price": {
@@ -92,7 +93,7 @@
     },
     {
       "name": "Gamma Contamination",
-      "id": "5EDD2987DB047F498ADD72FCEB6C1EE3",
+      "save_id": "8729DD5E-497F04DB-FC72DD8A-E31E6CEB",
       "icon": "./icons/radioactive.png",
       "type": "Unstable",
       "price": {

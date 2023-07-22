@@ -1,0 +1,112 @@
+{
+  "name": "Nishanka Boltshark X-80",
+  "outline": "./outlines/crossbow.png",
+  "overclocks": [
+    {
+      "name": "Quick Fire",
+      "id": "FA57FA1C-49DBD035-7CF8AAA9-F41E01AA",
+      "icon": "./overclock-icons/fire-rate.png",
+      "type": "Clean",
+      "price": {
+        "credits": 8400,
+        "croppa": 95,
+        "umanite": 125,
+        "enorPearl": 70
+      },
+      "effects": {
+        "buffs": ["-0.2s Reload Time", "+100% Projectile Velocity"],
+        "nerfs": []
+      },
+      "description": "R&D improved the reload mechanism of the crossbow, making it pull back sooner for you to put a bolt in the chamber. They also reinforced the string free of charge, enabling the crossbow to fire bolts with little to no drop."
+    },
+    {
+      "name": "The Specialist",
+      "id": "3145466C-49A80E82-C0803CBB-4FA790F1",
+      "icon": "./overclock-icons/special.png",
+      "type": "Clean",
+      "price": {
+        "credits": 7900,
+        "croppa": 65,
+        "magnite": 130,
+        "umanite": 90
+      },
+      "effects": {
+        "buffs": ["+25% Special Ammo", "+30% Special Effect Duration"],
+        "nerfs": []
+      },
+      "description": "Extra potent special bolts and more of them. What more could you want?"
+    },
+    {
+      "name": "Cryo Bolt",
+      "id": "A9D0CF75-4AC9310F-028D6A9D-FCE17D14",
+      "icon": "./overclock-icons/cold.png",
+      "type": "Balanced",
+      "price": {
+        "credits": 7350,
+        "croppa": 75,
+        "jadiz": 105,
+        "magnite": 135
+      },
+      "effects": {
+        "buffs": ["Bolts Freeze Enemies (Effect Stacks)"],
+        "nerfs": ["Bolts No Longer Retrievable", "Lower Damage Output"]
+      },
+      "description": "A small module based on the Cryo Grenade tech has been strapped to your bolts, enabling them to cool and freeze enemies. Pin them to the ground or the face of enemies and turn any bugs in near proximity into popsicles. The intense cold takes a toll on the bolt, reducing overall damage and destroying it after use."
+    },
+    {
+      "name": "Fire Bolt",
+      "id": "E281CADD-48E86B9C-F0F42D8C-722AC7B0",
+      "icon": "./overclock-icons/heat.png",
+      "type": "Balanced",
+      "price": {
+        "credits": 7100,
+        "croppa": 90,
+        "magnite": 70,
+        "umanite": 130
+      },
+      "effects": {
+        "buffs": ["Bolts Ignite Enemies (Effect Stacks)"],
+        "nerfs": ["Bolts No Longer Retrievable", "Lower Damage Output"]
+      },
+      "description": "Bolts with highly advanced cannisters full of volatile chemicals, with the ability to radiate intense heat. Shoot it at your enemies or the ground to activate it. The high temperature comes at a cost though, reducing overall damage and rendering the bolt useless after impact."
+    },
+    {
+      "name": "Bodkin Points",
+      "id": "240FCBAE-4A19FA1D-86BB4BB0-40A83F56",
+      "icon": "./overclock-icons/ricochet.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 8400,
+        "croppa": 110,
+        "jadiz": 80,
+        "magnite": 140
+      },
+      "effects": {
+        "buffs": ["Normal Bolts Ricochet up to Twice"],
+        "nerfs": ["-75 Direct Damage", "+50% Reload Time"]
+      },
+      "description": "The crossbow has been modified so it can fire a thinner bodkin point bolt with the ability to penetrate targets and ricochet to the nearest target. Its thin frame makes it do less damage and requires a slower reload process. This, however, does not affect special bolts."
+    },
+    {
+      "name": "Trifork Volley",
+      "id": "DE96FE62-4E45A532-2B95F1B0-F4BA8DD6",
+      "icon": "./overclock-icons/last-shell-higher-damage.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 7650,
+        "jadiz": 100,
+        "magnite": 65,
+        "bismor": 130
+      },
+      "effects": {
+        "buffs": ["+200% Normal Projectiles", "+20% Ammo Capacity"],
+        "nerfs": [
+          "Bolts No Longer Retrievable",
+          "-15% Damage per Projectile",
+          "+50% Reload Time"
+        ]
+      },
+      "description": "With a few adjustments to the firing mechanism and the string, you can load a volley of three bolts into the chamber. The bolts do a tad less damage, but are packed compactly enough for you to carry more of them. The modification and size of the rounds make reloading slower, and the bolts are ruined after firing them, making them unretrievable. This does not affect special bolts."
+    }
+  ]
+}

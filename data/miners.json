@@ -1,28 +1,62 @@
 [
   {
     "name": "Driller",
-    "save_id": "9EDD56F1EEBCC5488D5B5E5B80B62DB4",
+    "save_id": "F156DD9E-48C5BCEE-5B5E5B8D-B42DB680",
     "portrait": "./portraits/driller.png",
+    "color": "#D19724",
+    "contrast_color": "#161616",
     "weapons": [
-      "cryocannon",
-      "epc",
-      "flamethrower",
-      "sludgepump",
-      "subata",
-      "wavecooker"
+      "CRSPR Flamethrower",
+      "Cryo Cannon",
+      "Corrosive Sludge Pump",
+      "Subata 120",
+      "Experimental Plasma Charger",
+      "Colette Wave Cooker"
+    ]
+  },
+  {
+    "name": "Engineer",
+    "save_id": "6C62EF85-4A02F165-D0B5FE8D-2E9D90F3",
+    "portrait": "./portraits/engineer.png",
+    "color": "#892F30",
+    "contrast_color": "#ECECEC",
+    "weapons": [
+      "\"Warthog\" Auto 210",
+      "\"Stubby\" Voltaic SMG",
+      "Lok-1 Smart Rifle",
+      "Deepcore 40mm PGL",
+      "Breach Cutter",
+      "Shard Diffractor"
     ]
   },
   {
     "name": "Gunner",
-    "save_id": "9EDD56F1EEBCC5488D5B5E5B80B62DB4",
+    "save_id": "80E156AE-4DC4C0FE-C229FA96-7BB96683",
     "portrait": "./portraits/gunner.png",
+    "color": "#446043",
+    "contrast_color": "#FFFFFFE6",
     "weapons": [
-      "cryocannon",
-      "epc",
-      "flamethrower",
-      "sludgepump",
-      "subata",
-      "wavecooker"
+      "\"Lead Storm\" Powered Minigun",
+      "\"Thunderhead\" Heavy Autocannon",
+      "\"Hurricane\" Guided Rocket System",
+      "\"Bulldog\" Heavy Revolver",
+      "BRT7 Burst Fire Gun",
+      "ArmsKore Coil Gun"
+    ]
+  },
+  {
+    "name": "Scout",
+    "save_id": "17EAD830-4CBAFBD8-E96D3095-8C2F5C65",
+    "portrait": "./portraits/scout.png",
+    "color": "#106193",
+    "contrast_color": "#FFFFFFF2",
+    "weapons": [
+      "Deepcore GK2",
+      "M1000 Classic",
+      "DRAK-25 Plasma Carbine",
+      "Jury-Rigged Boomstick",
+      "Zhukov NUK17",
+      "Nishanka Boltshark X-80"
     ]
   }
 ]

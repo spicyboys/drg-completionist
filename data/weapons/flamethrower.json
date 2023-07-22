@@ -1,9 +1,10 @@
 {
-  "name": "flamethrower",
+  "name": "CRSPR Flamethrower",
+  "outline": "./outlines/flamethrower.png",
   "overclocks": [
     {
       "name": "Lighter Tanks",
-      "id": "C5057A9608CF5E4BA4AAB32AD613BA3E",
+      "save_id": "967A05C5-4B5ECF08-2AB3AAA4-3EBA13D6",
       "icon": "./icons/ammo.png",
       "type": "Clean",
       "price": {
@@ -20,7 +21,7 @@
     },
     {
       "name": "Sticky Additive",
-      "id": "415F1D83A77E7A448DBF60383103FD6C",
+      "save_id": "831D5F41-447A7EA7-3860BF8D-6CFD0331",
       "icon": "./icons/duration-hourglass.png",
       "type": "Clean",
       "price": {
@@ -37,7 +38,7 @@
     },
     {
       "name": "Compact Feed Valves",
-      "id": "71588D43A7589A4ABE61A8DE2EB449BF",
+      "save_id": "438D5871-4A9A58A7-DEA861BE-BF49B42E",
       "icon": "./icons/clip-size.png",
       "type": "Balanced",
       "price": {
@@ -54,7 +55,7 @@
     },
     {
       "name": "Fuel Stream Diffuser",
-      "id": "19E85D1C3585B349B151779CBD7303D9",
+      "save_id": "1C5DE819-49B38535-9C7751B1-D90373BD",
       "icon": "./icons/distance.png",
       "type": "Balanced",
       "price": {
@@ -71,7 +72,7 @@
     },
     {
       "name": "Face Melter",
-      "id": "6431A8DDEAA6894B90C57BAC7552A5FF",
+      "save_id": "DDA83164-4B89A6EA-AC7BC590-FFA55275",
       "icon": "./icons/damage.png",
       "type": "Unstable",
       "price": {
@@ -88,7 +89,7 @@
     },
     {
       "name": "Sticky Fuel",
-      "id": "F28C3EE38A960D48965E9F69F56B3F19",
+      "save_id": "E33E8CF2-480D968A-699F5E96-193F6BF5",
       "icon": "./icons/duration-hourglass.png",
       "type": "Unstable",
       "price": {

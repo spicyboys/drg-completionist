@@ -16,6 +16,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "antd": "^5.7.1",
     "gatsby": "^5.11.0",
     "gatsby-plugin-image": "^3.11.0",
     "gatsby-plugin-manifest": "^5.11.0",

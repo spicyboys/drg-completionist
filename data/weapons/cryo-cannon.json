@@ -1,9 +1,10 @@
 {
-  "name": "cryocannon",
+  "name": "Cryo Cannon",
+  "outline": "./outlines/cryo-cannon.png",
   "overclocks": [
     {
       "name": "Improved Thermal Efficiency",
-      "id": "CE660C4DD9980043A802A17A4569C0AC",
+      "save_id": "4D0C66CE-430098D9-7AA102A8-ACC06945",
       "icon": "./icons/clip-size.png",
       "type": "Clean",
       "price": {
@@ -20,7 +21,7 @@
     },
     {
       "name": "Tuned Cooler",
-      "id": "6ADB23B3C8ED884086A88B8107C93CBE",
+      "save_id": "B323DB6A-4088EDC8-818BA886-BE3CC907",
       "icon": "./icons/cold.png",
       "type": "Balanced",
       "price": {
@@ -37,7 +38,7 @@
     },
     {
       "name": "Flow Rate Expansion",
-      "id": "88F8EAB206EC7B46A31C8F034B44931A",
+      "save_id": "B2EAF888-467BEC06-038F1CA3-1A93444B",
       "icon": "./icons/duration.png",
       "type": "Balanced",
       "price": {
@@ -54,7 +55,7 @@
     },
     {
       "name": "Ice Spear",
-      "id": "D518CB371A32A0449B345E4F58D34C91",
+      "save_id": "37CB18D5-44A0321A-4F5E349B-914CD358",
       "icon": "./icons/projectile-speed.png",
       "type": "Balanced",
       "price": {
@@ -71,7 +72,7 @@
     },
     {
       "name": "Ice Storm",
-      "id": "7B11755997B6564E97B1032A828EB90F",
+      "save_id": "5975117B-4E56B697-2A03B197-0FB98E82",
       "icon": "./icons/damage.png",
       "type": "Unstable",
       "price": {
@@ -92,7 +93,7 @@
     },
     {
       "name": "Snowball",
-      "id": "C1F16F970C9C1047AF836BF6CBFEBCAD",
+      "save_id": "976FF1C1-47109C0C-F66B83AF-ADBCFECB",
       "icon": "./icons/area.png",
       "type": "Unstable",
       "price": {

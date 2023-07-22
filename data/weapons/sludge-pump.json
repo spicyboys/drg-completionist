@@ -1,9 +1,10 @@
 {
-  "name": "sludgepump",
+  "name": "Corrosive Sludge Pump",
+  "outline": "./outlines/sludge-pump.png",
   "overclocks": [
     {
       "name": "Hydrogen Ion Additive",
-      "id": "ECCAB2551405F044A93FFB6C51FF9B39",
+      "save_id": "55B2CAEC-44F00514-6CFB3FA9-399BFF51",
       "icon": "./icons/acid.png",
       "type": "Clean",
       "price": {
@@ -23,8 +24,8 @@
     },
     {
       "name": "AG Mixture",
-      "id": "4956672BA68D3A439D4EC260F0B98CE4",
-      "icon": "./icons/projectile-speed.png",
+      "save_id": "2B675649-433A8DA6-60C24E9D-E48CB9F0",
+      "icon": "./overclock-icons/projectile-speed.png",
       "type": "Clean",
       "price": {
         "credits": 7800,
@@ -40,7 +41,7 @@
     },
     {
       "name": "Volatile Impact Mixture",
-      "id": "539F16D0ECA50447B21BD3B1ADD439CB",
+      "save_id": "D0169F53-4704A5EC-B1D31BB2-CB39D4AD",
       "icon": "./icons/damage.png",
       "type": "Balanced",
       "price": {
@@ -60,7 +61,7 @@
     },
     {
       "name": "Disperser Compound",
-      "id": "C1D77A8BAFD433408E4A8397F1A63AEC",
+      "save_id": "8B7AD7C1-4033D4AF-97834A8E-EC3AA6F1",
       "icon": "./icons/area-damage.png",
       "type": "Balanced",
       "price": {
@@ -77,7 +78,7 @@
     },
     {
       "name": "Goo Bomber Special",
-      "id": "4CCC7E994163A14AAAC97AB3777FF1F9",
+      "save_id": "997ECC4C-4AA16341-B37AC9AA-F9F17F77",
       "icon": "./icons/special.png",
       "type": "Unstable",
       "price": {
@@ -99,7 +100,7 @@
     },
     {
       "name": "Sludge Blast",
-      "id": "EA7D273B56099B4B9F44768A099A8C1C",
+      "save_id": "3B277DEA-4B9B0956-8A76449F-1C8C9A09",
       "icon": "./icons/shotgun-blast.png",
       "type": "Unstable",
       "price": {
