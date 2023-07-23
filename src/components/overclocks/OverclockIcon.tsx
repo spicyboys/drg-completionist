@@ -10,7 +10,6 @@ export default function OverclockIcon({
   return (
     <div
       style={{
-        position: "relative",
         height: 100,
         width: 100,
         margin: "auto",
@@ -18,7 +17,7 @@ export default function OverclockIcon({
     >
       <div
         style={{
-          position: "absolute",
+          position: "relative",
           transform: "translate(-50%,-50%)",
           top: "50%",
           left: "50%",
@@ -27,7 +26,7 @@ export default function OverclockIcon({
         <GatsbyImage
           image={overclock.type.icon?.childImageSharp?.gatsbyImageData!}
           alt={overclock.type.name!}
-          // style={{ height: "auto", width: "auto" }}
+          style={{ height: "auto", width: "auto" }}
         />
         <div
           style={{
@@ -42,7 +41,7 @@ export default function OverclockIcon({
           <GatsbyImage
             image={overclock.icon?.childImageSharp?.gatsbyImageData!}
             alt={overclock.name!}
-            // style={{ height: "auto", width: "auto" }}
+            style={{ height: "auto", width: "auto" }}
           />
         </div>
       </div>

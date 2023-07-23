@@ -2,7 +2,6 @@ import React, { createContext, useMemo, useState } from "react";
 import {
   GithubFilled,
   InfoCircleFilled,
-  QuestionCircleFilled,
   RobotOutlined,
   SettingOutlined,
 } from "@ant-design/icons";
@@ -12,9 +11,11 @@ import {
   ProLayout,
   FooterToolbar,
 } from "@ant-design/pro-components";
-import { Button } from "antd";
+import { Button, Tooltip } from "antd";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
+import SettingsModal from "./settings/SettingsModal";
+import InfoTooltip from "./InfoTooltip";
 
 export const FooterContext = createContext<(footer: React.ReactNode) => void>(
   () => {}
@@ -61,6 +62,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   }, [miners]);
 
   const [footer, setFooter] = useState<React.ReactNode>(null);
+  const [showSettings, setShowSettings] = useState(false);
 
   return (
     <ProLayout
@@ -79,13 +81,28 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       actionsRender={(props) => {
         if (props.isMobile) return [];
         return [
-          <InfoCircleFilled key="InfoCircleFilled" />,
-          <QuestionCircleFilled key="QuestionCircleFilled" />,
-          <GithubFilled key="GithubFilled" />,
-          <Button icon={<RobotOutlined />} type="text">
+          <Tooltip title={<InfoTooltip />}>
+            <InfoCircleFilled key="InfoCircleFilled" />
+          </Tooltip>,
+
+          <Link
+            to="https://github.com/spicyboys/drg-completionist"
+            style={{ textDecoration: "inherit", color: "inherit" }}
+            target="_blank"
+          >
+            <GithubFilled style={{ display: "block" }} />
+          </Link>,
+
+          <Button icon={<RobotOutlined />} type="text" size="small">
             Analyze
           </Button>,
-          <Button icon={<SettingOutlined />} type="text">
+
+          <Button
+            icon={<SettingOutlined />}
+            type="text"
+            size="small"
+            onClick={() => setShowSettings(true)}
+          >
             Settings
           </Button>,
         ];
@@ -101,6 +118,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             {children}
           </FooterContext.Provider>
         </ProCard>
+
+        <SettingsModal
+          open={showSettings}
+          hide={() => setShowSettings(false)}
+        />
 
         {footer && (
           <FooterToolbar
