@@ -1,13 +1,12 @@
 import React from "react";
 import { graphql, PageProps } from "gatsby";
 import WeaponDivider from "../../components/WeaponDivider";
-import Layout from "../../components/Layout";
 import { Row } from "antd";
 import OverclockCard from "../../components/overclocks/OverclockCard";
 
 const Miner = (props: PageProps<Queries.MinerQuery>) => {
   return (
-    <Layout>
+    <>
       {props.data.minersJson?.weapons?.map((weapon) => (
         <React.Fragment key={weapon.name}>
           <WeaponDivider weapon={weapon} />
@@ -23,7 +22,7 @@ const Miner = (props: PageProps<Queries.MinerQuery>) => {
           </Row>
         </React.Fragment>
       ))}
-    </Layout>
+    </>
   );
 };
 
