@@ -4,11 +4,15 @@ import { DBContext } from "../hooks/db";
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
+import "../styles/global.css";
 
 const { Header, Sider, Content } = Layout;
 
 export default function PageLayout(props: { children: React.ReactNode }) {
   const [collapsed, setCollapsed] = useState(false);
+  const [openKeys, setOpenKeys] = useState<string[]>(
+    location.pathname.split("/").filter((p) => p != "")
+  );
 
   const { allMinersJson } = useStaticQuery<Queries.PageLayoutQuery>(graphql`
     query PageLayout {
@@ -72,9 +76,10 @@ export default function PageLayout(props: { children: React.ReactNode }) {
               theme="dark"
               mode="inline"
               defaultSelectedKeys={[location.pathname]}
-              defaultOpenKeys={location.pathname
-                .split("/")
-                .filter((p) => p != "")}
+              openKeys={openKeys}
+              onOpenChange={(keys) =>
+                setOpenKeys(keys.filter((x) => !openKeys.includes(x)))
+              }
               style={{ height: "100%", borderRight: 0 }}
               items={menuItems}
             />
@@ -85,7 +90,6 @@ export default function PageLayout(props: { children: React.ReactNode }) {
                 padding: 24,
                 margin: 0,
                 minHeight: 280,
-                // background: colorBgContainer,
               }}
             >
               {props.children}
