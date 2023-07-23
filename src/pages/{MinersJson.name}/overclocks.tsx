@@ -4,10 +4,12 @@ import WeaponDivider from "../../components/WeaponDivider";
 import { Row } from "antd";
 import OverclockCard from "../../components/overclocks/OverclockCard";
 
-const Miner = (props: PageProps<Queries.MinerQuery>) => {
+const Miner = ({
+  data: { minersJson: miner },
+}: PageProps<Queries.MinerQuery>) => {
   return (
     <>
-      {props.data.minersJson?.weapons?.map((weapon) => (
+      {miner?.weapons?.map((weapon) => (
         <React.Fragment key={weapon.name}>
           <WeaponDivider weapon={weapon} />
           <Row gutter={[16, 16]}>
@@ -15,7 +17,7 @@ const Miner = (props: PageProps<Queries.MinerQuery>) => {
               <OverclockCard
                 key={overclock!.name}
                 overclock={overclock!}
-                miner={props.data.minersJson!}
+                miner={miner!}
                 weapon={weapon!}
               />
             ))}

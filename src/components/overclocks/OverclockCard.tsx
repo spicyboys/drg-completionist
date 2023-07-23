@@ -8,7 +8,11 @@ import { graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { useLiveQuery } from "dexie-react-hooks";
 
-export default function OverclockCard(props: {
+export default function OverclockCard({
+  overclock,
+  miner,
+  weapon,
+}: {
   overclock: Queries.OverclockCardOverclockFragment;
   miner: Queries.OverclockCardMinerFragment;
   weapon: Queries.OverclockCardWeaponFragment;
@@ -17,71 +21,60 @@ export default function OverclockCard(props: {
   const query = useLiveQuery(
     () =>
       db.overclocks.get({
-        weapon: props.weapon.name,
-        name: props.overclock.name,
+        weapon: weapon.name,
+        name: overclock.name,
       }),
-    [props.weapon, props.overclock.name]
+    [weapon, overclock.name]
   );
 
   const onClick = useCallback(() => {
     if (query === undefined) {
       db.overclocks.add({
-        weapon: props.weapon.name,
-        name: props.overclock.name,
+        weapon: weapon.name,
+        name: overclock.name,
         isForged: false,
       });
     } else if (query.isForged) {
       db.overclocks
         .where({
-          weapon: props.weapon.name,
-          name: props.overclock.name,
+          weapon: weapon.name,
+          name: overclock.name,
         })
         .delete();
     } else {
       db.overclocks
         .where({
-          weapon: props.weapon.name,
-          name: props.overclock.name,
+          weapon: weapon.name,
+          name: overclock.name,
         })
         .modify({ isForged: true });
     }
-  }, [db, props.overclock.name, props.weapon, query]);
+  }, [db, overclock.name, weapon, query]);
 
   return (
-    <Col
-      key={props.overclock.name}
-      xs={24}
-      sm={12}
-      md={12}
-      lg={8}
-      xl={6}
-      xxl={4}
-    >
+    <Col key={overclock.name} xs={24} sm={12} md={12} lg={8} xl={6} xxl={4}>
       <Card
         hoverable
-        title={props.overclock.name}
+        title={overclock.name}
         headStyle={{
-          backgroundColor: query?.isForged ? props.miner.color! : "inherit",
-          color: query?.isForged ? props.miner.contrastColor! : "#cccccc",
+          backgroundColor: query?.isForged ? miner.color! : "inherit",
+          color: query?.isForged ? miner.contrastColor! : "#cccccc",
           fontWeight: "bold",
           transition: "all 0.3s",
         }}
         style={
           query && !query?.isForged
             ? {
-                outline: `3px solid ${props.miner.color}`,
+                outline: `3px solid ${miner.color}`,
               }
             : undefined
         }
         onClick={onClick}
       >
-        <OverclockIcon overclock={props.overclock} />
+        <OverclockIcon overclock={overclock} />
         <Popover
           content={() => (
-            <OverclockCardPopover
-              weapon={props.weapon}
-              overclock={props.overclock}
-            />
+            <OverclockCardPopover weapon={weapon} overclock={overclock} />
           )}
           destroyTooltipOnHide
         >
@@ -99,7 +92,7 @@ export default function OverclockCard(props: {
           destroyTooltipOnHide
         >
           <StaticImage
-            alt={`${props.overclock.name} is acquired, but unforged`}
+            alt={`${overclock.name} is acquired, but unforged`}
             src="../../images/unforged.png"
             height={20}
             style={{

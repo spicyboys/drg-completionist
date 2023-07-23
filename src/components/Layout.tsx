@@ -8,7 +8,11 @@ import "../styles/global.css";
 
 const { Header, Sider, Content } = Layout;
 
-export default function PageLayout(props: { children: React.ReactNode }) {
+export default function PageLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const [collapsed, setCollapsed] = useState(false);
   const [openKeys, setOpenKeys] = useState<string[]>(
     location.pathname.split("/").filter((p) => p != "")
@@ -92,7 +96,7 @@ export default function PageLayout(props: { children: React.ReactNode }) {
                 minHeight: 280,
               }}
             >
-              {props.children}
+              {children}
             </Content>
           </Layout>
         </Layout>

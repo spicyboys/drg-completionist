@@ -2,12 +2,11 @@ import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 
-export default function OverclockIcon(props: {
+export default function OverclockIcon({
+  overclock,
+}: {
   overclock: Queries.OverclockIconOverclockFragment;
 }) {
-  const { overclock } = props;
-  console.log(overclock);
-
   return (
     <div
       style={{

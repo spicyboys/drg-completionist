@@ -8,7 +8,10 @@ import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 
 const { Paragraph, Text, Title } = Typography;
 
-export default function OverclockCardPopover(props: {
+export default function OverclockCardPopover({
+  overclock,
+  weapon,
+}: {
   overclock: Queries.OverclockCardPopoverOverclockFragment;
   weapon: Queries.OverclockCardPopoverWeaponFragment;
 }) {
@@ -19,15 +22,13 @@ export default function OverclockCardPopover(props: {
         description={
           <Row align="middle" justify="space-around">
             <Col span={16}>
-              <Title level={4}>{props.overclock.name}</Title>
+              <Title level={4}>{overclock.name}</Title>
             </Col>
             <Col span={8}>
-              <Tooltip placement="bottomRight" title={props.weapon.name}>
+              <Tooltip placement="bottomRight" title={weapon.name}>
                 <GatsbyImage
-                  alt={props.weapon.name!}
-                  image={
-                    props.weapon.outline?.childImageSharp?.gatsbyImageData!
-                  }
+                  alt={weapon.name!}
+                  image={weapon.outline?.childImageSharp?.gatsbyImageData!}
                   style={{ height: 50, width: "auto" }}
                 />
               </Tooltip>
@@ -36,9 +37,9 @@ export default function OverclockCardPopover(props: {
         }
       />
       <Divider style={{ marginTop: "12px", marginBottom: "24px" }} />
-      <OverclockIcon overclock={props.overclock} />
+      <OverclockIcon overclock={overclock} />
       <Divider dashed />
-      {props.overclock.effects?.buffs?.map((buff) => (
+      {overclock.effects?.buffs?.map((buff) => (
         <Row key={buff} justify="center">
           <Col>
             <Space>
@@ -54,7 +55,7 @@ export default function OverclockCardPopover(props: {
           </Col>
         </Row>
       ))}
-      {props.overclock.effects?.nerfs?.map((nerf) => (
+      {overclock.effects?.nerfs?.map((nerf) => (
         <Row key={nerf} justify="center">
           <Col>
             <Space>
@@ -71,9 +72,9 @@ export default function OverclockCardPopover(props: {
         </Row>
       ))}
       <Divider dashed />
-      <Paragraph>{props.overclock.description}</Paragraph>
+      <Paragraph>{overclock.description}</Paragraph>
       <Divider dashed />
-      <OverclockPrice overclock={props.overclock} />
+      <OverclockPrice overclock={overclock} />
     </Card>
   );
 }

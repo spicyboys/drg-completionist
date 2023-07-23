@@ -3,15 +3,17 @@ import { Divider, Tooltip } from "antd";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 
-export default function WeaponDivider(props: {
+export default function WeaponDivider({
+  weapon,
+}: {
   weapon: Queries.WeaponDividerWeaponFragment;
 }) {
   return (
     <Divider orientation="center">
-      <Tooltip title={props.weapon.name}>
+      <Tooltip title={weapon.name}>
         <GatsbyImage
-          image={props.weapon.outline?.childImageSharp?.gatsbyImageData!}
-          alt={props.weapon.name!}
+          image={weapon.outline?.childImageSharp?.gatsbyImageData!}
+          alt={weapon.name!}
         />
       </Tooltip>
     </Divider>

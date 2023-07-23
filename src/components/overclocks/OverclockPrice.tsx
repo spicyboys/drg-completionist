@@ -4,11 +4,11 @@ import Text from "antd/lib/typography/Text";
 import { graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
-export default function OverclockPrice(props: {
+export default function OverclockPrice({
+  overclock: { price },
+}: {
   overclock: Queries.OverclockPriceOverclockFragment;
 }) {
-  const { price } = props.overclock;
-
   return (
     <Row align="middle" justify="space-around">
       {price?.credits && (
