@@ -116,11 +116,7 @@ export const query = graphql`
 
   fragment OverclockCardWeapon on WeaponsJson {
     name
-    outline {
-      childImageSharp {
-        gatsbyImageData(height: 75)
-      }
-    }
+    ...OverclockCardPopoverWeapon
   }
 
   fragment OverclockCardMiner on MinersJson {

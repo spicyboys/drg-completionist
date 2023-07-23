@@ -37,13 +37,6 @@ export const query = graphql`
         name
         overclocks {
           name
-          type {
-            icon {
-              childImageSharp {
-                gatsbyImageData(width: 100, height: 100)
-              }
-            }
-          }
 
           ...OverclockCardOverclock
         }

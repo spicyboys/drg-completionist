@@ -8,6 +8,6 @@ export function useDB(): AppDatabase {
   return useContext(Context);
 }
 
-export function DBContext({ children }: { children: React.ReactNode }) {
+export function DBProvider({ children }: { children: React.ReactNode }) {
   return <Context.Provider value={db}>{children}</Context.Provider>;
 }

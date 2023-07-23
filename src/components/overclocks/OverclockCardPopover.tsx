@@ -28,7 +28,10 @@ export default function OverclockCardPopover({
               <Tooltip placement="bottomRight" title={weapon.name}>
                 <GatsbyImage
                   alt={weapon.name!}
-                  image={weapon.outline?.childImageSharp?.gatsbyImageData!}
+                  image={
+                    weapon.overclockPopoverWeaponOutline?.childImageSharp
+                      ?.gatsbyImageData!
+                  }
                   style={{ height: 50, width: "auto" }}
                 />
               </Tooltip>
@@ -82,7 +85,7 @@ export default function OverclockCardPopover({
 export const query = graphql`
   fragment OverclockCardPopoverWeapon on WeaponsJson {
     name
-    outline {
+    overclockPopoverWeaponOutline: outline {
       childImageSharp {
         gatsbyImageData(height: 50)
       }

@@ -1,106 +1,103 @@
-import React, { useMemo, useState } from "react";
-import { Layout, Menu } from "antd";
-import { DBContext } from "../hooks/db";
-import { graphql, useStaticQuery } from "gatsby";
+import React, { useMemo } from "react";
+import {
+  GithubFilled,
+  InfoCircleFilled,
+  QuestionCircleFilled,
+  RobotOutlined,
+  SettingOutlined,
+} from "@ant-design/icons";
+import { PageContainer, ProCard, ProLayout } from "@ant-design/pro-components";
+import { Button } from "antd";
+import { Link, graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
-import { Link } from "gatsby";
-import "../styles/global.css";
-
-const { Header, Sider, Content } = Layout;
 
 export default function PageLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const [collapsed, setCollapsed] = useState(false);
-  const [openKeys, setOpenKeys] = useState<string[]>(
-    location.pathname.split("/").filter((p) => p != "")
-  );
-
-  const { allMinersJson } = useStaticQuery<Queries.PageLayoutQuery>(graphql`
-    query PageLayout {
-      allMinersJson {
-        nodes {
-          name
-          icon {
-            childImageSharp {
-              gatsbyImageData(width: 35)
+  const { allMinersJson: miners } =
+    useStaticQuery<Queries.PageLayoutQuery>(graphql`
+      query PageLayout {
+        allMinersJson {
+          nodes {
+            name
+            icon {
+              childImageSharp {
+                gatsbyImageData(width: 15)
+              }
             }
           }
         }
       }
-    }
-  `);
+    `);
 
   const menuItems = useMemo(() => {
-    return allMinersJson.nodes.map((miner) => {
-      return {
-        key: miner.name!.toLocaleLowerCase(),
-        label: miner.name!,
-        icon: (
-          <GatsbyImage
-            image={miner.icon?.childImageSharp?.gatsbyImageData!}
-            alt={miner.name!}
-          />
-        ),
-        children: [
-          {
-            key: `/${miner.name?.toLowerCase()}/overclocks/`,
-            label: (
-              <Link to={`/${miner.name?.toLowerCase()}/overclocks/`}>
-                Overclocks
-              </Link>
-            ),
-          },
-        ],
-      };
-    });
-  }, [allMinersJson]);
+    return {
+      routes: miners.nodes.map((miner) => {
+        return {
+          name: miner.name!,
+          path: miner.name?.toLowerCase(),
+          icon: (
+            <GatsbyImage
+              image={miner.icon?.childImageSharp?.gatsbyImageData!}
+              alt={miner.name!}
+            />
+          ),
+          routes: [
+            {
+              path: `overclocks`,
+              name: "Overclocks",
+            },
+          ],
+        };
+      }),
+    };
+  }, [miners]);
 
   return (
-    <DBContext>
-      <Layout>
-        <Header style={{ display: "flex", alignItems: "center" }}>
-          <StaticImage
-            src="../images/assignment.png"
-            alt="Assignment Icon"
-            height={45}
-          />
-          DRG Completionist
-        </Header>
-        <Layout>
-          <Sider
-            collapsible
-            collapsed={collapsed}
-            onCollapse={(value) => setCollapsed(value)}
-            width={200}
-          >
-            <Menu
-              theme="dark"
-              mode="inline"
-              defaultSelectedKeys={[location.pathname]}
-              openKeys={openKeys}
-              onOpenChange={(keys) =>
-                setOpenKeys(keys.filter((x) => !openKeys.includes(x)))
-              }
-              style={{ height: "100%", borderRight: 0 }}
-              items={menuItems}
-            />
-          </Sider>
-          <Layout>
-            <Content
-              style={{
-                padding: 24,
-                margin: 0,
-                minHeight: 280,
-              }}
-            >
-              {children}
-            </Content>
-          </Layout>
-        </Layout>
-      </Layout>
-    </DBContext>
+    <ProLayout
+      location={{
+        pathname: location.pathname,
+      }}
+      layout="mix"
+      title="DRG Completionist"
+      logo={
+        <StaticImage
+          src="../images/assignment.png"
+          alt="Assignment Icon"
+          height={35}
+        />
+      }
+      actionsRender={(props) => {
+        if (props.isMobile) return [];
+        return [
+          <InfoCircleFilled key="InfoCircleFilled" />,
+          <QuestionCircleFilled key="QuestionCircleFilled" />,
+          <GithubFilled key="GithubFilled" />,
+          <Button icon={<RobotOutlined />} type="text">
+            Analyze
+          </Button>,
+          <Button icon={<SettingOutlined />} type="text">
+            Settings
+          </Button>,
+        ];
+      }}
+      route={menuItems}
+      menuItemRender={(item, dom) =>
+        item.path ? <Link to={item.path}>{dom}</Link> : dom
+      }
+    >
+      <PageContainer
+        footer={[
+          <Button key="3">重置</Button>,
+          <Button key="2" type="primary">
+            提交
+          </Button>,
+        ]}
+      >
+        {<ProCard>{children}</ProCard>}
+      </PageContainer>
+    </ProLayout>
   );
 }
