@@ -1,12 +1,32 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { graphql, PageProps } from "gatsby";
 import WeaponDivider from "../../components/WeaponDivider";
-import { Row } from "antd";
+import { Row, Tooltip } from "antd";
 import OverclockCard from "../../components/overclocks/OverclockCard";
+import { FooterContext } from "../../components/Layout";
+import { useLiveQuery } from "dexie-react-hooks";
+import useMinerOverclockProgress from "../../hooks/useMinerOverclockProgress";
+import ProgressFooter from "../../components/ProgressFooter";
 
 const Miner = ({
   data: { minersJson: miner },
 }: PageProps<Queries.MinerQuery>) => {
+  const progress = useMinerOverclockProgress(miner!);
+  const setFooter = useContext(FooterContext);
+  useEffect(() => {
+    if (progress === undefined) {
+      setFooter(null);
+    } else {
+      setFooter(
+        <ProgressFooter
+          totalItems={progress.totalOverclocks}
+          completedItems={progress.forgedOverclocks}
+          unforgedItems={progress.unforegedOverclocks}
+        />
+      );
+    }
+  }, [progress]);
+
   return (
     <>
       {miner?.weapons?.map((weapon) => (
@@ -33,6 +53,8 @@ export default Miner;
 export const query = graphql`
   query Miner($id: String) {
     minersJson(id: { eq: $id }) {
+      name
+
       weapons {
         name
         overclocks {
@@ -46,6 +68,7 @@ export const query = graphql`
       }
 
       ...OverclockCardMiner
+      ...MinerOverclockProgressMiner
     }
   }
 `;
