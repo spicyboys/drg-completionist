@@ -4,7 +4,7 @@
   "overclocks": [
     {
       "name": "Composite Drums",
-      "id": "6730E201-42A6B9CB-4C39E48A-BBD2F199",
+      "saveId": "6730E201-42A6B9CB-4C39E48A-BBD2F199",
       "icon": "./overclock-icons/ammo.png",
       "type": "Clean",
       "price": {
@@ -21,7 +21,7 @@
     },
     {
       "name": "Splintering Shells",
-      "id": "6CFD83CB-493FC613-B987DC82-C8116379",
+      "saveId": "6CFD83CB-493FC613-B987DC82-C8116379",
       "icon": "./overclock-icons/area.png",
       "type": "Clean",
       "price": {
@@ -38,7 +38,7 @@
     },
     {
       "name": "Carpet Bomber",
-      "id": "A642018C-4E7A6387-7F8ACCA4-0A61B984",
+      "saveId": "A642018C-4E7A6387-7F8ACCA4-0A61B984",
       "icon": "./overclock-icons/area-damage.png",
       "type": "Balanced",
       "price": {
@@ -55,7 +55,7 @@
     },
     {
       "name": "Combat Mobility",
-      "id": "14E8D53D-433E481C-08073EAA-63D675CE",
+      "saveId": "14E8D53D-433E481C-08073EAA-63D675CE",
       "icon": "./overclock-icons/movement-speed.png",
       "type": "Balanced",
       "price": {
@@ -77,7 +77,7 @@
     },
     {
       "name": "Big Bertha",
-      "id": "D10DAA86-437ED33F-76F1FBB2-15E85DEE",
+      "saveId": "D10DAA86-437ED33F-76F1FBB2-15E85DEE",
       "icon": "./overclock-icons/damage.png",
       "type": "Unstable",
       "price": {
@@ -98,7 +98,7 @@
     },
     {
       "name": "Neurotoxin Payload",
-      "id": "944E6532-4D5E1678-D3DBF0A3-4103183B",
+      "saveId": "944E6532-4D5E1678-D3DBF0A3-4103183B",
       "icon": "./overclock-icons/nuero.png",
       "type": "Unstable",
       "price": {

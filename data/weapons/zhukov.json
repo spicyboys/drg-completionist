@@ -4,7 +4,7 @@
   "overclocks": [
     {
       "name": "Minimal Magazines",
-      "id": "2B45A098-45025423-C35CFF9C-69CC4CB3",
+      "saveId": "2B45A098-45025423-C35CFF9C-69CC4CB3",
       "icon": "./overclock-icons/reload-speed.png",
       "type": "Clean",
       "price": {
@@ -21,7 +21,7 @@
     },
     {
       "name": "Custom Casings",
-      "id": "C386A224-46EA451F-2A10209A-D341D7F4",
+      "saveId": "C386A224-46EA451F-2A10209A-D341D7F4",
       "icon": "./overclock-icons/clip-size.png",
       "type": "Balanced",
       "price": {
@@ -38,7 +38,7 @@
     },
     {
       "name": "Cryo Minelets",
-      "id": "278DCD43-4AAAEAEA-3EC46D8E-0CA13804",
+      "saveId": "278DCD43-4AAAEAEA-3EC46D8E-0CA13804",
       "icon": "./overclock-icons/cold.png",
       "type": "Unstable",
       "price": {
@@ -55,7 +55,7 @@
     },
     {
       "name": "Embedded Detonators",
-      "id": "7150F3FA-42B263BA-C8FB5598-D0FF9BA0",
+      "saveId": "7150F3FA-42B263BA-C8FB5598-D0FF9BA0",
       "icon": "./overclock-icons/special-magazine.png",
       "type": "Unstable",
       "price": {
@@ -72,7 +72,7 @@
     },
     {
       "name": "Gas Recycling",
-      "id": "BC2B8B82-4342EC50-0ED0EF85-974585A6",
+      "saveId": "BC2B8B82-4342EC50-0ED0EF85-974585A6",
       "icon": "./overclock-icons/damage.png",
       "type": "Unstable",
       "price": {

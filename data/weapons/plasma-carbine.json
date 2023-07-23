@@ -4,7 +4,7 @@
   "overclocks": [
     {
       "name": "Aggressive Venting",
-      "id": "00B031D8-4CC8A2F2-B1A54987-74853482",
+      "saveId": "00B031D8-4CC8A2F2-B1A54987-74853482",
       "icon": "./overclock-icons/special.png",
       "type": "Clean",
       "price": {
@@ -21,7 +21,7 @@
     },
     {
       "name": "Thermal Liquid Coolant",
-      "id": "DA09EA00-4676DA14-A1D52D98-087A46B2",
+      "saveId": "DA09EA00-4676DA14-A1D52D98-087A46B2",
       "icon": "./overclock-icons/cooldown.png",
       "type": "Clean",
       "price": {
@@ -38,7 +38,7 @@
     },
     {
       "name": "Impact Deflection",
-      "id": "5940D71B-4B099E73-793B0ABE-464BE9F2",
+      "saveId": "5940D71B-4B099E73-793B0ABE-464BE9F2",
       "icon": "./overclock-icons/ricochet.png",
       "type": "Balanced",
       "price": {
@@ -55,7 +55,7 @@
     },
     {
       "name": "Rewiring Mod",
-      "id": "481CBF5A-4BBDF37B-A4F2DAAF-EC208742",
+      "saveId": "481CBF5A-4BBDF37B-A4F2DAAF-EC208742",
       "icon": "./overclock-icons/ammo.png",
       "type": "Balanced",
       "price": {
@@ -72,7 +72,7 @@
     },
     {
       "name": "Overtuned Particle Accelerator",
-      "id": "97762592-41503577-CA70EBBD-276A94CD",
+      "saveId": "97762592-41503577-CA70EBBD-276A94CD",
       "icon": "./overclock-icons/damage.png",
       "type": "Unstable",
       "price": {
@@ -93,7 +93,7 @@
     },
     {
       "name": "Shield Battery Booster",
-      "id": "B8142753-4F7C8603-78EAA68A-EAAA4EFA",
+      "saveId": "B8142753-4F7C8603-78EAA68A-EAAA4EFA",
       "icon": "./overclock-icons/resistance.png",
       "type": "Unstable",
       "price": {
@@ -119,7 +119,7 @@
     },
     {
       "name": "Thermal Exhaust Feedback",
-      "id": "340CFEBF-4D58AC36-FE6E0B89-F1AA2491",
+      "saveId": "340CFEBF-4D58AC36-FE6E0B89-F1AA2491",
       "icon": "./overclock-icons/heat.png",
       "type": "Unstable",
       "price": {

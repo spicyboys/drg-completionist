@@ -4,7 +4,7 @@
   "overclocks": [
     {
       "name": "Overtuned Feed Mechanism",
-      "id": "4876252A-448868DF-91B03DBA-A56B75A3",
+      "saveId": "4876252A-448868DF-91B03DBA-A56B75A3",
       "icon": "./overclock-icons/fire-rate.png",
       "type": "Clean",
       "price": {
@@ -21,7 +21,7 @@
     },
     {
       "name": "Fragmentation Missiles",
-      "id": "0C88411E-43FC189E-9FB6829B-91A1F019",
+      "saveId": "0C88411E-43FC189E-9FB6829B-91A1F019",
       "icon": "./overclock-icons/area.png",
       "type": "Clean",
       "price": {
@@ -38,7 +38,7 @@
     },
     {
       "name": "Plasma Burster Missiles",
-      "id": "AD9ACD01-46FB9823-6F3F8A81-4A38966A",
+      "saveId": "AD9ACD01-46FB9823-6F3F8A81-4A38966A",
       "icon": "./overclock-icons/bullet-penetration.png",
       "type": "Balanced",
       "price": {
@@ -66,7 +66,7 @@
     },
     {
       "name": "Minelayer System",
-      "id": "9AE273C8-4D4F3E46-D92148AD-B41FC32B",
+      "saveId": "9AE273C8-4D4F3E46-D92148AD-B41FC32B",
       "icon": "./overclock-icons/special.png",
       "type": "Balanced",
       "price": {
@@ -83,7 +83,7 @@
     },
     {
       "name": "Jet Fuel Homebrew",
-      "id": "FB3946C2-4909A004-CD008FBE-842B4638",
+      "saveId": "FB3946C2-4909A004-CD008FBE-842B4638",
       "icon": "./overclock-icons/projectile-speed.png",
       "type": "Unstable",
       "price": {
@@ -109,7 +109,7 @@
     },
     {
       "name": "Rocket Barrage",
-      "id": "C316688E-492CEEDA-A68F3EB9-1A3BF17C",
+      "saveId": "C316688E-492CEEDA-A68F3EB9-1A3BF17C",
       "icon": "./overclock-icons/distance.png",
       "type": "Unstable",
       "price": {
@@ -126,7 +126,7 @@
     },
     {
       "name": "Salvo Module",
-      "id": "B547DE52-419E57A2-93F16485-66082482",
+      "saveId": "B547DE52-419E57A2-93F16485-66082482",
       "icon": "./overclock-icons/shotgun-blast.png",
       "type": "Unstable",
       "price": {

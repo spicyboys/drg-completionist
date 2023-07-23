@@ -4,7 +4,7 @@
   "overclocks": [
     {
       "name": "A Little More Oomph!",
-      "id": "70615DB5-43D7A5EE-29284BAC-73460C3C",
+      "saveId": "70615DB5-43D7A5EE-29284BAC-73460C3C",
       "icon": "./overclock-icons/damage.png",
       "type": "Clean",
       "price": {
@@ -21,7 +21,7 @@
     },
     {
       "name": "Thinned Drum Walls",
-      "id": "3965D401-492F8303-71F7508C-9BE8589D",
+      "saveId": "3965D401-492F8303-71F7508C-9BE8589D",
       "icon": "./overclock-icons/cooldown.png",
       "type": "Clean",
       "price": {
@@ -38,7 +38,7 @@
     },
     {
       "name": "Burning Hell",
-      "id": "73661563-444F17F2-878F599F-650CAC29",
+      "saveId": "73661563-444F17F2-878F599F-650CAC29",
       "icon": "./overclock-icons/heat.png",
       "type": "Balanced",
       "price": {
@@ -55,7 +55,7 @@
     },
     {
       "name": "Compact Feed Mechanism",
-      "id": "B4BF9F2E-4F557B3B-808772B3-244833F1",
+      "saveId": "B4BF9F2E-4F557B3B-808772B3-244833F1",
       "icon": "./overclock-icons/ammo.png",
       "type": "Balanced",
       "price": {
@@ -72,7 +72,7 @@
     },
     {
       "name": "Exhaust Vectoring",
-      "id": "4701B1FB-416A6058-8F378E88-61CDE369",
+      "saveId": "4701B1FB-416A6058-8F378E88-61CDE369",
       "icon": "./overclock-icons/damage.png",
       "type": "Balanced",
       "price": {
@@ -89,7 +89,7 @@
     },
     {
       "name": "Bullet Hell",
-      "id": "803640ED-48E8696A-E3DD72BC-56C4EACD",
+      "saveId": "803640ED-48E8696A-E3DD72BC-56C4EACD",
       "icon": "./overclock-icons/ricochet.png",
       "type": "Unstable",
       "price": {
@@ -106,7 +106,7 @@
     },
     {
       "name": "Lead Storm",
-      "id": "2C0ED17C-41305855-1C1477B5-62EE4B85",
+      "saveId": "2C0ED17C-41305855-1C1477B5-62EE4B85",
       "icon": "./overclock-icons/damage.png",
       "type": "Unstable",
       "price": {

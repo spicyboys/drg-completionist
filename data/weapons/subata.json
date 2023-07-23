@@ -4,8 +4,8 @@
   "overclocks": [
     {
       "name": "Chain Hit",
-      "save_id": "627CABA4-4FFEF77A-AAE335A2-1FED98C3",
-      "icon": "./icons/richochet.png",
+      "saveId": "627CABA4-4FFEF77A-AAE335A2-1FED98C3",
+      "icon": "./overclock-icons/richochet.png",
       "type": "Clean",
       "price": {
         "credits": 7600,
@@ -21,8 +21,8 @@
     },
     {
       "name": "Homebrew Powder",
-      "save_id": "2F547BD5-423579BC-1756BBB6-2972A6C1",
-      "icon": "./icons/chance.png",
+      "saveId": "2F547BD5-423579BC-1756BBB6-2972A6C1",
+      "icon": "./overclock-icons/chance.png",
       "type": "Clean",
       "price": {
         "credits": 7150,
@@ -38,8 +38,8 @@
     },
     {
       "name": "Oversized Magazine",
-      "save_id": "C4203EF1-437649E7-37C2858E-301807AE",
-      "icon": "./icons/clip-size.png",
+      "saveId": "C4203EF1-437649E7-37C2858E-301807AE",
+      "icon": "./overclock-icons/clip-size.png",
       "type": "Balanced",
       "price": {
         "credits": 9000,
@@ -55,8 +55,8 @@
     },
     {
       "name": "Automatic Fire",
-      "save_id": "17E8A828-46730AE5-8B413E96-18FE8DA0",
-      "icon": "./icons/fire-rate.png",
+      "saveId": "17E8A828-46730AE5-8B413E96-18FE8DA0",
+      "icon": "./overclock-icons/fire-rate.png",
       "type": "Unstable",
       "price": {
         "credits": 7400,
@@ -72,8 +72,8 @@
     },
     {
       "name": "Explosive Reload",
-      "save_id": "BEA34929-412AEA68-AF32D597-01915480",
-      "icon": "./icons/special-magazine.png",
+      "saveId": "BEA34929-412AEA68-AF32D597-01915480",
+      "icon": "./overclock-icons/special-magazine.png",
       "type": "Unstable",
       "price": {
         "credits": 8100,
@@ -89,8 +89,8 @@
     },
     {
       "name": "Tranquilizer Rounds",
-      "save_id": "BA887458-4D8DB277-0D4077A1-A7375799",
-      "icon": "./icons/stun.png",
+      "saveId": "BA887458-4D8DB277-0D4077A1-A7375799",
+      "icon": "./overclock-icons/stun.png",
       "type": "Unstable",
       "price": {
         "credits": 7150,

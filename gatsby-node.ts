@@ -4,7 +4,7 @@ export async function createSchemaCustomization({
   actions: { createTypes },
 }: CreateSchemaCustomizationArgs): Promise<void> {
   const typeDefs = `
-    type WeaponsJsonOverclocks implements Node {
+    type WeaponsJsonOverclocks {
       type: OverclockTypesJson! @link(by: "name")
     }
 

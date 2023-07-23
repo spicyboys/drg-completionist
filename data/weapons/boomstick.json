@@ -4,7 +4,7 @@
   "overclocks": [
     {
       "name": "Compact Shells",
-      "id": "4AEE40FA-4FB08C1F-6491AFBF-67B1E469",
+      "saveId": "4AEE40FA-4FB08C1F-6491AFBF-67B1E469",
       "icon": "./overclock-icons/ammo.png",
       "type": "Clean",
       "price": {
@@ -21,7 +21,7 @@
     },
     {
       "name": "Special Powder",
-      "id": "D6F7DAE6-43045006-D666F99E-A669BDFD",
+      "saveId": "D6F7DAE6-43045006-D666F99E-A669BDFD",
       "icon": "./overclock-icons/shotgun-jump.png",
       "type": "Clean",
       "price": {
@@ -38,7 +38,7 @@
     },
     {
       "name": "Stuffed Shells",
-      "id": "7CCB683F-4328AB2F-136D44B1-1D2CD93B",
+      "saveId": "7CCB683F-4328AB2F-136D44B1-1D2CD93B",
       "icon": "./overclock-icons/shotgun-pellet.png",
       "type": "Clean",
       "price": {
@@ -55,7 +55,7 @@
     },
     {
       "name": "Shaped Shells",
-      "id": "2AAC0CEF-41BD57EF-B45521A7-475D39DA",
+      "saveId": "2AAC0CEF-41BD57EF-B45521A7-475D39DA",
       "icon": "./overclock-icons/aim.png",
       "type": "Balanced",
       "price": {
@@ -72,7 +72,7 @@
     },
     {
       "name": "Double Barrel",
-      "id": "B30B095F-426FC9EF-C3BFF197-63C652F1",
+      "saveId": "B30B095F-426FC9EF-C3BFF197-63C652F1",
       "icon": "./overclock-icons/special.png",
       "type": "Unstable",
       "price": {
@@ -94,7 +94,7 @@
     },
     {
       "name": "Jumbo Shells",
-      "id": "C62E1A0B-4EC56801-76CA479E-BD703B4C",
+      "saveId": "C62E1A0B-4EC56801-76CA479E-BD703B4C",
       "icon": "./overclock-icons/damage.png",
       "type": "Unstable",
       "price": {

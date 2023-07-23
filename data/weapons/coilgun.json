@@ -4,7 +4,7 @@
   "overclocks": [
     {
       "name": "Re-atomizer",
-      "id": "BD245D8C-4AF1D568-7AB8A689-9BCD7C85",
+      "saveId": "BD245D8C-4AF1D568-7AB8A689-9BCD7C85",
       "icon": "./overclock-icons/special.png",
       "type": "Clean",
       "price": {
@@ -21,7 +21,7 @@
     },
     {
       "name": "Ultra-Magnetic Coils",
-      "id": "B51E8426-4B283A82-A37DBF81-D7082779",
+      "saveId": "B51E8426-4B283A82-A37DBF81-D7082779",
       "icon": "./overclock-icons/duration-hourglass.png",
       "type": "Clean",
       "price": {
@@ -38,7 +38,7 @@
     },
     {
       "name": "Backfeeding Module",
-      "id": "65322FF8-48A7E876-B63C7599-207C6B31",
+      "saveId": "65322FF8-48A7E876-B63C7599-207C6B31",
       "icon": "./overclock-icons/Ammo",
       "type": "Balanced",
       "price": {
@@ -55,7 +55,7 @@
     },
     {
       "name": "The Mole",
-      "id": "211F4756-4414E09B-085FFE8D-47D4AB7C",
+      "saveId": "211F4756-4414E09B-085FFE8D-47D4AB7C",
       "icon": "./overclock-icons/bullet-penetration.png",
       "type": "Balanced",
       "price": {
@@ -75,7 +75,7 @@
     },
     {
       "name": "Hellfire",
-      "id": "0AA9DE80-4617F3D5-F48F1395-6AA9327A",
+      "saveId": "0AA9DE80-4617F3D5-F48F1395-6AA9327A",
       "icon": "./overclock-icons/heat.png",
       "type": "Unstable",
       "price": {
@@ -95,7 +95,7 @@
     },
     {
       "name": "Triple-Tech Chambers",
-      "id": "A11D75A6-4E137CB8-C71057BC-53141C43",
+      "saveId": "A11D75A6-4E137CB8-C71057BC-53141C43",
       "icon": "./overclock-icons/damage.png",
       "type": "Unstable",
       "price": {

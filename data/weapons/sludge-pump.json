@@ -4,8 +4,8 @@
   "overclocks": [
     {
       "name": "Hydrogen Ion Additive",
-      "save_id": "55B2CAEC-44F00514-6CFB3FA9-399BFF51",
-      "icon": "./icons/acid.png",
+      "saveId": "55B2CAEC-44F00514-6CFB3FA9-399BFF51",
+      "icon": "./overclock-icons/acid.png",
       "type": "Clean",
       "price": {
         "credits": 8800,
@@ -24,7 +24,7 @@
     },
     {
       "name": "AG Mixture",
-      "save_id": "2B675649-433A8DA6-60C24E9D-E48CB9F0",
+      "saveId": "2B675649-433A8DA6-60C24E9D-E48CB9F0",
       "icon": "./overclock-icons/projectile-speed.png",
       "type": "Clean",
       "price": {
@@ -41,8 +41,8 @@
     },
     {
       "name": "Volatile Impact Mixture",
-      "save_id": "D0169F53-4704A5EC-B1D31BB2-CB39D4AD",
-      "icon": "./icons/damage.png",
+      "saveId": "D0169F53-4704A5EC-B1D31BB2-CB39D4AD",
+      "icon": "./overclock-icons/damage.png",
       "type": "Balanced",
       "price": {
         "credits": 8500,
@@ -61,8 +61,8 @@
     },
     {
       "name": "Disperser Compound",
-      "save_id": "8B7AD7C1-4033D4AF-97834A8E-EC3AA6F1",
-      "icon": "./icons/area-damage.png",
+      "saveId": "8B7AD7C1-4033D4AF-97834A8E-EC3AA6F1",
+      "icon": "./overclock-icons/area-damage.png",
       "type": "Balanced",
       "price": {
         "credits": 8800,
@@ -78,8 +78,8 @@
     },
     {
       "name": "Goo Bomber Special",
-      "save_id": "997ECC4C-4AA16341-B37AC9AA-F9F17F77",
-      "icon": "./icons/special.png",
+      "saveId": "997ECC4C-4AA16341-B37AC9AA-F9F17F77",
+      "icon": "./overclock-icons/special.png",
       "type": "Unstable",
       "price": {
         "credits": 7450,
@@ -100,8 +100,8 @@
     },
     {
       "name": "Sludge Blast",
-      "save_id": "3B277DEA-4B9B0956-8A76449F-1C8C9A09",
-      "icon": "./icons/shotgun-blast.png",
+      "saveId": "3B277DEA-4B9B0956-8A76449F-1C8C9A09",
+      "icon": "./overclock-icons/shotgun-blast.png",
       "type": "Unstable",
       "price": {
         "credits": 8200,

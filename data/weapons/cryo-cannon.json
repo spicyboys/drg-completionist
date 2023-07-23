@@ -4,8 +4,8 @@
   "overclocks": [
     {
       "name": "Improved Thermal Efficiency",
-      "save_id": "4D0C66CE-430098D9-7AA102A8-ACC06945",
-      "icon": "./icons/clip-size.png",
+      "saveId": "4D0C66CE-430098D9-7AA102A8-ACC06945",
+      "icon": "./overclock-icons/clip-size.png",
       "type": "Clean",
       "price": {
         "credits": 8350,
@@ -21,8 +21,8 @@
     },
     {
       "name": "Tuned Cooler",
-      "save_id": "B323DB6A-4088EDC8-818BA886-BE3CC907",
-      "icon": "./icons/cold.png",
+      "saveId": "B323DB6A-4088EDC8-818BA886-BE3CC907",
+      "icon": "./overclock-icons/cold.png",
       "type": "Balanced",
       "price": {
         "credits": 8750,
@@ -38,8 +38,8 @@
     },
     {
       "name": "Flow Rate Expansion",
-      "save_id": "B2EAF888-467BEC06-038F1CA3-1A93444B",
-      "icon": "./icons/duration.png",
+      "saveId": "B2EAF888-467BEC06-038F1CA3-1A93444B",
+      "icon": "./overclock-icons/duration.png",
       "type": "Balanced",
       "price": {
         "credits": 8900,
@@ -55,8 +55,8 @@
     },
     {
       "name": "Ice Spear",
-      "save_id": "37CB18D5-44A0321A-4F5E349B-914CD358",
-      "icon": "./icons/projectile-speed.png",
+      "saveId": "37CB18D5-44A0321A-4F5E349B-914CD358",
+      "icon": "./overclock-icons/projectile-speed.png",
       "type": "Balanced",
       "price": {
         "credits": 8950,
@@ -72,8 +72,8 @@
     },
     {
       "name": "Ice Storm",
-      "save_id": "5975117B-4E56B697-2A03B197-0FB98E82",
-      "icon": "./icons/damage.png",
+      "saveId": "5975117B-4E56B697-2A03B197-0FB98E82",
+      "icon": "./overclock-icons/damage.png",
       "type": "Unstable",
       "price": {
         "credits": 7200,
@@ -93,8 +93,8 @@
     },
     {
       "name": "Snowball",
-      "save_id": "976FF1C1-47109C0C-F66B83AF-ADBCFECB",
-      "icon": "./icons/area.png",
+      "saveId": "976FF1C1-47109C0C-F66B83AF-ADBCFECB",
+      "icon": "./overclock-icons/area.png",
       "type": "Unstable",
       "price": {
         "credits": 8400,

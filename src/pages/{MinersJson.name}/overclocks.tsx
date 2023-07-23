@@ -1,28 +1,29 @@
 import React from "react";
 import { graphql, PageProps } from "gatsby";
 import WeaponDivider from "../../components/WeaponDivider";
+import Layout from "../../components/Layout";
+import { Row } from "antd";
+import OverclockCard from "../../components/overclocks/OverclockCard";
 
 const Miner = (props: PageProps<Queries.MinerQuery>) => {
-  console.log(props.data);
-  const weapons = props.data.minersJson?.weapons!;
   return (
-    <>
-      {weapons.map((weapon) => (
+    <Layout>
+      {props.data.minersJson?.weapons?.map((weapon) => (
         <React.Fragment key={weapon.name}>
           <WeaponDivider weapon={weapon} />
-          {/* <Row gutter={[16, 16]}>
-            {weapon.overclocks!.map((overclock) => (
+          <Row gutter={[16, 16]}>
+            {weapon.overclocks?.map((overclock) => (
               <OverclockCard
-                key={overclock.name}
-                overclock={overclock}
-                miner={miner}
-                weapon={weapon as MinerWeapon<Miner>}
+                key={overclock!.name}
+                overclock={overclock!}
+                miner={props.data.minersJson!}
+                weapon={weapon!}
               />
             ))}
-          </Row> */}
+          </Row>
         </React.Fragment>
       ))}
-    </>
+    </Layout>
   );
 };
 
@@ -32,7 +33,6 @@ export const query = graphql`
   query Miner($id: String) {
     minersJson(id: { eq: $id }) {
       weapons {
-        ...WeaponDivider
         name
         overclocks {
           name
@@ -43,8 +43,15 @@ export const query = graphql`
               }
             }
           }
+
+          ...OverclockCardOverclock
         }
+
+        ...WeaponDividerWeapon
+        ...OverclockCardWeapon
       }
+
+      ...OverclockCardMiner
     }
   }
 `;

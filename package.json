@@ -16,7 +16,10 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.1.4",
     "antd": "^5.7.1",
+    "dexie": "^3.2.4",
+    "dexie-react-hooks": "^1.1.6",
     "gatsby": "^5.11.0",
     "gatsby-plugin-image": "^3.11.0",
     "gatsby-plugin-manifest": "^5.11.0",

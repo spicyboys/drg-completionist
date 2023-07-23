@@ -4,7 +4,7 @@
   "overclocks": [
     {
       "name": "Compact Ammo",
-      "id": "935B94AF-4CD6B9A7-6800DDA6-80BC2736",
+      "saveId": "935B94AF-4CD6B9A7-6800DDA6-80BC2736",
       "icon": "./overclock-icons/clip-size.png",
       "type": "Clean",
       "price": {
@@ -21,7 +21,7 @@
     },
     {
       "name": "Gas Rerouting",
-      "id": "47E5E2F6-4D67EBF2-F491A5BD-17D0E67D",
+      "saveId": "47E5E2F6-4D67EBF2-F491A5BD-17D0E67D",
       "icon": "./overclock-icons/fire-rate.png",
       "type": "Clean",
       "price": {
@@ -38,7 +38,7 @@
     },
     {
       "name": "Homebrew Powder",
-      "id": "F341DF4C-49E4F8A0-61AC1B9D-99773468",
+      "saveId": "F341DF4C-49E4F8A0-61AC1B9D-99773468",
       "icon": "./overclock-icons/chance.png",
       "type": "Clean",
       "price": {
@@ -55,7 +55,7 @@
     },
     {
       "name": "Overclocked Firing Mechanism",
-      "id": "240306C3-4A2C48CE-ED44DCB6-39BA8C49",
+      "saveId": "240306C3-4A2C48CE-ED44DCB6-39BA8C49",
       "icon": "./overclock-icons/fire-rate.png",
       "type": "Balanced",
       "price": {
@@ -72,7 +72,7 @@
     },
     {
       "name": "Bullets of Mercy",
-      "id": "1F220673-4BB06412-B45D028C-67169DDE",
+      "saveId": "1F220673-4BB06412-B45D028C-67169DDE",
       "icon": "./overclock-icons/damage.png",
       "type": "Balanced",
       "price": {
@@ -89,7 +89,7 @@
     },
     {
       "name": "AI Stability Engine",
-      "id": "E123F111-40311074-50577995-D776D56B",
+      "saveId": "E123F111-40311074-50577995-D776D56B",
       "icon": "./overclock-icons/aim.png",
       "type": "Unstable",
       "price": {
@@ -110,7 +110,7 @@
     },
     {
       "name": "Electrifying Reload",
-      "id": "E7B994FF-42774D83-CACCDA92-B923A03E",
+      "saveId": "E7B994FF-42774D83-CACCDA92-B923A03E",
       "icon": "./overclock-icons/special-magazine.png",
       "type": "Unstable",
       "price": {

@@ -4,8 +4,8 @@
   "overclocks": [
     {
       "name": "Lighter Tanks",
-      "save_id": "967A05C5-4B5ECF08-2AB3AAA4-3EBA13D6",
-      "icon": "./icons/ammo.png",
+      "saveId": "967A05C5-4B5ECF08-2AB3AAA4-3EBA13D6",
+      "icon": "./overclock-icons/ammo.png",
       "type": "Clean",
       "price": {
         "credits": 7500,
@@ -21,8 +21,8 @@
     },
     {
       "name": "Sticky Additive",
-      "save_id": "831D5F41-447A7EA7-3860BF8D-6CFD0331",
-      "icon": "./icons/duration-hourglass.png",
+      "saveId": "831D5F41-447A7EA7-3860BF8D-6CFD0331",
+      "icon": "./overclock-icons/duration-hourglass.png",
       "type": "Clean",
       "price": {
         "credits": 8250,
@@ -38,8 +38,8 @@
     },
     {
       "name": "Compact Feed Valves",
-      "save_id": "438D5871-4A9A58A7-DEA861BE-BF49B42E",
-      "icon": "./icons/clip-size.png",
+      "saveId": "438D5871-4A9A58A7-DEA861BE-BF49B42E",
+      "icon": "./overclock-icons/clip-size.png",
       "type": "Balanced",
       "price": {
         "credits": 7350,
@@ -55,8 +55,8 @@
     },
     {
       "name": "Fuel Stream Diffuser",
-      "save_id": "1C5DE819-49B38535-9C7751B1-D90373BD",
-      "icon": "./icons/distance.png",
+      "saveId": "1C5DE819-49B38535-9C7751B1-D90373BD",
+      "icon": "./overclock-icons/distance.png",
       "type": "Balanced",
       "price": {
         "credits": 7100,
@@ -72,8 +72,8 @@
     },
     {
       "name": "Face Melter",
-      "save_id": "DDA83164-4B89A6EA-AC7BC590-FFA55275",
-      "icon": "./icons/damage.png",
+      "saveId": "DDA83164-4B89A6EA-AC7BC590-FFA55275",
+      "icon": "./overclock-icons/damage.png",
       "type": "Unstable",
       "price": {
         "credits": 7000,
@@ -89,8 +89,8 @@
     },
     {
       "name": "Sticky Fuel",
-      "save_id": "E33E8CF2-480D968A-699F5E96-193F6BF5",
-      "icon": "./icons/duration-hourglass.png",
+      "saveId": "E33E8CF2-480D968A-699F5E96-193F6BF5",
+      "icon": "./overclock-icons/duration-hourglass.png",
       "type": "Unstable",
       "price": {
         "credits": 8800,

@@ -4,7 +4,7 @@
   "overclocks": [
     {
       "name": "Efficiency Tweaks",
-      "id": "122F43F1-4DE0681F-8EDDC5A0-7D71CF50",
+      "saveId": "122F43F1-4DE0681F-8EDDC5A0-7D71CF50",
       "icon": "./overclock-icons/ammo.png",
       "type": "Clean",
       "price": {
@@ -21,7 +21,7 @@
     },
     {
       "name": "Automated Beam Controller",
-      "id": "C31BD871-4D8FC2DB-9F6C5A90-AE558B4A",
+      "saveId": "C31BD871-4D8FC2DB-9F6C5A90-AE558B4A",
       "icon": "./overclock-icons/fire-rate.png",
       "type": "Balanced",
       "price": {
@@ -46,7 +46,7 @@
     },
     {
       "name": "Feedback Loop",
-      "id": "6F0C88F1-4710EF7B-4FEE778E-F68134C6",
+      "saveId": "6F0C88F1-4710EF7B-4FEE778E-F68134C6",
       "icon": "./overclock-icons/area.png",
       "type": "Balanced",
       "price": {
@@ -63,7 +63,7 @@
     },
     {
       "name": "Volatile Impact Reactor",
-      "id": "1FC2B77B-4AE6D1A1-E67C008C-12A423A0",
+      "saveId": "1FC2B77B-4AE6D1A1-E67C008C-12A423A0",
       "icon": "./overclock-icons/special.png",
       "type": "Balanced",
       "price": {
@@ -80,7 +80,7 @@
     },
     {
       "name": "Plastcrete Catalyst",
-      "id": "397230D3-4CE4BC69-00E9EBB1-0D6E2F9A",
+      "saveId": "397230D3-4CE4BC69-00E9EBB1-0D6E2F9A",
       "icon": "./overclock-icons/explosion.png",
       "type": "Unstable",
       "price": {
@@ -97,7 +97,7 @@
     },
     {
       "name": "Overdrive Booster",
-      "id": "BA187A18-4CD28352-F4375A90-A03B12FB",
+      "saveId": "BA187A18-4CD28352-F4375A90-A03B12FB",
       "icon": "./overclock-icons/damage.png",
       "type": "Unstable",
       "price": {

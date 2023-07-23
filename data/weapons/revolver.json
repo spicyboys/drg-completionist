@@ -4,7 +4,7 @@
   "overclocks": [
     {
       "name": "Chain Hit",
-      "id": "3BA38558-4584AE15-656BA691-4E49E5A2",
+      "saveId": "3BA38558-4584AE15-656BA691-4E49E5A2",
       "icon": "./overclock-icons/ricochet.png",
       "type": "Clean",
       "price": {
@@ -21,7 +21,7 @@
     },
     {
       "name": "Homebrew Powder",
-      "id": "F99369CD-497CE238-3B2969AC-F0A842F9",
+      "saveId": "F99369CD-497CE238-3B2969AC-F0A842F9",
       "icon": "./overclock-icons/chance.png",
       "type": "Balanced",
       "price": {
@@ -38,7 +38,7 @@
     },
     {
       "name": "Volatile Bullets",
-      "id": "BC6C30D1-48B22184-335BB9A4-56E0F32D",
+      "saveId": "BC6C30D1-48B22184-335BB9A4-56E0F32D",
       "icon": "./overclock-icons/heat.png",
       "type": "Balanced",
       "price": {
@@ -55,7 +55,7 @@
     },
     {
       "name": "Six Shooter",
-      "id": "39DC37A9-41E8DE38-1C64D08C-6AB419CE",
+      "saveId": "39DC37A9-41E8DE38-1C64D08C-6AB419CE",
       "icon": "./overclock-icons/clip-size.png",
       "type": "Balanced",
       "price": {
@@ -72,7 +72,7 @@
     },
     {
       "name": "Elephant Rounds",
-      "id": "FB943FD5-48045EC0-DFC97BB5-7B264668",
+      "saveId": "FB943FD5-48045EC0-DFC97BB5-7B264668",
       "icon": "./overclock-icons/damage.png",
       "type": "Unstable",
       "price": {
@@ -95,7 +95,7 @@
     },
     {
       "name": "Magic Bullets",
-      "id": "E7B402DB-44BF437D-829974A4-779B87C0",
+      "saveId": "E7B402DB-44BF437D-829974A4-779B87C0",
       "icon": "./overclock-icons/ricochet.png",
       "type": "Unstable",
       "price": {

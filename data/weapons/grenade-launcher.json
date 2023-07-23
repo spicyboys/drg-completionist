@@ -4,7 +4,7 @@
   "overclocks": [
     {
       "name": "Clean Sweep",
-      "id": "9A0512B9-4BE4863F-505498A2-B5CC36D1",
+      "saveId": "9A0512B9-4BE4863F-505498A2-B5CC36D1",
       "icon": "./overclock-icons/area.png",
       "type": "Clean",
       "price": {
@@ -21,7 +21,7 @@
     },
     {
       "name": "Pack Rat",
-      "id": "E19476A9-4E48B7A9-DB146EB6-6BDB30F8",
+      "saveId": "E19476A9-4E48B7A9-DB146EB6-6BDB30F8",
       "icon": "./overclock-icons/ammo.png",
       "type": "Clean",
       "price": {
@@ -38,7 +38,7 @@
     },
     {
       "name": "Compact Rounds",
-      "id": "FA1357EE-45E2A091-CEBFC0A1-74202115",
+      "saveId": "FA1357EE-45E2A091-CEBFC0A1-74202115",
       "icon": "./overclock-icons/ammo.png",
       "type": "Balanced",
       "price": {
@@ -55,7 +55,7 @@
     },
     {
       "name": "RJ250 Compound",
-      "id": "88C77EDB-4CCE6FB4-50A20098-EAE8A010",
+      "saveId": "88C77EDB-4CCE6FB4-50A20098-EAE8A010",
       "icon": "./overclock-icons/explosion-jump.png",
       "type": "Balanced",
       "price": {
@@ -72,7 +72,7 @@
     },
     {
       "name": "Fat Boy",
-      "id": "4343D287-45FCD388-1D354E88-7C0FE7CB",
+      "saveId": "4343D287-45FCD388-1D354E88-7C0FE7CB",
       "icon": "./overclock-icons/area-damage.png",
       "type": "Unstable",
       "price": {
@@ -89,7 +89,7 @@
     },
     {
       "name": "Hyper Propellant",
-      "id": "84D64CBC-44F61B62-3A370796-4F574A53",
+      "saveId": "84D64CBC-44F61B62-3A370796-4F574A53",
       "icon": "./overclock-icons/projectile-speed.png",
       "type": "Unstable",
       "price": {

@@ -4,7 +4,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 
 export default function WeaponDivider(props: {
-  weapon: Queries.WeaponDividerFragment;
+  weapon: Queries.WeaponDividerWeaponFragment;
 }) {
   return (
     <Divider orientation="center">
@@ -12,7 +12,6 @@ export default function WeaponDivider(props: {
         <GatsbyImage
           image={props.weapon.outline?.childImageSharp?.gatsbyImageData!}
           alt={props.weapon.name!}
-          style={{ height: 75, width: "auto" }}
         />
       </Tooltip>
     </Divider>
@@ -20,7 +19,7 @@ export default function WeaponDivider(props: {
 }
 
 export const query = graphql`
-  fragment WeaponDivider on WeaponsJson {
+  fragment WeaponDividerWeapon on WeaponsJson {
     name
     outline {
       childImageSharp {

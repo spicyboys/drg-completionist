@@ -4,8 +4,8 @@
   "overclocks": [
     {
       "name": "Energy Rerouting",
-      "save_id": "71208297-45CE86D5-9748D6AC-FA00B782",
-      "icon": "./icons/charge-up.png",
+      "saveId": "71208297-45CE86D5-9748D6AC-FA00B782",
+      "icon": "./overclock-icons/charge-up.png",
       "type": "Clean",
       "price": {
         "credits": 7300,
@@ -21,8 +21,8 @@
     },
     {
       "name": "Magnetic Cooling Unit",
-      "save_id": "30CCE6F1-45DE117C-418BB886-BF0A539E",
-      "icon": "./icons/cooldown.png",
+      "saveId": "30CCE6F1-45DE117C-418BB886-BF0A539E",
+      "icon": "./overclock-icons/cooldown.png",
       "type": "Clean",
       "price": {
         "credits": 8900,
@@ -38,8 +38,8 @@
     },
     {
       "name": "Heat Pipe",
-      "save_id": "C418E0A0-4179E65F-0E73D38F-1D639B6E",
-      "icon": "./icons/fuel.png",
+      "saveId": "C418E0A0-4179E65F-0E73D38F-1D639B6E",
+      "icon": "./overclock-icons/fuel.png",
       "type": "Balanced",
       "price": {
         "credits": 7450,
@@ -58,8 +58,8 @@
     },
     {
       "name": "Heavy Hitter",
-      "save_id": "133EE439-46AE0DCC-A151DD91-E1E98313",
-      "icon": "./icons/damage.png",
+      "saveId": "133EE439-46AE0DCC-A151DD91-E1E98313",
+      "icon": "./overclock-icons/damage.png",
       "type": "Balanced",
       "price": {
         "credits": 8100,
@@ -75,8 +75,8 @@
     },
     {
       "name": "Overcharger",
-      "save_id": "A052BB55-437CFAEC-E6BB7BB3-96411140",
-      "icon": "./icons/damage.png",
+      "saveId": "A052BB55-437CFAEC-E6BB7BB3-96411140",
+      "icon": "./overclock-icons/damage.png",
       "type": "Unstable",
       "price": {
         "credits": 7050,
@@ -96,8 +96,8 @@
     },
     {
       "name": "Persistent Plasma",
-      "save_id": "3ED95C16-47810B66-6CF8A2BC-F7F85CDE",
-      "icon": "./icons/duration-hourglass.png",
+      "saveId": "3ED95C16-47810B66-6CF8A2BC-F7F85CDE",
+      "icon": "./overclock-icons/duration-hourglass.png",
       "type": "Unstable",
       "price": {
         "credits": 8150,

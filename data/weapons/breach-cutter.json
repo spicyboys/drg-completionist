@@ -4,7 +4,7 @@
   "overclocks": [
     {
       "name": "Light-Weight Cases",
-      "id": "7C0C9496-40A8EFDC-604DDD84-2D1BE8D2",
+      "saveId": "7C0C9496-40A8EFDC-604DDD84-2D1BE8D2",
       "icon": "./overclock-icons/ammo.png",
       "type": "Clean",
       "price": {
@@ -21,7 +21,7 @@
     },
     {
       "name": "Roll Control",
-      "id": "A32FDB05-4FE069B9-BEF54486-2040206C",
+      "saveId": "A32FDB05-4FE069B9-BEF54486-2040206C",
       "icon": "./overclock-icons/spinning-linecutter.png",
       "type": "Clean",
       "price": {
@@ -38,7 +38,7 @@
     },
     {
       "name": "Stronger Plasma Current",
-      "id": "859C7C3D-49A5D3F6-B0EDD6A2-4B311899",
+      "saveId": "859C7C3D-49A5D3F6-B0EDD6A2-4B311899",
       "icon": "./overclock-icons/damage.png",
       "type": "Clean",
       "price": {
@@ -55,7 +55,7 @@
     },
     {
       "name": "Return to Sender",
-      "id": "ED514274-4A48D425-DBFB8DA3-B9C53BF4",
+      "saveId": "ED514274-4A48D425-DBFB8DA3-B9C53BF4",
       "icon": "./overclock-icons/forth-and-back-linecutter.png",
       "type": "Balanced",
       "price": {
@@ -72,7 +72,7 @@
     },
     {
       "name": "High Voltage Crossover",
-      "id": "CB84A17F-4D87219D-DA9DBF82-D7917CFC",
+      "saveId": "CB84A17F-4D87219D-DA9DBF82-D7917CFC",
       "icon": "./overclock-icons/electricity.png",
       "type": "Balanced",
       "price": {
@@ -89,7 +89,7 @@
     },
     {
       "name": "Spinning Death",
-      "id": "C6FB0A34-420406C3-81310181-1B6E02E0",
+      "saveId": "C6FB0A34-420406C3-81310181-1B6E02E0",
       "icon": "./overclock-icons/special.png",
       "type": "Unstable",
       "price": {
@@ -110,7 +110,7 @@
     },
     {
       "name": "Inferno",
-      "id": "F812D98E-44847B26-86DAEE82-A5514460",
+      "saveId": "F812D98E-44847B26-86DAEE82-A5514460",
       "icon": "./overclock-icons/heat.png",
       "type": "Unstable",
       "price": {

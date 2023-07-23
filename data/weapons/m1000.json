@@ -4,7 +4,7 @@
   "overclocks": [
     {
       "name": "Hoverclock",
-      "id": "E422018A-4B10424E-456BADAA-8FDEA934",
+      "saveId": "E422018A-4B10424E-456BADAA-8FDEA934",
       "icon": "./overclock-icons/slowdown.png",
       "type": "Clean",
       "price": {
@@ -21,7 +21,7 @@
     },
     {
       "name": "Minimal Clips",
-      "id": "EEE306D0-420254E0-A8BCB0A2-87B3CDAB",
+      "saveId": "EEE306D0-420254E0-A8BCB0A2-87B3CDAB",
       "icon": "./overclock-icons/ammo.png",
       "type": "Clean",
       "price": {
@@ -38,7 +38,7 @@
     },
     {
       "name": "Active Stability System",
-      "id": "354B54D1-488A9328-9A8D4E96-DAD10963",
+      "saveId": "354B54D1-488A9328-9A8D4E96-DAD10963",
       "icon": "./overclock-icons/movement-speed.png",
       "type": "Balanced",
       "price": {
@@ -55,7 +55,7 @@
     },
     {
       "name": "Hipster",
-      "id": "8F35122A-49700B75-467DC396-361DCF7E",
+      "saveId": "8F35122A-49700B75-467DC396-361DCF7E",
       "icon": "./overclock-icons/aim.png",
       "type": "Balanced",
       "price": {
@@ -72,7 +72,7 @@
     },
     {
       "name": "Electrocuting Focus Shots",
-      "id": "E4B6C9AA-47588445-87DB508E-EB974032",
+      "saveId": "E4B6C9AA-47588445-87DB508E-EB974032",
       "icon": "./overclock-icons/electricity.png",
       "type": "Unstable",
       "price": {
@@ -89,7 +89,7 @@
     },
     {
       "name": "Supercooling Chamber",
-      "id": "EBCE7310-4E01BCEC-59E27083-1CB70E04",
+      "saveId": "EBCE7310-4E01BCEC-59E27083-1CB70E04",
       "icon": "./overclock-icons/damage.png",
       "type": "Unstable",
       "price": {

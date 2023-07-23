@@ -1,10 +1,11 @@
 [
   {
     "name": "Driller",
-    "save_id": "F156DD9E-48C5BCEE-5B5E5B8D-B42DB680",
+    "saveId": "F156DD9E-48C5BCEE-5B5E5B8D-B42DB680",
     "portrait": "./portraits/driller.png",
+    "icon": "./miner-icons/driller.webp",
     "color": "#D19724",
-    "contrast_color": "#161616",
+    "contrastColor": "#161616",
     "weapons": [
       "CRSPR Flamethrower",
       "Cryo Cannon",
@@ -16,10 +17,11 @@
   },
   {
     "name": "Engineer",
-    "save_id": "6C62EF85-4A02F165-D0B5FE8D-2E9D90F3",
+    "saveId": "6C62EF85-4A02F165-D0B5FE8D-2E9D90F3",
     "portrait": "./portraits/engineer.png",
+    "icon": "./miner-icons/engineer.webp",
     "color": "#892F30",
-    "contrast_color": "#ECECEC",
+    "contrastColor": "#ECECEC",
     "weapons": [
       "\"Warthog\" Auto 210",
       "\"Stubby\" Voltaic SMG",
@@ -31,10 +33,11 @@
   },
   {
     "name": "Gunner",
-    "save_id": "80E156AE-4DC4C0FE-C229FA96-7BB96683",
+    "saveId": "80E156AE-4DC4C0FE-C229FA96-7BB96683",
     "portrait": "./portraits/gunner.png",
+    "icon": "./miner-icons/gunner.webp",
     "color": "#446043",
-    "contrast_color": "#FFFFFFE6",
+    "contrastColor": "#FFFFFFE6",
     "weapons": [
       "\"Lead Storm\" Powered Minigun",
       "\"Thunderhead\" Heavy Autocannon",
@@ -46,10 +49,11 @@
   },
   {
     "name": "Scout",
-    "save_id": "17EAD830-4CBAFBD8-E96D3095-8C2F5C65",
+    "saveId": "17EAD830-4CBAFBD8-E96D3095-8C2F5C65",
     "portrait": "./portraits/scout.png",
+    "icon": "./miner-icons/scout.webp",
     "color": "#106193",
-    "contrast_color": "#FFFFFFF2",
+    "contrastColor": "#FFFFFFF2",
     "weapons": [
       "Deepcore GK2",
       "M1000 Classic",

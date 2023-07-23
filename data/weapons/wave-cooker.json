@@ -4,8 +4,8 @@
   "overclocks": [
     {
       "name": "Liquid Cooling System",
-      "save_id": "5940615F-4EA1ADB3-EF310893-0298604B",
-      "icon": "./icons/cooldown.png",
+      "saveId": "5940615F-4EA1ADB3-EF310893-0298604B",
+      "icon": "./overclock-icons/cooldown.png",
       "type": "Clean",
       "price": {
         "credits": 7400,
@@ -25,8 +25,8 @@
     },
     {
       "name": "Super Focus Lens",
-      "save_id": "ED70A879-4A81C900-ADE42B94-630BA149",
-      "icon": "./icons/aim.png",
+      "saveId": "ED70A879-4A81C900-ADE42B94-630BA149",
+      "icon": "./overclock-icons/aim.png",
       "type": "Clean",
       "price": {
         "credits": 7550,
@@ -42,8 +42,8 @@
     },
     {
       "name": "Diffusion Ray",
-      "save_id": "8BE1D90C-4471E285-8DD30199-B462BA50",
-      "icon": "./icons/bullet-penetration.png",
+      "saveId": "8BE1D90C-4471E285-8DD30199-B462BA50",
+      "icon": "./overclock-icons/bullet-penetration.png",
       "type": "Balanced",
       "price": {
         "credits": 8300,
@@ -59,8 +59,8 @@
     },
     {
       "name": "Mega Power Supply",
-      "save_id": "9057E8A3-4AC7CBAB-C63CCBBC-1B9A5036",
-      "icon": "./icons/ammo.png",
+      "saveId": "9057E8A3-4AC7CBAB-C63CCBBC-1B9A5036",
+      "icon": "./overclock-icons/ammo.png",
       "type": "Balanced",
       "price": {
         "credits": 8100,
@@ -76,8 +76,8 @@
     },
     {
       "name": "Blistering Necrosis",
-      "save_id": "32886448-4DE011AA-8A2E9FAE-8DAD89DF",
-      "icon": "./icons/weakspot.png",
+      "saveId": "32886448-4DE011AA-8A2E9FAE-8DAD89DF",
+      "icon": "./overclock-icons/weakspot.png",
       "type": "Unstable",
       "price": {
         "credits": 7850,
@@ -93,8 +93,8 @@
     },
     {
       "name": "Gamma Contamination",
-      "save_id": "8729DD5E-497F04DB-FC72DD8A-E31E6CEB",
-      "icon": "./icons/radioactive.png",
+      "saveId": "8729DD5E-497F04DB-FC72DD8A-E31E6CEB",
+      "icon": "./overclock-icons/radioactive.png",
       "type": "Unstable",
       "price": {
         "credits": 8350,

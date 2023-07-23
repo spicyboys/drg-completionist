@@ -4,7 +4,7 @@
   "overclocks": [
     {
       "name": "Quick Fire",
-      "id": "FA57FA1C-49DBD035-7CF8AAA9-F41E01AA",
+      "saveId": "FA57FA1C-49DBD035-7CF8AAA9-F41E01AA",
       "icon": "./overclock-icons/fire-rate.png",
       "type": "Clean",
       "price": {
@@ -21,7 +21,7 @@
     },
     {
       "name": "The Specialist",
-      "id": "3145466C-49A80E82-C0803CBB-4FA790F1",
+      "saveId": "3145466C-49A80E82-C0803CBB-4FA790F1",
       "icon": "./overclock-icons/special.png",
       "type": "Clean",
       "price": {
@@ -38,7 +38,7 @@
     },
     {
       "name": "Cryo Bolt",
-      "id": "A9D0CF75-4AC9310F-028D6A9D-FCE17D14",
+      "saveId": "A9D0CF75-4AC9310F-028D6A9D-FCE17D14",
       "icon": "./overclock-icons/cold.png",
       "type": "Balanced",
       "price": {
@@ -55,7 +55,7 @@
     },
     {
       "name": "Fire Bolt",
-      "id": "E281CADD-48E86B9C-F0F42D8C-722AC7B0",
+      "saveId": "E281CADD-48E86B9C-F0F42D8C-722AC7B0",
       "icon": "./overclock-icons/heat.png",
       "type": "Balanced",
       "price": {
@@ -72,7 +72,7 @@
     },
     {
       "name": "Bodkin Points",
-      "id": "240FCBAE-4A19FA1D-86BB4BB0-40A83F56",
+      "saveId": "240FCBAE-4A19FA1D-86BB4BB0-40A83F56",
       "icon": "./overclock-icons/ricochet.png",
       "type": "Unstable",
       "price": {
@@ -89,7 +89,7 @@
     },
     {
       "name": "Trifork Volley",
-      "id": "DE96FE62-4E45A532-2B95F1B0-F4BA8DD6",
+      "saveId": "DE96FE62-4E45A532-2B95F1B0-F4BA8DD6",
       "icon": "./overclock-icons/last-shell-higher-damage.png",
       "type": "Unstable",
       "price": {

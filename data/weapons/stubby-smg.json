@@ -4,7 +4,7 @@
   "overclocks": [
     {
       "name": "Super-Slim Rounds",
-      "id": "4A1CCF13-4A929269-EA5CFF9A-06715BF0",
+      "saveId": "4A1CCF13-4A929269-EA5CFF9A-06715BF0",
       "icon": "./overclock-icons/clip-size.png",
       "type": "Clean",
       "price": {
@@ -21,7 +21,7 @@
     },
     {
       "name": "Well-Oiled Machine",
-      "id": "449094CE-496B035B-BCB29DB8-12FD188D",
+      "saveId": "449094CE-496B035B-BCB29DB8-12FD188D",
       "icon": "./overclock-icons/fire-rate.png",
       "type": "Clean",
       "price": {
@@ -38,7 +38,7 @@
     },
     {
       "name": "EM Refire Booster",
-      "id": "3142B881-47B8010E-4D7799BF-DDC03DBC",
+      "saveId": "3142B881-47B8010E-4D7799BF-DDC03DBC",
       "icon": "./overclock-icons/fire-rate.png",
       "type": "Balanced",
       "price": {
@@ -55,7 +55,7 @@
     },
     {
       "name": "Light-Weight Rounds",
-      "id": "A057B105-4B73E075-8DEF71B4-652869AE",
+      "saveId": "A057B105-4B73E075-8DEF71B4-652869AE",
       "icon": "./overclock-icons/ammo.png",
       "type": "Balanced",
       "price": {
@@ -72,7 +72,7 @@
     },
     {
       "name": "Turret Arc",
-      "id": "EADB423C-44EE2130-4A946DAF-754D3191",
+      "saveId": "EADB423C-44EE2130-4A946DAF-754D3191",
       "icon": "./overclock-icons/electricity.png",
       "type": "Unstable",
       "price": {
@@ -89,7 +89,7 @@
     },
     {
       "name": "Turret EM Discharge",
-      "id": "64AA1B0C-4EB93CB0-B5B777BB-876C7C5E",
+      "saveId": "64AA1B0C-4EB93CB0-B5B777BB-876C7C5E",
       "icon": "./overclock-icons/area-damage.png",
       "type": "Unstable",
       "price": {

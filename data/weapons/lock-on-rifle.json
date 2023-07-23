@@ -4,7 +4,7 @@
   "overclocks": [
     {
       "name": "Eraser",
-      "id": "E7528A53-4CB2FC74-F1F7E585-FAE363CE",
+      "saveId": "E7528A53-4CB2FC74-F1F7E585-FAE363CE",
       "icon": "./overclock-icons/clip-size.png",
       "type": "Clean",
       "price": {
@@ -21,7 +21,7 @@
     },
     {
       "name": "Armor Break Module",
-      "id": "76133DB6-4CDD0DD9-D7516898-AB37E791",
+      "saveId": "76133DB6-4CDD0DD9-D7516898-AB37E791",
       "icon": "./overclock-icons/armor-break.png",
       "type": "Clean",
       "price": {
@@ -38,7 +38,7 @@
     },
     {
       "name": "Explosive Chemical Rounds",
-      "id": "783EA86F-4AF55135-F004BC97-42A8F19D",
+      "saveId": "783EA86F-4AF55135-F004BC97-42A8F19D",
       "icon": "./overclock-icons/explosion.png",
       "type": "Balanced",
       "price": {
@@ -55,7 +55,7 @@
     },
     {
       "name": "Seeker Rounds",
-      "id": "46958B79-4CB316AB-AB6D76AD-D9504155",
+      "saveId": "46958B79-4CB316AB-AB6D76AD-D9504155",
       "icon": "./overclock-icons/aim.png",
       "type": "Balanced",
       "price": {
@@ -72,7 +72,7 @@
     },
     {
       "name": "Executioner",
-      "id": "69ED8488-46E493B0-746CF381-2F771EFD",
+      "saveId": "69ED8488-46E493B0-746CF381-2F771EFD",
       "icon": "./overclock-icons/weakspot.png",
       "type": "Unstable",
       "price": {
@@ -89,7 +89,7 @@
     },
     {
       "name": "Neuro-Lasso",
-      "id": "1FB56B95-42258F4D-E7C0A091-CF07BD40",
+      "saveId": "1FB56B95-42258F4D-E7C0A091-CF07BD40",
       "icon": "./overclock-icons/movement-speed.png",
       "type": "Unstable",
       "price": {
