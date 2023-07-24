@@ -36,6 +36,7 @@ const config: GatsbyConfig = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-json`,
+    `gatsby-plugin-pnpm`,
   ],
 };
 
