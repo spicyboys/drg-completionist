@@ -40,17 +40,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "18"
-      - uses: pnpm/action-setup@v2
-        name: Install pnpm
-        with:
-          version: latest
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
       - name: Install dependencies
-        run: pnpm install
+        run: yarn install
       - name: Build with Gatsby
-        run: pnpm run build
+        run: yarn run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
