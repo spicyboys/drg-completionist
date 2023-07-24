@@ -1,6 +1,6 @@
 import Dexie, { Table } from "dexie";
 
-type OverclockEntry = {
+export type OverclockEntry = {
   weapon: Queries.MinersJson["name"];
   name: Queries.WeaponsJsonOverclocks["name"];
   isForged: boolean;

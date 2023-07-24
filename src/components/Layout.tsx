@@ -16,6 +16,7 @@ import { Link, graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import SettingsModal from "./settings/SettingsModal";
 import InfoTooltip from "./InfoTooltip";
+import AnalyzeModal from "./analyze/AnalyzeModal";
 
 export const FooterContext = createContext<(footer: React.ReactNode) => void>(
   () => {}
@@ -63,6 +64,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   const [footer, setFooter] = useState<React.ReactNode>(null);
   const [showSettings, setShowSettings] = useState(false);
+  const [showAnalyzeModal, setShowAnalyzeModal] = useState(false);
 
   return (
     <ProLayout
@@ -93,7 +95,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <GithubFilled style={{ display: "block" }} />
           </Link>,
 
-          <Button icon={<RobotOutlined />} type="text" size="small">
+          <Button
+            icon={<RobotOutlined />}
+            type="text"
+            size="small"
+            onClick={() => setShowAnalyzeModal(true)}
+          >
             Analyze
           </Button>,
 
@@ -122,6 +129,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <SettingsModal
           open={showSettings}
           hide={() => setShowSettings(false)}
+        />
+
+        <AnalyzeModal
+          open={showAnalyzeModal}
+          hide={() => setShowAnalyzeModal(false)}
         />
 
         {footer && (

@@ -1,9 +1,8 @@
-import type { CreateSchemaCustomizationArgs } from "gatsby";
+import type { CreateSchemaCustomizationArgs, GatsbyNode } from "gatsby";
 
-export async function createSchemaCustomization({
-  actions: { createTypes },
-}: CreateSchemaCustomizationArgs): Promise<void> {
-  const typeDefs = `
+export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] =
+  async ({ actions: { createTypes } }: CreateSchemaCustomizationArgs) => {
+    const typeDefs = `
     type WeaponsJsonOverclocks {
       type: OverclockTypesJson! @link(by: "name")
     }
@@ -12,5 +11,15 @@ export async function createSchemaCustomization({
       weapons: [WeaponsJson!]! @link(by: "name")
     }
   `;
-  createTypes(typeDefs);
-}
+    createTypes(typeDefs);
+  };
+
+export const onCreateWebpackConfig: GatsbyNode["onCreateWebpackConfig"] = ({
+  actions,
+}) => {
+  actions.setWebpackConfig({
+    experiments: {
+      asyncWebAssembly: true,
+    },
+  });
+};

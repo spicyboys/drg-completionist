@@ -20,6 +20,9 @@ dependencies:
   dexie-react-hooks:
     specifier: ^1.1.6
     version: 1.1.6(@types/react@18.2.15)(dexie@3.2.4)(react@18.2.0)
+  drg-save-parser:
+    specifier: ^3.1.0
+    version: 3.1.0
   gatsby:
     specifier: ^5.11.0
     version: 5.11.0(babel-eslint@10.1.0)(react-dom@18.2.0)(react@18.2.0)(typescript@5.1.6)
@@ -5293,6 +5296,10 @@ packages:
   /dotenv@8.6.0:
     resolution: {integrity: sha512-IrPdXQsk2BbzvCBGBOTmmSH5SodmqZNt4ERAZDmW4CT+tL8VtvinqywuANaFu4bOMWki16nqf0e4oC0QIaDr/g==}
     engines: {node: '>=10'}
+    dev: false
+
+  /drg-save-parser@3.1.0:
+    resolution: {integrity: sha512-sZjQ1793h4YM9W+G/Bb/7Yv3EY/3tN0//5hES0CXHvvA3YlfkAMwvWMtn02/BdoZurd4v+fkP6Pd3Yw+o6mMpw==}
     dev: false
 
   /duplexer@0.1.2:
