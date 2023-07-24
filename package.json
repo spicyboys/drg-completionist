@@ -15,6 +15,18 @@
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit"
   },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "dependencies": {
     "@ant-design/icons": "^5.1.4",
     "@ant-design/pro-components": "^2.6.7",
