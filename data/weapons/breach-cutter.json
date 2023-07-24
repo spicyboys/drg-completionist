@@ -1,0 +1,129 @@
+{
+  "name": "Breach Cutter",
+  "outline": "./outlines/breach-cutter.png",
+  "overclocks": [
+    {
+      "name": "Light-Weight Cases",
+      "saveId": "7C0C9496-40A8EFDC-604DDD84-2D1BE8D2",
+      "icon": "./overclock-icons/ammo.png",
+      "type": "Clean",
+      "price": {
+        "credits": 8700,
+        "bismor": 130,
+        "croppa": 100,
+        "jadiz": 80
+      },
+      "effects": {
+        "buffs": ["+3 Max Ammo", "-0.2s Reload Time"],
+        "nerfs": []
+      },
+      "description": "Bring more ammo with you and slam those cases in faster!"
+    },
+    {
+      "name": "Roll Control",
+      "saveId": "A32FDB05-4FE069B9-BEF54486-2040206C",
+      "icon": "./overclock-icons/spinning-linecutter.png",
+      "type": "Clean",
+      "price": {
+        "credits": 8150,
+        "croppa": 95,
+        "magnite": 80,
+        "umanite": 135
+      },
+      "effects": {
+        "buffs": ["+Roll Control"],
+        "nerfs": []
+      },
+      "description": "A few tweaks to the launcher cause it to add roll to the projectile after it is ejected, thus covering a larger area as it travels. Holding down the trigger as the line leaves the gun activates a remote connection which, on the release of the trigger, causes the line to stop rolling, letting you lock its orientation."
+    },
+    {
+      "name": "Stronger Plasma Current",
+      "saveId": "859C7C3D-49A5D3F6-B0EDD6A2-4B311899",
+      "icon": "./overclock-icons/damage.png",
+      "type": "Clean",
+      "price": {
+        "credits": 8650,
+        "croppa": 100,
+        "jadiz": 140,
+        "magnite": 75
+      },
+      "effects": {
+        "buffs": ["+50 Beam DPS", "+0.5s Projectile Lifetime"],
+        "nerfs": []
+      },
+      "description": "By improving the node's efficiency, you can up the raw damage without too much fuss, and it lasts a bit longer, too!"
+    },
+    {
+      "name": "Return to Sender",
+      "saveId": "ED514274-4A48D425-DBFB8DA3-B9C53BF4",
+      "icon": "./overclock-icons/forth-and-back-linecutter.png",
+      "type": "Balanced",
+      "price": {
+        "credits": 7950,
+        "bismor": 140,
+        "enorPearl": 100,
+        "umanite": 80
+      },
+      "effects": {
+        "buffs": ["+Return to Sender"],
+        "nerfs": ["-6 Max Ammo"]
+      },
+      "description": "Holding down the trigger after the line leaves the gun activates a remote connection which, on the release of the trigger, causes the line to change direction and move back towards the gun."
+    },
+    {
+      "name": "High Voltage Crossover",
+      "saveId": "CB84A17F-4D87219D-DA9DBF82-D7917CFC",
+      "icon": "./overclock-icons/electricity.png",
+      "type": "Balanced",
+      "price": {
+        "credits": 8250,
+        "bismor": 120,
+        "enorPearl": 80,
+        "magnite": 100
+      },
+      "effects": {
+        "buffs": ["+High Voltage Crossover"],
+        "nerfs": ["-40% Magazine Size"]
+      },
+      "description": "By passing an electric current through the plasma the beam electrocutes anything it touches, but the bulky hardware limits magazine capacity."
+    },
+    {
+      "name": "Spinning Death",
+      "saveId": "C6FB0A34-420406C3-81310181-1B6E02E0",
+      "icon": "./overclock-icons/special.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 7300,
+        "bismor": 75,
+        "magnite": 95,
+        "umanite": 120
+      },
+      "effects": {
+        "buffs": [
+          "+Spinning Death",
+          "+150% Projectile Lifetime",
+          "+1.5m Beam Width"
+        ],
+        "nerfs": ["-75% Beam DPS", "-35% Max Ammo", "-70% Magazine Size"]
+      },
+      "description": "These modified plasma nodes convert most of the forward momentum into angular momentum, streatching out the beam and continuously doing damage to the immediate area where it was launched. The nodes run for a longer duration but deal less damage every second. Due to the weight, both magazine and total capacity is greatly reduced."
+    },
+    {
+      "name": "Inferno",
+      "saveId": "F812D98E-44847B26-86DAEE82-A5514460",
+      "icon": "./overclock-icons/heat.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 7550,
+        "croppa": 70,
+        "jadiz": 90,
+        "magnite": 135
+      },
+      "effects": {
+        "buffs": ["+Inferno"],
+        "nerfs": ["-175 Beam DPS", "-75% Armor Breaking"]
+      },
+      "description": "Turn your Breach Cutter into a tool of burning death and destruction at the cost of armor breaking. As a bonus, the extreme internal heating keeps the targets burning for an extended period."
+    }
+  ]
+}

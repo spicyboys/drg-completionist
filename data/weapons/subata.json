@@ -1,0 +1,108 @@
+{
+  "name": "Subata 120",
+  "outline": "./outlines/subata.png",
+  "overclocks": [
+    {
+      "name": "Chain Hit",
+      "saveId": "627CABA4-4FFEF77A-AAE335A2-1FED98C3",
+      "icon": "./overclock-icons/ricochet.png",
+      "type": "Clean",
+      "price": {
+        "credits": 7600,
+        "bismor": 65,
+        "croppa": 120,
+        "jadiz": 100
+      },
+      "effects": {
+        "buffs": ["+75% Weakpoint Ricochet Chance"],
+        "nerfs": []
+      },
+      "description": "Any shot that hits a weakspot has a chance to ricochet into a nearby enemy."
+    },
+    {
+      "name": "Homebrew Powder",
+      "saveId": "2F547BD5-423579BC-1756BBB6-2972A6C1",
+      "icon": "./overclock-icons/chance.png",
+      "type": "Clean",
+      "price": {
+        "credits": 7150,
+        "bismor": 135,
+        "croppa": 100,
+        "magnite": 70
+      },
+      "effects": {
+        "buffs": ["+Randomized Damage (80% to 140%)"],
+        "nerfs": []
+      },
+      "description": "More damage on average (+20%), but it's a bit inconsistent."
+    },
+    {
+      "name": "Oversized Magazine",
+      "saveId": "C4203EF1-437649E7-37C2858E-301807AE",
+      "icon": "./overclock-icons/clip-size.png",
+      "type": "Balanced",
+      "price": {
+        "credits": 9000,
+        "croppa": 70,
+        "jadiz": 110,
+        "umanite": 130
+      },
+      "effects": {
+        "buffs": ["+10 Magazine Size"],
+        "nerfs": ["+0.5s Reload Time"]
+      },
+      "description": "Custom magazine that can fit a lot more ammo, but it's a bit unwieldy and takes longer to reload. "
+    },
+    {
+      "name": "Automatic Fire",
+      "saveId": "17E8A828-46730AE5-8B413E96-18FE8DA0",
+      "icon": "./overclock-icons/fire-rate.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 7400,
+        "bismor": 95,
+        "croppa": 65,
+        "enorPearl": 120
+      },
+      "effects": {
+        "buffs": ["+Automatic Fire", "+2 Rate of Fire"],
+        "nerfs": ["+100% Base Spread", "+250% Recoil"]
+      },
+      "description": "Fully automatic action, but watch out for the recoil."
+    },
+    {
+      "name": "Explosive Reload",
+      "saveId": "BEA34929-412AEA68-AF32D597-01915480",
+      "icon": "./overclock-icons/special-magazine.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 8100,
+        "enorPearl": 95,
+        "magnite": 65,
+        "umanite": 125
+      },
+      "effects": {
+        "buffs": ["+Explosive Reload"],
+        "nerfs": ["-50% Max Ammo", "-50% Magazine Size"]
+      },
+      "description": "Micro-explosives that explode inside hit targets when you reload. However, these fancy bullets come at the cost of total ammo and magazine capacity."
+    },
+    {
+      "name": "Tranquilizer Rounds",
+      "saveId": "BA887458-4D8DB277-0D4077A1-A7375799",
+      "icon": "./overclock-icons/stun.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 7150,
+        "croppa": 95,
+        "jadiz": 135,
+        "umanite": 75
+      },
+      "effects": {
+        "buffs": ["+50% Stun Chance", "+50% Slow on Stun-Immune Enemies"],
+        "nerfs": ["-4 Magazine Size", "-25% Rate of Fire"]
+      },
+      "description": "Part-bullet, part-syringe: these rounds are very effective at stunning most enemies."
+    }
+  ]
+}

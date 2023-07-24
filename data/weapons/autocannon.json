@@ -1,0 +1,120 @@
+{
+  "name": "\"Thunderhead\" Heavy Autocannon",
+  "outline": "./outlines/autocannon.png",
+  "overclocks": [
+    {
+      "name": "Composite Drums",
+      "saveId": "6730E201-42A6B9CB-4C39E48A-BBD2F199",
+      "icon": "./overclock-icons/ammo.png",
+      "type": "Clean",
+      "price": {
+        "credits": 7850,
+        "croppa": 135,
+        "enorPearl": 70,
+        "magnite": 105
+      },
+      "effects": {
+        "buffs": ["+110 Max Ammo", "-0.5s Reload Time"],
+        "nerfs": []
+      },
+      "description": "Lighter-weight materials mean you can carry even more ammo!"
+    },
+    {
+      "name": "Splintering Shells",
+      "saveId": "6CFD83CB-493FC613-B987DC82-C8116379",
+      "icon": "./overclock-icons/area.png",
+      "type": "Clean",
+      "price": {
+        "credits": 7300,
+        "croppa": 95,
+        "jadiz": 125,
+        "magnite": 65
+      },
+      "effects": {
+        "buffs": ["+1 Area Damage", "+0.3m Effect Radius"],
+        "nerfs": []
+      },
+      "description": "Specially designed shells splinter into smaller pieces, increasing the splash damage range."
+    },
+    {
+      "name": "Carpet Bomber",
+      "saveId": "A642018C-4E7A6387-7F8ACCA4-0A61B984",
+      "icon": "./overclock-icons/area-damage.png",
+      "type": "Balanced",
+      "price": {
+        "credits": 7350,
+        "croppa": 120,
+        "magnite": 105,
+        "umanite": 70
+      },
+      "effects": {
+        "buffs": ["+35% Area Damage", "+45% Effect Radius"],
+        "nerfs": ["-7 Damage"]
+      },
+      "description": "A few tweaks here and there, and the autocannon can now shoot HE rounds! Direct damage is lower, but the increased splash damage and range lets you saturate an area like no other weapon can."
+    },
+    {
+      "name": "Combat Mobility",
+      "saveId": "14E8D53D-433E481C-08073EAA-63D675CE",
+      "icon": "./overclock-icons/movement-speed.png",
+      "type": "Balanced",
+      "price": {
+        "credits": 7650,
+        "croppa": 70,
+        "jadiz": 120,
+        "magnite": 95
+      },
+      "effects": {
+        "buffs": [
+          "+35% Movement Speed While Using",
+          "-30% Base Spread",
+          "+50% Rate of Fire Scaling",
+          "0.9 Starting Rate of Fire"
+        ],
+        "nerfs": ["-50% Magazine Size"]
+      },
+      "description": "Fancy custom ammo drums improve weapon balance, making it more accurate and easier to handle on the move while the improved feed motor increases the speed with which the max fire rate is reached. All this, however, comes at the cost of magazine capacity."
+    },
+    {
+      "name": "Big Bertha",
+      "saveId": "D10DAA86-437ED33F-76F1FBB2-15E85DEE",
+      "icon": "./overclock-icons/damage.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 8400,
+        "bismor": 125,
+        "croppa": 105,
+        "umanite": 80
+      },
+      "effects": {
+        "buffs": ["+12 Damage", "-30% Base Spread"],
+        "nerfs": [
+          "-50% Magazine Size",
+          "-110 Max Ammo",
+          "-1.5 Top Rate of Fire"
+        ]
+      },
+      "description": "Extensive tweaks give a huge bump in raw damage at the cost of ammo capacity and fire rate."
+    },
+    {
+      "name": "Neurotoxin Payload",
+      "saveId": "944E6532-4D5E1678-D3DBF0A3-4103183B",
+      "icon": "./overclock-icons/nuero.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 8100,
+        "croppa": 100,
+        "jadiz": 75,
+        "magnite": 135
+      },
+      "effects": {
+        "buffs": [
+          "+50% Neurotoxin Payload (50% Chance)",
+          "+0.3m Effect Radius"
+        ],
+        "nerfs": ["-110 Max Ammo", "-6 Area Damage"]
+      },
+      "description": "Channel your inner war criminal by mixing some neurotoxin into the explosive compound. The rounds deal less direct damage and splash damage, but affected bugs move slower and take lots of damage over time."
+    }
+  ]
+}

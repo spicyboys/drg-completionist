@@ -1,7 +1,0 @@
-node_modules
-dist
-build
-coverage
-drg-save-parser
-craco.config.js
-save-parser

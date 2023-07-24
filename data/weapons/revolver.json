@@ -1,0 +1,114 @@
+{
+  "name": "\"Bulldog\" Heavy Revolver",
+  "outline": "./outlines/revolver.png",
+  "overclocks": [
+    {
+      "name": "Chain Hit",
+      "saveId": "3BA38558-4584AE15-656BA691-4E49E5A2",
+      "icon": "./overclock-icons/ricochet.png",
+      "type": "Clean",
+      "price": {
+        "credits": 7300,
+        "enorPearl": 80,
+        "jadiz": 110,
+        "magnite": 120
+      },
+      "effects": {
+        "buffs": ["+75% Weakpoint Ricochet Chance"],
+        "nerfs": []
+      },
+      "description": "Any shot that hits a weakspot has a chance to ricochet into a nearby enemy."
+    },
+    {
+      "name": "Homebrew Powder",
+      "saveId": "F99369CD-497CE238-3B2969AC-F0A842F9",
+      "icon": "./overclock-icons/chance.png",
+      "type": "Balanced",
+      "price": {
+        "credits": 7350,
+        "croppa": 135,
+        "enorPearl": 105,
+        "magnite": 70
+      },
+      "effects": {
+        "buffs": ["+Randomized Damage (75% to 200%)"],
+        "nerfs": []
+      },
+      "description": "More damage on average, but it's a bit inconsistent."
+    },
+    {
+      "name": "Volatile Bullets",
+      "saveId": "BC6C30D1-48B22184-335BB9A4-56E0F32D",
+      "icon": "./overclock-icons/heat.png",
+      "type": "Balanced",
+      "price": {
+        "credits": 7350,
+        "croppa": 130,
+        "jadiz": 110,
+        "magnite": 60
+      },
+      "effects": {
+        "buffs": ["+300% Damage vs. Burning"],
+        "nerfs": ["-10 Damage"]
+      },
+      "description": "Fuel on the fire! These rounds are extremely effective against burning targets, but at the cost of direct damage dealt to unaffected creatures."
+    },
+    {
+      "name": "Six Shooter",
+      "saveId": "39DC37A9-41E8DE38-1C64D08C-6AB419CE",
+      "icon": "./overclock-icons/clip-size.png",
+      "type": "Balanced",
+      "price": {
+        "credits": 7750,
+        "bismor": 120,
+        "croppa": 60,
+        "magnite": 100
+      },
+      "effects": {
+        "buffs": ["+2 Magazine Size", "+6 Max Ammo", "+2 Rate of Fire"],
+        "nerfs": ["+0.5s Reload Time", "+50% Base Spread"]
+      },
+      "description": "An updated casing profile lets you squeeze two more rounds into the cylinder and take a few more rounds with you, but all that filling and drilling has compromised the accuracy of the weapon, and it takes longer to reload."
+    },
+    {
+      "name": "Elephant Rounds",
+      "saveId": "FB943FD5-48045EC0-DFC97BB5-7B264668",
+      "icon": "./overclock-icons/damage.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 7300,
+        "enorPearl": 140,
+        "magnite": 90,
+        "umanite": 65
+      },
+      "effects": {
+        "buffs": ["+100% Damage", "-50% Base Spread"],
+        "nerfs": [
+          "-12 Max Ammo",
+          "-1 Magazine Size",
+          "+0.5s Reload Time",
+          "+150% Recoil",
+          "+71% Spread per Shot"
+        ]
+      },
+      "description": "Heavy tweaking has made it possible to use modified autocannon rounds in the revolver! The damage is crazy, but so is the recoil, and you can't carry very many rounds. Also, only three rounds fit in the gun, and reload time is a bit slower, but base accuracy is improved."
+    },
+    {
+      "name": "Magic Bullets",
+      "saveId": "E7B402DB-44BF437D-829974A4-779B87C0",
+      "icon": "./overclock-icons/ricochet.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 8750,
+        "croppa": 105,
+        "magnite": 130,
+        "umanite": 75
+      },
+      "effects": {
+        "buffs": ["+Magic Bullets", "+8 Max Ammo"],
+        "nerfs": ["-20 Damage"]
+      },
+      "description": "Smaller, bouncy bullets ricochet off hard surfaces, hitting nearby enemies like magic! Overall, the damage of the weapon is reduced, but you can carry a few more rounds due to their compact size."
+    }
+  ]
+}

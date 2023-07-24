@@ -1,25 +1,32 @@
-import { Divider, Grid, Tooltip } from 'antd';
-import { isMobile } from 'react-device-detect';
-import Image from 'components/Image';
-import { Miner } from 'data/miner';
-import { MinerWeapon, WeaponOutlines } from 'data/weapons';
+import React from 'react';
+import { Divider, Tooltip } from 'antd';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import { graphql } from 'gatsby';
 
-const { useBreakpoint } = Grid;
-
-export default function WeaponDivider(props: { weapon: MinerWeapon<Miner> }) {
+export default function WeaponDivider({
+  weapon,
+}: {
+  weapon: Queries.WeaponDividerWeaponFragment;
+}) {
   return (
     <Divider orientation="center">
-      <Tooltip
-        placement={useBreakpoint()['xs'] ? 'top' : 'right'}
-        title={props.weapon}
-        trigger={isMobile ? 'click' : 'hover'}
-      >
-        <Image
-          alt={props.weapon}
-          src={WeaponOutlines[props.weapon]}
-          style={{ height: 75, width: 'auto' }}
+      <Tooltip title={weapon.name}>
+        <GatsbyImage
+          image={weapon.outline?.childImageSharp?.gatsbyImageData!}
+          alt={weapon.name!}
         />
       </Tooltip>
     </Divider>
   );
 }
+
+export const query = graphql`
+  fragment WeaponDividerWeapon on WeaponsJson {
+    name
+    outline {
+      childImageSharp {
+        gatsbyImageData(height: 75)
+      }
+    }
+  }
+`;

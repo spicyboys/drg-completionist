@@ -1,0 +1,114 @@
+{
+  "name": "ArmsKore Coil Gun",
+  "outline": "./outlines/coilgun.png",
+  "overclocks": [
+    {
+      "name": "Re-atomizer",
+      "saveId": "BD245D8C-4AF1D568-7AB8A689-9BCD7C85",
+      "icon": "./overclock-icons/special.png",
+      "type": "Clean",
+      "price": {
+        "credits": 7750,
+        "jadiz": 65,
+        "magnite": 135,
+        "bismor": 90
+      },
+      "effects": {
+        "buffs": ["Spread Target's Debuffs Behind Them"],
+        "nerfs": []
+      },
+      "description": "A charge so powerful it splits and rebinds atoms in targetted enemies, spreading ailments to other targets behind them."
+    },
+    {
+      "name": "Ultra-Magnetic Coils",
+      "saveId": "B51E8426-4B283A82-A37DBF81-D7082779",
+      "icon": "./overclock-icons/duration-hourglass.png",
+      "type": "Clean",
+      "price": {
+        "credits": 7900,
+        "jadiz": 70,
+        "magnite": 110,
+        "enorPearl": 125
+      },
+      "effects": {
+        "buffs": ["0.5m Trail Radius", "+1.0s Trail Duration"],
+        "nerfs": []
+      },
+      "description": "Extremely magnetic coils are able to store more energy. The extra energy increases the radius and duration of the trail left behind by the projectile."
+    },
+    {
+      "name": "Backfeeding Module",
+      "saveId": "65322FF8-48A7E876-B63C7599-207C6B31",
+      "icon": "./overclock-icons/Ammo",
+      "type": "Balanced",
+      "price": {
+        "credits": 8100,
+        "jadiz": 105,
+        "magnite": 70,
+        "bismor": 125
+      },
+      "effects": {
+        "buffs": ["+320 Max Ammo"],
+        "nerfs": ["-20 damage"]
+      },
+      "description": "The electrical flow is reversed by adding a tiny module onto the battery, increasing the amount of power it can store. Unfortunately, the reversed flow leaves less energy to spin the coils, resulting in less damage."
+    },
+    {
+      "name": "The Mole",
+      "saveId": "211F4756-4414E09B-085FFE8D-47D4AB7C",
+      "icon": "./overclock-icons/bullet-penetration.png",
+      "type": "Balanced",
+      "price": {
+        "credits": 8100,
+        "jadiz": 125,
+        "magnite": 70,
+        "enorPearl": 95
+      },
+      "effects": {
+        "buffs": [
+          "Damage Bonus on Each Terrain Pierce",
+          "Greater Penetrability"
+        ],
+        "nerfs": ["-20% Charge Speed"]
+      },
+      "description": "R&D are proud of this one. A bullet that uses the traction from impacting with terrain to generate energy, making it travel further and do more damage. The extra energy required to fire The Mole comes with the cost of charge speed."
+    },
+    {
+      "name": "Hellfire",
+      "saveId": "0AA9DE80-4617F3D5-F48F1395-6AA9327A",
+      "icon": "./overclock-icons/heat.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 8700,
+        "croppa": 125,
+        "jadiz": 100,
+        "enorPearl": 80
+      },
+      "effects": {
+        "buffs": [
+          "Ignites Terrain within 2.0m of Trajectory",
+          "+1.0m Trail Radius"
+        ],
+        "nerfs": ["-200 Ammo", "-30% Charge Speed", "-2.0s Trail Duration"]
+      },
+      "description": "By using a highly volatile injection fuel the trail radius greatly increases, and at a full charge it pushes the temperature changes so high it heats up anything in it. The huge amounts of energy required reduces charge time and battery capacity, while also shortening the trail duration."
+    },
+    {
+      "name": "Triple-Tech Chambers",
+      "saveId": "A11D75A6-4E137CB8-C71057BC-53141C43",
+      "icon": "./overclock-icons/damage.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 8500,
+        "croppa": 125,
+        "magnite": 95,
+        "bismor": 70
+      },
+      "effects": {
+        "buffs": ["Fire Residual Energy up to Two Times"],
+        "nerfs": ["+0.5s Reload Speed", "-30% Charge Speed", "Stronger Recoil"]
+      },
+      "description": "Prototype chamber tech that allows the weapon to fire off residual energy up to two times in quick succession after shooting, at half the cost and damage of a normal shot. The extra shots don't penetrate and the heavy modification takes a toll on the energy flow, reducing charge rate and reload speed."
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "name": "\"Stubby\" Voltaic SMG",
+  "outline": "./outlines/stubby-smg.png",
+  "overclocks": [
+    {
+      "name": "Super-Slim Rounds",
+      "saveId": "4A1CCF13-4A929269-EA5CFF9A-06715BF0",
+      "icon": "./overclock-icons/clip-size.png",
+      "type": "Clean",
+      "price": {
+        "credits": 8550,
+        "bismor": 90,
+        "croppa": 130,
+        "enorPearl": 75
+      },
+      "effects": {
+        "buffs": ["+5 Magazine Size", "-20% Base Spread"],
+        "nerfs": []
+      },
+      "description": "Same power but in a smaller package, giving slightly better accuracy and letting you fit a few more rounds in each magazine."
+    },
+    {
+      "name": "Well-Oiled Machine",
+      "saveId": "449094CE-496B035B-BCB29DB8-12FD188D",
+      "icon": "./overclock-icons/fire-rate.png",
+      "type": "Clean",
+      "price": {
+        "credits": 8400,
+        "croppa": 65,
+        "jadiz": 95,
+        "magnite": 140
+      },
+      "effects": {
+        "buffs": ["+2 Rate of Fire", "-0.2s Reload Time"],
+        "nerfs": []
+      },
+      "description": "When you need a little more sustained damage."
+    },
+    {
+      "name": "EM Refire Booster",
+      "saveId": "3142B881-47B8010E-4D7799BF-DDC03DBC",
+      "icon": "./overclock-icons/fire-rate.png",
+      "type": "Balanced",
+      "price": {
+        "credits": 8300,
+        "bismor": 60,
+        "enorPearl": 90,
+        "jadiz": 135
+      },
+      "effects": {
+        "buffs": ["+2 Electric Damage", "+4 Rate of Fire"],
+        "nerfs": ["+50% Base Spread"]
+      },
+      "description": "Use the electron circuit of the SMG to boost its fire rate and damage, but the accuracy suffers as a result."
+    },
+    {
+      "name": "Light-Weight Rounds",
+      "saveId": "A057B105-4B73E075-8DEF71B4-652869AE",
+      "icon": "./overclock-icons/ammo.png",
+      "type": "Balanced",
+      "price": {
+        "credits": 8700,
+        "bismor": 90,
+        "jadiz": 65,
+        "umanite": 135
+      },
+      "effects": {
+        "buffs": ["+180 Max Ammo"],
+        "nerfs": ["-1 Damage", "-2 Rate of Fire"]
+      },
+      "description": "They don't hit quite as hard and can't handle fast fire rates, but you sure can carry a lot more of them!"
+    },
+    {
+      "name": "Turret Arc",
+      "saveId": "EADB423C-44EE2130-4A946DAF-754D3191",
+      "icon": "./overclock-icons/electricity.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 8350,
+        "bismor": 100,
+        "croppa": 135,
+        "umanite": 60
+      },
+      "effects": {
+        "buffs": ["+Turret Arc (15m Range)"],
+        "nerfs": ["-120 Max Ammo", "-2 Rate of Fire"]
+      },
+      "description": "Use the Gemini turrets as nodes in an electric arc. Zap! The downside is less ammo and a slower rate of fire."
+    },
+    {
+      "name": "Turret EM Discharge",
+      "saveId": "64AA1B0C-4EB93CB0-B5B777BB-876C7C5E",
+      "icon": "./overclock-icons/area-damage.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 8450,
+        "bismor": 80,
+        "enorPearl": 105,
+        "jadiz": 125
+      },
+      "effects": {
+        "buffs": ["+Turret EM Discharge (5.0m Range)"],
+        "nerfs": ["-5 Magazine Size", "-2 Damage"]
+      },
+      "description": "Shoot a turret to turn it into the epicenter of an electric explosion! The bullet modifications unfortunately also lower the direct damage and magazine size."
+    }
+  ]
+}

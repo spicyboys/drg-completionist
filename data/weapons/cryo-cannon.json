@@ -1,0 +1,112 @@
+{
+  "name": "Cryo Cannon",
+  "outline": "./outlines/cryo-cannon.png",
+  "overclocks": [
+    {
+      "name": "Improved Thermal Efficiency",
+      "saveId": "4D0C66CE-430098D9-7AA102A8-ACC06945",
+      "icon": "./overclock-icons/clip-size.png",
+      "type": "Clean",
+      "price": {
+        "credits": 8350,
+        "croppa": 125,
+        "enorPearl": 70,
+        "magnite": 110
+      },
+      "effects": {
+        "buffs": ["+25 Tank Capacity", "-25% Pressure Drop Rate"],
+        "nerfs": []
+      },
+      "description": "Get all you can from your fuel and lose pressure slower from the main chamber."
+    },
+    {
+      "name": "Tuned Cooler",
+      "saveId": "B323DB6A-4088EDC8-818BA886-BE3CC907",
+      "icon": "./overclock-icons/cold.png",
+      "type": "Balanced",
+      "price": {
+        "credits": 8750,
+        "bismor": 110,
+        "magnite": 65,
+        "umanite": 130
+      },
+      "effects": {
+        "buffs": ["+1 Freezing Power", "+0.8 Flow Rate"],
+        "nerfs": ["+0.2s Charge-up Time", "-20% Pressure Gain Rate"]
+      },
+      "description": "Freeze things faster at the cost of a slower pump and turbine."
+    },
+    {
+      "name": "Flow Rate Expansion",
+      "saveId": "B2EAF888-467BEC06-038F1CA3-1A93444B",
+      "icon": "./overclock-icons/duration.png",
+      "type": "Balanced",
+      "price": {
+        "credits": 8900,
+        "enorPearl": 70,
+        "jadiz": 100,
+        "magnite": 125
+      },
+      "effects": {
+        "buffs": ["+170% Pressure Gain Rate", "+0.8 Flow Rate"],
+        "nerfs": ["+125% Pressure Drop Rate"]
+      },
+      "description": "A low-volume, high-pressure chamber paired with a high-power pump increases the flow rate and repressurization speed, but lower the max duration of sustained flow."
+    },
+    {
+      "name": "Ice Spear",
+      "saveId": "37CB18D5-44A0321A-4F5E349B-914CD358",
+      "icon": "./overclock-icons/projectile-speed.png",
+      "type": "Balanced",
+      "price": {
+        "credits": 8950,
+        "enorPearl": 60,
+        "jadiz": 130,
+        "umanite": 110
+      },
+      "effects": {
+        "buffs": ["+Ice Spear"],
+        "nerfs": ["+1.0s Repressurization Delay"]
+      },
+      "description": "Pressing the reload button dumps all the fluid in the chamber directly into the turbine, flash-freezing it and launching an ice projectile. Side effects include an increased recharge delay and, of course, the large amount of fuel used."
+    },
+    {
+      "name": "Ice Storm",
+      "saveId": "5975117B-4E56B697-2A03B197-0FB98E82",
+      "icon": "./overclock-icons/damage.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 7200,
+        "enorPearl": 130,
+        "magnite": 105,
+        "umanite": 75
+      },
+      "effects": {
+        "buffs": ["+100% Damage", "+100% Damage vs. Frozen"],
+        "nerfs": [
+          "-3 Freezing Power",
+          "-75 Tank Capacity",
+          "+50% Pressure Drop Rate"
+        ]
+      },
+      "description": "A change in the fuel mixture (along with some heavy cooler unit tweaks) means a lot more damage -- especially to frozen targets. However, freezing takes longer, and the capacity of the pressure chamber is reduced."
+    },
+    {
+      "name": "Snowball",
+      "saveId": "976FF1C1-47109C0C-F66B83AF-ADBCFECB",
+      "icon": "./overclock-icons/area.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 8400,
+        "jadiz": 90,
+        "magnite": 70,
+        "umanite": 130
+      },
+      "effects": {
+        "buffs": ["+Snowball", "Targets Cannot Warm Up Briefly"],
+        "nerfs": ["-100 Tank Capacity", "+1.0s Repressurization Delay"]
+      },
+      "description": "Pressing the reload button shoots all the cryofuel in the chamber at once as an AoE cryo-projectile. Besides the very large amount of fuel consumed, the operation overloads the whole system, resulting in a much longer delay before regaining pressure, and the modifications restrict the total amount of fuel you can carry."
+    }
+  ]
+}

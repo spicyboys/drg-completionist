@@ -1,0 +1,112 @@
+{
+  "name": "Colette Wave Cooker",
+  "outline": "./outlines/wave-cooker.png",
+  "overclocks": [
+    {
+      "name": "Liquid Cooling System",
+      "saveId": "5940615F-4EA1ADB3-EF310893-0298604B",
+      "icon": "./overclock-icons/cooldown.png",
+      "type": "Clean",
+      "price": {
+        "credits": 7400,
+        "jadiz": 65,
+        "umanite": 95,
+        "bismor": 125
+      },
+      "effects": {
+        "buffs": [
+          "-10% Heat Generation",
+          "+17% Cooling Rate",
+          "-0.2s Overheat Duration"
+        ],
+        "nerfs": []
+      },
+      "description": "Extremely efficient cooling system that helps the weapon generate slightly less heat, makes it cool faster, and will spend less time jammed."
+    },
+    {
+      "name": "Super Focus Lens",
+      "saveId": "ED70A879-4A81C900-ADE42B94-630BA149",
+      "icon": "./overclock-icons/aim.png",
+      "type": "Clean",
+      "price": {
+        "credits": 7550,
+        "croppa": 80,
+        "jadiz": 105,
+        "bismor": 130
+      },
+      "effects": {
+        "buffs": ["+50% Damage to Targets Within 4m"],
+        "nerfs": []
+      },
+      "description": "A lens add-on that focuses the microwaves significantly, enhancing their damage output for up to 4 meters."
+    },
+    {
+      "name": "Diffusion Ray",
+      "saveId": "8BE1D90C-4471E285-8DD30199-B462BA50",
+      "icon": "./overclock-icons/bullet-penetration.png",
+      "type": "Balanced",
+      "price": {
+        "credits": 8300,
+        "croppa": 105,
+        "magnite": 130,
+        "umanite": 65
+      },
+      "effects": {
+        "buffs": ["+3 Penetrations per Target", "-80% Movespeed on hit"],
+        "nerfs": ["-1 Damage"]
+      },
+      "description": "With some mechanical stress to the heat generator the microwaves can penetrate deeper, going through several enemies at once and slowing them down. However, the stress takes its toll on the generator and decreases its damage output slightly."
+    },
+    {
+      "name": "Mega Power Supply",
+      "saveId": "9057E8A3-4AC7CBAB-C63CCBBC-1B9A5036",
+      "icon": "./overclock-icons/ammo.png",
+      "type": "Balanced",
+      "price": {
+        "credits": 8100,
+        "croppa": 95,
+        "magnite": 65,
+        "umanite": 140
+      },
+      "effects": {
+        "buffs": ["+100 Magazine Size", "+3 Rate of Fire"],
+        "nerfs": ["-50% Cooling Rate", "+1.0s Overheat Duration"]
+      },
+      "description": "A bit on the larger side, but with a few modifications to the weapon you can now use the most powerful power source R&D could smuggle back from the black market. The extra energy boosts rate of fire and total ammo at the cost of a lower cooldown and longer unjam duration."
+    },
+    {
+      "name": "Blistering Necrosis",
+      "saveId": "32886448-4DE011AA-8A2E9FAE-8DAD89DF",
+      "icon": "./overclock-icons/weakspot.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 7850,
+        "croppa": 130,
+        "magnite": 100,
+        "bismor": 70
+      },
+      "effects": {
+        "buffs": ["10% Chance to Blister Enemy on Hit"],
+        "nerfs": ["+25% Weapon Heat Generation", "-25% Cooling Rate"]
+      },
+      "description": "Adding an experimental electron tube makes the microwaves generate more heat, boiling the skin of enemies in the shape of large blisters. The blisters bypass armor, enhancing incoming direct damage and hurting the target when popped. The large amounts of heat generated comes at the price of a slower cooldown rate."
+    },
+    {
+      "name": "Gamma Contamination",
+      "saveId": "8729DD5E-497F04DB-FC72DD8A-E31E6CEB",
+      "icon": "./overclock-icons/radioactive.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 8350,
+        "magnite": 80,
+        "enorPearl": 130,
+        "bismor": 100
+      },
+      "effects": {
+        "buffs": ["25% Chance to Irradiate Enemy on Hit"],
+        "nerfs": ["-1 Beam Damage", "-50 Magazine Size", "-50 Shot Width"]
+      },
+      "description": "Installing a lens of uranium glass cranks the radioactivity of your microwaves to 11. Hit targets have a chance to be contaminated with radiation, suffering damage and emitting harmful radioactive waves to nearby enemies. The small size of the lens reduces microwave impact radius and damage, while the amount of power required reduces total ammo."
+    }
+  ]
+}

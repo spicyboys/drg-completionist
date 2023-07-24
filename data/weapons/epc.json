@@ -1,0 +1,115 @@
+{
+  "name": "Experimental Plasma Charger",
+  "outline": "./outlines/epc.png",
+  "overclocks": [
+    {
+      "name": "Energy Rerouting",
+      "saveId": "71208297-45CE86D5-9748D6AC-FA00B782",
+      "icon": "./overclock-icons/charge-up.png",
+      "type": "Clean",
+      "price": {
+        "credits": 7300,
+        "bismor": 130,
+        "jadiz": 100,
+        "umanite": 65
+      },
+      "effects": {
+        "buffs": ["+16 Battery Capacity", "+50% Charge Speed"],
+        "nerfs": []
+      },
+      "description": "A masterwork of engineering that improves charge speed and energy efficiency without affecting overall performance!"
+    },
+    {
+      "name": "Magnetic Cooling Unit",
+      "saveId": "30CCE6F1-45DE117C-418BB886-BF0A539E",
+      "icon": "./overclock-icons/cooldown.png",
+      "type": "Clean",
+      "price": {
+        "credits": 8900,
+        "croppa": 95,
+        "jadiz": 80,
+        "umanite": 125
+      },
+      "effects": {
+        "buffs": ["+0.1 Cooling Rate", "-30% Heat Buildup When Charged"],
+        "nerfs": []
+      },
+      "description": "A high-tech solution to cleanly improve the cooling rate. The result is an increased number of shots that can be fired before overheating, a faster recovery from an overheat, and an extended duration that a full charge can be maintained."
+    },
+    {
+      "name": "Heat Pipe",
+      "saveId": "C418E0A0-4179E65F-0E73D38F-1D639B6E",
+      "icon": "./overclock-icons/fuel.png",
+      "type": "Balanced",
+      "price": {
+        "credits": 7450,
+        "bismor": 60,
+        "jadiz": 95,
+        "umanite": 125
+      },
+      "effects": {
+        "buffs": ["-2 Charged Shot Ammo Use", "+30% Charge Speed"],
+        "nerfs": [
+          "+100% Charged Shot Heat Generation",
+          "+100% Heat Buildup When Charged"
+        ]
+      },
+      "description": "By channeling exhaust heat back into the charge chamber, a shot can be charged faster while using less energy. Unfortunately, this process generates a lot more heat."
+    },
+    {
+      "name": "Heavy Hitter",
+      "saveId": "133EE439-46AE0DCC-A151DD91-E1E98313",
+      "icon": "./overclock-icons/damage.png",
+      "type": "Balanced",
+      "price": {
+        "credits": 8100,
+        "bismor": 140,
+        "magnite": 60,
+        "umanite": 105
+      },
+      "effects": {
+        "buffs": ["+60% Damage"],
+        "nerfs": ["-32 Battery Capacity", "+50% Normal Shot Heat Generation"]
+      },
+      "description": "Some extensive tweaking to how the shots are prepared can increase the pure damage of the weapon, but at the cost of more heat per shot and a reduced battery size."
+    },
+    {
+      "name": "Overcharger",
+      "saveId": "A052BB55-437CFAEC-E6BB7BB3-96411140",
+      "icon": "./overclock-icons/damage.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 7050,
+        "bismor": 120,
+        "croppa": 95,
+        "enorPearl": 60
+      },
+      "effects": {
+        "buffs": [
+          "+50% Charged Damage",
+          "+50% Charged Area Damage",
+          "+20% Charged Effect Radius"
+        ],
+        "nerfs": ["+2 Charged Shot Ammo Use", "-0.1 Cooling Rate"]
+      },
+      "description": "Pushing the EPC to the limit will give you a significant increase in charge shot damage and a boost in the size of the explosion, but at the cost of thermal efficiency and energy consumption."
+    },
+    {
+      "name": "Persistent Plasma",
+      "saveId": "3ED95C16-47810B66-6CF8A2BC-F7F85CDE",
+      "icon": "./overclock-icons/duration-hourglass.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 8150,
+        "croppa": 75,
+        "jadiz": 130,
+        "magnite": 95
+      },
+      "effects": {
+        "buffs": ["+Persistent Plasma"],
+        "nerfs": ["-15 Charged Shot Damage", "-15 Area Damage"]
+      },
+      "description": "By changing how the plasma is layered within the charged projectile, a slow and persistent discharge can be achieved upon impact. However, this does reduce the instant damage done."
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "name": "Zhukov NUK17",
+  "outline": "./outlines/zhukov.png",
+  "overclocks": [
+    {
+      "name": "Minimal Magazines",
+      "saveId": "2B45A098-45025423-C35CFF9C-69CC4CB3",
+      "icon": "./overclock-icons/reload-speed.png",
+      "type": "Clean",
+      "price": {
+        "credits": 8450,
+        "bismor": 130,
+        "croppa": 100,
+        "jadiz": 70
+      },
+      "effects": {
+        "buffs": ["+1 Combined Rate of Fire", "-0.4s Reload Time"],
+        "nerfs": []
+      },
+      "description": "By filling away unnecessary material from the magazines you've made them lighter, and that means they pop out faster when reloading.Also the rounds can move more freely increasing the max rate of fire slightly."
+    },
+    {
+      "name": "Custom Casings",
+      "saveId": "C386A224-46EA451F-2A10209A-D341D7F4",
+      "icon": "./overclock-icons/clip-size.png",
+      "type": "Balanced",
+      "price": {
+        "credits": 7700,
+        "bismor": 95,
+        "croppa": 75,
+        "enorPearl": 140
+      },
+      "effects": {
+        "buffs": ["+30 Combined Clip Size"],
+        "nerfs": ["-2 Combined Rate of Fire"]
+      },
+      "description": "Fit more of these custom rounds in each magazine, but at small reduction in the rate of fire."
+    },
+    {
+      "name": "Cryo Minelets",
+      "saveId": "278DCD43-4AAAEAEA-3EC46D8E-0CA13804",
+      "icon": "./overclock-icons/cold.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 7300,
+        "croppa": 65,
+        "magnite": 135,
+        "umanite": 95
+      },
+      "effects": {
+        "buffs": ["+Cryo Minelets (10 Cold Damage Each)"],
+        "nerfs": ["-1 Damage", "-10 Combined Clip Size"]
+      },
+      "description": "After impacting terrain, these high-tech bullets convert into cryo-minelets that will super-cool anything that comes close. However, they don't last forever and the rounds themselves take more space in the clip and deal less direct damage."
+    },
+    {
+      "name": "Embedded Detonators",
+      "saveId": "7150F3FA-42B263BA-C8FB5598-D0FF9BA0",
+      "icon": "./overclock-icons/special-magazine.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 7550,
+        "jadiz": 135,
+        "magnite": 65,
+        "umanite": 90
+      },
+      "effects": {
+        "buffs": ["+Embedded Detonators"],
+        "nerfs": ["-6 Damage", "-20 Combined Clip Size", "-400 Max Ammo"]
+      },
+      "description": "Special bullets contain micro-explosives that detonate when you reload the weapon at the cost of total ammo, magazine capacity, and direct damage."
+    },
+    {
+      "name": "Gas Recycling",
+      "saveId": "BC2B8B82-4342EC50-0ED0EF85-974585A6",
+      "icon": "./overclock-icons/damage.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 7800,
+        "enorPearl": 70,
+        "jadiz": 105,
+        "magnite": 125
+      },
+      "effects": {
+        "buffs": ["+5 Damage"],
+        "nerfs": [
+          "No Weakpoint Damage Bonus",
+          "+50% Base Spread",
+          "-50% Movement Speed While Using"
+        ]
+      },
+      "description": "Specially hardened bullets combined with rerouting escaping gasses back into the chamber greatly increases the raw damage of the weapon, but makes it more difficult to control and removes any bonus to weakpoint hits."
+    }
+  ]
+}

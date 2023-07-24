@@ -1,0 +1,108 @@
+{
+  "name": "CRSPR Flamethrower",
+  "outline": "./outlines/flamethrower.png",
+  "overclocks": [
+    {
+      "name": "Lighter Tanks",
+      "saveId": "967A05C5-4B5ECF08-2AB3AAA4-3EBA13D6",
+      "icon": "./overclock-icons/ammo.png",
+      "type": "Clean",
+      "price": {
+        "credits": 7500,
+        "bismor": 125,
+        "croppa": 75,
+        "umanite": 90
+      },
+      "effects": {
+        "buffs": ["+75 Max Fuel"],
+        "nerfs": []
+      },
+      "description": "Lighter-weight gear means more fuel and sandwiches."
+    },
+    {
+      "name": "Sticky Additive",
+      "saveId": "831D5F41-447A7EA7-3860BF8D-6CFD0331",
+      "icon": "./overclock-icons/duration-hourglass.png",
+      "type": "Clean",
+      "price": {
+        "credits": 8250,
+        "bismor": 80,
+        "jadiz": 130,
+        "magnite": 100
+      },
+      "effects": {
+        "buffs": ["+1 Damage", "+1.0s Sticky Flame Duration"],
+        "nerfs": []
+      },
+      "description": "Special additive compound extends the Sticky Flame duration and increases direct damage."
+    },
+    {
+      "name": "Compact Feed Valves",
+      "saveId": "438D5871-4A9A58A7-DEA861BE-BF49B42E",
+      "icon": "./overclock-icons/clip-size.png",
+      "type": "Balanced",
+      "price": {
+        "credits": 7350,
+        "bismor": 70,
+        "jadiz": 90,
+        "umanite": 130
+      },
+      "effects": {
+        "buffs": ["+25 Tank Size", "+75 Max Fuel"],
+        "nerfs": ["-2.0m Flame Reach", "+0.2s Reload Time"]
+      },
+      "description": "The smaller mechanism allows for greater tank capacity and more fuel at the cost of reload speed and operational range."
+    },
+    {
+      "name": "Fuel Stream Diffuser",
+      "saveId": "1C5DE819-49B38535-9C7751B1-D90373BD",
+      "icon": "./overclock-icons/distance.png",
+      "type": "Balanced",
+      "price": {
+        "credits": 7100,
+        "bismor": 100,
+        "enorPearl": 80,
+        "jadiz": 125
+      },
+      "effects": {
+        "buffs": ["+5.0m Flame Reach"],
+        "nerfs": ["-1.2 Fuel Flow Rate"]
+      },
+      "description": "Increases operation range, but decreases the fuel flow rate."
+    },
+    {
+      "name": "Face Melter",
+      "saveId": "DDA83164-4B89A6EA-AC7BC590-FFA55275",
+      "icon": "./overclock-icons/damage.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 7000,
+        "croppa": 130,
+        "enorPearl": 70,
+        "magnite": 90
+      },
+      "effects": {
+        "buffs": ["+4 Damage", "+1.8 Fuel Flow Rate"],
+        "nerfs": ["-3.0m Flame Reach", "-15 Tank Size"]
+      },
+      "description": "This crazy bit of tweaking will give a big boost in damage and flow rate, but at the cost of operational range and tank capacity."
+    },
+    {
+      "name": "Sticky Fuel",
+      "saveId": "E33E8CF2-480D968A-699F5E96-193F6BF5",
+      "icon": "./overclock-icons/duration-hourglass.png",
+      "type": "Unstable",
+      "price": {
+        "credits": 8800,
+        "enorPearl": 110,
+        "jadiz": 140,
+        "magnite": 75
+      },
+      "effects": {
+        "buffs": ["+10 Sticky Flame Damage", "+6.0s Sticky Flame Duration"],
+        "nerfs": ["-25 Tank Size", "-75 Max Fuel"]
+      },
+      "description": "Special fuel mixture extends the duration and damage of Sticky Flames, but at the cost of tank capacity and total fuel."
+    }
+  ]
+}
