@@ -78,8 +78,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Build with Gatsby
-        env:
-          PREFIX_PATHS: 'true'
         run: pnpm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
