@@ -1,49 +1,42 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+# DRG Completionist
 
-## 🚀 Quick start
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/spicyboys/drg-completionist?color=darkgreen)](https://github.com/spicyboys/drg-completionist/releases)
+[![GitHub stars](https://img.shields.io/github/stars/spicyboys/drg-completionist)](https://github.com/spicyboys/drg-completionist/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/spicyboys/drg-completionist)](https://github.com/spicyboys/drg-completionist/issues)
+[![GitHub license](https://img.shields.io/github/license/spicyboys/drg-completionist?color=darkred)](https://github.com/spicyboys/drg-completionist/blob/main/LICENSE)
 
-1.  **Create a Gatsby site.**
+_[DRG Completionist](https://drg-completionist.com/)_ is a free, open-source online progress tracker for [Deep Rock Galactic](https://www.deeprockgalactic.com/). It's designed to help keep track of all the different overclocks and cosmetics available for hard-working employees like yourselves, as well as to serve as an handy reference for overclock data.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+_DRG Completionist_ is a fully-fledged [Progressive Web App (PWA)](https://en.wikipedia.org/wiki/Progressive_web_application), which means it will automatically continue to function without an Internet connection and can be installed as a stand-alone app on supported browsers _(e.g., Google Chrome, Microsoft Edge, Safari on iOS)_. The app is also responsively designed for both desktop and mobile use, and it supports using both mouse and touchscreen on nearly any screen size. We recommend installing this app via your browser for the best experience.
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+While progress can be input by clicking and tapping the old-fashioned way, _DRG Completionist_ also utilizes a custom snazzy [WASM](https://en.wikipedia.org/wiki/WebAssembly)-based [save file parsing tool](https://github.com/rob0rt/drg-save-parser/) that locally analyzes your PC's Deep Rock Galactic save file. Simply upload your save file and the Save Parser will automatically input your current progress into each page so you don't have to!
 
-2.  **Start developing.**
+_The Steam save file is located here by default on Windows, but may vary based on your install location:_
 
-    Navigate into your new site’s directory and start it up.
+`C:\Program Files (x86)\Steam\steamapps\common\Deep Rock Galactic\FSD\Saved\SaveGames\{steam_ID}_Player.sav`
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## Upcoming Features
 
-3.  **Open the code and start customizing!**
+- None are planned right now. Please [open an issue](https://github.com/spicyboys/drg-completionist/issues) with any suggestions.
 
-    Your site is now running at http://localhost:8000!
+## Privacy
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+_DRG Completionist_ respects your privacy. The app is entirely serverless and uses the browser's local storage to keep track of your progress. No personally identifying information is ever collected or stored.
 
-4.  **Learn more**
+If you choose to upload your save file, neither the file nor its contents ever leaves your computer. The save file parser is compiled from [Rust](<https://en.wikipedia.org/wiki/Rust_(programming_language)>) into [WASM](https://en.wikipedia.org/wiki/WebAssembly) specifically so it can run completely within your browser. We encourage you to [inspect the source code](https://github.com/spicyboys/drg-save-parser) if you want to see what it's doing.
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+The only tracking this app has are a few fully anonymized Google Analytics tags that allow us to see how (or if) this app is used in the wild. These `gtags` are blocked by default if you use any of the privacy-oriented browser settings or extensions that are widely available today.
 
-## 🚀 Quick start (Netlify)
+## Special Thanks
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+- The folks who maintain the [Deep Rock Galactic Wiki](https://deeprockgalactic.gamepedia.com/Deep_Rock_Galactic_Wiki), which provided all the pictures and data that make this app run
+- [@iAmAsval](https://github.com/iAmAsval) for their work on [FModel](https://github.com/iAmAsval/FModel) that let us move forward with identifying the cosmetic GUIDs in the save file
+- The helpful folks on the _DRG Community Tools_ Discord server, who always helped us out with our questions
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+## Disclaimer
+
+Neither this app nor its developers are associated with Deep Rock Galactic or Ghost Ship Games in any way. _(But we really admire what they do.)_
+
+---
+
+###### README Last Updated: June 15, 2023
