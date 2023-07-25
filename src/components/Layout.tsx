@@ -8,21 +8,30 @@ import {
 import {
   PageContainer,
   ProCard,
-  ProLayout,
   FooterToolbar,
 } from "@ant-design/pro-components";
 import { Button, Tooltip } from "antd";
-import { Link, graphql, useStaticQuery } from "gatsby";
+import { Link, PageProps, graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import SettingsModal from "./settings/SettingsModal";
 import InfoTooltip from "./InfoTooltip";
 import AnalyzeModal from "./analyze/AnalyzeModal";
+import lodable from "@loadable/component";
+
+// Ant Design's Pro Layout uses JS break points instead of CSS break points
+// causing hydration issues, so we use loadable to only load the component
+// on the client. This causes a "white flash" on first page load but it's
+// better than the hydration errors and layout issues.
+const ProLayout = lodable(() => import("@ant-design/pro-layout"));
 
 export const FooterContext = createContext<(footer: React.ReactNode) => void>(
   () => {}
 );
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({
+  children,
+  location,
+}: Omit<PageProps, "children"> & { children: React.ReactNode }) {
   const { allMinersJson: miners } =
     useStaticQuery<Queries.PageLayoutQuery>(graphql`
       query PageLayout {
