@@ -13,7 +13,7 @@ export default function SettingsModal({
 }) {
   return (
     <Modal
-      // title="Settings"
+      title="Settings"
       width={600}
       open={open}
       onCancel={hide}

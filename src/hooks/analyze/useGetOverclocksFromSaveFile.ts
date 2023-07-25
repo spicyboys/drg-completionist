@@ -1,7 +1,7 @@
-import type { SaveFile } from "drg-save-parser";
 import { graphql, useStaticQuery } from "gatsby";
 import { OverclockEntry } from "../db/AppDatabase";
 import { useCallback } from "react";
+import { SaveFile } from "./useParseSaveFile";
 
 export default function useGetOverclocksFromSaveFile(): (
   saveFile: SaveFile

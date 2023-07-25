@@ -1,48 +1,20 @@
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import { LoadingOutlined, UploadOutlined } from "@ant-design/icons";
 import { Button, Col, Divider, Row, Space, Typography, Upload } from "antd";
 import { RcFile } from "antd/lib/upload";
-import { useDB } from "../../hooks/db";
-import useGetOverclocksFromSaveFile from "../../hooks/analyze/useGetOverclocksFromSaveFile";
+import useParseSaveFile from "../../hooks/analyze/useParseSaveFile";
 
 const { Text } = Typography;
 
-export default function AnalyzeModalContent(props: { hide: () => void }) {
+export default function AnalyzeModalContent({ hide }: { hide: () => void }) {
   const [loading, setLoading] = useState(false);
-  const db = useDB();
-
-  const getOverclocksFromSaveFile = useGetOverclocksFromSaveFile();
-  const parseSaveFile = useCallback(
-    async (f: RcFile): Promise<void> => {
-      setLoading(true);
-
-      try {
-        // Parse the save file using the WASM library
-        const parser = await (await import("drg-save-parser")).default;
-        const saveFile = await parser.parse_save_file(f);
-
-        // Extract the relevant information from the parsed save file
-        const overclocks = getOverclocksFromSaveFile(saveFile);
-
-        // Update the store with the new save file data
-        await db.transaction("rw", db.tables, async () => {
-          await db.clearAll();
-          await db.overclocks.bulkAdd(overclocks);
-        });
-
-        // Hide the Analyze Modal on Success
-        props.hide();
-      } catch (e) {
-        console.error(e);
-      } finally {
-        setLoading(false);
-      }
-    },
-    [db, props]
-  );
+  const parseSaveFile = useParseSaveFile();
 
   const upload = (f: RcFile): false => {
-    parseSaveFile(f);
+    setLoading(true);
+    parseSaveFile(f)
+      .then(() => hide())
+      .finally(() => setLoading(false));
     return false;
   };
 
@@ -83,7 +55,7 @@ export default function AnalyzeModalContent(props: { hide: () => void }) {
         <Row>
           <Col span={18} offset={3}>
             <Text type="secondary">
-              <Text strong>{"Note: "}</Text>
+              <Text strong>Note: </Text>
               Bosco analyzes your save file in your browser locally to keep it
               safe from pointy-eared leaf-lovers.
             </Text>

@@ -3,8 +3,16 @@
     [
       "babel-preset-gatsby",
       {
-        "exclude": ["transform-classes"]
+        "targets": {
+          "browsers": [">0.25%", "not dead"]
+        }
       }
-    ]
+    ],
+    "@babel/preset-env"
+  ],
+  "plugins": [
+    "@babel/plugin-transform-class-properties",
+    ["@babel/plugin-transform-private-methods", { "loose": false }],
+    ["@babel/plugin-transform-private-property-in-object", { "loose": false }]
   ]
 }

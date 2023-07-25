@@ -87,13 +87,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <InfoCircleFilled key="InfoCircleFilled" />
           </Tooltip>,
 
-          <Link
-            to="https://github.com/spicyboys/drg-completionist"
+          <a
+            href="https://github.com/spicyboys/drg-completionist"
             style={{ textDecoration: "inherit", color: "inherit" }}
             target="_blank"
           >
             <GithubFilled style={{ display: "block" }} />
-          </Link>,
+          </a>,
 
           <Button
             icon={<RobotOutlined />}

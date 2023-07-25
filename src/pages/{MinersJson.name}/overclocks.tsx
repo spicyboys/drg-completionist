@@ -1,10 +1,9 @@
 import React, { useContext, useEffect } from "react";
 import { graphql, PageProps } from "gatsby";
 import WeaponDivider from "../../components/WeaponDivider";
-import { Row, Tooltip } from "antd";
+import { Row } from "antd";
 import OverclockCard from "../../components/overclocks/OverclockCard";
 import { FooterContext } from "../../components/Layout";
-import { useLiveQuery } from "dexie-react-hooks";
 import useMinerOverclockProgress from "../../hooks/useMinerOverclockProgress";
 import ProgressFooter from "../../components/ProgressFooter";
 

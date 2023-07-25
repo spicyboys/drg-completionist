@@ -4695,10 +4695,10 @@ dotenv@^8.6.0:
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.6.0.tgz#061af664d19f7f4d8fc6e4ff9b584ce237adcb8b"
   integrity sha512-IrPdXQsk2BbzvCBGBOTmmSH5SodmqZNt4ERAZDmW4CT+tL8VtvinqywuANaFu4bOMWki16nqf0e4oC0QIaDr/g==
 
-drg-save-parser@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/drg-save-parser/-/drg-save-parser-3.1.0.tgz#8b82877477249d7d1d97698ead591a0e80bcb4cb"
-  integrity sha512-sZjQ1793h4YM9W+G/Bb/7Yv3EY/3tN0//5hES0CXHvvA3YlfkAMwvWMtn02/BdoZurd4v+fkP6Pd3Yw+o6mMpw==
+drg-save-parser@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/drg-save-parser/-/drg-save-parser-4.0.0.tgz#3dabe3706b6c0148c8dc127e30a82be5375e6d48"
+  integrity sha512-tXHwFhpAYYAe5dmKsdFN4f1ccxkuHIeK3XzYM/xegPjGSoWVOxlvgAK9EO3Tl/Yf2AVtg9bN/b8D+1EXpAUvUw==
 
 duplexer@^0.1.2:
   version "0.1.2"
@@ -11020,3 +11020,8 @@ yurnalist@^2.1.0:
     is-ci "^2.0.0"
     read "^1.0.7"
     strip-ansi "^5.2.0"
+
+zod@^3.21.4:
+  version "3.21.4"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-3.21.4.tgz#10882231d992519f0a10b5dd58a38c9dabbb64db"
+  integrity sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==
