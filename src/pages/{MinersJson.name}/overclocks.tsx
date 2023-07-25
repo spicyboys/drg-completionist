@@ -13,9 +13,7 @@ const Miner = ({
   const progress = useMinerOverclockProgress(miner!);
   const setFooter = useContext(FooterContext);
   useEffect(() => {
-    if (progress === undefined) {
-      setFooter(null);
-    } else {
+    if (progress) {
       setFooter(
         <ProgressFooter
           totalItems={progress.totalOverclocks}
