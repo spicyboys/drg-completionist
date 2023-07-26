@@ -23,7 +23,7 @@ const SaveFileSchema = z.object({
         Skins: z.array(z.string()),
       })
     ),
-    UnlockedPickaxeParts: z.array(z.string()),
+    UnlockedPickaxeParts: z.array(z.string()).optional(),
     CharacterSaves: z.array(
       z.object({
         CharacterSave: z.object({
