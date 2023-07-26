@@ -7,9 +7,9 @@ import { FooterContext } from "../../components/Layout";
 import useMinerOverclockProgress from "../../hooks/useMinerOverclockProgress";
 import ProgressFooter from "../../components/ProgressFooter";
 
-const Miner = ({
+const Overclocks = ({
   data: { minersJson: miner },
-}: PageProps<Queries.MinerQuery>) => {
+}: PageProps<Queries.OverclocksQuery>) => {
   const progress = useMinerOverclockProgress(miner!);
   const setFooter = useContext(FooterContext);
   useEffect(() => {
@@ -45,10 +45,10 @@ const Miner = ({
   );
 };
 
-export default Miner;
+export default Overclocks;
 
 export const query = graphql`
-  query Miner($id: String) {
+  query Overclocks($id: String) {
     minersJson(id: { eq: $id }) {
       name
 

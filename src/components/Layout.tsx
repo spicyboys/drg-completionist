@@ -65,6 +65,10 @@ export default function Layout({
               path: `overclocks`,
               name: "Overclocks",
             },
+            {
+              path: `armor-paint-jobs`,
+              name: "Armor Paint Jobs",
+            },
           ],
         };
       }),

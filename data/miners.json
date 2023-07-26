@@ -13,6 +13,123 @@
       "Subata 120",
       "Experimental Plasma Charger",
       "Colette Wave Cooker"
+    ],
+    "armorPaintJobs": [
+      {
+        "name": "Chocolate Reign",
+        "icon": "./armor-paint-job-icons/driller/chocolate-reign.png",
+        "saveId": "49BE6700-4B99B964-E5C5CABF-B9037BC1"
+      },
+      {
+        "name": "Chalkbuster",
+        "icon": "./armor-paint-job-icons/driller/chalkbuster.png",
+        "saveId": "BC3FC087-4215006A-98DE3684-38311526"
+      },
+      {
+        "name": "Colossus",
+        "icon": "./armor-paint-job-icons/driller/colossus.png",
+        "saveId": "33FF7C7B-4FD36E9A-A457F9BA-E2B0F141"
+      },
+      {
+        "name": "Intricate Carver",
+        "icon": "./armor-paint-job-icons/driller/intricate-carver.png",
+        "saveId": "D7F0FA9A-47C00ABA-BA8A4694-19DA405A"
+      },
+      {
+        "name": "Mud Runner",
+        "icon": "./armor-paint-job-icons/driller/mud-runner.png",
+        "saveId": "529DAEDE-4361C88A-46BB5C88-DB0906AD"
+      },
+      {
+        "name": "Muddy Path",
+        "icon": "./armor-paint-job-icons/driller/muddy-path.png",
+        "saveId": "95437869-4B98A2AD-5DE5CD9B-351D845E"
+      },
+      {
+        "name": "Splattered",
+        "icon": "./armor-paint-job-icons/driller/splattered.png",
+        "saveId": "72B4FA57-4238D789-B1D86CA0-207F3BA2"
+      },
+      {
+        "name": "Chipped Shadow",
+        "icon": "./armor-paint-job-icons/driller/chipped-shadow.png",
+        "saveId": "D984446D-455E73C7-27D23485-02A1F136"
+      },
+      {
+        "name": "Gritty Sandbox",
+        "icon": "./armor-paint-job-icons/driller/gritty-sandbox.png",
+        "saveId": "4894661E-42F6CD2A-FB14449F-25B47DB5"
+      },
+      {
+        "name": "Moss Crawler",
+        "icon": "./armor-paint-job-icons/driller/moss-crawler.png",
+        "saveId": "BD32E606-4F1BA80E-6FCD6F81-00BC6FDC"
+      },
+      {
+        "name": "Speckled Predator",
+        "icon": "./armor-paint-job-icons/driller/speckled-predator.png",
+        "saveId": "24F8A24D-45470CD4-2C3D51B9-E308540F"
+      },
+      {
+        "name": "Boot Camp",
+        "icon": "./armor-paint-job-icons/common/boot-camp.png",
+        "saveId": "C255A076-441AFD46-A09BFB9B-E6EC6D1B"
+      },
+      {
+        "name": "Oxidized Copper",
+        "icon": "./armor-paint-job-icons/driller/oxidized-copper.png",
+        "saveId": "B7F0142A-408E9C67-5A2DA292-F15819E8"
+      },
+      {
+        "name": "Rusty Colossus",
+        "icon": "./armor-paint-job-icons/driller/rusty-colossus.png",
+        "saveId": "68FEE7BE-4D77B8C4-9723F0A0-ED3FC9E1"
+      },
+      {
+        "name": "Dark Neon",
+        "icon": "./armor-paint-job-icons/driller/dark-neon.png",
+        "saveId": "3DB2AE20-40DCD623-D59A5591-5BB639FD"
+      },
+      {
+        "name": "Platinum",
+        "icon": "./armor-paint-job-icons/driller/platinum.png",
+        "saveId": "35031F99-4F36ACFE-EB29E289-B534B1FD"
+      },
+      {
+        "name": "Umber Corrosion",
+        "icon": "./armor-paint-job-icons/driller/umber-corrosion.png",
+        "saveId": "67F6CBA6-41EB84B1-680AE7B0-C17449E7"
+      },
+      {
+        "name": "Monochromatic",
+        "icon": "./armor-paint-job-icons/driller/monochromatic.png",
+        "saveId": "FD5409D6-43C966C8-73C04693-4650D333"
+      },
+      {
+        "name": "Verdigris",
+        "icon": "./armor-paint-job-icons/common/verdigris.png",
+        "saveId": "7FA5DA4D-4C20958F-59A49EAB-D4B988B7"
+      },
+      {
+        "name": "Toxic Defender",
+        "icon": "./armor-paint-job-icons/common/toxic-defender.png",
+        "saveId": "7B905D72-423B70AD-F8ECB1BD-B98A08F6"
+      },
+      {
+        "name": "Regal Aegis",
+        "icon": "./armor-paint-job-icons/common/regal-aegis.png",
+        "saveId": "DB0CCD99-4A4B8380-E2F193A9-4B1D67C4"
+      },
+      {
+        "name": "Black Crag",
+        "icon": "./armor-paint-job-icons/common/black-crag.png",
+        "saveId": "C74025BA-41140BDD-7B28F382-607EE187"
+      },
+      {
+        "name": "Scale Brigade",
+        "icon": "./armor-paint-job-icons/common/scale-brigade.png",
+        "saveId": "24149071-49B39F32-3FDA31A1-0E4E8DE2"
+      }
     ]
   },
   {
@@ -29,6 +146,123 @@
       "Deepcore 40mm PGL",
       "Breach Cutter",
       "Shard Diffractor"
+    ],
+    "armorPaintJobs": [
+      {
+        "name": "Orange Geek",
+        "icon": "./armor-paint-job-icons/engineer/orange-geek.png",
+        "saveId": "86361584-44EEDADB-77438F9C-D9FC8DAC"
+      },
+      {
+        "name": "Dustrunner",
+        "icon": "./armor-paint-job-icons/engineer/dustrunner.png",
+        "saveId": "8AA73BA8-4A543A1B-05DFC78D-0781FCB3"
+      },
+      {
+        "name": "Ember Fury",
+        "icon": "./armor-paint-job-icons/engineer/ember-fury.png",
+        "saveId": "D626C4AE-43C9C9D7-D2CCF697-05C25841"
+      },
+      {
+        "name": "Grunge Buster",
+        "icon": "./armor-paint-job-icons/engineer/grunge-buster.png",
+        "saveId": "F4F10794-4DF650A3-9583398F-8F345374"
+      },
+      {
+        "name": "Splattered",
+        "icon": "./armor-paint-job-icons/engineer/splattered.png",
+        "saveId": "D52088D9-4FA0705F-15A442A0-6BF075B0"
+      },
+      {
+        "name": "Teacher's Pet",
+        "icon": "./armor-paint-job-icons/engineer/teacher-pet.png",
+        "saveId": "C8DD638D-4D315C92-61D393A7-F1CACE4F"
+      },
+      {
+        "name": "Top Dog",
+        "icon": "./armor-paint-job-icons/engineer/top-dog.png",
+        "saveId": "735F7F0B-4547585F-E2F5BCBB-FA50A015"
+      },
+      {
+        "name": "Chipped Shadow",
+        "icon": "./armor-paint-job-icons/engineer/chipped-shadow.png",
+        "saveId": "4F28A86D-4D8FDDC3-FB44BE8B-C142A5B7"
+      },
+      {
+        "name": "Gritty Sandbox",
+        "icon": "./armor-paint-job-icons/engineer/gritty-sandbox.png",
+        "saveId": "E3474FC1-4F02A985-9EED8A85-641A9C79"
+      },
+      {
+        "name": "Moss Crawler",
+        "icon": "./armor-paint-job-icons/engineer/moss-crawler.png",
+        "saveId": "61AD35AF-45472F18-ED11679F-2BB9A53B"
+      },
+      {
+        "name": "Speckled Predator",
+        "icon": "./armor-paint-job-icons/engineer/speckled-predator.png",
+        "saveId": "885229A0-4325DAA7-388324A3-477B46BE"
+      },
+      {
+        "name": "Boot Camp",
+        "icon": "./armor-paint-job-icons/common/boot-camp.png",
+        "saveId": "0603EE0F-4FE0885A-0E48BDAB-C26F8688"
+      },
+      {
+        "name": "Oxidized Copper",
+        "icon": "./armor-paint-job-icons/engineer/oxidized-copper.png",
+        "saveId": "A8EA22A3-42054676-48CE9E9D-BE74BA61"
+      },
+      {
+        "name": "Rusty Colossus",
+        "icon": "./armor-paint-job-icons/engineer/rusty-colossus.png",
+        "saveId": "4E13FFD4-432E999A-8410E583-4CA2FA19"
+      },
+      {
+        "name": "Dark Neon",
+        "icon": "./armor-paint-job-icons/engineer/dark-neon.png",
+        "saveId": "8FB01664-46643469-E2D5E2A2-0DD5726D"
+      },
+      {
+        "name": "Platinum",
+        "icon": "./armor-paint-job-icons/engineer/platinum.png",
+        "saveId": "9C211A5F-40D4217E-B2232F94-7D00B9A0"
+      },
+      {
+        "name": "Umber Corrosion",
+        "icon": "./armor-paint-job-icons/engineer/umber-corrosion.png",
+        "saveId": "20095EF7-470F11F6-0787A5A4-726FDD96"
+      },
+      {
+        "name": "Monochromatic",
+        "icon": "./armor-paint-job-icons/engineer/monochromatic.png",
+        "saveId": "E7FEC580-41DA9474-02A4098B-AB3A9DE1"
+      },
+      {
+        "name": "Verdigris",
+        "icon": "./armor-paint-job-icons/common/verdigris.png",
+        "saveId": "9C5D2062-463B73E9-8AD45C8E-19B495DA"
+      },
+      {
+        "name": "Toxic Defender",
+        "icon": "./armor-paint-job-icons/common/toxic-defender.png",
+        "saveId": "7B905D72-423B70AD-F8ECB1BD-B98A08F6"
+      },
+      {
+        "name": "Regal Aegis",
+        "icon": "./armor-paint-job-icons/common/regal-aegis.png",
+        "saveId": "DB0CCD99-4A4B8380-E2F193A9-4B1D67C4"
+      },
+      {
+        "name": "Black Crag",
+        "icon": "./armor-paint-job-icons/common/black-crag.png",
+        "saveId": "C74025BA-41140BDD-7B28F382-607EE187"
+      },
+      {
+        "name": "Scale Brigade",
+        "icon": "./armor-paint-job-icons/common/scale-brigade.png",
+        "saveId": "24149071-49B39F32-3FDA31A1-0E4E8DE2"
+      }
     ]
   },
   {
@@ -45,6 +279,123 @@
       "\"Bulldog\" Heavy Revolver",
       "BRT7 Burst Fire Gun",
       "ArmsKore Coil Gun"
+    ],
+    "armorPaintJobs": [
+      {
+        "name": "Lime Thunder",
+        "icon": "./armor-paint-job-icons/gunner/lime-thunder.png",
+        "saveId": "A81AE943-4C9E536E-C45FA48D-7A6A98D3"
+      },
+      {
+        "name": "Desert Road",
+        "icon": "./armor-paint-job-icons/gunner/desert-road.png",
+        "saveId": "BAB5A5FD-4505D582-89FCED8D-294C6255"
+      },
+      {
+        "name": "Copperbug",
+        "icon": "./armor-paint-job-icons/gunner/copperbug.png",
+        "saveId": "166F6D63-4BEF42A8-2E7533B1-5A338023"
+      },
+      {
+        "name": "Distant Field",
+        "icon": "./armor-paint-job-icons/gunner/distant-field.png",
+        "saveId": "1DCBC6A5-4D14003E-168D3C9D-4B2E029C"
+      },
+      {
+        "name": "Mercury Bulwark",
+        "icon": "./armor-paint-job-icons/gunner/mercury-bulwark.png",
+        "saveId": "C625F8CC-4B395D8F-CB359687-AAE5A96E"
+      },
+      {
+        "name": "Splattered",
+        "icon": "./armor-paint-job-icons/gunner/splattered.png",
+        "saveId": "C9D19ECC-49C8BB5F-AD721E80-D1293427"
+      },
+      {
+        "name": "Topsoil Defender",
+        "icon": "./armor-paint-job-icons/gunner/topsoil-defender.png",
+        "saveId": "84E8F632-42A238D9-C2B36A88-C37D4DAD"
+      },
+      {
+        "name": "Chipped Shadow",
+        "icon": "./armor-paint-job-icons/gunner/chipped-shadow.png",
+        "saveId": "9F87E0AC-408318FF-9E396A96-7B6A0351"
+      },
+      {
+        "name": "Gritty Sandbox",
+        "icon": "./armor-paint-job-icons/gunner/gritty-sandbox.png",
+        "saveId": "14EC2718-4BC97CF6-39414A8A-3266E6E9"
+      },
+      {
+        "name": "Moss Crawler",
+        "icon": "./armor-paint-job-icons/gunner/moss-crawler.png",
+        "saveId": "AE730CEB-4227FC6B-FBA80194-51D3571F"
+      },
+      {
+        "name": "Speckled Predator",
+        "icon": "./armor-paint-job-icons/gunner/speckled-predator.png",
+        "saveId": "4F8520DD-493A7A86-70CC7788-ACAE47DA"
+      },
+      {
+        "name": "Boot Camp",
+        "icon": "./armor-paint-job-icons/common/boot-camp.png",
+        "saveId": "007486E4-432FF4CC-D46261B4-BF7CCB54"
+      },
+      {
+        "name": "Oxidized Copper",
+        "icon": "./armor-paint-job-icons/gunner/oxidized-copper.png",
+        "saveId": "0DFE4119-43B9CCA7-2464B989-8F481BF3"
+      },
+      {
+        "name": "Rusty Colossus",
+        "icon": "./armor-paint-job-icons/gunner/rusty-colossus.png",
+        "saveId": "6C9A2034-4E821166-37977382-2D3B58BE"
+      },
+      {
+        "name": "Dark Neon",
+        "icon": "./armor-paint-job-icons/gunner/dark-neon.png",
+        "saveId": "BB1283CD-4699A33D-FC0681B0-51080E4B"
+      },
+      {
+        "name": "Platinum",
+        "icon": "./armor-paint-job-icons/gunner/platinum.png",
+        "saveId": "696F1647-45233F71-CA1605A8-88D4DB89"
+      },
+      {
+        "name": "Umber Corrosion",
+        "icon": "./armor-paint-job-icons/gunner/umber-corrosion.png",
+        "saveId": "B3614EB2-41184780-1C15E985-B902C995"
+      },
+      {
+        "name": "Monochromatic",
+        "icon": "./armor-paint-job-icons/gunner/monochromatic.png",
+        "saveId": "F232CE56-4AABD432-29B7B49D-4D7AFF06"
+      },
+      {
+        "name": "Verdigris",
+        "icon": "./armor-paint-job-icons/common/verdigris.png",
+        "saveId": "CAD4196B-4429F5B6-08E3DE80-AFE1D935"
+      },
+      {
+        "name": "Toxic Defender",
+        "icon": "./armor-paint-job-icons/common/toxic-defender.png",
+        "saveId": "7B905D72-423B70AD-F8ECB1BD-B98A08F6"
+      },
+      {
+        "name": "Regal Aegis",
+        "icon": "./armor-paint-job-icons/common/regal-aegis.png",
+        "saveId": "DB0CCD99-4A4B8380-E2F193A9-4B1D67C4"
+      },
+      {
+        "name": "Black Crag",
+        "icon": "./armor-paint-job-icons/common/black-crag.png",
+        "saveId": "C74025BA-41140BDD-7B28F382-607EE187"
+      },
+      {
+        "name": "Scale Brigade",
+        "icon": "./armor-paint-job-icons/common/scale-brigade.png",
+        "saveId": "24149071-49B39F32-3FDA31A1-0E4E8DE2"
+      }
     ]
   },
   {
@@ -61,6 +412,123 @@
       "Jury-Rigged Boomstick",
       "Zhukov NUK17",
       "Nishanka Boltshark X-80"
+    ],
+    "armorPaintJobs": [
+      {
+        "name": "Dusty Winds",
+        "icon": "./armor-paint-job-icons/scout/dusty-winds.png",
+        "saveId": "67736E49-4C44739E-3EC065B6-D3D1A5B9"
+      },
+      {
+        "name": "Azure Draft",
+        "icon": "./armor-paint-job-icons/scout/azure-draft.png",
+        "saveId": "DC3503D1-48157E01-93A23895-51D00D41"
+      },
+      {
+        "name": "Aqua Force",
+        "icon": "./armor-paint-job-icons/scout/aqua-force.png",
+        "saveId": "AFDE0DDB-4A270944-10FB418D-86692254"
+      },
+      {
+        "name": "Dark Stripes",
+        "icon": "./armor-paint-job-icons/scout/dark-stripes.png",
+        "saveId": "5F546BC0-4288FF56-5CFD3D87-ADF5E289"
+      },
+      {
+        "name": "Frigid Tiger",
+        "icon": "./armor-paint-job-icons/scout/frigid-tiger.png",
+        "saveId": "37FB158B-4577AA27-9D11ECAF-474B9A0F"
+      },
+      {
+        "name": "Splattered",
+        "icon": "./armor-paint-job-icons/scout/splattered.png",
+        "saveId": "4E5C4134-41BF79E6-07F86583-05848A39"
+      },
+      {
+        "name": "Subtle Shadow",
+        "icon": "./armor-paint-job-icons/scout/subtle-shadow.png",
+        "saveId": "B748A2C6-47B67F4E-395EBD92-FCC64537"
+      },
+      {
+        "name": "Chipped Shadow",
+        "icon": "./armor-paint-job-icons/scout/chipped-shadow.png",
+        "saveId": "62314F11-4B8E3C6C-CEC342B9-48BD2452"
+      },
+      {
+        "name": "Gritty Sandbox",
+        "icon": "./armor-paint-job-icons/scout/gritty-sandbox.png",
+        "saveId": "C35333A9-4EF76649-1D66E8BB-ACACCBD0"
+      },
+      {
+        "name": "Moss Crawler",
+        "icon": "./armor-paint-job-icons/scout/moss-crawler.png",
+        "saveId": "D45978AC-4B72DEEA-F5F3F986-9C582D82"
+      },
+      {
+        "name": "Speckled Predator",
+        "icon": "./armor-paint-job-icons/scout/speckled-predator.png",
+        "saveId": "44F7DD9A-482E7102-3D08CA86-DA684AE7"
+      },
+      {
+        "name": "Boot Camp",
+        "icon": "./armor-paint-job-icons/common/boot-camp.png",
+        "saveId": "0668B958-4FEA3BB2-00A051B4-04ABA789"
+      },
+      {
+        "name": "Oxidized Copper",
+        "icon": "./armor-paint-job-icons/scout/oxidized-copper.png",
+        "saveId": "5DDF1000-4FD31C74-79361799-539F5C89"
+      },
+      {
+        "name": "Rusty Colossus",
+        "icon": "./armor-paint-job-icons/scout/rusty-colossus.png",
+        "saveId": "49A3FDAB-4CA47059-25DC9B83-A26B11C6"
+      },
+      {
+        "name": "Dark Neon",
+        "icon": "./armor-paint-job-icons/scout/dark-neon.png",
+        "saveId": "E7172BA0-45781A12-3C743DAE-3BCDF338"
+      },
+      {
+        "name": "Platinum",
+        "icon": "./armor-paint-job-icons/scout/platinum.png",
+        "saveId": "B1C2F302-44E94301-DA703A9C-4305FA42"
+      },
+      {
+        "name": "Umber Corrosion",
+        "icon": "./armor-paint-job-icons/scout/umber-corrosion.png",
+        "saveId": "CFB85A30-46BD2251-683E7DA5-6B47BBBE"
+      },
+      {
+        "name": "Monochromatic",
+        "icon": "./armor-paint-job-icons/scout/monochromatic.png",
+        "saveId": "11B6CB39-47CDA6A0-D03A75B3-64EC8F22"
+      },
+      {
+        "name": "Verdigris",
+        "icon": "./armor-paint-job-icons/common/verdigris.png",
+        "saveId": "D2D573AD-4E64D5BA-CCE5B5B7-0BAADF9D"
+      },
+      {
+        "name": "Toxic Defender",
+        "icon": "./armor-paint-job-icons/common/toxic-defender.png",
+        "saveId": "7B905D72-423B70AD-F8ECB1BD-B98A08F6"
+      },
+      {
+        "name": "Regal Aegis",
+        "icon": "./armor-paint-job-icons/common/regal-aegis.png",
+        "saveId": "DB0CCD99-4A4B8380-E2F193A9-4B1D67C4"
+      },
+      {
+        "name": "Black Crag",
+        "icon": "./armor-paint-job-icons/common/black-crag.png",
+        "saveId": "C74025BA-41140BDD-7B28F382-607EE187"
+      },
+      {
+        "name": "Scale Brigade",
+        "icon": "./armor-paint-job-icons/common/scale-brigade.png",
+        "saveId": "24149071-49B39F32-3FDA31A1-0E4E8DE2"
+      }
     ]
   }
 ]
