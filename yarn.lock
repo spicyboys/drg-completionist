@@ -4712,9 +4712,9 @@ dotenv@^8.6.0:
   integrity sha512-IrPdXQsk2BbzvCBGBOTmmSH5SodmqZNt4ERAZDmW4CT+tL8VtvinqywuANaFu4bOMWki16nqf0e4oC0QIaDr/g==
 
 drg-save-parser@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/drg-save-parser/-/drg-save-parser-4.0.0.tgz#3dabe3706b6c0148c8dc127e30a82be5375e6d48"
-  integrity sha512-tXHwFhpAYYAe5dmKsdFN4f1ccxkuHIeK3XzYM/xegPjGSoWVOxlvgAK9EO3Tl/Yf2AVtg9bN/b8D+1EXpAUvUw==
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/drg-save-parser/-/drg-save-parser-4.0.1.tgz#5b9026260c31396bec8a2471dae9f3e9fb59faf1"
+  integrity sha512-hYCupWukkcZEZAXFK6YztNAmyTcayC6UW66YwvRKhe7w179/oWaRhdBRy6VT0A1JaDVyd+YqjrPe11UzA5AI+g==
 
 duplexer@^0.1.2:
   version "0.1.2"
