@@ -11,25 +11,15 @@ export default function ArmorPaintjobIcon({
   return (
     <div
       style={{
-        position: "relative",
         height: 100,
         width: 100,
         margin: "auto",
       }}
     >
-      <div
-        style={{
-          position: "absolute",
-          transform: "translate(-50%,-50%)",
-          top: "50%",
-          left: "50%",
-        }}
-      >
-        <GatsbyImage
-          image={nullthrows(paintJob.icon?.childImageSharp?.gatsbyImageData)}
-          alt={paintJob.name!}
-        />
-      </div>
+      <GatsbyImage
+        image={nullthrows(paintJob.icon?.childImageSharp?.gatsbyImageData)}
+        alt={paintJob.name!}
+      />
     </div>
   );
 }
