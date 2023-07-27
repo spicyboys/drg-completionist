@@ -1,7 +1,8 @@
-import React from 'react';
-import { Divider, Tooltip } from 'antd';
-import { GatsbyImage } from 'gatsby-plugin-image';
-import { graphql } from 'gatsby';
+import React from "react";
+import { Divider, Tooltip } from "antd";
+import { GatsbyImage } from "gatsby-plugin-image";
+import { graphql } from "gatsby";
+import nullthrows from "../utils/nullthrows";
 
 export default function WeaponDivider({
   weapon,
@@ -12,7 +13,7 @@ export default function WeaponDivider({
     <Divider orientation="center">
       <Tooltip title={weapon.name}>
         <GatsbyImage
-          image={weapon.outline?.childImageSharp?.gatsbyImageData!}
+          image={nullthrows(weapon.outline?.childImageSharp?.gatsbyImageData)}
           alt={weapon.name!}
         />
       </Tooltip>

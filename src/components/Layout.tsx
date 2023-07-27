@@ -17,6 +17,7 @@ import SettingsModal from "./settings/SettingsModal";
 import InfoTooltip from "./InfoTooltip";
 import AnalyzeModal from "./analyze/AnalyzeModal";
 import lodable from "@loadable/component";
+import nullthrows from "../utils/nullthrows";
 
 // Ant Design's Pro Layout uses JS break points instead of CSS break points
 // causing hydration issues, so we use loadable to only load the component
@@ -32,8 +33,8 @@ export default function Layout({
   children,
   location,
 }: Omit<PageProps, "children"> & { children: React.ReactNode }) {
-  const { allMinersJson: miners } =
-    useStaticQuery<Queries.PageLayoutQuery>(graphql`
+  const { allMinersJson: miners } = useStaticQuery<Queries.PageLayoutQuery>(
+    graphql`
       query PageLayout {
         allMinersJson {
           nodes {
@@ -46,7 +47,8 @@ export default function Layout({
           }
         }
       }
-    `);
+    `
+  );
 
   const menuItems = useMemo(() => {
     return {
@@ -56,7 +58,7 @@ export default function Layout({
           path: miner.name?.toLowerCase(),
           icon: (
             <GatsbyImage
-              image={miner.icon?.childImageSharp?.gatsbyImageData!}
+              image={nullthrows(miner.icon?.childImageSharp?.gatsbyImageData)}
               alt={miner.name!}
             />
           ),
@@ -93,11 +95,11 @@ export default function Layout({
           height={35}
         />
       }
-      headerRender={(props, dom) => <Link to='/'>{dom}</Link>}
+      headerRender={(props, dom) => <Link to="/">{dom}</Link>}
       actionsRender={(props) => {
         if (props.isMobile) return [];
         return [
-          <Tooltip title={<InfoTooltip />}>
+          <Tooltip title={<InfoTooltip />} key="info">
             <InfoCircleFilled key="InfoCircleFilled" />
           </Tooltip>,
 
@@ -105,6 +107,8 @@ export default function Layout({
             href="https://github.com/spicyboys/drg-completionist"
             style={{ textDecoration: "inherit", color: "inherit" }}
             target="_blank"
+            rel="noreferrer"
+            key="github"
           >
             <GithubFilled style={{ display: "block" }} />
           </a>,
@@ -114,6 +118,7 @@ export default function Layout({
             type="text"
             size="small"
             onClick={() => setShowAnalyzeModal(true)}
+            key="analyze"
           >
             Analyze
           </Button>,
@@ -123,6 +128,7 @@ export default function Layout({
             type="text"
             size="small"
             onClick={() => setShowSettings(true)}
+            key="settings"
           >
             Settings
           </Button>,

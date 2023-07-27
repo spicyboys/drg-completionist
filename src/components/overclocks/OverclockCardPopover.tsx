@@ -5,6 +5,7 @@ import OverclockIcon from "./OverclockIcon";
 import OverclockPrice from "./OverclockPrice";
 import { graphql } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
+import nullthrows from "../../utils/nullthrows";
 
 const { Paragraph, Text, Title } = Typography;
 
@@ -28,10 +29,10 @@ export default function OverclockCardPopover({
               <Tooltip placement="bottomRight" title={weapon.name}>
                 <GatsbyImage
                   alt={weapon.name!}
-                  image={
+                  image={nullthrows(
                     weapon.overclockPopoverWeaponOutline?.childImageSharp
-                      ?.gatsbyImageData!
-                  }
+                      ?.gatsbyImageData
+                  )}
                   style={{ height: 50, width: "auto" }}
                 />
               </Tooltip>

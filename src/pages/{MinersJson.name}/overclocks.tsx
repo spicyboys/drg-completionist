@@ -22,7 +22,7 @@ const Overclocks = ({
         />
       );
     }
-  }, [progress]);
+  }, [progress, setFooter]);
 
   return (
     <>

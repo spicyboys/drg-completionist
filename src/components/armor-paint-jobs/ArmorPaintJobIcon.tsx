@@ -1,6 +1,7 @@
 import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
+import nullthrows from "../../utils/nullthrows";
 
 export default function ArmorPaintjobIcon({
   paintJob,
@@ -25,7 +26,7 @@ export default function ArmorPaintjobIcon({
         }}
       >
         <GatsbyImage
-          image={paintJob.icon?.childImageSharp?.gatsbyImageData!}
+          image={nullthrows(paintJob.icon?.childImageSharp?.gatsbyImageData)}
           alt={paintJob.name!}
         />
       </div>

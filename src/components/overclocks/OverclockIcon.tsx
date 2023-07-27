@@ -1,6 +1,7 @@
 import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
+import nullthrows from "../../utils/nullthrows";
 
 export default function OverclockIcon({
   overclock,
@@ -24,7 +25,9 @@ export default function OverclockIcon({
         }}
       >
         <GatsbyImage
-          image={overclock.type.icon?.childImageSharp?.gatsbyImageData!}
+          image={nullthrows(
+            overclock.type.icon?.childImageSharp?.gatsbyImageData
+          )}
           alt={overclock.type.name!}
           style={{ height: "auto", width: "auto" }}
         />
@@ -39,7 +42,7 @@ export default function OverclockIcon({
           }}
         >
           <GatsbyImage
-            image={overclock.icon?.childImageSharp?.gatsbyImageData!}
+            image={nullthrows(overclock.icon?.childImageSharp?.gatsbyImageData)}
             alt={overclock.name!}
             style={{ height: "auto", width: "auto" }}
           />

@@ -19,7 +19,6 @@ export default function InfoTooltip() {
             width="auto"
             style={{
               marginBottom: 12,
-              // marginTop: -6,
             }}
           />
         </a>

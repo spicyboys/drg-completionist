@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import { Badge, Card, Col, Row } from "antd";
+import { Badge, Card, Col } from "antd";
 import { useDB } from "../../hooks/db";
 import ArmorPaintJobIcon from "./ArmorPaintJobIcon";
 import { graphql } from "gatsby";

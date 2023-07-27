@@ -10,7 +10,7 @@ const ArmorPaintJobs = ({
   const setFooter = useContext(FooterContext);
   useEffect(() => {
     setFooter(null);
-  }, []);
+  }, [setFooter]);
 
   return (
     <Row gutter={[16, 16]}>
