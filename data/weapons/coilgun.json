@@ -39,7 +39,7 @@
     {
       "name": "Backfeeding Module",
       "saveId": "65322FF8-48A7E876-B63C7599-207C6B31",
-      "icon": "./overclock-icons/Ammo",
+      "icon": "./overclock-icons/ammo.png",
       "type": "Balanced",
       "price": {
         "credits": 8100,
