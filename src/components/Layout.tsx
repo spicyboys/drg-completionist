@@ -99,7 +99,12 @@ export default function Layout({
           height={35}
         />
       }
-      headerRender={(props, dom) => <Link to="/">{dom}</Link>}
+      headerTitleRender={(logo, title) => (
+        <Link to="/">
+          {logo}
+          {title}
+        </Link>
+      )}
       actionsRender={(props) => {
         if (props.isMobile) return [];
         return [
