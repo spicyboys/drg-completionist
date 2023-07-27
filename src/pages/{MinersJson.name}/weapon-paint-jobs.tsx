@@ -10,8 +10,6 @@ const WeaponPaintJobs = ({
     allWeaponPaintJobsJson: { nodes: weaponPaintJobs },
   },
 }: PageProps<Queries.WeaponPaintJobsQuery>) => {
-  console.log(miner);
-  console.log(weaponPaintJobs);
   const setFooter = useContext(FooterContext);
   useEffect(() => {
     setFooter(null);
