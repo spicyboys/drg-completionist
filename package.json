@@ -19,7 +19,7 @@
     "@ant-design/icons": "^5.1.4",
     "@ant-design/pro-components": "^2.6.7",
     "@loadable/component": "^5.15.3",
-    "antd": "^5.7.2",
+    "antd": "^5.7.3",
     "babel-preset-gatsby": "^3.11.0",
     "dexie": "^3.2.4",
     "dexie-react-hooks": "^1.1.6",
