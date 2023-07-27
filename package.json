@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.1.4",
-    "@ant-design/pro-components": "^2.6.7",
+    "@ant-design/pro-components": "^2.6.8",
     "@loadable/component": "^5.15.3",
     "antd": "^5.7.3",
     "babel-preset-gatsby": "^3.11.0",
