@@ -71,6 +71,10 @@ export default function Layout({
               path: `armor-paint-jobs`,
               name: "Armor Paint Jobs",
             },
+            {
+              path: `weapon-paint-jobs`,
+              name: "Weapon Paint Jobs",
+            },
           ],
         };
       }),
