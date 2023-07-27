@@ -23,16 +23,24 @@ export default function WeaponPaintJobCard({
       db.weaponPaintjobs.add({
         miner: miner.name,
         name: paintJob.name,
+        isForged: paintJob.source === "MATRIX_CORE" ? false : true,
       });
-    } else {
+    } else if (query.isForged) {
       db.weaponPaintjobs
         .where({
           miner: miner.name,
           name: paintJob.name,
         })
         .delete();
+    } else {
+      db.weaponPaintjobs
+        .where({
+          miner: miner.name,
+          name: paintJob.name,
+        })
+        .modify({ isForged: true });
     }
-  }, [db.weaponPaintjobs, miner.name, paintJob.name, query]);
+  }, [db.weaponPaintjobs, miner.name, paintJob.name, paintJob.source, query]);
 
   return (
     <Col xxl={4} xl={4} lg={8} md={8} sm={8} xs={12} key={paintJob.name}>
@@ -42,8 +50,12 @@ export default function WeaponPaintJobCard({
           onClick={onClick}
           size="small"
           style={{
-            backgroundColor: query ? miner.color : "inherit",
+            backgroundColor: query?.isForged ? miner.color : "inherit",
             transition: "all 0.3s ease",
+            outline:
+              query && !query?.isForged
+                ? `3px solid ${miner.color}`
+                : undefined,
           }}
         >
           <ArmorPaintJobIcon paintJob={paintJob} />
@@ -61,6 +73,7 @@ export const query = graphql`
 
   fragment WeaponPaintJobCardWeaponPaintJob on WeaponPaintJobsJson {
     name
+    source
     ...WeaponPaintJobIconWeaponPaintJob
   }
 `;

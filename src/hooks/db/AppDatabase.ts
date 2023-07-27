@@ -14,6 +14,7 @@ export type ArmorPaintJobEntry = {
 export type WeaponPaintJobEntry = {
   miner: Queries.MinersJson["name"];
   name: Queries.WeaponPaintJobsJson["name"];
+  isForged: boolean;
 };
 
 export class AppDatabase extends Dexie {
