@@ -5,11 +5,13 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
     const typeDefs = `
     type WeaponsJsonOverclocks {
       name: String!
+      saveId: String!
       type: OverclockTypesJson! @link(by: "name")
     }
 
     type WeaponsJson implements Node {
       name: String!
+      saveId: String!
       overclocks: [WeaponsJsonOverclocks!]!
     }
 
@@ -18,6 +20,7 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
       color: String!
       contrastColor: String!
       name: String!
+      saveId: String!
     }
   `;
     createTypes(typeDefs);

@@ -63,7 +63,7 @@ export default function OverclockCard({
           transition: "all 0.3s",
         }}
         style={
-          query && !query?.isForged
+          query && !query.isForged
             ? {
                 outline: `3px solid ${miner.color}`,
               }

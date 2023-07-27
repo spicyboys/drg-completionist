@@ -41,14 +41,14 @@ export default function useGetOverclocksFromSaveFile(): (
       const acquiredOverclocks: OverclockEntry[] = [];
       for (const miner of miners) {
         for (const weapon of miner.weapons) {
-          for (const overclock of weapon.overclocks!) {
-            if (forgedSchematics?.includes(overclock!.saveId!)) {
+          for (const overclock of weapon.overclocks) {
+            if (forgedSchematics?.includes(overclock.saveId)) {
               acquiredOverclocks.push({
                 weapon: weapon.name,
                 name: overclock.name,
                 isForged: true,
               });
-            } else if (unforgedSchematics?.includes(overclock!.saveId!)) {
+            } else if (unforgedSchematics?.includes(overclock.saveId)) {
               acquiredOverclocks.push({
                 weapon: weapon.name,
                 name: overclock.name,
