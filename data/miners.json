@@ -130,6 +130,88 @@
         "icon": "./armor-paint-job-icons/common/scale-brigade.png",
         "saveId": "24149071-49B39F32-3FDA31A1-0E4E8DE2"
       }
+    ],
+    "weaponPaintJobs": [
+      {
+        "weaponPaintJob": "Beyond the Circuit",
+        "saveId": "0A63FD78-4819176E-FA7179AE-38892D6E"
+      },
+      {
+        "weaponPaintJob": "Dark Descent",
+        "saveId": "3D931E27-43C17A02-EA6DA6B4-F25177EF"
+      },
+      {
+        "weaponPaintJob": "Desert Ranger",
+        "saveId": "FF880AE9-46215F1C-27C1059B-2E741EE9"
+      },
+      {
+        "weaponPaintJob": "Digital Danger",
+        "saveId": "189E09DD-4B8577A9-C68D598D-D1CF71F5"
+      },
+      {
+        "weaponPaintJob": "Ghostly Pale",
+        "saveId": "41804A7C-4437B5FA-DC825783-F30B68BC"
+      },
+      {
+        "weaponPaintJob": "Jungle Raid",
+        "saveId": "0F1CAFF1-410E2FFA-C3E5ABBB-F52FFAE1"
+      },
+      {
+        "weaponPaintJob": "Metallic Vintage",
+        "saveId": "6B65FA54-4530C1B5-3FFC14B0-2B4FB4A6"
+      },
+      {
+        "weaponPaintJob": "Mint Assault",
+        "saveId": "90D88C26-4BFAFBC6-EA7652A4-435B762F"
+      },
+      {
+        "weaponPaintJob": "Primal Blood",
+        "saveId": "AC2C5888-4611AE3B-03A90181-08D4A965"
+      },
+      {
+        "weaponPaintJob": "Tool of Destruction",
+        "saveId": "9E068A44-46612E1A-28A1D7A4-DA5BB9BF"
+      },
+      {
+        "weaponPaintJob": "Trusty Rusty",
+        "saveId": "CF6B94C2-45670E13-2936FA8B-4150CA75"
+      },
+      {
+        "weaponPaintJob": "Warmonger",
+        "saveId": "A68116E4-4484EAA2-DF5BE7B2-DADA7089"
+      },
+      {
+        "weaponPaintJob": "Copper Patinate",
+        "saveId": "DDEA3E23-4C8269BE-8E4FA595-0A89E56E"
+      },
+      {
+        "weaponPaintJob": "Deep Sea Defender",
+        "saveId": "DF4FF7F6-4F359661-C79855AC-4382533A"
+      },
+      {
+        "weaponPaintJob": "Moss Crawler",
+        "saveId": "1A76C685-4C1B9423-BB57D099-C482B7C4"
+      },
+      {
+        "weaponPaintJob": "Scratched Metal",
+        "saveId": "A27C9ACB-497E4E6E-277C18A9-FBE40A55"
+      },
+      {
+        "weaponPaintJob": "Bootcamp",
+        "saveId": "B3B65073-470EF5D4-910685B8-4E79F32D"
+      },
+      {
+        "weaponPaintJob": "Fiery",
+        "saveId": "855EFF18-48830ACE-DC4BE9A5-95E34989"
+      },
+      {
+        "weaponPaintJob": "Predator",
+        "saveId": "CC55F088-478E52A9-27A4BEB8-04A4E9E9"
+      },
+      {
+        "weaponPaintJob": "Salt Crystal",
+        "saveId": "BCE54B63-4BCF6621-5CB30CA7-2DDEBE60"
+      }
     ]
   },
   {
@@ -262,6 +344,88 @@
         "name": "Scale Brigade",
         "icon": "./armor-paint-job-icons/common/scale-brigade.png",
         "saveId": "24149071-49B39F32-3FDA31A1-0E4E8DE2"
+      }
+    ],
+    "weaponPaintJobs": [
+      {
+        "weaponPaintJob": "Beyond the Circuit",
+        "saveId": "9F44106D-4B66DD24-C5BB749A-45CB7AF2"
+      },
+      {
+        "weaponPaintJob": "Dark Descent",
+        "saveId": "DA96BC97-4045C9DB-D85AFA86-67B2A469"
+      },
+      {
+        "weaponPaintJob": "Desert Ranger",
+        "saveId": "8BF35A15-45589BBE-60512E95-A758FB57"
+      },
+      {
+        "weaponPaintJob": "Digital Danger",
+        "saveId": "CB3766AD-442941DC-D5EAD58A-21D8DB50"
+      },
+      {
+        "weaponPaintJob": "Ghostly Pale",
+        "saveId": "55B70085-41ACEE44-6F4848AD-52236636"
+      },
+      {
+        "weaponPaintJob": "Jungle Raid",
+        "saveId": "DCF61819-4004835B-DF29858A-262808C1"
+      },
+      {
+        "weaponPaintJob": "Metallic Vintage",
+        "saveId": "A4BCE833-4F41D72D-BAA317A1-3B03E991"
+      },
+      {
+        "weaponPaintJob": "Mint Assault",
+        "saveId": "94F23DD7-44AC282A-AD42C987-C9E3B0A0"
+      },
+      {
+        "weaponPaintJob": "Primal Blood",
+        "saveId": "F8763D2E-4502A116-E4ECB78C-79E33E0A"
+      },
+      {
+        "weaponPaintJob": "Tool of Destruction",
+        "saveId": "1B4BD40F-47523DCA-E7B62C93-EF963E1F"
+      },
+      {
+        "weaponPaintJob": "Trusty Rusty",
+        "saveId": "0C20802A-4E0ADB16-B6115487-48A606DD"
+      },
+      {
+        "weaponPaintJob": "Warmonger",
+        "saveId": "0C2C5BD1-4A5C862F-54B35E8F-8FC711CB"
+      },
+      {
+        "weaponPaintJob": "Copper Patinate",
+        "saveId": "3AB00F36-4495267A-C8BF9EBB-AE895924"
+      },
+      {
+        "weaponPaintJob": "Deep Sea Defender",
+        "saveId": "6F385436-46ABBF8E-77BC2093-7605F936"
+      },
+      {
+        "weaponPaintJob": "Moss Crawler",
+        "saveId": "98EFFE0C-4BB53F74-777F11A3-4287FE9E"
+      },
+      {
+        "weaponPaintJob": "Scratched Metal",
+        "saveId": "7351BCD0-4F9867DA-08F15193-AAAB41D7"
+      },
+      {
+        "weaponPaintJob": "Bootcamp",
+        "saveId": "6D3A9DB0-4106B15B-E85C88AA-E1235092"
+      },
+      {
+        "weaponPaintJob": "Fiery",
+        "saveId": "9237341C-42DC2DD4-A03890B0-192E3908"
+      },
+      {
+        "weaponPaintJob": "Predator",
+        "saveId": "A494023C-45532E82-34F7F99F-50B31A75"
+      },
+      {
+        "weaponPaintJob": "Salt Crystal",
+        "saveId": "6BE46F7C-46FE5624-06C777B9-58A81EDE"
       }
     ]
   },
@@ -396,6 +560,88 @@
         "icon": "./armor-paint-job-icons/common/scale-brigade.png",
         "saveId": "24149071-49B39F32-3FDA31A1-0E4E8DE2"
       }
+    ],
+    "weaponPaintJobs": [
+      {
+        "weaponPaintJob": "Beyond the Circuit",
+        "saveId": "D16CA418-4E91DB06-96837EA9-AAF5B29C"
+      },
+      {
+        "weaponPaintJob": "Dark Descent",
+        "saveId": "02CFED40-494DC170-ABA2D9A6-2BC7B9BF"
+      },
+      {
+        "weaponPaintJob": "Desert Ranger",
+        "saveId": "B3E9247C-4A915869-22448B98-7A94288B"
+      },
+      {
+        "weaponPaintJob": "Digital Danger",
+        "saveId": "11F216CB-4ACB71D1-66CA0BAF-340FE954"
+      },
+      {
+        "weaponPaintJob": "Ghostly Pale",
+        "saveId": "2DC529AA-44C1E3C8-08F54AA6-5DD95453"
+      },
+      {
+        "weaponPaintJob": "Jungle Raid",
+        "saveId": "F1A7962C-40D48DA5-C10EC384-CF7A923E"
+      },
+      {
+        "weaponPaintJob": "Metallic Vintage",
+        "saveId": "DB3E4300-427C2CCE-83C0739E-FB43E3F5"
+      },
+      {
+        "weaponPaintJob": "Mint Assault",
+        "saveId": "6E558F89-4AE2B07F-B6E1BA82-DC3FB632"
+      },
+      {
+        "weaponPaintJob": "Primal Blood",
+        "saveId": "A3D11EA6-46CDB642-E7B04F90-A4A2142B"
+      },
+      {
+        "weaponPaintJob": "Tool of Destruction",
+        "saveId": "9D29A92C-49B5E7B4-DAD5FE87-DAC53983"
+      },
+      {
+        "weaponPaintJob": "Trusty Rusty",
+        "saveId": "91E1DA7E-4EF53AC6-4493BC94-735E856C"
+      },
+      {
+        "weaponPaintJob": "Warmonger",
+        "saveId": "F6C580E8-4FA493E7-AD7FC9BA-5FCF8A18"
+      },
+      {
+        "weaponPaintJob": "Copper Patinate",
+        "saveId": "8746B683-4D30925E-20A352A9-3E0F116C"
+      },
+      {
+        "weaponPaintJob": "Deep Sea Defender",
+        "saveId": "FD2A0C1B-48E27EE8-14C5B0BD-3DEB5C88"
+      },
+      {
+        "weaponPaintJob": "Moss Crawler",
+        "saveId": "B0A79B97-4EFA647E-E90FC79A-E6910AD6"
+      },
+      {
+        "weaponPaintJob": "Scratched Metal",
+        "saveId": "D92D8837-43D7765D-C5A8E9A6-74FD03E0"
+      },
+      {
+        "weaponPaintJob": "Bootcamp",
+        "saveId": "6633BABE-46055259-EAFFED8F-2D42B586"
+      },
+      {
+        "weaponPaintJob": "Fiery",
+        "saveId": "638B1C2E-419F2647-66695B9B-81C8E07B"
+      },
+      {
+        "weaponPaintJob": "Predator",
+        "saveId": "B7A7AF22-4E86ACCF-0EB6ABAC-72B02910"
+      },
+      {
+        "weaponPaintJob": "Salt Crystal",
+        "saveId": "B69D6611-4762CC85-85DF1B9C-2FF42D5C"
+      }
     ]
   },
   {
@@ -528,6 +774,88 @@
         "name": "Scale Brigade",
         "icon": "./armor-paint-job-icons/common/scale-brigade.png",
         "saveId": "24149071-49B39F32-3FDA31A1-0E4E8DE2"
+      }
+    ],
+    "weaponPaintJobs": [
+      {
+        "weaponPaintJob": "Beyond the Circuit",
+        "saveId": "FF71A700-4A0A0E5D-7488EA99-9F971622"
+      },
+      {
+        "weaponPaintJob": "Dark Descent",
+        "saveId": "EE513642-4718D24B-E6C0AA8D-A454A4ED"
+      },
+      {
+        "weaponPaintJob": "Desert Ranger",
+        "saveId": "4AB8F530-4663C1B6-7F7A819A-D9044CB2"
+      },
+      {
+        "weaponPaintJob": "Digital Danger",
+        "saveId": "977D75E3-4FD5D119-87D61298-38E7FE60"
+      },
+      {
+        "weaponPaintJob": "Ghostly Pale",
+        "saveId": "341FB3AE-47AB67C4-1D17A3B1-80422001"
+      },
+      {
+        "weaponPaintJob": "Jungle Raid",
+        "saveId": "7E94DD03-49317E24-E45D468A-FDDEC5E1"
+      },
+      {
+        "weaponPaintJob": "Metallic Vintage",
+        "saveId": "9782B269-4A7C7C1E-A85954AC-08A5DD66"
+      },
+      {
+        "weaponPaintJob": "Mint Assault",
+        "saveId": "7586D50A-4D9DBEEB-A8FD749F-B30A1AF0"
+      },
+      {
+        "weaponPaintJob": "Primal Blood",
+        "saveId": "BE617283-45C13313-515AEBB4-A851206B"
+      },
+      {
+        "weaponPaintJob": "Tool of Destruction",
+        "saveId": "675D00B6-4B4048F9-8E5DECB4-D9C5ED65"
+      },
+      {
+        "weaponPaintJob": "Trusty Rusty",
+        "saveId": "115D1278-44FC2EF5-F4A3AF94-6882EECE"
+      },
+      {
+        "weaponPaintJob": "Warmonger",
+        "saveId": "877332EC-44724E5A-D762CF82-16CFEED8"
+      },
+      {
+        "weaponPaintJob": "Copper Patinate",
+        "saveId": "84F37967-497316A2-6302909A-46AACB7E"
+      },
+      {
+        "weaponPaintJob": "Deep Sea Defender",
+        "saveId": "E40CB800-4DD4608D-5543FCA2-79E76EDE"
+      },
+      {
+        "weaponPaintJob": "Moss Crawler",
+        "saveId": "22CBA861-44296F94-F9637EA2-10DFE90C"
+      },
+      {
+        "weaponPaintJob": "Scratched Metal",
+        "saveId": "762E1E8A-4CC3BC87-859354A7-B6D898E4"
+      },
+      {
+        "weaponPaintJob": "Bootcamp",
+        "saveId": "32502C84-409F7179-F1501587-2E157D09"
+      },
+      {
+        "weaponPaintJob": "Fiery",
+        "saveId": "4DAEAC95-4A54FDA8-49CBC8B3-6A88D255"
+      },
+      {
+        "weaponPaintJob": "Predator",
+        "saveId": "3B14375E-4CE0E58D-850F53A8-C80CFE62"
+      },
+      {
+        "weaponPaintJob": "Salt Crystal",
+        "saveId": "D33F3CE7-457066D2-A5A8BAAC-EFC04DC2"
       }
     ]
   }

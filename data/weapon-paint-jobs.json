@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Beyond the Circuit",
+    "icon": "./weapon-paint-job-icons/beyond-the-circuit.png",
+    "saveId": "19AB26D8-43E9BEA2-1D51AF84-FDE17F9D"
+  },
+  {
+    "name": "Dark Descent",
+    "icon": "./weapon-paint-job-icons/dark-descent.png",
+    "saveId": "8044BDEA-4A935E1F-4BBE698E-357CED0E"
+  },
+  {
+    "name": "Desert Ranger",
+    "icon": "./weapon-paint-job-icons/desert-ranger.png",
+    "saveId": "B59357BA-402C2866-7877FBA2-6CA999C7"
+  },
+  {
+    "name": "Digital Danger",
+    "icon": "./weapon-paint-job-icons/digital-danger.png",
+    "saveId": "F7A76674-45186C76-C9A56B9E-12F3EFBE"
+  },
+  {
+    "name": "Ghostly Pale",
+    "icon": "./weapon-paint-job-icons/ghostly-pale.png",
+    "saveId": "BA387AA1-494A2F61-67BE928F-08823203"
+  },
+  {
+    "name": "Jungle Raid",
+    "icon": "./weapon-paint-job-icons/jungle-raid.png",
+    "saveId": "72D35719-4D5CB3B4-A7514C95-E573C480"
+  },
+  {
+    "name": "Metallic Vintage",
+    "icon": "./weapon-paint-job-icons/metallic-vintage.png",
+    "saveId": "A44480E8-41127DEC-CBFEACA8-4F8ECD00"
+  },
+  {
+    "name": "Mint Assault",
+    "icon": "./weapon-paint-job-icons/mint-assault.png",
+    "saveId": "809FB051-4BFB24D6-1805D2B3-6EB08696"
+  },
+  {
+    "name": "Primal Blood",
+    "icon": "./weapon-paint-job-icons/primal-blood.png",
+    "saveId": "72A3D26F-4DAAB4F8-131832AB-4B78E983"
+  },
+  {
+    "name": "Tool of Destruction",
+    "icon": "./weapon-paint-job-icons/tool-of-destruction.png",
+    "saveId": "88784D0E-4477E8AC-97FEAB93-0144AA91"
+  },
+  {
+    "name": "Trusty Rusty",
+    "icon": "./weapon-paint-job-icons/trusty-rusty.png",
+    "saveId": "4FFB9633-4830CCAE-D089B7B0-90B69993"
+  },
+  {
+    "name": "Warmonger",
+    "icon": "./weapon-paint-job-icons/warmonger.png",
+    "saveId": "D5E6B826-465EA401-53AD7C97-E7946C9A"
+  },
+  {
+    "name": "Copper Patinate",
+    "icon": "./weapon-paint-job-icons/copper-patinate.png",
+    "saveId": "04C31F4A-4EDDE3A8-33713E94-B48BBEDC"
+  },
+  {
+    "name": "Deep Sea Defender",
+    "icon": "./weapon-paint-job-icons/deep-sea-defender.png",
+    "saveId": "E0CBA913-4B8D0945-D5D00581-EC80E3AF"
+  },
+  {
+    "name": "Moss Crawler",
+    "icon": "./weapon-paint-job-icons/moss-crawler.png",
+    "saveId": "F9CFA1CE-4BC2BE7F-AC089E8E-34E06C75"
+  },
+  {
+    "name": "Scratched Metal",
+    "icon": "./weapon-paint-job-icons/scratched-metal.png",
+    "saveId": "46B117AB-48030DAA-EF0692A1-358818B2"
+  },
+  {
+    "name": "Bootcamp",
+    "icon": "./weapon-paint-job-icons/boot-camp.png",
+    "saveId": "6D8634A1-4CCD296E-0477A38A-A7C3BDDD"
+  },
+  {
+    "name": "Fiery",
+    "icon": "./weapon-paint-job-icons/fiery.png",
+    "saveId": "153B17A6-49519BA7-4F1259AB-EE31CABC"
+  },
+  {
+    "name": "Predator",
+    "icon": "./weapon-paint-job-icons/predator.png",
+    "saveId": "0685E1F5-476CD95A-64B3328E-B9B0874C"
+  },
+  {
+    "name": "Salt Crystal",
+    "icon": "./weapon-paint-job-icons/salt-crystal.png",
+    "saveId": "23CD0259-4C1BDAC3-10F05FBB-375EF157"
+  }
+]

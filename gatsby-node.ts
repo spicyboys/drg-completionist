@@ -21,6 +21,12 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
       contrastColor: String!
       name: String!
       saveId: String!
+      weaponPaintJobs: [MinersJsonWeaponPaintJobs!]!
+    }
+
+    type MinersJsonWeaponPaintJobs {
+      weaponPaintJob: WeaponPaintJobsJson! @link(by: "name")
+      saveId: String!
     }
   `;
     createTypes(typeDefs);
