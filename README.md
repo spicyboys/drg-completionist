@@ -23,9 +23,7 @@ _The Steam save file is located here by default on Windows, but may vary based o
 
 _DRG Completionist_ respects your privacy. The app is entirely serverless and uses the browser's local storage to keep track of your progress. No personally identifying information is ever collected or stored.
 
-If you choose to upload your save file, neither the file nor its contents ever leaves your computer. The save file parser is compiled from [Rust](<https://en.wikipedia.org/wiki/Rust_(programming_language)>) into [WASM](https://en.wikipedia.org/wiki/WebAssembly) specifically so it can run completely within your browser. We encourage you to [inspect the source code](https://github.com/spicyboys/drg-save-parser) if you want to see what it's doing.
-
-The only tracking this app has are a few fully anonymized Google Analytics tags that allow us to see how (or if) this app is used in the wild. These `gtags` are blocked by default if you use any of the privacy-oriented browser settings or extensions that are widely available today.
+If you choose to upload your save file, neither the file nor its contents ever leaves your computer. The save file parser is compiled from [Rust](<https://en.wikipedia.org/wiki/Rust_(programming_language)>) into [WASM](https://en.wikipedia.org/wiki/WebAssembly) specifically so it can run completely within your browser. We encourage you to [inspect the source code](https://github.com/rob0rt/drg-save-parser) if you want to see what it's doing.
 
 ## Special Thanks
 
