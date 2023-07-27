@@ -14,7 +14,7 @@ export default function WeaponDivider({
       <Tooltip title={weapon.name}>
         <GatsbyImage
           image={nullthrows(weapon.outline?.childImageSharp?.gatsbyImageData)}
-          alt={weapon.name!}
+          alt={weapon.name}
         />
       </Tooltip>
     </Divider>

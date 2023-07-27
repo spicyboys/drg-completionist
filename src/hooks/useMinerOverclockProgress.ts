@@ -15,7 +15,7 @@ export default function useMinerOverclockProgress(
   const acquiredOverclocks = useLiveQuery(() =>
     db.overclocks
       .where("weapon")
-      .anyOf(miner?.weapons?.map((weapon) => weapon.name!)!)
+      .anyOf(miner.weapons.map((weapon) => weapon.name!))
       .toArray()
   );
 
@@ -23,8 +23,8 @@ export default function useMinerOverclockProgress(
     return undefined;
   }
 
-  const totalOverclocks = miner?.weapons?.flatMap((weapon) => weapon.overclocks)
-    ?.length!;
+  const totalOverclocks = miner.weapons.flatMap((weapon) => weapon.overclocks)
+    ?.length;
   const forgedOverclocks = acquiredOverclocks.filter(
     (overclock) => overclock.isForged
   ).length;

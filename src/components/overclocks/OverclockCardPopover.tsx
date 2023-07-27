@@ -28,7 +28,7 @@ export default function OverclockCardPopover({
             <Col span={8}>
               <Tooltip placement="bottomRight" title={weapon.name}>
                 <GatsbyImage
-                  alt={weapon.name!}
+                  alt={weapon.name}
                   image={nullthrows(
                     weapon.overclockPopoverWeaponOutline?.childImageSharp
                       ?.gatsbyImageData

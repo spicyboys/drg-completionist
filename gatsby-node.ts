@@ -4,11 +4,20 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
   async ({ actions: { createTypes } }: CreateSchemaCustomizationArgs) => {
     const typeDefs = `
     type WeaponsJsonOverclocks {
+      name: String!
       type: OverclockTypesJson! @link(by: "name")
+    }
+
+    type WeaponsJson implements Node {
+      name: String!
+      overclocks: [WeaponsJsonOverclocks!]!
     }
 
     type MinersJson implements Node {
       weapons: [WeaponsJson!]! @link(by: "name")
+      color: String!
+      contrastColor: String!
+      name: String!
     }
   `;
     createTypes(typeDefs);

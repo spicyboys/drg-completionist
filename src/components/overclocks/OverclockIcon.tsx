@@ -43,7 +43,7 @@ export default function OverclockIcon({
         >
           <GatsbyImage
             image={nullthrows(overclock.icon?.childImageSharp?.gatsbyImageData)}
-            alt={overclock.name!}
+            alt={overclock.name}
             style={{ height: "auto", width: "auto" }}
           />
         </div>

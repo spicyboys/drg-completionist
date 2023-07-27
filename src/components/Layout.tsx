@@ -54,12 +54,12 @@ export default function Layout({
     return {
       routes: miners.nodes.map((miner) => {
         return {
-          name: miner.name!,
-          path: miner.name?.toLowerCase(),
+          name: miner.name,
+          path: miner.name.toLowerCase(),
           icon: (
             <GatsbyImage
               image={nullthrows(miner.icon?.childImageSharp?.gatsbyImageData)}
-              alt={miner.name!}
+              alt={miner.name}
             />
           ),
           routes: [

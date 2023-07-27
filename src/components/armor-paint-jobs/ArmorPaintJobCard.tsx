@@ -42,7 +42,7 @@ export default function ArmorPaintJobCard({
           onClick={onClick}
           size="small"
           style={{
-            backgroundColor: query ? miner.color! : "inherit",
+            backgroundColor: query ? miner.color : "inherit",
             transition: "all 0.3s ease",
           }}
         >

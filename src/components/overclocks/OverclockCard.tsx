@@ -57,8 +57,8 @@ export default function OverclockCard({
         hoverable
         title={overclock.name}
         headStyle={{
-          backgroundColor: query?.isForged ? miner.color! : "inherit",
-          color: query?.isForged ? miner.contrastColor! : "#cccccc",
+          backgroundColor: query?.isForged ? miner.color : "inherit",
+          color: query?.isForged ? miner.contrastColor : "#cccccc",
           fontWeight: "bold",
           transition: "all 0.3s",
         }}

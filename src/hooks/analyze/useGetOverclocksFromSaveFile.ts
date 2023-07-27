@@ -45,13 +45,13 @@ export default function useGetOverclocksFromSaveFile(): (
             if (forgedSchematics?.includes(overclock!.saveId!)) {
               acquiredOverclocks.push({
                 weapon: weapon.name,
-                name: overclock!.name,
+                name: overclock.name,
                 isForged: true,
               });
             } else if (unforgedSchematics?.includes(overclock!.saveId!)) {
               acquiredOverclocks.push({
                 weapon: weapon.name,
-                name: overclock!.name,
+                name: overclock.name,
                 isForged: false,
               });
             }
@@ -61,6 +61,6 @@ export default function useGetOverclocksFromSaveFile(): (
 
       return acquiredOverclocks;
     },
-    []
+    [miners]
   );
 }

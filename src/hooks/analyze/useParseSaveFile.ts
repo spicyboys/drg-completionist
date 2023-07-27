@@ -68,6 +68,6 @@ export default function useParseSaveFile() {
         throw e;
       }
     },
-    [db]
+    [db, getOverclocksFromSaveFile]
   );
 }
