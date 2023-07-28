@@ -25,3 +25,17 @@ export const wrapRootElement: GatsbySSR["wrapRootElement"] = ({ element }) => {
     </ProConfigProvider>
   );
 };
+
+export const onRenderBody: GatsbySSR["onRenderBody"] = ({
+  setHeadComponents,
+}) => {
+  setHeadComponents([
+    <script
+      key="umami"
+      async
+      src="https://analytics.umami.is/script.js"
+      data-website-id="2b37ffbd-fdcf-49cc-a00b-de91a36a550d"
+      data-do-not-track="true"
+    />,
+  ]);
+};
