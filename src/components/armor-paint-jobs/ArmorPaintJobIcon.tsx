@@ -18,7 +18,7 @@ export default function ArmorPaintjobIcon({
     >
       <GatsbyImage
         image={nullthrows(paintJob.icon?.childImageSharp?.gatsbyImageData)}
-        alt={paintJob.name!}
+        alt={paintJob.name}
       />
     </div>
   );

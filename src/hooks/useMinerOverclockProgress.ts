@@ -15,7 +15,7 @@ export default function useMinerOverclockProgress(
   const acquiredOverclocks = useLiveQuery(() =>
     db.overclocks
       .where("weapon")
-      .anyOf(miner.weapons.map((weapon) => weapon.name!))
+      .anyOf(miner.weapons.map((weapon) => weapon.name))
       .toArray()
   );
 
