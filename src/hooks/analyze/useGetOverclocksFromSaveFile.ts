@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby";
-import { OverclockEntry } from "../db/AppDatabase";
+import { type OverclockEntry } from "../db/AppDatabase";
 import { useCallback } from "react";
-import { SaveFile } from "./useParseSaveFile";
+import { type SaveFile } from "./useParseSaveFile";
 
 export default function useGetOverclocksFromSaveFile(): (
   saveFile: SaveFile

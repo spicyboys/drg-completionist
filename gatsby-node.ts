@@ -1,4 +1,4 @@
-import type { CreateSchemaCustomizationArgs, GatsbyNode } from "gatsby";
+import { type CreateSchemaCustomizationArgs, type GatsbyNode } from "gatsby";
 
 export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] =
   async ({ actions: { createTypes } }: CreateSchemaCustomizationArgs) => {

@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "./src/components/Layout";
-import { GatsbyBrowser } from "gatsby";
+import { type GatsbyBrowser } from "gatsby";
 import { ConfigProvider, theme } from "antd";
 import { ProConfigProvider } from "@ant-design/pro-components";
 import { DBProvider } from "./src/hooks/db";

@@ -1,4 +1,4 @@
-import { RcFile } from "antd/lib/upload";
+import { type RcFile } from "antd/lib/upload";
 import { useCallback } from "react";
 import useGetOverclocksFromSaveFile from "./useGetOverclocksFromSaveFile";
 import init, { parse_save_file } from "drg-save-parser";

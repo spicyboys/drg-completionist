@@ -1,4 +1,4 @@
-import type { GatsbyConfig } from "gatsby";
+import { type GatsbyConfig } from "gatsby";
 import path from "path";
 
 const config: GatsbyConfig = {
