@@ -17,13 +17,15 @@ _The Steam save file is located here by default on Windows, but may vary based o
 
 ## Upcoming Features
 
-- None are planned right now. Please [open an issue](https://github.com/spicyboys/drg-completionist/issues) with any suggestions.
+- Re-introducing collectables that have not been migrated to DRG-Completionist v5
 
 ## Privacy
 
 _DRG Completionist_ respects your privacy. The app is entirely serverless and uses the browser's local storage to keep track of your progress. No personally identifying information is ever collected or stored.
 
 If you choose to upload your save file, neither the file nor its contents ever leaves your computer. The save file parser is compiled from [Rust](<https://en.wikipedia.org/wiki/Rust_(programming_language)>) into [WASM](https://en.wikipedia.org/wiki/WebAssembly) specifically so it can run completely within your browser. We encourage you to [inspect the source code](https://github.com/rob0rt/drg-save-parser) if you want to see what it's doing.
+
+For site usage analytics, we utilize [Umami](https://umami.is/), an anonymoized, privacy-focused web analytics platform. If you use any of the privacy-oriented browser settings or extensions that are widely available today, or your browser sends the [Do Not Track](https://www.eff.org/issues/do-not-track) signal, these analytics will be blocked. You can inspect the integration with Umami in [gatsby-ssr.tsx](gatsby-ssr.tsx).
 
 ## Special Thanks
 
@@ -37,4 +39,4 @@ Neither this app nor its developers are associated with Deep Rock Galactic or Gh
 
 ---
 
-###### README Last Updated: June 15, 2023
+###### README Last Updated: July 27, 2023
