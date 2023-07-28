@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { graphql, PageProps } from "gatsby";
+import { graphql, type PageProps } from "gatsby";
 import { FooterContext } from "../../components/Layout";
 import { Row } from "antd";
 import WeaponPaintJobCard from "../../components/weapon-paint-jobs/WeaponPaintJobCard";

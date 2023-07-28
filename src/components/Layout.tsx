@@ -11,7 +11,7 @@ import {
   FooterToolbar,
 } from "@ant-design/pro-components";
 import { Button, Tooltip } from "antd";
-import { Link, PageProps, graphql, useStaticQuery } from "gatsby";
+import { Link, type PageProps, graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import SettingsModal from "./settings/SettingsModal";
 import InfoTooltip from "./InfoTooltip";

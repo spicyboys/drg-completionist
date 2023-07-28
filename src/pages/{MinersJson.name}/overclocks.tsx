@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { graphql, PageProps } from "gatsby";
+import { graphql, type PageProps } from "gatsby";
 import WeaponDivider from "../../components/WeaponDivider";
 import { Row } from "antd";
 import OverclockCard from "../../components/overclocks/OverclockCard";

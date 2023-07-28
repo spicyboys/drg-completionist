@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { LoadingOutlined, UploadOutlined } from "@ant-design/icons";
 import { Button, Col, Divider, Row, Space, Typography, Upload } from "antd";
-import { RcFile } from "antd/lib/upload";
+import { type RcFile } from "antd/lib/upload";
 import useParseSaveFile from "../../hooks/analyze/useParseSaveFile";
 
 const { Text } = Typography;
