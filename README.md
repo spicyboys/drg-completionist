@@ -29,7 +29,7 @@ For site usage analytics, we utilize [Umami](https://umami.is/), an anonymoized,
 
 ## Special Thanks
 
-- The folks who maintain the [Deep Rock Galactic Wiki](https://deeprockgalactic.gamepedia.com/Deep_Rock_Galactic_Wiki), which provided all the pictures and data that make this app run
+- The folks who maintain the [Deep Rock Galactic Wiki](https://deeprockgalactic.wiki.gg/wiki/Deep_Rock_Galactic_Wiki), which provided all the pictures and data that make this app run
 - [@iAmAsval](https://github.com/iAmAsval) for their work on [FModel](https://github.com/iAmAsval/FModel) that let us move forward with identifying the cosmetic GUIDs in the save file
 - The helpful folks on the _DRG Community Tools_ Discord server, who always helped us out with our questions
 
