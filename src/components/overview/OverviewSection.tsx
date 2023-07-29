@@ -32,9 +32,9 @@ const OverviewSection = ({
             <Progress
               type='dashboard'
               status='active'
-              percent={progress?.overclockProgress?.acquired}
+              percent={progress?.overclockProgress.acquired}
               success={{
-                percent: progress?.overclockProgress?.forged,
+                percent: progress?.overclockProgress.forged,
               }}
             />
           </Card>
@@ -44,9 +44,9 @@ const OverviewSection = ({
             <Progress
               type='dashboard'
               status='active'
-              percent={progress?.weaponPaintProgress?.acquired}
+              percent={progress?.weaponPaintProgress.acquired}
               success={{
-                percent: progress?.weaponPaintProgress?.forged,
+                percent: progress?.weaponPaintProgress.forged,
               }}
             />
           </Card>
