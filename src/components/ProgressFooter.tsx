@@ -5,20 +5,22 @@ import "../styles/footer.css";
 
 const FOOTER_HEIGHT = 50;
 
+export type ProgressFooterProps = {
+  totalItems: number;
+  completedItems: number;
+  unforgedItems?: number;
+};
+
 export default function ProgressFooter({
   totalItems,
   completedItems,
   unforgedItems,
-}: {
-  totalItems: number;
-  completedItems: number;
-  unforgedItems?: number;
-}) {
+}: ProgressFooterProps) {
   const progress = (completedItems / totalItems) * 100;
   const partialProgress = unforgedItems && (unforgedItems / totalItems) * 100;
 
-  const { allMinersJson: miners } =
-    useStaticQuery<Queries.ProgressFooterQuery>(graphql`
+  const { allMinersJson: miners } = useStaticQuery<Queries.ProgressFooterQuery>(
+    graphql`
       query ProgressFooter {
         allMinersJson {
           nodes {
@@ -26,7 +28,8 @@ export default function ProgressFooter({
           }
         }
       }
-    `);
+    `
+  );
 
   const backgroundColor = `linear-gradient(to right, ${miners.nodes
     .map(

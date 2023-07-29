@@ -3,6 +3,8 @@ import { graphql, type PageProps } from "gatsby";
 import { FooterContext } from "../../components/Layout";
 import { Row } from "antd";
 import WeaponPaintJobCard from "../../components/weapon-paint-jobs/WeaponPaintJobCard";
+import useMinerWeaponPaintJobProgress from "../../hooks/useMinerWeaponPaintJobProgress";
+import ProgressFooter from "../../components/ProgressFooter";
 
 const WeaponPaintJobs = ({
   data: {
@@ -10,10 +12,13 @@ const WeaponPaintJobs = ({
     allWeaponPaintJobsJson: { nodes: weaponPaintJobs },
   },
 }: PageProps<Queries.WeaponPaintJobsQuery>) => {
+  const progress = useMinerWeaponPaintJobProgress(miner!);
   const setFooter = useContext(FooterContext);
   useEffect(() => {
-    setFooter(null);
-  }, [setFooter]);
+    if (progress) {
+      setFooter(<ProgressFooter {...progress} />);
+    }
+  }, [setFooter, progress]);
 
   return (
     <Row gutter={[16, 16]}>
@@ -35,6 +40,7 @@ export const query = graphql`
     minersJson(id: { eq: $id }) {
       name
       ...ArmorPaintJobCardMiner
+      ...MinerWeaponPaintJobProgressMiner
     }
 
     allWeaponPaintJobsJson {

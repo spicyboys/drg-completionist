@@ -14,13 +14,7 @@ const Overclocks = ({
   const setFooter = useContext(FooterContext);
   useEffect(() => {
     if (progress) {
-      setFooter(
-        <ProgressFooter
-          totalItems={progress.totalOverclocks}
-          completedItems={progress.forgedOverclocks}
-          unforgedItems={progress.unforegedOverclocks}
-        />
-      );
+      setFooter(<ProgressFooter {...progress} />);
     }
   }, [progress, setFooter]);
 

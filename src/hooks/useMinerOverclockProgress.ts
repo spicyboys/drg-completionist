@@ -1,16 +1,11 @@
 import { useLiveQuery } from "dexie-react-hooks";
 import { useDB } from "./db";
 import { graphql } from "gatsby";
-
-type MinerOverclockProgress = {
-  totalOverclocks: number;
-  forgedOverclocks: number;
-  unforegedOverclocks: number;
-};
+import { type ProgressFooterProps } from "../components/ProgressFooter";
 
 export default function useMinerOverclockProgress(
   miner: Queries.MinerOverclockProgressMinerFragment
-): MinerOverclockProgress | undefined {
+): ProgressFooterProps | undefined {
   const db = useDB();
   const acquiredOverclocks = useLiveQuery(() =>
     db.overclocks
@@ -23,17 +18,17 @@ export default function useMinerOverclockProgress(
     return undefined;
   }
 
-  const totalOverclocks = miner.weapons.flatMap((weapon) => weapon.overclocks)
+  const totalItems = miner.weapons.flatMap((weapon) => weapon.overclocks)
     ?.length;
-  const forgedOverclocks = acquiredOverclocks.filter(
+  const completedItems = acquiredOverclocks.filter(
     (overclock) => overclock.isForged
   ).length;
-  const unforegedOverclocks = acquiredOverclocks.length - forgedOverclocks;
+  const unforgedItems = acquiredOverclocks.length - completedItems;
 
   return {
-    totalOverclocks,
-    forgedOverclocks,
-    unforegedOverclocks,
+    totalItems,
+    completedItems,
+    unforgedItems,
   };
 }
 
