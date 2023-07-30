@@ -1,6 +1,7 @@
 {
   "name": "Lok-1 Smart Rifle",
   "outline": "./outlines/lock-on-rifle.png",
+  "saveId": "D7C92A19-4259B063-3624A9A4-C2DA8C65",
   "overclocks": [
     {
       "name": "Eraser",

@@ -1,6 +1,7 @@
 {
   "name": "CRSPR Flamethrower",
   "outline": "./outlines/flamethrower.png",
+  "saveId": "1074FB91-4EB63FE5-8E55C7BA-585E412C",
   "overclocks": [
     {
       "name": "Lighter Tanks",

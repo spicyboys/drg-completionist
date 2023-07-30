@@ -1,6 +1,7 @@
 {
   "name": "DRAK-25 Plasma Carbine",
   "outline": "./outlines/plasma-carbine.png",
+  "saveId": "B53AF53D-4860F6B7-85F786B6-A4E534F6",
   "overclocks": [
     {
       "name": "Aggressive Venting",

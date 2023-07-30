@@ -1,6 +1,7 @@
 {
   "name": "Cryo Cannon",
   "outline": "./outlines/cryo-cannon.png",
+  "saveId": "AB2A0882-439F3125-58843AB4-8C8E22F5",
   "overclocks": [
     {
       "name": "Improved Thermal Efficiency",

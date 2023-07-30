@@ -1,6 +1,7 @@
 {
   "name": "\"Thunderhead\" Heavy Autocannon",
   "outline": "./outlines/autocannon.png",
+  "saveId": "F0963A76-46261920-F4411DA6-8542BE98",
   "overclocks": [
     {
       "name": "Composite Drums",

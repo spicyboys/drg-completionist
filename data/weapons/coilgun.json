@@ -1,6 +1,7 @@
 {
   "name": "ArmsKore Coil Gun",
   "outline": "./outlines/coilgun.png",
+  "saveId": "85663500-459EB7FF-4CF6D898-9B4ACD15",
   "overclocks": [
     {
       "name": "Re-atomizer",

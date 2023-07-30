@@ -1,6 +1,7 @@
 {
   "name": "Deepcore 40mm PGL",
   "outline": "./outlines/grenade-launcher.png",
+  "saveId": "4C4F1A50-42CB24CC-2A7F28B0-0D12AEF9",
   "overclocks": [
     {
       "name": "Clean Sweep",

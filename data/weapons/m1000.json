@@ -1,6 +1,7 @@
 {
   "name": "M1000 Classic",
   "outline": "./outlines/m1000.png",
+  "saveId": "F11BE979-4B69C15A-697C98A7-D1C05969",
   "overclocks": [
     {
       "name": "Hoverclock",

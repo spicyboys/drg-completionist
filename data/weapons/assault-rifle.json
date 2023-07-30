@@ -1,6 +1,7 @@
 {
   "name": "Deepcore GK2",
   "outline": "./outlines/assault-rifle.png",
+  "saveId": "6511F31A-481CB1BC-A6D1A3A5-40355ABA",
   "overclocks": [
     {
       "name": "Compact Ammo",

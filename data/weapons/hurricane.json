@@ -1,6 +1,7 @@
 {
   "name": "\"Hurricane\" Guided Rocket System",
   "outline": "./outlines/hurricane.png",
+  "saveId": "8A6AEDA3-4DCD08CE-0CA171B4-646B7B69",
   "overclocks": [
     {
       "name": "Overtuned Feed Mechanism",

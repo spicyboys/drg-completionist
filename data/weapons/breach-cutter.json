@@ -1,6 +1,7 @@
 {
   "name": "Breach Cutter",
   "outline": "./outlines/breach-cutter.png",
+  "saveId": "7224D228-4E2209C4-C8CAFAAF-877237B1",
   "overclocks": [
     {
       "name": "Light-Weight Cases",

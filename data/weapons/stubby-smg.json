@@ -1,6 +1,7 @@
 {
   "name": "\"Stubby\" Voltaic SMG",
   "outline": "./outlines/stubby-smg.png",
+  "saveId": "90DAB5DD-4244CD86-DE0660AF-A990432A",
   "overclocks": [
     {
       "name": "Super-Slim Rounds",

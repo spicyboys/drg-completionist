@@ -1,6 +1,7 @@
 {
   "name": "Nishanka Boltshark X-80",
   "outline": "./outlines/crossbow.png",
+  "saveId": "96B59805-48326E01-1A2D8386-81F9626D",
   "overclocks": [
     {
       "name": "Quick Fire",

@@ -1,6 +1,7 @@
 {
   "name": "Corrosive Sludge Pump",
   "outline": "./outlines/sludge-pump.png",
+  "saveId": "1C5B98F1-48A5C174-ACB889B7-4EFE1785",
   "overclocks": [
     {
       "name": "Hydrogen Ion Additive",

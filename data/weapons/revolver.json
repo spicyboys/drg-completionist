@@ -1,6 +1,7 @@
 {
   "name": "\"Bulldog\" Heavy Revolver",
   "outline": "./outlines/revolver.png",
+  "saveId": "F6F7A5D8-451D13BD-FE2CBDAC-CC16547E",
   "overclocks": [
     {
       "name": "Chain Hit",

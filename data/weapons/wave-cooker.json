@@ -1,6 +1,7 @@
 {
   "name": "Colette Wave Cooker",
   "outline": "./outlines/wave-cooker.png",
+  "saveId": "24DB9F29-414E1966-ED3E219C-02FA504B",
   "overclocks": [
     {
       "name": "Liquid Cooling System",

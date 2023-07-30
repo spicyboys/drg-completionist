@@ -1,6 +1,7 @@
 {
   "name": "\"Lead Storm\" Powered Minigun",
   "outline": "./outlines/minigun.png",
+  "saveId": "093B57DF-402E0B42-B93ACE8B-F84265D3",
   "overclocks": [
     {
       "name": "A Little More Oomph!",

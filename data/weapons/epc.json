@@ -1,6 +1,7 @@
 {
   "name": "Experimental Plasma Charger",
   "outline": "./outlines/epc.png",
+  "saveId": "32F4964E-432318D0-D8812EA6-0F48A121",
   "overclocks": [
     {
       "name": "Energy Rerouting",

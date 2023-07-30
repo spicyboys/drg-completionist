@@ -1,6 +1,7 @@
 {
   "name": "Zhukov NUK17",
   "outline": "./outlines/zhukov.png",
+  "saveId": "11EE3697-49874C0D-6FAF24A2-6001BA2D",
   "overclocks": [
     {
       "name": "Minimal Magazines",

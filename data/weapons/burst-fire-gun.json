@@ -1,6 +1,7 @@
 {
   "name": "BRT7 Burst Fire Gun",
   "outline": "./outlines/burst-fire-gun.png",
+  "saveId": "C1DE5EB9-471CDBBD-73C55D8E-34511022",
   "overclocks": [
     {
       "name": "Composite Casings",

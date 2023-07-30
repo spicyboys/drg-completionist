@@ -1,6 +1,7 @@
 {
   "name": "Shard Diffractor",
   "outline": "./outlines/shard-diffractor.png",
+  "saveId": "CB8DCCF9-4FC4EBB9-0DB80C9B-3100F358",
   "overclocks": [
     {
       "name": "Efficiency Tweaks",
