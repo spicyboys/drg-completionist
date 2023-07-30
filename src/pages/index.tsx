@@ -1,13 +1,8 @@
-import * as React from 'react';
-import { graphql, type HeadFC, type PageProps } from 'gatsby';
-import { useContext } from 'react';
-import { FooterContext } from '../components/Layout';
-import OverviewSection from '../components/overview/OverviewSection';
-
-const pageStyles = {
-  padding: 24,
-  fontFamily: '-apple-system, Roboto, sans-serif, serif',
-};
+import * as React from "react";
+import { graphql, type HeadFC, type PageProps } from "gatsby";
+import { useContext } from "react";
+import { FooterContext } from "../components/Layout";
+import OverviewSection from "../components/overview/OverviewSection";
 
 const IndexPage = ({
   data: {
@@ -19,7 +14,7 @@ const IndexPage = ({
   setFooter(null);
 
   return (
-    <main style={pageStyles}>
+    <main>
       {miners.map((miner) => (
         <OverviewSection miner={miner} key={miner.name} />
       ))}

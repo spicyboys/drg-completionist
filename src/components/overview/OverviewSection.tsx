@@ -1,8 +1,9 @@
-import { Row, Col, Card, Progress } from 'antd';
-import { graphql } from 'gatsby';
-import React from 'react';
-import useMinerOverallProgress from '../../hooks/useMinerOverallProgress';
-import MinerDivider from './MinerDivider';
+import { Row, Col, Card, Progress } from "antd";
+import { graphql } from "gatsby";
+import React from "react";
+import useMinerOverallProgress from "../../hooks/useMinerOverallProgress";
+import { GatsbyImage } from "gatsby-plugin-image";
+import nullthrows from "../../utils/nullthrows";
 
 const OverviewSection = ({
   miner,
@@ -13,25 +14,26 @@ const OverviewSection = ({
 
   return (
     <>
-      <MinerDivider miner={miner} />
-      <Row gutter={[16, 24]} justify='center'>
-        <Col>
-          <Card title='Overall'>
-            <Progress
-              type='dashboard'
-              status='active'
-              percent={progress?.overallProgress.acquired}
-              success={{
-                percent: progress?.overallProgress.forged,
-              }}
-            />
-          </Card>
+      <Row align="middle" style={{ marginBlock: 20 }}>
+        <Col style={{ marginRight: 20 }}>
+          <GatsbyImage
+            image={nullthrows(miner.portrait?.childImageSharp?.gatsbyImageData)}
+            alt={miner.name}
+          />
         </Col>
+        <Col flex="auto">
+          <Progress
+            percent={progress?.overallProgress.acquired}
+            success={{ percent: progress?.overallProgress.forged }}
+          />
+        </Col>
+      </Row>
+      <Row gutter={[16, 24]} justify="center">
         <Col>
-          <Card title='Overclocks'>
+          <Card title="Overclocks">
             <Progress
-              type='dashboard'
-              status='active'
+              type="dashboard"
+              status="active"
               percent={progress?.overclockProgress.acquired}
               success={{
                 percent: progress?.overclockProgress.forged,
@@ -40,10 +42,10 @@ const OverviewSection = ({
           </Card>
         </Col>
         <Col>
-          <Card title='Weapon Paint Jobs'>
+          <Card title="Weapon Paint Jobs">
             <Progress
-              type='dashboard'
-              status='active'
+              type="dashboard"
+              status="active"
               percent={progress?.weaponPaintProgress.acquired}
               success={{
                 percent: progress?.weaponPaintProgress.forged,
