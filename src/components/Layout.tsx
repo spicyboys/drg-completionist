@@ -64,16 +64,20 @@ export default function Layout({
           ),
           routes: [
             {
-              path: `overclocks`,
+              path: "overclocks",
               name: "Overclocks",
             },
             {
-              path: `armor-paint-jobs`,
-              name: "Armor Paint Jobs",
+              path: "weapon-paint-jobs",
+              name: "Weapon Paint Jobs",
             },
             {
-              path: `weapon-paint-jobs`,
-              name: "Weapon Paint Jobs",
+              path: "weapon-frameworks",
+              name: "Weapon Frameworks",
+            },
+            {
+              path: "armor-paint-jobs",
+              name: "Armor Paint Jobs",
             },
           ],
         };
