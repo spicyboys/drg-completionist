@@ -1,24 +1,35 @@
-import { graphql } from 'gatsby';
-import useMinerOverclockProgress from './useMinerOverclockProgress';
-import useMinerWeaponPaintJobProgress from './useMinerWeaponPaintJobProgress';
+import { graphql } from "gatsby";
+import useMinerOverclockProgress from "./useMinerOverclockProgress";
+import useMinerWeaponPaintJobProgress from "./useMinerWeaponPaintJobProgress";
+import { type ProgressFooterProps } from "../components/ProgressFooter";
 
-type OverallProgress = {
+type OverallProgress = Readonly<{
   overallProgress: Percentages;
   overclockProgress: Percentages;
   weaponPaintProgress: Percentages;
-};
+}>;
 
-type Percentages = { acquired: number; forged: number };
+type Percentages = Readonly<{ acquired: number; forged: number }>;
 
 const getPercent = (
-  numerators: (number | undefined)[],
-  denominators: number[]
+  numerators: readonly (number | undefined)[],
+  denominators: readonly number[]
 ) => {
   const numerator = numerators.reduce<number>((p, c) => p + (c ?? 0), 0);
   const denominator = denominators.reduce((p, c) => p + c);
 
   return Math.ceil((numerator / denominator) * 100);
 };
+
+const getPercentageFromProgress = (
+  progress: ProgressFooterProps
+): Percentages => ({
+  acquired: getPercent(
+    [progress.completedItems, progress.unforgedItems],
+    [progress.totalItems]
+  ),
+  forged: getPercent([progress.completedItems], [progress.totalItems]),
+});
 
 export default function useMinerOverallProgress(
   miner: Queries.MinerOverallProgressMinerFragment
@@ -46,32 +57,10 @@ export default function useMinerOverallProgress(
     ),
   };
 
-  const overclockPercent: Percentages = {
-    acquired: getPercent(
-      [overclockProgress.completedItems, overclockProgress.unforgedItems],
-      [overclockProgress.totalItems]
-    ),
-    forged: getPercent(
-      [overclockProgress.completedItems],
-      [overclockProgress.totalItems]
-    ),
-  };
-
-  const weaponPaintPercent: Percentages = {
-    acquired: getPercent(
-      [weaponPaintProgress.completedItems, weaponPaintProgress.unforgedItems],
-      [weaponPaintProgress.totalItems]
-    ),
-    forged: getPercent(
-      [weaponPaintProgress.completedItems],
-      [weaponPaintProgress.totalItems]
-    ),
-  };
-
   return {
     overallProgress: overallPercent,
-    overclockProgress: overclockPercent,
-    weaponPaintProgress: weaponPaintPercent,
+    overclockProgress: getPercentageFromProgress(overclockProgress),
+    weaponPaintProgress: getPercentageFromProgress(weaponPaintProgress),
   };
 }
 

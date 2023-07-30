@@ -5,11 +5,11 @@ import "../styles/footer.css";
 
 const FOOTER_HEIGHT = 50;
 
-export type ProgressFooterProps = {
+export type ProgressFooterProps = Readonly<{
   totalItems: number;
   completedItems: number;
   unforgedItems?: number;
-};
+}>;
 
 export default function ProgressFooter({
   totalItems,
