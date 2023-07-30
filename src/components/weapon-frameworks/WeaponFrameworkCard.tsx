@@ -15,7 +15,6 @@ export default function WeaponFrameworkCard({
   weapon: Queries.WeaponFrameworkCardWeaponFragment;
   framework: Queries.WeaponFrameworkCardWeaponFrameworkFragment;
 }) {
-  console.log(miner, weapon, framework);
   const db = useDB();
   const query = useLiveQuery(
     () => db.frameworks.get({ weapon: weapon.name, name: framework.name }),
