@@ -44,7 +44,7 @@ const SaveFileSchema = z.object({
     ),
   }),
 });
-export type SaveFile = z.infer<typeof SaveFileSchema>["properties"];
+export type SaveFile = Readonly<z.infer<typeof SaveFileSchema>["properties"]>;
 
 export default function useParseSaveFile() {
   const db = useDB();
@@ -55,9 +55,9 @@ export default function useParseSaveFile() {
       try {
         // Parse the save file using the WASM library
         await init();
-        const saveFile = SaveFileSchema.parse(
-          await parse_save_file(f)
-        ).properties;
+        const saveFile = Object.freeze(
+          SaveFileSchema.parse(await parse_save_file(f)).properties
+        );
 
         // Extract the relevant information from the parsed save file
         const overclocks = getOverclocksFromSaveFile(saveFile);
