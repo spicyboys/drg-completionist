@@ -63,7 +63,11 @@ export default OverviewSection;
 export const query = graphql`
   fragment OverviewSectionMiner on MinersJson {
     name
+    portrait {
+      childImageSharp {
+        gatsbyImageData(width: 75)
+      }
+    }
     ...MinerOverallProgressMiner
-    ...MinerDividerMiner
   }
 `;
