@@ -64,7 +64,7 @@ export default function useMinerOverallProgress(
     ),
     unforged: getPercent(
       [overclockProgress.unforgedItems, weaponPaintProgress.unforgedItems],
-      [overclockProgress.totalItems]
+      [overclockProgress.totalItems, weaponPaintProgress.totalItems]
     ),
     count: overclockProgress.totalItems + weaponPaintProgress.totalItems,
   };
