@@ -1,9 +1,10 @@
-import { Row, Col, Card, Progress } from "antd";
+import { Row, Col, Card, Progress, Divider, Typography } from "antd";
 import { graphql } from "gatsby";
 import React from "react";
 import useMinerOverallProgress from "../../hooks/useMinerOverallProgress";
 import { GatsbyImage } from "gatsby-plugin-image";
 import nullthrows from "../../utils/nullthrows";
+const { Title } = Typography;
 
 const OverviewSection = ({
   miner,
@@ -14,6 +15,11 @@ const OverviewSection = ({
 
   return (
     <>
+      <Divider orientation="left">
+        <Title level={3} style={{ margin: 0 }}>
+          {miner.name}
+        </Title>
+      </Divider>
       <Row align="middle" style={{ marginBlock: 20 }}>
         <Col style={{ marginRight: 20 }}>
           <GatsbyImage
