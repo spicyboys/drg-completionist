@@ -74,6 +74,6 @@ export default function useParseSaveFile() {
         throw e;
       }
     },
-    [db, getOverclocksFromSaveFile]
+    [db, getOverclocksFromSaveFile, getWeaponPaintJobsFromSaveFile]
   );
 }
