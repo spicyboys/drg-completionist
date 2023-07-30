@@ -127,5 +127,43 @@
       },
       "description": "It ain't pretty, but this overclock will tear apart anything that gets close, though it gets a bit iffy at range"
     }
+  ],
+  "frameworks": [
+    {
+      "framework": "Custom Engineered",
+      "saveId": "68152235-4CBB7CF3-70BB4FB9-473769C7"
+    },
+    {
+      "framework": "Fourth Relic",
+      "saveId": "EB00772E-477EE3AB-2083D88F-C5D57EE8"
+    },
+    {
+      "framework": "Glyphid Trophy Hunter",
+      "saveId": "A3D34506-422433FE-10119894-F5A4B1B9"
+    },
+    {
+      "framework": "Mechanized",
+      "saveId": "026C9322-4E6D4E62-4868D6AB-6598E0C8"
+    },
+    {
+      "framework": "Neonband",
+      "saveId": "17FD7D50-486ABC92-A6A50F84-170C23C8"
+    },
+    {
+      "framework": "Scale Brigade",
+      "saveId": "193C8CEF-42414A7E-F9E5AC9F-64D31DF9"
+    },
+    {
+      "framework": "Waster",
+      "saveId": "06D186B7-465F2B24-F78C9C9F-5578DDD9"
+    },
+    {
+      "framework": "Builder's Choice",
+      "saveId": "80E87BF8-4B232619-CB23CEBA-AEE37E3A"
+    },
+    {
+      "framework": "MilSpec",
+      "saveId": "381351B3-426C91CA-92F357B9-A2151D85"
+    }
   ]
 }

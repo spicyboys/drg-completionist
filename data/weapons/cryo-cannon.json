@@ -109,5 +109,43 @@
       },
       "description": "Pressing the reload button shoots all the cryofuel in the chamber at once as an AoE cryo-projectile. Besides the very large amount of fuel consumed, the operation overloads the whole system, resulting in a much longer delay before regaining pressure, and the modifications restrict the total amount of fuel you can carry."
     }
+  ],
+  "frameworks": [
+    {
+      "framework": "Custom Engineered",
+      "saveId": "AFC11F2A-4BBBC72A-2C64DC82-673D61F1"
+    },
+    {
+      "framework": "Fourth Relic",
+      "saveId": "2ADDFCD1-489E5D7A-1DDA7DA9-2B4D3074"
+    },
+    {
+      "framework": "Glyphid Trophy Hunter",
+      "saveId": "15DBF7FC-4749F4D8-BDC6019F-A212A537"
+    },
+    {
+      "framework": "Mechanized",
+      "saveId": "54CBAF3F-48BFA759-8A2F30BB-6CAC33C8"
+    },
+    {
+      "framework": "Neonband",
+      "saveId": "0E22E046-4BC33B29-B564339D-2CD406E0"
+    },
+    {
+      "framework": "Scale Brigade",
+      "saveId": "1121C692-45492D2E-3AF9C6BB-C8C6F464"
+    },
+    {
+      "framework": "Waster",
+      "saveId": "9455A857-48587130-EFD25B8F-1FE2284C"
+    },
+    {
+      "framework": "Builder's Choice",
+      "saveId": "6305197F-4559BB8B-F0976F9C-129F957D"
+    },
+    {
+      "framework": "MilSpec",
+      "saveId": "FEADA1C7-45E22A9C-04668FA7-CEC9CC58"
+    }
   ]
 }

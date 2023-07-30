@@ -109,5 +109,43 @@
       },
       "description": "Takes the M1000's focus mode to the extreme by supercooling the rounds before firing to improve their acceleration through the coils, but the extra coolant in the clips limits how much ammo you can bring."
     }
+  ],
+  "frameworks": [
+    {
+      "framework": "Custom Engineered",
+      "saveId": "FCDB21FA-4BEFFA18-87918D90-5C73EF8A"
+    },
+    {
+      "framework": "Fourth Relic",
+      "saveId": "8F79DC47-45EC205C-7FDCCEAF-9B53F4C7"
+    },
+    {
+      "framework": "Glyphid Trophy Hunter",
+      "saveId": "6FE14A6E-4330A846-F3FA47A0-41FA203B"
+    },
+    {
+      "framework": "Mechanized",
+      "saveId": "5E56E6D1-4E85084E-E71DE6A4-CAB01378"
+    },
+    {
+      "framework": "Neonband",
+      "saveId": "BF15B5D5-4A26D0E3-232E9F9B-3E8AF226"
+    },
+    {
+      "framework": "Scale Brigade",
+      "saveId": "EB0FFB72-478DA909-3E436DA0-97C0FECE"
+    },
+    {
+      "framework": "Waster",
+      "saveId": "913478ED-46EEFEBB-B62A73A9-32CB0D2B"
+    },
+    {
+      "framework": "Builder's Choice",
+      "saveId": "F1DFD2F8-46251FED-E05B788C-62C05D01"
+    },
+    {
+      "framework": "MilSpec",
+      "saveId": "6C598F3D-4B277C1C-7ABF2186-87A06A73"
+    }
   ]
 }

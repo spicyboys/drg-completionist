@@ -135,5 +135,43 @@
       },
       "description": "Feeding the thermal exhaust back into the system transfers the heat generated after a 50% threshold to the plasma, making it increasingly hot. The modifications means more heat generated, and it takes longer to get rid of while overheating."
     }
+  ],
+  "frameworks": [
+    {
+      "framework": "Custom Engineered",
+      "saveId": "B9955110-4AF90C2D-06EBAC9D-76CFD182"
+    },
+    {
+      "framework": "Fourth Relic",
+      "saveId": "66C8B1C9-41673A8C-B2EB6A9B-EBC8980A"
+    },
+    {
+      "framework": "Glyphid Trophy Hunter",
+      "saveId": "1AF8F899-49C3BFE4-D87E449C-BC47F918"
+    },
+    {
+      "framework": "Mechanized",
+      "saveId": "0EBD9A0A-475DEA86-C6F0628B-4662CCFE"
+    },
+    {
+      "framework": "Neonband",
+      "saveId": "B8EFB11D-46AA62D1-B47C1081-D7896A32"
+    },
+    {
+      "framework": "Scale Brigade",
+      "saveId": "293E3C41-46F76DCC-7A19B583-4D5D4AC4"
+    },
+    {
+      "framework": "Waster",
+      "saveId": "77E48171-463203BB-A405C497-F2A25AF9"
+    },
+    {
+      "framework": "Builder's Choice",
+      "saveId": "98956263-4AF149C7-799D01B0-5CAB1176"
+    },
+    {
+      "framework": "MilSpec",
+      "saveId": "030DFDFB-4B17191C-BD1390A4-B54EDAC5"
+    }
   ]
 }

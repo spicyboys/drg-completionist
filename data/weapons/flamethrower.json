@@ -105,5 +105,43 @@
       },
       "description": "Special fuel mixture extends the duration and damage of Sticky Flames, but at the cost of tank capacity and total fuel."
     }
+  ],
+  "frameworks": [
+    {
+      "framework": "Custom Engineered",
+      "saveId": "5111BCBB-4AFA3BF0-DC22778F-26E07958"
+    },
+    {
+      "framework": "Fourth Relic",
+      "saveId": "66DC265B-4C1E5DCA-8E119BAC-BF0B2E99"
+    },
+    {
+      "framework": "Glyphid Trophy Hunter",
+      "saveId": "B0099AEA-4F1109C3-1D00D09D-DC7C1275"
+    },
+    {
+      "framework": "Mechanized",
+      "saveId": "503A1EE2-4D5C1CAF-866D7394-88DB0E72"
+    },
+    {
+      "framework": "Neonband",
+      "saveId": "F952BB57-4DE59386-DE3CB799-DC2A719B"
+    },
+    {
+      "framework": "Scale Brigade",
+      "saveId": "963F88AC-42B1B101-C5E2B59E-BF809020"
+    },
+    {
+      "framework": "Waster",
+      "saveId": "976CFAAC-4244BD93-BAEC4DB2-3B1E3E90"
+    },
+    {
+      "framework": "Builder's Choice",
+      "saveId": "231325F4-4E12D6A1-B7B27BBB-49EF2AB7"
+    },
+    {
+      "framework": "MilSpec",
+      "saveId": "62F56AB1-40CD48D6-45D1D5A0-5D362E96"
+    }
   ]
 }

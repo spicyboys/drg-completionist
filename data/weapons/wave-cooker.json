@@ -109,5 +109,43 @@
       },
       "description": "Installing a lens of uranium glass cranks the radioactivity of your microwaves to 11. Hit targets have a chance to be contaminated with radiation, suffering damage and emitting harmful radioactive waves to nearby enemies. The small size of the lens reduces microwave impact radius and damage, while the amount of power required reduces total ammo."
     }
+  ],
+  "frameworks": [
+    {
+      "framework": "Custom Engineered",
+      "saveId": "E5B40422-4742379A-36F3959C-BD99846A"
+    },
+    {
+      "framework": "Fourth Relic",
+      "saveId": "BE602313-4E509991-E7FA8B88-FBC63FB2"
+    },
+    {
+      "framework": "Glyphid Trophy Hunter",
+      "saveId": "1B864567-42FB5907-9060E597-50033A02"
+    },
+    {
+      "framework": "Mechanized",
+      "saveId": "629B1E47-43422BC5-6FDCECAC-7D9DDD24"
+    },
+    {
+      "framework": "Neonband",
+      "saveId": "CA3FA30F-4EAD92ED-7EC4D8AF-866D071F"
+    },
+    {
+      "framework": "Scale Brigade",
+      "saveId": "A7984829-457B8E8E-40381E9B-87E62023"
+    },
+    {
+      "framework": "Waster",
+      "saveId": "4958FFC4-4CBEA9DD-3BBB0D95-B5739EA4"
+    },
+    {
+      "framework": "Builder's Choice",
+      "saveId": "B82834A7-4A37D1D8-613DAFB1-87A39093"
+    },
+    {
+      "framework": "MilSpec",
+      "saveId": "1E8184E8-4D71644B-EC57DEB2-9852EF29"
+    }
   ]
 }

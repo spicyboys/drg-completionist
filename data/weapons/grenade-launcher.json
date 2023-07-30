@@ -105,5 +105,43 @@
       },
       "description": "New super-high velocity projectiles trade explosive range for raw damage in a tight area. The increased weight of the rounds also limits how many you can carry."
     }
+  ],
+  "frameworks": [
+    {
+      "framework": "Custom Engineered",
+      "saveId": "FD6DC144-4FA4D84F-0366E0AA-CD1E3820"
+    },
+    {
+      "framework": "Fourth Relic",
+      "saveId": "E85907C1-407DD4DC-44E41CBC-FAE3F0C1"
+    },
+    {
+      "framework": "Glyphid Trophy Hunter",
+      "saveId": "EC1670A1-48C7C636-D866A583-5304E541"
+    },
+    {
+      "framework": "Mechanized",
+      "saveId": "AE584330-46335FAE-6B798D95-04565BA4"
+    },
+    {
+      "framework": "Neonband",
+      "saveId": "6947BFAF-4655FCE8-9D30618F-19110200"
+    },
+    {
+      "framework": "Scale Brigade",
+      "saveId": "87657269-4DB8549E-E5A45EA1-9642CF18"
+    },
+    {
+      "framework": "Waster",
+      "saveId": "DB96EF1C-482CF9FB-70D955AF-55A8C79C"
+    },
+    {
+      "framework": "Builder's Choice",
+      "saveId": "F54FB26B-43A82D34-F9F9359A-33BCB287"
+    },
+    {
+      "framework": "MilSpec",
+      "saveId": "EAC1EF98-4973D116-33429F97-C44A0F51"
+    }
   ]
 }

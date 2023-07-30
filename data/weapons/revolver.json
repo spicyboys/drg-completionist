@@ -111,5 +111,43 @@
       },
       "description": "Smaller, bouncy bullets ricochet off hard surfaces, hitting nearby enemies like magic! Overall, the damage of the weapon is reduced, but you can carry a few more rounds due to their compact size."
     }
+  ],
+  "frameworks": [
+    {
+      "framework": "Custom Engineered",
+      "saveId": "9517AC81-47426B97-B69DFCBA-497EC3AE"
+    },
+    {
+      "framework": "Fourth Relic",
+      "saveId": "FAA13D0A-468B76EE-27B3A6A1-CF2AF9EB"
+    },
+    {
+      "framework": "Glyphid Trophy Hunter",
+      "saveId": "C5846E12-4F27D11B-DE81EC94-DD1E07FD"
+    },
+    {
+      "framework": "Mechanized",
+      "saveId": "B7DA0B92-4E50414E-448FEF9E-F763AF4A"
+    },
+    {
+      "framework": "Neonband",
+      "saveId": "8440D1CD-4C0F90B8-3501EB96-A631068B"
+    },
+    {
+      "framework": "Scale Brigade",
+      "saveId": "69B8BA31-440A56DA-3A4940A4-0758F097"
+    },
+    {
+      "framework": "Waster",
+      "saveId": "13766D5F-41301AB1-F2C059A9-F6A76B90"
+    },
+    {
+      "framework": "Builder's Choice",
+      "saveId": "62AEC36E-42FA8CD6-A57537B0-8558E506"
+    },
+    {
+      "framework": "MilSpec",
+      "saveId": "ED7162E4-49274510-906237A7-306C7440"
+    }
   ]
 }

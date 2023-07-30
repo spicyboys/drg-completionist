@@ -109,5 +109,43 @@
       },
       "description": "With a few adjustments to the firing mechanism and the string, you can load a volley of three bolts into the chamber. The bolts do a tad less damage, but are packed compactly enough for you to carry more of them. The modification and size of the rounds make reloading slower, and the bolts are ruined after firing them, making them unretrievable. This does not affect special bolts."
     }
+  ],
+  "frameworks": [
+    {
+      "framework": "Custom Engineered",
+      "saveId": "A8EFD753-49AC484D-8AC3F8B5-CC4E17B9"
+    },
+    {
+      "framework": "Fourth Relic",
+      "saveId": "E3953358-4E8FB55D-956926AC-32A4E957"
+    },
+    {
+      "framework": "Glyphid Trophy Hunter",
+      "saveId": "F144E5EC-4B0CBC5A-A587D384-5850F90A"
+    },
+    {
+      "framework": "Mechanized",
+      "saveId": "6CE9B8F9-452EFF71-BA063D9C-175D1770"
+    },
+    {
+      "framework": "Neonband",
+      "saveId": "A850433E-47C82357-8C389BA8-70556557"
+    },
+    {
+      "framework": "Scale Brigade",
+      "saveId": "F7971D9B-4D8B6B68-CBD660B4-2EF918AC"
+    },
+    {
+      "framework": "Waster",
+      "saveId": "DCEF255D-49A3D562-09C49FB6-8652BE87"
+    },
+    {
+      "framework": "Builder's Choice",
+      "saveId": "4A724834-437FA4A0-923E21A0-B7CC4892"
+    },
+    {
+      "framework": "MilSpec",
+      "saveId": "EEAD1F35-46F76836-2A0F14B5-8D0A32FE"
+    }
   ]
 }

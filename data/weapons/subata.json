@@ -105,5 +105,43 @@
       },
       "description": "Part-bullet, part-syringe: these rounds are very effective at stunning most enemies."
     }
+  ],
+  "frameworks": [
+    {
+      "framework": "Custom Engineered",
+      "saveId": "E6E2EB04-48970BAC-7E30678B-5ACBF763"
+    },
+    {
+      "framework": "Fourth Relic",
+      "saveId": "90EB9F33-4CD40A49-EA83D3B0-B1101F6E"
+    },
+    {
+      "framework": "Glyphid Trophy Hunter",
+      "saveId": "685813D9-40214BFF-9DBE3A9E-822B0347"
+    },
+    {
+      "framework": "Mechanized",
+      "saveId": "F98A5244-48473D33-B3D79FB6-2FE896BF"
+    },
+    {
+      "framework": "Neonband",
+      "saveId": "A2D964D5-435DE5F5-1022F5BA-244E746E"
+    },
+    {
+      "framework": "Scale Brigade",
+      "saveId": "AF9C8848-460CF994-E5B5DD8B-E6E867A1"
+    },
+    {
+      "framework": "Waster",
+      "saveId": "4F1A4D0A-49BB3F05-3DBB6CBD-50687CCD"
+    },
+    {
+      "framework": "Builder's Choice",
+      "saveId": "823F617F-4394AEFC-870010A5-8313A833"
+    },
+    {
+      "framework": "MilSpec",
+      "saveId": "A6406226-46A36409-62DEE99E-9E8DA43E"
+    }
   ]
 }

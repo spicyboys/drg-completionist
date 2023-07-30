@@ -111,5 +111,43 @@
       },
       "description": "Prototype chamber tech that allows the weapon to fire off residual energy up to two times in quick succession after shooting, at half the cost and damage of a normal shot. The extra shots don't penetrate and the heavy modification takes a toll on the energy flow, reducing charge rate and reload speed."
     }
+  ],
+  "frameworks": [
+    {
+      "framework": "Custom Engineered",
+      "saveId": "F1E25919-404F1D1C-C62213A3-A24284E1"
+    },
+    {
+      "framework": "Fourth Relic",
+      "saveId": "94B62B5C-41FFF51B-56716D85-D6F1A15C"
+    },
+    {
+      "framework": "Glyphid Trophy Hunter",
+      "saveId": "577FA05F-41BCBBDF-A40B9F8A-AAA37D7A"
+    },
+    {
+      "framework": "Mechanized",
+      "saveId": "E10B8BF9-42EF8A49-89E7ADB5-7072C70E"
+    },
+    {
+      "framework": "Neonband",
+      "saveId": "ACAD1C6A-488CD47A-5C646D9E-89668850"
+    },
+    {
+      "framework": "Scale Brigade",
+      "saveId": "DDECE20E-40ADA68A-4EFC3983-4BB4BE11"
+    },
+    {
+      "framework": "Waster",
+      "saveId": "E14FED50-408A75B2-6FC1BEAE-8B6A5E3D"
+    },
+    {
+      "framework": "Builder's Choice",
+      "saveId": "B5CF119E-4DF2640A-A468B68D-A55EC5E4"
+    },
+    {
+      "framework": "MilSpec",
+      "saveId": "14A5C5FD-42663573-68A39EB9-CF7EC57B"
+    }
   ]
 }

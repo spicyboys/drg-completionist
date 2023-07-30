@@ -126,5 +126,43 @@
       },
       "description": "Turn your Breach Cutter into a tool of burning death and destruction at the cost of armor breaking. As a bonus, the extreme internal heating keeps the targets burning for an extended period."
     }
+  ],
+  "frameworks": [
+    {
+      "framework": "Custom Engineered",
+      "saveId": "F672AAF9-492EA6F9-201C43A9-260FAA3B"
+    },
+    {
+      "framework": "Fourth Relic",
+      "saveId": "D326D974-46EB6261-DDA504BD-FCC228DF"
+    },
+    {
+      "framework": "Glyphid Trophy Hunter",
+      "saveId": "FF777A79-425210D7-74F609A6-4E680E0A"
+    },
+    {
+      "framework": "Mechanized",
+      "saveId": "A5E99B77-4509965F-89D306A4-FE3040AD"
+    },
+    {
+      "framework": "Neonband",
+      "saveId": "6DEB89A9-44E5EF58-BB71E494-C835E561"
+    },
+    {
+      "framework": "Scale Brigade",
+      "saveId": "A6A8F1FE-4B985F92-816D13A2-675008B0"
+    },
+    {
+      "framework": "Waster",
+      "saveId": "8B807A33-40DEFD11-94209DB5-121FC7F9"
+    },
+    {
+      "framework": "Builder's Choice",
+      "saveId": "2F24EEDC-4DB6D28B-F16FEE83-47603D25"
+    },
+    {
+      "framework": "MilSpec",
+      "saveId": "80BDBBBF-4D809808-B9A410A2-0A849F49"
+    }
   ]
 }

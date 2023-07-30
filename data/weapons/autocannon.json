@@ -117,5 +117,43 @@
       },
       "description": "Channel your inner war criminal by mixing some neurotoxin into the explosive compound. The rounds deal less direct damage and splash damage, but affected bugs move slower and take lots of damage over time."
     }
+  ],
+  "frameworks": [
+    {
+      "framework": "Custom Engineered",
+      "saveId": "95F7149F-45A0A858-40E185BD-F432AEE2"
+    },
+    {
+      "framework": "Fourth Relic",
+      "saveId": "4B41480F-47B66F7B-447FD494-D93447FA"
+    },
+    {
+      "framework": "Glyphid Trophy Hunter",
+      "saveId": "03958A9E-420BE719-CB2FED9D-E8892868"
+    },
+    {
+      "framework": "Mechanized",
+      "saveId": "8F9C815E-46857ED6-BAE7B49F-1AA2C4D5"
+    },
+    {
+      "framework": "Neonband",
+      "saveId": "F613DB0F-4D00F592-E278BF99-609790FA"
+    },
+    {
+      "framework": "Scale Brigade",
+      "saveId": "7AAA7063-4CCBFC90-CB2837BD-C14CD3AD"
+    },
+    {
+      "framework": "Waster",
+      "saveId": "0EA3504B-4644869B-9A7F6EA4-6D923BBE"
+    },
+    {
+      "framework": "Builder's Choice",
+      "saveId": "2BD0F2BA-49DFF554-3CD0A1B6-16486520"
+    },
+    {
+      "framework": "MilSpec",
+      "saveId": "076FA5C1-46B122FB-3165C880-40542A0B"
+    }
   ]
 }

@@ -126,5 +126,43 @@
       },
       "description": "Pushing things to the limit, this overclock greatly increases damage output at the cost of consistently stunning targets, and the kickback makes it almost impossible to move."
     }
+  ],
+  "frameworks": [
+    {
+      "framework": "Custom Engineered",
+      "saveId": "4699F48B-4D527AB4-023218A5-8D05C160"
+    },
+    {
+      "framework": "Fourth Relic",
+      "saveId": "721CE2E4-4BF1C38E-09DDD59B-1AE72B92"
+    },
+    {
+      "framework": "Glyphid Trophy Hunter",
+      "saveId": "8036CCD2-442F506F-3C798BB4-36EB9BA2"
+    },
+    {
+      "framework": "Mechanized",
+      "saveId": "8CEAD788-4D13A004-01F8B092-2E16FD1E"
+    },
+    {
+      "framework": "Neonband",
+      "saveId": "3DBCB7DF-4A83112B-F7BFF69A-63950A9A"
+    },
+    {
+      "framework": "Scale Brigade",
+      "saveId": "4971E670-46540C24-0BCCECAD-0FD17E3B"
+    },
+    {
+      "framework": "Waster",
+      "saveId": "B72C077C-43A4A173-EF0ABAAF-5408D6B8"
+    },
+    {
+      "framework": "Builder's Choice",
+      "saveId": "EA77CF23-4693445A-E2DCAA97-D6B6F47F"
+    },
+    {
+      "framework": "MilSpec",
+      "saveId": "5CE8B051-4B716188-76D49CAB-2E73E31C"
+    }
   ]
 }

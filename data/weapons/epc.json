@@ -112,5 +112,43 @@
       },
       "description": "By changing how the plasma is layered within the charged projectile, a slow and persistent discharge can be achieved upon impact. However, this does reduce the instant damage done."
     }
+  ],
+  "frameworks": [
+    {
+      "framework": "Custom Engineered",
+      "saveId": "DC0D48EE-44BD4412-FF887087-E6D74446"
+    },
+    {
+      "framework": "Fourth Relic",
+      "saveId": "89553FF7-41491A74-7F50EAAD-93A5F68B"
+    },
+    {
+      "framework": "Glyphid Trophy Hunter",
+      "saveId": "7BE88269-4C991D19-C2CA7694-6B898A90"
+    },
+    {
+      "framework": "Mechanized",
+      "saveId": "EAEA1999-4AC5DFAB-DFCCCFA1-5F7BE8F6"
+    },
+    {
+      "framework": "Neonband",
+      "saveId": "11878D87-411B1FCB-8E2495B3-50D87602"
+    },
+    {
+      "framework": "Scale Brigade",
+      "saveId": "971E901E-4DBCF22C-D6E0D0A9-2C993B35"
+    },
+    {
+      "framework": "Waster",
+      "saveId": "960AEB5D-40792A48-94FFD0A6-1B2A3E07"
+    },
+    {
+      "framework": "Builder's Choice",
+      "saveId": "5F49960A-484A059C-FE32D382-66FA4196"
+    },
+    {
+      "framework": "MilSpec",
+      "saveId": "BC77C657-4DD01194-136AF4BF-ACF287F1"
+    }
   ]
 }

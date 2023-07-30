@@ -146,5 +146,43 @@
       },
       "description": "Enables your weapon to load up to 9 missiles and launch them at once! As an added bonus, the overloaded exhaust ports increase missile velocity and boost their damage based on how many missiles are in the salvo. However, the missiles in the salvo cannot be guided."
     }
+  ],
+  "frameworks": [
+    {
+      "framework": "Custom Engineered",
+      "saveId": "28B6551A-463E74C8-8F7D00AC-4ED834D5"
+    },
+    {
+      "framework": "Fourth Relic",
+      "saveId": "F9726A86-4E5CD5F4-81BEC5AF-1AA25C65"
+    },
+    {
+      "framework": "Glyphid Trophy Hunter",
+      "saveId": "26D4D06C-4A1BB0E2-3E1196B0-48CC81CB"
+    },
+    {
+      "framework": "Mechanized",
+      "saveId": "685B53B5-41B77424-EF4962BE-237CB2BA"
+    },
+    {
+      "framework": "Neonband",
+      "saveId": "1DD84BE9-49295870-5FAA80A4-459F2345"
+    },
+    {
+      "framework": "Scale Brigade",
+      "saveId": "03B54D39-4F3701DA-82C636B7-92210956"
+    },
+    {
+      "framework": "Waster",
+      "saveId": "E3AFB774-47F74B93-1465D59A-CAA53B73"
+    },
+    {
+      "framework": "Builder's Choice",
+      "saveId": "55C147BA-435A63DF-9F1B97B1-B93014FF"
+    },
+    {
+      "framework": "MilSpec",
+      "saveId": "D0DCD685-47519794-BF62B693-FCB23918"
+    }
   ]
 }

@@ -91,5 +91,43 @@
       },
       "description": "Smaller shells designed around a new charge type reduce recoil and increase overall ammo and magazine capacity at the cost of raw damage."
     }
+  ],
+  "frameworks": [
+    {
+      "framework": "Custom Engineered",
+      "saveId": "6394678D-4F3A15F9-923459A2-A419C8D0"
+    },
+    {
+      "framework": "Fourth Relic",
+      "saveId": "EB35F6AB-47B42CFE-79F9CD96-BC0822EB"
+    },
+    {
+      "framework": "Glyphid Trophy Hunter",
+      "saveId": "1DB7E167-41B33181-1AE46DA8-5381C2FC"
+    },
+    {
+      "framework": "Mechanized",
+      "saveId": "AD83A47B-43ADC5D0-08DE3D8D-5B2EE48D"
+    },
+    {
+      "framework": "Neonband",
+      "saveId": "53DAF1CC-48889E12-6B8971A0-3F0EBD57"
+    },
+    {
+      "framework": "Scale Brigade",
+      "saveId": "BC321623-4F0A91B5-CFBCFF94-324243F0"
+    },
+    {
+      "framework": "Waster",
+      "saveId": "DA1AC51F-43DE3AC0-7008328C-CD608B2B"
+    },
+    {
+      "framework": "Builder's Choice",
+      "saveId": "2BEF73DC-42231E2F-B50AF3A4-224C485D"
+    },
+    {
+      "framework": "MilSpec",
+      "saveId": "F4A468F3-451E409C-07E03AA8-F3E8B418"
+    }
   ]
 }

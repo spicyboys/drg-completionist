@@ -117,5 +117,43 @@
       },
       "description": "Drastically increases the energy throughput by pressing the reload button while a beam is firing. Unfortunately, maintaining control requires that you stand still while firing a boosted beam, and the weapon cannot stop firing once boosted until the capacitor is fully discharged. Manually interrupting the beam stresses the capacitor, resulting in a loss of some of the remaining charge."
     }
+  ],
+  "frameworks": [
+    {
+      "framework": "Custom Engineered",
+      "saveId": "345BC739-4E88D6D9-0A2ABBAC-94016220"
+    },
+    {
+      "framework": "Fourth Relic",
+      "saveId": "E24C5EE1-4EA8D73F-08955293-27A6D81D"
+    },
+    {
+      "framework": "Glyphid Trophy Hunter",
+      "saveId": "215EB1CC-4366121F-0A602099-8395008F"
+    },
+    {
+      "framework": "Mechanized",
+      "saveId": "0BD1E4C4-4A614489-19E604A1-70FC5E7F"
+    },
+    {
+      "framework": "Neonband",
+      "saveId": "7B76BEEA-45CDF2EE-339BBDA4-2ED441B8"
+    },
+    {
+      "framework": "Scale Brigade",
+      "saveId": "E137BCD1-41672D51-5F76228A-EB158B2A"
+    },
+    {
+      "framework": "Waster",
+      "saveId": "65B0DFA3-4C35AC33-4689AD81-F2E4AFD5"
+    },
+    {
+      "framework": "Builder's Choice",
+      "saveId": "BE26F7D1-42547292-832F0E94-377F21CE"
+    },
+    {
+      "framework": "MilSpec",
+      "saveId": "896EB8A0-406CC5D2-76A64F83-3851708F"
+    }
   ]
 }

@@ -105,5 +105,43 @@
       },
       "description": "Slow down enemies by locking on to them: the more locks, the slower the enemy gets! The downside is a slightly slower lock-on rate, and the locks can only be maintained for a limited time before the system resets."
     }
+  ],
+  "frameworks": [
+    {
+      "framework": "Custom Engineered",
+      "saveId": "614D0E4C-43D1F219-8CF807AF-493061E7"
+    },
+    {
+      "framework": "Fourth Relic",
+      "saveId": "81DFA42C-49796E18-2BF2F581-BD2AC6BA"
+    },
+    {
+      "framework": "Glyphid Trophy Hunter",
+      "saveId": "223E3D25-442FF92C-7E3A51B5-CF4EF2D0"
+    },
+    {
+      "framework": "Mechanized",
+      "saveId": "9477EBBD-40728795-E06DF3BC-715540B5"
+    },
+    {
+      "framework": "Neonband",
+      "saveId": "A9786B69-4088A5ED-E423619F-FBBA1548"
+    },
+    {
+      "framework": "Scale Brigade",
+      "saveId": "15F9A3B5-40B954F5-52263A88-7952FE0A"
+    },
+    {
+      "framework": "Waster",
+      "saveId": "4E67AF18-4BDC5EA1-57B606BD-281ED7F1"
+    },
+    {
+      "framework": "Builder's Choice",
+      "saveId": "DD6EA56E-45A76126-7732BD8F-23169269"
+    },
+    {
+      "framework": "MilSpec",
+      "saveId": "1D279F85-4D7E36D8-2942F2B2-9EB8EBD4"
+    }
   ]
 }

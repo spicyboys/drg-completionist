@@ -126,5 +126,43 @@
       },
       "description": "Embedded capacitors electrocute targets from the inside when you reload. However, all that tech reduces the raw damage of the bullets and takes up some space in the magazines."
     }
+  ],
+  "frameworks": [
+    {
+      "framework": "Custom Engineered",
+      "saveId": "050FC9F8-482C3667-D83F39B1-28E1BD49"
+    },
+    {
+      "framework": "Fourth Relic",
+      "saveId": "C4683032-4C8A0033-BEE9BA9D-C8CE98AE"
+    },
+    {
+      "framework": "Glyphid Trophy Hunter",
+      "saveId": "41D43A69-42115151-A81770B5-EFF5DDA1"
+    },
+    {
+      "framework": "Mechanized",
+      "saveId": "BC7306CB-4FAA114C-572B9093-C21E83C5"
+    },
+    {
+      "framework": "Neonband",
+      "saveId": "4C45B370-4179FD8D-4164C791-85DA4D8A"
+    },
+    {
+      "framework": "Scale Brigade",
+      "saveId": "F4B009DA-4907633E-8347C198-7E43D5A8"
+    },
+    {
+      "framework": "Waster",
+      "saveId": "744270D5-4824B85D-8A92C78E-A1636986"
+    },
+    {
+      "framework": "Builder's Choice",
+      "saveId": "674F6076-4697F953-51BCEBAB-30D6B065"
+    },
+    {
+      "framework": "MilSpec",
+      "saveId": "1B3289EB-48034314-6F9B50B9-1098827A"
+    }
   ]
 }

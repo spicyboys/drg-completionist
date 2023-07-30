@@ -105,5 +105,43 @@
       },
       "description": "Shoot a turret to turn it into the epicenter of an electric explosion! The bullet modifications unfortunately also lower the direct damage and magazine size."
     }
+  ],
+  "frameworks": [
+    {
+      "framework": "Custom Engineered",
+      "saveId": "0A5394AA-419BA69A-06C0C884-17FC67DE"
+    },
+    {
+      "framework": "Fourth Relic",
+      "saveId": "EDFB9B34-4C862E82-0FE5D8A1-FEEBFF50"
+    },
+    {
+      "framework": "Glyphid Trophy Hunter",
+      "saveId": "2046144B-4082CD8D-C6ECDA99-EF140496"
+    },
+    {
+      "framework": "Mechanized",
+      "saveId": "80F36064-41CD8043-75A0A59F-933C44C9"
+    },
+    {
+      "framework": "Neonband",
+      "saveId": "F8CF2E45-460B9FCE-A332BF88-F5E8939B"
+    },
+    {
+      "framework": "Scale Brigade",
+      "saveId": "69FF15FB-4C2CD7AC-A1EB248F-9E5F0A38"
+    },
+    {
+      "framework": "Waster",
+      "saveId": "E0DD9EA0-4394931D-7C21FFBB-93FC6D64"
+    },
+    {
+      "framework": "Builder's Choice",
+      "saveId": "608A1C6A-486B3436-BBF89D88-B21F5A3E"
+    },
+    {
+      "framework": "MilSpec",
+      "saveId": "814B3FAF-4FD121F2-8AE47388-C99550C3"
+    }
   ]
 }

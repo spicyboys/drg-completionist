@@ -110,5 +110,43 @@
       },
       "description": "These large shells pack a lot more charge for a big increase in damage, but they also take up more space so total ammo is limited."
     }
+  ],
+  "frameworks": [
+    {
+      "framework": "Custom Engineered",
+      "saveId": "429FA4F7-41675666-E9ED0A8F-31833A84"
+    },
+    {
+      "framework": "Fourth Relic",
+      "saveId": "FECD8FAD-4A594A88-32EF4C8E-1E29878B"
+    },
+    {
+      "framework": "Glyphid Trophy Hunter",
+      "saveId": "2180FCDB-40DE53CB-D55F72A0-EA298E21"
+    },
+    {
+      "framework": "Mechanized",
+      "saveId": "21AEBA27-43E667D0-5D782CBB-643DF7D3"
+    },
+    {
+      "framework": "Neonband",
+      "saveId": "48D72213-4231079E-5F5B9D9F-5132A135"
+    },
+    {
+      "framework": "Scale Brigade",
+      "saveId": "03B1BCD8-4ACB720E-F2D75187-83FCF781"
+    },
+    {
+      "framework": "Waster",
+      "saveId": "3377576D-4FEB5FE7-1E477893-497D7597"
+    },
+    {
+      "framework": "Builder's Choice",
+      "saveId": "7952AF00-48C269C9-171661A5-DCEA46B2"
+    },
+    {
+      "framework": "MilSpec",
+      "saveId": "EF50DE17-430FB55A-F2AA92A3-7EEAEC33"
+    }
   ]
 }

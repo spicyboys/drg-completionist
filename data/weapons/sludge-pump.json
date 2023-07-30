@@ -120,5 +120,43 @@
       },
       "description": "The charged shot cohesion is disrupted on firing, instantly shooting out fast-moving fragments in a shotgun-like blast. While spectacular, the modifications result in reduced ammo capacity and an extended reload process."
     }
+  ],
+  "frameworks": [
+    {
+      "framework": "Custom Engineered",
+      "saveId": "B37A9E62-4D2C2BAE-990F109C-E2693B24"
+    },
+    {
+      "framework": "Fourth Relic",
+      "saveId": "F754F55B-47D37442-946AA6B3-FC9972DA"
+    },
+    {
+      "framework": "Glyphid Trophy Hunter",
+      "saveId": "6881AA74-4EB21455-3DF071BD-C6AF6650"
+    },
+    {
+      "framework": "Mechanized",
+      "saveId": "3BE27042-4E7005C5-30DCC2A4-E426698B"
+    },
+    {
+      "framework": "Neonband",
+      "saveId": "CBC7B0BD-43B271AF-4A9DAE98-E74957FD"
+    },
+    {
+      "framework": "Scale Brigade",
+      "saveId": "65D2E54F-4F4ECC6E-4874ACBE-70EAA855"
+    },
+    {
+      "framework": "Waster",
+      "saveId": "8F60967C-4F0D70D0-25CCB19E-33856A76"
+    },
+    {
+      "framework": "Builder's Choice",
+      "saveId": "F706674E-498405B9-083B629B-9A8E6B3B"
+    },
+    {
+      "framework": "MilSpec",
+      "saveId": "5C1B95D2-43E29749-7051FEA4-4716E277"
+    }
   ]
 }

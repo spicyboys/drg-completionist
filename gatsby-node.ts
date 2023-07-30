@@ -9,10 +9,16 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
       type: OverclockTypesJson! @link(by: "name")
     }
 
+    type WeaponsJsonFrameworksJson {
+      saveId: String!
+      framework: WeaponFrameworksJson! @link(by: "name")
+    }
+
     type WeaponsJson implements Node {
       name: String!
       saveId: String!
       overclocks: [WeaponsJsonOverclocks!]!
+      frameworks: [WeaponsJsonFrameworksJson!]!
     }
 
     type MinersJson implements Node {
@@ -41,6 +47,16 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
 
     enum WeaponPaintJobSource {
       MATRIX_CORE
+    }
+
+    type WeaponFrameworksJson implements Node {
+      name: String!
+      source: WeaponFrameworkSource!
+    }
+
+    enum WeaponFrameworkSource {
+      CARGO_CRATE
+      PERFORMANCE_PASS
     }
   `;
     createTypes(typeDefs);

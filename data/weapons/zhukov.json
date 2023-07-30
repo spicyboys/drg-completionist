@@ -92,5 +92,43 @@
       },
       "description": "Specially hardened bullets combined with rerouting escaping gasses back into the chamber greatly increases the raw damage of the weapon, but makes it more difficult to control and removes any bonus to weakpoint hits."
     }
+  ],
+  "frameworks": [
+    {
+      "framework": "Custom Engineered",
+      "saveId": "A7C5C4D5-4C1A446D-6721A2B5-33B9A659"
+    },
+    {
+      "framework": "Fourth Relic",
+      "saveId": "B2320E3B-4E8FFF17-111C27BA-D54262AE"
+    },
+    {
+      "framework": "Glyphid Trophy Hunter",
+      "saveId": "7E5D8DC6-4A96A4AC-695F1EB7-A185BB21"
+    },
+    {
+      "framework": "Mechanized",
+      "saveId": "B5AD8E1A-4344B97E-9B76D691-4708073C"
+    },
+    {
+      "framework": "Neonband",
+      "saveId": "67B7460F-4B06D46C-E81D11B1-FF931D88"
+    },
+    {
+      "framework": "Scale Brigade",
+      "saveId": "B16B3AB2-482A847D-77086391-7EF97CD4"
+    },
+    {
+      "framework": "Waster",
+      "saveId": "51295AA9-411C4C6C-95C9A1AE-EBBFF3C4"
+    },
+    {
+      "framework": "Builder's Choice",
+      "saveId": "40E732A9-4BDA2FB8-7908BFBB-33B88422"
+    },
+    {
+      "framework": "MilSpec",
+      "saveId": "B3023226-4C031909-4EEDAB99-F11E7D65"
+    }
   ]
 }
