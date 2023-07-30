@@ -23,7 +23,7 @@ const getPercent = (
   const numerator = numerators.reduce<number>((p, c) => p + (c ?? 0), 0);
   const denominator = denominators.reduce((p, c) => p + c);
 
-  return Math.ceil((numerator / denominator) * 100);
+  return Number(((numerator / denominator) * 100).toFixed(1));
 };
 
 const getPercentageFromProgress = (
