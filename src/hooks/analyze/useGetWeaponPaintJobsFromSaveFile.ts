@@ -72,7 +72,7 @@ export default function useGetWeaponPaintJobsFromSaveFile(): (
             // individual weapon, but when a paint job is unlocked, it's
             // unlocked for all weapons for that miner, so we just check the
             // first weapon.
-            unlockedItemSkins[miner.weapons[0].saveId].Skins.includes(
+            unlockedItemSkins[miner.weapons[0].saveId]?.Skins.includes(
               weaponPaintJob.weaponPaintJob.saveId
             )
           ) {
