@@ -78,6 +78,11 @@ export default function useParseSaveFile() {
         throw e;
       }
     },
-    [db, getOverclocksFromSaveFile, getWeaponPaintJobsFromSaveFile]
+    [
+      db,
+      getOverclocksFromSaveFile,
+      getWeaponFrameworksFromSaveFile,
+      getWeaponPaintJobsFromSaveFile,
+    ]
   );
 }
