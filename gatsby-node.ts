@@ -42,21 +42,18 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
     type WeaponPaintJobsJson implements Node {
       name: String!
       saveId: String!
-      source: WeaponPaintJobSource!
-    }
-
-    enum WeaponPaintJobSource {
-      MATRIX_CORE
+      source: CollectableSource!
     }
 
     type WeaponFrameworksJson implements Node {
       name: String!
-      source: WeaponFrameworkSource!
+      source: CollectableSource!
     }
 
-    enum WeaponFrameworkSource {
+    enum CollectableSource {
       CARGO_CRATE
       PERFORMANCE_PASS
+      MATRIX_CORE
     }
   `;
     createTypes(typeDefs);
