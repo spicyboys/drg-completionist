@@ -5,6 +5,7 @@ import init, { parse_save_file } from "drg-save-parser";
 import { useDB } from "../db";
 import { z } from "zod";
 import useGetWeaponPaintJobsFromSaveFile from "./useGetWeaponPaintJobsFromSaveFile";
+import useGetWeaponFrameworksFromSaveFile from "./useGetWeaponFrameworksFromSaveFile";
 
 // Wasm-bindgen doesn't support Vec<String>, so we have to throw the whole
 // object back untyped. Since working with untyped data is error-prone, we
@@ -50,6 +51,7 @@ export default function useParseSaveFile() {
   const db = useDB();
   const getOverclocksFromSaveFile = useGetOverclocksFromSaveFile();
   const getWeaponPaintJobsFromSaveFile = useGetWeaponPaintJobsFromSaveFile();
+  const getWeaponFrameworksFromSaveFile = useGetWeaponFrameworksFromSaveFile();
   return useCallback(
     async (f: RcFile): Promise<void> => {
       try {
@@ -62,12 +64,14 @@ export default function useParseSaveFile() {
         // Extract the relevant information from the parsed save file
         const overclocks = getOverclocksFromSaveFile(saveFile);
         const weaponPaintJobs = getWeaponPaintJobsFromSaveFile(saveFile);
+        const weaponFrameworks = getWeaponFrameworksFromSaveFile(saveFile);
 
         // Update the store with the new save file data
         await db.transaction("rw", db.tables, async () => {
           await db.clearAll();
           await db.overclocks.bulkAdd(overclocks);
           await db.weaponPaintjobs.bulkAdd(weaponPaintJobs);
+          await db.frameworks.bulkAdd(weaponFrameworks);
         });
       } catch (e) {
         console.error(e);
