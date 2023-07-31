@@ -6,6 +6,7 @@ import { useDB } from "../db";
 import { z } from "zod";
 import useGetWeaponPaintJobsFromSaveFile from "./useGetWeaponPaintJobsFromSaveFile";
 import useGetWeaponFrameworksFromSaveFile from "./useGetWeaponFrameworksFromSaveFile";
+import useGetArmorPaintJobsFromSaveFile from "./useGetArmorPaintJobsFromSaveFile";
 
 // Wasm-bindgen doesn't support Vec<String>, so we have to throw the whole
 // object back untyped. Since working with untyped data is error-prone, we
@@ -52,6 +53,8 @@ export default function useParseSaveFile() {
   const getOverclocksFromSaveFile = useGetOverclocksFromSaveFile();
   const getWeaponPaintJobsFromSaveFile = useGetWeaponPaintJobsFromSaveFile();
   const getWeaponFrameworksFromSaveFile = useGetWeaponFrameworksFromSaveFile();
+  const getArmorPaintJobsFromSaveFile = useGetArmorPaintJobsFromSaveFile();
+
   return useCallback(
     async (f: RcFile): Promise<void> => {
       try {
@@ -65,6 +68,7 @@ export default function useParseSaveFile() {
         const overclocks = getOverclocksFromSaveFile(saveFile);
         const weaponPaintJobs = getWeaponPaintJobsFromSaveFile(saveFile);
         const weaponFrameworks = getWeaponFrameworksFromSaveFile(saveFile);
+        const armorPaintJobs = getArmorPaintJobsFromSaveFile(saveFile);
 
         // Update the store with the new save file data
         await db.transaction("rw", db.tables, async () => {
@@ -72,6 +76,7 @@ export default function useParseSaveFile() {
           await db.overclocks.bulkAdd(overclocks);
           await db.weaponPaintjobs.bulkAdd(weaponPaintJobs);
           await db.frameworks.bulkAdd(weaponFrameworks);
+          await db.armorPaintjobs.bulkAdd(armorPaintJobs);
         });
       } catch (e) {
         console.error(e);
@@ -80,6 +85,7 @@ export default function useParseSaveFile() {
     },
     [
       db,
+      getArmorPaintJobsFromSaveFile,
       getOverclocksFromSaveFile,
       getWeaponFrameworksFromSaveFile,
       getWeaponPaintJobsFromSaveFile,

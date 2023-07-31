@@ -38,6 +38,7 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
 
     type MinersJsonArmorPaintJobs {
       name: String!
+      saveId: String!
     }
 
     type WeaponPaintJobsJson implements Node {
