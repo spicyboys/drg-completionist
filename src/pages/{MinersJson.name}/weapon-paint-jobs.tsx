@@ -1,10 +1,9 @@
-import React, { useContext, useEffect } from "react";
+import React from "react";
 import { graphql, type PageProps } from "gatsby";
-import { FooterContext } from "../../components/Layout";
 import { Row } from "antd";
 import WeaponPaintJobCard from "../../components/weapon-paint-jobs/WeaponPaintJobCard";
-import useMinerWeaponPaintJobProgress from "../../hooks/useMinerWeaponPaintJobProgress";
-import ProgressFooter from "../../components/ProgressFooter";
+import useMinerWeaponPaintJobProgress from "../../hooks/progress/useMinerWeaponPaintJobProgress";
+import useProgressFooter from "../../hooks/progress/useProgressFooter";
 
 const WeaponPaintJobs = ({
   data: {
@@ -13,12 +12,7 @@ const WeaponPaintJobs = ({
   },
 }: PageProps<Queries.WeaponPaintJobsQuery>) => {
   const progress = useMinerWeaponPaintJobProgress(miner!);
-  const setFooter = useContext(FooterContext);
-  useEffect(() => {
-    if (progress) {
-      setFooter(<ProgressFooter {...progress} />);
-    }
-  }, [setFooter, progress]);
+  useProgressFooter(progress);
 
   return (
     <Row gutter={[16, 16]}>

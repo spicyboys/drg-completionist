@@ -1,13 +1,13 @@
 import { graphql } from "gatsby";
 import useMinerOverclockProgress from "./useMinerOverclockProgress";
 import useMinerWeaponPaintJobProgress from "./useMinerWeaponPaintJobProgress";
-import { type ProgressFooterProps } from "../components/ProgressFooter";
+import { type ProgressFooterProps } from "../../components/ProgressFooter";
+import useMinerArmorPaintJobProgress from "./useMinerArmorPaintJobProgress";
+import useMinerWeaponFrameworkProgress from "./useMinerWeaponFrameworkProgress";
 
-type OverallProgress = Readonly<{
-  overallProgress: ForgeProgress;
-  overclockProgress: ForgeProgress;
-  weaponPaintProgress: ForgeProgress;
-}>;
+type OverallProgress = Readonly<
+  Record<string, ForgeProgress> & { overall: ForgeProgress }
+>;
 
 type ForgeProgress = Readonly<{
   acquired: number;
@@ -67,18 +67,29 @@ export default function useMinerOverallProgress(
 ): OverallProgress | undefined {
   const overclockProgress = useMinerOverclockProgress(miner!);
   const weaponPaintProgress = useMinerWeaponPaintJobProgress(miner!);
+  const armorPaintJobProgress = useMinerArmorPaintJobProgress(miner!);
+  const weaponFrameworkProgress = useMinerWeaponFrameworkProgress(miner!);
 
-  if (!overclockProgress || !weaponPaintProgress) {
+  if (
+    !overclockProgress ||
+    !weaponPaintProgress ||
+    !armorPaintJobProgress ||
+    !weaponFrameworkProgress
+  ) {
     return undefined;
   }
 
   return {
-    overallProgress: getOverallPercentage(
+    overall: getOverallPercentage(
       overclockProgress,
-      weaponPaintProgress
+      weaponPaintProgress,
+      armorPaintJobProgress,
+      weaponFrameworkProgress
     ),
-    overclockProgress: getPercentageFromProgress(overclockProgress),
-    weaponPaintProgress: getPercentageFromProgress(weaponPaintProgress),
+    Overclocks: getPercentageFromProgress(overclockProgress),
+    "Weapon Paint Jobs": getPercentageFromProgress(weaponPaintProgress),
+    "Armor Paint Jobs": getPercentageFromProgress(armorPaintJobProgress),
+    "Weapon Frameworks": getPercentageFromProgress(weaponFrameworkProgress),
   };
 }
 
@@ -86,5 +97,7 @@ export const query = graphql`
   fragment MinerOverallProgressMiner on MinersJson {
     ...MinerOverclockProgressMiner
     ...MinerWeaponPaintJobProgressMiner
+    ...MinerArmorPaintJobProgressMiner
+    ...MinerWeaponFrameworkProgressMiner
   }
 `;

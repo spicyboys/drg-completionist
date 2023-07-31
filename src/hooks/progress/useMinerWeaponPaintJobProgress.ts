@@ -1,7 +1,7 @@
 import { useLiveQuery } from "dexie-react-hooks";
-import { useDB } from "./db";
+import { useDB } from "../db";
 import { graphql } from "gatsby";
-import { type ProgressFooterProps } from "../components/ProgressFooter";
+import { type ProgressFooterProps } from "../../components/ProgressFooter";
 
 export default function useMinerWeaponPaintJobProgress(
   miner: Queries.MinerWeaponPaintJobProgressMinerFragment

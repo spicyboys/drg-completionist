@@ -1,22 +1,16 @@
-import React, { useContext, useEffect } from "react";
+import React from "react";
 import { graphql, type PageProps } from "gatsby";
 import WeaponDivider from "../../components/WeaponDivider";
 import { Row } from "antd";
 import OverclockCard from "../../components/overclocks/OverclockCard";
-import { FooterContext } from "../../components/Layout";
-import useMinerOverclockProgress from "../../hooks/useMinerOverclockProgress";
-import ProgressFooter from "../../components/ProgressFooter";
+import useMinerOverclockProgress from "../../hooks/progress/useMinerOverclockProgress";
+import useProgressFooter from "../../hooks/progress/useProgressFooter";
 
 const Overclocks = ({
   data: { minersJson: miner },
 }: PageProps<Queries.OverclocksQuery>) => {
   const progress = useMinerOverclockProgress(miner!);
-  const setFooter = useContext(FooterContext);
-  useEffect(() => {
-    if (progress) {
-      setFooter(<ProgressFooter {...progress} />);
-    }
-  }, [progress, setFooter]);
+  useProgressFooter(progress);
 
   return (
     <>
