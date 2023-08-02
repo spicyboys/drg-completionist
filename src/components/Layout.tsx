@@ -97,6 +97,7 @@ export default function Layout({
       layout='mix'
       title='DRG Completionist'
       theme='dark'
+      navTheme='realDark'
       logo={
         <StaticImage
           src='../images/assignment.png'
