@@ -40,7 +40,7 @@ const IndexPage = ({
   // #endregion
 
   return (
-    <main>
+    <>
       <Card
         title={
           <>
@@ -48,7 +48,7 @@ const IndexPage = ({
             Construction
           </>
         }
-        style={{ background: '#6E5B0C', maxWidth: 800 }}
+        style={{ background: '#6E5B0C', maxWidth: 800, margin: '0 auto' }}
         ref={cardRef}>
         <Space wrap={isWrapped}>
           <StaticImage
@@ -81,7 +81,7 @@ const IndexPage = ({
       {miners.map((miner) => (
         <OverviewSection miner={miner} key={miner.name} />
       ))}
-    </main>
+    </>
   );
 };
 
