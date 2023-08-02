@@ -4832,10 +4832,10 @@ dotenv@^8.6.0:
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.6.0.tgz#061af664d19f7f4d8fc6e4ff9b584ce237adcb8b"
   integrity sha512-IrPdXQsk2BbzvCBGBOTmmSH5SodmqZNt4ERAZDmW4CT+tL8VtvinqywuANaFu4bOMWki16nqf0e4oC0QIaDr/g==
 
-drg-save-parser@^4.0.0:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/drg-save-parser/-/drg-save-parser-4.0.1.tgz#5b9026260c31396bec8a2471dae9f3e9fb59faf1"
-  integrity sha512-hYCupWukkcZEZAXFK6YztNAmyTcayC6UW66YwvRKhe7w179/oWaRhdBRy6VT0A1JaDVyd+YqjrPe11UzA5AI+g==
+drg-save-parser@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/drg-save-parser/-/drg-save-parser-4.0.2.tgz#d017e90b98e8931fab932bd337a67f8d2b54eaf0"
+  integrity sha512-M0wULlSizZ1fqNY3kmYIY3f3PhiFLwOnIyYdtPhfe43s6Zx2amaee6t129fSmlOIQ+Gh9prfYdnc0CzdZEbCrw==
 
 duplexer@^0.1.2:
   version "0.1.2"
