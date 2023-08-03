@@ -129,6 +129,10 @@
     {
       "framework": "MilSpec",
       "saveId": "B3023226-4C031909-4EEDAB99-F11E7D65"
+    },
+    {
+      "framework": "Infected",
+      "saveId": "0542F5FF-409EAE62-3A72F5A0-D410933A"
     }
   ]
 }

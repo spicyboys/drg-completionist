@@ -43,5 +43,11 @@
     "name": "MilSpec",
     "source": "PERFORMANCE_PASS",
     "icon": "./weapon-framework-icons/mil-spec.png"
+  },
+  {
+    "name": "Infected",
+    "source": "PERFORMANCE_PASS",
+    "icon": "./weapon-framework-icons/infected.png",
+    "season": 4
   }
 ]
