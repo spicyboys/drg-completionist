@@ -1,11 +1,11 @@
-import React from "react";
-import { Card, Col, Divider, Row, Space, Tooltip, Typography } from "antd";
-import Meta from "antd/lib/card/Meta";
-import OverclockIcon from "./OverclockIcon";
-import OverclockPrice from "./OverclockPrice";
-import { graphql } from "gatsby";
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
-import nullthrows from "../../utils/nullthrows";
+import React from 'react';
+import { Card, Col, Divider, Row, Space, Tooltip, Typography } from 'antd';
+import Meta from 'antd/lib/card/Meta';
+import OverclockIcon from './OverclockIcon';
+import OverclockPrice from './OverclockPrice';
+import { graphql } from 'gatsby';
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
+import nullthrows from '../../utils/nullthrows';
 
 const { Paragraph, Text, Title } = Typography;
 
@@ -21,38 +21,39 @@ export default function OverclockCardPopover({
       <Meta
         style={{}}
         description={
-          <Row align="middle" justify="space-around">
+          <Row align='middle' justify='space-around'>
             <Col span={16}>
               <Title level={4}>{overclock.name}</Title>
             </Col>
             <Col span={8}>
-              <Tooltip placement="bottomRight" title={weapon.name}>
+              <Tooltip placement='bottomRight' title={weapon.name}>
                 <GatsbyImage
                   alt={weapon.name}
                   image={nullthrows(
                     weapon.overclockPopoverWeaponOutline?.childImageSharp
                       ?.gatsbyImageData
                   )}
-                  style={{ height: 50, width: "auto" }}
+                  style={{ height: 50, width: 'auto' }}
                 />
               </Tooltip>
             </Col>
           </Row>
         }
       />
-      <Divider style={{ marginTop: "12px", marginBottom: "24px" }} />
+      <Divider style={{ marginTop: '12px', marginBottom: '24px' }} />
       <OverclockIcon overclock={overclock} />
       <Divider dashed />
       {overclock.effects?.buffs?.map((buff) => (
-        <Row key={buff} justify="center">
+        <Row key={buff} justify='center'>
           <Col>
             <Space>
               <StaticImage
-                alt="Buff Effect"
-                src="../../images/buff.png"
+                alt='Buff Effect'
+                src='../../images/buff.png'
                 height={10}
+                style={{ marginTop: 6 }}
               />
-              <Text strong type="success">
+              <Text strong type='success'>
                 {buff}
               </Text>
             </Space>
@@ -60,15 +61,16 @@ export default function OverclockCardPopover({
         </Row>
       ))}
       {overclock.effects?.nerfs?.map((nerf) => (
-        <Row key={nerf} justify="center">
+        <Row key={nerf} justify='center'>
           <Col>
             <Space>
               <StaticImage
-                alt="Nerf Effect"
-                src="../../images/nerf.png"
+                alt='Nerf Effect'
+                src='../../images/nerf.png'
                 height={10}
+                style={{ marginTop: 6 }}
               />
-              <Text strong type="danger">
+              <Text strong type='danger'>
                 {nerf}
               </Text>
             </Space>
