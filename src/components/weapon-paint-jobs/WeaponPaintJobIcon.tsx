@@ -8,7 +8,6 @@ export default function WeaponPaintjobIcon({
 }: {
   paintJob: Queries.WeaponPaintJobIconWeaponPaintJobFragment;
 }) {
-  console.log(paintJob);
   return (
     <div
       style={{
