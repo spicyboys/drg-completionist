@@ -1,0 +1,121 @@
+type MinersJson implements Node {
+  weapons: [WeaponsJson!]! @link(by: "name")
+
+  """
+  The color used to represent the miner in the UI.
+  """
+  color: String!
+
+  """
+  The color used when content needs to be displayed on top of the miner's color.
+  """
+  contrastColor: String!
+
+  name: String!
+
+  """
+  In the save file, there is a section called "CharacterSaves" which contains
+  a list of unlocks for each miner. The "SavegameID" field of each item in that
+  section corresponds to the "saveId" field of a miner.
+  """
+  saveId: String!
+
+  """
+  Common weapon paint jobs share an icon and colorway across all miners and
+  weapons (but are still unlocked on a per-miner basis).
+  """
+  commonWeaponPaintJobs: [MinersJsonCommonWeaponPaintJobs!]!
+
+  """
+  Unique weapon paint jobs have a unique icon and colorway for each miner.
+  """
+  uniqueWeaponPaintJobs: [MinersJsonUniqueWeaponPaintJobs!]!
+
+  """
+  Armor paint jobs are collected and unique at the miner level.
+  """
+  armorPaintJobs: [MinersJsonArmorPaintJobs!]!
+}
+
+type WeaponsJson implements Node {
+  name: String!
+
+  """
+  In the save file, there is a map section called "UnlockedItemSkins", which
+  contains a list of unlocks for each weapon. The "key" of that map corresponds
+  to the "saveId" field of a weapon.
+  """
+  saveId: String!
+
+  """
+  Each weapon has a unique set of overclocks with unique icons and properties.
+  """
+  overclocks: [WeaponsJsonOverclocks!]!
+
+  """
+  Unlike weapon paint jobs, weapon frameworks are collected at the weapon level,
+  despite being the same for each weapon.
+  """
+  frameworks: [WeaponsJsonFrameworksJson!]!
+}
+
+type WeaponsJsonOverclocks {
+  name: String!
+  saveId: String!
+  type: OverclockTypesJson! @link(by: "name")
+}
+
+type WeaponsJsonFrameworksJson {
+  saveId: String!
+  framework: WeaponFrameworksJson! @link(by: "name")
+}
+
+type MinersJsonCommonWeaponPaintJobs {
+  weaponPaintJob: CommonWeaponPaintJobsJson! @link(by: "name")
+  saveId: String
+}
+
+"""
+Weapon paint jobs, unlike their framework counterparts, are collected at the
+miner level, not the weapon level.
+There are two types of weapon paint jobs:
+  * common ones which share an icon and colorway across all miners and
+    weapons
+  * unique ones which have a unique icon and colorway for each miner
+"""
+interface WeaponPaintJob {
+  name: String!
+  saveId: String!
+  icon: File!
+  source: CollectableSource!
+}
+
+type CommonWeaponPaintJobsJson implements Node & WeaponPaintJob {
+  name: String!
+  saveId: String!
+  icon: File! @fileByRelativePath
+  source: CollectableSource!
+}
+
+type MinersJsonUniqueWeaponPaintJobs implements WeaponPaintJob {
+  name: String!
+  saveId: String!
+  icon: File! @fileByRelativePath
+  source: CollectableSource!
+}
+
+type MinersJsonArmorPaintJobs {
+  name: String!
+  saveId: String!
+}
+
+type WeaponFrameworksJson implements Node {
+  name: String!
+  source: CollectableSource!
+}
+
+enum CollectableSource {
+  CARGO_CRATE
+  PERFORMANCE_PASS
+  MATRIX_CORE
+}

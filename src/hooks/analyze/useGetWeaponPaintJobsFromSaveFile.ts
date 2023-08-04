@@ -27,7 +27,7 @@ export default function useGetWeaponPaintJobsFromSaveFile(): (
       allMinersJson {
         nodes {
           name
-          weaponPaintJobs {
+          commonWeaponPaintJobs {
             weaponPaintJob {
               name
               saveId
@@ -54,14 +54,20 @@ export default function useGetWeaponPaintJobsFromSaveFile(): (
     }: SaveFile) => {
       const acquiredWeaponPaintJobs: WeaponPaintJobEntry[] = [];
       for (const miner of miners) {
-        for (const weaponPaintJob of miner.weaponPaintJobs) {
-          if (unforgedSchematics?.includes(weaponPaintJob.saveId)) {
+        for (const weaponPaintJob of miner.commonWeaponPaintJobs) {
+          if (
+            weaponPaintJob.saveId &&
+            unforgedSchematics?.includes(weaponPaintJob.saveId)
+          ) {
             acquiredWeaponPaintJobs.push({
               miner: miner.name,
               name: weaponPaintJob.weaponPaintJob.name,
               isForged: false,
             });
-          } else if (forgedSchematics?.includes(weaponPaintJob.saveId)) {
+          } else if (
+            weaponPaintJob.saveId &&
+            forgedSchematics?.includes(weaponPaintJob.saveId)
+          ) {
             acquiredWeaponPaintJobs.push({
               miner: miner.name,
               name: weaponPaintJob.weaponPaintJob.name,

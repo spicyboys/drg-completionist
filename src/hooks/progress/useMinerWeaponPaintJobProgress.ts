@@ -16,7 +16,8 @@ export default function useMinerWeaponPaintJobProgress(
     return undefined;
   }
 
-  const totalItems = miner.weaponPaintJobs?.length;
+  const totalItems =
+    miner.commonWeaponPaintJobs.length + miner.uniqueWeaponPaintJobs.length;
   const completedItems = acquiredWeaponPaintJobs.filter(
     (weaponPaintJob) => weaponPaintJob.isForged
   ).length;
@@ -32,10 +33,13 @@ export default function useMinerWeaponPaintJobProgress(
 export const query = graphql`
   fragment MinerWeaponPaintJobProgressMiner on MinersJson {
     name
-    weaponPaintJobs {
+    commonWeaponPaintJobs {
       weaponPaintJob {
         name
       }
+    }
+    uniqueWeaponPaintJobs {
+      name
     }
   }
 `;

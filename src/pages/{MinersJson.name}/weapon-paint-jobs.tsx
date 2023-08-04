@@ -6,20 +6,25 @@ import useMinerWeaponPaintJobProgress from "../../hooks/progress/useMinerWeaponP
 import useProgressFooter from "../../hooks/progress/useProgressFooter";
 
 const WeaponPaintJobs = ({
-  data: {
-    minersJson: miner,
-    allWeaponPaintJobsJson: { nodes: weaponPaintJobs },
-  },
+  data: { minersJson: miner },
 }: PageProps<Queries.WeaponPaintJobsQuery>) => {
   const progress = useMinerWeaponPaintJobProgress(miner!);
   useProgressFooter(progress);
+
+  console.log(miner);
+  const weaponPaintJobs = [
+    ...miner!.commonWeaponPaintJobs.map(
+      (weaponPaintJob) => weaponPaintJob.weaponPaintJob
+    ),
+    ...miner!.uniqueWeaponPaintJobs,
+  ];
 
   return (
     <Row gutter={[16, 16]}>
       {weaponPaintJobs.map((weaponPaintJob) => (
         <WeaponPaintJobCard
-          key={weaponPaintJob!.name}
-          paintJob={weaponPaintJob!}
+          key={weaponPaintJob.name}
+          paintJob={weaponPaintJob}
           miner={miner!}
         />
       ))}
@@ -33,15 +38,16 @@ export const query = graphql`
   query WeaponPaintJobs($id: String) {
     minersJson(id: { eq: $id }) {
       name
-      ...ArmorPaintJobCardMiner
-      ...MinerWeaponPaintJobProgressMiner
-    }
-
-    allWeaponPaintJobsJson {
-      nodes {
-        name
+      commonWeaponPaintJobs {
+        weaponPaintJob {
+          ...WeaponPaintJobCardWeaponPaintJob
+        }
+      }
+      uniqueWeaponPaintJobs {
         ...WeaponPaintJobCardWeaponPaintJob
       }
+      ...ArmorPaintJobCardMiner
+      ...MinerWeaponPaintJobProgressMiner
     }
   }
 `;

@@ -131,7 +131,7 @@
         "saveId": "24149071-49B39F32-3FDA31A1-0E4E8DE2"
       }
     ],
-    "weaponPaintJobs": [
+    "commonWeaponPaintJobs": [
       {
         "weaponPaintJob": "Beyond the Circuit",
         "saveId": "0A63FD78-4819176E-FA7179AE-38892D6E"
@@ -211,6 +211,26 @@
       {
         "weaponPaintJob": "Salt Crystal",
         "saveId": "BCE54B63-4BCF6621-5CB30CA7-2DDEBE60"
+      },
+      {
+        "weaponPaintJob": "Chlorine"
+      },
+      {
+        "weaponPaintJob": "Dune Marauder"
+      },
+      {
+        "weaponPaintJob": "Lazulite"
+      },
+      {
+        "weaponPaintJob": "Lemon Clean"
+      }
+    ],
+    "uniqueWeaponPaintJobs": [
+      {
+        "name": "Platinum",
+        "saveId": "E0050CCE-4503A1D5-6E060AB7-D7E9E2D7",
+        "icon": "./weapon-paint-job-icons/platinum-driller.png",
+        "source": "PERFORMANCE_PASS"
       }
     ]
   },
@@ -346,7 +366,7 @@
         "saveId": "24149071-49B39F32-3FDA31A1-0E4E8DE2"
       }
     ],
-    "weaponPaintJobs": [
+    "commonWeaponPaintJobs": [
       {
         "weaponPaintJob": "Beyond the Circuit",
         "saveId": "9F44106D-4B66DD24-C5BB749A-45CB7AF2"
@@ -426,6 +446,26 @@
       {
         "weaponPaintJob": "Salt Crystal",
         "saveId": "6BE46F7C-46FE5624-06C777B9-58A81EDE"
+      },
+      {
+        "weaponPaintJob": "Chlorine"
+      },
+      {
+        "weaponPaintJob": "Dune Marauder"
+      },
+      {
+        "weaponPaintJob": "Lazulite"
+      },
+      {
+        "weaponPaintJob": "Lemon Clean"
+      }
+    ],
+    "uniqueWeaponPaintJobs": [
+      {
+        "name": "Platinum",
+        "saveId": "1611C7A5-4A1469B4-456123A6-43FCCD82",
+        "icon": "./weapon-paint-job-icons/platinum-engineer.png",
+        "source": "PERFORMANCE_PASS"
       }
     ]
   },
@@ -561,7 +601,7 @@
         "saveId": "24149071-49B39F32-3FDA31A1-0E4E8DE2"
       }
     ],
-    "weaponPaintJobs": [
+    "commonWeaponPaintJobs": [
       {
         "weaponPaintJob": "Beyond the Circuit",
         "saveId": "D16CA418-4E91DB06-96837EA9-AAF5B29C"
@@ -641,6 +681,26 @@
       {
         "weaponPaintJob": "Salt Crystal",
         "saveId": "B69D6611-4762CC85-85DF1B9C-2FF42D5C"
+      },
+      {
+        "weaponPaintJob": "Chlorine"
+      },
+      {
+        "weaponPaintJob": "Dune Marauder"
+      },
+      {
+        "weaponPaintJob": "Lazulite"
+      },
+      {
+        "weaponPaintJob": "Lemon Clean"
+      }
+    ],
+    "uniqueWeaponPaintJobs": [
+      {
+        "name": "Platinum",
+        "saveId": "FA330550-456BEB2E-F7E16B86-454DA111",
+        "icon": "./weapon-paint-job-icons/platinum-gunner.png",
+        "source": "PERFORMANCE_PASS"
       }
     ]
   },
@@ -776,7 +836,7 @@
         "saveId": "24149071-49B39F32-3FDA31A1-0E4E8DE2"
       }
     ],
-    "weaponPaintJobs": [
+    "commonWeaponPaintJobs": [
       {
         "weaponPaintJob": "Beyond the Circuit",
         "saveId": "FF71A700-4A0A0E5D-7488EA99-9F971622"
@@ -856,6 +916,26 @@
       {
         "weaponPaintJob": "Salt Crystal",
         "saveId": "D33F3CE7-457066D2-A5A8BAAC-EFC04DC2"
+      },
+      {
+        "weaponPaintJob": "Chlorine"
+      },
+      {
+        "weaponPaintJob": "Dune Marauder"
+      },
+      {
+        "weaponPaintJob": "Lazulite"
+      },
+      {
+        "weaponPaintJob": "Lemon Clean"
+      }
+    ],
+    "uniqueWeaponPaintJobs": [
+      {
+        "name": "Platinum",
+        "saveId": "875169D4-47162A46-2A3D689F-BB914CAE",
+        "icon": "./weapon-paint-job-icons/platinum-scout.png",
+        "source": "PERFORMANCE_PASS"
       }
     ]
   }

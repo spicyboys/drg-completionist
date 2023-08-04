@@ -8,6 +8,7 @@ export default function WeaponPaintjobIcon({
 }: {
   paintJob: Queries.WeaponPaintJobIconWeaponPaintJobFragment;
 }) {
+  console.log(paintJob);
   return (
     <div
       style={{
@@ -25,7 +26,7 @@ export default function WeaponPaintjobIcon({
 }
 
 export const query = graphql`
-  fragment WeaponPaintJobIconWeaponPaintJob on WeaponPaintJobsJson {
+  fragment WeaponPaintJobIconWeaponPaintJob on WeaponPaintJob {
     name
     icon {
       childImageSharp {

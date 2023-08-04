@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import { Badge, Card, Col } from "antd";
 import { useDB } from "../../hooks/db";
-import ArmorPaintJobIcon from "./WeaponPaintJobIcon";
+import WeaponPaintJobIcon from "./WeaponPaintJobIcon";
 import { graphql } from "gatsby";
 import { useLiveQuery } from "dexie-react-hooks";
 
@@ -58,7 +58,7 @@ export default function WeaponPaintJobCard({
                 : undefined,
           }}
         >
-          <ArmorPaintJobIcon paintJob={paintJob} />
+          <WeaponPaintJobIcon paintJob={paintJob} />
         </Card>
       </Badge.Ribbon>
     </Col>
@@ -71,7 +71,7 @@ export const query = graphql`
     color
   }
 
-  fragment WeaponPaintJobCardWeaponPaintJob on WeaponPaintJobsJson {
+  fragment WeaponPaintJobCardWeaponPaintJob on WeaponPaintJob {
     name
     source
     ...WeaponPaintJobIconWeaponPaintJob
