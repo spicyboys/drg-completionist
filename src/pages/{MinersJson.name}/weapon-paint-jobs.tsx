@@ -11,7 +11,6 @@ const WeaponPaintJobs = ({
   const progress = useMinerWeaponPaintJobProgress(miner!);
   useProgressFooter(progress);
 
-  console.log(miner);
   const weaponPaintJobs = [
     ...miner!.commonWeaponPaintJobs.map(
       (weaponPaintJob) => weaponPaintJob.weaponPaintJob
