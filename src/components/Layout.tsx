@@ -60,6 +60,7 @@ export default function Layout({
             <GatsbyImage
               image={nullthrows(miner.icon?.childImageSharp?.gatsbyImageData)}
               alt={miner.name}
+              style={{ verticalAlign: "sub" }}
             />
           ),
           routes: [
@@ -149,9 +150,11 @@ export default function Layout({
         ];
       }}
       route={menuItems}
-      menuItemRender={(item, dom) =>
-        item.path ? <Link to={item.path}>{dom}</Link> : dom
-      }
+      menuItemRender={(item, dom) => (
+        <div style={{ display: "flex", alignItems: "center" }}>
+          {item.path ? <Link to={item.path}>{dom}</Link> : dom}
+        </div>
+      )}
     >
       <PageContainer breadcrumbRender={false}>
         <ProCard
