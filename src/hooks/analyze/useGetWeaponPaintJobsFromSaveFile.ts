@@ -34,6 +34,10 @@ export default function useGetWeaponPaintJobsFromSaveFile(): (
             }
             saveId
           }
+          uniqueWeaponPaintJobs {
+            name
+            saveId
+          }
           weapons {
             saveId
           }
@@ -85,6 +89,20 @@ export default function useGetWeaponPaintJobsFromSaveFile(): (
             acquiredWeaponPaintJobs.push({
               miner: miner.name,
               name: weaponPaintJob.weaponPaintJob.name,
+              isForged: true,
+            });
+          }
+        }
+
+        for (const weaponPaintJob of miner.uniqueWeaponPaintJobs) {
+          if (
+            unlockedItemSkins[miner.weapons[0].saveId]?.Skins.includes(
+              weaponPaintJob.saveId
+            )
+          ) {
+            acquiredWeaponPaintJobs.push({
+              miner: miner.name,
+              name: weaponPaintJob.name,
               isForged: true,
             });
           }
