@@ -129,6 +129,34 @@
         "name": "Scale Brigade",
         "icon": "./armor-paint-job-icons/common/scale-brigade.png",
         "saveId": "24149071-49B39F32-3FDA31A1-0E4E8DE2"
+      },
+      {
+        "name": "Brassy Swirls",
+        "icon": "./armor-paint-job-icons/driller/brassy-swirls.png",
+        "saveId": "09783549-4E3099A5-2DEDD3A8-449C0B1E",
+        "season": 4,
+        "source": "PERFORMANCE_PASS"
+      },
+      {
+        "name": "Brushed Metal",
+        "icon": "./armor-paint-job-icons/driller/brushed-metal.png",
+        "saveId": "AB957D8B-46315B34-4E360F92-B8B0CAD4",
+        "season": 4,
+        "source": "PERFORMANCE_PASS"
+      },
+      {
+        "name": "Plastic Coating",
+        "icon": "./armor-paint-job-icons/driller/plastic-coating.png",
+        "saveId": "9818676E-4D03E724-67695CB0-D1059D17",
+        "season": 4,
+        "source": "PERFORMANCE_PASS"
+      },
+      {
+        "name": "Pretty in Purple",
+        "icon": "./armor-paint-job-icons/driller/pretty-in-purple.png",
+        "saveId": "9E117C00-4CB24087-7E44E781-B8B09D20",
+        "season": 4,
+        "source": "PERFORMANCE_PASS"
       }
     ],
     "commonWeaponPaintJobs": [
@@ -364,6 +392,34 @@
         "name": "Scale Brigade",
         "icon": "./armor-paint-job-icons/common/scale-brigade.png",
         "saveId": "24149071-49B39F32-3FDA31A1-0E4E8DE2"
+      },
+      {
+        "name": "Brassy Swirls",
+        "icon": "./armor-paint-job-icons/engineer/brassy-swirls.png",
+        "saveId": "E08B5B1D-412B31B7-3D8EB8A6-C1E8E50D",
+        "season": 4,
+        "source": "PERFORMANCE_PASS"
+      },
+      {
+        "name": "Brushed Metal",
+        "icon": "./armor-paint-job-icons/engineer/brushed-metal.png",
+        "saveId": "DA6C211C-48067949-2844A2AA-1E5E4FF9",
+        "season": 4,
+        "source": "PERFORMANCE_PASS"
+      },
+      {
+        "name": "Plastic Coating",
+        "icon": "./armor-paint-job-icons/engineer/plastic-coating.png",
+        "saveId": "E577E42E-4E79523B-6601C3BC-6B656873",
+        "season": 4,
+        "source": "PERFORMANCE_PASS"
+      },
+      {
+        "name": "Pretty in Purple",
+        "icon": "./armor-paint-job-icons/engineer/pretty-in-purple.png",
+        "saveId": "51C3CF56-449A712E-E30061B4-7A868465",
+        "season": 4,
+        "source": "PERFORMANCE_PASS"
       }
     ],
     "commonWeaponPaintJobs": [
@@ -599,6 +655,34 @@
         "name": "Scale Brigade",
         "icon": "./armor-paint-job-icons/common/scale-brigade.png",
         "saveId": "24149071-49B39F32-3FDA31A1-0E4E8DE2"
+      },
+      {
+        "name": "Brassy Swirls",
+        "icon": "./armor-paint-job-icons/gunner/brassy-swirls.png",
+        "saveId": "92CC7200-4DFDFC78-F99EB9BA-B810D4C8",
+        "season": 4,
+        "source": "PERFORMANCE_PASS"
+      },
+      {
+        "name": "Brushed Metal",
+        "icon": "./armor-paint-job-icons/gunner/brushed-metal.png",
+        "saveId": "4CCBC832-4EB9259A-415B8AB4-446EFC30",
+        "season": 4,
+        "source": "PERFORMANCE_PASS"
+      },
+      {
+        "name": "Plastic Coating",
+        "icon": "./armor-paint-job-icons/gunner/plastic-coating.png",
+        "saveId": "FFABAE23-49B3C744-9DAF45A9-97BE8FA2",
+        "season": 4,
+        "source": "PERFORMANCE_PASS"
+      },
+      {
+        "name": "Pretty in Purple",
+        "icon": "./armor-paint-job-icons/gunner/pretty-in-purple.png",
+        "saveId": "3B9C3279-406C6A41-DF0418B7-422D6250",
+        "season": 4,
+        "source": "PERFORMANCE_PASS"
       }
     ],
     "commonWeaponPaintJobs": [
@@ -834,6 +918,34 @@
         "name": "Scale Brigade",
         "icon": "./armor-paint-job-icons/common/scale-brigade.png",
         "saveId": "24149071-49B39F32-3FDA31A1-0E4E8DE2"
+      },
+      {
+        "name": "Brassy Swirls",
+        "icon": "./armor-paint-job-icons/scout/brassy-swirls.png",
+        "saveId": "CA6D7499-4435994B-CBFF358D-63329881",
+        "season": 4,
+        "source": "PERFORMANCE_PASS"
+      },
+      {
+        "name": "Brushed Metal",
+        "icon": "./armor-paint-job-icons/scout/brushed-metal.png",
+        "saveId": "F6C92EB9-4ADCB6BA-24744892-1AD14605",
+        "season": 4,
+        "source": "PERFORMANCE_PASS"
+      },
+      {
+        "name": "Plastic Coating",
+        "icon": "./armor-paint-job-icons/scout/plastic-coating.png",
+        "saveId": "50F9317E-416C25A5-96B140AC-C311CDB8",
+        "season": 4,
+        "source": "PERFORMANCE_PASS"
+      },
+      {
+        "name": "Pretty in Purple",
+        "icon": "./armor-paint-job-icons/scout/pretty-in-purple.png",
+        "saveId": "57A0A328-440E7BF5-EA32EBA0-1D1E19E8",
+        "season": 4,
+        "source": "PERFORMANCE_PASS"
       }
     ],
     "commonWeaponPaintJobs": [
