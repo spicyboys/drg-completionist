@@ -73,7 +73,7 @@ export default function ProgressFooter({
           position: "absolute",
           right: 0,
           transition: "all 0.3s",
-          width: `${100 - progress}%`,
+          width: `${(100 - progress).toFixed(2)}%`,
           zIndex: 1,
         }}
       ></div>
@@ -87,8 +87,8 @@ export default function ProgressFooter({
           transition: "all 0.3s",
           width:
             partialProgress === undefined
-              ? `${100 - progress}%`
-              : `${100 - progress - partialProgress}%`,
+              ? `${(100 - progress).toFixed(2)}%`
+              : `${(100 - progress - partialProgress).toFixed(2)}%`,
           zIndex: 2,
         }}
       ></div>
