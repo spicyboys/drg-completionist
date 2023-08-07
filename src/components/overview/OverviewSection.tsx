@@ -1,21 +1,25 @@
-import { Row, Col, Card, Progress, Divider, Typography, Tooltip } from "antd";
+import { Row, Col, Divider, Typography } from "antd";
 import { graphql } from "gatsby";
 import React from "react";
-import useMinerOverallProgress from "../../hooks/progress/useMinerOverallProgress";
 import { GatsbyImage } from "gatsby-plugin-image";
 import nullthrows from "../../utils/nullthrows";
+import useMinerOverclockProgress from "../../hooks/progress/useMinerOverclockProgress";
+import useMinerWeaponPaintJobProgress from "../../hooks/progress/useMinerWeaponPaintJobProgress";
+import useMinerArmorPaintJobProgress from "../../hooks/progress/useMinerArmorPaintJobProgress";
+import useMinerWeaponFrameworkProgress from "../../hooks/progress/useMinerWeaponFrameworkProgress";
+import OverviewProgressCard from "./OverviewProgressCard";
+import OverallProgressBar from "./OverallProgressBar";
 const { Title } = Typography;
-
-const isComplete = (percent: number | undefined) => {
-  return percent && percent >= 100 ? "success" : "active";
-};
 
 const OverviewSection = ({
   miner,
 }: {
   miner: Queries.OverviewSectionMinerFragment;
 }): React.JSX.Element => {
-  const { overall, ...progress } = useMinerOverallProgress(miner) ?? {};
+  const overclockProgress = useMinerOverclockProgress(miner!);
+  const weaponPaintJobProgress = useMinerWeaponPaintJobProgress(miner!);
+  const armorPaintJobProgress = useMinerArmorPaintJobProgress(miner!);
+  const weaponFrameworkProgress = useMinerWeaponFrameworkProgress(miner!);
 
   return (
     <>
@@ -32,42 +36,30 @@ const OverviewSection = ({
           />
         </Col>
         <Col flex="auto">
-          <Tooltip
-            title={`Forged: ${overall?.forged ?? 0}% | Unforged: ${
-              overall?.unforged ?? 0
-            }% | Total: ${overall?.acquired ?? 0}%`}
-            overlayStyle={{ maxWidth: 600 }}
-          >
-            <Progress
-              status={isComplete(overall?.forged)}
-              percent={overall?.acquired}
-              success={{ percent: overall?.forged }}
-            />
-          </Tooltip>
+          <OverallProgressBar
+            progresses={[
+              overclockProgress,
+              weaponPaintJobProgress,
+              weaponFrameworkProgress,
+              armorPaintJobProgress,
+            ]}
+          />
         </Col>
       </Row>
       <Row gutter={[16, 24]} justify="center">
-        {Object.entries(progress).map(([key, p]) => (
-          <Col key={key}>
-            <Card title={key}>
-              <Tooltip
-                title={`Forged: ${p?.forged ?? 0}% | Unforged: ${
-                  p?.unforged ?? 0
-                }% | Total: ${p?.acquired ?? 0}%`}
-                overlayStyle={{ maxWidth: 600 }}
-              >
-                <Progress
-                  type="circle"
-                  status={isComplete(p?.forged)}
-                  percent={p?.acquired}
-                  success={{
-                    percent: p?.forged,
-                  }}
-                />
-              </Tooltip>
-            </Card>
-          </Col>
-        ))}
+        <OverviewProgressCard title="Overclocks" progress={overclockProgress} />
+        <OverviewProgressCard
+          title="Weapon Paint Jobs"
+          progress={weaponPaintJobProgress}
+        />
+        <OverviewProgressCard
+          title="Weapon Frameworks"
+          progress={weaponFrameworkProgress}
+        />
+        <OverviewProgressCard
+          title="Armor Paint Jobs"
+          progress={armorPaintJobProgress}
+        />
       </Row>
     </>
   );
@@ -83,6 +75,9 @@ export const query = graphql`
         gatsbyImageData(width: 75)
       }
     }
-    ...MinerOverallProgressMiner
+    ...MinerOverclockProgressMiner
+    ...MinerWeaponPaintJobProgressMiner
+    ...MinerArmorPaintJobProgressMiner
+    ...MinerWeaponFrameworkProgressMiner
   }
 `;
