@@ -1,9 +1,9 @@
-import React, { useCallback } from "react";
-import { Badge, Card, Col } from "antd";
-import { useDB } from "../../hooks/db";
-import ArmorPaintJobIcon from "./ArmorPaintJobIcon";
-import { graphql } from "gatsby";
-import { useLiveQuery } from "dexie-react-hooks";
+import React, { useCallback } from 'react';
+import { Badge, Card, Col } from 'antd';
+import { useDB } from '../../hooks/db';
+import ArmorPaintJobIcon from './ArmorPaintJobIcon';
+import { graphql } from 'gatsby';
+import { useLiveQuery } from 'dexie-react-hooks';
 
 export default function ArmorPaintJobCard({
   miner,
@@ -35,17 +35,16 @@ export default function ArmorPaintJobCard({
   }, [db.armorPaintjobs, miner.name, paintJob.name, query]);
 
   return (
-    <Col xxl={4} xl={4} lg={8} md={8} sm={8} xs={12} key={paintJob.name}>
-      <Badge.Ribbon className="armor-paintjob-ribbon" text={paintJob.name}>
+    <Col xxl={4} xl={4} lg={6} md={8} sm={12} xs={24} key={paintJob.name}>
+      <Badge.Ribbon className='armor-paintjob-ribbon' text={paintJob.name}>
         <Card
           hoverable
           onClick={onClick}
-          size="small"
+          size='small'
           style={{
-            backgroundColor: query ? miner.color : "inherit",
-            transition: "all 0.3s ease",
-          }}
-        >
+            backgroundColor: query ? miner.color : 'inherit',
+            transition: 'all 0.3s ease',
+          }}>
           <ArmorPaintJobIcon paintJob={paintJob} />
         </Card>
       </Badge.Ribbon>
