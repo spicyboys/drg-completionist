@@ -9,7 +9,7 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
       path.resolve(__dirname, "schema.gql"),
       {
         encoding: "utf8",
-      }
+      },
     );
     createTypes(typeDefs);
   };

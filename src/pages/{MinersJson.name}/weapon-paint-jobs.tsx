@@ -13,7 +13,7 @@ const WeaponPaintJobs = ({
 
   const weaponPaintJobs = [
     ...miner!.commonWeaponPaintJobs.map(
-      (weaponPaintJob) => weaponPaintJob.weaponPaintJob
+      (weaponPaintJob) => weaponPaintJob.weaponPaintJob,
     ),
     ...miner!.uniqueWeaponPaintJobs,
   ];

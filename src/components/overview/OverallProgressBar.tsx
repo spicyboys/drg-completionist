@@ -45,7 +45,7 @@ const OverallProgressBar = ({
         format={(_, p) => `${p?.toFixed(1)}%`}
       />
     ),
-    [overall]
+    [overall],
   );
 
   return (

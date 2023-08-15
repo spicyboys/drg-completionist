@@ -4,7 +4,7 @@ import { useCallback } from "react";
 import { type SaveFile } from "./useParseSaveFile";
 
 export default function useGetArmorPaintJobsFromSaveFile(): (
-  saveFile: SaveFile
+  saveFile: SaveFile,
 ) => ArmorPaintJobEntry[] {
   const {
     allMinersJson: { nodes: miners },
@@ -28,7 +28,7 @@ export default function useGetArmorPaintJobsFromSaveFile(): (
       const acquiredArmorPaintJobs: ArmorPaintJobEntry[] = [];
       for (const miner of miners) {
         const UnlockedVanityItemIDs = characterSaves.find(
-          ({ CharacterSave }) => CharacterSave.SavegameID === miner.saveId
+          ({ CharacterSave }) => CharacterSave.SavegameID === miner.saveId,
         )?.CharacterSave.Vanity.CharacterVanitySave.UnLockedVanityItemIDs;
 
         if (UnlockedVanityItemIDs === undefined) {
@@ -47,6 +47,6 @@ export default function useGetArmorPaintJobsFromSaveFile(): (
 
       return acquiredArmorPaintJobs;
     },
-    [miners]
+    [miners],
   );
 }

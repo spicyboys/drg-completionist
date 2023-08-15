@@ -24,7 +24,7 @@ export default function OverclockCard({
         weapon: weapon.name,
         name: overclock.name,
       }),
-    [weapon, overclock.name]
+    [weapon, overclock.name],
   );
 
   const onClick = useCallback(() => {

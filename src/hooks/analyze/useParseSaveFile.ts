@@ -24,7 +24,7 @@ const SaveFileSchema = z.object({
       z.string(),
       z.object({
         Skins: z.array(z.string()),
-      })
+      }),
     ),
     UnlockedPickaxeParts: z.array(z.string()).optional(),
     CharacterSaves: z.array(
@@ -42,7 +42,7 @@ const SaveFileSchema = z.object({
           }),
           SavegameID: z.string(),
         }),
-      })
+      }),
     ),
   }),
 });
@@ -61,7 +61,7 @@ export default function useParseSaveFile() {
         // Parse the save file using the WASM library
         await init();
         const saveFile = Object.freeze(
-          SaveFileSchema.parse(await parse_save_file(f)).properties
+          SaveFileSchema.parse(await parse_save_file(f)).properties,
         );
 
         // Extract the relevant information from the parsed save file
@@ -89,6 +89,6 @@ export default function useParseSaveFile() {
       getOverclocksFromSaveFile,
       getWeaponFrameworksFromSaveFile,
       getWeaponPaintJobsFromSaveFile,
-    ]
+    ],
   );
 }

@@ -1,10 +1,10 @@
-import React from 'react';
-import { Badge, Card, Col } from 'antd';
-import { useCallback } from 'react';
-import { useDB } from '../../hooks/db';
-import { useLiveQuery } from 'dexie-react-hooks';
-import { graphql } from 'gatsby';
-import WeaponFrameworkIcon from './WeaponFrameworkIcon';
+import React from "react";
+import { Badge, Card, Col } from "antd";
+import { useCallback } from "react";
+import { useDB } from "../../hooks/db";
+import { useLiveQuery } from "dexie-react-hooks";
+import { graphql } from "gatsby";
+import WeaponFrameworkIcon from "./WeaponFrameworkIcon";
 
 export default function WeaponFrameworkCard({
   miner,
@@ -18,7 +18,7 @@ export default function WeaponFrameworkCard({
   const db = useDB();
   const query = useLiveQuery(
     () => db.frameworks.get({ weapon: weapon.name, name: framework.name }),
-    [weapon, framework]
+    [weapon, framework],
   );
 
   const onClick = useCallback(() => {
@@ -39,15 +39,16 @@ export default function WeaponFrameworkCard({
 
   return (
     <Col xxl={4} xl={6} lg={8} md={8} sm={12} xs={24}>
-      <Badge.Ribbon className='framework-ribbon' text={framework.name}>
+      <Badge.Ribbon className="framework-ribbon" text={framework.name}>
         <Card
           hoverable
           onClick={onClick}
-          size='small'
+          size="small"
           style={{
-            backgroundColor: query ? miner.color : 'inherit',
-            transition: 'all 0.3s ease',
-          }}>
+            backgroundColor: query ? miner.color : "inherit",
+            transition: "all 0.3s ease",
+          }}
+        >
           <WeaponFrameworkIcon framework={framework} />
         </Card>
       </Badge.Ribbon>

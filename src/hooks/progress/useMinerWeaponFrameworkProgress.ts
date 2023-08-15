@@ -4,14 +4,14 @@ import { graphql } from "gatsby";
 import { type ProgressFooterProps } from "../../components/ProgressFooter";
 
 export default function useMinerWeaponFrameworkProgress(
-  miner: Queries.MinerWeaponFrameworkProgressMinerFragment
+  miner: Queries.MinerWeaponFrameworkProgressMinerFragment,
 ): ProgressFooterProps | undefined {
   const db = useDB();
   const acquiredFrameworks = useLiveQuery(() =>
     db.frameworks
       .where("weapon")
       .anyOf(miner.weapons.map((weapon) => weapon.name))
-      .toArray()
+      .toArray(),
   );
 
   if (acquiredFrameworks === undefined) {

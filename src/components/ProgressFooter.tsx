@@ -28,13 +28,13 @@ export default function ProgressFooter({
           }
         }
       }
-    `
+    `,
   );
 
   const backgroundColor = `linear-gradient(to right, ${miners.nodes
     .map(
       (miner, index, arr) =>
-        `${miner.color} ${index * (100 / (arr.length - 1))}%`
+        `${miner.color} ${index * (100 / (arr.length - 1))}%`,
     )
     .join(", ")})`;
 
@@ -43,7 +43,7 @@ export default function ProgressFooter({
     .join(", ")}`;
 
   const text = `Progress: ${Math.round(
-    progress
+    progress,
   )}% (${completedItems} / ${totalItems})`;
 
   return (
@@ -112,7 +112,7 @@ export default function ProgressFooter({
             title={
               partialProgress &&
               `Forged + Unforged: ${Math.round(
-                ((completedItems + unforgedItems) / totalItems) * 100
+                ((completedItems + unforgedItems) / totalItems) * 100,
               )}%`
             }
           >

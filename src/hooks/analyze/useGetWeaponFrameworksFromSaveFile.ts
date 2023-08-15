@@ -4,7 +4,7 @@ import { useCallback } from "react";
 import { type SaveFile } from "./useParseSaveFile";
 
 export default function useGetWeaponFrameworksFromSaveFile(): (
-  saveFile: SaveFile
+  saveFile: SaveFile,
 ) => FrameworkEntry[] {
   const {
     allMinersJson: { nodes: miners },
@@ -48,6 +48,6 @@ export default function useGetWeaponFrameworksFromSaveFile(): (
 
       return acquiredFrameworks;
     },
-    [miners]
+    [miners],
   );
 }

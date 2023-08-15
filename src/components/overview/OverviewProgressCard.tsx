@@ -34,7 +34,7 @@ const OverviewProgressCard = ({
         format={() => `${progress?.completedItems} / ${progress?.totalItems}`}
       />
     ),
-    [progress]
+    [progress],
   );
 
   return (

@@ -4,7 +4,7 @@ import { useCallback } from "react";
 import { type SaveFile } from "./useParseSaveFile";
 
 export default function useGetOverclocksFromSaveFile(): (
-  saveFile: SaveFile
+  saveFile: SaveFile,
 ) => OverclockEntry[] {
   const {
     allMinersJson: { nodes: miners },
@@ -61,6 +61,6 @@ export default function useGetOverclocksFromSaveFile(): (
 
       return acquiredOverclocks;
     },
-    [miners]
+    [miners],
   );
 }

@@ -4,14 +4,14 @@ import { graphql } from "gatsby";
 import { type ProgressFooterProps } from "../../components/ProgressFooter";
 
 export default function useMinerOverclockProgress(
-  miner: Queries.MinerOverclockProgressMinerFragment
+  miner: Queries.MinerOverclockProgressMinerFragment,
 ): ProgressFooterProps | undefined {
   const db = useDB();
   const acquiredOverclocks = useLiveQuery(() =>
     db.overclocks
       .where("weapon")
       .anyOf(miner.weapons.map((weapon) => weapon.name))
-      .toArray()
+      .toArray(),
   );
 
   if (acquiredOverclocks === undefined) {
@@ -19,10 +19,10 @@ export default function useMinerOverclockProgress(
   }
 
   const totalItems = miner.weapons.flatMap(
-    (weapon) => weapon.overclocks
+    (weapon) => weapon.overclocks,
   ).length;
   const completedItems = acquiredOverclocks.filter(
-    (overclock) => overclock.isForged
+    (overclock) => overclock.isForged,
   ).length;
   const unforgedItems = acquiredOverclocks.length - completedItems;
 

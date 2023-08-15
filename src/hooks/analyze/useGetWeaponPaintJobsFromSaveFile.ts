@@ -18,7 +18,7 @@ import { type SaveFile } from "./useParseSaveFile";
  * a corresponding unique weapon paint job ID.
  */
 export default function useGetWeaponPaintJobsFromSaveFile(): (
-  saveFile: SaveFile
+  saveFile: SaveFile,
 ) => WeaponPaintJobEntry[] {
   const {
     allMinersJson: { nodes: miners },
@@ -83,7 +83,7 @@ export default function useGetWeaponPaintJobsFromSaveFile(): (
             // unlocked for all weapons for that miner, so we just check the
             // first weapon.
             unlockedItemSkins[miner.weapons[0].saveId]?.Skins.includes(
-              weaponPaintJob.weaponPaintJob.saveId
+              weaponPaintJob.weaponPaintJob.saveId,
             )
           ) {
             acquiredWeaponPaintJobs.push({
@@ -97,7 +97,7 @@ export default function useGetWeaponPaintJobsFromSaveFile(): (
         for (const weaponPaintJob of miner.uniqueWeaponPaintJobs) {
           if (
             unlockedItemSkins[miner.weapons[0].saveId]?.Skins.includes(
-              weaponPaintJob.saveId
+              weaponPaintJob.saveId,
             )
           ) {
             acquiredWeaponPaintJobs.push({
@@ -111,6 +111,6 @@ export default function useGetWeaponPaintJobsFromSaveFile(): (
 
       return acquiredWeaponPaintJobs;
     },
-    [miners]
+    [miners],
   );
 }

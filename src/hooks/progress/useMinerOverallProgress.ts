@@ -18,7 +18,7 @@ type ForgeProgress = Readonly<{
 
 const getPercent = (
   numerators: readonly (number | undefined)[],
-  denominators: readonly number[]
+  denominators: readonly number[],
 ) => {
   const numerator = numerators.reduce<number>((p, c) => p + (c ?? 0), 0);
   const denominator = denominators.reduce((p, c) => p + c);
@@ -27,11 +27,11 @@ const getPercent = (
 };
 
 const getPercentageFromProgress = (
-  progress: ProgressFooterProps
+  progress: ProgressFooterProps,
 ): ForgeProgress => ({
   acquired: getPercent(
     [progress.completedItems, progress.unforgedItems],
-    [progress.totalItems]
+    [progress.totalItems],
   ),
   forged: getPercent([progress.completedItems], [progress.totalItems]),
   unforged: getPercent([progress.unforgedItems], [progress.totalItems]),
@@ -48,22 +48,22 @@ const getOverallPercentage = (
         ...progresses.map((p) => p.completedItems),
         ...progresses.map((p) => p.unforgedItems),
       ],
-      totalItems
+      totalItems,
     ),
     forged: getPercent(
       progresses.map((p) => p.completedItems),
-      totalItems
+      totalItems,
     ),
     unforged: getPercent(
       progresses.map((p) => p.unforgedItems),
-      totalItems
+      totalItems,
     ),
     count: progresses.reduce((p, c) => p + c.totalItems, 0),
   };
 };
 
 export default function useMinerOverallProgress(
-  miner: Queries.MinerOverallProgressMinerFragment
+  miner: Queries.MinerOverallProgressMinerFragment,
 ): OverallProgress | undefined {
   const overclockProgress = useMinerOverclockProgress(miner!);
   const weaponPaintProgress = useMinerWeaponPaintJobProgress(miner!);
@@ -84,7 +84,7 @@ export default function useMinerOverallProgress(
       overclockProgress,
       weaponPaintProgress,
       armorPaintJobProgress,
-      weaponFrameworkProgress
+      weaponFrameworkProgress,
     ),
     Overclocks: getPercentageFromProgress(overclockProgress),
     "Weapon Paint Jobs": getPercentageFromProgress(weaponPaintProgress),

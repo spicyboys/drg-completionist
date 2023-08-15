@@ -4,12 +4,12 @@ import { graphql } from "gatsby";
 import { type ProgressFooterProps } from "../../components/ProgressFooter";
 
 export default function useMinerWeaponPaintJobProgress(
-  miner: Queries.MinerWeaponPaintJobProgressMinerFragment
+  miner: Queries.MinerWeaponPaintJobProgressMinerFragment,
 ): ProgressFooterProps | undefined {
   const db = useDB();
   const acquiredWeaponPaintJobs = useLiveQuery(
     () => db.weaponPaintjobs.where("miner").equals(miner.name).toArray(),
-    [miner.name]
+    [miner.name],
   );
 
   if (acquiredWeaponPaintJobs === undefined) {
@@ -19,7 +19,7 @@ export default function useMinerWeaponPaintJobProgress(
   const totalItems =
     miner.commonWeaponPaintJobs.length + miner.uniqueWeaponPaintJobs.length;
   const completedItems = acquiredWeaponPaintJobs.filter(
-    (weaponPaintJob) => weaponPaintJob.isForged
+    (weaponPaintJob) => weaponPaintJob.isForged,
   ).length;
   const unforgedItems = acquiredWeaponPaintJobs.length - completedItems;
 
