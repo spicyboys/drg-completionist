@@ -1,29 +1,29 @@
-import React, { createContext, useMemo, useState } from "react";
+import React, { createContext, useMemo, useState } from 'react';
 import {
   GithubFilled,
   InfoCircleFilled,
   RobotOutlined,
   SettingOutlined,
-} from "@ant-design/icons";
+} from '@ant-design/icons';
 import {
   PageContainer,
   ProCard,
   FooterToolbar,
-} from "@ant-design/pro-components";
-import { Button, Tooltip } from "antd";
-import { Link, type PageProps, graphql, useStaticQuery } from "gatsby";
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
-import SettingsModal from "./settings/SettingsModal";
-import InfoTooltip from "./InfoTooltip";
-import AnalyzeModal from "./analyze/AnalyzeModal";
-import loadable from "@loadable/component";
-import nullthrows from "../utils/nullthrows";
+} from '@ant-design/pro-components';
+import { Button, Tooltip } from 'antd';
+import { Link, type PageProps, graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
+import SettingsModal from './settings/SettingsModal';
+import InfoTooltip from './InfoTooltip';
+import AnalyzeModal from './analyze/AnalyzeModal';
+import loadable from '@loadable/component';
+import nullthrows from '../utils/nullthrows';
 
 // Ant Design's Pro Layout uses JS break points instead of CSS break points
 // causing hydration issues, so we use loadable to only load the component
 // on the client. This causes a "white flash" on first page load but it's
 // better than the hydration errors and layout issues.
-const ProLayout = loadable(() => import("@ant-design/pro-layout"));
+const ProLayout = loadable(() => import('@ant-design/pro-layout'));
 
 export const FooterContext = createContext<(footer: React.ReactNode) => void>(
   () => {},
@@ -32,7 +32,7 @@ export const FooterContext = createContext<(footer: React.ReactNode) => void>(
 export default function Layout({
   children,
   location,
-}: Omit<PageProps, "children"> & { children: React.ReactNode }) {
+}: Omit<PageProps, 'children'> & { children: React.ReactNode }) {
   const { allMinersJson: miners } = useStaticQuery<Queries.PageLayoutQuery>(
     graphql`
       query PageLayout {
@@ -60,25 +60,25 @@ export default function Layout({
             <GatsbyImage
               image={nullthrows(miner.icon?.childImageSharp?.gatsbyImageData)}
               alt={miner.name}
-              style={{ verticalAlign: "sub" }}
+              style={{ verticalAlign: 'sub' }}
             />
           ),
           routes: [
             {
-              path: "overclocks",
-              name: "Overclocks",
+              path: 'overclocks',
+              name: 'Overclocks',
             },
             {
-              path: "weapon-paint-jobs",
-              name: "Weapon Paint Jobs",
+              path: 'weapon-paint-jobs',
+              name: 'Weapon Paint Jobs',
             },
             {
-              path: "weapon-frameworks",
-              name: "Weapon Frameworks",
+              path: 'weapon-frameworks',
+              name: 'Weapon Frameworks',
             },
             {
-              path: "armor-paint-jobs",
-              name: "Armor Paint Jobs",
+              path: 'armor-paint-jobs',
+              name: 'Armor Paint Jobs',
             },
           ],
         };
@@ -120,12 +120,12 @@ export default function Layout({
 
           <a
             href="https://github.com/spicyboys/drg-completionist"
-            style={{ textDecoration: "inherit", color: "inherit" }}
+            style={{ textDecoration: 'inherit', color: 'inherit' }}
             target="_blank"
             rel="noreferrer"
             key="github"
           >
-            <GithubFilled style={{ display: "block" }} />
+            <GithubFilled style={{ display: 'block' }} />
           </a>,
 
           <Button
@@ -151,14 +151,14 @@ export default function Layout({
       }}
       route={menuItems}
       menuItemRender={(item, dom) => (
-        <div style={{ display: "flex", alignItems: "center" }}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
           {item.path ? <Link to={item.path}>{dom}</Link> : dom}
         </div>
       )}
     >
       <PageContainer breadcrumbRender={false}>
         <ProCard
-          style={{ maxWidth: 1600, margin: "0 auto", padding: "1rem 2rem" }}
+          style={{ maxWidth: 1600, margin: '0 auto', padding: '1rem 2rem' }}
         >
           <FooterContext.Provider value={setFooter}>
             {children}

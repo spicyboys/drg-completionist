@@ -1,12 +1,12 @@
-import React from "react";
-import { Col, Row, Typography } from "antd";
+import React from 'react';
+import { Col, Row, Typography } from 'antd';
 
 const { Text } = Typography;
 
 export default function InfoTooltip() {
   return (
     <Row justify="center">
-      <Col style={{ textAlign: "center", marginBlock: 20 }}>
+      <Col style={{ textAlign: 'center', marginBlock: 20 }}>
         <a
           href="https://github.com/spicyboys/drg-completionist/releases/"
           rel="noreferrer noopener"
@@ -23,7 +23,7 @@ export default function InfoTooltip() {
           />
         </a>
         <br />
-        Up to date as of Deep Rock Galactic version{" "}
+        Up to date as of Deep Rock Galactic version{' '}
         <Text code>1.38.88240.0</Text>
       </Col>
     </Row>

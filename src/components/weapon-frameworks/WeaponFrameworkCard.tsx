@@ -1,10 +1,10 @@
-import React from "react";
-import { Badge, Card, Col } from "antd";
-import { useCallback } from "react";
-import { useDB } from "../../hooks/db";
-import { useLiveQuery } from "dexie-react-hooks";
-import { graphql } from "gatsby";
-import WeaponFrameworkIcon from "./WeaponFrameworkIcon";
+import React from 'react';
+import { Badge, Card, Col } from 'antd';
+import { useCallback } from 'react';
+import { useDB } from '../../hooks/db';
+import { useLiveQuery } from 'dexie-react-hooks';
+import { graphql } from 'gatsby';
+import WeaponFrameworkIcon from './WeaponFrameworkIcon';
 
 export default function WeaponFrameworkCard({
   miner,
@@ -45,8 +45,8 @@ export default function WeaponFrameworkCard({
           onClick={onClick}
           size="small"
           style={{
-            backgroundColor: query ? miner.color : "inherit",
-            transition: "all 0.3s ease",
+            backgroundColor: query ? miner.color : 'inherit',
+            transition: 'all 0.3s ease',
           }}
         >
           <WeaponFrameworkIcon framework={framework} />

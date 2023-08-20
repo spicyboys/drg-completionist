@@ -1,10 +1,10 @@
-import React from "react";
-import { graphql, type PageProps } from "gatsby";
-import WeaponDivider from "../../components/WeaponDivider";
-import { Row } from "antd";
-import OverclockCard from "../../components/overclocks/OverclockCard";
-import useMinerOverclockProgress from "../../hooks/progress/useMinerOverclockProgress";
-import useProgressFooter from "../../hooks/progress/useProgressFooter";
+import React from 'react';
+import { graphql, type PageProps } from 'gatsby';
+import WeaponDivider from '../../components/WeaponDivider';
+import { Row } from 'antd';
+import OverclockCard from '../../components/overclocks/OverclockCard';
+import useMinerOverclockProgress from '../../hooks/progress/useMinerOverclockProgress';
+import useProgressFooter from '../../hooks/progress/useProgressFooter';
 
 const Overclocks = ({
   data: { minersJson: miner },

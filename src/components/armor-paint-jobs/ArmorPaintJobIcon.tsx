@@ -1,7 +1,7 @@
-import React from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
-import { graphql } from "gatsby";
-import nullthrows from "../../utils/nullthrows";
+import React from 'react';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import { graphql } from 'gatsby';
+import nullthrows from '../../utils/nullthrows';
 
 export default function ArmorPaintjobIcon({
   paintJob,
@@ -13,7 +13,7 @@ export default function ArmorPaintjobIcon({
       style={{
         height: 100,
         width: 100,
-        margin: "auto",
+        margin: 'auto',
       }}
     >
       <GatsbyImage

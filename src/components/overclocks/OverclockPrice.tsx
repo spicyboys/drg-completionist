@@ -1,8 +1,8 @@
-import React from "react";
-import { Col, Row, Space, Tooltip } from "antd";
-import Text from "antd/lib/typography/Text";
-import { graphql } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+import React from 'react';
+import { Col, Row, Space, Tooltip } from 'antd';
+import Text from 'antd/lib/typography/Text';
+import { graphql } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 
 export default function OverclockPrice({
   overclock: { price },
@@ -21,7 +21,7 @@ export default function OverclockPrice({
                 height={20}
               />
             </Tooltip>
-            <Text strong style={{ color: "rgba(255, 255, 255, 0.85)" }}>
+            <Text strong style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
               {price.credits}
             </Text>
           </Space>
@@ -37,7 +37,7 @@ export default function OverclockPrice({
                 height={20}
               />
             </Tooltip>
-            <Text strong style={{ color: "rgba(255, 255, 255, 0.85)" }}>
+            <Text strong style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
               {price.croppa}
             </Text>
           </Space>
@@ -53,7 +53,7 @@ export default function OverclockPrice({
                 height={20}
               />
             </Tooltip>
-            <Text strong style={{ color: "rgba(255, 255, 255, 0.85)" }}>
+            <Text strong style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
               {price.enorPearl}
             </Text>
           </Space>
@@ -69,7 +69,7 @@ export default function OverclockPrice({
                 height={20}
               />
             </Tooltip>
-            <Text strong style={{ color: "rgba(255, 255, 255, 0.85)" }}>
+            <Text strong style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
               {price.magnite}
             </Text>
           </Space>
@@ -85,7 +85,7 @@ export default function OverclockPrice({
                 height={20}
               />
             </Tooltip>
-            <Text strong style={{ color: "rgba(255, 255, 255, 0.85)" }}>
+            <Text strong style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
               {price.jadiz}
             </Text>
           </Space>
@@ -101,7 +101,7 @@ export default function OverclockPrice({
                 height={20}
               />
             </Tooltip>
-            <Text strong style={{ color: "rgba(255, 255, 255, 0.85)" }}>
+            <Text strong style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
               {price.umanite}
             </Text>
           </Space>
@@ -117,7 +117,7 @@ export default function OverclockPrice({
                 height={20}
               />
             </Tooltip>
-            <Text strong style={{ color: "rgba(255, 255, 255, 0.85)" }}>
+            <Text strong style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
               {price.bismor}
             </Text>
           </Space>

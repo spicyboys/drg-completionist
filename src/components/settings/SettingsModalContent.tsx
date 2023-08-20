@@ -1,7 +1,7 @@
-import React from "react";
-import { Button, Col, Row, Space, Typography } from "antd";
-import { useDB } from "../../hooks/db";
-import { StaticImage } from "gatsby-plugin-image";
+import React from 'react';
+import { Button, Col, Row, Space, Typography } from 'antd';
+import { useDB } from '../../hooks/db';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const { Title, Text } = Typography;
 

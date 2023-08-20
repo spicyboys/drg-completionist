@@ -1,5 +1,5 @@
-import React, { createContext, useContext } from "react";
-import { AppDatabase } from "./AppDatabase";
+import React, { createContext, useContext } from 'react';
+import { AppDatabase } from './AppDatabase';
 
 const db = new AppDatabase();
 const Context = createContext<AppDatabase>(db);

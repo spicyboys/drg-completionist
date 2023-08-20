@@ -1,10 +1,10 @@
-import React from "react";
-import { graphql, type PageProps } from "gatsby";
-import WeaponDivider from "../../components/WeaponDivider";
-import { Row } from "antd";
-import WeaponFrameworkCard from "../../components/weapon-frameworks/WeaponFrameworkCard";
-import useMinerWeaponFrameworkProgress from "../../hooks/progress/useMinerWeaponFrameworkProgress";
-import useProgressFooter from "../../hooks/progress/useProgressFooter";
+import React from 'react';
+import { graphql, type PageProps } from 'gatsby';
+import WeaponDivider from '../../components/WeaponDivider';
+import { Row } from 'antd';
+import WeaponFrameworkCard from '../../components/weapon-frameworks/WeaponFrameworkCard';
+import useMinerWeaponFrameworkProgress from '../../hooks/progress/useMinerWeaponFrameworkProgress';
+import useProgressFooter from '../../hooks/progress/useProgressFooter';
 
 const WeaponFrameworks = ({
   data: { minersJson: miner },

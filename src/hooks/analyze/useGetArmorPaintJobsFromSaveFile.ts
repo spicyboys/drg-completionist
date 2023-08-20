@@ -1,7 +1,7 @@
-import { graphql, useStaticQuery } from "gatsby";
-import { type ArmorPaintJobEntry } from "../db/AppDatabase";
-import { useCallback } from "react";
-import { type SaveFile } from "./useParseSaveFile";
+import { graphql, useStaticQuery } from 'gatsby';
+import { type ArmorPaintJobEntry } from '../db/AppDatabase';
+import { useCallback } from 'react';
+import { type SaveFile } from './useParseSaveFile';
 
 export default function useGetArmorPaintJobsFromSaveFile(): (
   saveFile: SaveFile,

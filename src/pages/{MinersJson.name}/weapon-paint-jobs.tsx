@@ -1,9 +1,9 @@
-import React from "react";
-import { graphql, type PageProps } from "gatsby";
-import { Row } from "antd";
-import WeaponPaintJobCard from "../../components/weapon-paint-jobs/WeaponPaintJobCard";
-import useMinerWeaponPaintJobProgress from "../../hooks/progress/useMinerWeaponPaintJobProgress";
-import useProgressFooter from "../../hooks/progress/useProgressFooter";
+import React from 'react';
+import { graphql, type PageProps } from 'gatsby';
+import { Row } from 'antd';
+import WeaponPaintJobCard from '../../components/weapon-paint-jobs/WeaponPaintJobCard';
+import useMinerWeaponPaintJobProgress from '../../hooks/progress/useMinerWeaponPaintJobProgress';
+import useProgressFooter from '../../hooks/progress/useProgressFooter';
 
 const WeaponPaintJobs = ({
   data: { minersJson: miner },

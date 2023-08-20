@@ -1,7 +1,7 @@
-import React, { lazy, Suspense } from "react";
-import { Modal, Spin } from "antd";
+import React, { lazy, Suspense } from 'react';
+import { Modal, Spin } from 'antd';
 
-const AnalyzeModalContent = lazy(() => import("./AnalyzeModalContent"));
+const AnalyzeModalContent = lazy(() => import('./AnalyzeModalContent'));
 
 export default function AnalyzeModal({
   open,

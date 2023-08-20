@@ -1,6 +1,6 @@
-import { Card, Col, Progress, Tooltip } from "antd";
-import React, { useMemo } from "react";
-import { type ProgressFooterProps } from "../ProgressFooter";
+import { Card, Col, Progress, Tooltip } from 'antd';
+import React, { useMemo } from 'react';
+import { type ProgressFooterProps } from '../ProgressFooter';
 
 const OverviewProgressCard = ({
   title,
@@ -15,8 +15,8 @@ const OverviewProgressCard = ({
         type="circle"
         status={
           progress?.completedItems === progress?.totalItems
-            ? "success"
-            : "active"
+            ? 'success'
+            : 'active'
         }
         percent={
           progress === undefined

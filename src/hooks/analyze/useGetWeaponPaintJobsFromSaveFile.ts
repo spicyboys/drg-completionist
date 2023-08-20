@@ -1,7 +1,7 @@
-import { graphql, useStaticQuery } from "gatsby";
-import { type WeaponPaintJobEntry } from "../db/AppDatabase";
-import { useCallback } from "react";
-import { type SaveFile } from "./useParseSaveFile";
+import { graphql, useStaticQuery } from 'gatsby';
+import { type WeaponPaintJobEntry } from '../db/AppDatabase';
+import { useCallback } from 'react';
+import { type SaveFile } from './useParseSaveFile';
 
 /**
  * Get the weapon paint jobs from a save file.

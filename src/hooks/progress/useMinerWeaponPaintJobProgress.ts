@@ -1,14 +1,14 @@
-import { useLiveQuery } from "dexie-react-hooks";
-import { useDB } from "../db";
-import { graphql } from "gatsby";
-import { type ProgressFooterProps } from "../../components/ProgressFooter";
+import { useLiveQuery } from 'dexie-react-hooks';
+import { useDB } from '../db';
+import { graphql } from 'gatsby';
+import { type ProgressFooterProps } from '../../components/ProgressFooter';
 
 export default function useMinerWeaponPaintJobProgress(
   miner: Queries.MinerWeaponPaintJobProgressMinerFragment,
 ): ProgressFooterProps | undefined {
   const db = useDB();
   const acquiredWeaponPaintJobs = useLiveQuery(
-    () => db.weaponPaintjobs.where("miner").equals(miner.name).toArray(),
+    () => db.weaponPaintjobs.where('miner').equals(miner.name).toArray(),
     [miner.name],
   );
 

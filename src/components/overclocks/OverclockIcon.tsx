@@ -1,7 +1,7 @@
-import React from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
-import { graphql } from "gatsby";
-import nullthrows from "../../utils/nullthrows";
+import React from 'react';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import { graphql } from 'gatsby';
+import nullthrows from '../../utils/nullthrows';
 
 export default function OverclockIcon({
   overclock,
@@ -13,15 +13,15 @@ export default function OverclockIcon({
       style={{
         height: 100,
         width: 100,
-        margin: "auto",
+        margin: 'auto',
       }}
     >
       <div
         style={{
-          position: "relative",
-          transform: "translate(-50%,-50%)",
-          top: "50%",
-          left: "50%",
+          position: 'relative',
+          transform: 'translate(-50%,-50%)',
+          top: '50%',
+          left: '50%',
         }}
       >
         <GatsbyImage
@@ -29,22 +29,22 @@ export default function OverclockIcon({
             overclock.type.icon?.childImageSharp?.gatsbyImageData,
           )}
           alt={overclock.type.name!}
-          style={{ height: "auto", width: "auto" }}
+          style={{ height: 'auto', width: 'auto' }}
         />
         <div
           style={{
-            position: "absolute",
+            position: 'absolute',
             transform: `translate(-50%, -5${
-              overclock.type.name === "Clean" ? 7 : 0
+              overclock.type.name === 'Clean' ? 7 : 0
             }%)`,
-            top: "50%",
-            left: "50%",
+            top: '50%',
+            left: '50%',
           }}
         >
           <GatsbyImage
             image={nullthrows(overclock.icon?.childImageSharp?.gatsbyImageData)}
             alt={overclock.name}
-            style={{ height: "auto", width: "auto" }}
+            style={{ height: 'auto', width: 'auto' }}
           />
         </div>
       </div>

@@ -1,7 +1,7 @@
-import { useLiveQuery } from "dexie-react-hooks";
-import { useDB } from "../db";
-import { graphql } from "gatsby";
-import { type ProgressFooterProps } from "../../components/ProgressFooter";
+import { useLiveQuery } from 'dexie-react-hooks';
+import { useDB } from '../db';
+import { graphql } from 'gatsby';
+import { type ProgressFooterProps } from '../../components/ProgressFooter';
 
 export default function useMinerOverclockProgress(
   miner: Queries.MinerOverclockProgressMinerFragment,
@@ -9,7 +9,7 @@ export default function useMinerOverclockProgress(
   const db = useDB();
   const acquiredOverclocks = useLiveQuery(() =>
     db.overclocks
-      .where("weapon")
+      .where('weapon')
       .anyOf(miner.weapons.map((weapon) => weapon.name))
       .toArray(),
   );

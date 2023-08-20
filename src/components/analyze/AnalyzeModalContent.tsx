@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { LoadingOutlined, UploadOutlined } from "@ant-design/icons";
-import { Button, Col, Divider, Row, Space, Typography, Upload } from "antd";
-import { type RcFile } from "antd/lib/upload";
-import useParseSaveFile from "../../hooks/analyze/useParseSaveFile";
+import React, { useState } from 'react';
+import { LoadingOutlined, UploadOutlined } from '@ant-design/icons';
+import { Button, Col, Divider, Row, Space, Typography, Upload } from 'antd';
+import { type RcFile } from 'antd/lib/upload';
+import useParseSaveFile from '../../hooks/analyze/useParseSaveFile';
 
 const { Text } = Typography;
 
@@ -32,7 +32,7 @@ export default function AnalyzeModalContent({ hide }: { hide: () => void }) {
               <Text>The file is located in your Steam folder by default:</Text>
               <Text code>
                 {
-                  "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Deep Rock Galactic\\FSD\\Saved\\SaveGames\\<steam_ID>_Player.sav"
+                  'C:\\Program Files (x86)\\Steam\\steamapps\\common\\Deep Rock Galactic\\FSD\\Saved\\SaveGames\\<steam_ID>_Player.sav'
                 }
               </Text>
             </Space>

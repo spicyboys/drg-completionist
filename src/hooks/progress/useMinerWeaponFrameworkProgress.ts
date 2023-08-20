@@ -1,7 +1,7 @@
-import { useLiveQuery } from "dexie-react-hooks";
-import { useDB } from "../db";
-import { graphql } from "gatsby";
-import { type ProgressFooterProps } from "../../components/ProgressFooter";
+import { useLiveQuery } from 'dexie-react-hooks';
+import { useDB } from '../db';
+import { graphql } from 'gatsby';
+import { type ProgressFooterProps } from '../../components/ProgressFooter';
 
 export default function useMinerWeaponFrameworkProgress(
   miner: Queries.MinerWeaponFrameworkProgressMinerFragment,
@@ -9,7 +9,7 @@ export default function useMinerWeaponFrameworkProgress(
   const db = useDB();
   const acquiredFrameworks = useLiveQuery(() =>
     db.frameworks
-      .where("weapon")
+      .where('weapon')
       .anyOf(miner.weapons.map((weapon) => weapon.name))
       .toArray(),
   );

@@ -1,12 +1,12 @@
-import React, { useCallback } from "react";
-import { InfoCircleOutlined } from "@ant-design/icons";
-import { Card, Col, Popover, Tooltip } from "antd";
-import { useDB } from "../../hooks/db";
-import OverclockCardPopover from "./OverclockCardPopover";
-import OverclockIcon from "./OverclockIcon";
-import { graphql } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
-import { useLiveQuery } from "dexie-react-hooks";
+import React, { useCallback } from 'react';
+import { InfoCircleOutlined } from '@ant-design/icons';
+import { Card, Col, Popover, Tooltip } from 'antd';
+import { useDB } from '../../hooks/db';
+import OverclockCardPopover from './OverclockCardPopover';
+import OverclockIcon from './OverclockIcon';
+import { graphql } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
+import { useLiveQuery } from 'dexie-react-hooks';
 
 export default function OverclockCard({
   overclock,
@@ -57,10 +57,10 @@ export default function OverclockCard({
         hoverable
         title={overclock.name}
         headStyle={{
-          backgroundColor: query?.isForged ? miner.color : "inherit",
-          color: query?.isForged ? miner.contrastColor : "#cccccc",
-          fontWeight: "bold",
-          transition: "all 0.3s",
+          backgroundColor: query?.isForged ? miner.color : 'inherit',
+          color: query?.isForged ? miner.contrastColor : '#cccccc',
+          fontWeight: 'bold',
+          transition: 'all 0.3s',
         }}
         style={
           query && !query.isForged
@@ -80,15 +80,15 @@ export default function OverclockCard({
         >
           <InfoCircleOutlined
             style={{
-              color: "white",
-              float: "right",
+              color: 'white',
+              float: 'right',
               fontSize: 14,
               marginTop: -14,
             }}
           />
         </Popover>
         <Tooltip
-          title={query && !query?.isForged ? "Unforged" : undefined}
+          title={query && !query?.isForged ? 'Unforged' : undefined}
           destroyTooltipOnHide
         >
           <StaticImage
@@ -96,7 +96,7 @@ export default function OverclockCard({
             src="../../images/unforged.png"
             height={20}
             style={{
-              float: "left",
+              float: 'left',
               marginTop: -20,
               opacity: query && !query?.isForged ? 1 : 0,
             }}

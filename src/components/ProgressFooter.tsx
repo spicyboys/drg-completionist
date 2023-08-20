@@ -1,7 +1,7 @@
-import React from "react";
-import { Tooltip } from "antd";
-import { graphql, useStaticQuery } from "gatsby";
-import "../styles/footer.css";
+import React from 'react';
+import { Tooltip } from 'antd';
+import { graphql, useStaticQuery } from 'gatsby';
+import '../styles/footer.css';
 
 const FOOTER_HEIGHT = 50;
 
@@ -36,11 +36,11 @@ export default function ProgressFooter({
       (miner, index, arr) =>
         `${miner.color} ${index * (100 / (arr.length - 1))}%`,
     )
-    .join(", ")})`;
+    .join(', ')})`;
 
   const animationColor = `linear-gradient(270deg, ${miners.nodes
     .map((miner) => `${miner.color}`)
-    .join(", ")}`;
+    .join(', ')}`;
 
   const text = `Progress: ${Math.round(
     progress,
@@ -48,12 +48,12 @@ export default function ProgressFooter({
 
   return (
     <div
-      className={progress === 100 ? "completeAnimation" : undefined}
+      className={progress === 100 ? 'completeAnimation' : undefined}
       style={{
         background: progress === 100 ? animationColor : backgroundColor,
-        backgroundSize: progress === 100 ? "800% 800%" : "initial",
+        backgroundSize: progress === 100 ? '800% 800%' : 'initial',
         height: FOOTER_HEIGHT,
-        width: "100%",
+        width: '100%',
         zIndex: 4,
       }}
     >
@@ -68,11 +68,11 @@ export default function ProgressFooter({
             #444444 10px,
             #444444 20px
           )`,
-          float: "right",
-          height: "100%",
-          position: "absolute",
+          float: 'right',
+          height: '100%',
+          position: 'absolute',
           right: 0,
-          transition: "all 0.3s",
+          transition: 'all 0.3s',
           width: `${(100 - progress).toFixed(2)}%`,
           zIndex: 1,
         }}
@@ -80,11 +80,11 @@ export default function ProgressFooter({
       {/* Unfilled Section */}
       <div
         style={{
-          backgroundColor: "#141414",
-          height: "100%",
-          position: "absolute",
+          backgroundColor: '#141414',
+          height: '100%',
+          position: 'absolute',
           right: 0,
-          transition: "all 0.3s",
+          transition: 'all 0.3s',
           width:
             partialProgress === undefined
               ? `${(100 - progress).toFixed(2)}%`
@@ -95,14 +95,14 @@ export default function ProgressFooter({
       {/* Completed Section */}
       <div
         style={{
-          color: "#FFFFFFCC",
-          fontWeight: "bold",
+          color: '#FFFFFFCC',
+          fontWeight: 'bold',
           height: FOOTER_HEIGHT,
           lineHeight: `${FOOTER_HEIGHT}px`,
-          position: "absolute",
-          textAlign: "center",
-          textShadow: "2px 2px 5px black",
-          width: "100%",
+          position: 'absolute',
+          textAlign: 'center',
+          textShadow: '2px 2px 5px black',
+          width: '100%',
           zIndex: 3,
         }}
       >

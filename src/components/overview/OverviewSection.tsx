@@ -1,14 +1,14 @@
-import { Row, Col, Divider, Typography } from "antd";
-import { graphql } from "gatsby";
-import React from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
-import nullthrows from "../../utils/nullthrows";
-import useMinerOverclockProgress from "../../hooks/progress/useMinerOverclockProgress";
-import useMinerWeaponPaintJobProgress from "../../hooks/progress/useMinerWeaponPaintJobProgress";
-import useMinerArmorPaintJobProgress from "../../hooks/progress/useMinerArmorPaintJobProgress";
-import useMinerWeaponFrameworkProgress from "../../hooks/progress/useMinerWeaponFrameworkProgress";
-import OverviewProgressCard from "./OverviewProgressCard";
-import OverallProgressBar from "./OverallProgressBar";
+import { Row, Col, Divider, Typography } from 'antd';
+import { graphql } from 'gatsby';
+import React from 'react';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import nullthrows from '../../utils/nullthrows';
+import useMinerOverclockProgress from '../../hooks/progress/useMinerOverclockProgress';
+import useMinerWeaponPaintJobProgress from '../../hooks/progress/useMinerWeaponPaintJobProgress';
+import useMinerArmorPaintJobProgress from '../../hooks/progress/useMinerArmorPaintJobProgress';
+import useMinerWeaponFrameworkProgress from '../../hooks/progress/useMinerWeaponFrameworkProgress';
+import OverviewProgressCard from './OverviewProgressCard';
+import OverallProgressBar from './OverallProgressBar';
 const { Title } = Typography;
 
 const OverviewSection = ({

@@ -1,6 +1,6 @@
-import { Progress, Tooltip } from "antd";
-import React, { useMemo } from "react";
-import { type ProgressFooterProps } from "../ProgressFooter";
+import { Progress, Tooltip } from 'antd';
+import React, { useMemo } from 'react';
+import { type ProgressFooterProps } from '../ProgressFooter';
 
 function allNotUndefined<T>(arr: readonly (T | undefined)[]): arr is T[] {
   return arr.every((a) => a !== undefined);
@@ -27,7 +27,7 @@ const OverallProgressBar = ({
     () => (
       <Progress
         status={
-          overall?.completedItems === overall?.totalItems ? "success" : "active"
+          overall?.completedItems === overall?.totalItems ? 'success' : 'active'
         }
         percent={
           overall === undefined
@@ -53,7 +53,7 @@ const OverallProgressBar = ({
       title={`Forged: ${overall?.completedItems ?? 0} ${
         overall?.unforgedItems !== undefined && overall.unforgedItems > 0
           ? `| Unforged: ${overall.unforgedItems} `
-          : ""
+          : ''
       }| Total: ${overall?.totalItems ?? 0}`}
       overlayStyle={{ maxWidth: 600 }}
     >

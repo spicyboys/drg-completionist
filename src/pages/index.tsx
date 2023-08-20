@@ -1,11 +1,11 @@
-import * as React from "react";
-import { graphql, type HeadFC, type PageProps } from "gatsby";
-import { useContext, useEffect, useState, useRef } from "react";
-import { FooterContext } from "../components/Layout";
-import OverviewSection from "../components/overview/OverviewSection";
-import { Card, Space } from "antd";
-import { WarningOutlined } from "@ant-design/icons";
-import { StaticImage } from "gatsby-plugin-image";
+import * as React from 'react';
+import { graphql, type HeadFC, type PageProps } from 'gatsby';
+import { useContext, useEffect, useState, useRef } from 'react';
+import { FooterContext } from '../components/Layout';
+import OverviewSection from '../components/overview/OverviewSection';
+import { Card, Space } from 'antd';
+import { WarningOutlined } from '@ant-design/icons';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const IndexPage = ({
   data: {
@@ -18,7 +18,7 @@ const IndexPage = ({
   // #region React is Fun
   // I do all this just to make the <Space> element wrap below a certain width.
   // I love React.
-  const cardRef = useRef(document.createElement("div"));
+  const cardRef = useRef(document.createElement('div'));
   const [width, setWidth] = useState(0);
   const [isWrapped, setIsWrapped] = useState(false);
 
@@ -44,11 +44,11 @@ const IndexPage = ({
       <Card
         title={
           <>
-            <WarningOutlined style={{ marginRight: "0.5rem" }} /> Site Under
+            <WarningOutlined style={{ marginRight: '0.5rem' }} /> Site Under
             Construction
           </>
         }
-        style={{ background: "#6E5B0C", maxWidth: 800, margin: "0 auto" }}
+        style={{ background: '#6E5B0C', maxWidth: 800, margin: '0 auto' }}
         ref={cardRef}
       >
         <Space wrap={isWrapped}>
@@ -62,19 +62,19 @@ const IndexPage = ({
             <b>Welcome, miner!</b> Management has the lads in R&D rewriting the
             site from scratch to better serve all employees throughout the next
             fiscal quarter. Please bear with us as previous functionality is
-            restored, and{" "}
+            restored, and{' '}
             <a
               href="https://github.com/spicyboys/drg-completionist/issues"
               target="_blank"
               rel="noreferrer"
               style={{
-                color: "white",
-                textDecoration: "underline",
-                fontWeight: "bold",
+                color: 'white',
+                textDecoration: 'underline',
+                fontWeight: 'bold',
               }}
             >
               let us know
-            </a>{" "}
+            </a>{' '}
             if you find any (non-Glyphid) bugs in need of extermination.
           </p>
         </Space>

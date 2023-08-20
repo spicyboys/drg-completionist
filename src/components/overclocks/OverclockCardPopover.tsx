@@ -1,11 +1,11 @@
-import React from "react";
-import { Card, Col, Divider, Row, Space, Tooltip, Typography } from "antd";
-import Meta from "antd/lib/card/Meta";
-import OverclockIcon from "./OverclockIcon";
-import OverclockPrice from "./OverclockPrice";
-import { graphql } from "gatsby";
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
-import nullthrows from "../../utils/nullthrows";
+import React from 'react';
+import { Card, Col, Divider, Row, Space, Tooltip, Typography } from 'antd';
+import Meta from 'antd/lib/card/Meta';
+import OverclockIcon from './OverclockIcon';
+import OverclockPrice from './OverclockPrice';
+import { graphql } from 'gatsby';
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
+import nullthrows from '../../utils/nullthrows';
 
 const { Paragraph, Text, Title } = Typography;
 
@@ -33,14 +33,14 @@ export default function OverclockCardPopover({
                     weapon.overclockPopoverWeaponOutline?.childImageSharp
                       ?.gatsbyImageData,
                   )}
-                  style={{ height: 50, width: "auto" }}
+                  style={{ height: 50, width: 'auto' }}
                 />
               </Tooltip>
             </Col>
           </Row>
         }
       />
-      <Divider style={{ marginTop: "12px", marginBottom: "24px" }} />
+      <Divider style={{ marginTop: '12px', marginBottom: '24px' }} />
       <OverclockIcon overclock={overclock} />
       <Divider dashed />
       {overclock.effects?.buffs?.map((buff) => (

@@ -1,8 +1,8 @@
-import React from "react";
-import { Modal, Spin } from "antd";
-import { Suspense, lazy } from "react";
+import React from 'react';
+import { Modal, Spin } from 'antd';
+import { Suspense, lazy } from 'react';
 
-const SettingsModalContent = lazy(() => import("./SettingsModalContent"));
+const SettingsModalContent = lazy(() => import('./SettingsModalContent'));
 
 export default function SettingsModal({
   open,

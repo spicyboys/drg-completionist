@@ -1,9 +1,9 @@
-import React, { useCallback } from "react";
-import { Badge, Card, Col } from "antd";
-import { useDB } from "../../hooks/db";
-import ArmorPaintJobIcon from "./ArmorPaintJobIcon";
-import { graphql } from "gatsby";
-import { useLiveQuery } from "dexie-react-hooks";
+import React, { useCallback } from 'react';
+import { Badge, Card, Col } from 'antd';
+import { useDB } from '../../hooks/db';
+import ArmorPaintJobIcon from './ArmorPaintJobIcon';
+import { graphql } from 'gatsby';
+import { useLiveQuery } from 'dexie-react-hooks';
 
 export default function ArmorPaintJobCard({
   miner,
@@ -42,8 +42,8 @@ export default function ArmorPaintJobCard({
           onClick={onClick}
           size="small"
           style={{
-            backgroundColor: query ? miner.color : "inherit",
-            transition: "all 0.3s ease",
+            backgroundColor: query ? miner.color : 'inherit',
+            transition: 'all 0.3s ease',
           }}
         >
           <ArmorPaintJobIcon paintJob={paintJob} />

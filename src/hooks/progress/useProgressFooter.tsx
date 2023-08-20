@@ -1,8 +1,8 @@
-import React, { useContext, useEffect } from "react";
-import { FooterContext } from "../../components/Layout";
+import React, { useContext, useEffect } from 'react';
+import { FooterContext } from '../../components/Layout';
 import ProgressFooter, {
   type ProgressFooterProps,
-} from "../../components/ProgressFooter";
+} from '../../components/ProgressFooter';
 
 const useProgressFooter = (progress: ProgressFooterProps | undefined) => {
   const setFooter = useContext(FooterContext);
