@@ -1,12 +1,12 @@
-import { type RcFile } from "antd/lib/upload";
-import { useCallback } from "react";
-import useGetOverclocksFromSaveFile from "./useGetOverclocksFromSaveFile";
-import init, { parse_save_file } from "drg-save-parser";
-import { useDB } from "../db";
-import { z } from "zod";
-import useGetWeaponPaintJobsFromSaveFile from "./useGetWeaponPaintJobsFromSaveFile";
-import useGetWeaponFrameworksFromSaveFile from "./useGetWeaponFrameworksFromSaveFile";
-import useGetArmorPaintJobsFromSaveFile from "./useGetArmorPaintJobsFromSaveFile";
+import { type RcFile } from 'antd/lib/upload';
+import { useCallback } from 'react';
+import useGetOverclocksFromSaveFile from './useGetOverclocksFromSaveFile';
+import init, { parse_save_file } from 'drg-save-parser';
+import { useDB } from '../db';
+import { z } from 'zod';
+import useGetWeaponPaintJobsFromSaveFile from './useGetWeaponPaintJobsFromSaveFile';
+import useGetWeaponFrameworksFromSaveFile from './useGetWeaponFrameworksFromSaveFile';
+import useGetArmorPaintJobsFromSaveFile from './useGetArmorPaintJobsFromSaveFile';
 
 // Wasm-bindgen doesn't support Vec<String>, so we have to throw the whole
 // object back untyped. Since working with untyped data is error-prone, we
@@ -46,7 +46,7 @@ const SaveFileSchema = z.object({
     ),
   }),
 });
-export type SaveFile = Readonly<z.infer<typeof SaveFileSchema>["properties"]>;
+export type SaveFile = Readonly<z.infer<typeof SaveFileSchema>['properties']>;
 
 export default function useParseSaveFile() {
   const db = useDB();
@@ -71,7 +71,7 @@ export default function useParseSaveFile() {
         const armorPaintJobs = getArmorPaintJobsFromSaveFile(saveFile);
 
         // Update the store with the new save file data
-        await db.transaction("rw", db.tables, async () => {
+        await db.transaction('rw', db.tables, async () => {
           await db.clearAll();
           await db.overclocks.bulkAdd(overclocks);
           await db.weaponPaintjobs.bulkAdd(weaponPaintJobs);
