@@ -8,8 +8,10 @@ function allNotUndefined<T>(arr: readonly (T | undefined)[]): arr is T[] {
 
 const OverallProgressBar = ({
   progresses,
+  color,
 }: {
   progresses: (ProgressFooterProps | undefined)[];
+  color: string;
 }) => {
   const overall = useMemo(() => {
     if (!allNotUndefined(progresses)) {
@@ -23,8 +25,15 @@ const OverallProgressBar = ({
     };
   }, [progresses]);
 
-  const progressBar = useMemo(
-    () => (
+  return (
+    <Tooltip
+      title={`Forged: ${overall?.completedItems ?? 0} ${
+        overall?.unforgedItems !== undefined && overall.unforgedItems > 0
+          ? `| Unforged: ${overall.unforgedItems} `
+          : ''
+      }| Total: ${overall?.totalItems ?? 0}`}
+      overlayStyle={{ maxWidth: 600 }}
+    >
       <Progress
         status={
           overall?.completedItems === overall?.totalItems ? 'success' : 'active'
@@ -41,23 +50,10 @@ const OverallProgressBar = ({
             overall === undefined
               ? undefined
               : (overall.completedItems / overall.totalItems) * 100,
+          strokeColor: color,
         }}
         format={(_, p) => `${p?.toFixed(1)}%`}
       />
-    ),
-    [overall],
-  );
-
-  return (
-    <Tooltip
-      title={`Forged: ${overall?.completedItems ?? 0} ${
-        overall?.unforgedItems !== undefined && overall.unforgedItems > 0
-          ? `| Unforged: ${overall.unforgedItems} `
-          : ''
-      }| Total: ${overall?.totalItems ?? 0}`}
-      overlayStyle={{ maxWidth: 600 }}
-    >
-      {progressBar}
     </Tooltip>
   );
 };

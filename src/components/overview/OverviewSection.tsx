@@ -37,6 +37,7 @@ const OverviewSection = ({
         </Col>
         <Col flex="auto">
           <OverallProgressBar
+            color={miner.color}
             progresses={[
               overclockProgress,
               weaponPaintJobProgress,
@@ -47,18 +48,25 @@ const OverviewSection = ({
         </Col>
       </Row>
       <Row gutter={[16, 24]} justify="center">
-        <OverviewProgressCard title="Overclocks" progress={overclockProgress} />
+        <OverviewProgressCard
+          title="Overclocks"
+          progress={overclockProgress}
+          href={`/${miner.name.toLowerCase()}/overclocks`}
+        />
         <OverviewProgressCard
           title="Weapon Paint Jobs"
           progress={weaponPaintJobProgress}
+          href={`/${miner.name.toLowerCase()}/weapon-paint-jobs`}
         />
         <OverviewProgressCard
           title="Weapon Frameworks"
           progress={weaponFrameworkProgress}
+          href={`/${miner.name.toLowerCase()}/weapon-frameworks`}
         />
         <OverviewProgressCard
           title="Armor Paint Jobs"
           progress={armorPaintJobProgress}
+          href={`/${miner.name.toLowerCase()}/armor-paint-jobs`}
         />
       </Row>
     </>
@@ -70,6 +78,7 @@ export default OverviewSection;
 export const query = graphql`
   fragment OverviewSectionMiner on MinersJson {
     name
+    color
     portrait {
       childImageSharp {
         gatsbyImageData(width: 75)
