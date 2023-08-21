@@ -3,11 +3,15 @@ import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
 import { graphql } from 'gatsby';
 import nullthrows from '../../utils/nullthrows';
 
+const FRAME_SIZE = 100;
+
 function CleanOverclockFrame() {
   return (
     <StaticImage
       alt="Clean Overclock"
       src="../../images/overclock-frames/clean.png"
+      height={FRAME_SIZE}
+      width={FRAME_SIZE}
     />
   );
 }
@@ -17,6 +21,8 @@ function BalancedOverclockFrame() {
     <StaticImage
       alt="Clean Overclock"
       src="../../images/overclock-frames/balanced.png"
+      height={FRAME_SIZE}
+      width={FRAME_SIZE}
     />
   );
 }
@@ -26,6 +32,8 @@ function UnstableOverclockFrame() {
     <StaticImage
       alt="Clean Overclock"
       src="../../images/overclock-frames/unstable.png"
+      height={FRAME_SIZE}
+      width={FRAME_SIZE}
     />
   );
 }
