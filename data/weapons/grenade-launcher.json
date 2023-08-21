@@ -1,13 +1,13 @@
 {
   "name": "Deepcore 40mm PGL",
-  "outline": "./outlines/grenade-launcher.png",
+  "outline": "../icons/weapon-outlines/grenade-launcher.png",
   "saveId": "4C4F1A50-42CB24CC-2A7F28B0-0D12AEF9",
   "overclocks": [
     {
       "name": "Clean Sweep",
       "saveId": "9A0512B9-4BE4863F-505498A2-B5CC36D1",
-      "icon": "./overclock-icons/area.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/area.png",
+      "type": "CLEAN",
       "price": {
         "credits": 8100,
         "bismor": 105,
@@ -23,8 +23,8 @@
     {
       "name": "Pack Rat",
       "saveId": "E19476A9-4E48B7A9-DB146EB6-6BDB30F8",
-      "icon": "./overclock-icons/ammo.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/ammo.png",
+      "type": "CLEAN",
       "price": {
         "credits": 7950,
         "bismor": 80,
@@ -40,8 +40,8 @@
     {
       "name": "Compact Rounds",
       "saveId": "FA1357EE-45E2A091-CEBFC0A1-74202115",
-      "icon": "./overclock-icons/ammo.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/ammo.png",
+      "type": "BALANCED",
       "price": {
         "credits": 7900,
         "bismor": 120,
@@ -57,8 +57,8 @@
     {
       "name": "RJ250 Compound",
       "saveId": "88C77EDB-4CCE6FB4-50A20098-EAE8A010",
-      "icon": "./overclock-icons/explosion-jump.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/explosion-jump.png",
+      "type": "BALANCED",
       "price": {
         "credits": 8800,
         "bismor": 65,
@@ -74,8 +74,8 @@
     {
       "name": "Fat Boy",
       "saveId": "4343D287-45FCD388-1D354E88-7C0FE7CB",
-      "icon": "./overclock-icons/area-damage.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/area-damage.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 8300,
         "bismor": 120,
@@ -91,8 +91,8 @@
     {
       "name": "Hyper Propellant",
       "saveId": "84D64CBC-44F61B62-3A370796-4F574A53",
-      "icon": "./overclock-icons/projectile-speed.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/projectile-speed.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 8950,
         "croppa": 90,

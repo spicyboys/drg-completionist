@@ -1,13 +1,51 @@
-import React from 'react';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import React, { useMemo } from 'react';
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
 import { graphql } from 'gatsby';
 import nullthrows from '../../utils/nullthrows';
+
+function CleanOverclockFrame() {
+  return (
+    <StaticImage
+      alt="Clean Overclock"
+      src="../../images/overclock-frames/clean.png"
+    />
+  );
+}
+
+function BalancedOverclockFrame() {
+  return (
+    <StaticImage
+      alt="Clean Overclock"
+      src="../../images/overclock-frames/balanced.png"
+    />
+  );
+}
+
+function UnstableOverclockFrame() {
+  return (
+    <StaticImage
+      alt="Clean Overclock"
+      src="../../images/overclock-frames/unstable.png"
+    />
+  );
+}
 
 export default function OverclockIcon({
   overclock,
 }: {
   overclock: Queries.OverclockIconOverclockFragment;
 }) {
+  const FrameIcon = useMemo(() => {
+    switch (overclock.type) {
+      case 'CLEAN':
+        return CleanOverclockFrame;
+      case 'BALANCED':
+        return BalancedOverclockFrame;
+      case 'UNSTABLE':
+        return UnstableOverclockFrame;
+    }
+  }, [overclock.type]);
+
   return (
     <div
       style={{
@@ -24,18 +62,12 @@ export default function OverclockIcon({
           left: '50%',
         }}
       >
-        <GatsbyImage
-          image={nullthrows(
-            overclock.type.icon?.childImageSharp?.gatsbyImageData,
-          )}
-          alt={overclock.type.name!}
-          style={{ height: 'auto', width: 'auto' }}
-        />
+        <FrameIcon />
         <div
           style={{
             position: 'absolute',
             transform: `translate(-50%, -5${
-              overclock.type.name === 'Clean' ? 7 : 0
+              overclock.type === 'CLEAN' ? 7 : 0
             }%)`,
             top: '50%',
             left: '50%',
@@ -55,14 +87,7 @@ export default function OverclockIcon({
 export const query = graphql`
   fragment OverclockIconOverclock on WeaponsJsonOverclocks {
     name
-    type {
-      name
-      icon {
-        childImageSharp {
-          gatsbyImageData(width: 100, height: 100)
-        }
-      }
-    }
+    type
     icon {
       childImageSharp {
         gatsbyImageData(width: 48, height: 48)

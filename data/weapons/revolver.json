@@ -1,13 +1,13 @@
 {
   "name": "\"Bulldog\" Heavy Revolver",
-  "outline": "./outlines/revolver.png",
+  "outline": "../icons/weapon-outlines/revolver.png",
   "saveId": "F6F7A5D8-451D13BD-FE2CBDAC-CC16547E",
   "overclocks": [
     {
       "name": "Chain Hit",
       "saveId": "3BA38558-4584AE15-656BA691-4E49E5A2",
-      "icon": "./overclock-icons/ricochet.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/ricochet.png",
+      "type": "CLEAN",
       "price": {
         "credits": 7300,
         "enorPearl": 80,
@@ -23,8 +23,8 @@
     {
       "name": "Homebrew Powder",
       "saveId": "F99369CD-497CE238-3B2969AC-F0A842F9",
-      "icon": "./overclock-icons/chance.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/chance.png",
+      "type": "BALANCED",
       "price": {
         "credits": 7350,
         "croppa": 135,
@@ -40,8 +40,8 @@
     {
       "name": "Volatile Bullets",
       "saveId": "BC6C30D1-48B22184-335BB9A4-56E0F32D",
-      "icon": "./overclock-icons/heat.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/heat.png",
+      "type": "BALANCED",
       "price": {
         "credits": 7350,
         "croppa": 130,
@@ -57,8 +57,8 @@
     {
       "name": "Six Shooter",
       "saveId": "39DC37A9-41E8DE38-1C64D08C-6AB419CE",
-      "icon": "./overclock-icons/clip-size.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/clip-size.png",
+      "type": "BALANCED",
       "price": {
         "credits": 7750,
         "bismor": 120,
@@ -74,8 +74,8 @@
     {
       "name": "Elephant Rounds",
       "saveId": "FB943FD5-48045EC0-DFC97BB5-7B264668",
-      "icon": "./overclock-icons/damage.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/damage.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 7300,
         "enorPearl": 140,
@@ -97,8 +97,8 @@
     {
       "name": "Magic Bullets",
       "saveId": "E7B402DB-44BF437D-829974A4-779B87C0",
-      "icon": "./overclock-icons/ricochet.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/ricochet.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 8750,
         "croppa": 105,

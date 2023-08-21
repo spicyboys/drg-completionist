@@ -1,13 +1,13 @@
 {
   "name": "Corrosive Sludge Pump",
-  "outline": "./outlines/sludge-pump.png",
+  "outline": "../icons/weapon-outlines/sludge-pump.png",
   "saveId": "1C5B98F1-48A5C174-ACB889B7-4EFE1785",
   "overclocks": [
     {
       "name": "Hydrogen Ion Additive",
       "saveId": "55B2CAEC-44F00514-6CFB3FA9-399BFF51",
-      "icon": "./overclock-icons/acid.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/acid.png",
+      "type": "CLEAN",
       "price": {
         "credits": 8800,
         "umanite": 70,
@@ -26,8 +26,8 @@
     {
       "name": "AG Mixture",
       "saveId": "2B675649-433A8DA6-60C24E9D-E48CB9F0",
-      "icon": "./overclock-icons/projectile-speed.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/projectile-speed.png",
+      "type": "CLEAN",
       "price": {
         "credits": 7800,
         "croppa": 60,
@@ -43,8 +43,8 @@
     {
       "name": "Volatile Impact Mixture",
       "saveId": "D0169F53-4704A5EC-B1D31BB2-CB39D4AD",
-      "icon": "./overclock-icons/damage.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/damage.png",
+      "type": "BALANCED",
       "price": {
         "credits": 8500,
         "jadiz": 75,
@@ -63,8 +63,8 @@
     {
       "name": "Disperser Compound",
       "saveId": "8B7AD7C1-4033D4AF-97834A8E-EC3AA6F1",
-      "icon": "./overclock-icons/area-damage.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/area-damage.png",
+      "type": "BALANCED",
       "price": {
         "credits": 8800,
         "jadiz": 135,
@@ -80,8 +80,8 @@
     {
       "name": "Goo Bomber Special",
       "saveId": "997ECC4C-4AA16341-B37AC9AA-F9F17F77",
-      "icon": "./overclock-icons/special.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/special.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 7450,
         "jadiz": 140,
@@ -102,8 +102,8 @@
     {
       "name": "Sludge Blast",
       "saveId": "3B277DEA-4B9B0956-8A76449F-1C8C9A09",
-      "icon": "./overclock-icons/shotgun-blast.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/shotgun-blast.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 8200,
         "jadiz": 100,

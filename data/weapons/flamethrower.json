@@ -1,13 +1,13 @@
 {
   "name": "CRSPR Flamethrower",
-  "outline": "./outlines/flamethrower.png",
+  "outline": "../icons/weapon-outlines/flamethrower.png",
   "saveId": "1074FB91-4EB63FE5-8E55C7BA-585E412C",
   "overclocks": [
     {
       "name": "Lighter Tanks",
       "saveId": "967A05C5-4B5ECF08-2AB3AAA4-3EBA13D6",
-      "icon": "./overclock-icons/ammo.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/ammo.png",
+      "type": "CLEAN",
       "price": {
         "credits": 7500,
         "bismor": 125,
@@ -23,8 +23,8 @@
     {
       "name": "Sticky Additive",
       "saveId": "831D5F41-447A7EA7-3860BF8D-6CFD0331",
-      "icon": "./overclock-icons/duration-hourglass.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/duration-hourglass.png",
+      "type": "CLEAN",
       "price": {
         "credits": 8250,
         "bismor": 80,
@@ -40,8 +40,8 @@
     {
       "name": "Compact Feed Valves",
       "saveId": "438D5871-4A9A58A7-DEA861BE-BF49B42E",
-      "icon": "./overclock-icons/clip-size.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/clip-size.png",
+      "type": "BALANCED",
       "price": {
         "credits": 7350,
         "bismor": 70,
@@ -57,8 +57,8 @@
     {
       "name": "Fuel Stream Diffuser",
       "saveId": "1C5DE819-49B38535-9C7751B1-D90373BD",
-      "icon": "./overclock-icons/distance.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/distance.png",
+      "type": "BALANCED",
       "price": {
         "credits": 7100,
         "bismor": 100,
@@ -74,8 +74,8 @@
     {
       "name": "Face Melter",
       "saveId": "DDA83164-4B89A6EA-AC7BC590-FFA55275",
-      "icon": "./overclock-icons/damage.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/damage.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 7000,
         "croppa": 130,
@@ -91,8 +91,8 @@
     {
       "name": "Sticky Fuel",
       "saveId": "E33E8CF2-480D968A-699F5E96-193F6BF5",
-      "icon": "./overclock-icons/duration-hourglass.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/duration-hourglass.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 8800,
         "enorPearl": 110,

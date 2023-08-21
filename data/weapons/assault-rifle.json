@@ -1,13 +1,13 @@
 {
   "name": "Deepcore GK2",
-  "outline": "./outlines/assault-rifle.png",
+  "outline": "../icons/weapon-outlines/assault-rifle.png",
   "saveId": "6511F31A-481CB1BC-A6D1A3A5-40355ABA",
   "overclocks": [
     {
       "name": "Compact Ammo",
       "saveId": "935B94AF-4CD6B9A7-6800DDA6-80BC2736",
-      "icon": "./overclock-icons/clip-size.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/clip-size.png",
+      "type": "CLEAN",
       "price": {
         "credits": 7250,
         "bismor": 125,
@@ -23,8 +23,8 @@
     {
       "name": "Gas Rerouting",
       "saveId": "47E5E2F6-4D67EBF2-F491A5BD-17D0E67D",
-      "icon": "./overclock-icons/fire-rate.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/fire-rate.png",
+      "type": "CLEAN",
       "price": {
         "credits": 7800,
         "croppa": 60,
@@ -40,8 +40,8 @@
     {
       "name": "Homebrew Powder",
       "saveId": "F341DF4C-49E4F8A0-61AC1B9D-99773468",
-      "icon": "./overclock-icons/chance.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/chance.png",
+      "type": "CLEAN",
       "price": {
         "credits": 8100,
         "bismor": 95,
@@ -57,8 +57,8 @@
     {
       "name": "Overclocked Firing Mechanism",
       "saveId": "240306C3-4A2C48CE-ED44DCB6-39BA8C49",
-      "icon": "./overclock-icons/fire-rate.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/fire-rate.png",
+      "type": "BALANCED",
       "price": {
         "credits": 7950,
         "bismor": 95,
@@ -74,8 +74,8 @@
     {
       "name": "Bullets of Mercy",
       "saveId": "1F220673-4BB06412-B45D028C-67169DDE",
-      "icon": "./overclock-icons/damage.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/damage.png",
+      "type": "BALANCED",
       "price": {
         "credits": 8100,
         "bismor": 90,
@@ -91,8 +91,8 @@
     {
       "name": "AI Stability Engine",
       "saveId": "E123F111-40311074-50577995-D776D56B",
-      "icon": "./overclock-icons/aim.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/aim.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 8250,
         "croppa": 60,
@@ -112,8 +112,8 @@
     {
       "name": "Electrifying Reload",
       "saveId": "E7B994FF-42774D83-CACCDA92-B923A03E",
-      "icon": "./overclock-icons/special-magazine.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/special-magazine.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 7750,
         "bismor": 105,

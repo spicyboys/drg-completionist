@@ -1,13 +1,13 @@
 {
   "name": "\"Lead Storm\" Powered Minigun",
-  "outline": "./outlines/minigun.png",
+  "outline": "../icons/weapon-outlines/minigun.png",
   "saveId": "093B57DF-402E0B42-B93ACE8B-F84265D3",
   "overclocks": [
     {
       "name": "A Little More Oomph!",
       "saveId": "70615DB5-43D7A5EE-29284BAC-73460C3C",
-      "icon": "./overclock-icons/damage.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/damage.png",
+      "type": "CLEAN",
       "price": {
         "credits": 8700,
         "bismor": 120,
@@ -23,8 +23,8 @@
     {
       "name": "Thinned Drum Walls",
       "saveId": "3965D401-492F8303-71F7508C-9BE8589D",
-      "icon": "./overclock-icons/cooldown.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/cooldown.png",
+      "type": "CLEAN",
       "price": {
         "credits": 7650,
         "croppa": 75,
@@ -40,8 +40,8 @@
     {
       "name": "Burning Hell",
       "saveId": "73661563-444F17F2-878F599F-650CAC29",
-      "icon": "./overclock-icons/heat.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/heat.png",
+      "type": "BALANCED",
       "price": {
         "credits": 8700,
         "croppa": 110,
@@ -57,8 +57,8 @@
     {
       "name": "Compact Feed Mechanism",
       "saveId": "B4BF9F2E-4F557B3B-808772B3-244833F1",
-      "icon": "./overclock-icons/ammo.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/ammo.png",
+      "type": "BALANCED",
       "price": {
         "credits": 7450,
         "bismor": 70,
@@ -74,8 +74,8 @@
     {
       "name": "Exhaust Vectoring",
       "saveId": "4701B1FB-416A6058-8F378E88-61CDE369",
-      "icon": "./overclock-icons/damage.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/damage.png",
+      "type": "BALANCED",
       "price": {
         "credits": 7400,
         "bismor": 140,
@@ -91,8 +91,8 @@
     {
       "name": "Bullet Hell",
       "saveId": "803640ED-48E8696A-E3DD72BC-56C4EACD",
-      "icon": "./overclock-icons/ricochet.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/ricochet.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 7600,
         "enorPearl": 105,
@@ -108,8 +108,8 @@
     {
       "name": "Lead Storm",
       "saveId": "2C0ED17C-41305855-1C1477B5-62EE4B85",
-      "icon": "./overclock-icons/damage.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/damage.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 8800,
         "enorPearl": 130,

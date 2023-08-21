@@ -1,13 +1,13 @@
 {
   "name": "DRAK-25 Plasma Carbine",
-  "outline": "./outlines/plasma-carbine.png",
+  "outline": "../icons/weapon-outlines/plasma-carbine.png",
   "saveId": "B53AF53D-4860F6B7-85F786B6-A4E534F6",
   "overclocks": [
     {
       "name": "Aggressive Venting",
       "saveId": "00B031D8-4CC8A2F2-B1A54987-74853482",
-      "icon": "./overclock-icons/special.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/special.png",
+      "type": "CLEAN",
       "price": {
         "credits": 8000,
         "croppa": 95,
@@ -23,8 +23,8 @@
     {
       "name": "Thermal Liquid Coolant",
       "saveId": "DA09EA00-4676DA14-A1D52D98-087A46B2",
-      "icon": "./overclock-icons/cooldown.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/cooldown.png",
+      "type": "CLEAN",
       "price": {
         "credits": 8100,
         "umanite": 130,
@@ -40,8 +40,8 @@
     {
       "name": "Impact Deflection",
       "saveId": "5940D71B-4B099E73-793B0ABE-464BE9F2",
-      "icon": "./overclock-icons/ricochet.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/ricochet.png",
+      "type": "BALANCED",
       "price": {
         "credits": 7950,
         "croppa": 60,
@@ -57,8 +57,8 @@
     {
       "name": "Rewiring Mod",
       "saveId": "481CBF5A-4BBDF37B-A4F2DAAF-EC208742",
-      "icon": "./overclock-icons/ammo.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/ammo.png",
+      "type": "BALANCED",
       "price": {
         "credits": 8200,
         "croppa": 65,
@@ -74,8 +74,8 @@
     {
       "name": "Overtuned Particle Accelerator",
       "saveId": "97762592-41503577-CA70EBBD-276A94CD",
-      "icon": "./overclock-icons/damage.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/damage.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 7200,
         "jadiz": 65,
@@ -95,8 +95,8 @@
     {
       "name": "Shield Battery Booster",
       "saveId": "B8142753-4F7C8603-78EAA68A-EAAA4EFA",
-      "icon": "./overclock-icons/resistance.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/resistance.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 8850,
         "jadiz": 120,
@@ -121,8 +121,8 @@
     {
       "name": "Thermal Exhaust Feedback",
       "saveId": "340CFEBF-4D58AC36-FE6E0B89-F1AA2491",
-      "icon": "./overclock-icons/heat.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/heat.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 7500,
         "jadiz": 100,

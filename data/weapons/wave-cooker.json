@@ -1,13 +1,13 @@
 {
   "name": "Colette Wave Cooker",
-  "outline": "./outlines/wave-cooker.png",
+  "outline": "../icons/weapon-outlines/wave-cooker.png",
   "saveId": "24DB9F29-414E1966-ED3E219C-02FA504B",
   "overclocks": [
     {
       "name": "Liquid Cooling System",
       "saveId": "5940615F-4EA1ADB3-EF310893-0298604B",
-      "icon": "./overclock-icons/cooldown.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/cooldown.png",
+      "type": "CLEAN",
       "price": {
         "credits": 7400,
         "jadiz": 65,
@@ -27,8 +27,8 @@
     {
       "name": "Super Focus Lens",
       "saveId": "ED70A879-4A81C900-ADE42B94-630BA149",
-      "icon": "./overclock-icons/aim.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/aim.png",
+      "type": "CLEAN",
       "price": {
         "credits": 7550,
         "croppa": 80,
@@ -44,8 +44,8 @@
     {
       "name": "Diffusion Ray",
       "saveId": "8BE1D90C-4471E285-8DD30199-B462BA50",
-      "icon": "./overclock-icons/bullet-penetration.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/bullet-penetration.png",
+      "type": "BALANCED",
       "price": {
         "credits": 8300,
         "croppa": 105,
@@ -61,8 +61,8 @@
     {
       "name": "Mega Power Supply",
       "saveId": "9057E8A3-4AC7CBAB-C63CCBBC-1B9A5036",
-      "icon": "./overclock-icons/ammo.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/ammo.png",
+      "type": "BALANCED",
       "price": {
         "credits": 8100,
         "croppa": 95,
@@ -78,8 +78,8 @@
     {
       "name": "Blistering Necrosis",
       "saveId": "32886448-4DE011AA-8A2E9FAE-8DAD89DF",
-      "icon": "./overclock-icons/weakspot.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/weakspot.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 7850,
         "croppa": 130,
@@ -95,8 +95,8 @@
     {
       "name": "Gamma Contamination",
       "saveId": "8729DD5E-497F04DB-FC72DD8A-E31E6CEB",
-      "icon": "./overclock-icons/radioactive.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/radioactive.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 8350,
         "magnite": 80,

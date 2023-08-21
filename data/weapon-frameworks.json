@@ -2,52 +2,52 @@
   {
     "name": "Custom Engineered",
     "source": "CARGO_CRATE",
-    "icon": "./weapon-framework-icons/custom-engineered.png"
+    "icon": "./icons/weapon-frameworks/custom-engineered.png"
   },
   {
     "name": "Fourth Relic",
     "source": "CARGO_CRATE",
-    "icon": "./weapon-framework-icons/fourth-relic.png"
+    "icon": "./icons/weapon-frameworks/fourth-relic.png"
   },
   {
     "name": "Glyphid Trophy Hunter",
     "source": "CARGO_CRATE",
-    "icon": "./weapon-framework-icons/glyphid-trophy-hunter.png"
+    "icon": "./icons/weapon-frameworks/glyphid-trophy-hunter.png"
   },
   {
     "name": "Mechanized",
     "source": "CARGO_CRATE",
-    "icon": "./weapon-framework-icons/mechanized.png"
+    "icon": "./icons/weapon-frameworks/mechanized.png"
   },
   {
     "name": "Neonband",
     "source": "CARGO_CRATE",
-    "icon": "./weapon-framework-icons/neon-band.png"
+    "icon": "./icons/weapon-frameworks/neon-band.png"
   },
   {
     "name": "Scale Brigade",
     "source": "CARGO_CRATE",
-    "icon": "./weapon-framework-icons/scale-brigade.png"
+    "icon": "./icons/weapon-frameworks/scale-brigade.png"
   },
   {
     "name": "Waster",
     "source": "CARGO_CRATE",
-    "icon": "./weapon-framework-icons/waster.png"
+    "icon": "./icons/weapon-frameworks/waster.png"
   },
   {
     "name": "Builder's Choice",
     "source": "CARGO_CRATE",
-    "icon": "./weapon-framework-icons/builders-choice.png"
+    "icon": "./icons/weapon-frameworks/builders-choice.png"
   },
   {
     "name": "MilSpec",
     "source": "PERFORMANCE_PASS",
-    "icon": "./weapon-framework-icons/mil-spec.png"
+    "icon": "./icons/weapon-frameworks/mil-spec.png"
   },
   {
     "name": "Infected",
     "source": "PERFORMANCE_PASS",
-    "icon": "./weapon-framework-icons/infected.png",
+    "icon": "./icons/weapon-frameworks/infected.png",
     "season": 4
   }
 ]

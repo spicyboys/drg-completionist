@@ -1,13 +1,13 @@
 {
   "name": "\"Hurricane\" Guided Rocket System",
-  "outline": "./outlines/hurricane.png",
+  "outline": "../icons/weapon-outlines/hurricane.png",
   "saveId": "8A6AEDA3-4DCD08CE-0CA171B4-646B7B69",
   "overclocks": [
     {
       "name": "Overtuned Feed Mechanism",
       "saveId": "4876252A-448868DF-91B03DBA-A56B75A3",
-      "icon": "./overclock-icons/fire-rate.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/fire-rate.png",
+      "type": "CLEAN",
       "price": {
         "credits": 8950,
         "croppa": 65,
@@ -23,8 +23,8 @@
     {
       "name": "Fragmentation Missiles",
       "saveId": "0C88411E-43FC189E-9FB6829B-91A1F019",
-      "icon": "./overclock-icons/area.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/area.png",
+      "type": "CLEAN",
       "price": {
         "credits": 7150,
         "croppa": 135,
@@ -40,8 +40,8 @@
     {
       "name": "Plasma Burster Missiles",
       "saveId": "AD9ACD01-46FB9823-6F3F8A81-4A38966A",
-      "icon": "./overclock-icons/bullet-penetration.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/bullet-penetration.png",
+      "type": "BALANCED",
       "price": {
         "credits": 8500,
         "croppa": 105,
@@ -68,8 +68,8 @@
     {
       "name": "Minelayer System",
       "saveId": "9AE273C8-4D4F3E46-D92148AD-B41FC32B",
-      "icon": "./overclock-icons/special.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/special.png",
+      "type": "BALANCED",
       "price": {
         "credits": 7500,
         "croppa": 125,
@@ -85,8 +85,8 @@
     {
       "name": "Jet Fuel Homebrew",
       "saveId": "FB3946C2-4909A004-CD008FBE-842B4638",
-      "icon": "./overclock-icons/projectile-speed.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/projectile-speed.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 7250,
         "jadiz": 130,
@@ -111,8 +111,8 @@
     {
       "name": "Rocket Barrage",
       "saveId": "C316688E-492CEEDA-A68F3EB9-1A3BF17C",
-      "icon": "./overclock-icons/distance.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/distance.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 7050,
         "jadiz": 105,
@@ -128,8 +128,8 @@
     {
       "name": "Salvo Module",
       "saveId": "B547DE52-419E57A2-93F16485-66082482",
-      "icon": "./overclock-icons/shotgun-blast.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/shotgun-blast.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 8650,
         "jadiz": 110,

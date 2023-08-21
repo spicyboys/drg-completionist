@@ -1,13 +1,13 @@
 {
   "name": "Shard Diffractor",
-  "outline": "./outlines/shard-diffractor.png",
+  "outline": "../icons/weapon-outlines/shard-diffractor.png",
   "saveId": "CB8DCCF9-4FC4EBB9-0DB80C9B-3100F358",
   "overclocks": [
     {
       "name": "Efficiency Tweaks",
       "saveId": "122F43F1-4DE0681F-8EDDC5A0-7D71CF50",
-      "icon": "./overclock-icons/ammo.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/ammo.png",
+      "type": "CLEAN",
       "price": {
         "credits": 7650,
         "croppa": 120,
@@ -23,8 +23,8 @@
     {
       "name": "Automated Beam Controller",
       "saveId": "C31BD871-4D8FC2DB-9F6C5A90-AE558B4A",
-      "icon": "./overclock-icons/fire-rate.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/fire-rate.png",
+      "type": "BALANCED",
       "price": {
         "credits": 8050,
         "jadiz": 130,
@@ -48,8 +48,8 @@
     {
       "name": "Feedback Loop",
       "saveId": "6F0C88F1-4710EF7B-4FEE778E-F68134C6",
-      "icon": "./overclock-icons/area.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/area.png",
+      "type": "BALANCED",
       "price": {
         "credits": 7200,
         "magnite": 65,
@@ -65,8 +65,8 @@
     {
       "name": "Volatile Impact Reactor",
       "saveId": "1FC2B77B-4AE6D1A1-E67C008C-12A423A0",
-      "icon": "./overclock-icons/special.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/special.png",
+      "type": "BALANCED",
       "price": {
         "credits": 8300,
         "magnite": 125,
@@ -82,8 +82,8 @@
     {
       "name": "Plastcrete Catalyst",
       "saveId": "397230D3-4CE4BC69-00E9EBB1-0D6E2F9A",
-      "icon": "./overclock-icons/explosion.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/explosion.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 7950,
         "croppa": 110,
@@ -99,8 +99,8 @@
     {
       "name": "Overdrive Booster",
       "saveId": "BA187A18-4CD28352-F4375A90-A03B12FB",
-      "icon": "./overclock-icons/damage.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/damage.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 7900,
         "croppa": 110,

@@ -1,13 +1,13 @@
 {
   "name": "\"Warthog\" Auto 210",
-  "outline": "./outlines/shotgun.png",
+  "outline": "../icons/weapon-outlines/shotgun.png",
   "saveId": "F33967B6-4304A459-AC9B0DB7-392DAAF8",
   "overclocks": [
     {
       "name": "Stunner",
       "saveId": "38D28D33-4E2E2A33-080249A5-02F5D7AA",
-      "icon": "./overclock-icons/stun.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/stun.png",
+      "type": "CLEAN",
       "price": {
         "credits": 7350,
         "bismor": 100,
@@ -26,8 +26,8 @@
     {
       "name": "Light-Weight Magazines",
       "saveId": "38EC4ECD-4E7229C0-DCCC1783-5760D022",
-      "icon": "./overclock-icons/ammo.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/ammo.png",
+      "type": "CLEAN",
       "price": {
         "credits": 7250,
         "croppa": 125,
@@ -43,8 +43,8 @@
     {
       "name": "Magnetic Pellet Alignment",
       "saveId": "9927E907-419CBF56-3E31EA8E-8D9FC52D",
-      "icon": "./overclock-icons/aim.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/aim.png",
+      "type": "BALANCED",
       "price": {
         "credits": 7900,
         "enorPearl": 120,
@@ -60,8 +60,8 @@
     {
       "name": "Cycle Overload",
       "saveId": "A22B1270-48BFDAFB-C909DC95-85E69402",
-      "icon": "./overclock-icons/fire-rate.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/fire-rate.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 8050,
         "bismor": 125,
@@ -77,8 +77,8 @@
     {
       "name": "Mini Shells",
       "saveId": "4CC9D462-41E86713-77B69196-FBA47D83",
-      "icon": "./overclock-icons/small-bullets.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/small-bullets.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 7700,
         "croppa": 125,

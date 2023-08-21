@@ -1,13 +1,13 @@
 {
   "name": "Nishanka Boltshark X-80",
-  "outline": "./outlines/crossbow.png",
+  "outline": "../icons/weapon-outlines/crossbow.png",
   "saveId": "96B59805-48326E01-1A2D8386-81F9626D",
   "overclocks": [
     {
       "name": "Quick Fire",
       "saveId": "FA57FA1C-49DBD035-7CF8AAA9-F41E01AA",
-      "icon": "./overclock-icons/fire-rate.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/fire-rate.png",
+      "type": "CLEAN",
       "price": {
         "credits": 8400,
         "croppa": 95,
@@ -23,8 +23,8 @@
     {
       "name": "The Specialist",
       "saveId": "3145466C-49A80E82-C0803CBB-4FA790F1",
-      "icon": "./overclock-icons/special.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/special.png",
+      "type": "CLEAN",
       "price": {
         "credits": 7900,
         "croppa": 65,
@@ -40,8 +40,8 @@
     {
       "name": "Cryo Bolt",
       "saveId": "A9D0CF75-4AC9310F-028D6A9D-FCE17D14",
-      "icon": "./overclock-icons/cold.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/cold.png",
+      "type": "BALANCED",
       "price": {
         "credits": 7350,
         "croppa": 75,
@@ -57,8 +57,8 @@
     {
       "name": "Fire Bolt",
       "saveId": "E281CADD-48E86B9C-F0F42D8C-722AC7B0",
-      "icon": "./overclock-icons/heat.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/heat.png",
+      "type": "BALANCED",
       "price": {
         "credits": 7100,
         "croppa": 90,
@@ -74,8 +74,8 @@
     {
       "name": "Bodkin Points",
       "saveId": "240FCBAE-4A19FA1D-86BB4BB0-40A83F56",
-      "icon": "./overclock-icons/ricochet.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/ricochet.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 8400,
         "croppa": 110,
@@ -91,8 +91,8 @@
     {
       "name": "Trifork Volley",
       "saveId": "DE96FE62-4E45A532-2B95F1B0-F4BA8DD6",
-      "icon": "./overclock-icons/last-shell-higher-damage.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/last-shell-higher-damage.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 7650,
         "jadiz": 100,

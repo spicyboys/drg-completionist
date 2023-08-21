@@ -62,7 +62,13 @@ type WeaponsJson implements Node {
 type WeaponsJsonOverclocks {
   name: String!
   saveId: String!
-  type: OverclockTypesJson! @link(by: "name")
+  type: OverclockType!
+}
+
+enum OverclockType {
+  CLEAN
+  BALANCED
+  UNSTABLE
 }
 
 type WeaponsJsonFrameworksJson {

@@ -1,13 +1,13 @@
 {
   "name": "Jury-Rigged Boomstick",
-  "outline": "./outlines/boomstick.png",
+  "outline": "../icons/weapon-outlines/boomstick.png",
   "saveId": "CB565789-41B01790-7AC4749D-A5165AC4",
   "overclocks": [
     {
       "name": "Compact Shells",
       "saveId": "4AEE40FA-4FB08C1F-6491AFBF-67B1E469",
-      "icon": "./overclock-icons/ammo.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/ammo.png",
+      "type": "CLEAN",
       "price": {
         "credits": 8550,
         "jadiz": 100,
@@ -23,8 +23,8 @@
     {
       "name": "Special Powder",
       "saveId": "D6F7DAE6-43045006-D666F99E-A669BDFD",
-      "icon": "./overclock-icons/shotgun-jump.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/shotgun-jump.png",
+      "type": "CLEAN",
       "price": {
         "credits": 7050,
         "bismor": 95,
@@ -40,8 +40,8 @@
     {
       "name": "Stuffed Shells",
       "saveId": "7CCB683F-4328AB2F-136D44B1-1D2CD93B",
-      "icon": "./overclock-icons/shotgun-pellet.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/shotgun-pellet.png",
+      "type": "CLEAN",
       "price": {
         "credits": 7850,
         "bismor": 100,
@@ -57,8 +57,8 @@
     {
       "name": "Shaped Shells",
       "saveId": "2AAC0CEF-41BD57EF-B45521A7-475D39DA",
-      "icon": "./overclock-icons/aim.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/aim.png",
+      "type": "BALANCED",
       "price": {
         "credits": 7700,
         "bismor": 95,
@@ -74,8 +74,8 @@
     {
       "name": "Double Barrel",
       "saveId": "B30B095F-426FC9EF-C3BFF197-63C652F1",
-      "icon": "./overclock-icons/special.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/special.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 7950,
         "croppa": 100,
@@ -96,8 +96,8 @@
     {
       "name": "Jumbo Shells",
       "saveId": "C62E1A0B-4EC56801-76CA479E-BD703B4C",
-      "icon": "./overclock-icons/damage.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/damage.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 8800,
         "bismor": 65,

@@ -1,13 +1,13 @@
 {
   "name": "Zhukov NUK17",
-  "outline": "./outlines/zhukov.png",
+  "outline": "../icons/weapon-outlines/zhukov.png",
   "saveId": "11EE3697-49874C0D-6FAF24A2-6001BA2D",
   "overclocks": [
     {
       "name": "Minimal Magazines",
       "saveId": "2B45A098-45025423-C35CFF9C-69CC4CB3",
-      "icon": "./overclock-icons/reload-speed.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/reload-speed.png",
+      "type": "CLEAN",
       "price": {
         "credits": 8450,
         "bismor": 130,
@@ -23,8 +23,8 @@
     {
       "name": "Custom Casings",
       "saveId": "C386A224-46EA451F-2A10209A-D341D7F4",
-      "icon": "./overclock-icons/clip-size.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/clip-size.png",
+      "type": "BALANCED",
       "price": {
         "credits": 7700,
         "bismor": 95,
@@ -40,8 +40,8 @@
     {
       "name": "Cryo Minelets",
       "saveId": "278DCD43-4AAAEAEA-3EC46D8E-0CA13804",
-      "icon": "./overclock-icons/cold.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/cold.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 7300,
         "croppa": 65,
@@ -57,8 +57,8 @@
     {
       "name": "Embedded Detonators",
       "saveId": "7150F3FA-42B263BA-C8FB5598-D0FF9BA0",
-      "icon": "./overclock-icons/special-magazine.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/special-magazine.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 7550,
         "jadiz": 135,
@@ -74,8 +74,8 @@
     {
       "name": "Gas Recycling",
       "saveId": "BC2B8B82-4342EC50-0ED0EF85-974585A6",
-      "icon": "./overclock-icons/damage.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/damage.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 7800,
         "enorPearl": 70,

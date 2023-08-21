@@ -1,13 +1,13 @@
 {
   "name": "Lok-1 Smart Rifle",
-  "outline": "./outlines/lock-on-rifle.png",
+  "outline": "../icons/weapon-outlines/lock-on-rifle.png",
   "saveId": "D7C92A19-4259B063-3624A9A4-C2DA8C65",
   "overclocks": [
     {
       "name": "Eraser",
       "saveId": "E7528A53-4CB2FC74-F1F7E585-FAE363CE",
-      "icon": "./overclock-icons/clip-size.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/clip-size.png",
+      "type": "CLEAN",
       "price": {
         "credits": 8000,
         "croppa": 135,
@@ -23,8 +23,8 @@
     {
       "name": "Armor Break Module",
       "saveId": "76133DB6-4CDD0DD9-D7516898-AB37E791",
-      "icon": "./overclock-icons/armor-break.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/armor-break.png",
+      "type": "CLEAN",
       "price": {
         "credits": 7850,
         "croppa": 125,
@@ -40,8 +40,8 @@
     {
       "name": "Explosive Chemical Rounds",
       "saveId": "783EA86F-4AF55135-F004BC97-42A8F19D",
-      "icon": "./overclock-icons/explosion.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/explosion.png",
+      "type": "BALANCED",
       "price": {
         "credits": 8500,
         "croppa": 65,
@@ -57,8 +57,8 @@
     {
       "name": "Seeker Rounds",
       "saveId": "46958B79-4CB316AB-AB6D76AD-D9504155",
-      "icon": "./overclock-icons/aim.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/aim.png",
+      "type": "BALANCED",
       "price": {
         "credits": 8150,
         "magnite": 135,
@@ -74,8 +74,8 @@
     {
       "name": "Executioner",
       "saveId": "69ED8488-46E493B0-746CF381-2F771EFD",
-      "icon": "./overclock-icons/weakspot.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/weakspot.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 8750,
         "jadiz": 105,
@@ -91,8 +91,8 @@
     {
       "name": "Neuro-Lasso",
       "saveId": "1FB56B95-42258F4D-E7C0A091-CF07BD40",
-      "icon": "./overclock-icons/movement-speed.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/movement-speed.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 8950,
         "croppa": 125,

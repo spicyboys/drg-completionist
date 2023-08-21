@@ -1,148 +1,148 @@
 [
   {
     "name": "Beyond the Circuit",
-    "icon": "./weapon-paint-job-icons/beyond-the-circuit.png",
+    "icon": "./icons/weapon-paint-jobs/beyond-the-circuit.png",
     "saveId": "19AB26D8-43E9BEA2-1D51AF84-FDE17F9D",
     "source": "MATRIX_CORE"
   },
   {
     "name": "Dark Descent",
-    "icon": "./weapon-paint-job-icons/dark-descent.png",
+    "icon": "./icons/weapon-paint-jobs/dark-descent.png",
     "saveId": "8044BDEA-4A935E1F-4BBE698E-357CED0E",
     "source": "MATRIX_CORE"
   },
   {
     "name": "Desert Ranger",
-    "icon": "./weapon-paint-job-icons/desert-ranger.png",
+    "icon": "./icons/weapon-paint-jobs/desert-ranger.png",
     "saveId": "B59357BA-402C2866-7877FBA2-6CA999C7",
     "source": "MATRIX_CORE"
   },
   {
     "name": "Digital Danger",
-    "icon": "./weapon-paint-job-icons/digital-danger.png",
+    "icon": "./icons/weapon-paint-jobs/digital-danger.png",
     "saveId": "F7A76674-45186C76-C9A56B9E-12F3EFBE",
     "source": "MATRIX_CORE"
   },
   {
     "name": "Ghostly Pale",
-    "icon": "./weapon-paint-job-icons/ghostly-pale.png",
+    "icon": "./icons/weapon-paint-jobs/ghostly-pale.png",
     "saveId": "BA387AA1-494A2F61-67BE928F-08823203",
     "source": "MATRIX_CORE"
   },
   {
     "name": "Jungle Raid",
-    "icon": "./weapon-paint-job-icons/jungle-raid.png",
+    "icon": "./icons/weapon-paint-jobs/jungle-raid.png",
     "saveId": "72D35719-4D5CB3B4-A7514C95-E573C480",
     "source": "MATRIX_CORE"
   },
   {
     "name": "Metallic Vintage",
-    "icon": "./weapon-paint-job-icons/metallic-vintage.png",
+    "icon": "./icons/weapon-paint-jobs/metallic-vintage.png",
     "saveId": "A44480E8-41127DEC-CBFEACA8-4F8ECD00",
     "source": "MATRIX_CORE"
   },
   {
     "name": "Mint Assault",
-    "icon": "./weapon-paint-job-icons/mint-assault.png",
+    "icon": "./icons/weapon-paint-jobs/mint-assault.png",
     "saveId": "809FB051-4BFB24D6-1805D2B3-6EB08696",
     "source": "MATRIX_CORE"
   },
   {
     "name": "Primal Blood",
-    "icon": "./weapon-paint-job-icons/primal-blood.png",
+    "icon": "./icons/weapon-paint-jobs/primal-blood.png",
     "saveId": "72A3D26F-4DAAB4F8-131832AB-4B78E983",
     "source": "MATRIX_CORE"
   },
   {
     "name": "Tool of Destruction",
-    "icon": "./weapon-paint-job-icons/tool-of-destruction.png",
+    "icon": "./icons/weapon-paint-jobs/tool-of-destruction.png",
     "saveId": "88784D0E-4477E8AC-97FEAB93-0144AA91",
     "source": "MATRIX_CORE"
   },
   {
     "name": "Trusty Rusty",
-    "icon": "./weapon-paint-job-icons/trusty-rusty.png",
+    "icon": "./icons/weapon-paint-jobs/trusty-rusty.png",
     "saveId": "4FFB9633-4830CCAE-D089B7B0-90B69993",
     "source": "MATRIX_CORE"
   },
   {
     "name": "Warmonger",
-    "icon": "./weapon-paint-job-icons/warmonger.png",
+    "icon": "./icons/weapon-paint-jobs/warmonger.png",
     "saveId": "D5E6B826-465EA401-53AD7C97-E7946C9A",
     "source": "MATRIX_CORE"
   },
   {
     "name": "Copper Patinate",
-    "icon": "./weapon-paint-job-icons/copper-patinate.png",
+    "icon": "./icons/weapon-paint-jobs/copper-patinate.png",
     "saveId": "04C31F4A-4EDDE3A8-33713E94-B48BBEDC",
     "source": "MATRIX_CORE"
   },
   {
     "name": "Deep Sea Defender",
-    "icon": "./weapon-paint-job-icons/deep-sea-defender.png",
+    "icon": "./icons/weapon-paint-jobs/deep-sea-defender.png",
     "saveId": "E0CBA913-4B8D0945-D5D00581-EC80E3AF",
     "source": "MATRIX_CORE"
   },
   {
     "name": "Moss Crawler",
-    "icon": "./weapon-paint-job-icons/moss-crawler.png",
+    "icon": "./icons/weapon-paint-jobs/moss-crawler.png",
     "saveId": "F9CFA1CE-4BC2BE7F-AC089E8E-34E06C75",
     "source": "MATRIX_CORE"
   },
   {
     "name": "Scratched Metal",
-    "icon": "./weapon-paint-job-icons/scratched-metal.png",
+    "icon": "./icons/weapon-paint-jobs/scratched-metal.png",
     "saveId": "46B117AB-48030DAA-EF0692A1-358818B2",
     "source": "MATRIX_CORE"
   },
   {
     "name": "Bootcamp",
-    "icon": "./weapon-paint-job-icons/boot-camp.png",
+    "icon": "./icons/weapon-paint-jobs/boot-camp.png",
     "saveId": "6D8634A1-4CCD296E-0477A38A-A7C3BDDD",
     "source": "MATRIX_CORE"
   },
   {
     "name": "Fiery",
-    "icon": "./weapon-paint-job-icons/fiery.png",
+    "icon": "./icons/weapon-paint-jobs/fiery.png",
     "saveId": "153B17A6-49519BA7-4F1259AB-EE31CABC",
     "source": "MATRIX_CORE"
   },
   {
     "name": "Predator",
-    "icon": "./weapon-paint-job-icons/predator.png",
+    "icon": "./icons/weapon-paint-jobs/predator.png",
     "saveId": "0685E1F5-476CD95A-64B3328E-B9B0874C",
     "source": "MATRIX_CORE"
   },
   {
     "name": "Salt Crystal",
-    "icon": "./weapon-paint-job-icons/salt-crystal.png",
+    "icon": "./icons/weapon-paint-jobs/salt-crystal.png",
     "saveId": "23CD0259-4C1BDAC3-10F05FBB-375EF157",
     "source": "MATRIX_CORE"
   },
   {
     "name": "Chlorine",
-    "icon": "./weapon-paint-job-icons/chlorine.png",
+    "icon": "./icons/weapon-paint-jobs/chlorine.png",
     "saveId": "FAB3922A-4948E766-5774C0A4-788B343B",
     "source": "PERFORMANCE_PASS",
     "season": 4
   },
   {
     "name": "Dune Marauder",
-    "icon": "./weapon-paint-job-icons/dune-marauder.png",
+    "icon": "./icons/weapon-paint-jobs/dune-marauder.png",
     "saveId": "9C4F7F8D-458437D3-D6A622A7-9A4F4DFB",
     "source": "PERFORMANCE_PASS",
     "season": 4
   },
   {
     "name": "Lazulite",
-    "icon": "./weapon-paint-job-icons/lazulite.png",
+    "icon": "./icons/weapon-paint-jobs/lazulite.png",
     "saveId": "2C261DF4-46DD56E6-C53E71A3-B4C96AED",
     "source": "PERFORMANCE_PASS",
     "season": 4
   },
   {
     "name": "Lemon Clean",
-    "icon": "./weapon-paint-job-icons/lemon-clean.png",
+    "icon": "./icons/weapon-paint-jobs/lemon-clean.png",
     "saveId": "76BE3081-4598F94B-DD91799B-BE93FC9E",
     "source": "PERFORMANCE_PASS",
     "season": 4

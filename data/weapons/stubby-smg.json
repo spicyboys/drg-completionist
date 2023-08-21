@@ -1,13 +1,13 @@
 {
   "name": "\"Stubby\" Voltaic SMG",
-  "outline": "./outlines/stubby-smg.png",
+  "outline": "../icons/weapon-outlines/stubby-smg.png",
   "saveId": "90DAB5DD-4244CD86-DE0660AF-A990432A",
   "overclocks": [
     {
       "name": "Super-Slim Rounds",
       "saveId": "4A1CCF13-4A929269-EA5CFF9A-06715BF0",
-      "icon": "./overclock-icons/clip-size.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/clip-size.png",
+      "type": "CLEAN",
       "price": {
         "credits": 8550,
         "bismor": 90,
@@ -23,8 +23,8 @@
     {
       "name": "Well-Oiled Machine",
       "saveId": "449094CE-496B035B-BCB29DB8-12FD188D",
-      "icon": "./overclock-icons/fire-rate.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/fire-rate.png",
+      "type": "CLEAN",
       "price": {
         "credits": 8400,
         "croppa": 65,
@@ -40,8 +40,8 @@
     {
       "name": "EM Refire Booster",
       "saveId": "3142B881-47B8010E-4D7799BF-DDC03DBC",
-      "icon": "./overclock-icons/fire-rate.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/fire-rate.png",
+      "type": "BALANCED",
       "price": {
         "credits": 8300,
         "bismor": 60,
@@ -57,8 +57,8 @@
     {
       "name": "Light-Weight Rounds",
       "saveId": "A057B105-4B73E075-8DEF71B4-652869AE",
-      "icon": "./overclock-icons/ammo.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/ammo.png",
+      "type": "BALANCED",
       "price": {
         "credits": 8700,
         "bismor": 90,
@@ -74,8 +74,8 @@
     {
       "name": "Turret Arc",
       "saveId": "EADB423C-44EE2130-4A946DAF-754D3191",
-      "icon": "./overclock-icons/electricity.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/electricity.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 8350,
         "bismor": 100,
@@ -91,8 +91,8 @@
     {
       "name": "Turret EM Discharge",
       "saveId": "64AA1B0C-4EB93CB0-B5B777BB-876C7C5E",
-      "icon": "./overclock-icons/area-damage.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/area-damage.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 8450,
         "bismor": 80,

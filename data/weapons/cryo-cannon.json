@@ -1,13 +1,13 @@
 {
   "name": "Cryo Cannon",
-  "outline": "./outlines/cryo-cannon.png",
+  "outline": "../icons/weapon-outlines/cryo-cannon.png",
   "saveId": "AB2A0882-439F3125-58843AB4-8C8E22F5",
   "overclocks": [
     {
       "name": "Improved Thermal Efficiency",
       "saveId": "4D0C66CE-430098D9-7AA102A8-ACC06945",
-      "icon": "./overclock-icons/clip-size.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/clip-size.png",
+      "type": "CLEAN",
       "price": {
         "credits": 8350,
         "croppa": 125,
@@ -23,8 +23,8 @@
     {
       "name": "Tuned Cooler",
       "saveId": "B323DB6A-4088EDC8-818BA886-BE3CC907",
-      "icon": "./overclock-icons/cold.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/cold.png",
+      "type": "BALANCED",
       "price": {
         "credits": 8750,
         "bismor": 110,
@@ -40,8 +40,8 @@
     {
       "name": "Flow Rate Expansion",
       "saveId": "B2EAF888-467BEC06-038F1CA3-1A93444B",
-      "icon": "./overclock-icons/duration.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/duration.png",
+      "type": "BALANCED",
       "price": {
         "credits": 8900,
         "enorPearl": 70,
@@ -57,8 +57,8 @@
     {
       "name": "Ice Spear",
       "saveId": "37CB18D5-44A0321A-4F5E349B-914CD358",
-      "icon": "./overclock-icons/projectile-speed.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/projectile-speed.png",
+      "type": "BALANCED",
       "price": {
         "credits": 8950,
         "enorPearl": 60,
@@ -74,8 +74,8 @@
     {
       "name": "Ice Storm",
       "saveId": "5975117B-4E56B697-2A03B197-0FB98E82",
-      "icon": "./overclock-icons/damage.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/damage.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 7200,
         "enorPearl": 130,
@@ -95,8 +95,8 @@
     {
       "name": "Snowball",
       "saveId": "976FF1C1-47109C0C-F66B83AF-ADBCFECB",
-      "icon": "./overclock-icons/area.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/area.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 8400,
         "jadiz": 90,

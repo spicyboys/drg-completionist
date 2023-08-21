@@ -1,13 +1,13 @@
 {
   "name": "M1000 Classic",
-  "outline": "./outlines/m1000.png",
+  "outline": "../icons/weapon-outlines/m1000.png",
   "saveId": "F11BE979-4B69C15A-697C98A7-D1C05969",
   "overclocks": [
     {
       "name": "Hoverclock",
       "saveId": "E422018A-4B10424E-456BADAA-8FDEA934",
-      "icon": "./overclock-icons/slowdown.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/slowdown.png",
+      "type": "CLEAN",
       "price": {
         "credits": 7350,
         "bismor": 105,
@@ -23,8 +23,8 @@
     {
       "name": "Minimal Clips",
       "saveId": "EEE306D0-420254E0-A8BCB0A2-87B3CDAB",
-      "icon": "./overclock-icons/ammo.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/ammo.png",
+      "type": "CLEAN",
       "price": {
         "credits": 8200,
         "enorPearl": 95,
@@ -40,8 +40,8 @@
     {
       "name": "Active Stability System",
       "saveId": "354B54D1-488A9328-9A8D4E96-DAD10963",
-      "icon": "./overclock-icons/movement-speed.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/movement-speed.png",
+      "type": "BALANCED",
       "price": {
         "credits": 8150,
         "bismor": 90,
@@ -57,8 +57,8 @@
     {
       "name": "Hipster",
       "saveId": "8F35122A-49700B75-467DC396-361DCF7E",
-      "icon": "./overclock-icons/aim.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/aim.png",
+      "type": "BALANCED",
       "price": {
         "credits": 8900,
         "croppa": 125,
@@ -74,8 +74,8 @@
     {
       "name": "Electrocuting Focus Shots",
       "saveId": "E4B6C9AA-47588445-87DB508E-EB974032",
-      "icon": "./overclock-icons/electricity.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/electricity.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 8850,
         "bismor": 120,
@@ -91,8 +91,8 @@
     {
       "name": "Supercooling Chamber",
       "saveId": "EBCE7310-4E01BCEC-59E27083-1CB70E04",
-      "icon": "./overclock-icons/damage.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/damage.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 8500,
         "enorPearl": 90,

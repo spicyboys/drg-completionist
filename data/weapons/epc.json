@@ -1,13 +1,13 @@
 {
   "name": "Experimental Plasma Charger",
-  "outline": "./outlines/epc.png",
+  "outline": "../icons/weapon-outlines/epc.png",
   "saveId": "32F4964E-432318D0-D8812EA6-0F48A121",
   "overclocks": [
     {
       "name": "Energy Rerouting",
       "saveId": "71208297-45CE86D5-9748D6AC-FA00B782",
-      "icon": "./overclock-icons/charge-up.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/charge-up.png",
+      "type": "CLEAN",
       "price": {
         "credits": 7300,
         "bismor": 130,
@@ -23,8 +23,8 @@
     {
       "name": "Magnetic Cooling Unit",
       "saveId": "30CCE6F1-45DE117C-418BB886-BF0A539E",
-      "icon": "./overclock-icons/cooldown.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/cooldown.png",
+      "type": "CLEAN",
       "price": {
         "credits": 8900,
         "croppa": 95,
@@ -40,8 +40,8 @@
     {
       "name": "Heat Pipe",
       "saveId": "C418E0A0-4179E65F-0E73D38F-1D639B6E",
-      "icon": "./overclock-icons/fuel.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/fuel.png",
+      "type": "BALANCED",
       "price": {
         "credits": 7450,
         "bismor": 60,
@@ -60,8 +60,8 @@
     {
       "name": "Heavy Hitter",
       "saveId": "133EE439-46AE0DCC-A151DD91-E1E98313",
-      "icon": "./overclock-icons/damage.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/damage.png",
+      "type": "BALANCED",
       "price": {
         "credits": 8100,
         "bismor": 140,
@@ -77,8 +77,8 @@
     {
       "name": "Overcharger",
       "saveId": "A052BB55-437CFAEC-E6BB7BB3-96411140",
-      "icon": "./overclock-icons/damage.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/damage.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 7050,
         "bismor": 120,
@@ -98,8 +98,8 @@
     {
       "name": "Persistent Plasma",
       "saveId": "3ED95C16-47810B66-6CF8A2BC-F7F85CDE",
-      "icon": "./overclock-icons/duration-hourglass.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/duration-hourglass.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 8150,
         "croppa": 75,

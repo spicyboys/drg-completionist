@@ -1,13 +1,13 @@
 {
   "name": "BRT7 Burst Fire Gun",
-  "outline": "./outlines/burst-fire-gun.png",
+  "outline": "../icons/weapon-outlines/burst-fire-gun.png",
   "saveId": "C1DE5EB9-471CDBBD-73C55D8E-34511022",
   "overclocks": [
     {
       "name": "Composite Casings",
       "saveId": "B4A8266F-4D7C969F-46739F99-C4E2EA45",
-      "icon": "./overclock-icons/fire-rate.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/fire-rate.png",
+      "type": "CLEAN",
       "price": {
         "credits": 7950,
         "croppa": 140,
@@ -23,8 +23,8 @@
     {
       "name": "Full Chamber Seal",
       "saveId": "95164941-40D0D37A-69E35F9B-19DD462A",
-      "icon": "./overclock-icons/damage.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/damage.png",
+      "type": "CLEAN",
       "price": {
         "credits": 7850,
         "bismor": 120,
@@ -40,8 +40,8 @@
     {
       "name": "Compact Mags",
       "saveId": "C9D4F32F-4530592D-A29F0092-C6FF9BE3",
-      "icon": "./overclock-icons/ammo.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/ammo.png",
+      "type": "BALANCED",
       "price": {
         "credits": 7350,
         "jadiz": 75,
@@ -57,8 +57,8 @@
     {
       "name": "Experimental Rounds",
       "saveId": "0AD4AB88-42993278-D7004C88-90AC2DF2",
-      "icon": "./overclock-icons/damage.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/damage.png",
+      "type": "BALANCED",
       "price": {
         "credits": 8550,
         "enorPearl": 100,
@@ -74,8 +74,8 @@
     {
       "name": "Electro Minelets",
       "saveId": "FE934F4A-411EC31A-F1C197B8-72A664B2",
-      "icon": "./overclock-icons/electricity.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/electricity.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 7450,
         "enorPearl": 80,
@@ -91,8 +91,8 @@
     {
       "name": "Micro Flechettes",
       "saveId": "1A6A1C8F-4CDFA623-0C51A5BC-21F2194A",
-      "icon": "./overclock-icons/small-bullets.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/small-bullets.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 7650,
         "bismor": 80,
@@ -113,8 +113,8 @@
     {
       "name": "Lead Spray",
       "saveId": "CF55AEF1-46772E59-611D00A0-2ADF4B58",
-      "icon": "./overclock-icons/special.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/special.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 8050,
         "bismor": 125,

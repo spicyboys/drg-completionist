@@ -1,5 +1,0 @@
-[
-  { "name": "Clean", "icon": "./overclock-frames/clean.png" },
-  { "name": "Balanced", "icon": "./overclock-frames/balanced.png" },
-  { "name": "Unstable", "icon": "./overclock-frames/unstable.png" }
-]

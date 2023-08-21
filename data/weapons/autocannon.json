@@ -1,13 +1,13 @@
 {
   "name": "\"Thunderhead\" Heavy Autocannon",
-  "outline": "./outlines/autocannon.png",
+  "outline": "../icons/weapon-outlines/autocannon.png",
   "saveId": "F0963A76-46261920-F4411DA6-8542BE98",
   "overclocks": [
     {
       "name": "Composite Drums",
       "saveId": "6730E201-42A6B9CB-4C39E48A-BBD2F199",
-      "icon": "./overclock-icons/ammo.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/ammo.png",
+      "type": "CLEAN",
       "price": {
         "credits": 7850,
         "croppa": 135,
@@ -23,8 +23,8 @@
     {
       "name": "Splintering Shells",
       "saveId": "6CFD83CB-493FC613-B987DC82-C8116379",
-      "icon": "./overclock-icons/area.png",
-      "type": "Clean",
+      "icon": "../icons/overclocks/area.png",
+      "type": "CLEAN",
       "price": {
         "credits": 7300,
         "croppa": 95,
@@ -40,8 +40,8 @@
     {
       "name": "Carpet Bomber",
       "saveId": "A642018C-4E7A6387-7F8ACCA4-0A61B984",
-      "icon": "./overclock-icons/area-damage.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/area-damage.png",
+      "type": "BALANCED",
       "price": {
         "credits": 7350,
         "croppa": 120,
@@ -57,8 +57,8 @@
     {
       "name": "Combat Mobility",
       "saveId": "14E8D53D-433E481C-08073EAA-63D675CE",
-      "icon": "./overclock-icons/movement-speed.png",
-      "type": "Balanced",
+      "icon": "../icons/overclocks/movement-speed.png",
+      "type": "BALANCED",
       "price": {
         "credits": 7650,
         "croppa": 70,
@@ -79,8 +79,8 @@
     {
       "name": "Big Bertha",
       "saveId": "D10DAA86-437ED33F-76F1FBB2-15E85DEE",
-      "icon": "./overclock-icons/damage.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/damage.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 8400,
         "bismor": 125,
@@ -100,8 +100,8 @@
     {
       "name": "Neurotoxin Payload",
       "saveId": "944E6532-4D5E1678-D3DBF0A3-4103183B",
-      "icon": "./overclock-icons/neuro.png",
-      "type": "Unstable",
+      "icon": "../icons/overclocks/neuro.png",
+      "type": "UNSTABLE",
       "price": {
         "credits": 8100,
         "croppa": 100,
