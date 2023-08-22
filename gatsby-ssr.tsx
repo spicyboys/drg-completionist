@@ -37,7 +37,7 @@ export const onRenderBody: GatsbySSR['onRenderBody'] = ({
     />,
     <meta
       name="description"
-      content="A free, open-source progressive web app that assists hard-working dwarves like yourselves in keeping track of all those gizmos cluttering up your Space Rig. With this app by your side, you can see just how close you are to becoming Deep Rock Galactic's most valuable employee!"
+      content="A free, open-source progressive web app that assists hard-working dwarves like yourselves in keeping track of all those gizmos cluttering up your Space Rig."
     />,
     <script
       key="umami"
