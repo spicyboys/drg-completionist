@@ -31,6 +31,14 @@ export const onRenderBody: GatsbySSR['onRenderBody'] = ({
   setHtmlAttributes,
 }) => {
   setHeadComponents([
+    <meta
+      name="title"
+      content="DRG Completionist — Progress Tracker for Deep Rock Galactic"
+    />,
+    <meta
+      name="description"
+      content="A free, open-source progressive web app that assists hard-working dwarves like yourselves in keeping track of all those gizmos cluttering up your Space Rig. With this app by your side, you can see just how close you are to becoming Deep Rock Galactic's most valuable employee!"
+    />,
     <script
       key="umami"
       async
@@ -39,5 +47,5 @@ export const onRenderBody: GatsbySSR['onRenderBody'] = ({
       data-do-not-track="true"
     />,
   ]);
-  setHtmlAttributes({ lang: "en" });
+  setHtmlAttributes({ lang: 'en' });
 };
