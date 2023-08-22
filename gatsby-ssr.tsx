@@ -28,6 +28,7 @@ export const wrapRootElement: GatsbySSR['wrapRootElement'] = ({ element }) => {
 
 export const onRenderBody: GatsbySSR['onRenderBody'] = ({
   setHeadComponents,
+  setHtmlAttributes,
 }) => {
   setHeadComponents([
     <script
@@ -38,4 +39,5 @@ export const onRenderBody: GatsbySSR['onRenderBody'] = ({
       data-do-not-track="true"
     />,
   ]);
+  setHtmlAttributes({ lang: "en" });
 };
