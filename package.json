@@ -23,7 +23,7 @@
     "babel-preset-gatsby": "^3.12.1",
     "dexie": "^3.2.4",
     "dexie-react-hooks": "^1.1.7",
-    "drg-save-parser": "^4.0.3",
+    "drg-save-parser": "^4.0.4",
     "gatsby": "^5.12.12",
     "gatsby-plugin-image": "^3.12.3",
     "gatsby-plugin-manifest": "^5.12.3",
