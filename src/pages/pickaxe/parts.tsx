@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql, type PageProps } from 'gatsby';
 import { Row } from 'antd';
 import PickaxePartSetCard from '../../components/pickaxe/PickaxePartSetCard';
+import PickaxePartCard from '../../components/pickaxe/PickaxePartCard';
 
 const Overclocks = ({ data }: PageProps<Queries.PickaxePartsQuery>) => {
   console.log(data);
@@ -9,6 +10,9 @@ const Overclocks = ({ data }: PageProps<Queries.PickaxePartsQuery>) => {
     <Row gutter={[16, 16]}>
       {data.allPickaxePartSetsJson.nodes.map((p) => (
         <PickaxePartSetCard key={p.name} pickaxePartSet={p} />
+      ))}
+      {data.allPickaxePartsJson.nodes.map((p) => (
+        <PickaxePartCard key={p.name} pickaxePart={p} />
       ))}
     </Row>
   );
@@ -27,6 +31,7 @@ export const query = graphql`
 
     allPickaxePartsJson {
       nodes {
+        ...PickaxePartCardPickaxePart
         name
       }
     }

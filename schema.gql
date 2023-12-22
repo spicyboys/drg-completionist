@@ -133,6 +133,11 @@ type PickaxePartSetsJson implements Node {
   saveIds: PickaxePartSetsJsonSaveIds!
 }
 
+type PickaxePartsJson implements Node {
+  name: String!
+  saveId: String!
+}
+
 enum PickaxeComponent {
   BLADES
   HEAD
