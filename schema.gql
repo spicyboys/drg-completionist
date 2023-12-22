@@ -120,6 +120,27 @@ type WeaponFrameworksJson implements Node {
   source: CollectableSource!
 }
 
+type PickaxePartSetsJsonSaveIds {
+  blades: String!
+  handle: String!
+  head: String!
+  pommel: String!
+  shaft: String!
+}
+
+type PickaxePartSetsJson implements Node {
+  name: String!
+  saveIds: PickaxePartSetsJsonSaveIds!
+}
+
+enum PickaxeComponent {
+  BLADES
+  HEAD
+  SHAFT
+  HANDLE
+  POMMEL
+}
+
 enum CollectableSource {
   CARGO_CRATE
   PERFORMANCE_PASS

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Chop-Chop",
+    "saveId": "A3CB7497-40096276-D079FA96-E14C197F",
+    "icon": "./icons/pickaxe-parts/chop-chop.jpg"
+  },
+  {
+    "name": "Hole Digger",
+    "saveId": "4FBBB7AE-4BEFDEDC-90BEB794-7FF607D0",
+    "icon": "./icons/pickaxe-parts/hole-digger.jpg"
+  },
+  {
+    "name": "Obsidian Mallet",
+    "saveId": "67B75E1C-4B3C69A9-576CCBAF-14DBFAD0",
+    "icon": "./icons/pickaxe-parts/obsidian-mallet.jpg"
+  },
+  {
+    "name": "Skull Buster",
+    "saveId": "57A55E0F-4E51B4E5-3E3070B3-EA71545D",
+    "icon": "./icons/pickaxe-parts/skull-buster.jpg"
+  }
+]

@@ -13,7 +13,7 @@ export type ArmorPaintJobEntry = {
 
 export type WeaponPaintJobEntry = {
   miner: Queries.MinersJson['name'];
-  name: Queries.WeaponPaintJobsJson['name'];
+  name: Queries.WeaponPaintJob['name'];
   isForged: boolean;
 };
 
@@ -22,19 +22,26 @@ export type FrameworkEntry = {
   weapon: Queries.WeaponsJsonOverclocks['name'];
 };
 
+export type PickaxePartEntry = {
+  name: Queries.PickaxePartSetsJson['name'] | Queries.PickaxePartsJson['name'];
+  component: Queries.PickaxeComponent;
+};
+
 export class AppDatabase extends Dexie {
   overclocks!: Table<OverclockEntry, number>;
   armorPaintjobs!: Dexie.Table<ArmorPaintJobEntry, number>;
   weaponPaintjobs!: Dexie.Table<WeaponPaintJobEntry, number>;
   frameworks!: Dexie.Table<FrameworkEntry, number>;
+  pickaxeParts!: Dexie.Table<PickaxePartEntry, number>;
 
   constructor() {
     super('drg-completionist');
-    this.version(4).stores({
+    this.version(5).stores({
       overclocks: '[weapon+name], weapon',
       armorPaintjobs: '[miner+name], miner',
       weaponPaintjobs: '[miner+name], miner',
       frameworks: '[weapon+name], weapon',
+      pickaxeParts: '[name+component], name',
     });
   }
 

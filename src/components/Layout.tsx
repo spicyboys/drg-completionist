@@ -51,38 +51,59 @@ export default function Layout({
   );
 
   const menuItems = useMemo(() => {
+    const minerRoutes = miners.nodes.map((miner) => {
+      return {
+        name: miner.name,
+        path: miner.name.toLowerCase(),
+        icon: (
+          <GatsbyImage
+            image={nullthrows(miner.icon?.childImageSharp?.gatsbyImageData)}
+            alt={miner.name}
+            style={{ verticalAlign: 'sub' }}
+          />
+        ),
+        routes: [
+          {
+            path: 'overclocks',
+            name: 'Overclocks',
+          },
+          {
+            path: 'weapon-paint-jobs',
+            name: 'Weapon Paint Jobs',
+          },
+          {
+            path: 'weapon-frameworks',
+            name: 'Weapon Frameworks',
+          },
+          {
+            path: 'armor-paint-jobs',
+            name: 'Armor Paint Jobs',
+          },
+        ],
+      };
+    });
     return {
-      routes: miners.nodes.map((miner) => {
-        return {
-          name: miner.name,
-          path: miner.name.toLowerCase(),
+      routes: [
+        ...minerRoutes,
+        {
+          name: 'Pickaxe',
+          path: 'pickaxe',
           icon: (
-            <GatsbyImage
-              image={nullthrows(miner.icon?.childImageSharp?.gatsbyImageData)}
-              alt={miner.name}
+            <StaticImage
+              src="../images/pickaxe.png"
+              alt="Pickaxe Icon"
+              height={15}
               style={{ verticalAlign: 'sub' }}
             />
           ),
           routes: [
             {
-              path: 'overclocks',
-              name: 'Overclocks',
-            },
-            {
-              path: 'weapon-paint-jobs',
-              name: 'Weapon Paint Jobs',
-            },
-            {
-              path: 'weapon-frameworks',
-              name: 'Weapon Frameworks',
-            },
-            {
-              path: 'armor-paint-jobs',
-              name: 'Armor Paint Jobs',
+              path: 'parts',
+              name: 'Parts',
             },
           ],
-        };
-      }),
+        },
+      ],
     };
   }, [miners]);
 
