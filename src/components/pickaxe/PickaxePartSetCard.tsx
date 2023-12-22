@@ -93,37 +93,24 @@ export default function PickaxePartSetCard({
    * when card header is clicked.
    * Also adds and deletes all IndexedDB entries appropriately.
    */
-  const onClick = useCallback(
-    (e: React.MouseEvent<HTMLDivElement>) => {
-      // We only want to register clicks to the header
-      if (
-        e.target instanceof HTMLElement &&
-        !e.target.matches('.ant-card-head, .ant-card-head *')
-      ) {
-        return;
-      }
-
-      if (isComplete) {
-        // If all checked, delete all part entries from set (except Paintjob)
-        db.pickaxeParts
-          .where({
-            name: pickaxePartSet.name,
-          })
-          .delete();
-      } else {
-        // Otherwise, add entries for all currently unchecked parts
-        db.pickaxeParts.bulkAdd(
-          CheckboxOptions.filter((c) => !checkedParts?.includes(c)).map(
-            (p) => ({
-              name: pickaxePartSet.name,
-              component: p,
-            }),
-          ),
-        );
-      }
-    },
-    [checkedParts, db.pickaxeParts, isComplete, pickaxePartSet.name],
-  );
+  const onClick = useCallback(() => {
+    if (isComplete) {
+      // If all checked, delete all part entries from set (except Paintjob)
+      db.pickaxeParts
+        .where({
+          name: pickaxePartSet.name,
+        })
+        .delete();
+    } else {
+      // Otherwise, add entries for all currently unchecked parts
+      db.pickaxeParts.bulkAdd(
+        CheckboxOptions.filter((c) => !checkedParts?.includes(c)).map((p) => ({
+          name: pickaxePartSet.name,
+          component: p,
+        })),
+      );
+    }
+  }, [checkedParts, db.pickaxeParts, isComplete, pickaxePartSet.name]);
 
   return (
     <Col xxl={6} xl={8} lg={12} md={12} sm={12} xs={24}>
