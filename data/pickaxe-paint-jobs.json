@@ -1,0 +1,69 @@
+[
+  {
+    "name": "Chasm-Borne Cliffhanger",
+    "icon": "./icons/pickaxe-paint-jobs/chasm-borne-cliffhanger.png",
+    "saveId": "0BEC523C-416A67F9-F178AC93-070C124C"
+  },
+  {
+    "name": "Gadgeteer's Favorite",
+    "icon": "./icons/pickaxe-paint-jobs/gadgeteers-favorite.png",
+    "saveId": "A4594564-480D6B5F-518AFA82-F6C1CFF5"
+  },
+  {
+    "name": "Reaper's Claw",
+    "icon": "./icons/pickaxe-paint-jobs/reapers-claw.png",
+    "saveId": "A61A5476-4E7B1466-6EEF8DBC-AC0EE8AD"
+  },
+  {
+    "name": "Drift Crusher",
+    "icon": "./icons/pickaxe-paint-jobs/drift-crusher.png",
+    "saveId": "3DCC3FE1-4E28B2B7-BB7921AA-566012BE"
+  },
+
+  {
+    "name": "Bug Hide",
+    "icon": "./icons/pickaxe-paint-jobs/bug-hide.png",
+    "saveId": "AC11DCCC-43E84312-FDEDC6BF-9906ABC0"
+  },
+  {
+    "name": "Carven Pride",
+    "icon": "./icons/pickaxe-paint-jobs/carven-pride.png",
+    "saveId": "AD38360D-4D8B11F7-F1CD1F8D-D7DE2026"
+  },
+
+  {
+    "name": "Hammerblow",
+    "icon": "./icons/pickaxe-paint-jobs/hammerblow.png",
+    "saveId": "4261E533-41F43F31-08C088BB-9E15FA76"
+  },
+  {
+    "name": "Incorruptible",
+    "icon": "./icons/pickaxe-paint-jobs/incorruptible.png",
+    "saveId": "310539B1-4B920E56-6A70B58E-1F1DEB70"
+  },
+  {
+    "name": "Jagged Son",
+    "icon": "./icons/pickaxe-paint-jobs/jagged-son.png",
+    "saveId": "545EE93E-43807BBE-3F1187B3-89562933"
+  },
+  {
+    "name": "Pneumatic",
+    "icon": "./icons/pickaxe-paint-jobs/pneumatic.png",
+    "saveId": "06E36DA0-4452D148-941EA28F-80220DCA"
+  },
+  {
+    "name": "Arc Welder's Delight",
+    "icon": "./icons/pickaxe-paint-jobs/arc-welders-delight.png",
+    "saveId": "53FF51F3-4DED7443-9C165EB2-B772BF2E"
+  },
+  {
+    "name": "Core Hound",
+    "icon": "./icons/pickaxe-paint-jobs/core-hound.png",
+    "saveId": "F424F378-40A5C3C7-5ED9898A-3A7D8800"
+  },
+  {
+    "name": "Blight Guard",
+    "icon": "./icons/pickaxe-paint-jobs/blight-guard.png",
+    "saveId": "477A86F7-4903F12A-937EA5A5-B3D0E602"
+  }
+]

@@ -23,7 +23,10 @@ export type FrameworkEntry = {
 };
 
 export type PickaxePartEntry = {
-  name: Queries.PickaxePartSetsJson['name'] | Queries.PickaxePartsJson['name'];
+  name:
+    | Queries.PickaxePartSetsJson['name']
+    | Queries.PickaxePartsJson['name']
+    | Queries.PickaxePaintJobsJson['name'];
   component: Queries.PickaxeComponent;
 };
 

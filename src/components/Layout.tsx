@@ -101,6 +101,10 @@ export default function Layout({
               path: 'parts',
               name: 'Parts',
             },
+            {
+              path: 'paint-jobs',
+              name: 'Paint Jobs',
+            },
           ],
         },
       ],

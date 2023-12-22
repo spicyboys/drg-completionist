@@ -4,8 +4,9 @@ import { Row } from 'antd';
 import PickaxePartSetCard from '../../components/pickaxe/PickaxePartSetCard';
 import PickaxePartCard from '../../components/pickaxe/PickaxePartCard';
 
-const Overclocks = ({ data }: PageProps<Queries.PickaxePartsQuery>) => {
-  console.log(data);
+export default function PickaxeParts({
+  data,
+}: PageProps<Queries.PickaxePartsQuery>) {
   return (
     <Row gutter={[16, 16]}>
       {data.allPickaxePartSetsJson.nodes.map((p) => (
@@ -16,9 +17,7 @@ const Overclocks = ({ data }: PageProps<Queries.PickaxePartsQuery>) => {
       ))}
     </Row>
   );
-};
-
-export default Overclocks;
+}
 
 export const query = graphql`
   query PickaxeParts {

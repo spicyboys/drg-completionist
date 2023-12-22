@@ -138,12 +138,18 @@ type PickaxePartsJson implements Node {
   saveId: String!
 }
 
+type PickaxePaintJobsJson implements Node {
+  name: String!
+  saveId: String!
+}
+
 enum PickaxeComponent {
   BLADES
   HEAD
   SHAFT
   HANDLE
   POMMEL
+  PAINT_JOB
 }
 
 enum CollectableSource {
