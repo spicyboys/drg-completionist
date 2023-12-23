@@ -105,7 +105,6 @@ export default function PickaxePartSetCard({
   return (
     <Col xxl={6} xl={8} lg={12} md={12} sm={12} xs={24}>
       <Card
-        hoverable
         title={pickaxePartSet.name}
         extra={
           isPartiallyComplete || !isComplete ? (
