@@ -1,4 +1,4 @@
-import { Card, Checkbox, Col, Divider, Row } from 'antd';
+import { Card, Checkbox, Col, Divider, Row, Tooltip } from 'antd';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import React, { useCallback, useMemo } from 'react';
@@ -6,6 +6,7 @@ import nullthrows from '../../utils/nullthrows';
 import { useDB } from '../../hooks/db';
 import { useLiveQuery } from 'dexie-react-hooks';
 import type { CheckboxValueType } from 'antd/lib/checkbox/Group';
+import { CheckSquareOutlined } from '@ant-design/icons';
 
 const CheckboxOptions: Queries.PickaxeComponent[] = [
   'BLADES',
@@ -92,36 +93,27 @@ export default function PickaxePartSetCard({
     );
   }, [checkedParts]);
 
-  /**
-   * Toggle between checking and unchecking all checkboxes
-   * when card header is clicked.
-   * Also adds and deletes all IndexedDB entries appropriately.
-   */
   const onClick = useCallback(() => {
-    if (isComplete) {
-      // If all checked, delete all part entries from set (except Paintjob)
-      db.pickaxeParts
-        .where({
-          name: pickaxePartSet.name,
-        })
-        .delete();
-    } else {
-      // Otherwise, add entries for all currently unchecked parts
-      db.pickaxeParts.bulkAdd(
-        CheckboxOptions.filter((c) => !checkedParts?.includes(c)).map((p) => ({
-          name: pickaxePartSet.name,
-          component: p,
-        })),
-      );
-    }
-  }, [checkedParts, db.pickaxeParts, isComplete, pickaxePartSet.name]);
+    db.pickaxeParts.bulkAdd(
+      CheckboxOptions.filter((c) => !checkedParts?.includes(c)).map((p) => ({
+        name: pickaxePartSet.name,
+        component: p,
+      })),
+    );
+  }, [checkedParts, db.pickaxeParts, pickaxePartSet.name]);
 
   return (
     <Col xxl={6} xl={8} lg={12} md={12} sm={12} xs={24}>
       <Card
         hoverable
         title={pickaxePartSet.name}
-        onClick={onClick}
+        extra={
+          isPartiallyComplete || !isComplete ? (
+            <Tooltip title="Mark all as acquired">
+              <CheckSquareOutlined onClick={onClick} />
+            </Tooltip>
+          ) : undefined
+        }
         headStyle={{
           backgroundColor: isComplete ? color : 'inherit',
           color: isComplete ? contrastColor : '#cccccc',
