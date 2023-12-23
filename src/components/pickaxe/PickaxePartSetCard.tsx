@@ -22,7 +22,11 @@ export default function PickaxePartSetCard({
 }) {
   const db = useDB();
   const checkedParts = useLiveQuery(
-    () => db.pickaxeParts.where({ name: pickaxePartSet.name }).toArray(),
+    () =>
+      db.pickaxeParts
+        .where({ name: pickaxePartSet.name })
+        .and((p) => p.component != 'PAINT_JOB')
+        .toArray(),
     [pickaxePartSet.name],
   )?.map((p) => p.component);
 

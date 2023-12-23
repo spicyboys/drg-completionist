@@ -7,6 +7,7 @@ import { z } from 'zod';
 import useGetWeaponPaintJobsFromSaveFile from './useGetWeaponPaintJobsFromSaveFile';
 import useGetWeaponFrameworksFromSaveFile from './useGetWeaponFrameworksFromSaveFile';
 import useGetArmorPaintJobsFromSaveFile from './useGetArmorPaintJobsFromSaveFile';
+import useGetPickaxePartsFromSaveFile from './useGetPickaxePartsFromSaveFile';
 
 // Wasm-bindgen doesn't support Vec<String>, so we have to throw the whole
 // object back untyped. Since working with untyped data is error-prone, we
@@ -54,6 +55,7 @@ export default function useParseSaveFile() {
   const getWeaponPaintJobsFromSaveFile = useGetWeaponPaintJobsFromSaveFile();
   const getWeaponFrameworksFromSaveFile = useGetWeaponFrameworksFromSaveFile();
   const getArmorPaintJobsFromSaveFile = useGetArmorPaintJobsFromSaveFile();
+  const getPickaxePartsFromSaveFile = useGetPickaxePartsFromSaveFile();
 
   return useCallback(
     async (f: RcFile): Promise<void> => {
@@ -69,6 +71,7 @@ export default function useParseSaveFile() {
         const weaponPaintJobs = getWeaponPaintJobsFromSaveFile(saveFile);
         const weaponFrameworks = getWeaponFrameworksFromSaveFile(saveFile);
         const armorPaintJobs = getArmorPaintJobsFromSaveFile(saveFile);
+        const pickaxeParts = getPickaxePartsFromSaveFile(saveFile);
 
         // Update the store with the new save file data
         await db.transaction('rw', db.tables, async () => {
@@ -77,6 +80,7 @@ export default function useParseSaveFile() {
           await db.weaponPaintjobs.bulkAdd(weaponPaintJobs);
           await db.frameworks.bulkAdd(weaponFrameworks);
           await db.armorPaintjobs.bulkAdd(armorPaintJobs);
+          await db.pickaxeParts.bulkAdd(pickaxeParts);
         });
       } catch (e) {
         console.error(e);
@@ -87,6 +91,7 @@ export default function useParseSaveFile() {
       db,
       getArmorPaintJobsFromSaveFile,
       getOverclocksFromSaveFile,
+      getPickaxePartsFromSaveFile,
       getWeaponFrameworksFromSaveFile,
       getWeaponPaintJobsFromSaveFile,
     ],
