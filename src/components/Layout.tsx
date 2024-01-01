@@ -96,16 +96,6 @@ export default function Layout({
               style={{ verticalAlign: 'sub' }}
             />
           ),
-          routes: [
-            {
-              path: 'parts',
-              name: 'Parts',
-            },
-            {
-              path: 'paint-jobs',
-              name: 'Paint Jobs',
-            },
-          ],
         },
       ],
     };

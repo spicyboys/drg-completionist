@@ -1,8 +1,8 @@
 import React from 'react';
 import { graphql, type PageProps } from 'gatsby';
 import { Row } from 'antd';
-import PickaxePartSetCard from '../../components/pickaxe/PickaxePartSetCard';
-import PickaxePartCard from '../../components/pickaxe/PickaxePartCard';
+import PickaxePartSetCard from '../components/pickaxe/PickaxePartSetCard';
+import PickaxePartCard from '../components/pickaxe/PickaxePartCard';
 
 export default function PickaxeParts({
   data,

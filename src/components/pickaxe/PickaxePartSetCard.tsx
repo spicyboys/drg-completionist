@@ -14,6 +14,7 @@ const CheckboxOptions: Queries.PickaxeComponent[] = [
   'HEAD',
   'POMMEL',
   'SHAFT',
+  'PAINT_JOB',
 ];
 
 export default function PickaxePartSetCard({
@@ -23,11 +24,7 @@ export default function PickaxePartSetCard({
 }) {
   const db = useDB();
   const checkedParts = useLiveQuery(
-    () =>
-      db.pickaxeParts
-        .where({ name: pickaxePartSet.name })
-        .and((p) => p.component != 'PAINT_JOB')
-        .toArray(),
+    () => db.pickaxeParts.where({ name: pickaxePartSet.name }).toArray(),
     [pickaxePartSet.name],
   )?.map((p) => p.component);
 
@@ -127,7 +124,7 @@ export default function PickaxePartSetCard({
             : undefined
         }
       >
-        <Row justify="space-between">
+        <Row justify="space-between" align="middle">
           <Col span={11} style={{ textAlign: 'center' }}>
             <GatsbyImage
               alt={pickaxePartSet.name}
@@ -155,7 +152,7 @@ export default function PickaxePartSetCard({
                       value={option}
                       style={{ textTransform: 'capitalize' }}
                     >
-                      {option.toLocaleLowerCase()}
+                      {option.replace('_', ' ').toLocaleLowerCase()}
                     </Checkbox>
                   </Col>
                 ))}
