@@ -16,7 +16,7 @@
   "armorPaintJobs": [
     {
       "name": "Chocolate Reign",
-      "icon": ".../icons/armor-paint-jobs/driller/chocolate-reign.png",
+      "icon": "../icons/armor-paint-jobs/driller/chocolate-reign.png",
       "saveId": "49BE6700-4B99B964-E5C5CABF-B9037BC1"
     },
     {
