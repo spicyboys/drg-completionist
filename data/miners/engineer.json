@@ -1,0 +1,263 @@
+{
+  "name": "Engineer",
+  "saveId": "6C62EF85-4A02F165-D0B5FE8D-2E9D90F3",
+  "portrait": "../icons/miner-portraits/engineer.png",
+  "icon": "../icons/miner-icons/engineer.webp",
+  "color": "#892F30",
+  "contrastColor": "#ECECEC",
+  "weapons": [
+    "\"Warthog\" Auto 210",
+    "\"Stubby\" Voltaic SMG",
+    "Lok-1 Smart Rifle",
+    "Deepcore 40mm PGL",
+    "Breach Cutter",
+    "Shard Diffractor"
+  ],
+  "armorPaintJobs": [
+    {
+      "name": "Orange Geek",
+      "icon": "../icons/armor-paint-jobs/engineer/orange-geek.png",
+      "saveId": "86361584-44EEDADB-77438F9C-D9FC8DAC"
+    },
+    {
+      "name": "Dustrunner",
+      "icon": "../icons/armor-paint-jobs/engineer/dustrunner.png",
+      "saveId": "8AA73BA8-4A543A1B-05DFC78D-0781FCB3"
+    },
+    {
+      "name": "Ember Fury",
+      "icon": "../icons/armor-paint-jobs/engineer/ember-fury.png",
+      "saveId": "D626C4AE-43C9C9D7-D2CCF697-05C25841"
+    },
+    {
+      "name": "Grunge Buster",
+      "icon": "../icons/armor-paint-jobs/engineer/grunge-buster.png",
+      "saveId": "F4F10794-4DF650A3-9583398F-8F345374"
+    },
+    {
+      "name": "Splattered",
+      "icon": "../icons/armor-paint-jobs/engineer/splattered.png",
+      "saveId": "D52088D9-4FA0705F-15A442A0-6BF075B0"
+    },
+    {
+      "name": "Teacher's Pet",
+      "icon": "../icons/armor-paint-jobs/engineer/teacher-pet.png",
+      "saveId": "C8DD638D-4D315C92-61D393A7-F1CACE4F"
+    },
+    {
+      "name": "Top Dog",
+      "icon": "../icons/armor-paint-jobs/engineer/top-dog.png",
+      "saveId": "735F7F0B-4547585F-E2F5BCBB-FA50A015"
+    },
+    {
+      "name": "Chipped Shadow",
+      "icon": "../icons/armor-paint-jobs/engineer/chipped-shadow.png",
+      "saveId": "4F28A86D-4D8FDDC3-FB44BE8B-C142A5B7"
+    },
+    {
+      "name": "Gritty Sandbox",
+      "icon": "../icons/armor-paint-jobs/engineer/gritty-sandbox.png",
+      "saveId": "E3474FC1-4F02A985-9EED8A85-641A9C79"
+    },
+    {
+      "name": "Moss Crawler",
+      "icon": "../icons/armor-paint-jobs/engineer/moss-crawler.png",
+      "saveId": "61AD35AF-45472F18-ED11679F-2BB9A53B"
+    },
+    {
+      "name": "Speckled Predator",
+      "icon": "../icons/armor-paint-jobs/engineer/speckled-predator.png",
+      "saveId": "885229A0-4325DAA7-388324A3-477B46BE"
+    },
+    {
+      "name": "Boot Camp",
+      "icon": "../icons/armor-paint-jobs/common/boot-camp.png",
+      "saveId": "0603EE0F-4FE0885A-0E48BDAB-C26F8688"
+    },
+    {
+      "name": "Oxidized Copper",
+      "icon": "../icons/armor-paint-jobs/engineer/oxidized-copper.png",
+      "saveId": "A8EA22A3-42054676-48CE9E9D-BE74BA61"
+    },
+    {
+      "name": "Rusty Colossus",
+      "icon": "../icons/armor-paint-jobs/engineer/rusty-colossus.png",
+      "saveId": "4E13FFD4-432E999A-8410E583-4CA2FA19"
+    },
+    {
+      "name": "Dark Neon",
+      "icon": "../icons/armor-paint-jobs/engineer/dark-neon.png",
+      "saveId": "8FB01664-46643469-E2D5E2A2-0DD5726D"
+    },
+    {
+      "name": "Platinum",
+      "icon": "../icons/armor-paint-jobs/engineer/platinum.png",
+      "saveId": "9C211A5F-40D4217E-B2232F94-7D00B9A0"
+    },
+    {
+      "name": "Umber Corrosion",
+      "icon": "../icons/armor-paint-jobs/engineer/umber-corrosion.png",
+      "saveId": "20095EF7-470F11F6-0787A5A4-726FDD96"
+    },
+    {
+      "name": "Monochromatic",
+      "icon": "../icons/armor-paint-jobs/engineer/monochromatic.png",
+      "saveId": "E7FEC580-41DA9474-02A4098B-AB3A9DE1"
+    },
+    {
+      "name": "Verdigris",
+      "icon": "../icons/armor-paint-jobs/common/verdigris.png",
+      "saveId": "9C5D2062-463B73E9-8AD45C8E-19B495DA"
+    },
+    {
+      "name": "Toxic Defender",
+      "icon": "../icons/armor-paint-jobs/common/toxic-defender.png",
+      "saveId": "7B905D72-423B70AD-F8ECB1BD-B98A08F6"
+    },
+    {
+      "name": "Regal Aegis",
+      "icon": "../icons/armor-paint-jobs/common/regal-aegis.png",
+      "saveId": "DB0CCD99-4A4B8380-E2F193A9-4B1D67C4"
+    },
+    {
+      "name": "Black Crag",
+      "icon": "../icons/armor-paint-jobs/common/black-crag.png",
+      "saveId": "C74025BA-41140BDD-7B28F382-607EE187"
+    },
+    {
+      "name": "Scale Brigade",
+      "icon": "../icons/armor-paint-jobs/common/scale-brigade.png",
+      "saveId": "24149071-49B39F32-3FDA31A1-0E4E8DE2"
+    },
+    {
+      "name": "Brassy Swirls",
+      "icon": "../icons/armor-paint-jobs/engineer/brassy-swirls.png",
+      "saveId": "E08B5B1D-412B31B7-3D8EB8A6-C1E8E50D",
+      "season": 4,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Brushed Metal",
+      "icon": "../icons/armor-paint-jobs/engineer/brushed-metal.png",
+      "saveId": "DA6C211C-48067949-2844A2AA-1E5E4FF9",
+      "season": 4,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Plastic Coating",
+      "icon": "../icons/armor-paint-jobs/engineer/plastic-coating.png",
+      "saveId": "E577E42E-4E79523B-6601C3BC-6B656873",
+      "season": 4,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Pretty in Purple",
+      "icon": "../icons/armor-paint-jobs/engineer/pretty-in-purple.png",
+      "saveId": "51C3CF56-449A712E-E30061B4-7A868465",
+      "season": 4,
+      "source": "PERFORMANCE_PASS"
+    }
+  ],
+  "commonWeaponPaintJobs": [
+    {
+      "weaponPaintJob": "Beyond the Circuit",
+      "saveId": "9F44106D-4B66DD24-C5BB749A-45CB7AF2"
+    },
+    {
+      "weaponPaintJob": "Dark Descent",
+      "saveId": "DA96BC97-4045C9DB-D85AFA86-67B2A469"
+    },
+    {
+      "weaponPaintJob": "Desert Ranger",
+      "saveId": "8BF35A15-45589BBE-60512E95-A758FB57"
+    },
+    {
+      "weaponPaintJob": "Digital Danger",
+      "saveId": "CB3766AD-442941DC-D5EAD58A-21D8DB50"
+    },
+    {
+      "weaponPaintJob": "Ghostly Pale",
+      "saveId": "55B70085-41ACEE44-6F4848AD-52236636"
+    },
+    {
+      "weaponPaintJob": "Jungle Raid",
+      "saveId": "DCF61819-4004835B-DF29858A-262808C1"
+    },
+    {
+      "weaponPaintJob": "Metallic Vintage",
+      "saveId": "A4BCE833-4F41D72D-BAA317A1-3B03E991"
+    },
+    {
+      "weaponPaintJob": "Mint Assault",
+      "saveId": "94F23DD7-44AC282A-AD42C987-C9E3B0A0"
+    },
+    {
+      "weaponPaintJob": "Primal Blood",
+      "saveId": "F8763D2E-4502A116-E4ECB78C-79E33E0A"
+    },
+    {
+      "weaponPaintJob": "Tool of Destruction",
+      "saveId": "1B4BD40F-47523DCA-E7B62C93-EF963E1F"
+    },
+    {
+      "weaponPaintJob": "Trusty Rusty",
+      "saveId": "0C20802A-4E0ADB16-B6115487-48A606DD"
+    },
+    {
+      "weaponPaintJob": "Warmonger",
+      "saveId": "0C2C5BD1-4A5C862F-54B35E8F-8FC711CB"
+    },
+    {
+      "weaponPaintJob": "Copper Patinate",
+      "saveId": "3AB00F36-4495267A-C8BF9EBB-AE895924"
+    },
+    {
+      "weaponPaintJob": "Deep Sea Defender",
+      "saveId": "6F385436-46ABBF8E-77BC2093-7605F936"
+    },
+    {
+      "weaponPaintJob": "Moss Crawler",
+      "saveId": "98EFFE0C-4BB53F74-777F11A3-4287FE9E"
+    },
+    {
+      "weaponPaintJob": "Scratched Metal",
+      "saveId": "7351BCD0-4F9867DA-08F15193-AAAB41D7"
+    },
+    {
+      "weaponPaintJob": "Bootcamp",
+      "saveId": "6D3A9DB0-4106B15B-E85C88AA-E1235092"
+    },
+    {
+      "weaponPaintJob": "Fiery",
+      "saveId": "9237341C-42DC2DD4-A03890B0-192E3908"
+    },
+    {
+      "weaponPaintJob": "Predator",
+      "saveId": "A494023C-45532E82-34F7F99F-50B31A75"
+    },
+    {
+      "weaponPaintJob": "Salt Crystal",
+      "saveId": "6BE46F7C-46FE5624-06C777B9-58A81EDE"
+    },
+    {
+      "weaponPaintJob": "Chlorine"
+    },
+    {
+      "weaponPaintJob": "Dune Marauder"
+    },
+    {
+      "weaponPaintJob": "Lazulite"
+    },
+    {
+      "weaponPaintJob": "Lemon Clean"
+    }
+  ],
+  "uniqueWeaponPaintJobs": [
+    {
+      "name": "Platinum",
+      "saveId": "1611C7A5-4A1469B4-456123A6-43FCCD82",
+      "icon": "../icons/weapon-paint-jobs/platinum-engineer.png",
+      "source": "PERFORMANCE_PASS"
+    }
+  ]
+}

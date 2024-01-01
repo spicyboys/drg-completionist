@@ -113,6 +113,7 @@ type MinersJsonUniqueWeaponPaintJobs implements WeaponPaintJob {
 type MinersJsonArmorPaintJobs {
   name: String!
   saveId: String!
+  icon: File! @fileByRelativePath
 }
 
 type WeaponFrameworksJson implements Node {
