@@ -16,10 +16,10 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@ant-design/icons": "^5.3.6",
+    "@ant-design/icons": "^5.3.7",
     "@ant-design/pro-components": "^2.7.1",
     "@loadable/component": "^5.16.4",
-    "antd": "^5.16.5",
+    "antd": "^5.17.0",
     "babel-preset-gatsby": "^3.13.2",
     "dexie": "^4.0.4",
     "dexie-react-hooks": "^1.1.7",
@@ -35,16 +35,16 @@
     "gatsby-transformer-sharp": "^5.13.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "zod": "^3.23.5"
+    "zod": "^3.23.6"
   },
   "devDependencies": {
     "@types/loadable__component": "^5.13.9",
-    "@types/node": "^20.12.7",
+    "@types/node": "^20.12.10",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.8.0",
     "@typescript-eslint/parser": "^7.8.0",
-    "eslint": "^9.1.1",
+    "eslint": "^9.2.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.2",
