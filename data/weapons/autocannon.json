@@ -116,6 +116,27 @@
         "nerfs": ["-110 Max Ammo", "-6 Area Damage"]
       },
       "description": "Channel your inner war criminal by mixing some neurotoxin into the explosive compound. The rounds deal less direct damage and splash damage, but affected bugs move slower and take lots of damage over time."
+    },
+    {
+      "name": "Mortar Rounds",
+      "saveId": "FA8073F8-414AC44E-F67499A7-A674C0BA",
+      "icon": "../icons/overclocks/last-shell-higher-damage.png",
+      "type": "UNSTABLE",
+      "price": {
+        "credits": 7300,
+        "croppa": 140,
+        "jadiz": 70,
+        "magnite": 110
+      },
+      "effects": {
+        "buffs": [
+          "+Mortar Projectiles",
+          "+54 Area Damage",
+          "+0.3 Effect Radius"
+        ],
+        "nerfs": ["-14 Damage", "-75 Magazine Size", "-300 Max Ammo", "-2.7 Top Rate of Fire"]
+      },
+      "description": "The weapon has been reworked to fire heavy mortar projectiles. These modifcations slow down the rate of fire significantly -- but even if you can't carry as many, the high-explosive rounds more than make up for it in damage. Just remember to account for drop."
     }
   ],
   "frameworks": [
