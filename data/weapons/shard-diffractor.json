@@ -80,23 +80,6 @@
       "description": "A mixture of high energy and atomic frequency tuning lets you temporarily turn dirt and rock into magma, damaging and potentially igniting any enemy that walks across it."
     },
     {
-      "name": "Plastcrete Catalyst",
-      "saveId": "397230D3-4CE4BC69-00E9EBB1-0D6E2F9A",
-      "icon": "../icons/overclocks/explosion.png",
-      "type": "UNSTABLE",
-      "price": {
-        "credits": 7950,
-        "croppa": 110,
-        "jadiz": 125,
-        "magnite": 75
-      },
-      "effects": {
-        "buffs": ["+Plastcrete Explosion", "Damage/Range Boost"],
-        "nerfs": ["-50 Total Capacity", "+0.8s Recharge Time"]
-      },
-      "description": "The beam has been finely tuned to violently react with plascrete platforms, significantly increasing AoE damage and range. If the beam is held long enough the reaction becomes unstable, causing a powerful explosion damaging everything in a wide area. The tweaks reduce total capacity and come with a limited charge rate to avoid frying the circuits."
-    },
-    {
       "name": "Overdrive Booster",
       "saveId": "BA187A18-4CD28352-F4375A90-A03B12FB",
       "icon": "../icons/overclocks/damage.png",
@@ -116,6 +99,23 @@
         ]
       },
       "description": "Drastically increases the energy throughput by pressing the reload button while a beam is firing. Unfortunately, maintaining control requires that you stand still while firing a boosted beam, and the weapon cannot stop firing once boosted until the capacitor is fully discharged. Manually interrupting the beam stresses the capacitor, resulting in a loss of some of the remaining charge."
+    },
+    {
+      "name": "Plastcrete Catalyst",
+      "saveId": "397230D3-4CE4BC69-00E9EBB1-0D6E2F9A",
+      "icon": "../icons/overclocks/explosion.png",
+      "type": "UNSTABLE",
+      "price": {
+        "credits": 7950,
+        "croppa": 110,
+        "jadiz": 125,
+        "magnite": 75
+      },
+      "effects": {
+        "buffs": ["+Plastcrete Explosion", "Damage/Range Boost"],
+        "nerfs": ["-50 Total Capacity", "+0.8s Recharge Time"]
+      },
+      "description": "The beam has been finely tuned to violently react with plascrete platforms, significantly increasing AoE damage and range. If the beam is held long enough the reaction becomes unstable, causing a powerful explosion damaging everything in a wide area. The tweaks reduce total capacity and come with a limited charge rate to avoid frying the circuits."
     }
   ],
   "frameworks": [

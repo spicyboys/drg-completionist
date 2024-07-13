@@ -89,23 +89,6 @@
       "description": "This crazy bit of tweaking will give a big boost in damage and flow rate, but at the cost of operational range and tank capacity."
     },
     {
-      "name": "Sticky Fuel",
-      "saveId": "E33E8CF2-480D968A-699F5E96-193F6BF5",
-      "icon": "../icons/overclocks/duration-hourglass.png",
-      "type": "UNSTABLE",
-      "price": {
-        "credits": 8800,
-        "enorPearl": 110,
-        "jadiz": 140,
-        "magnite": 75
-      },
-      "effects": {
-        "buffs": ["+10 Sticky Flame Damage", "+6.0s Sticky Flame Duration"],
-        "nerfs": ["-25 Tank Size", "-75 Max Fuel"]
-      },
-      "description": "Special fuel mixture extends the duration and damage of Sticky Flames, but at the cost of tank capacity and total fuel."
-    },
-    {
       "name": "Scorching Tide",
       "saveId": "385ED0E5-40342B56-3F605480-9190E941",
       "icon": "../icons/overclocks/special-magazine.png",
@@ -121,6 +104,23 @@
         "nerfs": ["25 Charged Shot Cost", "-75% Movement Speed During Charging"]
       },
       "description": "A supercharged injection system and integrated duckbill choke allows the weapon to blast a blistering horizontal wave of flame by holding reload. Using this mechanism eats up additional fuel and makes the weapon unstable, reducing movement speed during charging."
+    },
+    {
+      "name": "Sticky Fuel",
+      "saveId": "E33E8CF2-480D968A-699F5E96-193F6BF5",
+      "icon": "../icons/overclocks/duration-hourglass.png",
+      "type": "UNSTABLE",
+      "price": {
+        "credits": 8800,
+        "enorPearl": 110,
+        "jadiz": 140,
+        "magnite": 75
+      },
+      "effects": {
+        "buffs": ["+10 Sticky Flame Damage", "+6.0s Sticky Flame Duration"],
+        "nerfs": ["-25 Tank Size", "-75 Max Fuel"]
+      },
+      "description": "Special fuel mixture extends the duration and damage of Sticky Flames, but at the cost of tank capacity and total fuel."
     }
   ],
   "frameworks": [

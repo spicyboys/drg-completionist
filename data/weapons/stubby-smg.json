@@ -55,23 +55,6 @@
       "description": "Use the electron circuit of the SMG to boost its fire rate and damage, but the accuracy suffers as a result."
     },
     {
-      "name": "Light-Weight Rounds",
-      "saveId": "A057B105-4B73E075-8DEF71B4-652869AE",
-      "icon": "../icons/overclocks/ammo.png",
-      "type": "BALANCED",
-      "price": {
-        "credits": 8700,
-        "bismor": 90,
-        "jadiz": 65,
-        "umanite": 135
-      },
-      "effects": {
-        "buffs": ["+180 Max Ammo"],
-        "nerfs": ["-1 Damage", "-2 Rate of Fire"]
-      },
-      "description": "They don't hit quite as hard and can't handle fast fire rates, but you sure can carry a lot more of them!"
-    },
-    {
       "name": "Hyperalloy Assembly",
       "saveId": "59234B46-48DE0D9A-4D2C159B-F46E0B73",
       "icon": "../icons/overclocks/aim.png",
@@ -87,6 +70,23 @@
         "nerfs": ["-10 Magazine Size", "+50% Vertical Recoil"]
       },
       "description": "Precision-tooled hyperalloy components drastically reduce bullet spread. However, the weapon frame no longer absorbs recoil, transferring all force directly to the user's wrist. This means increased recoil, as well as elevated risk of carpal tunnel syndrome."
+    },
+    {
+      "name": "Light-Weight Rounds",
+      "saveId": "A057B105-4B73E075-8DEF71B4-652869AE",
+      "icon": "../icons/overclocks/ammo.png",
+      "type": "BALANCED",
+      "price": {
+        "credits": 8700,
+        "bismor": 90,
+        "jadiz": 65,
+        "umanite": 135
+      },
+      "effects": {
+        "buffs": ["+180 Max Ammo"],
+        "nerfs": ["-1 Damage", "-2 Rate of Fire"]
+      },
+      "description": "They don't hit quite as hard and can't handle fast fire rates, but you sure can carry a lot more of them!"
     },
     {
       "name": "Micro-Conductor Add-On",

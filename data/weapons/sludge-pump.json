@@ -4,6 +4,23 @@
   "saveId": "1C5B98F1-48A5C174-ACB889B7-4EFE1785",
   "overclocks": [
     {
+      "name": "AG Mixture",
+      "saveId": "2B675649-433A8DA6-60C24E9D-E48CB9F0",
+      "icon": "../icons/overclocks/projectile-speed.png",
+      "type": "CLEAN",
+      "price": {
+        "credits": 7800,
+        "croppa": 60,
+        "jadiz": 105,
+        "umanite": 140
+      },
+      "effects": {
+        "buffs": ["+30% Projectile Velocity", "-75% Gravity on Projectiles"],
+        "nerfs": []
+      },
+      "description": "Anti-gravity pellets suspended in the sludge let the projectiles fly farther and faster."
+    },
+    {
       "name": "Hydrogen Ion Additive",
       "saveId": "55B2CAEC-44F00514-6CFB3FA9-399BFF51",
       "icon": "../icons/overclocks/acid.png",
@@ -24,21 +41,38 @@
       "description": "An experimental additive that activates on impact gives a small improvement to the corrosive DoT and slowdown effect of direct hits."
     },
     {
-      "name": "AG Mixture",
-      "saveId": "2B675649-433A8DA6-60C24E9D-E48CB9F0",
-      "icon": "../icons/overclocks/projectile-speed.png",
-      "type": "CLEAN",
+      "name": "Combustive Goo Mix",
+      "saveId": "94DEB448-4193354D-BBFC0E92-C535D2AD",
+      "icon": "../icons/overclocks/explosion.png",
+      "type": "BALANCED",
       "price": {
-        "credits": 7800,
-        "croppa": 60,
-        "jadiz": 105,
-        "umanite": 140
+        "credits": 8950,
+        "bismor": 135,
+        "enorPearl": 60,
+        "umanite": 105
       },
       "effects": {
-        "buffs": ["+30% Projectile Velocity", "-75% Gravity on Projectiles"],
-        "nerfs": []
+        "buffs": ["+Volatile Compound", "Burning Enemies Explode When Gooed"],
+        "nerfs": ["+2 Charge Cost", "Burning Enemies Doused After Explosion"]
       },
-      "description": "Anti-gravity pellets suspended in the sludge let the projectiles fly farther and faster."
+      "description": "Adding ammonium nitrate to the sludge mixture makes it explode when exposed to high temperatures. This new sludge mix has a thinner consistency, increasing the ammo cost of the pump's charged shot. It also smells even worse."
+    },
+    {
+      "name": "Disperser Compound",
+      "saveId": "8B7AD7C1-4033D4AF-97834A8E-EC3AA6F1",
+      "icon": "../icons/overclocks/area-damage.png",
+      "type": "BALANCED",
+      "price": {
+        "credits": 8800,
+        "jadiz": 135,
+        "magnite": 100,
+        "umanite": 60
+      },
+      "effects": {
+        "buffs": ["+6 Charged Shot Fragments", "+4 Fragment Area Damage"],
+        "nerfs": ["-24 Charged Shot Area Damage"]
+      },
+      "description": "Charged shots break apart into more fragments on impact, and each fragment is more potent. However, the initial damage of the charged projectile impact is reduced."
     },
     {
       "name": "Volatile Impact Mixture",
@@ -59,40 +93,6 @@
         "nerfs": ["-50% Corrosive DoT Duration", "-25% Sludge Puddle Duration"]
       },
       "description": "Special mixture greatly increases projectile impact damage. However, the volatile compound evaporates quicker, reducing the duration of the corrosive and slowdown effects as well as the puddle lifetime."
-    },
-    {
-      "name": "Disperser Compound",
-      "saveId": "8B7AD7C1-4033D4AF-97834A8E-EC3AA6F1",
-      "icon": "../icons/overclocks/area-damage.png",
-      "type": "BALANCED",
-      "price": {
-        "credits": 8800,
-        "jadiz": 135,
-        "magnite": 100,
-        "umanite": 60
-      },
-      "effects": {
-        "buffs": ["+6 Charged Shot Fragments", "+4 Fragment Area Damage"],
-        "nerfs": ["-24 Charged Shot Area Damage"]
-      },
-      "description": "Charged shots break apart into more fragments on impact, and each fragment is more potent. However, the initial damage of the charged projectile impact is reduced."
-    },
-    {
-      "name": "Combustive Goo Mix",
-      "saveId": "94DEB448-4193354D-BBFC0E92-C535D2AD",
-      "icon": "../icons/overclocks/explosion.png",
-      "type": "BALANCED",
-      "price": {
-        "credits": 8950,
-        "bismor": 135,
-        "enorPearl": 60,
-        "umanite": 105
-      },
-      "effects": {
-        "buffs": ["+Volatile Compound", "Burning Enemies Explode When Gooed"],
-        "nerfs": ["+2 Charge Cost", "Burning Enemies Doused After Explosion"]
-      },
-      "description": "Adding ammonium nitrate to the sludge mixture makes it explode when exposed to high temperatures. This new sludge mix has a thinner consistency, increasing the ammo cost of the pump's charged shot. It also smells even worse."
     },
     {
       "name": "Goo Bomber Special",

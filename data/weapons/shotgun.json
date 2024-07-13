@@ -4,6 +4,23 @@
   "saveId": "F33967B6-4304A459-AC9B0DB7-392DAAF8",
   "overclocks": [
     {
+      "name": "Light-Weight Magazines",
+      "saveId": "38EC4ECD-4E7229C0-DCCC1783-5760D022",
+      "icon": "../icons/overclocks/ammo.png",
+      "type": "CLEAN",
+      "price": {
+        "credits": 7250,
+        "croppa": 125,
+        "magnite": 105,
+        "umanite": 60
+      },
+      "effects": {
+        "buffs": ["+18 Max Ammo", "-0.4s Reload Time"],
+        "nerfs": []
+      },
+      "description": "It's amazing how much material can be removed without affecting anything, and lighter magazines means more magazines and faster reloading."
+    },
+    {
       "name": "Stunner",
       "saveId": "38D28D33-4E2E2A33-080249A5-02F5D7AA",
       "icon": "../icons/overclocks/stun.png",
@@ -22,23 +39,6 @@
         "nerfs": []
       },
       "description": "Heavier rounds allow for Stun chance on all body parts, not just weakpoints. Shooting already stunned enemies with this overclock will deal extra damage."
-    },
-    {
-      "name": "Light-Weight Magazines",
-      "saveId": "38EC4ECD-4E7229C0-DCCC1783-5760D022",
-      "icon": "../icons/overclocks/ammo.png",
-      "type": "CLEAN",
-      "price": {
-        "credits": 7250,
-        "croppa": 125,
-        "magnite": 105,
-        "umanite": 60
-      },
-      "effects": {
-        "buffs": ["+18 Max Ammo", "-0.4s Reload Time"],
-        "nerfs": []
-      },
-      "description": "It's amazing how much material can be removed without affecting anything, and lighter magazines means more magazines and faster reloading."
     },
     {
       "name": "Magnetic Pellet Alignment",

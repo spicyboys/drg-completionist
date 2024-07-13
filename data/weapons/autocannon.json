@@ -98,26 +98,6 @@
       "description": "Extensive tweaks give a huge bump in raw damage at the cost of ammo capacity and fire rate."
     },
     {
-      "name": "Neurotoxin Payload",
-      "saveId": "944E6532-4D5E1678-D3DBF0A3-4103183B",
-      "icon": "../icons/overclocks/neuro.png",
-      "type": "UNSTABLE",
-      "price": {
-        "credits": 8100,
-        "croppa": 100,
-        "jadiz": 75,
-        "magnite": 135
-      },
-      "effects": {
-        "buffs": [
-          "+50% Neurotoxin Payload (50% Chance)",
-          "+0.3m Effect Radius"
-        ],
-        "nerfs": ["-110 Max Ammo", "-6 Area Damage"]
-      },
-      "description": "Channel your inner war criminal by mixing some neurotoxin into the explosive compound. The rounds deal less direct damage and splash damage, but affected bugs move slower and take lots of damage over time."
-    },
-    {
       "name": "Mortar Rounds",
       "saveId": "FA8073F8-414AC44E-F67499A7-A674C0BA",
       "icon": "../icons/overclocks/last-shell-higher-damage.png",
@@ -137,6 +117,26 @@
         "nerfs": ["-14 Damage", "-75 Magazine Size", "-300 Max Ammo", "-2.7 Top Rate of Fire"]
       },
       "description": "The weapon has been reworked to fire heavy mortar projectiles. These modifcations slow down the rate of fire significantly -- but even if you can't carry as many, the high-explosive rounds more than make up for it in damage. Just remember to account for drop."
+    },
+    {
+      "name": "Neurotoxin Payload",
+      "saveId": "944E6532-4D5E1678-D3DBF0A3-4103183B",
+      "icon": "../icons/overclocks/neuro.png",
+      "type": "UNSTABLE",
+      "price": {
+        "credits": 8100,
+        "croppa": 100,
+        "jadiz": 75,
+        "magnite": 135
+      },
+      "effects": {
+        "buffs": [
+          "+50% Neurotoxin Payload (50% Chance)",
+          "+0.3m Effect Radius"
+        ],
+        "nerfs": ["-110 Max Ammo", "-6 Area Damage"]
+      },
+      "description": "Channel your inner war criminal by mixing some neurotoxin into the explosive compound. The rounds deal less direct damage and splash damage, but affected bugs move slower and take lots of damage over time."
     }
   ],
   "frameworks": [
