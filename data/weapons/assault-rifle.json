@@ -89,6 +89,23 @@
       "description": "Deal bonus damage to burning, stunned, electrocuted, frozen, or poisoned targets."
     },
     {
+      "name": "Burst Fire",
+      "saveId": "76EBB234-4CC93948-556BF9B7-55723167",
+      "icon": "../icons/overclocks/special.png",
+      "type": "BALANCED",
+      "price": {
+        "credits": 8300,
+        "umanite": 140,
+        "jadiz": 75,
+        "enorPearl": 110
+      },
+      "effects": {
+        "buffs": ["+3-shot Burst Fire Mode", "+2 Damage", "+2 Burst Size", "+3 Magazine Size", "+10% Weakpoint Stun Chance"],
+        "nerfs": ["-5.6 Rate of Fire"]
+      },
+      "description": "R&D has fitted a cam mechanism into the GK2's fire control group, putting the rifle into a fixed 3-round burst fire mode. Additional modifications include a small increase to magazine size, damage and higher stun chance."
+    },
+    {
       "name": "AI Stability Engine",
       "saveId": "E123F111-40311074-50577995-D776D56B",
       "icon": "../icons/overclocks/aim.png",

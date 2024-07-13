@@ -108,6 +108,23 @@
         ]
       },
       "description": "Takes the M1000's focus mode to the extreme by supercooling the rounds before firing to improve their acceleration through the coils, but the extra coolant in the clips limits how much ammo you can bring."
+    },
+    {
+      "name": "Marked For Death",
+      "saveId": "FCCA2A4D-42B5FF30-59C745A6-5FE7EF48",
+      "icon": "../icons/overclocks/weakspot.png",
+      "type": "UNSTABLE",
+      "price": {
+        "credits": 7150,
+        "enorPearl": 140,
+        "jadiz": 75,
+        "bismor": 90
+      },
+      "effects": {
+        "buffs": ["+55% Focus Weakening Bonus", "+8 Focus Weakening Bonus Duration", "+19% Focus Speed"],
+        "nerfs": ["-198% Focused Shot Damage Bonus", "-2 Clip Size"]
+      },
+      "description": "Focus Shot now fires a dart loaded with an inflammatory catalyst which causes enemies to temporarily take more damage from all sources. While faster to focus, the direct impact of these darts does negligible damage, and requires an increased Focus Shot ammo cost as well as a smaller magazine."
     }
   ],
   "frameworks": [

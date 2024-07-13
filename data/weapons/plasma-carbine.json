@@ -72,6 +72,23 @@
       "description": "By rewiring the thermal systems into a secondary cell and connecting it to the primary battery, your weapon can convert the energy from overheating into ammo. However this reduces the maximum capacity of the primary battery significantly."
     },
     {
+      "name": "Conductive Thermals",
+      "saveId": "78A83D94-42F1A6EB-7366188B-9583E06E",
+      "icon": "../icons/overclocks/temperature.png",
+      "type": "BALANCED",
+      "price": {
+        "credits": 7600,
+        "magnite": 140,
+        "bismor": 70,
+        "enorPearl": 110
+      },
+      "effects": {
+        "buffs": ["+Conductive Thermals"],
+        "nerfs": ["-3 Direct Damage", "+37% Heat Per Shot"]
+      },
+      "description": "ElectroCryoThermic™ technology makes the plasma projectiles increase enemies' sensitivity to temperature changes and shock. However, the volatile plasma reaction does less direct damage, and generates more heat per shot."
+    },
+    {
       "name": "Overtuned Particle Accelerator",
       "saveId": "97762592-41503577-CA70EBBD-276A94CD",
       "icon": "../icons/overclocks/damage.png",
