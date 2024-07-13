@@ -55,6 +55,23 @@
       "description": "By improving the node's efficiency, you can up the raw damage without too much fuss, and it lasts a bit longer, too!"
     },
     {
+      "name": "High Voltage Crossover",
+      "saveId": "CB84A17F-4D87219D-DA9DBF82-D7917CFC",
+      "icon": "../icons/overclocks/electricity.png",
+      "type": "BALANCED",
+      "price": {
+        "credits": 8250,
+        "bismor": 120,
+        "enorPearl": 80,
+        "magnite": 100
+      },
+      "effects": {
+        "buffs": ["+High Voltage Crossover"],
+        "nerfs": ["-40% Magazine Size"]
+      },
+      "description": "By passing an electric current through the plasma the beam electrocutes anything it touches, but the bulky hardware limits magazine capacity."
+    },
+    {
       "name": "Return to Sender",
       "saveId": "ED514274-4A48D425-DBFB8DA3-B9C53BF4",
       "icon": "../icons/overclocks/forth-and-back-linecutter.png",
@@ -72,21 +89,21 @@
       "description": "Holding down the trigger after the line leaves the gun activates a remote connection which, on the release of the trigger, causes the line to change direction and move back towards the gun."
     },
     {
-      "name": "High Voltage Crossover",
-      "saveId": "CB84A17F-4D87219D-DA9DBF82-D7917CFC",
-      "icon": "../icons/overclocks/electricity.png",
-      "type": "BALANCED",
+      "name": "Inferno",
+      "saveId": "F812D98E-44847B26-86DAEE82-A5514460",
+      "icon": "../icons/overclocks/heat.png",
+      "type": "UNSTABLE",
       "price": {
-        "credits": 8250,
-        "bismor": 120,
-        "enorPearl": 80,
-        "magnite": 100
+        "credits": 7550,
+        "croppa": 70,
+        "jadiz": 90,
+        "magnite": 135
       },
       "effects": {
-        "buffs": ["+High Voltage Crossover"],
-        "nerfs": ["-40% Magazine Size"]
+        "buffs": ["+Inferno"],
+        "nerfs": ["-175 Beam DPS", "-75% Armor Breaking"]
       },
-      "description": "By passing an electric current through the plasma the beam electrocutes anything it touches, but the bulky hardware limits magazine capacity."
+      "description": "Turn your Breach Cutter into a tool of burning death and destruction at the cost of armor breaking. As a bonus, the extreme internal heating keeps the targets burning for an extended period."
     },
     {
       "name": "Spinning Death",
@@ -108,23 +125,6 @@
         "nerfs": ["-75% Beam DPS", "-35% Max Ammo", "-70% Magazine Size"]
       },
       "description": "These modified plasma nodes convert most of the forward momentum into angular momentum, streatching out the beam and continuously doing damage to the immediate area where it was launched. The nodes run for a longer duration but deal less damage every second. Due to the weight, both magazine and total capacity is greatly reduced."
-    },
-    {
-      "name": "Inferno",
-      "saveId": "F812D98E-44847B26-86DAEE82-A5514460",
-      "icon": "../icons/overclocks/heat.png",
-      "type": "UNSTABLE",
-      "price": {
-        "credits": 7550,
-        "croppa": 70,
-        "jadiz": 90,
-        "magnite": 135
-      },
-      "effects": {
-        "buffs": ["+Inferno"],
-        "nerfs": ["-175 Beam DPS", "-75% Armor Breaking"]
-      },
-      "description": "Turn your Breach Cutter into a tool of burning death and destruction at the cost of armor breaking. As a bonus, the extreme internal heating keeps the targets burning for an extended period."
     }
   ],
   "frameworks": [

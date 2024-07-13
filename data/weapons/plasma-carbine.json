@@ -38,6 +38,23 @@
       "description": "With a liquid coolant fitted to the weapons thermal system, it transfers heat more efficiently, accelerating its cooling rate and reducing heat per shot."
     },
     {
+      "name": "Conductive Thermals",
+      "saveId": "78A83D94-42F1A6EB-7366188B-9583E06E",
+      "icon": "../icons/overclocks/temperature.png",
+      "type": "BALANCED",
+      "price": {
+        "credits": 7600,
+        "magnite": 140,
+        "bismor": 70,
+        "enorPearl": 110
+      },
+      "effects": {
+        "buffs": ["+Conductive Thermals"],
+        "nerfs": ["-3 Direct Damage", "+37% Heat Per Shot"]
+      },
+      "description": "ElectroCryoThermic™ technology makes the plasma projectiles increase enemies' sensitivity to temperature changes and shock. However, the volatile plasma reaction does less direct damage, and generates more heat per shot."
+    },
+    {
       "name": "Impact Deflection",
       "saveId": "5940D71B-4B099E73-793B0ABE-464BE9F2",
       "icon": "../icons/overclocks/ricochet.png",

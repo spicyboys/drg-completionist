@@ -4,23 +4,6 @@
   "saveId": "D7C92A19-4259B063-3624A9A4-C2DA8C65",
   "overclocks": [
     {
-      "name": "Eraser",
-      "saveId": "E7528A53-4CB2FC74-F1F7E585-FAE363CE",
-      "icon": "../icons/overclocks/clip-size.png",
-      "type": "CLEAN",
-      "price": {
-        "credits": 8000,
-        "croppa": 135,
-        "magnite": 70,
-        "enorPearl": 90
-      },
-      "effects": {
-        "buffs": ["+12 Magazine Size", "+33% Max Targets"],
-        "nerfs": []
-      },
-      "description": "Clean up the caves with an expanded magazine combined with the ability to acquire more locks."
-    },
-    {
       "name": "Armor Break Module",
       "saveId": "76133DB6-4CDD0DD9-D7516898-AB37E791",
       "icon": "../icons/overclocks/armor-break.png",
@@ -36,6 +19,23 @@
         "nerfs": []
       },
       "description": "Shots do extra damage against armor when all locks are engaged."
+    },
+    {
+      "name": "Eraser",
+      "saveId": "E7528A53-4CB2FC74-F1F7E585-FAE363CE",
+      "icon": "../icons/overclocks/clip-size.png",
+      "type": "CLEAN",
+      "price": {
+        "credits": 8000,
+        "croppa": 135,
+        "magnite": 70,
+        "enorPearl": 90
+      },
+      "effects": {
+        "buffs": ["+12 Magazine Size", "+33% Max Targets"],
+        "nerfs": []
+      },
+      "description": "Clean up the caves with an expanded magazine combined with the ability to acquire more locks."
     },
     {
       "name": "Explosive Chemical Rounds",
@@ -104,6 +104,23 @@
         "nerfs": ["+50% Lock-On Time", "Lock-On Limited to 5.0s"]
       },
       "description": "Slow down enemies by locking on to them: the more locks, the slower the enemy gets! The downside is a slightly slower lock-on rate, and the locks can only be maintained for a limited time before the system resets."
+    },
+    {
+      "name": "SmЯt Trigger OS™",
+      "saveId": "30A8714E-474627F4-A163C7A5-1AC4CBE9",
+      "icon": "../icons/overclocks/smart-targeting.png",
+      "type": "UNSTABLE",
+      "price": {
+        "credits": 7050,
+        "bismor": 130,
+        "croppa": 60,
+        "jadiz": 105
+      },
+      "effects": {
+        "buffs": ["+Auto-Fire", "-95% Lock-On Time"],
+        "nerfs": ["-10 Max Targets"]
+      },
+      "description": "A sleek new operating system from the SmЯt Corporation gives the weapon near-instantaneous lock-on, and automatically fires shots at locked-on targets. This system is quite CPU-intensive, however, lowering the maximum number of lock-ons."
     }
   ],
   "frameworks": [

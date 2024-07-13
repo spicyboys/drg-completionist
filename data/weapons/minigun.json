@@ -89,6 +89,23 @@
       "description": "Increases damage at a cost to accuracy."
     },
     {
+      "name": "Rotary Overdrive",
+      "saveId": "CB2B77B6-46A8B2DA-C0B45890-136487AC",
+      "icon": "../icons/overclocks/cooldown.png",
+      "type": "BALANCED",
+      "price": {
+        "credits": 8550,
+        "magnite": 120,
+        "enorPearl": 80,
+        "bismor": 110
+      },
+      "effects": {
+        "buffs": ["+12 Quik-Chill Coolant Charges", "25% Quik-Chill Coolant Heat Reduction", "+6 Rate of Fire"],
+        "nerfs": ["+75% Heat Generation"]
+      },
+      "description": "Overtunes the electric drive to push the fire rate to its limit! But the resulting increase in heat buildup requires a mechanism allowing injections of Quik-Chill coolant fluid by pushing reload. This coolant reduces heat buildup and can take the weapon out of an overheated state. Only a limited amount of coolant can be carried, and must be replenished via resupplies."
+    },
+    {
       "name": "Bullet Hell",
       "saveId": "803640ED-48E8696A-E3DD72BC-56C4EACD",
       "icon": "../icons/overclocks/ricochet.png",

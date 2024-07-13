@@ -4,6 +4,23 @@
   "saveId": "8A6AEDA3-4DCD08CE-0CA171B4-646B7B69",
   "overclocks": [
     {
+      "name": "Fragmentation Missiles",
+      "saveId": "0C88411E-43FC189E-9FB6829B-91A1F019",
+      "icon": "../icons/overclocks/area.png",
+      "type": "CLEAN",
+      "price": {
+        "credits": 7150,
+        "croppa": 135,
+        "jadiz": 60,
+        "bismor": 100
+      },
+      "effects": {
+        "buffs": ["+2 Area Damage", "+0.5m AoE Radius"],
+        "nerfs": []
+      },
+      "description": "With a thicker casing your missiles spread more fragments at higher speeds, increasing AoE efficiency"
+    },
+    {
       "name": "Overtuned Feed Mechanism",
       "saveId": "4876252A-448868DF-91B03DBA-A56B75A3",
       "icon": "../icons/overclocks/fire-rate.png",
@@ -21,21 +38,21 @@
       "description": "With some slight tinkering, both your weapon and projectiles are faster."
     },
     {
-      "name": "Fragmentation Missiles",
-      "saveId": "0C88411E-43FC189E-9FB6829B-91A1F019",
-      "icon": "../icons/overclocks/area.png",
-      "type": "CLEAN",
+      "name": "Minelayer System",
+      "saveId": "9AE273C8-4D4F3E46-D92148AD-B41FC32B",
+      "icon": "../icons/overclocks/special.png",
+      "type": "BALANCED",
       "price": {
-        "credits": 7150,
-        "croppa": 135,
-        "jadiz": 60,
-        "bismor": 100
+        "credits": 7500,
+        "croppa": 125,
+        "enorPearl": 90,
+        "bismor": 80
       },
       "effects": {
-        "buffs": ["+2 Area Damage", "+0.5m AoE Radius"],
-        "nerfs": []
+        "buffs": ["+Minelayer System"],
+        "nerfs": ["Missiles Cannot Be Guided", "-36 Max Ammo"]
       },
-      "description": "With a thicker casing your missiles spread more fragments at higher speeds, increasing AoE efficiency"
+      "description": "When your missiles hit the ground, they are planted as mines that explode when damaged or when enemies are in close proximity. When setup as mines the warheads explode with significantly more force over a larger area, but keep in mind that these missiles do not have guidance. The total ammo capacity is slightly reduced."
     },
     {
       "name": "Plasma Burster Missiles",
@@ -66,21 +83,25 @@
       "description": "Turn the battlefield into a plasma apocalypse with these penetrating multi-burst missiles! They fly slower, don't hit as hard, and there is a limit to how many can be controlled at one time, but in the right hands even a single missile can do a lot of damage."
     },
     {
-      "name": "Minelayer System",
-      "saveId": "9AE273C8-4D4F3E46-D92148AD-B41FC32B",
-      "icon": "../icons/overclocks/special.png",
-      "type": "BALANCED",
+      "name": "Cluster Charges",
+      "saveId": "6EFAB422-4558C44C-3E53C38B-2D203E78",
+      "icon": "../icons/overclocks/special-magazine.png",
+      "type": "UNSTABLE",
       "price": {
-        "credits": 7500,
-        "croppa": 125,
-        "enorPearl": 90,
-        "bismor": 80
+        "credits": 8150,
+        "enorPearl": 120,
+        "jadiz": 75,
+        "umanite": 95
       },
       "effects": {
-        "buffs": ["+Minelayer System"],
-        "nerfs": ["Missiles Cannot Be Guided", "-36 Max Ammo"]
+        "buffs": [
+          "7 Bomblets Released by Hitting Reload",
+          "+16 Direct Damage",
+          "+20 Area Damage"
+        ],
+        "nerfs": ["-20 Magazine Size", "-160 Max Ammo", "-1 Rate of Fire", "-50% Projectile Velocity"]
       },
-      "description": "When your missiles hit the ground, they are planted as mines that explode when damaged or when enemies are in close proximity. When setup as mines the warheads explode with significantly more force over a larger area, but keep in mind that these missiles do not have guidance. The total ammo capacity is slightly reduced."
+      "description": "Each missile has had their explosives replaced with cluster munitions, and will eject these bomblets when you hold the reload button. The heavy payload has reduced the forward propulsion power of the missiles, as well as both total ammo and magazine capacity. On the bright side, all the extra weight and explosives mean the missiles hit like a truck if you don't release their payload before impact."
     },
     {
       "name": "Jet Fuel Homebrew",

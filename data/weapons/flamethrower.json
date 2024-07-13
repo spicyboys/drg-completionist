@@ -89,6 +89,23 @@
       "description": "This crazy bit of tweaking will give a big boost in damage and flow rate, but at the cost of operational range and tank capacity."
     },
     {
+      "name": "Scorching Tide",
+      "saveId": "385ED0E5-40342B56-3F605480-9190E941",
+      "icon": "../icons/overclocks/special-magazine.png",
+      "type": "UNSTABLE",
+      "price": {
+        "credits": 7300,
+        "umanite": 140,
+        "bismor": 70,
+        "magnite": 105
+      },
+      "effects": {
+        "buffs": ["+Scorching Tide"],
+        "nerfs": ["25 Charged Shot Cost", "-75% Movement Speed During Charging"]
+      },
+      "description": "A supercharged injection system and integrated duckbill choke allows the weapon to blast a blistering horizontal wave of flame by holding reload. Using this mechanism eats up additional fuel and makes the weapon unstable, reducing movement speed during charging."
+    },
+    {
       "name": "Sticky Fuel",
       "saveId": "E33E8CF2-480D968A-699F5E96-193F6BF5",
       "icon": "../icons/overclocks/duration-hourglass.png",
