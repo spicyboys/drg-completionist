@@ -145,6 +145,27 @@
         "nerfs": ["Missiles Cannot Be Guided"]
       },
       "description": "Enables your weapon to load up to 9 missiles and launch them at once! As an added bonus, the overloaded exhaust ports increase missile velocity and boost their damage based on how many missiles are in the salvo. However, the missiles in the salvo cannot be guided."
+    },
+    {
+      "name": "Cluster Charges",
+      "saveId": "6EFAB422-4558C44C-3E53C38B-2D203E78",
+      "icon": "../icons/overclocks/special-magazine.png",
+      "type": "UNSTABLE",
+      "price": {
+        "credits": 8150,
+        "enorPearl": 120,
+        "jadiz": 75,
+        "umanite": 95
+      },
+      "effects": {
+        "buffs": [
+          "7 Bomblets Released by Hitting Reload",
+          "+16 Direct Damage",
+          "+20 Area Damage"
+        ],
+        "nerfs": ["-20 Magazine Size", "-160 Max Ammo", "-1 Rate of Fire", "-50% Projectile Velocity"]
+      },
+      "description": "Each missile has had their explosives replaced with cluster munitions, and will eject these bomblets when you hold the reload button. The heavy payload has reduced the forward propulsion power of the missiles, as well as both total ammo and magazine capacity. On the bright side, all the extra weight and explosives mean the missiles hit like a truck if you don't release their payload before impact."
     }
   ],
   "frameworks": [
