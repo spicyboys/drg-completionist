@@ -55,23 +55,6 @@
       "description": "More damage on average, but it's a bit inconsistent."
     },
     {
-      "name": "Overclocked Firing Mechanism",
-      "saveId": "240306C3-4A2C48CE-ED44DCB6-39BA8C49",
-      "icon": "../icons/overclocks/fire-rate.png",
-      "type": "BALANCED",
-      "price": {
-        "credits": 7950,
-        "bismor": 95,
-        "enorPearl": 120,
-        "magnite": 65
-      },
-      "effects": {
-        "buffs": ["+3 Rate of Fire"],
-        "nerfs": ["+100% Recoil"]
-      },
-      "description": "More bullets faster, and it kicks like a mule."
-    },
-    {
       "name": "Bullets of Mercy",
       "saveId": "1F220673-4BB06412-B45D028C-67169DDE",
       "icon": "../icons/overclocks/damage.png",
@@ -104,6 +87,23 @@
         "nerfs": ["-5.6 Rate of Fire"]
       },
       "description": "R&D has fitted a cam mechanism into the GK2's fire control group, putting the rifle into a fixed 3-round burst fire mode. Additional modifications include a small increase to magazine size, damage and higher stun chance."
+    },
+    {
+      "name": "Overclocked Firing Mechanism",
+      "saveId": "240306C3-4A2C48CE-ED44DCB6-39BA8C49",
+      "icon": "../icons/overclocks/fire-rate.png",
+      "type": "BALANCED",
+      "price": {
+        "credits": 7950,
+        "bismor": 95,
+        "enorPearl": 120,
+        "magnite": 65
+      },
+      "effects": {
+        "buffs": ["+3 Rate of Fire"],
+        "nerfs": ["+100% Recoil"]
+      },
+      "description": "More bullets faster, and it kicks like a mule."
     },
     {
       "name": "AI Stability Engine",

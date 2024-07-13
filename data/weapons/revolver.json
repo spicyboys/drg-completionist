@@ -38,23 +38,6 @@
       "description": "More damage on average, but it's a bit inconsistent."
     },
     {
-      "name": "Volatile Bullets",
-      "saveId": "BC6C30D1-48B22184-335BB9A4-56E0F32D",
-      "icon": "../icons/overclocks/heat.png",
-      "type": "BALANCED",
-      "price": {
-        "credits": 7350,
-        "croppa": 130,
-        "jadiz": 110,
-        "magnite": 60
-      },
-      "effects": {
-        "buffs": ["+300% Damage vs. Burning"],
-        "nerfs": ["-10 Damage"]
-      },
-      "description": "Fuel on the fire! These rounds are extremely effective against burning targets, but at the cost of direct damage dealt to unaffected creatures."
-    },
-    {
       "name": "Six Shooter",
       "saveId": "39DC37A9-41E8DE38-1C64D08C-6AB419CE",
       "icon": "../icons/overclocks/clip-size.png",
@@ -70,6 +53,23 @@
         "nerfs": ["+0.5s Reload Time", "+50% Base Spread"]
       },
       "description": "An updated casing profile lets you squeeze two more rounds into the cylinder and take a few more rounds with you, but all that filling and drilling has compromised the accuracy of the weapon, and it takes longer to reload."
+    },
+    {
+      "name": "Volatile Bullets",
+      "saveId": "BC6C30D1-48B22184-335BB9A4-56E0F32D",
+      "icon": "../icons/overclocks/heat.png",
+      "type": "BALANCED",
+      "price": {
+        "credits": 7350,
+        "croppa": 130,
+        "jadiz": 110,
+        "magnite": 60
+      },
+      "effects": {
+        "buffs": ["+300% Damage vs. Burning"],
+        "nerfs": ["-10 Damage"]
+      },
+      "description": "Fuel on the fire! These rounds are extremely effective against burning targets, but at the cost of direct damage dealt to unaffected creatures."
     },
     {
       "name": "Elephant Rounds",

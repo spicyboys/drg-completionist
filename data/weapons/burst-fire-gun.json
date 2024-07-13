@@ -89,6 +89,23 @@
       "description": "After impacting terrain, these high-tech bullets convert in to electro-minelets that will electrocute anything unfortunate enough to come close. However, they don't last forever, and the rounds themselves take more space in the clip and deal less direct damage."
     },
     {
+      "name": "Lead Spray",
+      "saveId": "CF55AEF1-46772E59-611D00A0-2ADF4B58",
+      "icon": "../icons/overclocks/special.png",
+      "type": "UNSTABLE",
+      "price": {
+        "credits": 8050,
+        "bismor": 125,
+        "magnite": 75,
+        "umanite": 105
+      },
+      "effects": {
+        "buffs": ["+50% Damage"],
+        "nerfs": ["+300% Base Spread"]
+      },
+      "description": "It ain't pretty, but this overclock will tear apart anything that gets close, though it gets a bit iffy at range"
+    },
+    {
       "name": "Micro Flechettes",
       "saveId": "1A6A1C8F-4CDFA623-0C51A5BC-21F2194A",
       "icon": "../icons/overclocks/small-bullets.png",
@@ -109,23 +126,6 @@
         "nerfs": ["-11 Damage"]
       },
       "description": "Convert the BRT to fire small flechettes instead of slugs. Increases overall ammo and magazine size as well as reducing recoil, but at the cost of raw damage."
-    },
-    {
-      "name": "Lead Spray",
-      "saveId": "CF55AEF1-46772E59-611D00A0-2ADF4B58",
-      "icon": "../icons/overclocks/special.png",
-      "type": "UNSTABLE",
-      "price": {
-        "credits": 8050,
-        "bismor": 125,
-        "magnite": 75,
-        "umanite": 105
-      },
-      "effects": {
-        "buffs": ["+50% Damage"],
-        "nerfs": ["+300% Base Spread"]
-      },
-      "description": "It ain't pretty, but this overclock will tear apart anything that gets close, though it gets a bit iffy at range"
     }
   ],
   "frameworks": [

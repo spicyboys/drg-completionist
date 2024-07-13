@@ -21,21 +21,21 @@
       "description": "Get all you can from your fuel and lose pressure slower from the main chamber."
     },
     {
-      "name": "Tuned Cooler",
-      "saveId": "B323DB6A-4088EDC8-818BA886-BE3CC907",
-      "icon": "../icons/overclocks/cold.png",
+      "name": "Crystal Nucleation",
+      "saveId": "5975117B-4E56B697-2A03B197-0FB98E82",
+      "icon": "../icons/overclocks/special.png",
       "type": "BALANCED",
       "price": {
-        "credits": 8750,
-        "bismor": 110,
-        "magnite": 65,
-        "umanite": 130
+        "credits": 7200,
+        "enorPearl": 130,
+        "umanite": 75,
+        "magnite": 105
       },
       "effects": {
-        "buffs": ["+1 Freezing Power", "+0.8 Flow Rate"],
-        "nerfs": ["+0.2s Charge-up Time", "-20% Pressure Gain Rate"]
+        "buffs": ["+Crystal Nucleation", "Affected by cooling and damage mods"],
+        "nerfs": ["-100 Tank Capacity"]
       },
-      "description": "Freeze things faster at the cost of a slower pump and turbine."
+      "description": "A new cryoctane fuel blend creates razor-sharp formations of ice crystals on impact with terrain, which damage and slow enemies attempting to walk through them. These ice crystals melt over time, but can be maintained by cooling them. This modification results in a smaller overall fuel tank capacity to make room for the new fuel injector."
     },
     {
       "name": "Flow Rate Expansion",
@@ -72,21 +72,21 @@
       "description": "Pressing the reload button dumps all the fluid in the chamber directly into the turbine, flash-freezing it and launching an ice projectile. Side effects include an increased recharge delay and, of course, the large amount of fuel used."
     },
     {
-      "name": "Crystal Nucleation",
-      "saveId": "5975117B-4E56B697-2A03B197-0FB98E82",
-      "icon": "../icons/overclocks/special.png",
+      "name": "Tuned Cooler",
+      "saveId": "B323DB6A-4088EDC8-818BA886-BE3CC907",
+      "icon": "../icons/overclocks/cold.png",
       "type": "BALANCED",
       "price": {
-        "credits": 7200,
-        "enorPearl": 130,
-        "umanite": 75,
-        "magnite": 105
+        "credits": 8750,
+        "bismor": 110,
+        "magnite": 65,
+        "umanite": 130
       },
       "effects": {
-        "buffs": ["+Crystal Nucleation", "Affected by cooling and damage mods"],
-        "nerfs": ["-100 Tank Capacity"]
+        "buffs": ["+1 Freezing Power", "+0.8 Flow Rate"],
+        "nerfs": ["+0.2s Charge-up Time", "-20% Pressure Gain Rate"]
       },
-      "description": "A new cryoctane fuel blend creates razor-sharp formations of ice crystals on impact with terrain, which damage and slow enemies attempting to walk through them. These ice crystals melt over time, but can be maintained by cooling them. This modification results in a smaller overall fuel tank capacity to make room for the new fuel injector."
+      "description": "Freeze things faster at the cost of a slower pump and turbine."
     },
     {
       "name": "Ice Storm",
