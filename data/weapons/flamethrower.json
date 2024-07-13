@@ -104,6 +104,23 @@
         "nerfs": ["-25 Tank Size", "-75 Max Fuel"]
       },
       "description": "Special fuel mixture extends the duration and damage of Sticky Flames, but at the cost of tank capacity and total fuel."
+    },
+    {
+      "name": "Scorching Tide",
+      "saveId": "385ED0E5-40342B56-3F605480-9190E941",
+      "icon": "../icons/overclocks/special-magazine.png",
+      "type": "UNSTABLE",
+      "price": {
+        "credits": 7300,
+        "umanite": 140,
+        "bismor": 70,
+        "magnite": 105
+      },
+      "effects": {
+        "buffs": ["+Scorching Tide"],
+        "nerfs": ["25 Charged Shot Cost", "-75% Movement Speed During Charging"]
+      },
+      "description": "A supercharged injection system and integrated duckbill choke allows the weapon to blast a blistering horizontal wave of flame by holding reload. Using this mechanism eats up additional fuel and makes the weapon unstable, reducing movement speed during charging."
     }
   ],
   "frameworks": [

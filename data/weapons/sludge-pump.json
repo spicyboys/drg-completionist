@@ -78,6 +78,23 @@
       "description": "Charged shots break apart into more fragments on impact, and each fragment is more potent. However, the initial damage of the charged projectile impact is reduced."
     },
     {
+      "name": "Combustive Goo Mix",
+      "saveId": "94DEB448-4193354D-BBFC0E92-C535D2AD",
+      "icon": "../icons/overclocks/explosion.png",
+      "type": "BALANCED",
+      "price": {
+        "credits": 8950,
+        "bismor": 135,
+        "enorPearl": 60,
+        "umanite": 105
+      },
+      "effects": {
+        "buffs": ["+Volatile Compound", "Burning Enemies Explode When Gooed"],
+        "nerfs": ["+2 Charge Cost", "Burning Enemies Doused After Explosion"]
+      },
+      "description": "Adding ammonium nitrate to the sludge mixture makes it explode when exposed to high temperatures. This new sludge mix has a thinner consistency, increasing the ammo cost of the pump's charged shot. It also smells even worse."
+    },
+    {
       "name": "Goo Bomber Special",
       "saveId": "997ECC4C-4AA16341-B37AC9AA-F9F17F77",
       "icon": "../icons/overclocks/special.png",
