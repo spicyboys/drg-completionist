@@ -72,6 +72,23 @@
       "description": "Pressing the reload button dumps all the fluid in the chamber directly into the turbine, flash-freezing it and launching an ice projectile. Side effects include an increased recharge delay and, of course, the large amount of fuel used."
     },
     {
+      "name": "Crystal Nucleation",
+      "saveId": "5975117B-4E56B697-2A03B197-0FB98E82",
+      "icon": "../icons/overclocks/special.png",
+      "type": "BALANCED",
+      "price": {
+        "credits": 7200,
+        "enorPearl": 130,
+        "umanite": 75,
+        "magnite": 105
+      },
+      "effects": {
+        "buffs": ["+Crystal Nucleation", "Affected by cooling and damage mods"],
+        "nerfs": ["-100 Tank Capacity"]
+      },
+      "description": "A new cryoctane fuel blend creates razor-sharp formations of ice crystals on impact with terrain, which damage and slow enemies attempting to walk through them. These ice crystals melt over time, but can be maintained by cooling them. This modification results in a smaller overall fuel tank capacity to make room for the new fuel injector."
+    },
+    {
       "name": "Ice Storm",
       "saveId": "5975117B-4E56B697-2A03B197-0FB98E82",
       "icon": "../icons/overclocks/damage.png",
