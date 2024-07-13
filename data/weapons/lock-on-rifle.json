@@ -104,6 +104,23 @@
         "nerfs": ["+50% Lock-On Time", "Lock-On Limited to 5.0s"]
       },
       "description": "Slow down enemies by locking on to them: the more locks, the slower the enemy gets! The downside is a slightly slower lock-on rate, and the locks can only be maintained for a limited time before the system resets."
+    },
+    {
+      "name": "SmЯt Trigger OS™",
+      "saveId": "30A8714E-474627F4-A163C7A5-1AC4CBE9",
+      "icon": "../icons/overclocks/smart-targeting.png",
+      "type": "UNSTABLE",
+      "price": {
+        "credits": 7050,
+        "bismor": 130,
+        "croppa": 60,
+        "jadiz": 105
+      },
+      "effects": {
+        "buffs": ["+Auto-Fire", "-95% Lock-On Time"],
+        "nerfs": ["-10 Max Targets"]
+      },
+      "description": "A sleek new operating system from the SmЯt Corporation gives the weapon near-instantaneous lock-on, and automatically fires shots at locked-on targets. This system is quite CPU-intensive, however, lowering the maximum number of lock-ons."
     }
   ],
   "frameworks": [

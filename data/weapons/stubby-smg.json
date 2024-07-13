@@ -72,21 +72,38 @@
       "description": "They don't hit quite as hard and can't handle fast fire rates, but you sure can carry a lot more of them!"
     },
     {
-      "name": "Turret Arc",
+      "name": "Hyperalloy Assembly",
+      "saveId": "59234B46-48DE0D9A-4D2C159B-F46E0B73",
+      "icon": "../icons/overclocks/aim.png",
+      "type": "BALANCED",
+      "price": {
+        "credits": 7100,
+        "umanite": 130,
+        "magnite": 80,
+        "jadiz": 105
+      },
+      "effects": {
+        "buffs": ["-80% Horizontal Recoil", "-70% Base Spread", "+30% Weakpoint Damage Bonus"],
+        "nerfs": ["-10 Magazine Size", "+50% Vertical Recoil"]
+      },
+      "description": "Precision-tooled hyperalloy components drastically reduce bullet spread. However, the weapon frame no longer absorbs recoil, transferring all force directly to the user's wrist. This means increased recoil, as well as elevated risk of carpal tunnel syndrome."
+    },
+    {
+      "name": "Micro-Conductor Add-On",
       "saveId": "EADB423C-44EE2130-4A946DAF-754D3191",
       "icon": "../icons/overclocks/electricity.png",
       "type": "UNSTABLE",
       "price": {
-        "credits": 8350,
-        "bismor": 100,
-        "croppa": 135,
-        "umanite": 60
+        "credits": 7300,
+        "umanite": 120,
+        "bismor": 60,
+        "magnite": 110
       },
       "effects": {
-        "buffs": ["+Turret Arc (15m Range)"],
+        "buffs": ["+Micro-Conductor Add-On", "Sentries and Platforms Work as Nodes"],
         "nerfs": ["-120 Max Ammo", "-2 Rate of Fire"]
       },
-      "description": "Use the Gemini turrets as nodes in an electric arc. Zap! The downside is less ammo and a slower rate of fire."
+      "description": "Micro-conductors have been added to your bullets, enabling them to add electric currents to platforms and Sentries on impact. Additionally, electrified Sentries work as nodes, creating an electric arc between them. Conductor Bullets are bigger and require a modified firing mechanism, reducing ammo capacity and fire rate."
     },
     {
       "name": "Turret EM Discharge",

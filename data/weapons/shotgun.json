@@ -90,6 +90,23 @@
         "nerfs": ["-2 Damage", "-10% Stun Chance", "No Stun Duration"]
       },
       "description": "Smaller shells designed around a new charge type reduce recoil and increase overall ammo and magazine capacity at the cost of raw damage."
+    },
+    {
+      "name": "Pump Action",
+      "saveId": "1586D54A-4F3768AC-AD639681-6D0B514C",
+      "icon": "../icons/overclocks/bullet-penetration.png",
+      "type": "UNSTABLE",
+      "price": {
+        "credits": 8550,
+        "umanite": 135,
+        "enorPearl": 80,
+        "bismor": 100
+      },
+      "effects": {
+        "buffs": ["+5 Damage", "+2 Pellets", "+1 Max Penetrations"],
+        "nerfs": ["-30 Max Ammo", "-1 Magazine Size", "-1.1 Rate of Fire"]
+      },
+      "description": "Converts the weapon into a whopping 6-gauge pump action capable of dealing massive damage and punching through multiple enemies. The intrusive old-school pump mechanism requires a smaller magazine, and you can't fit as many of these big ol' shells in your pockets."
     }
   ],
   "frameworks": [
