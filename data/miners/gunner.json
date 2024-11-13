@@ -112,22 +112,22 @@
     {
       "name": "Toxic Defender",
       "icon": "../icons/armor-paint-jobs/common/toxic-defender.png",
-      "saveId": "7B905D72-423B70AD-F8ECB1BD-B98A08F6"
+      "saveId": "B81B56C1-4E2AF746-34F9AC82-6E542098"
     },
     {
       "name": "Regal Aegis",
       "icon": "../icons/armor-paint-jobs/common/regal-aegis.png",
-      "saveId": "DB0CCD99-4A4B8380-E2F193A9-4B1D67C4"
+      "saveId": "DB4DF8B4-45EC5150-20EB95B9-BDB11FD2"
     },
     {
       "name": "Black Crag",
       "icon": "../icons/armor-paint-jobs/common/black-crag.png",
-      "saveId": "C74025BA-41140BDD-7B28F382-607EE187"
+      "saveId": "27D4DA59-489EC4A0-B55D4797-8A47620E"
     },
     {
       "name": "Scale Brigade",
       "icon": "../icons/armor-paint-jobs/common/scale-brigade.png",
-      "saveId": "24149071-49B39F32-3FDA31A1-0E4E8DE2"
+      "saveId": "5761CD03-4B70F242-C0E86E89-E1A7ADA3"
     },
     {
       "name": "Brassy Swirls",
@@ -240,16 +240,20 @@
       "saveId": "B69D6611-4762CC85-85DF1B9C-2FF42D5C"
     },
     {
-      "weaponPaintJob": "Chlorine"
+      "weaponPaintJob": "Chlorine",
+      "saveId": "FAB3922A-4948E766-5774C0A4-788B343B"
     },
     {
-      "weaponPaintJob": "Dune Marauder"
+      "weaponPaintJob": "Dune Marauder",
+      "saveId": "9C4F7F8D-458437D3-D6A622A7-9A4F4DFB"
     },
     {
-      "weaponPaintJob": "Lazulite"
+      "weaponPaintJob": "Lazulite",
+      "saveId": "2C261DF4-46DD56E6-C53E71A3-B4C96AED"
     },
     {
-      "weaponPaintJob": "Lemon Clean"
+      "weaponPaintJob": "Lemon Clean",
+      "saveId": "76BE3081-4598F94B-DD91799B-BE93FC9E"
     }
   ],
   "uniqueWeaponPaintJobs": [

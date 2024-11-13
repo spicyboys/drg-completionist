@@ -240,16 +240,20 @@
       "saveId": "BCE54B63-4BCF6621-5CB30CA7-2DDEBE60"
     },
     {
-      "weaponPaintJob": "Chlorine"
+      "weaponPaintJob": "Chlorine",
+      "saveId": "FAB3922A-4948E766-5774C0A4-788B343B"
     },
     {
-      "weaponPaintJob": "Dune Marauder"
+      "weaponPaintJob": "Dune Marauder",
+      "saveId": "9C4F7F8D-458437D3-D6A622A7-9A4F4DFB"
     },
     {
-      "weaponPaintJob": "Lazulite"
+      "weaponPaintJob": "Lazulite",
+      "saveId": "2C261DF4-46DD56E6-C53E71A3-B4C96AED"
     },
     {
-      "weaponPaintJob": "Lemon Clean"
+      "weaponPaintJob": "Lemon Clean",
+      "saveId": "76BE3081-4598F94B-DD91799B-BE93FC9E"
     }
   ],
   "uniqueWeaponPaintJobs": [
