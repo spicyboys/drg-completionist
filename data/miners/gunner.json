@@ -25,6 +25,26 @@
       "saveId": "BAB5A5FD-4505D582-89FCED8D-294C6255"
     },
     {
+      "name": "Toxic Defender",
+      "icon": "../icons/armor-paint-jobs/common/toxic-defender.png",
+      "saveId": "B81B56C1-4E2AF746-34F9AC82-6E542098"
+    },
+    {
+      "name": "Regal Aegis",
+      "icon": "../icons/armor-paint-jobs/common/regal-aegis.png",
+      "saveId": "DB4DF8B4-45EC5150-20EB95B9-BDB11FD2"
+    },
+    {
+      "name": "Black Crag",
+      "icon": "../icons/armor-paint-jobs/common/black-crag.png",
+      "saveId": "27D4DA59-489EC4A0-B55D4797-8A47620E"
+    },
+    {
+      "name": "Scale Brigade",
+      "icon": "../icons/armor-paint-jobs/common/scale-brigade.png",
+      "saveId": "5761CD03-4B70F242-C0E86E89-E1A7ADA3"
+    },
+    {
       "name": "Copperbug",
       "icon": "../icons/armor-paint-jobs/gunner/copperbug.png",
       "saveId": "166F6D63-4BEF42A8-2E7533B1-5A338023"
@@ -50,84 +70,95 @@
       "saveId": "84E8F632-42A238D9-C2B36A88-C37D4DAD"
     },
     {
-      "name": "Chipped Shadow",
-      "icon": "../icons/armor-paint-jobs/gunner/chipped-shadow.png",
-      "saveId": "9F87E0AC-408318FF-9E396A96-7B6A0351"
-    },
-    {
       "name": "Gritty Sandbox",
       "icon": "../icons/armor-paint-jobs/gunner/gritty-sandbox.png",
-      "saveId": "14EC2718-4BC97CF6-39414A8A-3266E6E9"
+      "saveId": "14EC2718-4BC97CF6-39414A8A-3266E6E9",
+      "season": 1,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Chipped Shadow",
+      "icon": "../icons/armor-paint-jobs/gunner/chipped-shadow.png",
+      "saveId": "9F87E0AC-408318FF-9E396A96-7B6A0351",
+      "season": 1,
+      "source": "PERFORMANCE_PASS"
     },
     {
       "name": "Moss Crawler",
       "icon": "../icons/armor-paint-jobs/gunner/moss-crawler.png",
-      "saveId": "AE730CEB-4227FC6B-FBA80194-51D3571F"
+      "saveId": "AE730CEB-4227FC6B-FBA80194-51D3571F",
+      "season": 1,
+      "source": "PERFORMANCE_PASS"
     },
     {
       "name": "Speckled Predator",
       "icon": "../icons/armor-paint-jobs/gunner/speckled-predator.png",
-      "saveId": "4F8520DD-493A7A86-70CC7788-ACAE47DA"
-    },
-    {
-      "name": "Boot Camp",
-      "icon": "../icons/armor-paint-jobs/common/boot-camp.png",
-      "saveId": "007486E4-432FF4CC-D46261B4-BF7CCB54"
+      "saveId": "4F8520DD-493A7A86-70CC7788-ACAE47DA",
+      "season": 1,
+      "source": "PERFORMANCE_PASS"
     },
     {
       "name": "Oxidized Copper",
       "icon": "../icons/armor-paint-jobs/gunner/oxidized-copper.png",
-      "saveId": "0DFE4119-43B9CCA7-2464B989-8F481BF3"
+      "saveId": "0DFE4119-43B9CCA7-2464B989-8F481BF3",
+      "season": 2,
+      "source": "PERFORMANCE_PASS"
     },
     {
       "name": "Rusty Colossus",
       "icon": "../icons/armor-paint-jobs/gunner/rusty-colossus.png",
-      "saveId": "6C9A2034-4E821166-37977382-2D3B58BE"
+      "saveId": "6C9A2034-4E821166-37977382-2D3B58BE",
+      "season": 2,
+      "source": "PERFORMANCE_PASS"
     },
     {
       "name": "Dark Neon",
       "icon": "../icons/armor-paint-jobs/gunner/dark-neon.png",
-      "saveId": "BB1283CD-4699A33D-FC0681B0-51080E4B"
+      "saveId": "BB1283CD-4699A33D-FC0681B0-51080E4B",
+      "season": 2,
+      "source": "PERFORMANCE_PASS"
     },
     {
-      "name": "Platinum",
-      "icon": "../icons/armor-paint-jobs/gunner/platinum.png",
-      "saveId": "696F1647-45233F71-CA1605A8-88D4DB89"
+      "name": "Boot Camp",
+      "icon": "../icons/armor-paint-jobs/common/boot-camp.png",
+      "saveId": "007486E4-432FF4CC-D46261B4-BF7CCB54",
+      "season": 2,
+      "source": "PERFORMANCE_PASS"
     },
     {
       "name": "Umber Corrosion",
       "icon": "../icons/armor-paint-jobs/gunner/umber-corrosion.png",
-      "saveId": "B3614EB2-41184780-1C15E985-B902C995"
+      "saveId": "B3614EB2-41184780-1C15E985-B902C995",
+      "season": 3,
+      "source": "PERFORMANCE_PASS"
     },
     {
       "name": "Monochromatic",
       "icon": "../icons/armor-paint-jobs/gunner/monochromatic.png",
-      "saveId": "F232CE56-4AABD432-29B7B49D-4D7AFF06"
+      "saveId": "F232CE56-4AABD432-29B7B49D-4D7AFF06",
+      "season": 3,
+      "source": "PERFORMANCE_PASS"
     },
     {
       "name": "Verdigris",
       "icon": "../icons/armor-paint-jobs/common/verdigris.png",
-      "saveId": "CAD4196B-4429F5B6-08E3DE80-AFE1D935"
+      "saveId": "CAD4196B-4429F5B6-08E3DE80-AFE1D935",
+      "season": 3,
+      "source": "PERFORMANCE_PASS"
     },
     {
-      "name": "Toxic Defender",
-      "icon": "../icons/armor-paint-jobs/common/toxic-defender.png",
-      "saveId": "B81B56C1-4E2AF746-34F9AC82-6E542098"
+      "name": "Platinum",
+      "icon": "../icons/armor-paint-jobs/gunner/platinum.png",
+      "saveId": "696F1647-45233F71-CA1605A8-88D4DB89",
+      "season": 3,
+      "source": "PERFORMANCE_PASS"
     },
     {
-      "name": "Regal Aegis",
-      "icon": "../icons/armor-paint-jobs/common/regal-aegis.png",
-      "saveId": "DB4DF8B4-45EC5150-20EB95B9-BDB11FD2"
-    },
-    {
-      "name": "Black Crag",
-      "icon": "../icons/armor-paint-jobs/common/black-crag.png",
-      "saveId": "27D4DA59-489EC4A0-B55D4797-8A47620E"
-    },
-    {
-      "name": "Scale Brigade",
-      "icon": "../icons/armor-paint-jobs/common/scale-brigade.png",
-      "saveId": "5761CD03-4B70F242-C0E86E89-E1A7ADA3"
+      "name": "Pretty in Purple",
+      "icon": "../icons/armor-paint-jobs/gunner/pretty-in-purple.png",
+      "saveId": "3B9C3279-406C6A41-DF0418B7-422D6250",
+      "season": 4,
+      "source": "PERFORMANCE_PASS"
     },
     {
       "name": "Brassy Swirls",
@@ -147,13 +178,6 @@
       "name": "Plastic Coating",
       "icon": "../icons/armor-paint-jobs/gunner/plastic-coating.png",
       "saveId": "FFABAE23-49B3C744-9DAF45A9-97BE8FA2",
-      "season": 4,
-      "source": "PERFORMANCE_PASS"
-    },
-    {
-      "name": "Pretty in Purple",
-      "icon": "../icons/armor-paint-jobs/gunner/pretty-in-purple.png",
-      "saveId": "3B9C3279-406C6A41-DF0418B7-422D6250",
       "season": 4,
       "source": "PERFORMANCE_PASS"
     }
