@@ -5,6 +5,11 @@
     "icon": "./icons/weapon-frameworks/custom-engineered.png"
   },
   {
+    "name": "Danger Dice",
+    "source": "CARGO_CRATE",
+    "icon": "./icons/weapon-frameworks/danger-dice.png"
+  },
+  {
     "name": "Fourth Relic",
     "source": "CARGO_CRATE",
     "icon": "./icons/weapon-frameworks/fourth-relic.png"
