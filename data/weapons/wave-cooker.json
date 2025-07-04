@@ -154,6 +154,10 @@
     {
       "framework": "Infected",
       "saveId": "FF02C415-44AF66AC-F799D3A6-E24AA7F4"
+    },
+    {
+      "framework": "NEO-TEKYA",
+      "saveId": "6DE124A7-4D158575-17E6E0A8-0FA9D58C"
     }
   ]
 }
