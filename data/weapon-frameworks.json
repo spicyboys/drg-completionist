@@ -36,12 +36,12 @@
   },
   {
     "name": "Waster",
-    "source": "CARGO_CRATE",
+    "source": "PERFORMANCE_PASS",
     "icon": "./icons/weapon-frameworks/waster.png"
   },
   {
     "name": "Builder's Choice",
-    "source": "CARGO_CRATE",
+    "source": "PERFORMANCE_PASS",
     "icon": "./icons/weapon-frameworks/builders-choice.png"
   },
   {
@@ -52,7 +52,11 @@
   {
     "name": "Infected",
     "source": "PERFORMANCE_PASS",
-    "icon": "./icons/weapon-frameworks/infected.png",
-    "season": 4
+    "icon": "./icons/weapon-frameworks/infected.png"
+  },
+  {
+    "name": "NEO-TEKYA",
+    "source": "PERFORMANCE_PASS",
+    "icon": "./icons/weapon-frameworks/neo-tekya.png"
   }
 ]
