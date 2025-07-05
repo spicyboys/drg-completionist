@@ -45,6 +45,11 @@
       "saveId": "5761CD03-4B70F242-C0E86E89-E1A7ADA3"
     },
     {
+      "name": "Combat Cleaner",
+      "icon": "../icons/armor-paint-jobs/gunner/combat-cleaner.png",
+      "saveId": "166F6D63-4BEF42A8-2E7533B1-5A338023"
+    },
+    {
       "name": "Copperbug",
       "icon": "../icons/armor-paint-jobs/gunner/copperbug.png",
       "saveId": "166F6D63-4BEF42A8-2E7533B1-5A338023"
@@ -55,9 +60,24 @@
       "saveId": "1DCBC6A5-4D14003E-168D3C9D-4B2E029C"
     },
     {
+      "name": "Harbinger",
+      "icon": "../icons/armor-paint-jobs/common/harbinger.png",
+      "saveId": "6D855A1D-4FA1A432-1C73A898-E591C1BD"
+    },
+    {
+      "name": "Ikari",
+      "icon": "../icons/armor-paint-jobs/common/ikari.png",
+      "saveId": "507DD1D7-4DBAF5E4-3906439D-27014A16"
+    },
+    {
       "name": "Mercury Bulwark",
       "icon": "../icons/armor-paint-jobs/gunner/mercury-bulwark.png",
       "saveId": "C625F8CC-4B395D8F-CB359687-AAE5A96E"
+    },
+    {
+      "name": "Retro Galaxy",
+      "icon": "../icons/armor-paint-jobs/common/retro-galaxy.png",
+      "saveId": "50519A49-452320DE-5724F4A1-D2074377"
     },
     {
       "name": "Splattered",
@@ -179,6 +199,34 @@
       "icon": "../icons/armor-paint-jobs/gunner/plastic-coating.png",
       "saveId": "FFABAE23-49B3C744-9DAF45A9-97BE8FA2",
       "season": 4,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Dune Raider",
+      "icon": "../icons/armor-paint-jobs/gunner/dune-raider.png",
+      "saveId": "90C39E81-4C6293A5-4541A2A9-266B4167",
+      "season": 5,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Crispy Contrast",
+      "icon": "../icons/armor-paint-jobs/gunner/crispy-contrast.png",
+      "saveId": "26D05A7F-4C964CAD-D2E299B8-4A4CE5B9",
+      "season": 5,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Silver Crackle",
+      "icon": "../icons/armor-paint-jobs/gunner/silver-crackle.png",
+      "saveId": "6BD77824-42AB669A-E91BA0BF-3E46060E",
+      "season": 5,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Bough Buster",
+      "icon": "../icons/armor-paint-jobs/common/bough-buster.png",
+      "saveId": "ECD6B7E6-4E134786-A9BC0694-7063CB5B",
+      "season": 5,
       "source": "PERFORMANCE_PASS"
     }
   ],
