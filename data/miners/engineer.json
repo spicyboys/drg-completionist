@@ -25,91 +25,6 @@
       "saveId": "8AA73BA8-4A543A1B-05DFC78D-0781FCB3"
     },
     {
-      "name": "Ember Fury",
-      "icon": "../icons/armor-paint-jobs/engineer/ember-fury.png",
-      "saveId": "D626C4AE-43C9C9D7-D2CCF697-05C25841"
-    },
-    {
-      "name": "Grunge Buster",
-      "icon": "../icons/armor-paint-jobs/engineer/grunge-buster.png",
-      "saveId": "F4F10794-4DF650A3-9583398F-8F345374"
-    },
-    {
-      "name": "Splattered",
-      "icon": "../icons/armor-paint-jobs/engineer/splattered.png",
-      "saveId": "D52088D9-4FA0705F-15A442A0-6BF075B0"
-    },
-    {
-      "name": "Teacher's Pet",
-      "icon": "../icons/armor-paint-jobs/engineer/teacher-pet.png",
-      "saveId": "C8DD638D-4D315C92-61D393A7-F1CACE4F"
-    },
-    {
-      "name": "Top Dog",
-      "icon": "../icons/armor-paint-jobs/engineer/top-dog.png",
-      "saveId": "735F7F0B-4547585F-E2F5BCBB-FA50A015"
-    },
-    {
-      "name": "Chipped Shadow",
-      "icon": "../icons/armor-paint-jobs/engineer/chipped-shadow.png",
-      "saveId": "4F28A86D-4D8FDDC3-FB44BE8B-C142A5B7"
-    },
-    {
-      "name": "Gritty Sandbox",
-      "icon": "../icons/armor-paint-jobs/engineer/gritty-sandbox.png",
-      "saveId": "E3474FC1-4F02A985-9EED8A85-641A9C79"
-    },
-    {
-      "name": "Moss Crawler",
-      "icon": "../icons/armor-paint-jobs/engineer/moss-crawler.png",
-      "saveId": "61AD35AF-45472F18-ED11679F-2BB9A53B"
-    },
-    {
-      "name": "Speckled Predator",
-      "icon": "../icons/armor-paint-jobs/engineer/speckled-predator.png",
-      "saveId": "885229A0-4325DAA7-388324A3-477B46BE"
-    },
-    {
-      "name": "Boot Camp",
-      "icon": "../icons/armor-paint-jobs/common/boot-camp.png",
-      "saveId": "0603EE0F-4FE0885A-0E48BDAB-C26F8688"
-    },
-    {
-      "name": "Oxidized Copper",
-      "icon": "../icons/armor-paint-jobs/engineer/oxidized-copper.png",
-      "saveId": "A8EA22A3-42054676-48CE9E9D-BE74BA61"
-    },
-    {
-      "name": "Rusty Colossus",
-      "icon": "../icons/armor-paint-jobs/engineer/rusty-colossus.png",
-      "saveId": "4E13FFD4-432E999A-8410E583-4CA2FA19"
-    },
-    {
-      "name": "Dark Neon",
-      "icon": "../icons/armor-paint-jobs/engineer/dark-neon.png",
-      "saveId": "8FB01664-46643469-E2D5E2A2-0DD5726D"
-    },
-    {
-      "name": "Platinum",
-      "icon": "../icons/armor-paint-jobs/engineer/platinum.png",
-      "saveId": "9C211A5F-40D4217E-B2232F94-7D00B9A0"
-    },
-    {
-      "name": "Umber Corrosion",
-      "icon": "../icons/armor-paint-jobs/engineer/umber-corrosion.png",
-      "saveId": "20095EF7-470F11F6-0787A5A4-726FDD96"
-    },
-    {
-      "name": "Monochromatic",
-      "icon": "../icons/armor-paint-jobs/engineer/monochromatic.png",
-      "saveId": "E7FEC580-41DA9474-02A4098B-AB3A9DE1"
-    },
-    {
-      "name": "Verdigris",
-      "icon": "../icons/armor-paint-jobs/common/verdigris.png",
-      "saveId": "9C5D2062-463B73E9-8AD45C8E-19B495DA"
-    },
-    {
       "name": "Toxic Defender",
       "icon": "../icons/armor-paint-jobs/common/toxic-defender.png",
       "saveId": "81A24A64-468D101B-794299B5-77F89CA2"
@@ -128,6 +43,142 @@
       "name": "Scale Brigade",
       "icon": "../icons/armor-paint-jobs/common/scale-brigade.png",
       "saveId": "B31EEFE3-40A7CFCC-0DBC1F81-DE55D234"
+    },
+    {
+      "name": "Combat Cleaner",
+      "icon": "../icons/armor-paint-jobs/engineer/combat-cleaner.png",
+      "saveId": "705BE5AD-44744545-43BA7282-4434FB99"
+    },
+    {
+      "name": "Ember Fury",
+      "icon": "../icons/armor-paint-jobs/engineer/ember-fury.png",
+      "saveId": "D626C4AE-43C9C9D7-D2CCF697-05C25841"
+    },
+    {
+      "name": "Grunge Buster",
+      "icon": "../icons/armor-paint-jobs/engineer/grunge-buster.png",
+      "saveId": "F4F10794-4DF650A3-9583398F-8F345374"
+    },
+    {
+      "name": "Harbinger",
+      "icon": "../icons/armor-paint-jobs/common/harbinger.png",
+      "saveId": "E879114B-49C35987-5673A4A6-F3E60928"
+    },
+    {
+      "name": "Ikari",
+      "icon": "../icons/armor-paint-jobs/common/ikari.png",
+      "saveId": "2635BBC3-438D3B3A-8BCEF380-9CE78CDA"
+    },
+    {
+      "name": "Retro Galaxy",
+      "icon": "../icons/armor-paint-jobs/common/retro-galaxy.png",
+      "saveId": "09034F88-49EE7945-0E956C99-0367BF40"
+    },
+    {
+      "name": "Splattered",
+      "icon": "../icons/armor-paint-jobs/engineer/splattered.png",
+      "saveId": "D52088D9-4FA0705F-15A442A0-6BF075B0"
+    },
+    {
+      "name": "Teacher's Pet",
+      "icon": "../icons/armor-paint-jobs/engineer/teacher-pet.png",
+      "saveId": "C8DD638D-4D315C92-61D393A7-F1CACE4F"
+    },
+    {
+      "name": "Top Dog",
+      "icon": "../icons/armor-paint-jobs/engineer/top-dog.png",
+      "saveId": "735F7F0B-4547585F-E2F5BCBB-FA50A015"
+    },
+    {
+      "name": "Gritty Sandbox",
+      "icon": "../icons/armor-paint-jobs/engineer/gritty-sandbox.png",
+      "saveId": "E3474FC1-4F02A985-9EED8A85-641A9C79",
+      "season": 1,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Chipped Shadow",
+      "icon": "../icons/armor-paint-jobs/engineer/chipped-shadow.png",
+      "saveId": "4F28A86D-4D8FDDC3-FB44BE8B-C142A5B7",
+      "season": 1,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Moss Crawler",
+      "icon": "../icons/armor-paint-jobs/engineer/moss-crawler.png",
+      "saveId": "61AD35AF-45472F18-ED11679F-2BB9A53B",
+      "season": 1,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Speckled Predator",
+      "icon": "../icons/armor-paint-jobs/engineer/speckled-predator.png",
+      "saveId": "885229A0-4325DAA7-388324A3-477B46BE",
+      "season": 1,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Oxidized Copper",
+      "icon": "../icons/armor-paint-jobs/engineer/oxidized-copper.png",
+      "saveId": "A8EA22A3-42054676-48CE9E9D-BE74BA61",
+      "season": 2,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Rusty Colossus",
+      "icon": "../icons/armor-paint-jobs/engineer/rusty-colossus.png",
+      "saveId": "4E13FFD4-432E999A-8410E583-4CA2FA19",
+      "season": 2,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Dark Neon",
+      "icon": "../icons/armor-paint-jobs/engineer/dark-neon.png",
+      "saveId": "8FB01664-46643469-E2D5E2A2-0DD5726D",
+      "season": 2,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Boot Camp",
+      "icon": "../icons/armor-paint-jobs/common/boot-camp.png",
+      "saveId": "0603EE0F-4FE0885A-0E48BDAB-C26F8688",
+      "season": 2,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Umber Corrosion",
+      "icon": "../icons/armor-paint-jobs/engineer/umber-corrosion.png",
+      "saveId": "20095EF7-470F11F6-0787A5A4-726FDD96",
+      "season": 3,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Monochromatic",
+      "icon": "../icons/armor-paint-jobs/engineer/monochromatic.png",
+      "saveId": "E7FEC580-41DA9474-02A4098B-AB3A9DE1",
+      "season": 3,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Verdigris",
+      "icon": "../icons/armor-paint-jobs/common/verdigris.png",
+      "saveId": "9C5D2062-463B73E9-8AD45C8E-19B495DA",
+      "season": 3,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Platinum",
+      "icon": "../icons/armor-paint-jobs/engineer/platinum.png",
+      "saveId": "9C211A5F-40D4217E-B2232F94-7D00B9A0",
+      "season": 3,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Pretty in Purple",
+      "icon": "../icons/armor-paint-jobs/engineer/pretty-in-purple.png",
+      "saveId": "51C3CF56-449A712E-E30061B4-7A868465",
+      "season": 4,
+      "source": "PERFORMANCE_PASS"
     },
     {
       "name": "Brassy Swirls",
@@ -151,10 +202,31 @@
       "source": "PERFORMANCE_PASS"
     },
     {
-      "name": "Pretty in Purple",
-      "icon": "../icons/armor-paint-jobs/engineer/pretty-in-purple.png",
-      "saveId": "51C3CF56-449A712E-E30061B4-7A868465",
-      "season": 4,
+      "name": "Dune Raider",
+      "icon": "../icons/armor-paint-jobs/engineer/dune-raider.png",
+      "saveId": "7D68D904-4C8AAC52-88B50C88-D42201FB",
+      "season": 5,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Crispy Contrast",
+      "icon": "../icons/armor-paint-jobs/engineer/crispy-contrast.png",
+      "saveId": "9D96183B-42549F4B-1EED9C9B-4456C403",
+      "season": 5,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Silver Crackle",
+      "icon": "../icons/armor-paint-jobs/engineer/silver-crackle.png",
+      "saveId": "9BB2E834-4F69881C-4C16A4A4-FFB78C5A",
+      "season": 5,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Bough Buster",
+      "icon": "../icons/armor-paint-jobs/common/bough-buster.png",
+      "saveId": "7348E7F6-4349BE27-4FECE4B5-36F71911",
+      "season": 5,
       "source": "PERFORMANCE_PASS"
     }
   ],

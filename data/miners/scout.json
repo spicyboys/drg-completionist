@@ -24,92 +24,7 @@
       "icon": "../icons/armor-paint-jobs/scout/azure-draft.png",
       "saveId": "DC3503D1-48157E01-93A23895-51D00D41"
     },
-    {
-      "name": "Aqua Force",
-      "icon": "../icons/armor-paint-jobs/scout/aqua-force.png",
-      "saveId": "AFDE0DDB-4A270944-10FB418D-86692254"
-    },
-    {
-      "name": "Dark Stripes",
-      "icon": "../icons/armor-paint-jobs/scout/dark-stripes.png",
-      "saveId": "5F546BC0-4288FF56-5CFD3D87-ADF5E289"
-    },
-    {
-      "name": "Frigid Tiger",
-      "icon": "../icons/armor-paint-jobs/scout/frigid-tiger.png",
-      "saveId": "37FB158B-4577AA27-9D11ECAF-474B9A0F"
-    },
-    {
-      "name": "Splattered",
-      "icon": "../icons/armor-paint-jobs/scout/splattered.png",
-      "saveId": "4E5C4134-41BF79E6-07F86583-05848A39"
-    },
-    {
-      "name": "Subtle Shadow",
-      "icon": "../icons/armor-paint-jobs/scout/subtle-shadow.png",
-      "saveId": "B748A2C6-47B67F4E-395EBD92-FCC64537"
-    },
-    {
-      "name": "Chipped Shadow",
-      "icon": "../icons/armor-paint-jobs/scout/chipped-shadow.png",
-      "saveId": "62314F11-4B8E3C6C-CEC342B9-48BD2452"
-    },
-    {
-      "name": "Gritty Sandbox",
-      "icon": "../icons/armor-paint-jobs/scout/gritty-sandbox.png",
-      "saveId": "C35333A9-4EF76649-1D66E8BB-ACACCBD0"
-    },
-    {
-      "name": "Moss Crawler",
-      "icon": "../icons/armor-paint-jobs/scout/moss-crawler.png",
-      "saveId": "D45978AC-4B72DEEA-F5F3F986-9C582D82"
-    },
-    {
-      "name": "Speckled Predator",
-      "icon": "../icons/armor-paint-jobs/scout/speckled-predator.png",
-      "saveId": "44F7DD9A-482E7102-3D08CA86-DA684AE7"
-    },
-    {
-      "name": "Boot Camp",
-      "icon": "../icons/armor-paint-jobs/common/boot-camp.png",
-      "saveId": "0668B958-4FEA3BB2-00A051B4-04ABA789"
-    },
-    {
-      "name": "Oxidized Copper",
-      "icon": "../icons/armor-paint-jobs/scout/oxidized-copper.png",
-      "saveId": "5DDF1000-4FD31C74-79361799-539F5C89"
-    },
-    {
-      "name": "Rusty Colossus",
-      "icon": "../icons/armor-paint-jobs/scout/rusty-colossus.png",
-      "saveId": "49A3FDAB-4CA47059-25DC9B83-A26B11C6"
-    },
-    {
-      "name": "Dark Neon",
-      "icon": "../icons/armor-paint-jobs/scout/dark-neon.png",
-      "saveId": "E7172BA0-45781A12-3C743DAE-3BCDF338"
-    },
-    {
-      "name": "Platinum",
-      "icon": "../icons/armor-paint-jobs/scout/platinum.png",
-      "saveId": "B1C2F302-44E94301-DA703A9C-4305FA42"
-    },
-    {
-      "name": "Umber Corrosion",
-      "icon": "../icons/armor-paint-jobs/scout/umber-corrosion.png",
-      "saveId": "CFB85A30-46BD2251-683E7DA5-6B47BBBE"
-    },
-    {
-      "name": "Monochromatic",
-      "icon": "../icons/armor-paint-jobs/scout/monochromatic.png",
-      "saveId": "11B6CB39-47CDA6A0-D03A75B3-64EC8F22"
-    },
-    {
-      "name": "Verdigris",
-      "icon": "../icons/armor-paint-jobs/common/verdigris.png",
-      "saveId": "D2D573AD-4E64D5BA-CCE5B5B7-0BAADF9D"
-    },
-    {
+     {
       "name": "Toxic Defender",
       "icon": "../icons/armor-paint-jobs/common/toxic-defender.png",
       "saveId": "229C5729-415AB943-9581C8B3-426D55EA"
@@ -128,6 +43,142 @@
       "name": "Scale Brigade",
       "icon": "../icons/armor-paint-jobs/common/scale-brigade.png",
       "saveId": "EB4ED2B9-4AA1D04F-3E1A8393-1BB6205C"
+    },
+    {
+      "name": "Aqua Force",
+      "icon": "../icons/armor-paint-jobs/scout/aqua-force.png",
+      "saveId": "AFDE0DDB-4A270944-10FB418D-86692254"
+    },
+    {
+      "name": "Combat Cleaner",
+      "icon": "../icons/armor-paint-jobs/scout/combat-cleaner.png",
+      "saveId": "5DBD35D5-48DD76D4-BCB171A1-FBCB65B1"
+    },
+    {
+      "name": "Dark Stripes",
+      "icon": "../icons/armor-paint-jobs/scout/dark-stripes.png",
+      "saveId": "5F546BC0-4288FF56-5CFD3D87-ADF5E289"
+    },
+    {
+      "name": "Frigid Tiger",
+      "icon": "../icons/armor-paint-jobs/scout/frigid-tiger.png",
+      "saveId": "37FB158B-4577AA27-9D11ECAF-474B9A0F"
+    },
+    {
+      "name": "Harbinger",
+      "icon": "../icons/armor-paint-jobs/common/harbinger.png",
+      "saveId": "995E4A5D-4EDCE9ED-40A1B19C-40DBCF42"
+    },
+    {
+      "name": "Ikari",
+      "icon": "../icons/armor-paint-jobs/common/ikari.png",
+      "saveId": "BCACB380-40C4D8C1-8B67B88A-82A7F9E5"
+    },
+    {
+      "name": "Retro Galaxy",
+      "icon": "../icons/armor-paint-jobs/common/retro-galaxy.png",
+      "saveId": "997AFADD-46FAF57B-C80C18BD-3C026E6F"
+    },
+    {
+      "name": "Splattered",
+      "icon": "../icons/armor-paint-jobs/scout/splattered.png",
+      "saveId": "4E5C4134-41BF79E6-07F86583-05848A39"
+    },
+    {
+      "name": "Subtle Shadow",
+      "icon": "../icons/armor-paint-jobs/scout/subtle-shadow.png",
+      "saveId": "B748A2C6-47B67F4E-395EBD92-FCC64537"
+    },
+    {
+      "name": "Gritty Sandbox",
+      "icon": "../icons/armor-paint-jobs/scout/gritty-sandbox.png",
+      "saveId": "C35333A9-4EF76649-1D66E8BB-ACACCBD0",
+      "season": 1,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Chipped Shadow",
+      "icon": "../icons/armor-paint-jobs/scout/chipped-shadow.png",
+      "saveId": "62314F11-4B8E3C6C-CEC342B9-48BD2452",
+      "season": 1,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Moss Crawler",
+      "icon": "../icons/armor-paint-jobs/scout/moss-crawler.png",
+      "saveId": "D45978AC-4B72DEEA-F5F3F986-9C582D82",
+      "season": 1,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Speckled Predator",
+      "icon": "../icons/armor-paint-jobs/scout/speckled-predator.png",
+      "saveId": "44F7DD9A-482E7102-3D08CA86-DA684AE7",
+      "season": 1,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Oxidized Copper",
+      "icon": "../icons/armor-paint-jobs/scout/oxidized-copper.png",
+      "saveId": "5DDF1000-4FD31C74-79361799-539F5C89",
+      "season": 2,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Rusty Colossus",
+      "icon": "../icons/armor-paint-jobs/scout/rusty-colossus.png",
+      "saveId": "49A3FDAB-4CA47059-25DC9B83-A26B11C6",
+      "season": 2,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Dark Neon",
+      "icon": "../icons/armor-paint-jobs/scout/dark-neon.png",
+      "saveId": "E7172BA0-45781A12-3C743DAE-3BCDF338",
+      "season": 2,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Boot Camp",
+      "icon": "../icons/armor-paint-jobs/common/boot-camp.png",
+      "saveId": "0668B958-4FEA3BB2-00A051B4-04ABA789",
+      "season": 2,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Umber Corrosion",
+      "icon": "../icons/armor-paint-jobs/scout/umber-corrosion.png",
+      "saveId": "CFB85A30-46BD2251-683E7DA5-6B47BBBE",
+      "season": 3,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Monochromatic",
+      "icon": "../icons/armor-paint-jobs/scout/monochromatic.png",
+      "saveId": "11B6CB39-47CDA6A0-D03A75B3-64EC8F22",
+      "season": 3,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Verdigris",
+      "icon": "../icons/armor-paint-jobs/common/verdigris.png",
+      "saveId": "D2D573AD-4E64D5BA-CCE5B5B7-0BAADF9D",
+      "season": 3,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Platinum",
+      "icon": "../icons/armor-paint-jobs/scout/platinum.png",
+      "saveId": "B1C2F302-44E94301-DA703A9C-4305FA42",
+      "season": 3,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Pretty in Purple",
+      "icon": "../icons/armor-paint-jobs/scout/pretty-in-purple.png",
+      "saveId": "57A0A328-440E7BF5-EA32EBA0-1D1E19E8",
+      "season": 4,
+      "source": "PERFORMANCE_PASS"
     },
     {
       "name": "Brassy Swirls",
@@ -151,10 +202,31 @@
       "source": "PERFORMANCE_PASS"
     },
     {
-      "name": "Pretty in Purple",
-      "icon": "../icons/armor-paint-jobs/scout/pretty-in-purple.png",
-      "saveId": "57A0A328-440E7BF5-EA32EBA0-1D1E19E8",
-      "season": 4,
+      "name": "Dune Raider",
+      "icon": "../icons/armor-paint-jobs/scout/dune-raider.png",
+      "saveId": "7A7476C5-41D8621F-7994B0B8-0D00FDA6",
+      "season": 5,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Crispy Contrast",
+      "icon": "../icons/armor-paint-jobs/scout/crispy-contrast.png",
+      "saveId": "5B4BB001-4DAA2F70-1AB0608E-CB8985E7",
+      "season": 5,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Silver Crackle",
+      "icon": "../icons/armor-paint-jobs/scout/silver-crackle.png",
+      "saveId": "35919E06-485E01F4-1CBF6399-2CB9E9B6",
+      "season": 5,
+      "source": "PERFORMANCE_PASS"
+    },
+    {
+      "name": "Bough Buster",
+      "icon": "../icons/armor-paint-jobs/common/bough-buster.png",
+      "saveId": "4998DA22-4CAFDBAE-C7DE4F83-0F4169C8",
+      "season": 5,
       "source": "PERFORMANCE_PASS"
     }
   ],
