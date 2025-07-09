@@ -284,10 +284,6 @@
       "saveId": "DDEA3E23-4C8269BE-8E4FA595-0A89E56E"
     },
     {
-      "weaponPaintJob": "Deep Sea Defender",
-      "saveId": "DF4FF7F6-4F359661-C79855AC-4382533A"
-    },
-    {
       "weaponPaintJob": "Moss Crawler",
       "saveId": "1A76C685-4C1B9423-BB57D099-C482B7C4"
     },
@@ -296,36 +292,40 @@
       "saveId": "A27C9ACB-497E4E6E-277C18A9-FBE40A55"
     },
     {
-      "weaponPaintJob": "Bootcamp",
-      "saveId": "B3B65073-470EF5D4-910685B8-4E79F32D"
-    },
-    {
-      "weaponPaintJob": "Fiery",
-      "saveId": "855EFF18-48830ACE-DC4BE9A5-95E34989"
+      "weaponPaintJob": "Deep Sea Defender",
+      "saveId": "DF4FF7F6-4F359661-C79855AC-4382533A"
     },
     {
       "weaponPaintJob": "Predator",
       "saveId": "CC55F088-478E52A9-27A4BEB8-04A4E9E9"
     },
     {
+      "weaponPaintJob": "Fiery",
+      "saveId": "855EFF18-48830ACE-DC4BE9A5-95E34989"
+    },
+    {
       "weaponPaintJob": "Salt Crystal",
       "saveId": "BCE54B63-4BCF6621-5CB30CA7-2DDEBE60"
     },
     {
-      "weaponPaintJob": "Chlorine",
-      "saveId": "FAB3922A-4948E766-5774C0A4-788B343B"
-    },
-    {
-      "weaponPaintJob": "Dune Marauder",
-      "saveId": "9C4F7F8D-458437D3-D6A622A7-9A4F4DFB"
+      "weaponPaintJob": "Bootcamp",
+      "saveId": "B3B65073-470EF5D4-910685B8-4E79F32D"
     },
     {
       "weaponPaintJob": "Lazulite",
       "saveId": "2C261DF4-46DD56E6-C53E71A3-B4C96AED"
     },
     {
+      "weaponPaintJob": "Chlorine",
+      "saveId": "FAB3922A-4948E766-5774C0A4-788B343B"
+    },
+    {
       "weaponPaintJob": "Lemon Clean",
       "saveId": "76BE3081-4598F94B-DD91799B-BE93FC9E"
+    },
+    {
+      "weaponPaintJob": "Dune Marauder",
+      "saveId": "9C4F7F8D-458437D3-D6A622A7-9A4F4DFB"
     }
   ],
   "uniqueWeaponPaintJobs": [

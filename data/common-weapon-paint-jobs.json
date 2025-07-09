@@ -75,63 +75,57 @@
     "name": "Copper Patinate",
     "icon": "./icons/weapon-paint-jobs/copper-patinate.png",
     "saveId": "04C31F4A-4EDDE3A8-33713E94-B48BBEDC",
-    "source": "MATRIX_CORE"
+    "source": "PERFORMANCE_PASS",
+    "season": 1
   },
-  {
-    "name": "Deep Sea Defender",
-    "icon": "./icons/weapon-paint-jobs/deep-sea-defender.png",
-    "saveId": "E0CBA913-4B8D0945-D5D00581-EC80E3AF",
-    "source": "MATRIX_CORE"
-  },
-  {
+    {
     "name": "Moss Crawler",
     "icon": "./icons/weapon-paint-jobs/moss-crawler.png",
     "saveId": "F9CFA1CE-4BC2BE7F-AC089E8E-34E06C75",
-    "source": "MATRIX_CORE"
+    "source": "PERFORMANCE_PASS",
+    "season": 1
   },
   {
     "name": "Scratched Metal",
     "icon": "./icons/weapon-paint-jobs/scratched-metal.png",
     "saveId": "46B117AB-48030DAA-EF0692A1-358818B2",
-    "source": "MATRIX_CORE"
+    "source": "PERFORMANCE_PASS",
+    "season": 1
   },
   {
-    "name": "Bootcamp",
-    "icon": "./icons/weapon-paint-jobs/boot-camp.png",
-    "saveId": "6D8634A1-4CCD296E-0477A38A-A7C3BDDD",
-    "source": "MATRIX_CORE"
-  },
-  {
-    "name": "Fiery",
-    "icon": "./icons/weapon-paint-jobs/fiery.png",
-    "saveId": "153B17A6-49519BA7-4F1259AB-EE31CABC",
-    "source": "MATRIX_CORE"
+    "name": "Deep Sea Defender",
+    "icon": "./icons/weapon-paint-jobs/deep-sea-defender.png",
+    "saveId": "E0CBA913-4B8D0945-D5D00581-EC80E3AF",
+    "source": "PERFORMANCE_PASS",
+    "season": 1
   },
   {
     "name": "Predator",
     "icon": "./icons/weapon-paint-jobs/predator.png",
     "saveId": "0685E1F5-476CD95A-64B3328E-B9B0874C",
-    "source": "MATRIX_CORE"
+    "source": "PERFORMANCE_PASS",
+    "season": 2
+  },
+  {
+    "name": "Fiery",
+    "icon": "./icons/weapon-paint-jobs/fiery.png",
+    "saveId": "153B17A6-49519BA7-4F1259AB-EE31CABC",
+    "source": "PERFORMANCE_PASS",
+    "season": 2
   },
   {
     "name": "Salt Crystal",
     "icon": "./icons/weapon-paint-jobs/salt-crystal.png",
     "saveId": "23CD0259-4C1BDAC3-10F05FBB-375EF157",
-    "source": "MATRIX_CORE"
+    "source": "PERFORMANCE_PASS",
+    "season": 2
   },
   {
-    "name": "Chlorine",
-    "icon": "./icons/weapon-paint-jobs/chlorine.png",
-    "saveId": "FAB3922A-4948E766-5774C0A4-788B343B",
+    "name": "Bootcamp",
+    "icon": "./icons/weapon-paint-jobs/boot-camp.png",
+    "saveId": "6D8634A1-4CCD296E-0477A38A-A7C3BDDD",
     "source": "PERFORMANCE_PASS",
-    "season": 4
-  },
-  {
-    "name": "Dune Marauder",
-    "icon": "./icons/weapon-paint-jobs/dune-marauder.png",
-    "saveId": "9C4F7F8D-458437D3-D6A622A7-9A4F4DFB",
-    "source": "PERFORMANCE_PASS",
-    "season": 4
+    "season": 2
   },
   {
     "name": "Lazulite",
@@ -141,9 +135,23 @@
     "season": 4
   },
   {
+    "name": "Chlorine",
+    "icon": "./icons/weapon-paint-jobs/chlorine.png",
+    "saveId": "FAB3922A-4948E766-5774C0A4-788B343B",
+    "source": "PERFORMANCE_PASS",
+    "season": 4
+  },
+  {
     "name": "Lemon Clean",
     "icon": "./icons/weapon-paint-jobs/lemon-clean.png",
     "saveId": "76BE3081-4598F94B-DD91799B-BE93FC9E",
+    "source": "PERFORMANCE_PASS",
+    "season": 4
+  },
+  {
+    "name": "Dune Marauder",
+    "icon": "./icons/weapon-paint-jobs/dune-marauder.png",
+    "saveId": "9C4F7F8D-458437D3-D6A622A7-9A4F4DFB",
     "source": "PERFORMANCE_PASS",
     "season": 4
   }
