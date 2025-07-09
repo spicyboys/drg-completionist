@@ -21,6 +21,7 @@ export default function useGetPickaxePartsFromSaveFile(): (
             handle
             shaft
             pommel
+            paint_job
           }
         }
       }
@@ -83,6 +84,16 @@ export default function useGetPickaxePartsFromSaveFile(): (
           acquiredPickaxeParts.push({
             name: pickaxePartSet.name,
             component: 'POMMEL',
+          });
+        }
+
+        if (
+          pickaxePartSet.saveIds.paint_job !== null &&
+          unlockedPickaxeParts.includes(pickaxePartSet.saveIds.paint_job)
+        ) {
+          acquiredPickaxeParts.push({
+            name: pickaxePartSet.name,
+            component: 'PAINT_JOB',
           });
         }
       }
