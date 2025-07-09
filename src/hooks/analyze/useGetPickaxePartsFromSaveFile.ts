@@ -9,7 +9,6 @@ export default function useGetPickaxePartsFromSaveFile(): (
   const {
     allPickaxePartSetsJson: { nodes: pickaxePartSets },
     allPickaxePartsJson: { nodes: pickaxeParts },
-    allPickaxePaintJobsJson: { nodes: pickaxePaintJobs },
   } = useStaticQuery<Queries.GetPickaxePartsFromSaveFileQuery>(graphql`
     query GetPickaxePartsFromSaveFile {
       allPickaxePartSetsJson {
@@ -27,13 +26,6 @@ export default function useGetPickaxePartsFromSaveFile(): (
       }
 
       allPickaxePartsJson {
-        nodes {
-          name
-          saveId
-        }
-      }
-
-      allPickaxePaintJobsJson {
         nodes {
           name
           saveId
@@ -110,19 +102,8 @@ export default function useGetPickaxePartsFromSaveFile(): (
       }
       //#endregion
 
-      //#region Pickaxe Paint Jobs
-      for (const pickaxePaintJob of pickaxePaintJobs) {
-        if (unlockedPickaxeParts.includes(pickaxePaintJob.saveId)) {
-          acquiredPickaxeParts.push({
-            name: pickaxePaintJob.name,
-            component: 'PAINT_JOB',
-          });
-        }
-      }
-      //#endregion
-
       return acquiredPickaxeParts;
     },
-    [pickaxePaintJobs, pickaxePartSets, pickaxeParts],
+    [pickaxePartSets, pickaxeParts],
   );
 }
