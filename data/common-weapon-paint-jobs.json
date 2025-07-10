@@ -160,6 +160,13 @@
     "season": 3
   },
   {
+    "name": "Military",
+    "icon": "./icons/weapon-paint-jobs/military.png",
+    "saveId": "020D0507-4B7B126A-584D619C-6305BD12",
+    "source": "PERFORMANCE_PASS",
+    "season": 3
+  },
+  {
     "name": "Lazulite",
     "icon": "./icons/weapon-paint-jobs/lazulite.png",
     "saveId": "2C261DF4-46DD56E6-C53E71A3-B4C96AED",
