@@ -221,5 +221,12 @@
     "saveId": "E0E78AAE-4FB97EB9-3B6D5BAE-48627D93",
     "source": "PERFORMANCE_PASS",
     "season": 5
+  },
+  {
+    "name": "Blood Moon",
+    "icon": "./icons/weapon-paint-jobs/blood-moon.png",
+    "saveId": "98CE20AD-4EE10371-F91D98BA-525C35DB",
+    "source": "PERFORMANCE_PASS",
+    "season": 5
   }
 ]
