@@ -200,5 +200,12 @@
     "saveId": "9C4F7F8D-458437D3-D6A622A7-9A4F4DFB",
     "source": "PERFORMANCE_PASS",
     "season": 4
+  },
+  {
+    "name": "Royal Standard",
+    "icon": "./icons/weapon-paint-jobs/royal-standard.png",
+    "saveId": "A1CA10E4-4B049685-5E2DFEB0-37BF7E9E",
+    "source": "PERFORMANCE_PASS",
+    "season": 5
   }
 ]
