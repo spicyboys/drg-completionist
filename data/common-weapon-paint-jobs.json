@@ -167,6 +167,13 @@
     "season": 3
   },
   {
+    "name": "Sleek",
+    "icon": "./icons/weapon-paint-jobs/sleek.png",
+    "saveId": "84AABB68-4A9C4968-EFDF3DB0-E1E37167",
+    "source": "PERFORMANCE_PASS",
+    "season": 3
+  },
+  {
     "name": "Lazulite",
     "icon": "./icons/weapon-paint-jobs/lazulite.png",
     "saveId": "2C261DF4-46DD56E6-C53E71A3-B4C96AED",
