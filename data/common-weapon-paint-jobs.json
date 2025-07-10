@@ -36,6 +36,12 @@
     "source": "MATRIX_CORE"
   },
   {
+    "name": "Flaming Hot",
+    "icon": "./icons/weapon-paint-jobs/flaming-hot.png",
+    "saveId": "54BFB418-4E9DB405-EF54C69A-C38BF584",
+    "source": "MATRIX_CORE"
+  },
+  {
     "name": "Ghostly Pale",
     "icon": "./icons/weapon-paint-jobs/ghostly-pale.png",
     "saveId": "BA387AA1-494A2F61-67BE928F-08823203",
