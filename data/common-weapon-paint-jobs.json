@@ -146,6 +146,13 @@
     "season": 2
   },
   {
+    "name": "Golden Mauve",
+    "icon": "./icons/weapon-paint-jobs/golden-mauve.png",
+    "saveId": "8ADA1AD6-4063A249-771B6293-3A5E842D",
+    "source": "PERFORMANCE_PASS",
+    "season": 3
+  },
+  {
     "name": "Lazulite",
     "icon": "./icons/weapon-paint-jobs/lazulite.png",
     "saveId": "2C261DF4-46DD56E6-C53E71A3-B4C96AED",
