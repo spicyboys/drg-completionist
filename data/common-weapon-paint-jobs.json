@@ -153,6 +153,13 @@
     "season": 3
   },
   {
+    "name": "Acid Wash",
+    "icon": "./icons/weapon-paint-jobs/acid-wash.png",
+    "saveId": "6A68C3A5-46F59997-D9065B8C-08C0AD49",
+    "source": "PERFORMANCE_PASS",
+    "season": 3
+  },
+  {
     "name": "Lazulite",
     "icon": "./icons/weapon-paint-jobs/lazulite.png",
     "saveId": "2C261DF4-46DD56E6-C53E71A3-B4C96AED",
