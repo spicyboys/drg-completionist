@@ -207,5 +207,12 @@
     "saveId": "A1CA10E4-4B049685-5E2DFEB0-37BF7E9E",
     "source": "PERFORMANCE_PASS",
     "season": 5
+  },
+  {
+    "name": "Superheated",
+    "icon": "./icons/weapon-paint-jobs/superheated.png",
+    "saveId": "4B9DE31D-44635D46-2CE0358E-52BA5A26",
+    "source": "PERFORMANCE_PASS",
+    "season": 5
   }
 ]

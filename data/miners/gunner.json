@@ -358,6 +358,10 @@
     {
       "weaponPaintJob": "Royal Standard",
       "saveId": "DBC21DB4-6D2D-46CF-9089-C44EDCBAE8F4"
+    },
+    {
+      "weaponPaintJob": "Superheated",
+      "saveId": "83E11081-A301-44F5-B2CF-E78ECD9237BB"
     }
   ],
   "uniqueWeaponPaintJobs": [
