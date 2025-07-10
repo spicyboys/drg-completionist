@@ -214,5 +214,12 @@
     "saveId": "4B9DE31D-44635D46-2CE0358E-52BA5A26",
     "source": "PERFORMANCE_PASS",
     "season": 5
+  },
+  {
+    "name": "Iced Plum",
+    "icon": "./icons/weapon-paint-jobs/iced-plum.png",
+    "saveId": "E0E78AAE-4FB97EB9-3B6D5BAE-48627D93",
+    "source": "PERFORMANCE_PASS",
+    "season": 5
   }
 ]
