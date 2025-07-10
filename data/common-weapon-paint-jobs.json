@@ -12,6 +12,12 @@
     "source": "MATRIX_CORE"
   },
   {
+    "name": "Buff",
+    "icon": "./icons/weapon-paint-jobs/buff.png",
+    "saveId": "50239B30-43904637-A5DAA8A0-D63A617D",
+    "source": "MATRIX_CORE"
+  },
+  {
     "name": "Dark Descent",
     "icon": "./icons/weapon-paint-jobs/dark-descent.png",
     "saveId": "8044BDEA-4A935E1F-4BBE698E-357CED0E",
