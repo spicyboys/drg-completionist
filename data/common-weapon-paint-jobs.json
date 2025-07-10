@@ -6,6 +6,12 @@
     "source": "MATRIX_CORE"
   },
   {
+    "name": "Bubblegum",
+    "icon": "./icons/weapon-paint-jobs/bubblegum.png",
+    "saveId": "F22C4CF8-41C5F8AE-BC9C1693-94D9AB23",
+    "source": "MATRIX_CORE"
+  },
+  {
     "name": "Dark Descent",
     "icon": "./icons/weapon-paint-jobs/dark-descent.png",
     "saveId": "8044BDEA-4A935E1F-4BBE698E-357CED0E",
