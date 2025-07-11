@@ -178,5 +178,17 @@
       "pommel": "0CC8184F-44989972-E6FF18A2-8709A2B4",
       "paint_job": "477A86F7-4903F12A-937EA5A5-B3D0E602"
     }
+  },
+  {
+    "name": "Foundry Grinder",
+    "icon": "./icons/pickaxe-parts/foundry-grinder.jpg",
+    "saveIds": {
+      "blades": "47AA6CC9-4ADF2602-09CFE48C-EB76F241",
+      "head": "1E774C8F-43D74178-589A6EAE-FFB1B290",
+      "shaft": "DDCA1A24-463DFAD7-7763A9A6-9725D248",
+      "handle": "F273B615-41FC09AE-62FB65AC-43032537",
+      "pommel": "7CCBF51B-41906EBC-C72A18B0-CF73916C",
+      "paint_job": "4FA92B4D-46005452-3F2896BF-1E6A5265"
+    }
   }
 ]
