@@ -72,6 +72,18 @@
     }
   },
   {
+    "name": "Diamond Cutter",
+    "icon": "./icons/pickaxe-parts/diamond-cutter.jpg",
+    "saveIds": {
+      "blades": "81EA06C7-47DCD948-962B33B4-FADB20E8",
+      "head": "01433EE7-467909B5-404100A1-137B7737",
+      "shaft": "A975A85F-46DC981C-1EF80EB6-CC2B13FC",
+      "handle": "2D5ABDA4-42661F9B-6EDAFDAF-EE040BCF",
+      "pommel": "5E5FBF6B-4BFBA6E3-5D838AB4-B76CB746",
+      "paint_job": "E934511B-42A536B4-4038BCBF-D068C959"
+    }
+  },
+  {
     "name": "Hammerblow",
     "icon": "./icons/pickaxe-parts/hammerblow.jpg",
     "saveIds": {
