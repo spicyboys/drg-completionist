@@ -18,5 +18,10 @@
     "name": "Skull Buster",
     "saveId": "57A55E0F-4E51B4E5-3E3070B3-EA71545D",
     "icon": "./icons/pickaxe-parts/skull-buster.jpg"
+  },
+  {
+    "name": "Lemon Clean",
+    "saveId": "BCF4968E-491E6AED-0BDA3287-5D8272EC",
+    "icon": "./icons/pickaxe-parts/lemon-clean.jpg"
   }
 ]
