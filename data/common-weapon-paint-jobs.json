@@ -6,6 +6,18 @@
     "source": "MATRIX_CORE"
   },
   {
+    "name": "Bubblegum",
+    "icon": "./icons/weapon-paint-jobs/bubblegum.png",
+    "saveId": "F22C4CF8-41C5F8AE-BC9C1693-94D9AB23",
+    "source": "MATRIX_CORE"
+  },
+  {
+    "name": "Buff",
+    "icon": "./icons/weapon-paint-jobs/buff.png",
+    "saveId": "50239B30-43904637-A5DAA8A0-D63A617D",
+    "source": "MATRIX_CORE"
+  },
+  {
     "name": "Dark Descent",
     "icon": "./icons/weapon-paint-jobs/dark-descent.png",
     "saveId": "8044BDEA-4A935E1F-4BBE698E-357CED0E",
@@ -21,6 +33,12 @@
     "name": "Digital Danger",
     "icon": "./icons/weapon-paint-jobs/digital-danger.png",
     "saveId": "F7A76674-45186C76-C9A56B9E-12F3EFBE",
+    "source": "MATRIX_CORE"
+  },
+  {
+    "name": "Flaming Hot",
+    "icon": "./icons/weapon-paint-jobs/flaming-hot.png",
+    "saveId": "54BFB418-4E9DB405-EF54C69A-C38BF584",
     "source": "MATRIX_CORE"
   },
   {
@@ -75,54 +93,104 @@
     "name": "Copper Patinate",
     "icon": "./icons/weapon-paint-jobs/copper-patinate.png",
     "saveId": "04C31F4A-4EDDE3A8-33713E94-B48BBEDC",
-    "source": "MATRIX_CORE"
+    "source": "PERFORMANCE_PASS",
+    "season": 1
   },
-  {
-    "name": "Deep Sea Defender",
-    "icon": "./icons/weapon-paint-jobs/deep-sea-defender.png",
-    "saveId": "E0CBA913-4B8D0945-D5D00581-EC80E3AF",
-    "source": "MATRIX_CORE"
-  },
-  {
+    {
     "name": "Moss Crawler",
     "icon": "./icons/weapon-paint-jobs/moss-crawler.png",
     "saveId": "F9CFA1CE-4BC2BE7F-AC089E8E-34E06C75",
-    "source": "MATRIX_CORE"
+    "source": "PERFORMANCE_PASS",
+    "season": 1
   },
   {
     "name": "Scratched Metal",
     "icon": "./icons/weapon-paint-jobs/scratched-metal.png",
     "saveId": "46B117AB-48030DAA-EF0692A1-358818B2",
-    "source": "MATRIX_CORE"
+    "source": "PERFORMANCE_PASS",
+    "season": 1
   },
   {
-    "name": "Bootcamp",
-    "icon": "./icons/weapon-paint-jobs/boot-camp.png",
-    "saveId": "6D8634A1-4CCD296E-0477A38A-A7C3BDDD",
-    "source": "MATRIX_CORE"
-  },
-  {
-    "name": "Fiery",
-    "icon": "./icons/weapon-paint-jobs/fiery.png",
-    "saveId": "153B17A6-49519BA7-4F1259AB-EE31CABC",
-    "source": "MATRIX_CORE"
+    "name": "Deep Sea Defender",
+    "icon": "./icons/weapon-paint-jobs/deep-sea-defender.png",
+    "saveId": "E0CBA913-4B8D0945-D5D00581-EC80E3AF",
+    "source": "PERFORMANCE_PASS",
+    "season": 1
   },
   {
     "name": "Predator",
     "icon": "./icons/weapon-paint-jobs/predator.png",
     "saveId": "0685E1F5-476CD95A-64B3328E-B9B0874C",
-    "source": "MATRIX_CORE"
+    "source": "PERFORMANCE_PASS",
+    "season": 2
+  },
+  {
+    "name": "Fiery",
+    "icon": "./icons/weapon-paint-jobs/fiery.png",
+    "saveId": "153B17A6-49519BA7-4F1259AB-EE31CABC",
+    "source": "PERFORMANCE_PASS",
+    "season": 2
   },
   {
     "name": "Salt Crystal",
     "icon": "./icons/weapon-paint-jobs/salt-crystal.png",
     "saveId": "23CD0259-4C1BDAC3-10F05FBB-375EF157",
-    "source": "MATRIX_CORE"
+    "source": "PERFORMANCE_PASS",
+    "season": 2
+  },
+  {
+    "name": "Bootcamp",
+    "icon": "./icons/weapon-paint-jobs/boot-camp.png",
+    "saveId": "6D8634A1-4CCD296E-0477A38A-A7C3BDDD",
+    "source": "PERFORMANCE_PASS",
+    "season": 2
+  },
+  {
+    "name": "Golden Mauve",
+    "icon": "./icons/weapon-paint-jobs/golden-mauve.png",
+    "saveId": "8ADA1AD6-4063A249-771B6293-3A5E842D",
+    "source": "PERFORMANCE_PASS",
+    "season": 3
+  },
+  {
+    "name": "Acid Wash",
+    "icon": "./icons/weapon-paint-jobs/acid-wash.png",
+    "saveId": "6A68C3A5-46F59997-D9065B8C-08C0AD49",
+    "source": "PERFORMANCE_PASS",
+    "season": 3
+  },
+  {
+    "name": "Military",
+    "icon": "./icons/weapon-paint-jobs/military.png",
+    "saveId": "020D0507-4B7B126A-584D619C-6305BD12",
+    "source": "PERFORMANCE_PASS",
+    "season": 3
+  },
+  {
+    "name": "Sleek",
+    "icon": "./icons/weapon-paint-jobs/sleek.png",
+    "saveId": "84AABB68-4A9C4968-EFDF3DB0-E1E37167",
+    "source": "PERFORMANCE_PASS",
+    "season": 3
+  },
+  {
+    "name": "Lazulite",
+    "icon": "./icons/weapon-paint-jobs/lazulite.png",
+    "saveId": "2C261DF4-46DD56E6-C53E71A3-B4C96AED",
+    "source": "PERFORMANCE_PASS",
+    "season": 4
   },
   {
     "name": "Chlorine",
     "icon": "./icons/weapon-paint-jobs/chlorine.png",
     "saveId": "FAB3922A-4948E766-5774C0A4-788B343B",
+    "source": "PERFORMANCE_PASS",
+    "season": 4
+  },
+  {
+    "name": "Lemon Clean",
+    "icon": "./icons/weapon-paint-jobs/lemon-clean.png",
+    "saveId": "76BE3081-4598F94B-DD91799B-BE93FC9E",
     "source": "PERFORMANCE_PASS",
     "season": 4
   },
@@ -134,17 +202,31 @@
     "season": 4
   },
   {
-    "name": "Lazulite",
-    "icon": "./icons/weapon-paint-jobs/lazulite.png",
-    "saveId": "2C261DF4-46DD56E6-C53E71A3-B4C96AED",
+    "name": "Royal Standard",
+    "icon": "./icons/weapon-paint-jobs/royal-standard.png",
+    "saveId": "A1CA10E4-4B049685-5E2DFEB0-37BF7E9E",
     "source": "PERFORMANCE_PASS",
-    "season": 4
+    "season": 5
   },
   {
-    "name": "Lemon Clean",
-    "icon": "./icons/weapon-paint-jobs/lemon-clean.png",
-    "saveId": "76BE3081-4598F94B-DD91799B-BE93FC9E",
+    "name": "Superheated",
+    "icon": "./icons/weapon-paint-jobs/superheated.png",
+    "saveId": "4B9DE31D-44635D46-2CE0358E-52BA5A26",
     "source": "PERFORMANCE_PASS",
-    "season": 4
+    "season": 5
+  },
+  {
+    "name": "Iced Plum",
+    "icon": "./icons/weapon-paint-jobs/iced-plum.png",
+    "saveId": "E0E78AAE-4FB97EB9-3B6D5BAE-48627D93",
+    "source": "PERFORMANCE_PASS",
+    "season": 5
+  },
+  {
+    "name": "Blood Moon",
+    "icon": "./icons/weapon-paint-jobs/blood-moon.png",
+    "saveId": "98CE20AD-4EE10371-F91D98BA-525C35DB",
+    "source": "PERFORMANCE_PASS",
+    "season": 5
   }
 ]

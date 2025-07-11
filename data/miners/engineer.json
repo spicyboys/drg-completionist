@@ -236,6 +236,14 @@
       "saveId": "9F44106D-4B66DD24-C5BB749A-45CB7AF2"
     },
     {
+      "weaponPaintJob": "Bubblegum",
+      "saveId": "D2E43E8F-4177E121-B0C7379A-FAFDB47F"
+    },
+    {
+      "weaponPaintJob": "Buff",
+      "saveId": "1B2F0F22-41E639AA-5107FCB9-F05ED072"
+    },
+    {
       "weaponPaintJob": "Dark Descent",
       "saveId": "DA96BC97-4045C9DB-D85AFA86-67B2A469"
     },
@@ -246,6 +254,10 @@
     {
       "weaponPaintJob": "Digital Danger",
       "saveId": "CB3766AD-442941DC-D5EAD58A-21D8DB50"
+    },
+    {
+      "weaponPaintJob": "Flaming Hot",
+      "saveId": "009452F8-4C5E32C3-83F75B97-4E5726F6"
     },
     {
       "weaponPaintJob": "Ghostly Pale",
@@ -284,10 +296,6 @@
       "saveId": "3AB00F36-4495267A-C8BF9EBB-AE895924"
     },
     {
-      "weaponPaintJob": "Deep Sea Defender",
-      "saveId": "6F385436-46ABBF8E-77BC2093-7605F936"
-    },
-    {
       "weaponPaintJob": "Moss Crawler",
       "saveId": "98EFFE0C-4BB53F74-777F11A3-4287FE9E"
     },
@@ -296,36 +304,72 @@
       "saveId": "7351BCD0-4F9867DA-08F15193-AAAB41D7"
     },
     {
-      "weaponPaintJob": "Bootcamp",
-      "saveId": "6D3A9DB0-4106B15B-E85C88AA-E1235092"
-    },
-    {
-      "weaponPaintJob": "Fiery",
-      "saveId": "9237341C-42DC2DD4-A03890B0-192E3908"
+      "weaponPaintJob": "Deep Sea Defender",
+      "saveId": "6F385436-46ABBF8E-77BC2093-7605F936"
     },
     {
       "weaponPaintJob": "Predator",
       "saveId": "A494023C-45532E82-34F7F99F-50B31A75"
     },
     {
+      "weaponPaintJob": "Fiery",
+      "saveId": "9237341C-42DC2DD4-A03890B0-192E3908"
+    },
+    {
       "weaponPaintJob": "Salt Crystal",
       "saveId": "6BE46F7C-46FE5624-06C777B9-58A81EDE"
     },
     {
-      "weaponPaintJob": "Chlorine",
-      "saveId": "FAB3922A-4948E766-5774C0A4-788B343B"
+      "weaponPaintJob": "Bootcamp",
+      "saveId": "6D3A9DB0-4106B15B-E85C88AA-E1235092"
     },
     {
-      "weaponPaintJob": "Dune Marauder",
-      "saveId": "9C4F7F8D-458437D3-D6A622A7-9A4F4DFB"
+      "weaponPaintJob": "Golden Mauve",
+      "saveId": "B0E415B4-EF88-407A-BFB8-2AE7F8BA97B5"
+    },
+    {
+      "weaponPaintJob": "Acid Wash",
+      "saveId": "123C8D36-7E68-4602-86E8-67BAB7C620E4"
+    },
+    {
+      "weaponPaintJob": "Military",
+      "saveId": "1131C125-94EC-4774-ACFE-986FB66E7A65"
+    },
+    {
+      "weaponPaintJob": "Sleek",
+      "saveId": "5C4975D6-0A1E-4977-AF65-847D083B295F"
     },
     {
       "weaponPaintJob": "Lazulite",
       "saveId": "2C261DF4-46DD56E6-C53E71A3-B4C96AED"
     },
     {
+      "weaponPaintJob": "Chlorine",
+      "saveId": "FAB3922A-4948E766-5774C0A4-788B343B"
+    },
+    {
       "weaponPaintJob": "Lemon Clean",
       "saveId": "76BE3081-4598F94B-DD91799B-BE93FC9E"
+    },
+    {
+      "weaponPaintJob": "Dune Marauder",
+      "saveId": "9C4F7F8D-458437D3-D6A622A7-9A4F4DFB"
+    },
+    {
+      "weaponPaintJob": "Royal Standard",
+      "saveId": "13BE77F9-47E4-4B09-AF99-5FC3105777F5"
+    },
+    {
+      "weaponPaintJob": "Superheated",
+      "saveId": "05E114D3-0645-485F-9AF1-004B7242BD47"
+    },
+    {
+      "weaponPaintJob": "Iced Plum",
+      "saveId": "13305071-7DC3-4273-A31F-DCEB822224F2"
+    },
+    {
+      "weaponPaintJob": "Blood Moon",
+      "saveId": "8191F98C-339E-4075-AFFA-7DE7B879512A"
     }
   ],
   "uniqueWeaponPaintJobs": [
