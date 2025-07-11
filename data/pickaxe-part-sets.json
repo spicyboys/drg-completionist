@@ -72,6 +72,18 @@
     }
   },
   {
+    "name": "Diamond Cutter",
+    "icon": "./icons/pickaxe-parts/diamond-cutter.jpg",
+    "saveIds": {
+      "blades": "81EA06C7-47DCD948-962B33B4-FADB20E8",
+      "head": "01433EE7-467909B5-404100A1-137B7737",
+      "shaft": "A975A85F-46DC981C-1EF80EB6-CC2B13FC",
+      "handle": "2D5ABDA4-42661F9B-6EDAFDAF-EE040BCF",
+      "pommel": "5E5FBF6B-4BFBA6E3-5D838AB4-B76CB746",
+      "paint_job": "E934511B-42A536B4-4038BCBF-D068C959"
+    }
+  },
+  {
     "name": "Hammerblow",
     "icon": "./icons/pickaxe-parts/hammerblow.jpg",
     "saveIds": {
@@ -120,6 +132,18 @@
     }
   },
   {
+    "name": "Spring Loaded",
+    "icon": "./icons/pickaxe-parts/spring-loaded.jpg",
+    "saveIds": {
+      "blades": "DC5C41B0-4984D6EB-7B429B9F-0AD06506",
+      "head": "4591DD32-4691B72B-62B60884-3B9536AB",
+      "shaft": "A12F1AA1-4512CFB3-D3D4688E-68EABECA",
+      "handle": "86951FC9-4D713987-DA31B1B8-BE9DF63E",
+      "pommel": "2870CAFC-4F4FBA3D-478C3FBC-2AE33BCE",
+      "paint_job": "E74CE6B3-4E182AF5-D439C7BD-E9833F28"
+    }
+  },
+  {
     "name": "Arc Welder's Delight",
     "icon": "./icons/pickaxe-parts/arc-welders-delight.jpg",
     "saveIds": {
@@ -153,6 +177,30 @@
       "handle": "7E10AC86-487A64AA-0E61248A-6D3FAB04",
       "pommel": "0CC8184F-44989972-E6FF18A2-8709A2B4",
       "paint_job": "477A86F7-4903F12A-937EA5A5-B3D0E602"
+    }
+  },
+  {
+    "name": "Foundry Grinder",
+    "icon": "./icons/pickaxe-parts/foundry-grinder.jpg",
+    "saveIds": {
+      "blades": "47AA6CC9-4ADF2602-09CFE48C-EB76F241",
+      "head": "1E774C8F-43D74178-589A6EAE-FFB1B290",
+      "shaft": "DDCA1A24-463DFAD7-7763A9A6-9725D248",
+      "handle": "F273B615-41FC09AE-62FB65AC-43032537",
+      "pommel": "7CCBF51B-41906EBC-C72A18B0-CF73916C",
+      "paint_job": "4FA92B4D-46005452-3F2896BF-1E6A5265"
+    }
+  },
+  {
+    "name": "Guerrilla",
+    "icon": "./icons/pickaxe-parts/guerrilla.jpg",
+    "saveIds": {
+      "blades": "87C54941-4857074B-BA7615BA-5B3234A9",
+      "head": "360DE44A-45D12140-F29E31A1-C38865BE",
+      "shaft": "5775967B-4B7994F7-3E836F8B-7B2EF31F",
+      "handle": "92664F64-476FF240-223FE8A9-90080853",
+      "pommel": "C5035690-4DB24DAB-DD4C079F-971B1321",
+      "paint_job": "012D0A1D-4C4BECF9-49223FA9-CF6B8F7C"
     }
   }
 ]
