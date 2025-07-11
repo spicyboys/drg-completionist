@@ -190,5 +190,17 @@
       "pommel": "7CCBF51B-41906EBC-C72A18B0-CF73916C",
       "paint_job": "4FA92B4D-46005452-3F2896BF-1E6A5265"
     }
+  },
+  {
+    "name": "Guerrilla",
+    "icon": "./icons/pickaxe-parts/guerrilla.jpg",
+    "saveIds": {
+      "blades": "87C54941-4857074B-BA7615BA-5B3234A9",
+      "head": "360DE44A-45D12140-F29E31A1-C38865BE",
+      "shaft": "5775967B-4B7994F7-3E836F8B-7B2EF31F",
+      "handle": "92664F64-476FF240-223FE8A9-90080853",
+      "pommel": "C5035690-4DB24DAB-DD4C079F-971B1321",
+      "paint_job": "012D0A1D-4C4BECF9-49223FA9-CF6B8F7C"
+    }
   }
 ]
