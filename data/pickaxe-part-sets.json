@@ -132,6 +132,18 @@
     }
   },
   {
+    "name": "Spring Loaded",
+    "icon": "./icons/pickaxe-parts/spring-loaded.jpg",
+    "saveIds": {
+      "blades": "DC5C41B0-4984D6EB-7B429B9F-0AD06506",
+      "head": "4591DD32-4691B72B-62B60884-3B9536AB",
+      "shaft": "A12F1AA1-4512CFB3-D3D4688E-68EABECA",
+      "handle": "86951FC9-4D713987-DA31B1B8-BE9DF63E",
+      "pommel": "2870CAFC-4F4FBA3D-478C3FBC-2AE33BCE",
+      "paint_job": "E74CE6B3-4E182AF5-D439C7BD-E9833F28"
+    }
+  },
+  {
     "name": "Arc Welder's Delight",
     "icon": "./icons/pickaxe-parts/arc-welders-delight.jpg",
     "saveIds": {
