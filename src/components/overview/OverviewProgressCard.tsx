@@ -46,7 +46,7 @@ const OverviewProgressCard = ({
       <Card
         title={title}
         actions={[
-          <Link to={href} key="link">
+          <Link to={href} key="link" aria-label={`Go to ${title}`}>
             <LinkOutlined />
           </Link>,
         ]}

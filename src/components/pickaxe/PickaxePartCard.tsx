@@ -1,7 +1,7 @@
 import { useLiveQuery } from 'dexie-react-hooks';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql } from 'gatsby';
 import { useDB } from '../../hooks/db';
-import { useCallback } from 'react';
+import { useCallback, type KeyboardEvent } from 'react';
 import { Card, Col, Row } from 'antd';
 import React from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
@@ -9,13 +9,17 @@ import nullthrows from '../../utils/nullthrows';
 
 export default function PickaxePartCard({
   pickaxePart,
+  color,
+  contrastColor,
 }: {
   pickaxePart: Queries.PickaxePartCardPickaxePartFragment;
+  color: string | null | undefined;
+  contrastColor: string | null | undefined;
 }) {
   const db = useDB();
   const query = useLiveQuery(
     () => db.pickaxeParts.get({ name: pickaxePart.name, component: 'BLADES' }),
-    [pickaxePart],
+    [pickaxePart.name],
   );
 
   const onClick = useCallback(() => {
@@ -26,28 +30,33 @@ export default function PickaxePartCard({
     }
   }, [db.pickaxeParts, pickaxePart.name, query]);
 
-  const { color, contrastColor } =
-    useStaticQuery<Queries.PickaxePartCardColorsQuery>(graphql`
-      query PickaxePartCardColors {
-        minersJson(name: { eq: "Engineer" }) {
-          color
-          contrastColor
-        }
+  const onKeyDown = useCallback(
+    (e: KeyboardEvent<HTMLDivElement>) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        onClick();
       }
-    `).minersJson!;
+    },
+    [onClick],
+  );
 
   return (
     <Col xxl={6} xl={8} lg={12} md={12} sm={12} xs={24}>
       <Card
         hoverable
+        tabIndex={0}
+        role="button"
+        aria-pressed={!!query}
+        aria-label={pickaxePart.name}
         title={pickaxePart.name}
         headStyle={{
-          backgroundColor: query ? color : 'inherit',
-          color: query ? contrastColor : '#cccccc',
+          backgroundColor: query ? (color ?? undefined) : 'inherit',
+          color: query ? (contrastColor ?? undefined) : '#cccccc',
           fontWeight: 'bold',
           transition: 'all 0.3s',
         }}
         onClick={onClick}
+        onKeyDown={onKeyDown}
       >
         <Row>
           <Col span={24} style={{ textAlign: 'center' }}>

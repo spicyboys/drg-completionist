@@ -7,13 +7,20 @@ import PickaxePartCard from '../components/pickaxe/PickaxePartCard';
 export default function PickaxeParts({
   data,
 }: PageProps<Queries.PickaxePartsQuery>) {
+  const { color, contrastColor } = data.minersJson ?? {};
+
   return (
     <Row gutter={[16, 16]}>
       {data.allPickaxePartSetsJson.nodes.map((p) => (
         <PickaxePartSetCard key={p.name} pickaxePartSet={p} />
       ))}
       {data.allPickaxePartsJson.nodes.map((p) => (
-        <PickaxePartCard key={p.name} pickaxePart={p} />
+        <PickaxePartCard
+          key={p.name}
+          pickaxePart={p}
+          color={color}
+          contrastColor={contrastColor}
+        />
       ))}
     </Row>
   );
@@ -21,6 +28,11 @@ export default function PickaxeParts({
 
 export const query = graphql`
   query PickaxeParts {
+    minersJson(name: { eq: "Engineer" }) {
+      color
+      contrastColor
+    }
+
     allPickaxePartSetsJson {
       nodes {
         ...PickaxePartSetCardPickaxePartSet

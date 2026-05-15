@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Tooltip } from 'antd';
 import { graphql, useStaticQuery } from 'gatsby';
 import '../styles/footer.css';
@@ -31,16 +31,24 @@ export default function ProgressFooter({
     `,
   );
 
-  const backgroundColor = `linear-gradient(to right, ${miners.nodes
-    .map(
-      (miner, index, arr) =>
-        `${miner.color} ${index * (100 / (arr.length - 1))}%`,
-    )
-    .join(', ')})`;
+  const backgroundColor = useMemo(
+    () =>
+      `linear-gradient(to right, ${miners.nodes
+        .map(
+          (miner, index, arr) =>
+            `${miner.color} ${index * (100 / (arr.length - 1))}%`,
+        )
+        .join(', ')})`,
+    [miners.nodes],
+  );
 
-  const animationColor = `linear-gradient(270deg, ${miners.nodes
-    .map((miner) => `${miner.color}`)
-    .join(', ')}`;
+  const animationColor = useMemo(
+    () =>
+      `linear-gradient(270deg, ${miners.nodes
+        .map((miner) => `${miner.color}`)
+        .join(', ')}`,
+    [miners.nodes],
+  );
 
   const text = `Progress: ${Math.round(
     progress,
@@ -48,6 +56,11 @@ export default function ProgressFooter({
 
   return (
     <div
+      role="progressbar"
+      aria-valuenow={Math.round(progress)}
+      aria-valuemin={0}
+      aria-valuemax={100}
+      aria-label={text}
       className={progress === 100 ? 'completeAnimation' : undefined}
       style={{
         background: progress === 100 ? animationColor : backgroundColor,
