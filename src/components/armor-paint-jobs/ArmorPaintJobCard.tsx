@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, type KeyboardEvent } from 'react';
 import { Badge, Card, Col } from 'antd';
 import { useDB } from '../../hooks/db';
 import ArmorPaintJobIcon from './ArmorPaintJobIcon';
@@ -34,12 +34,27 @@ export default function ArmorPaintJobCard({
     }
   }, [db.armorPaintjobs, miner.name, paintJob.name, query]);
 
+  const onKeyDown = useCallback(
+    (e: KeyboardEvent<HTMLDivElement>) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        onClick();
+      }
+    },
+    [onClick],
+  );
+
   return (
     <Col xxl={4} xl={4} lg={6} md={8} sm={12} xs={24} key={paintJob.name}>
       <Badge.Ribbon className="armor-paintjob-ribbon" text={paintJob.name}>
         <Card
           hoverable
+          tabIndex={0}
+          role="button"
+          aria-pressed={!!query}
+          aria-label={paintJob.name}
           onClick={onClick}
+          onKeyDown={onKeyDown}
           size="small"
           style={{
             backgroundColor: query ? miner.color : 'inherit',

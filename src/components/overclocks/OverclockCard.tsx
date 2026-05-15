@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, type KeyboardEvent } from 'react';
 import { InfoCircleOutlined } from '@ant-design/icons';
 import { Card, Col, Popover, Tooltip } from 'antd';
 import { useDB } from '../../hooks/db';
@@ -49,27 +49,47 @@ export default function OverclockCard({
         })
         .modify({ isForged: true });
     }
-  }, [db, overclock.name, weapon, query]);
+  }, [db, overclock.name, weapon.name, query]);
+
+  const onKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        onClick();
+      }
+    },
+    [onClick],
+  );
+
+  const isAcquired = query !== undefined;
+  const isForged = query?.isForged ?? false;
+  const isUnforged = isAcquired && !isForged;
+  const ariaPressed = isForged ? true : isAcquired ? 'mixed' : false;
 
   return (
     <Col key={overclock.name} xs={24} sm={12} md={12} lg={8} xl={6} xxl={4}>
       <Card
         hoverable
+        tabIndex={0}
+        role="button"
+        aria-pressed={ariaPressed}
+        aria-label={overclock.name}
         title={overclock.name}
         headStyle={{
-          backgroundColor: query?.isForged ? miner.color : 'inherit',
-          color: query?.isForged ? miner.contrastColor : '#cccccc',
+          backgroundColor: isForged ? miner.color : 'inherit',
+          color: isForged ? miner.contrastColor : '#cccccc',
           fontWeight: 'bold',
           transition: 'all 0.3s',
         }}
         style={
-          query && !query.isForged
+          isUnforged
             ? {
                 outline: `3px solid ${miner.color}`,
               }
             : undefined
         }
         onClick={onClick}
+        onKeyDown={onKeyDown}
       >
         <OverclockIcon overclock={overclock} />
         <Popover
@@ -87,21 +107,23 @@ export default function OverclockCard({
             }}
           />
         </Popover>
-        <Tooltip
-          title={query && !query?.isForged ? 'Unforged' : undefined}
-          destroyTooltipOnHide
-        >
-          <StaticImage
-            alt={`${overclock.name} is acquired, but unforged`}
-            src="../../images/unforged.png"
-            height={20}
-            style={{
-              float: 'left',
-              marginTop: -20,
-              opacity: query && !query?.isForged ? 1 : 0,
-            }}
-          />
-        </Tooltip>
+        <span aria-hidden={isUnforged ? undefined : true}>
+          <Tooltip
+            title={isUnforged ? 'Unforged' : undefined}
+            destroyTooltipOnHide
+          >
+            <StaticImage
+              alt={`${overclock.name} is acquired but unforged`}
+              src="../../images/unforged.png"
+              height={20}
+              style={{
+                float: 'left',
+                marginTop: -20,
+                opacity: isUnforged ? 1 : 0,
+              }}
+            />
+          </Tooltip>
+        </span>
       </Card>
     </Col>
   );

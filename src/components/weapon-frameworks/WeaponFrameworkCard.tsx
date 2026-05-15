@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useCallback, type KeyboardEvent } from 'react';
 import { Badge, Card, Col } from 'antd';
-import { useCallback } from 'react';
 import { useDB } from '../../hooks/db';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { graphql } from 'gatsby';
@@ -18,7 +17,7 @@ export default function WeaponFrameworkCard({
   const db = useDB();
   const query = useLiveQuery(
     () => db.frameworks.get({ weapon: weapon.name, name: framework.name }),
-    [weapon, framework],
+    [weapon.name, framework.name],
   );
 
   const onClick = useCallback(() => {
@@ -35,14 +34,29 @@ export default function WeaponFrameworkCard({
         })
         .delete();
     }
-  }, [db.frameworks, framework, weapon, query]);
+  }, [db.frameworks, framework.name, weapon.name, query]);
+
+  const onKeyDown = useCallback(
+    (e: KeyboardEvent<HTMLDivElement>) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        onClick();
+      }
+    },
+    [onClick],
+  );
 
   return (
     <Col xxl={4} xl={6} lg={8} md={8} sm={12} xs={24}>
       <Badge.Ribbon className="framework-ribbon" text={framework.name}>
         <Card
           hoverable
+          tabIndex={0}
+          role="button"
+          aria-pressed={!!query}
+          aria-label={framework.name}
           onClick={onClick}
+          onKeyDown={onKeyDown}
           size="small"
           style={{
             backgroundColor: query ? miner.color : 'inherit',

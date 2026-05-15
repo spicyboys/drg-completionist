@@ -130,11 +130,19 @@ export default function Layout({
         if (props.isMobile) return [];
         return [
           <Tooltip title={<InfoTooltip />} key="info">
-            <InfoCircleFilled key="InfoCircleFilled" />
+            <span
+              tabIndex={0}
+              role="button"
+              aria-label="Help information"
+              style={{ cursor: 'pointer', display: 'flex' }}
+            >
+              <InfoCircleFilled />
+            </span>
           </Tooltip>,
 
           <a
             href="https://github.com/spicyboys/drg-completionist"
+            aria-label="View source on GitHub"
             style={{ textDecoration: 'inherit', color: 'inherit' }}
             target="_blank"
             rel="noreferrer"

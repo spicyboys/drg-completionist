@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, type KeyboardEvent } from 'react';
 import { Badge, Card, Col } from 'antd';
 import { useDB } from '../../hooks/db';
 import WeaponPaintJobIcon from './WeaponPaintJobIcon';
@@ -42,18 +42,37 @@ export default function WeaponPaintJobCard({
     }
   }, [db.weaponPaintjobs, miner.name, paintJob.name, paintJob.source, query]);
 
+  const onKeyDown = useCallback(
+    (e: KeyboardEvent<HTMLDivElement>) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        onClick();
+      }
+    },
+    [onClick],
+  );
+
+  const isAcquired = query !== undefined;
+  const isForged = query?.isForged ?? false;
+  const ariaPressed = isForged ? true : isAcquired ? 'mixed' : false;
+
   return (
     <Col xxl={4} xl={6} lg={8} md={8} sm={12} xs={24} key={paintJob.name}>
       <Badge.Ribbon className="armor-paintjob-ribbon" text={paintJob.name}>
         <Card
           hoverable
+          tabIndex={0}
+          role="button"
+          aria-pressed={ariaPressed}
+          aria-label={paintJob.name}
           onClick={onClick}
+          onKeyDown={onKeyDown}
           size="small"
           style={{
-            backgroundColor: query?.isForged ? miner.color : 'inherit',
+            backgroundColor: isForged ? miner.color : 'inherit',
             transition: 'all 0.3s ease',
             outline:
-              query && !query?.isForged
+              isAcquired && !isForged
                 ? `3px solid ${miner.color}`
                 : undefined,
           }}

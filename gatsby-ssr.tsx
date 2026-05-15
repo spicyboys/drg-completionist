@@ -32,10 +32,12 @@ export const onRenderBody: GatsbySSR['onRenderBody'] = ({
 }) => {
   setHeadComponents([
     <meta
+      key="title"
       name="title"
       content="DRG Completionist — Progress Tracker for Deep Rock Galactic"
     />,
     <meta
+      key="description"
       name="description"
       content="A free, open-source progressive web app that assists hard-working dwarves like yourselves in keeping track of all those gizmos cluttering up your Space Rig."
     />,

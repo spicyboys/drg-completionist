@@ -19,7 +19,7 @@ function CleanOverclockFrame() {
 function BalancedOverclockFrame() {
   return (
     <StaticImage
-      alt="Clean Overclock"
+      alt="Balanced Overclock"
       src="../../images/overclock-frames/balanced.png"
       height={FRAME_SIZE}
       width={FRAME_SIZE}
@@ -30,7 +30,7 @@ function BalancedOverclockFrame() {
 function UnstableOverclockFrame() {
   return (
     <StaticImage
-      alt="Clean Overclock"
+      alt="Unstable Overclock"
       src="../../images/overclock-frames/unstable.png"
       height={FRAME_SIZE}
       width={FRAME_SIZE}
